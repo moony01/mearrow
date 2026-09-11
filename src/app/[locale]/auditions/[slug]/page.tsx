@@ -34,9 +34,12 @@ interface AuditionDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
+  // Workers loads detail content from ASSETS at request time, matching the
+  // dynamic news route. Pages still receives every real localized path for
+  // static export.
+  if (process.env.NEXT_RUNTIME_TARGET === 'workers') return [];
+
   return getAllAuditionParams();
 }
 

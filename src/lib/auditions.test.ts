@@ -2,12 +2,15 @@ import { describe, expect, it } from 'vitest';
 import {
   getAllAuditionParams,
   getAllAuditions,
+  getAuditionBySlug,
   getAuditionLocales,
 } from './auditions';
 
 describe('audition content routing', () => {
   it('generates detail routes only for translations that exist', () => {
     const params = getAllAuditionParams();
+
+    expect(params).toHaveLength(10);
 
     expect(params).toEqual(
       expect.arrayContaining([
@@ -18,6 +21,16 @@ describe('audition content routing', () => {
       ]),
     );
     expect(params.some(({ locale }) => locale === 'ja')).toBe(false);
+  });
+
+  it('loads every localized detail record', async () => {
+    const params = getAllAuditionParams();
+    const posts = await Promise.all(
+      params.map(({ locale, slug }) => getAuditionBySlug(slug, locale)),
+    );
+
+    expect(posts).toHaveLength(10);
+    expect(posts.every((post) => post?.content.trim())).toBe(true);
   });
 
   it('reports only actual hreflang translations', () => {

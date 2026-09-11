@@ -112,9 +112,10 @@ pnpm workers:build
 ```
 
 `test:browser:deploy` starts the development server, checks that live Supabase
-data renders company cards, verifies a news image is WebP-backed, and checks an
-English news detail through the locale fallback. A failed browser gate blocks
-the production deployment. The GitHub Actions workflow
+data renders company cards, verifies a news image is WebP-backed, checks an
+English news detail through the locale fallback, and visits every localized
+audition detail. A failed browser gate blocks the production deployment. The
+GitHub Actions workflow
 `.github/workflows/deploy-workers.yml` runs the same gate before a Workers
 production deployment. A push or merge to `main` starts the production job
 automatically after validation. The job uses the `workers-production`

@@ -1,11 +1,13 @@
 /**
  * Audition content access layer.
  *
- * Markdown is converted to JSON before Next.js starts so pages can be fully
- * statically exported without using filesystem APIs at runtime.
+ * Markdown is converted to JSON before the build. Pages/tests load generated
+ * JSON directly, while the Workers runtime resolves the same records through
+ * the bundled ASSETS endpoint without using filesystem APIs at request time.
  */
 
 import auditionsMeta from '@/generated/auditions-meta.json';
+import { loadAuditionPost } from '@/generated/auditions-runtime';
 import { SUPPORTED_LOCALES } from '@/lib/constants';
 
 export type AuditionMode = 'online' | 'offline' | 'hybrid';
@@ -99,15 +101,8 @@ export async function getAuditionBySlug(
   slug: string,
   locale: string,
 ): Promise<AuditionPost | null> {
-  try {
-    const auditionModule = await import(
-      `@/generated/auditions-content/${locale}/${slug}.json`
-    );
-    const post = auditionModule.default as AuditionPost;
-    return post.active === false ? null : post;
-  } catch {
-    return null;
-  }
+  const post = await loadAuditionPost(slug, locale);
+  return post && post.active !== false ? (post as AuditionPost) : null;
 }
 
 /** Generate detail routes only for translations that physically exist. */
