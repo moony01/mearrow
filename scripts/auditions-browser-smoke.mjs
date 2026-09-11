@@ -19,6 +19,23 @@ function assert(condition, message) {
  * Next dev, a Pages preview, or a locally bundled Workers runtime.
  */
 export async function runAuditionBrowserSmoke(page, baseUrl) {
+  // The app-wide vote modal embeds a separate data surface on news/audition
+  // routes. Keep that optional iframe out of this content-route smoke so a
+  // missing remote Supabase network cannot mask audition rendering failures.
+  await page.addInitScript(() => {
+    try {
+      const now = new Date();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      window.localStorage.setItem(
+        'kcl-daily-vote-modal-dismissed-date',
+        `${now.getFullYear()}-${month}-${day}`,
+      );
+    } catch {
+      // Storage can be unavailable in restricted browser contexts.
+    }
+  });
+
   const details = [];
 
   for (const locale of AUDITION_SMOKE_LOCALES) {
