@@ -43,6 +43,7 @@ next-env.d.ts
 # Generated files (prebuild)
 src/generated/
 public/api/news-content/
+public/api/auditions-content/
 
 # OpenNext build output
 .open-next/

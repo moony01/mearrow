@@ -79,6 +79,12 @@ jobs:
       - name: Build Workers bundle
         run: pnpm workers:build
 
+      - name: Workers audition detail smoke test
+        run: |
+          browser_path="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux64/chrome' -print -quit)"
+          test -n "$browser_path"
+          AUDITIONS_WORKERS_BROWSER_PATH="$browser_path" pnpm test:browser:workers-auditions
+
   deploy-production:
     name: Deploy production Worker
     needs: validate

@@ -5,6 +5,7 @@ import { spawn } from 'node:child_process';
 import process from 'node:process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { chromium } from 'playwright-core';
+import { runAuditionBrowserSmoke } from './auditions-browser-smoke.mjs';
 
 const DEFAULT_PORT = process.env.DEPLOY_BROWSER_PORT || '3119';
 const DEFAULT_BASE_URL = `http://127.0.0.1:${DEFAULT_PORT}`;
@@ -300,6 +301,7 @@ async function main() {
     assert(companyCount > 0, 'ranking rendered no company cards');
     assert(!(await page.getByText('Failed to load data').count()), 'ranking rendered data-load failure');
     const seoEndpoints = await assertSeoEndpoints(server.baseUrl);
+    const auditionSmoke = await runAuditionBrowserSmoke(page, server.baseUrl);
 
     const newsResponse = await page.goto(`${server.baseUrl}/en/news?deploy-browser-smoke=news`, {
       waitUntil: 'domcontentloaded',
@@ -366,6 +368,7 @@ async function main() {
           mobileShell,
           companyCount,
           ...seoEndpoints,
+          auditionSmoke,
           supabaseResponses: supabaseResponses.map(({ status, url }) => ({ status, url })),
           newsImage: imageSources[0],
           pageErrors: appPageErrors,

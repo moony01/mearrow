@@ -5,6 +5,8 @@
  * Output:
  * - src/generated/auditions-meta.json
  * - src/generated/auditions-content/{locale}/{slug}.json
+ * - public/api/auditions-content/{locale}/{slug}.json (Workers ASSETS)
+ * - src/generated/auditions-runtime.ts (Pages/Workers loader)
  */
 
 import fs from 'fs';
@@ -19,10 +21,128 @@ const CONTENT_DIR = path.join(__dirname, '../src/content/auditions');
 const OUTPUT_DIR = path.join(__dirname, '../src/generated');
 const META_OUTPUT = path.join(OUTPUT_DIR, 'auditions-meta.json');
 const CONTENT_OUTPUT_DIR = path.join(OUTPUT_DIR, 'auditions-content');
+const PUBLIC_API_DIR = path.join(__dirname, '../public/api');
+const PUBLIC_CONTENT_OUTPUT_DIR = path.join(PUBLIC_API_DIR, 'auditions-content');
+const RUNTIME_OUTPUT = path.join(OUTPUT_DIR, 'auditions-runtime.ts');
 
 const ALLOWED_LOCALES = new Set(['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de']);
 const ALLOWED_MODES = new Set(['online', 'offline', 'hybrid']);
 const ALLOWED_STATUSES = new Set(['open', 'closing', 'ongoing', 'closed']);
+
+/**
+ * Build-target-specific audition content loader.
+ *
+ * Pages/test builds import generated JSON directly. Workers requests read
+ * public JSON through the OpenNext ASSETS binding so dynamic detail routes do
+ * not need to bundle every Markdown-derived record.
+ */
+function writeRuntimeModule() {
+  const isWorkersBuild = process.env.NEXT_RUNTIME_TARGET === 'workers';
+
+  const workersModule = `import { getCloudflareContext } from '@opennextjs/cloudflare';
+
+export interface GeneratedAuditionPost {
+  slug: string;
+  locale: string;
+  title: string;
+  excerpt: string;
+  agency: string;
+  publishedAt: string;
+  updatedAt: string;
+  applicationStart?: string;
+  applicationDeadline?: string;
+  auditionDate?: string;
+  timezone?: string;
+  mode: 'online' | 'offline' | 'hybrid';
+  country?: string;
+  city?: string;
+  venueName?: string;
+  venueAddress?: string;
+  virtualLocationUrl?: string;
+  categories: string[];
+  eligibility: string;
+  status: 'open' | 'closing' | 'ongoing' | 'closed';
+  officialUrl: string;
+  sourceUrl: string;
+  verifiedAt: string;
+  poster: string;
+  posterAlt: string;
+  posterWidth: number;
+  posterHeight: number;
+  content: string;
+  active?: boolean;
+}
+
+export async function loadAuditionPost(
+  slug: string,
+  locale: string,
+): Promise<GeneratedAuditionPost | null> {
+  try {
+    const { env } = getCloudflareContext();
+    if (!env.ASSETS) return null;
+
+    const assetPath = \`/api/auditions-content/\${encodeURIComponent(locale)}/\${encodeURIComponent(slug)}.json\`;
+    const response = await env.ASSETS.fetch(new URL(assetPath, 'http://assets.local'));
+
+    if (!response.ok) {
+      await response.body?.cancel();
+      return null;
+    }
+
+    return (await response.json()) as GeneratedAuditionPost;
+  } catch {
+    return null;
+  }
+}
+`;
+
+  const pagesModule = `export interface GeneratedAuditionPost {
+  slug: string;
+  locale: string;
+  title: string;
+  excerpt: string;
+  agency: string;
+  publishedAt: string;
+  updatedAt: string;
+  applicationStart?: string;
+  applicationDeadline?: string;
+  auditionDate?: string;
+  timezone?: string;
+  mode: 'online' | 'offline' | 'hybrid';
+  country?: string;
+  city?: string;
+  venueName?: string;
+  venueAddress?: string;
+  virtualLocationUrl?: string;
+  categories: string[];
+  eligibility: string;
+  status: 'open' | 'closing' | 'ongoing' | 'closed';
+  officialUrl: string;
+  sourceUrl: string;
+  verifiedAt: string;
+  poster: string;
+  posterAlt: string;
+  posterWidth: number;
+  posterHeight: number;
+  content: string;
+  active?: boolean;
+}
+
+export async function loadAuditionPost(
+  slug: string,
+  locale: string,
+): Promise<GeneratedAuditionPost | null> {
+  try {
+    const auditionModule = await import(\`@/generated/auditions-content/\${locale}/\${slug}.json\`);
+    return auditionModule.default as GeneratedAuditionPost;
+  } catch {
+    return null;
+  }
+}
+`;
+
+  fs.writeFileSync(RUNTIME_OUTPUT, isWorkersBuild ? workersModule : pagesModule, 'utf8');
+}
 
 function fail(filePath, message) {
   throw new Error(`[auditions] ${path.relative(process.cwd(), filePath)}: ${message}`);
@@ -150,6 +270,10 @@ function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   fs.rmSync(CONTENT_OUTPUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(CONTENT_OUTPUT_DIR, { recursive: true });
+  fs.mkdirSync(PUBLIC_API_DIR, { recursive: true });
+  fs.rmSync(PUBLIC_CONTENT_OUTPUT_DIR, { recursive: true, force: true });
+  fs.mkdirSync(PUBLIC_CONTENT_OUTPUT_DIR, { recursive: true });
+  writeRuntimeModule();
 
   const allMeta = [];
   const seen = new Set();
@@ -165,7 +289,9 @@ function main() {
 
     const localeDir = path.join(CONTENT_DIR, locale);
     const localeOutputDir = path.join(CONTENT_OUTPUT_DIR, locale);
+    const publicLocaleOutputDir = path.join(PUBLIC_CONTENT_OUTPUT_DIR, locale);
     fs.mkdirSync(localeOutputDir, { recursive: true });
+    fs.mkdirSync(publicLocaleOutputDir, { recursive: true });
 
     const markdownFiles = fs.readdirSync(localeDir)
       .filter((file) => file.endsWith('.md'))
@@ -188,6 +314,15 @@ function main() {
         JSON.stringify(audition, null, 2),
         'utf8',
       );
+
+      // Workers ASSETS should expose only active audition details.
+      if (audition.active !== false) {
+        fs.writeFileSync(
+          path.join(publicLocaleOutputDir, `${audition.slug}.json`),
+          JSON.stringify(audition, null, 2),
+          'utf8',
+        );
+      }
     }
   }
 

@@ -19,6 +19,7 @@
     "pretest": "pnpm generate:content",
     "test": "vitest",
     "test:browser:news-popup": "node scripts/news-popup-browser-smoke.mjs",
+    "test:browser:workers-auditions": "node scripts/workers-auditions-browser-smoke.mjs",
     "test:browser:deploy": "pnpm check:deploy-env && node scripts/deploy-browser-smoke.mjs"
   },
   "dependencies": {
