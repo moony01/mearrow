@@ -59,43 +59,6 @@
   max-width: 100%;
 }
 
-// 더 보기 버튼 영역
-.loadMore {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-
-.loadMoreButton {
-  padding: 12px 40px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-primary, #315cff);
-  background: transparent;
-  border: 2px solid var(--color-primary, #315cff);
-  border-radius: 24px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.02em;
-
-  &:hover {
-    color: white;
-    background: var(--color-primary, #315cff);
-    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.35);
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-primary, #315cff);
-    outline-offset: 3px;
-  }
-}
-
 // 필터 결과 없음
 .noResults {
   grid-column: 1 / -1;

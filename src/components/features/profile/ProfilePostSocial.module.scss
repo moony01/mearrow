@@ -25,6 +25,76 @@
   border-top: 0;
 }
 
+/* Home feed variant: compact vertical action rail beside the media stage. */
+.immersiveRoot {
+  position: relative;
+  width: 48px;
+}
+
+.immersiveRoot .actions {
+  display: grid;
+  gap: 12px;
+  min-height: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.immersiveRoot .actionButton {
+  display: grid;
+  width: 48px;
+  min-height: 48px;
+  place-items: center;
+  gap: 2px;
+  padding: 0;
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  background: $color-surface;
+  color: $color-text;
+  box-shadow: var(--shadow-sm);
+}
+
+.immersiveRoot .actionButton:hover:not(:disabled) {
+  background: $color-hover-surface;
+  color: $color-primary;
+}
+
+.immersiveRoot .actionButton span {
+  font-size: 0.62rem;
+  line-height: 1;
+}
+
+.immersiveRoot .actionButtonActive {
+  color: #e64962;
+}
+
+.immersiveRoot .inlineStatus {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 10px);
+  width: max-content;
+  max-width: 220px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  background: $color-surface;
+  box-shadow: var(--shadow-md);
+}
+
+.immersiveRoot .commentPanel {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: calc(100% + 12px);
+  width: min(320px, calc(100vw - 120px));
+  max-height: min(70dvh, 540px);
+  margin: 0;
+  overflow-y: auto;
+  border: 1px solid $color-border;
+  background: $color-surface;
+  box-shadow: var(--shadow-lg);
+}
+
 .actionButton {
   display: inline-flex;
   align-items: center;
@@ -296,5 +366,22 @@
 
   .submitButton {
     width: 100%;
+  }
+
+  .immersiveRoot,
+  .immersiveRoot .actionButton {
+    width: 44px;
+  }
+
+  .immersiveRoot .actionButton {
+    min-height: 44px;
+  }
+
+  .immersiveRoot .actions {
+    gap: 10px;
+  }
+
+  .immersiveRoot .commentPanel {
+    width: min(280px, calc(100vw - 112px));
   }
 }

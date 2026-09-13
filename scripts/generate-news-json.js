@@ -163,8 +163,10 @@ function parseNewsFile(filePath, locale) {
     content,
   };
 
-  // 명시적 비활성화 또는 품질 기준 미달 콘텐츠는 공개 목록에서 제외합니다.
-  if (data.active === false || !quality.eligible) {
+  // 원문에 명시적으로 비활성화한 글만 숨깁니다.
+  // 품질 평가는 출처/분석 보강을 위한 감사 정보로 유지하되,
+  // 기존 원문을 자동으로 비공개 처리하지 않습니다.
+  if (data.active === false) {
     result.active = false;
   }
 
@@ -197,7 +199,7 @@ function main() {
   // 모든 뉴스 메타데이터 수집
   const allNewsMeta = [];
   let publishedCount = 0;
-  let heldForReviewCount = 0;
+  let explicitlyDisabledCount = 0;
 
   // 로케일 디렉토리 순회
   const sourceLocaleDir = path.join(CONTENT_DIR, SOURCE_LOCALE);
@@ -223,7 +225,7 @@ function main() {
       const filePath = path.join(localeDir, mdFile);
       const newsData = parseNewsFile(filePath, locale);
 
-      if (newsData.active === false) heldForReviewCount += 1;
+      if (newsData.active === false) explicitlyDisabledCount += 1;
       else publishedCount += 1;
 
       // 메타데이터 (목록용 - content 제외)
@@ -235,8 +237,8 @@ function main() {
       const contentOutputPath = path.join(localeOutputDir, `${newsData.slug}.json`);
       fs.writeFileSync(contentOutputPath, JSON.stringify(newsData, null, 2), 'utf8');
 
-      // Workers 런타임의 공개 ASSETS에는 실제 공개 기사만 복사한다.
-      // 보류 콘텐츠까지 정적 API로 노출하면 비활성화한 기사가 직접 수집될 수 있다.
+      // Workers 런타임의 공개 ASSETS에는 원문 전체를 복사한다.
+      // 명시적으로 비활성화한 원문만 공개 경계에서 제외한다.
       if (newsData.active !== false) {
         const publicContentOutputPath = path.join(
           publicLocaleOutputDir,
@@ -277,7 +279,7 @@ function main() {
   console.log(`   - 공개 API: ${path.relative(process.cwd(), PUBLIC_API_OUTPUT)} (${publicApiData.length}개)`);
   console.log(`   - 총 ${allNewsMeta.length}개 뉴스 처리됨\n`);
   console.log(
-    `   - 품질 게이트: ${publishedCount}개 공개 / ${heldForReviewCount}개 검토 보류\n`,
+    `   - 공개 상태: ${publishedCount}개 공개 / ${explicitlyDisabledCount}개 명시적 비활성\n`,
   );
 }
 

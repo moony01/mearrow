@@ -2,6 +2,7 @@
 title: "BTS Beat Taylor Swift at the AMAs - Why This Win Hits Harder Than 2021"
 excerpt: "BTS AMAs 2026 ended with Artist of the Year and Song of the Summer, turning a fan-voted trophy into a K-pop market warning."
 date: "2026-05-26"
+updatedAt: "2026-09-13"
 category: "Tech & Culture"
 thumbnail: "/images/news/bts-ama-second-aoty-thumbnail.webp"
 active: true
@@ -81,3 +82,8 @@ That does not make every future U.S. award show a guaranteed BTS room. It does m
 The real pressure is no longer on BTS to prove that 2021 was not a fluke. The 2026 AMAs did that job for them. The pressure is on broadcasters, labels, and rival fandoms to explain why a Korean group can return from a full-group pause and still produce one of the night's biggest global attention spikes.
 
 That is why this win hits harder than 2021. The first time, BTS broke the argument. The second time, they made the argument look outdated.
+
+## Sources
+
+- [Winners announced for the 52nd American Music Awards, American Music Awards](https://www.theamas.com/2026/05/winners-announced-for-the-52nd-american-music-awards/)
+- [BTS accepts Artist of the Year at the 52nd American Music Awards, official AMAs YouTube](https://www.youtube.com/watch?v=WienzuNr0HQ)

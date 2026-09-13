@@ -2,6 +2,7 @@
 title: '''KPop Demon Hunters'' Wins Two Oscars — Then the Orchestra Cuts Off the Speech'
 excerpt: 'Netflix''s KPop Demon Hunters swept the 98th Academy Awards with Best Animated Feature and Best Original Song. Then the orchestra played the team off mid-sentence — and the internet called it disrespectful.'
 date: '2026-03-16'
+updatedAt: '2026-09-13'
 category: 'Tech & Culture'
 thumbnail: '/images/news/kpop-demon-hunters-oscar-win-speech-controversy-2026-thumbnail.webp'
 active: true
@@ -70,6 +71,12 @@ And yet.
 
 The speech was cut off at the moment EJAE was about to address Korea directly. Whether that was coincidental poor timing management or something else is a question the Academy hasn't answered clearly. What's certain is that the unfinished sentence became the most replayed clip of the night — more than the trophies themselves.
 
-Recognition and respect are not the same thing. K-pop now clearly has the first. Whether the second fully follows is the question the next decade will answer.
+Recognition and respect are not the same thing. K-pop now clearly has the first. Whether the second fully follows is the question the next decade will answer. The awards are a confirmed result; the intent behind the shortened speech remains an interpretation, so those two claims should not be reported as if they have the same evidentiary status.
 
 [Related: 'KPop Demon Hunters' Grammy Win — K-Pop's First Grammy Trophy and What It Means](/en/news/kpop-demon-hunters-grammy-first-win)
+
+## Sources
+
+- [98th Academy Awards, Academy of Motion Picture Arts and Sciences](https://www.oscars.org/oscars/ceremonies/2026)
+- [Netflix Oscar winners: KPop Demon Hunters](https://www.netflix.com/tudum/articles/netflix-oscar-winners-2026)
+- [KPop Demon Hunters wins two Oscars, Associated Press](https://apnews.com/article/dbb9e8d1a72f5552f3d7841519ab9b59)

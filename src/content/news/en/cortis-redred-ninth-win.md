@@ -2,6 +2,7 @@
 title: "CORTIS Hit 9 Wins - The REDRED Rookie Problem Rivals Can't Explain"
 excerpt: "CORTIS REDRED reached nine music-show wins after Inkigayo, but the sharper story is Youngkk, Spotify scale and rookie retention."
 date: "2026-05-25"
+updatedAt: "2026-09-13"
 category: "Market Trend"
 thumbnail: "/images/news/cortis-redred-ninth-win-thumbnail.webp"
 active: true
@@ -61,3 +62,8 @@ That mix is difficult for competitors because it cannot be answered with one tac
 MEARROW sees `CORTIS REDRED` as one of the clearest fifth-generation case studies of how a rookie era can extend itself. The ninth trophy is the public-facing number. Under it sits a larger system: a title track with domestic staying power, a b-side turning into fan language, global platform data strong enough for international repetition, and a fandom that understands how to keep a close race alive.
 
 That does not mean CORTIS has solved the long game. The next comeback will still have to prove that `REDRED` was not a one-era spike. The members will need identity beyond scoreboard shock. The fandom will need to keep converting excitement into patience. But for now, the ninth win has made one thing uncomfortable for rivals: the rookie bar is no longer debut impact. It is whether a group can make one song feel bigger in week four than it looked in week one.
+
+## Sources
+
+- [CORTIS takes ninth win for “REDRED” on Inkigayo, Soompi](https://www.soompi.com/article/1843304wpp/watch-cortis-takes-9th-win-for-redred-on-inkigayo-performances-by-i-o-i-itzy-le-sserafim-and-more)
+- [CORTIS takes ninth win for “REDRED,” allkpop](https://www.allkpop.com/article/2026/05/cortis-takes-9th-win-with-redred-charismatic-stages-on-may-24-episode-of-inkigayo)

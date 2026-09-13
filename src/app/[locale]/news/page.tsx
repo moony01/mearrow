@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import { Newspaper } from 'lucide-react';
 import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import NewsGridClient from './NewsGridClient';
@@ -82,17 +81,6 @@ export default async function NewsPage({ params }: NewsPageProps) {
         description={t('subtitle')}
         icon={<Newspaper size={26} />}
       />
-
-      <section className={styles.editorialNote} aria-labelledby="news-editorial-note-title">
-        <div>
-          <p className={styles.editorialEyebrow}>{BRAND_NAME}</p>
-          <h2 id="news-editorial-note-title">{t('editorialNoteTitle')}</h2>
-          <p>{t('editorialNoteBody')}</p>
-        </div>
-        <Link href={`/${locale}/editorial`} className={styles.editorialLink}>
-          {t('editorialPolicyLink')}
-        </Link>
-      </section>
 
       {/* 뉴스 그리드 */}
       {posts.length > 0 ? (

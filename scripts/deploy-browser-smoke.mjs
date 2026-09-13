@@ -136,6 +136,11 @@ function isIgnorableConsoleError(message) {
   const text = message.text();
   const sourceUrl = message.location().url;
   return (
+    // External documents such as Google's consent/auth frames can publish a
+    // report-only frame-ancestors policy. The browser logs that warning while
+    // embedding the document, but it is not an application runtime failure.
+    (text.includes('violates the following report-only Content Security Policy directive') &&
+      text.includes('frame-ancestors')) ||
     text.includes('AdSense head tag') ||
     text.includes('googlesyndication.com') ||
     text.includes('google-analytics.com') ||
@@ -273,32 +278,37 @@ async function main() {
     await page.getByTestId('home-profile-feed').waitFor({ state: 'visible', timeout: 20_000 });
     const mobileSidebar = page.getByTestId('desktop-sidebar');
     const mobileBottomNav = page.getByTestId('mobile-bottom-nav');
-    assert(!(await mobileSidebar.isVisible()), 'desktop sidebar is visible at 390px');
-    assert(await mobileBottomNav.isVisible(), 'mobile bottom nav is not visible at 390px');
+    assert(await mobileSidebar.isVisible(), 'mobile sidebar rail is not visible at 390px');
+    assert(!(await mobileBottomNav.isVisible()), 'mobile bottom nav is visible at 390px');
     assert(
-      (await mobileBottomNav.getByRole('link', { name: '홈', exact: true }).getAttribute('aria-current')) ===
+      (await mobileSidebar.getByRole('link', { name: '홈', exact: true }).getAttribute('aria-current')) ===
         'page',
-      'mobile home link is missing aria-current="page"',
+      'mobile sidebar home link is missing aria-current="page"',
     );
 
     const mobileShell = await page.evaluate(() => {
-      const bottomNav = document.querySelector('[data-testid="mobile-bottom-nav"]');
-      const styles = bottomNav ? getComputedStyle(bottomNav) : null;
+      const sidebar = document.querySelector('[data-testid="desktop-sidebar"]');
+      const styles = sidebar ? getComputedStyle(sidebar) : null;
       return {
         viewportWidth: window.innerWidth,
         documentWidth: document.documentElement.scrollWidth,
         bodyWidth: document.body.scrollWidth,
-        bottomNavBackground: styles?.backgroundColor || null,
+        sidebarWidth: sidebar?.getBoundingClientRect().width || 0,
+        sidebarLabelOpacity: sidebar?.querySelector('[class*="label"]')
+          ? getComputedStyle(sidebar.querySelector('[class*="label"]')).opacity
+          : null,
+        sidebarBackground: styles?.backgroundColor || null,
       };
     });
     assert(
       Math.max(mobileShell.documentWidth, mobileShell.bodyWidth) <= mobileShell.viewportWidth + 1,
       `mobile shell overflows horizontally (${JSON.stringify(mobileShell)})`,
     );
+    assert(mobileShell.sidebarWidth <= 73, `mobile sidebar rail expanded (${JSON.stringify(mobileShell)})`);
     assert(
-      mobileShell.bottomNavBackground &&
-        !/transparent|rgba\([^)]*,\s*0\s*\)/i.test(mobileShell.bottomNavBackground),
-      `mobile bottom nav background is transparent (${mobileShell.bottomNavBackground})`,
+      mobileShell.sidebarBackground &&
+        !/transparent|rgba\([^)]*,\s*0\s*\)/i.test(mobileShell.sidebarBackground),
+      `mobile sidebar background is transparent (${mobileShell.sidebarBackground})`,
     );
 
     await page.setViewportSize({ width: 1440, height: 1000 });

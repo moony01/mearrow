@@ -2,6 +2,7 @@
 title: "AND2BLE's 730K Debut Is A Rookie Warning Rivals Can't Ignore"
 excerpt: "AND2BLE crossed 730,000 first-week debut-album copies and took two music-show wins within eight days, turning re-debut heat into a market test."
 date: "2026-06-04"
+updatedAt: "2026-09-13"
 category: "Market Trend"
 thumbnail: "/images/news/and2ble-rookie-sales-record-thumbnail.webp"
 active: true
@@ -61,3 +62,9 @@ The uncomfortable part for rival rookie teams is not that AND2BLE sold over `730
 That combination is difficult to answer with one tactic. A rival cannot simply push a louder teaser or buy a bigger visual concept and assume the same result. The better answer is a system: songs that create repeat listening, stages that produce shareable moments, fan language that travels, and enough post-debut content to make early buyers feel that they joined something still expanding.
 
 AND2BLE have not won that long game yet. The group has only made the opening impossible to ignore. But that is already enough to change the rookie conversation. If the next few weeks show retention instead of only celebration, the `730,000` headline will stop looking like a first-week stunt and start looking like the first visible piece of a much larger machine.
+
+## Sources
+
+- [K-pop rookie AND2BLE makes official debut, Yonhap News Agency](https://en.yna.co.kr/view/AEN20260526008400315)
+- [AND2BLE's debut sells over 731,000 copies, Forbes](https://www.forbes.com/sites/jeffbenjamin/2026/06/09/and2ble-become-instant-breakout-k-pop-group-with-731000-selling-debut/)
+- [AND2BLE records fourth-highest first-week sales for a K-pop group debut, Soompi](https://www.soompi.com/article/1845265wpp/and2ble-records-4th-highest-1st-week-sales-for-k-pop-group-debut-album-in-hanteo-history)

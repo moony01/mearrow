@@ -1,15 +1,14 @@
 /**
  * Sidebar.module.scss
  * 
- * 사이드바 네비게이션 스타일 (데스크톱 전용)
- * LinkedIn형 좌측 고정 레일을 MEARROW 내비게이션에 맞게 해석
+ * 사이드바 네비게이션 스타일 (모든 화면)
+ * TikTok형 좌측 고정 레일을 MEARROW 내비게이션에 맞게 해석
  * 
  * 반응형:
- * - Mobile(<=768px): 숨김
- * - Tablet(769px-1263px): 기본 아이콘 레일 (72px), hover/focus-within 시 확장
+ * - Mobile/Tablet(<1264px): 아이콘 레일 (72px), 확장하지 않음
  * - Desktop(1264px+): 아이콘 + 레이블 (244px) 고정
  * 
- * 핵심: 아이콘은 항상 좌측 고정, 좁은 구간에서는 텍스트가 숨겨지고 상호작용 시 펼쳐짐
+ * 핵심: 아이콘은 항상 좌측 고정, 좁은 구간에서는 텍스트가 숨겨지며 레일은 확장하지 않음
  */
 
 @use '../../../styles/abstracts/variables' as *;
@@ -33,39 +32,13 @@ $sidebar-wide: 244px;
   padding: 18px 14px 20px;
   display: flex;
   flex-direction: column;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(20px);
   // 폴드 펼침처럼 세로 공간이 짧아져도 하단 인증 영역이 잘리지 않도록
   // 실제 표시 viewport를 사용하고, 필요한 경우 사이드바 자체를 스크롤합니다.
   overflow-x: hidden;
   overflow-y: auto;
 
-  // 768px 이하 모바일: 숨김
-  display: none;
-
-  // 태블릿: 기본은 좁은 레일, 상호작용 시 넓게 확장
-  @media (min-width: 769px) and (max-width: 1263px) {
-    display: flex;
-    width: $sidebar-narrow;
-
-    &:hover,
-    &:focus-within {
-      width: $sidebar-wide;
-      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
-
-      [data-theme='dark'] & {
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.45);
-      }
-
-      // 키보드 포커스 또는 마우스 hover 중에만 레이블을 노출합니다.
-      .logoText,
-      .label {
-        opacity: 1;
-        transform: translateX(0);
-        width: auto;
-      }
-    }
-  }
+  width: $sidebar-narrow;
 
   // 데스크탑: 넓은 모드 (아이콘 + 텍스트) 고정
   @media (min-width: 1264px) {
@@ -154,8 +127,17 @@ $sidebar-wide: 244px;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
   overflow-y: auto;
+}
+
+// TikTok형 직접 링크 목록: 그룹을 펼치지 않아도 모든 1뎁스 메뉴를 바로 선택합니다.
+.navList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
 }
 
 // 네비게이션 아이템 (공통)
@@ -263,7 +245,138 @@ $sidebar-wide: 244px;
   }
 }
 
-// 푸터 영역 (더 보기, Threads 등)
+// 하단 유틸리티 영역 (설정 + 인증)
+.sidebarBottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.settingsSection {
+  position: static;
+}
+
+.settingsButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+}
+
+.settingsPanel {
+  position: fixed;
+  left: calc(#{$sidebar-narrow} + 12px);
+  bottom: 16px;
+  z-index: $z-modal;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(260px, calc(100vw - #{$sidebar-narrow} - 28px));
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  padding: 16px;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--color-surface) 96%, transparent);
+  box-shadow: 0 14px 36px color-mix(in srgb, var(--color-text) 20%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  @media (min-width: 1264px) {
+    left: calc(#{$sidebar-wide} + 12px);
+  }
+}
+
+.settingsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  h2 {
+    margin: 0;
+    color: $color-text;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+}
+
+.settingsClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: $color-text-dim;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-hover-surface;
+    color: $color-text;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+  }
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  color: $color-text;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.settingsThemeToggle {
+  flex-shrink: 0;
+  border: 1px solid $color-border;
+  background: $color-surface;
+}
+
+.languageSetting {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: $color-text;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  select {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 10px;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+    background: $color-surface;
+    color: $color-text;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid $color-focus;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// 레거시 푸터 스타일
 .footer {
   display: flex;
   flex-direction: column;
@@ -279,7 +392,6 @@ $sidebar-wide: 244px;
   flex-direction: column;
   flex-shrink: 0;
   gap: 4px;
-  margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid rgba($color-text, 0.08);
 }

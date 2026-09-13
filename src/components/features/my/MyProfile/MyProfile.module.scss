@@ -234,7 +234,8 @@
   background: $color-surface;
   box-shadow: var(--shadow-lg);
 
-  button {
+  button,
+  a {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -248,6 +249,7 @@
     font-weight: 650;
     text-align: left;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       background: $color-hover-surface;

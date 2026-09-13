@@ -10,12 +10,14 @@ describe('audition content routing', () => {
   it('generates detail routes only for translations that exist', () => {
     const params = getAllAuditionParams();
 
-    expect(params).toHaveLength(10);
+    expect(params).toHaveLength(12);
 
     expect(params).toEqual(
       expect.arrayContaining([
         { locale: 'ko', slug: '2026-yg-global-audition-osaka' },
         { locale: 'en', slug: '2026-yg-global-audition-osaka' },
+        { locale: 'ko', slug: '2026-yg-global-audition-bangkok' },
+        { locale: 'en', slug: '2026-yg-global-audition-bangkok' },
         { locale: 'ko', slug: 'yg-online-audition' },
         { locale: 'en', slug: 'yg-online-audition' },
       ]),
@@ -29,7 +31,7 @@ describe('audition content routing', () => {
       params.map(({ locale, slug }) => getAuditionBySlug(slug, locale)),
     );
 
-    expect(posts).toHaveLength(10);
+    expect(posts).toHaveLength(12);
     expect(posts.every((post) => post?.content.trim())).toBe(true);
   });
 
@@ -40,7 +42,7 @@ describe('audition content routing', () => {
   it('uses English cards on untranslated list pages without changing their locale', () => {
     const japaneseList = getAllAuditions('ja');
 
-    expect(japaneseList).toHaveLength(5);
+    expect(japaneseList).toHaveLength(6);
     expect(japaneseList.every((post) => post.locale === 'en')).toBe(true);
   });
 
@@ -48,11 +50,12 @@ describe('audition content routing', () => {
     const koreanList = getAllAuditions('ko');
 
     expect(koreanList.map((post) => post.slug)).toEqual([
-      '2026-yg-global-audition-osaka',
+      '2026-yg-global-audition-bangkok',
       'jyp-online-audition',
       'wakeone-next-wave-audition',
       'yg-online-audition',
       'source-music-summer-audition-2026',
+      '2026-yg-global-audition-osaka',
     ]);
   });
 });

@@ -47,7 +47,7 @@ export default function Header() {
         >
           <img
             src={BRAND_MARK_PATH}
-            alt=""
+            alt={`${BRAND_NAME} 로고`}
             className={styles.logoIcon}
             width={28}
             height={28}

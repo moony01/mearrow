@@ -66,66 +66,13 @@
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    // 3번째 카드 뒤의 전체 너비 광고가 한 칸을 비워도 다음 카드를 채웁니다.
+    grid-auto-flow: row dense;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-}
-
-.editorialNote {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 24px;
-  padding: 20px 22px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-
-  h2 {
-    margin: 0 0 8px;
-    color: var(--color-text);
-    font-size: 1.05rem;
-    font-weight: 750;
-  }
-
-  p:last-child {
-    max-width: 720px;
-    margin: 0;
-    color: var(--color-text-dim);
-    font-size: 0.88rem;
-    line-height: 1.65;
-  }
-
-  @media (max-width: 640px) {
-    display: block;
-  }
-}
-
-.editorialEyebrow {
-  margin: 0 0 8px;
-  color: var(--color-primary);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.editorialLink {
-  flex: 0 0 auto;
-  color: var(--color-primary);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-
-  @media (max-width: 640px) {
-    display: inline-block;
-    margin-top: 14px;
   }
 }
 

@@ -98,7 +98,10 @@ function formatDate(value: string, locale: string, timezone?: string, includeTim
 
   return new Intl.DateTimeFormat(locale, {
     dateStyle: 'long',
-    ...(includeTime && !dateOnly ? { timeStyle: 'short' as const } : {}),
+    // Keep server and browser output identical across ICU implementations.
+    ...(includeTime && !dateOnly
+      ? { timeStyle: 'short' as const, hourCycle: 'h23' as const }
+      : {}),
     timeZone: dateOnly ? 'UTC' : timezone,
   }).format(date);
 }

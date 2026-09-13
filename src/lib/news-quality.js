@@ -1,9 +1,9 @@
 /**
  * Shared news publication quality rules.
  *
- * The source articles remain in the repository, but the content generator
- * uses these rules to keep unsupported or low-context articles out of the
- * public news surface until they are reviewed.
+ * The source articles remain in the repository. These rules provide an
+ * editorial audit signal for unsupported or low-context articles; publication
+ * status is controlled separately by explicit frontmatter `active: false`.
  */
 
 const EXTERNAL_MARKDOWN_LINK_PATTERN =

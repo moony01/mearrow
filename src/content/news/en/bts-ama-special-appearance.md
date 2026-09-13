@@ -2,6 +2,7 @@
 title: "BTS AMA Special Appearance Is Official - But the Missing Word Is the Trap"
 excerpt: "BTS AMA special appearance is official for May 25, but the AMAs avoided one word fans care about most: performance."
 date: "2026-05-22"
+updatedAt: "2026-09-13"
 category: "Tech & Culture"
 thumbnail: "/images/news/bts-ama-special-appearance-thumbnail.webp"
 active: true
@@ -87,3 +88,8 @@ For trainees and younger K-pop teams, the lesson is harsh but useful. A stage be
 The 52nd American Music Awards now owns the expectation it created. If BTS merely wave from the audience, the announcement may feel over-marketed. If they present, fans will still debate whether the tease was worth it. If they perform, the show gets the global replay cycle it is clearly inviting.
 
 That is the trap inside the headline. The AMAs officially confirmed BTS. But by avoiding the one word fans wanted most, they made the confirmation feel incomplete. On May 25, the ceremony will not only reveal whether BTS win. It will reveal whether `special appearance` was a careful promise or just the most clickable phrase the broadcast had.
+
+## Sources
+
+- [BTS to make first awards-show appearance in four years at the 52nd AMAs, Paramount Press Express](https://www.paramountpressexpress.com/cbs-entertainment/shows/the-52nd-american-music-awards/releases/?view=112897-bts-to-make-first-awards-show-appearance-in-four-years-at-800-pm-et-500-pm-pt-on-cbs)
+- [BTS to make a special appearance at this year's AMAs, Yonhap](https://en.yna.co.kr/view/AEN20260521001200315?section=culture%2Fk-pop)

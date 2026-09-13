@@ -8,6 +8,7 @@
  */
 
 import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -15,6 +16,7 @@ import {
   Check,
   ChevronDown,
   CirclePlay,
+  Heart,
   Image as ImageIcon,
   LogOut,
   MoreHorizontal,
@@ -384,6 +386,7 @@ export default function MyProfile() {
         shorts: '숏츠',
         moreCareer: '활동 이력 더 보기',
         lessCareer: '간단히 보기',
+        following: '관심 피드',
         logout: '로그아웃',
         deleteAccount: '회원탈퇴',
         close: '닫기',
@@ -445,6 +448,7 @@ export default function MyProfile() {
         shorts: 'Shorts',
         moreCareer: 'Show more history',
         lessCareer: 'Show less',
+        following: 'Following',
         logout: 'Log out',
         deleteAccount: 'Delete account',
         close: 'Close',
@@ -871,6 +875,14 @@ export default function MyProfile() {
 
               {showProfileMenu && (
                 <div className={styles.profileMenu} role="menu">
+                  <Link
+                    href={`/${locale}/following`}
+                    onClick={() => setShowProfileMenu(false)}
+                    role="menuitem"
+                  >
+                    <Heart size={15} />
+                    {copy.following}
+                  </Link>
                   <button type="button" onClick={() => void handleSignOut()} role="menuitem">
                     <LogOut size={15} />
                     {copy.logout}

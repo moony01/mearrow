@@ -3,7 +3,7 @@
  * 
  * 모바일 하단 네비게이션 스타일
  * iOS 안전 영역(Safe Area)을 고려한 디자인
- * LinkedIn 모바일 탭 바처럼 화면 하단에 고정된 전역 내비게이션
+ * 직접 링크를 가로로 탐색할 수 있는 화면 하단 고정 전역 내비게이션
  */
 
 @use '../../../styles/abstracts/variables' as *;
@@ -31,7 +31,7 @@
 .navGlass {
   @include mix.glass-panel;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 640px;
@@ -41,10 +41,16 @@
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .navItem {
-  flex: 1 1 0;
+  flex: 0 0 62px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +64,14 @@
   border-radius: 14px;
   min-width: 44px;
   gap: 2px;
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
 
   &:active {
     transform: scale(0.95);
@@ -89,18 +103,6 @@
   align-items: center;
   margin-bottom: 0;
   transition: all 0.2s ease;
-}
-
-.indicator {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  background-color: $color-primary;
-  border-radius: 50%;
-  box-shadow: 0 0 8px $color-primary;
 }
 
 .label {

@@ -1,12 +1,11 @@
 /**
  * AppShell.module.scss
  * 
- * LinkedIn 정보 구조를 MEARROW 브랜드에 맞게 해석한 앱 셸 레이아웃
+ * TikTok형 좌측 사이드바 정보 구조를 MEARROW 브랜드에 맞게 해석한 앱 셸 레이아웃
  * 
  * 구조:
  * - Desktop(1264px+): 사이드바(244px) + 중앙 콘텐츠 캔버스
- * - Tablet/Desktop(769px-1263px): 사이드바(72px) + 중앙 콘텐츠
- * - Mobile(<=768px): 상단 헤더 + 하단 내비게이션 + 전체 너비 콘텐츠
+ * - Mobile/Tablet(<1264px): 사이드바(72px) + 중앙 콘텐츠
  */
 
 @use '../../../styles/abstracts/variables' as *;
@@ -29,22 +28,18 @@ $sidebar-width-wide: 244px;
   isolation: isolate;
 }
 
-// 사이드바 래퍼 (Desktop >= 769px에서만 표시)
+// 사이드바 래퍼 (모든 화면에서 표시)
 .sidebarWrapper {
-  display: none; // 768px 이하 모바일에서 숨김
+  display: block;
   flex-shrink: 0;
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
+  width: $sidebar-width-narrow;
   // 확장된 Sidebar가 카드/검색 레이어 위에 유지되도록 별도 stacking layer를 만듭니다.
   z-index: $z-overlay;
   overflow: visible;
-
-  @media (min-width: 769px) {
-    display: block;
-    width: $sidebar-width-narrow;
-  }
 
   @media (min-width: 1264px) {
     width: $sidebar-width-wide;
@@ -62,15 +57,9 @@ $sidebar-width-wide: 244px;
   position: relative;
   z-index: $z-base;
 
-  // 모바일: 하단 내비게이션 공간 확보
-  padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
-
-  // 769px+: 사이드바 공간 확보
-  @media (min-width: 769px) {
-    padding-bottom: 0;
-    margin-left: $sidebar-width-narrow;
-    width: calc(100% - #{$sidebar-width-narrow});
-  }
+  padding-bottom: 0;
+  margin-left: $sidebar-width-narrow;
+  width: calc(100% - #{$sidebar-width-narrow});
 
   // 데스크탑: 넓은 사이드바 공간 확보
   @media (min-width: 1264px) {
@@ -105,18 +94,9 @@ $sidebar-width-wide: 244px;
   }
 }
 
-// 하단 내비게이션 래퍼 (모바일에서만 표시)
+// 하단 내비게이션 래퍼 (좌측 사이드바 사용으로 비활성화)
 .bottomNavWrapper {
-  display: block; // 768px 이하 모바일에서 표시
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: $z-nav;
-
-  @media (min-width: 769px) {
-    display: none; // 사이드바가 대체
-  }
+  display: none;
 }
 
 // 법적 고지 푸터

@@ -1,5 +1,11 @@
 import type { LucideIcon } from 'lucide-react';
-import { CalendarSearch, Heart, Home, ListOrdered, Newspaper, Trophy } from 'lucide-react';
+import {
+  CalendarSearch,
+  Home,
+  ListOrdered,
+  Newspaper,
+  Trophy,
+} from 'lucide-react';
 import { isFeatureEnabled, type FeatureKey } from '@/config/features';
 
 export type PrimaryNavigationLabelKey =
@@ -7,8 +13,7 @@ export type PrimaryNavigationLabelKey =
   | 'ranking'
   | 'hall_of_fame'
   | 'news'
-  | 'auditions'
-  | 'following';
+  | 'auditions';
 
 export type PrimaryNavigationItem = {
   id: PrimaryNavigationLabelKey;
@@ -18,6 +23,13 @@ export type PrimaryNavigationItem = {
   feature?: FeatureKey;
 };
 
+/**
+ * 앱 전역 1뎁스 메뉴.
+ *
+ * 데스크톱 사이드바와 모바일 하단 바가 같은 직접 링크 목록을 사용해
+ * 그룹을 한 번 더 열어야 하는 2뎁스 탐색을 만들지 않도록 합니다.
+ * 관심 피드는 로그인 사용자의 자기 프로필 메뉴에서 접근합니다.
+ */
 export const PRIMARY_NAV_ITEMS: readonly PrimaryNavigationItem[] = [
   { id: 'home', labelKey: 'home', path: '/', icon: Home },
   { id: 'ranking', labelKey: 'ranking', path: '/ranking', icon: ListOrdered },
@@ -35,13 +47,6 @@ export const PRIMARY_NAV_ITEMS: readonly PrimaryNavigationItem[] = [
     path: '/auditions',
     icon: CalendarSearch,
     feature: 'AUDITIONS_PAGE',
-  },
-  {
-    id: 'following',
-    labelKey: 'following',
-    path: '/following',
-    icon: Heart,
-    feature: 'FOLLOWING_PAGE',
   },
 ];
 

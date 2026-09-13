@@ -2,6 +2,7 @@
 title: "LE SSERAFIM Sold 435,675 in One Day - But BOOMPALA's Real Problem Is Not the Number"
 excerpt: "LE SSERAFIM BOOMPALA opened with 435,675 Hanteo sales, but PUREFLOW pt.1 now faces a bigger test: whether debate becomes demand."
 date: "2026-05-23"
+updatedAt: "2026-09-13"
 category: "Industry"
 thumbnail: "/images/news/lesserafim-boompala-430k-thumbnail.webp"
 active: true
@@ -67,3 +68,8 @@ The strategy is clear: pair a serious album concept about fear and growth with a
 Release day gave LE SSERAFIM the number it needed. The next test is whether `BOOMPALA` can turn conflict into retention. If the hook becomes a challenge, the sales number will look like the start of a larger movement. If the debate stays louder than the replay value, `PUREFLOW pt.1` may become a case study in how a strong fandom can launch a risky idea without fully stabilizing it.
 
 That is why the real problem is not `435,675`. The real problem is whether everyone arguing about `BOOMPALA` is still playing it after the argument ends.
+
+## Sources
+
+- [LE SSERAFIM PUREFLOW pt.1 daily ranking, Hanteo News](https://www.hanteonews.com/en/article/91584)
+- [LE SSERAFIM first-day sales report, Starnews](https://www.starnewskorea.com/en/music/2026/05/23/2026052310470549691)

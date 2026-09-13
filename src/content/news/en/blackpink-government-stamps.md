@@ -2,6 +2,7 @@
 title: "BLACKPINK Just Got Government Stamps - The 10-Design Signal YG Needed"
 excerpt: "BLACKPINK commemorative stamps turn Korea Post's 10-design release into a collector signal YG can monetize beyond music."
 date: '2026-05-18'
+updatedAt: '2026-09-13'
 category: 'Business'
 thumbnail: '/images/news/blackpink-government-stamps-thumbnail.webp'
 active: true
@@ -73,3 +74,8 @@ The stamp also reveals how far K-pop's collector economy has moved. Early K-pop 
 The June 16 release will test a simple question: can an official postal issue create the same kind of urgency that K-pop usually gets from albums and tour goods? For BLACKPINK, the answer does not need to look like a chart debut. It needs to look like disciplined demand across Korea and overseas channels.
 
 If the stamp packet becomes a quiet sellout story, the signal will be obvious. BLACKPINK's brand can still convert memory into transactions without needing every product to be loud, wearable or digital. That is the power of this 10-design release. It turns a decade of stages into something fans can hold, store and keep long after the next comeback cycle has already moved on.
+
+## Sources
+
+- [BLACKPINK commemorative stamps in Korea Post's official stamp portal](https://stamp.epost.go.kr/sp/sg/spsg0101.jsp?mainThemeCode=06)
+- [Korea Post to Issue Blackpink Stamps, KBS World](https://world.kbs.co.kr/service/contents_view.htm?board_seq=469259&lang=e)

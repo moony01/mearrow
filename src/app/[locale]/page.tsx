@@ -45,9 +45,9 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 }
 
 /**
- * 홈페이지 (정적 셸 + SEO 콘텐츠)
+ * 홈페이지 (피드 + 서버 렌더링 안내 콘텐츠)
  * HomeFeedClient가 public profile_posts를 클라이언트에서 데이터 로드
- * 하단에 서버 렌더링 SEO 텍스트 섹션 포함 (AdSense 승인용)
+ * 하단 안내 콘텐츠는 정적 HTML로 렌더링되어 피드의 목적과 서비스 맥락을 설명
  */
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
@@ -75,36 +75,41 @@ export default async function HomePage({ params }: HomePageProps) {
       <JsonLd data={websiteJsonLd} />
       <HomeFeedClient />
 
-      {/* SEO 콘텐츠 섹션 - 서버 렌더링, 크롤러에 노출되는 정적 텍스트 */}
-      <section className={styles.seoSection}>
-        <h1 className={styles.seoTitle}>{t('seo_title')}</h1>
+      {/*
+       * 피드 아래의 실제 서비스 안내 콘텐츠.
+       * 클라이언트 피드가 로드되기 전에도 HTML에 포함되어 페이지의 목적과
+       * 탐색 경로를 설명한다. 숨김 텍스트가 아니라 사용자가 읽을 수 있는
+       * 원문 콘텐츠이므로 피드 UI와 별개의 의미 있는 문서 영역이다.
+       */}
+      <section className={styles.seoSection} aria-labelledby="home-content-title">
+        <h2 id="home-content-title" className={styles.seoTitle}>{t('seo_title')}</h2>
         <p className={styles.seoIntro}>{t('seo_intro')}</p>
 
         <div className={styles.seoGrid}>
-          <div className={styles.seoCard}>
+          <article className={styles.seoCard}>
             <h3>{t('seo_how_title')}</h3>
             <p>{t('seo_how_desc')}</p>
-          </div>
-          <div className={styles.seoCard}>
+          </article>
+          <article className={styles.seoCard}>
             <h3>{t('seo_vote_title')}</h3>
             <p>{t('seo_vote_desc')}</p>
-          </div>
-          <div className={styles.seoCard}>
+          </article>
+          <article className={styles.seoCard}>
             <h3>{t('seo_season_title')}</h3>
             <p>{t('seo_season_desc')}</p>
-          </div>
-          <div className={styles.seoCard}>
+          </article>
+          <article className={styles.seoCard}>
             <h3>{t('seo_global_title')}</h3>
             <p>{t('seo_global_desc')}</p>
-          </div>
-          <div className={styles.seoCard}>
+          </article>
+          <article className={styles.seoCard}>
             <h3>{t('seo_data_title')}</h3>
             <p>{t('seo_data_desc')}</p>
-          </div>
-          <div className={styles.seoCard}>
+          </article>
+          <article className={styles.seoCard}>
             <h3>{t('seo_trust_title')}</h3>
             <p>{t('seo_trust_desc')}</p>
-          </div>
+          </article>
         </div>
 
         <nav className={styles.seoLinks} aria-label={t('seo_links_label')}>

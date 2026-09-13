@@ -2,6 +2,7 @@
 title: "MAMAMOO's '4WARD' Isn't Just A Comeback — It's A Second-Act Test"
 excerpt: "MAMAMOO 4WARD brings '4 Flowers,' a June 4 release and a world-tour reset after the group's long recording gap."
 date: "2026-06-03"
+updatedAt: "2026-09-13"
 category: "Artist"
 thumbnail: "/images/news/mamamoo-4ward-comeback-thumbnail.webp"
 active: true
@@ -51,3 +52,8 @@ MAMAMOO's answer is to make the number four carry the campaign. It tells longtim
 The comeback will not be judged by one teaser article. Watch the fan edits after the full video, the live-clip demand once Seoul rehearsals begin, the speed of lyric translations, and whether casual K-pop listeners talk about the song beyond the reunion angle. Those signals will show whether `4WARD` is a beautiful return or a genuine re-entry into the current race.
 
 That is why this release is bigger than a June single. MAMAMOO are testing whether a veteran vocal group can make maturity feel active rather than archival. If the answer is yes, `4WARD` becomes exactly what the name promises: not just four members back in frame, but a group moving forward again.
+
+## Sources
+
+- [MAMAMOO's 4WARD comeback report, KBS World](https://world.kbs.co.kr/service/contents_view.htm?board_seq=469272&lang=e)
+- [MAMAMOO official Japan artist page, RBW Japan](https://rbwjapan.jp/artist/mamamoo.php)

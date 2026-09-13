@@ -2,6 +2,7 @@
 title: "ITZY Finally Found Its Motto - But The 7-Year Fan Letter Has A Catch"
 excerpt: "ITZY Motto turns a 12th EP comeback into a seven-year fan loyalty test while the Tunnel Vision tour keeps pressure high."
 date: '2026-05-19'
+updatedAt: '2026-09-13'
 category: 'Artist'
 thumbnail: '/images/news/itzy-motto-identity-thumbnail.webp'
 active: true
@@ -67,3 +68,8 @@ The strongest part of this rollout is that it does not run away from the group's
 The catch is simple: warmth has to convert. If `Motto` only reassures existing fans, it may be remembered as a pleasant loyalty project. If the song cuts through the May traffic and gives the tour a new emotional center, it becomes something bigger: proof that ITZY can mature without surrendering the energy that made the group valuable.
 
 That is why this comeback is more interesting than its soft packaging suggests. ITZY is not only asking fans to like a new track. The group is asking the market to believe that its core message still works after seven years, 12 EPs, and a girl-group field that now moves faster than ever. For a comeback called `Motto`, that is the real test: not what the slogan says, but whether people still act on it.
+
+## Sources
+
+- [ITZY “Motto” official discography, JYP Entertainment](https://itzy.jype.com/discography/heecdbgx?AmSeq=undefined&PgIndex=undefined)
+- [ITZY “Motto” official notices, JYP Entertainment](https://itzy.jype.com/notice?PgIndex=8)
