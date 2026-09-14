@@ -9,7 +9,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   CalendarDays,
@@ -47,6 +47,7 @@ import {
   type ProfilePostRecord,
 } from '@/lib/api/profile-content';
 import { isDevelopmentTestModeEnabled } from '@/lib/auth/development-test-mode';
+import { shouldOpenFeedComposer } from './compose-query';
 import styles from './MyProfile.module.scss';
 
 type LocalizedText = {
@@ -341,6 +342,7 @@ export default function MyProfile() {
   const [feedFormError, setFeedFormError] = useState('');
   const [feedUploading, setFeedUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const composerOpenedFromQueryRef = useRef(false);
   const localPreviewUrlsRef = useRef<Set<string>>(new Set());
 
   const copy = isKorean
@@ -680,20 +682,36 @@ export default function MyProfile() {
     }
   };
 
-  const resetFeedComposer = (revokePreview: boolean) => {
-    if (revokePreview && filePreviewUrl) URL.revokeObjectURL(filePreviewUrl);
-    setSelectedFile(null);
-    setFilePreviewUrl('');
-    setVideoDuration(null);
-    setFeedCaption('');
-    setFeedFormError('');
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
+  const resetFeedComposer = useCallback(
+    (revokePreview: boolean) => {
+      if (revokePreview && filePreviewUrl) URL.revokeObjectURL(filePreviewUrl);
+      setSelectedFile(null);
+      setFilePreviewUrl('');
+      setVideoDuration(null);
+      setFeedCaption('');
+      setFeedFormError('');
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    },
+    [filePreviewUrl],
+  );
 
-  const openFeedForm = () => {
+  const openFeedForm = useCallback(() => {
     resetFeedComposer(true);
     setFeedFormOpen(true);
-  };
+  }, [resetFeedComposer]);
+
+  useEffect(() => {
+    if (
+      composerOpenedFromQueryRef.current ||
+      typeof window === 'undefined' ||
+      !shouldOpenFeedComposer(window.location.search)
+    ) {
+      return;
+    }
+
+    composerOpenedFromQueryRef.current = true;
+    openFeedForm();
+  }, [openFeedForm]);
 
   const closeFeedForm = () => {
     if (feedUploading) return;

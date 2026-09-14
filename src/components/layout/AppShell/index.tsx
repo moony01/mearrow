@@ -16,6 +16,8 @@
 import { ReactNode } from 'react';
 import styles from './AppShell.module.scss';
 import Sidebar from '../Sidebar';
+import Header from '../Header';
+import BottomNav from '../BottomNav';
 import DisclaimerBanner from '@/components/common/DisclaimerBanner';
 import DailyVoteModal from '@/components/features/vote/DailyVoteModal';
 
@@ -33,6 +35,8 @@ export default function AppShell({ children }: AppShellProps) {
 
       {/* Main Content Area */}
       <main className={styles.mainContent}>
+        <Header />
+
         {/* Page Content */}
         <div className={styles.contentInner}>{children}</div>
 
@@ -44,6 +48,7 @@ export default function AppShell({ children }: AppShellProps) {
 
       {/* Global daily voting participation mockup */}
       <DailyVoteModal />
+      <BottomNav />
     </div>
   );
 }

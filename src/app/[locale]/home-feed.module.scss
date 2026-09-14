@@ -424,8 +424,8 @@
 @media (max-width: 767px) {
   .feedShell {
     width: calc(100% + 24px);
-    height: 100dvh;
-    max-height: 100dvh;
+    height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 68px);
     margin: 0 -12px;
     padding: 0;
     scroll-padding-block: 0;
@@ -440,9 +440,9 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 100dvh;
-    min-height: 100dvh;
-    max-height: 100dvh;
+    height: calc(100dvh - 68px);
+    min-height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 68px);
     scroll-margin-top: 0;
   }
 
@@ -452,16 +452,17 @@
 
   .feedMediaColumn {
     position: absolute;
-    top: 5dvh;
+    top: 12px;
     right: 0;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     left: 0;
     width: 100%;
-    height: 90dvh;
+    height: auto;
     border-radius: 14px;
   }
 
   // Keep the complete source image visible and vertically centered inside
-  // the 90vh media frame.
+  // the media frame while reserving space for the fixed bottom navigation.
   .media {
     object-fit: contain;
     object-position: center center;
@@ -497,7 +498,7 @@
   .feedSocialRail {
     position: absolute;
     right: 12px;
-    bottom: calc(5dvh + 12px);
+    bottom: calc(96px + env(safe-area-inset-bottom, 0px));
     z-index: 5;
     width: 44px;
     height: auto;

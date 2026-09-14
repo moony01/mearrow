@@ -13,6 +13,14 @@ const isDev = process.env.NODE_ENV === 'development';
 const isWorkers = process.env.NEXT_RUNTIME_TARGET === 'workers';
 const useStaticExport = !isDev && !isWorkers;
 
+// Allow the Tailnet host used to access the development server externally.
+// Keep this host-scoped; never open dev resources to arbitrary origins.
+const allowedDevOrigins = [
+  'server-13.tail3477d3.ts.net',
+  'server-13',
+  '100.81.184.13',
+];
+
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
@@ -45,6 +53,7 @@ const securityHeaders = [
  * 개발 모드에서는 output: export 비활성화 (동적 라우트 지원)
  */
 const nextConfig = {
+  allowedDevOrigins,
   // 기존 Pages 배포는 정적 export를 유지하고, Workers 빌드에서는
   // OpenNext가 SSR/ISR용 Next 런타임을 생성하도록 output 설정을 비활성화합니다.
   ...(useStaticExport ? { output: 'export' } : {}),

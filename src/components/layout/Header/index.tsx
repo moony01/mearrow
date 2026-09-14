@@ -1,15 +1,17 @@
 'use client';
 
 /**
- * Header - 상단 헤더 컴포넌트
+ * Header - 모바일 전용 상단 헤더
  *
- * 모바일: 로고 + 컨트롤 (769px 이상에서는 사이드바가 로고 대체)
- * LeagueHeader(h1)는 HomeClient에서 별도 렌더링
+ * 모바일에서는 로고와 전역 컨트롤, 더보기 drawer를 제공합니다.
+ * 데스크톱에서는 좌측 Sidebar가 동일한 역할을 하므로 숨깁니다.
  */
 
-import { useLocale } from 'next-intl';
+import { useEffect, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { CalendarSearch, Menu, Trophy, X } from 'lucide-react';
 import styles from './Header.module.scss';
 import ThemeToggle from '../../common/ThemeToggle';
 import { BRAND_KOREAN_NAME, BRAND_NAME, BRAND_MARK_PATH } from '@/lib/brand';
@@ -27,19 +29,51 @@ const LOCALE_LABELS: Record<(typeof SUPPORTED_LOCALES)[number], string> = {
 
 export default function Header() {
   const locale = useLocale();
+  const t = useTranslations('Nav');
   const router = useRouter();
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    setIsMenuOpen(false);
     router.push(newPath);
   };
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isMenuOpen]);
+
+  const drawerItems = [
+    {
+      href: `/${locale}/hall-of-fame`,
+      label: t('hall_of_fame'),
+      Icon: Trophy,
+    },
+    {
+      href: `/${locale}/auditions`,
+      label: t('auditions'),
+      Icon: CalendarSearch,
+    },
+  ];
 
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-        {/* 모바일 로고 (769px 이상에서는 사이드바에 로고가 있으므로 숨김) */}
         <Link
           href={`/${locale}`}
           className={styles.logoWrapper}
@@ -56,19 +90,75 @@ export default function Header() {
         </Link>
 
         <div className={styles.controls}>
-        {/* 테마 토글 버튼 (다크/라이트 모드 전환) */}
-        <ThemeToggle compact className={styles.themeToggle} />
+          <ThemeToggle compact className={styles.themeToggle} />
 
+          <select
+            value={locale}
+            onChange={changeLang}
+            className={styles.langSelect}
+            aria-label={t('language')}
+          >
+            {SUPPORTED_LOCALES.map((supportedLocale) => (
+              <option value={supportedLocale} key={supportedLocale}>
+                {LOCALE_LABELS[supportedLocale]}
+              </option>
+            ))}
+          </select>
 
-        <select value={locale} onChange={changeLang} className={styles.langSelect}>
-          {SUPPORTED_LOCALES.map((supportedLocale) => (
-            <option value={supportedLocale} key={supportedLocale}>
-              {LOCALE_LABELS[supportedLocale]}
-            </option>
-          ))}
-        </select>
+          <button
+            type="button"
+            className={styles.menuButton}
+            aria-label={t('menu')}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation-drawer"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+          </button>
         </div>
       </div>
+
+      {isMenuOpen && (
+        <div className={styles.drawerLayer}>
+          <button
+            type="button"
+            className={styles.drawerBackdrop}
+            aria-label={t('menu_backdrop')}
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <aside
+            id="mobile-navigation-drawer"
+            className={styles.drawer}
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('menu')}
+          >
+            <div className={styles.drawerHeader}>
+              <h2>{t('menu')}</h2>
+              <button
+                type="button"
+                className={styles.drawerClose}
+                aria-label={t('menu_close')}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <X size={20} aria-hidden="true" />
+              </button>
+            </div>
+            <nav aria-label={t('menu')}>
+              <ul className={styles.drawerList}>
+                {drawerItems.map(({ href, label, Icon }) => (
+                  <li key={href}>
+                    <Link href={href} className={styles.drawerLink} onClick={() => setIsMenuOpen(false)}>
+                      <Icon size={20} aria-hidden="true" />
+                      <span>{label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      )}
     </header>
   );
 }
