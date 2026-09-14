@@ -2,6 +2,7 @@
 title: "BTS Just Turned Oreos Purple - The 80-Market Bet Is Bigger Than a Cookie"
 excerpt: "BTS Oreo launches across 80+ markets with purple wafers and hotteok flavor, turning a snack collab into a fandom commerce test."
 date: "2026-05-27"
+updatedAt: "2026-09-13"
 category: "Business"
 thumbnail: "/images/news/bts-oreo-global-bet-thumbnail.webp"
 active: true
@@ -59,3 +60,8 @@ The risk is equally clear. If shelves are empty, fans will turn the hunt into fr
 The next question is not whether BTS can make a cookie trend. They already can. The real question is whether a mass retail partner can translate fan excitement into clean execution across markets. Watch the preorder speed, regional stock photos, resale prices, TikTok taste tests, and the letter campaign after June 8.
 
 If this rollout works, the K-pop business playbook gets another aisle. Albums and concerts are still the center, but fandom commerce is moving into places casual consumers visit every week. That is why the purple cookie is not the story. The shelf it lands on is.
+
+## Sources
+
+- [BTS-inspired Oreo launches in more than 80 markets, Associated Press](https://apnews.com/article/54fd43148332b87aba3b8f63326f5391)
+- [OREO and BTS limited-edition collaboration announcement, Mondelez](https://www.mynewsdesk.com/es/mondelez-spain/pressreleases/oreo-presenta-las-galletas-oreo-and-bts-edicion-limitada-3463786)

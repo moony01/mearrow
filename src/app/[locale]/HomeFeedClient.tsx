@@ -4,19 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import {
-  ArrowUpRight,
   Check,
   CirclePlay,
   Clock3,
-  Heart,
-  Image as ImageIcon,
-  ListOrdered,
-  Newspaper,
   Share2,
-  Trophy,
 } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import type { ProfileMediaType, PublicProfilePostRecord } from '@/lib/api/profile-content';
+import type { PublicProfilePostRecord } from '@/lib/api/profile-content';
 import {
   getProfilePostSocial,
   type ProfilePostSocialRecord,
@@ -26,8 +19,6 @@ import ProfilePostSocial, {
 } from '@/components/features/profile/ProfilePostSocial';
 import { usePublicProfileFeed } from '@/hooks/usePublicProfileFeed';
 import styles from './home-feed.module.scss';
-
-type FeedFilter = 'all' | ProfileMediaType;
 
 function getSafeMediaUrl(value: string): string | null {
   try {
@@ -112,21 +103,11 @@ function ShareButton({
 
 function MediaPreview({
   post,
-  memberLabel,
-  caption,
-  shareLabel,
-  sharedLabel,
-  untitledLabel,
   imageLabel,
   shortLabel,
   unavailableLabel,
 }: {
   post: PublicProfilePostRecord;
-  memberLabel: string;
-  caption: string | null;
-  shareLabel: string;
-  sharedLabel: string;
-  untitledLabel: string;
   imageLabel: string;
   shortLabel: string;
   unavailableLabel: string;
@@ -198,24 +179,6 @@ function MediaPreview({
           {shortLabel}
         </span>
       )}
-      {!unavailable && post.media_type === 'short' && (
-        <div className={styles.mediaActions} aria-label={shortLabel}>
-          <ShareButton
-            postId={post.id}
-            memberLabel={memberLabel}
-            caption={caption}
-            shareLabel={shareLabel}
-            sharedLabel={sharedLabel}
-            className={styles.mediaActionButton}
-          />
-        </div>
-      )}
-      {!unavailable && post.media_type === 'short' && (
-        <div className={styles.shortCaptionOverlay}>
-          <strong>{memberLabel}</strong>
-          <p>{caption || untitledLabel}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -254,18 +217,18 @@ function FeedCard({
 
   const authorIdentity = (
     <div className={styles.authorIdentity}>
-      <span className={styles.authorAvatar} aria-hidden="true">
+      <span className={styles.authorAvatar}>
         {authorAvatarUrl && !avatarError ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             className={styles.authorAvatarImage}
             src={authorAvatarUrl}
-            alt=""
+            alt={`${authorName} ${openProfileLabel}`}
             loading="lazy"
             onError={() => setAvatarError(true)}
           />
         ) : (
-          getAuthorInitial(authorName)
+          <span aria-hidden="true">{getAuthorInitial(authorName)}</span>
         )}
       </span>
       <span className={styles.authorCopy}>
@@ -281,164 +244,61 @@ function FeedCard({
       data-testid="profile-feed-card"
       data-media-type={post.media_type}
     >
-      <header className={styles.postHeader}>
-        {post.author?.username?.trim() ? (
-          <Link
-            className={styles.authorLink}
-            href={'/' + locale + '/profile/' + encodeURIComponent(post.author.username.trim())}
-            aria-label={authorName + ' ' + openProfileLabel}
-          >
-            {authorIdentity}
-          </Link>
-        ) : authorIdentity}
-      </header>
-      <MediaPreview
-        post={post}
-        memberLabel={authorName}
-        caption={post.caption}
-        shareLabel={shareLabel}
-        sharedLabel={sharedLabel}
-        untitledLabel={untitledLabel}
-        imageLabel={imageLabel}
-        shortLabel={shortLabel}
-        unavailableLabel={unavailableLabel}
-      />
-      <div className={styles.cardBody}>
-        {post.media_type !== 'short' && (
+      <div className={styles.feedMediaColumn}>
+        <MediaPreview
+          post={post}
+          imageLabel={imageLabel}
+          shortLabel={shortLabel}
+          unavailableLabel={unavailableLabel}
+        />
+        <div className={styles.mediaScrim} aria-hidden="true" />
+        <header className={styles.postHeader}>
+          {post.author?.username?.trim() ? (
+            <Link
+              className={styles.authorLink}
+              href={'/' + locale + '/profile/' + encodeURIComponent(post.author.username.trim())}
+              aria-label={authorName + ' ' + openProfileLabel}
+            >
+              {authorIdentity}
+            </Link>
+          ) : authorIdentity}
+        </header>
+        <footer className={styles.captionOverlay}>
           <p className={styles.caption}>{post.caption || untitledLabel}</p>
-        )}
-        <div className={styles.postActions}>
-          <span className={styles.actionItem}>
-            <Clock3 size={15} aria-hidden="true" />
+          <span className={styles.postDate}>
+            <Clock3 size={13} aria-hidden="true" />
             <time dateTime={post.created_at}>{postDate}</time>
           </span>
-          {post.media_type !== 'short' && (
-            <ShareButton
-              postId={post.id}
-              memberLabel={authorName}
-              caption={post.caption}
-              shareLabel={shareLabel}
-              sharedLabel={sharedLabel}
-              showLabel
-            />
-          )}
-          <ProfilePostSocial
-            postId={post.id}
-            locale={locale}
-            initialSocial={initialSocial}
-            labels={socialLabels}
-            inline
-          />
-        </div>
+        </footer>
       </div>
+      <aside className={styles.feedSocialRail} aria-label={socialLabels.commentPanel}>
+        <ProfilePostSocial
+          postId={post.id}
+          locale={locale}
+          initialSocial={initialSocial}
+          labels={socialLabels}
+          variant="immersive"
+        />
+        <ShareButton
+          postId={post.id}
+          memberLabel={authorName}
+          caption={post.caption}
+          shareLabel={shareLabel}
+          sharedLabel={sharedLabel}
+          className={styles.railShareButton}
+        />
+      </aside>
     </article>
-  );
-}
-
-function FeedComposer({ locale, isAuthenticated }: { locale: string; isAuthenticated: boolean }) {
-  const t = useTranslations('Home');
-  const publishingPath = `/${locale}/${isAuthenticated ? 'my' : 'login'}`;
-
-  return (
-    <section className={styles.feedComposer} aria-label={t('feed_composer_label')}>
-      <div className={styles.composerTop}>
-        <span className={styles.composerAvatar} aria-hidden="true">M</span>
-        <Link className={styles.composerPrompt} href={publishingPath}>
-          {t('feed_composer_prompt')}
-        </Link>
-      </div>
-      <div className={styles.composerActions}>
-        <Link className={styles.composerAction} href={publishingPath}>
-          <ImageIcon size={18} aria-hidden="true" />
-          {t('feed_composer_image')}
-        </Link>
-        <Link className={styles.composerAction} href={publishingPath}>
-          <CirclePlay size={18} aria-hidden="true" />
-          {t('feed_composer_short')}
-        </Link>
-      </div>
-    </section>
-  );
-}
-
-function VoteEntryCard({ locale }: { locale: string }) {
-  const t = useTranslations('Home');
-
-  return (
-    <section className={styles.voteEntryCard} aria-label={t('feed_aside_ranking')}>
-      <div className={styles.voteEntryCopy}>
-        <span className={styles.voteEntryIcon} aria-hidden="true">
-          <ListOrdered size={19} />
-        </span>
-        <div>
-          <p className={styles.voteEntryEyebrow}>{t('feed_aside_ranking')}</p>
-          <h2>{t('title')}</h2>
-          <p className={styles.voteEntryDescription}>{t('feed_aside_description')}</p>
-        </div>
-      </div>
-      <Link className={styles.voteEntryCta} href={`/${locale}/ranking`}>
-        <span>{t('vote_button')}</span>
-        <ArrowUpRight size={16} aria-hidden="true" />
-      </Link>
-    </section>
-  );
-}
-
-function FeedAside({ locale, isAuthenticated }: { locale: string; isAuthenticated: boolean }) {
-  const t = useTranslations('Home');
-  const publishingPath = `/${locale}/${isAuthenticated ? 'my' : 'login'}`;
-
-  return (
-    <aside className={styles.feedAside} aria-label={t('feed_aside_label')}>
-      <section className={styles.asideCard}>
-        <p className={styles.asideEyebrow}>{t('feed_aside_label')}</p>
-        <h2 className={styles.asideTitle}>{t('feed_aside_title')}</h2>
-        <p className={styles.asideDescription}>{t('feed_aside_description')}</p>
-        <nav className={styles.asideLinks} aria-label={t('feed_aside_label')}>
-          <Link className={styles.asideLink} href={`/${locale}/ranking`}>
-            <ListOrdered size={17} aria-hidden="true" />
-            <span>{t('feed_aside_ranking')}</span>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-          <Link className={styles.asideLink} href={`/${locale}/following`}>
-            <Heart size={17} aria-hidden="true" />
-            <span>{t('feed_aside_following')}</span>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-          <Link className={styles.asideLink} href={`/${locale}/hall-of-fame`}>
-            <Trophy size={17} aria-hidden="true" />
-            <span>{t('feed_aside_hall')}</span>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-          <Link className={styles.asideLink} href={`/${locale}/news`}>
-            <Newspaper size={17} aria-hidden="true" />
-            <span>{t('feed_aside_news')}</span>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-        </nav>
-      </section>
-
-      <section className={styles.asideCard}>
-        <p className={styles.asideEyebrow}>{t('feed_aside_publish')}</p>
-        <p className={styles.asideDescription}>{t('feed_aside_publish_description')}</p>
-        <Link className={styles.asideCta} href={publishingPath}>
-          <span>{isAuthenticated ? t('feed_publish') : t('feed_login_to_publish')}</span>
-          <ArrowUpRight size={16} aria-hidden="true" />
-        </Link>
-      </section>
-    </aside>
   );
 }
 
 export default function HomeFeedClient() {
   const locale = useLocale();
   const t = useTranslations('Home');
-  const { isAuthenticated } = useAuth();
-  const [feedFilter, setFeedFilter] = useState<FeedFilter>('all');
-  const mediaType = feedFilter === 'all' ? undefined : feedFilter;
-  const { posts, isLoading, hasMore, error, loadMore, reload } = usePublicProfileFeed(mediaType);
+  const { posts, isLoading, hasMore, error, loadMore, reload } = usePublicProfileFeed();
   const [socialByPostId, setSocialByPostId] = useState<Record<string, ProfilePostSocialRecord>>({});
   const requestedSocialIdsRef = useRef(new Set<string>());
+  const feedShellRef = useRef<HTMLElement | null>(null);
   const loadMoreSentinelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -480,7 +340,7 @@ export default function HomeFeedClient() {
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) void loadMore();
       },
-      { rootMargin: '0px 0px 480px', threshold: 0.01 },
+      { root: feedShellRef.current, rootMargin: '0px 0px 480px', threshold: 0.01 },
     );
 
     observer.observe(sentinel);
@@ -507,49 +367,16 @@ export default function HomeFeedClient() {
   };
 
   return (
-    <section className={styles.feedShell} aria-labelledby="home-feed-title" data-testid="home-profile-feed">
+    <section
+      ref={feedShellRef}
+      className={styles.feedShell}
+      aria-labelledby="home-feed-title"
+      data-testid="home-profile-feed"
+      tabIndex={0}
+    >
       <div className={styles.feedLayout}>
         <div className={styles.feedMain}>
-          <header className={styles.feedHeader}>
-            <div className={styles.feedHeadingCopy}>
-              <p className={styles.feedEyebrow}>MEARROW COMMUNITY</p>
-              <h2 id="home-feed-title" className={styles.feedTitle}>{t('feed_title')}</h2>
-              <p className={styles.feedSubtitle}>{t('feed_subtitle')}</p>
-            </div>
-            <div className={styles.feedHeaderActions}>
-              <span className={styles.feedStatus}>{t('feed_public')}</span>
-            </div>
-          </header>
-
-          <VoteEntryCard locale={locale} />
-          <FeedComposer locale={locale} isAuthenticated={isAuthenticated} />
-
-          <div className={styles.feedToolbar}>
-            <div className={styles.feedFilters} role="tablist" aria-label={t('feed_filter_label')}>
-              {(
-                [
-                  ['all', t('feed_filter_all')],
-                  ['image', t('feed_filter_image')],
-                  ['short', t('feed_filter_short')],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  key={value}
-                  type="button"
-                  role="tab"
-                  aria-selected={feedFilter === value}
-                  className={feedFilter === value ? styles.filterActive : styles.filterButton}
-                  onClick={() => setFeedFilter(value)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-            <span className={styles.feedSort}>
-              <Clock3 size={14} aria-hidden="true" />
-              {t('feed_sort_latest')}
-            </span>
-          </div>
+          <h1 id="home-feed-title" className={styles.visuallyHidden}>{t('feed_title')}</h1>
 
           {isLoading && posts.length === 0 && (
             <div className={styles.feedState} aria-busy="true" aria-live="polite">
@@ -625,7 +452,6 @@ export default function HomeFeedClient() {
             </>
           )}
         </div>
-        <FeedAside locale={locale} isAuthenticated={isAuthenticated} />
       </div>
     </section>
   );

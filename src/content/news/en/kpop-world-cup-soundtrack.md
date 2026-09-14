@@ -2,6 +2,7 @@
 title: "K-pop Just Invaded the World Cup Soundtrack — But TWS Is the Real Test"
 excerpt: "K-pop World Cup soundtrack buzz now has Lisa, TWS and Korea's football campaign in one frame. The real story is fandom as sports strategy."
 date: '2026-06-10'
+updatedAt: '2026-09-13'
 category: 'Industry'
 thumbnail: '/images/news/kpop-world-cup-soundtrack-thumbnail.webp'
 active: true
@@ -51,3 +52,8 @@ The risk is that these placements can look bigger than they actually are. A Worl
 The K-pop industry should not read the World Cup soundtrack wave as a trophy by itself. It should read it as a conversion test. Lisa already has the global brand power to turn a football song into another proof of reach. TWS has a harder but potentially more valuable assignment: use Korea's World Cup emotion to make a broader public remember the group, not just the campaign.
 
 If `Dream With Us` becomes only a seasonal cheer track, the moment will fade when the tournament does. If it gives TWS a recognizable public-facing image — bright, national, youthful and easy to share — then the World Cup link becomes more than borrowed attention. It becomes a shortcut into mainstream memory. That is why this soundtrack story matters: K-pop did not merely enter the stadium. It is now trying to leave with new fans.
+
+## Sources
+
+- [TWS “Dream With Us” official cheer-song notice, Weverse](https://weverse.io/tws/notice/36441)
+- [2026 FIFA World Cup final halftime announcement, Associated Press](https://apnews.com/article/db577fc3124cffcbd2026578641ff04b)

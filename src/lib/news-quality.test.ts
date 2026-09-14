@@ -7,7 +7,7 @@ import {
 
 const longBody = Array.from({ length: NEWS_QUALITY_POLICY.minimumWords }, () => 'context').join(' ');
 
-describe('news publication quality gate', () => {
+describe('news publication quality audit', () => {
   it('extracts unique external sources and ignores image URLs', () => {
     const sources = extractExternalSources(`
       ![thumbnail](https://example.com/image.png)
@@ -32,7 +32,7 @@ describe('news publication quality gate', () => {
     expect(result.reasons).toEqual([]);
   });
 
-  it('holds articles without provenance or original analysis', () => {
+  it('reports articles without provenance or original analysis', () => {
     const result = evaluateNewsQuality(longBody, { category: 'Industry' });
 
     expect(result.eligible).toBe(false);

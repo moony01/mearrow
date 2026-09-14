@@ -1,358 +1,194 @@
 @use '../../styles/abstracts/variables' as *;
 
+/*
+ * Home is intentionally a feed-only surface. The page chrome belongs to the
+ * global left rail; each post gets the media-first treatment of a short-form
+ * video feed instead of another card, toolbar, or information column.
+ */
 .feedShell {
+  --feed-post-height: clamp(400px, 54dvh, 540px);
   width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 32px 20px 80px;
-}
-
-.feedLayout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
-  gap: 20px;
-  align-items: start;
-}
-
-.feedMain { min-width: 0; }
-
-.feedHeader {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 20px;
-  margin: 0 0 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $color-border;
-}
-
-.feedHeadingCopy { min-width: 0; }
-
-.feedHeaderActions {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 9px;
-}
-
-.feedEyebrow {
-  margin: 0 0 9px;
-  color: $color-primary;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-}
-
-.feedTitle {
-  margin: 0;
-  color: $color-text;
-  font-family: $font-display;
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
-  font-weight: 850;
-  letter-spacing: -0.055em;
-  line-height: 1.1;
-}
-
-.feedSubtitle {
-  max-width: 620px;
-  margin: 10px 0 0;
-  color: $color-text-dim;
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-.feedStatus {
-  flex: 0 0 auto;
-  padding: 7px 10px;
-  border: 1px solid rgba($color-primary, 0.22);
-  border-radius: 999px;
-  background: rgba($color-primary, 0.07);
-  color: $color-primary;
-  font-size: 0.68rem;
-  font-weight: 750;
-  white-space: nowrap;
-}
-
-.composerPrompt:focus-visible,
-.composerAction:focus-visible,
-.asideLink:focus-visible,
-.asideCta:focus-visible,
-.authorLink:focus-visible,
-.shareButton:focus-visible,
-.mediaActionButton:focus-visible,
-.filterButton:focus-visible,
-.filterActive:focus-visible {
-  outline: 2px solid $color-focus;
-  outline-offset: 2px;
-}
-
-.feedComposer {
-  margin: 0 0 20px;
-  padding: 16px 18px 12px;
-  border: 1px solid $color-border;
-  border-radius: 18px;
-  background: $color-surface;
-  box-shadow: var(--shadow-sm);
-}
-
-.composerTop {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-}
-
-.composerAvatar {
-  display: grid;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 50%;
-  background: $gradient-primary;
-  color: #fff;
-  font-family: $font-display;
-  font-size: 0.92rem;
-  font-weight: 850;
-}
-
-.composerPrompt {
-  display: flex;
-  min-width: 0;
-  min-height: 42px;
-  flex: 1;
-  align-items: center;
-  padding: 0 16px;
-  border: 1px solid $color-border;
-  border-radius: 999px;
+  height: calc(100dvh - 20px);
+  min-height: 0;
+  max-height: calc(100dvh - 20px);
+  margin: -20px -28px 0;
+  padding: 12px 20px 56px;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+  scroll-padding-block: 4px;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
   background: $color-bg;
-  color: $color-text-dim;
-  font-size: 0.82rem;
-  text-decoration: none;
-  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
-.composerPrompt:hover {
-  border-color: rgba($color-primary, 0.4);
-  background: $color-hover-surface;
-  color: $color-text;
+.feedShell::-webkit-scrollbar {
+  display: none;
 }
 
-.composerActions {
-  display: flex;
-  gap: 8px;
-  margin-top: 13px;
-  padding-top: 11px;
-  border-top: 1px solid $color-border;
+.feedShell:focus-visible {
+  outline: 2px solid $color-focus;
+  outline-offset: -2px;
 }
 
-.composerAction {
-  display: inline-flex;
-  flex: 1 1 0;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 32px;
-  padding: 4px 8px;
-  border-radius: 9px;
-  color: $color-primary;
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: background 0.18s ease, color 0.18s ease;
-}
-
-.composerAction:hover {
-  background: rgba($color-primary, 0.08);
-  color: $color-text;
-}
-
-.feedAside {
-  position: sticky;
-  top: 88px;
-  display: grid;
-  gap: 16px;
-  min-width: 0;
-}
-
-.asideCard {
-  padding: 20px;
-  border: 1px solid $color-border;
-  border-radius: 18px;
-  background: $color-surface;
-  box-shadow: var(--shadow-sm);
-}
-
-.asideEyebrow {
-  margin: 0 0 9px;
-  color: $color-primary;
-  font-size: 0.62rem;
-  font-weight: 850;
-  letter-spacing: 0.14em;
-  line-height: 1.4;
-}
-
-.asideTitle {
-  margin: 0;
-  color: $color-text;
-  font-family: $font-display;
-  font-size: 1.05rem;
-  font-weight: 850;
-  letter-spacing: -0.04em;
-}
-
-.asideDescription {
-  margin: 10px 0 0;
-  color: $color-text-dim;
-  font-size: 0.76rem;
-  line-height: 1.6;
-}
-
-.asideLinks {
-  display: grid;
-  gap: 4px;
-  margin-top: 16px;
-}
-
-.asideLink {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 6px 7px;
-  border-radius: 9px;
-  color: $color-text;
-  font-size: 0.76rem;
-  font-weight: 750;
-  text-decoration: none;
-  transition: background 0.18s ease, color 0.18s ease;
-}
-
-.asideLink span { flex: 1; }
-
-.asideLink:hover {
-  background: $color-hover-surface;
-  color: $color-primary;
-}
-
-.asideCta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 15px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: $color-primary;
-  color: #fff;
-  font-size: 0.73rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: background 0.18s ease, transform 0.18s ease;
-}
-
-.asideCta:hover {
-  background: $color-primary-hover;
-  transform: translateY(-1px);
-}
-
-.feedToolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+.feedLayout,
+.feedMain {
   width: 100%;
-  margin: 0 0 16px;
-}
-
-.feedFilters {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid $color-border;
-  border-radius: 12px;
-  background: $color-surface;
-}
-
-.filterButton,
-.filterActive {
-  min-width: 58px;
-  padding: 7px 10px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: $color-text-dim;
-  font: inherit;
-  font-size: 0.72rem;
-  font-weight: 750;
-  cursor: pointer;
-}
-
-.filterButton:hover { color: $color-text; }
-
-.filterActive {
-  background: $color-text;
-  color: $color-surface;
-}
-
-.feedSort {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  color: $color-text-dim;
-  font-size: 0.72rem;
-  font-weight: 700;
-  white-space: nowrap;
+  min-width: 0;
 }
 
 .feedGrid {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 20px;
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .feedCard {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) 56px;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+  width: min(100%, 588px);
+  height: var(--feed-post-height);
+  min-width: 0;
+  margin: 0 auto;
+  scroll-margin-top: 24px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.feedMediaColumn {
+  position: relative;
   width: 100%;
+  height: 100%;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid $color-border;
-  border-radius: 22px;
-  background: $color-surface;
-  box-shadow: var(--shadow-sm);
-  scroll-margin-top: 24px;
+  border-radius: 16px;
+  background: #101116;
+  box-shadow: 0 18px 48px rgba(16, 19, 28, 0.16);
+  isolation: isolate;
+}
+
+.feedMediaColumn::after {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border: 1px solid rgba(16, 19, 28, 0.08);
+  border-radius: inherit;
+  content: '';
+  pointer-events: none;
+}
+
+.shortCard .feedMediaColumn {
+  background: #050506;
+}
+
+.shortCard .feedMediaColumn::after {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .shortCard {
-  background: #0f1013;
-  border-color: rgba(255, 255, 255, 0.08);
+  grid-template-columns: minmax(0, 460px) 56px;
+  width: min(100%, 528px);
 }
 
-.shortCard .authorCopy strong { color: #fff; }
+.mediaFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: $color-panel-bg;
+}
 
-.shortCard .postActions { color: rgba(255, 255, 255, 0.68); }
+.shortMediaFrame {
+  aspect-ratio: auto;
+  background: #050506;
+}
 
-.shortCard .cardBody { background: #0f1013; }
+.media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mediaFallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 24px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.mediaBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(5, 5, 6, 0.62);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.mediaScrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.26) 0%,
+    transparent 28%,
+    transparent 48%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
+}
 
 .postHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 18px 14px;
+  position: absolute;
+  right: 16px;
+  bottom: 86px;
+  left: 16px;
+  z-index: 2;
+  padding: 0;
 }
 
 .authorIdentity {
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
 }
 
 .authorLink {
   display: inline-flex;
   min-width: 0;
-  flex: 1;
   align-items: center;
   color: inherit;
   text-decoration: none;
@@ -363,18 +199,30 @@
   color: $color-primary;
 }
 
+.authorLink:focus-visible,
+.railShareButton:focus-visible,
+.retryButton:focus-visible,
+.loadMoreButton:focus-visible,
+.inlineError button:focus-visible {
+  outline: 2px solid $color-focus;
+  outline-offset: 3px;
+}
+
 .authorAvatar {
   display: grid;
   flex: 0 0 40px;
   width: 40px;
   height: 40px;
   place-items: center;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.86);
   border-radius: 50%;
   background: $gradient-primary;
   color: #fff;
   font-family: $font-display;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 850;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .authorAvatarImage {
@@ -385,190 +233,101 @@
 }
 
 .authorCopy {
-  display: grid;
+  display: block;
   min-width: 0;
-  gap: 3px;
 }
 
 .authorCopy strong {
+  display: block;
   overflow: hidden;
-  color: $color-text;
-  font-size: 0.86rem;
-  font-weight: 800;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 850;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
   white-space: nowrap;
 }
 
-.authorCopy span {
-  color: $color-text-dim;
-  font-size: 0.7rem;
-}
-
-.mediaFrame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  background: $color-panel-bg;
-}
-
-.shortMediaFrame {
-  width: min(100%, 420px);
-  margin: 0 auto;
-  aspect-ratio: 9 / 16;
-  background: #050506;
-}
-
-.media {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mediaFallback {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  place-items: center;
-  padding: 20px;
-  color: $color-text-dim;
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.mediaBadge {
+.captionOverlay {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: rgba(10, 10, 10, 0.72);
-  color: #fff;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-}
-
-.mediaActions {
-  position: absolute;
-  right: 12px;
-  bottom: 96px;
+  right: 16px;
+  bottom: 18px;
+  left: 16px;
   z-index: 2;
-  display: grid;
-  gap: 10px;
-}
-
-.mediaActionButton {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.62);
+  max-width: calc(100% - 72px);
   color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.18s ease, transform 0.18s ease;
-}
-
-.mediaActionButton:hover {
-  background: rgba(0, 0, 0, 0.82);
-  transform: translateY(-1px);
-}
-
-.shortCaptionOverlay {
-  position: absolute;
-  right: 18px;
-  bottom: 52px;
-  left: 18px;
-  z-index: 1;
-  max-width: calc(100% - 74px);
-  color: #fff;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
-}
-
-.shortCaptionOverlay strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.shortCaptionOverlay p {
-  max-height: 3.2em;
-  margin: 0;
-  overflow: hidden;
-  font-size: 0.82rem;
-  line-height: 1.55;
-  white-space: pre-wrap;
-}
-
-.cardBody {
-  padding: 16px 18px 18px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.66);
 }
 
 .caption {
+  max-height: 4.5em;
   margin: 0;
+  overflow: hidden;
   overflow-wrap: anywhere;
-  color: $color-text;
-  font-size: 0.94rem;
-  line-height: 1.6;
+  color: inherit;
+  font-size: 0.82rem;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
 
-.postActions {
+.postDate {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.feedSocialRail {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 12px 18px;
-  margin-top: 16px;
-  padding-top: 13px;
-  border-top: 1px solid $color-border;
-  color: $color-text-dim;
-  font-size: 0.7rem;
+  gap: 14px;
+  min-width: 0;
+  padding-bottom: 18px;
 }
 
-.actionItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.shareButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  border: 0;
-  background: transparent;
-  color: $color-primary;
-  font: inherit;
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-decoration: none;
+.railShareButton {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  background: $color-surface;
+  color: $color-text;
   cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
 }
 
-.shareButton:hover { color: $color-text; }
+.railShareButton:hover {
+  background: $color-hover-surface;
+  color: $color-primary;
+  transform: translateY(-2px);
+}
 
 .feedState {
   display: grid;
-  min-height: 180px;
+  width: min(100%, 588px);
+  min-height: 260px;
+  margin: 12vh auto 0;
   place-items: center;
   gap: 12px;
   padding: 28px;
-  border: 1px dashed $color-border;
+  border: 1px solid $color-border;
   border-radius: 18px;
+  background: $color-surface;
   color: $color-text-dim;
   text-align: center;
 }
 
-.feedState p { margin: 0; }
+.feedState p {
+  margin: 0;
+}
 
 .spinner {
   display: inline-block;
@@ -594,22 +353,25 @@
 }
 
 .retryButton,
-.loadMoreButton { padding: 10px 14px; }
-
-.loadMoreButton { display: block; margin: 14px auto 0; }
+.loadMoreButton {
+  padding: 10px 14px;
+}
 
 .retryButton:hover,
 .loadMoreButton:hover,
-.inlineError button:hover { background: rgba($color-primary, 0.08); }
-
-.retryButton:focus-visible,
-.loadMoreButton:focus-visible,
-.inlineError button:focus-visible {
-  outline: 2px solid $color-focus;
-  outline-offset: 2px;
+.inlineError button:hover {
+  background: rgba($color-primary, 0.08);
 }
 
-.loadMoreButton:disabled { cursor: wait; opacity: 0.6; }
+.loadMoreButton {
+  display: block;
+  margin: 18px auto 0;
+}
+
+.loadMoreButton:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
 
 .inlineError {
   display: flex;
@@ -622,9 +384,15 @@
   text-align: center;
 }
 
-.inlineError button { padding: 5px 8px; }
+.inlineError button {
+  padding: 5px 8px;
+}
 
-.feedSentinel { width: 100%; height: 1px; margin-top: 4px; }
+.feedSentinel {
+  width: 100%;
+  height: 1px;
+  margin-top: 4px;
+}
 
 .feedLoadingMore {
   display: flex;
@@ -636,207 +404,235 @@
   font-size: 0.76rem;
 }
 
-.feedLoadingMore .spinner { width: 16px; height: 16px; border-width: 2px; }
+.feedLoadingMore .spinner {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
 
 .feedEnd {
-  margin: 24px 0 0;
+  margin: 28px 0 0;
   color: $color-text-dim;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-align: center;
 }
 
-@keyframes feedSpin { to { transform: rotate(360deg); } }
-
-@media (max-width: 1119px) {
-  .feedLayout { display: block; }
-  .feedAside { display: none; }
-}
-
-@media (max-width: 767px) {
-  .feedShell { padding: 24px 12px 96px; }
-  .feedHeader { align-items: flex-start; margin-bottom: 16px; }
-  .feedHeaderActions { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .feedComposer { padding: 14px 14px 10px; border-radius: 16px; }
-  .feedToolbar { align-items: center; gap: 10px; }
-  .feedFilters {
-    flex: 1;
-    min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .feedFilters::-webkit-scrollbar { display: none; }
-  .filterButton,
-  .filterActive { flex: 0 0 auto; }
-  .feedSort { flex: 0 0 auto; }
-  .feedCard { border-radius: 16px; }
-  .postHeader { padding: 14px; }
-  .cardBody { padding: 14px; }
-}
-
-@media (max-width: 430px) {
-  .feedHeader { display: block; }
-  .feedHeaderActions { align-items: flex-start; margin-top: 14px; }
-  .feedHeaderActions .feedStatus { display: inline-flex; }
-  .feedToolbar { align-items: center; flex-direction: row; gap: 8px; }
-  .feedSort { font-size: 0; }
-  .feedSort svg { width: 16px; height: 16px; }
-}
-
-/* MEARROW network surface refresh: TikTok discovery density + LinkedIn task clarity. */
-.feedShell {
-  max-width: none;
-  padding: 32px 0 80px;
-}
-
-.feedLayout {
-  grid-template-columns: minmax(0, 760px) minmax(248px, 292px);
-  justify-content: center;
-  gap: 28px;
-}
-
-.feedMain {
-  width: 100%;
-}
-
-.feedHeader {
-  margin-bottom: 18px;
-  padding-bottom: 22px;
-}
-
-.feedTitle {
-  font-size: clamp(1.8rem, 3vw, 2.55rem);
-}
-
-.voteEntryCard {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 16px;
-  padding: 16px 18px;
-  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, var(--color-border));
-  border-radius: var(--radius-md);
-  background: linear-gradient(105deg, color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)) 0%, var(--color-surface) 72%);
-  box-shadow: var(--shadow-sm);
-}
-
-.voteEntryCopy {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 12px;
-}
-
-.voteEntryIcon {
-  display: grid;
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border-radius: 12px;
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.voteEntryEyebrow {
-  margin: 0 0 3px;
-  color: var(--color-primary);
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.voteEntryCopy h2 {
-  margin: 0;
-  color: var(--color-text);
-  font-family: var(--font-montserrat), sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.voteEntryDescription {
-  margin: 3px 0 0;
-  color: var(--color-text-dim);
-  font-size: 0.75rem;
-  line-height: 1.45;
-}
-
-.voteEntryCta {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 6px;
-  min-height: 38px;
-  padding: 0 13px;
-  border-radius: 10px;
-  background: var(--color-primary);
-  color: #fff;
-  font-size: 0.76rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: background-color 160ms ease, transform 160ms ease;
-}
-
-.voteEntryCta:hover {
-  background: var(--color-primary-hover);
-  transform: translateY(-1px);
-}
-
-.feedCard {
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.mediaFrame {
-  aspect-ratio: 4 / 3;
-}
-
-.shortMediaFrame {
-  aspect-ratio: 9 / 16;
-}
-
-.feedGrid {
-  gap: 16px;
-}
-
-.asideCard {
-  border-radius: var(--radius-md);
-}
-
-@media (min-width: 1120px) {
-  .feedLayout:not(:has(.feedAside)) .feedMain {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 1119px) {
-  .feedMain {
-    max-width: 760px;
-    margin: 0 auto;
-  }
+@keyframes feedSpin {
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 767px) {
   .feedShell {
-    padding: 24px 0 96px;
+    width: calc(100% + 24px);
+    height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 68px);
+    margin: 0 -12px;
+    padding: 0;
+    scroll-padding-block: 0;
   }
 
-  .voteEntryCard {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px;
+  .feedGrid {
+    gap: 0;
+    padding-top: 0;
   }
 
-  .voteEntryCta {
-    justify-content: center;
+  .feedCard {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100dvh - 68px);
+    min-height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 68px);
+    scroll-margin-top: 0;
+  }
+
+  .shortCard {
     width: 100%;
   }
 
-  .mediaFrame {
-    aspect-ratio: 4 / 5;
+  .feedMediaColumn {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  // Keep the complete source image visible and vertically centered inside
+  // the media frame while reserving space for the fixed bottom navigation.
+  .media {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .postHeader {
+    right: 68px;
+    bottom: 78px;
+    left: 12px;
+  }
+
+  .captionOverlay {
+    right: 68px;
+    bottom: 14px;
+    left: 12px;
+    max-width: calc(100% - 80px);
+  }
+
+  .authorAvatar {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .authorCopy strong {
+    font-size: 0.8rem;
+  }
+
+  .caption {
+    font-size: 0.76rem;
+  }
+
+  .feedSocialRail {
+    position: absolute;
+    right: 12px;
+    bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    z-index: 5;
+    width: 44px;
+    height: auto;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-bottom: 0;
+  }
+
+  .railShareButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .feedState {
+    min-height: 220px;
+    margin-top: 8vh;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .feedShell {
+    height: calc(100dvh - 20px);
+    max-height: calc(100dvh - 20px);
+    margin-inline: -28px;
+    padding-inline: 32px;
+  }
+
+  .feedCard {
+    grid-template-columns: minmax(0, 560px) 56px;
+    width: min(100%, 628px);
+  }
+
+  .shortCard {
+    grid-template-columns: minmax(0, 460px) 56px;
+    width: min(100%, 528px);
+  }
+}
+
+@media (min-width: 768px) {
+  .feedShell {
+    height: 100dvh;
+    max-height: 100dvh;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    scroll-padding-block: 0;
+  }
+
+  .feedGrid {
+    gap: 0;
+    padding-top: 0;
+  }
+
+  .feedCard {
+    position: relative;
+    display: block;
+    height: 100dvh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    scroll-margin-top: 0;
+  }
+
+  .feedMediaColumn {
+    position: absolute;
+    top: 5dvh;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 90dvh;
+  }
+
+  .media {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .postHeader {
+    right: 68px;
+  }
+
+  .captionOverlay {
+    right: 68px;
+    max-width: calc(100% - 80px);
+  }
+
+  .feedSocialRail {
+    position: absolute;
+    right: 12px;
+    bottom: calc(5dvh + 12px);
+    z-index: 5;
+    width: 44px;
+    height: auto;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-bottom: 0;
+  }
+
+  .railShareButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .feedSocialRail button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .feedSocialRail [data-testid='profile-post-social'] {
+    width: 44px;
+  }
+
+  .feedSocialRail [data-testid='profile-post-social'] button {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .feedShell {
+    margin-top: -20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedShell {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+
+  .railShareButton,
+  .spinner {
+    transition: none;
+    animation: none;
   }
 }

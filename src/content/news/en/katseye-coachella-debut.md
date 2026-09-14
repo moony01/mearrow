@@ -2,6 +2,7 @@
 title: 'KATSEYE Reached Coachella as Five, Not Six — Why the Fandom Shook Harder Than the Stage'
 excerpt: 'KATSEYE made its Coachella debut as five. The stage landed, but Manon''s hiatus and transparency questions shook the fandom harder.'
 date: '2026-04-12'
+updatedAt: '2026-09-13'
 category: 'Tech & Culture'
 thumbnail: '/images/news/katseye-coachella-debut-thumbnail.webp'
 active: true
@@ -53,3 +54,9 @@ The harder stage comes next. A multinational group also inherits a multinational
 ## The Next Turning Point Happens Offstage
 
 KATSEYE established presence at Coachella. That much is hard to deny. The more interesting question starts now. Will the next scene fans remember be the surprise of `Golden`, or the unresolved discomfort around Manon's absence? If this debut is going to become a true turning point, KATSEYE needs to decide how it talks about its present before it worries about the next performance.
+
+## Sources
+
+- [KATSEYE Coachella notice, Weverse](https://weverse.io/katseye/notice/30230)
+- [KATSEYE releases “Pinky Up” ahead of Coachella, Universal Music Canada](https://www.universalmusic.ca/2026/04/09/katseye-drops-new-single-pinky-up-on-the-eve-of-their-coachella-debut/)
+- [Why Manon was absent from KATSEYE's Coachella performance, Marie Claire](https://www.marieclaire.com/culture/music/why-manon-katseye-not-performing-coachella-hiatus/)

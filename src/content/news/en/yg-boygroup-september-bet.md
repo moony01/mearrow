@@ -2,6 +2,7 @@
 title: '5 Members, 6 Years, 1 September Bet: Why YG''s New Boy Group Already Feels Different'
 excerpt: 'YG new boy group plans now point to a five-member September launch window. The real story is why YG is betting on a smaller roster this time.'
 date: '2026-05-03'
+updatedAt: '2026-09-13'
 category: 'Business'
 thumbnail: '/images/news/yg-boygroup-september-bet-thumbnail.webp'
 active: true
@@ -75,3 +76,7 @@ That is exactly why the story is worth watching now, before a name, track list o
 The next few months will tell us whether YG can turn this announcement into a durable rookie narrative. Fans still do not know the group name, the members, the sound or the visual thesis. But the company has already made one meaningful decision public: this team will be smaller, more sharply defined and easier to contrast against the recent YG male-idol template.
 
 That is why this announcement feels heavier than a routine debut notice. After six years, YG is not simply returning to the boy-group market. It is returning with a structure that looks intentionally stripped down. If the execution lands, the five-member choice may end up feeling obvious in hindsight. If it does not, everyone will point back to the same question now hanging over September: was this a smarter blueprint, or just a narrower one?
+
+## Sources
+
+- [YG Entertainment announces its new five-member boy group, YG Family](https://ygfamily.com/en/news/report/7430)

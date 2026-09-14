@@ -2,6 +2,7 @@
 title: "aespa Pulled G-Dragon Into WDA - And the Real Target Wasn't Korea"
 excerpt: "aespa G-Dragon WDA turns LEMONADE into a China-chart and fandom strategy test before the May 29 album drop."
 date: '2026-05-18'
+updatedAt: '2026-09-13'
 category: 'Artist'
 thumbnail: '/images/news/aespa-gdragon-wda-thumbnail.webp'
 active: true
@@ -89,3 +90,7 @@ That is a harder play to copy than it looks. It requires an artist with a strong
 `WDA` has done its job if the audience arrives on May 29 with a sharper question than "what is aespa releasing?" The question now is whether `LEMONADE` can turn a polarizing pre-release into a complete album statement. That is a higher bar, but it is also the point of using a single this loud before the main drop.
 
 If the title track lands cleanly, `WDA` will look like a strategic provocation: the strange door before the bigger room. If the album feels scattered, the same song may look like a warning sign. Either way, SM has already made the comeback harder to scroll past. In a May calendar packed with major releases, that may be the most valuable win available before release day.
+
+## Sources
+
+- [aespa unveils new single “WDA,” featuring G-Dragon, Yonhap](https://en.yna.co.kr/view/AEN20260512006500315)

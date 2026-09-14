@@ -2,6 +2,7 @@
 title: "100 Million in 13 Days - BABYMONSTER Just Made YG's Problem Bigger"
 excerpt: "BABYMONSTER CHOOM 100M turns a 13-day YouTube sprint into YG's next fandom, tour, and rookie-market pressure test."
 date: '2026-05-19'
+updatedAt: '2026-09-13'
 category: 'Tech & Culture'
 thumbnail: '/images/news/babymonster-choom-100m-thumbnail.webp'
 active: true
@@ -69,3 +70,8 @@ For trainees and aspiring idols, the lesson is blunt. Viral visibility helps, bu
 The first 100 million views created a headline. The next phase will test whether `CHOOM` can become a durable era rather than a fast statistic. That depends on repeat stages, tour clips, fan edits, follow-up videos and whether casual viewers keep treating BABYMONSTER as more than a YouTube event.
 
 The uncomfortable part for YG is that BABYMONSTER has already made the bar visible. A normal young group would celebrate 100 million views and breathe. BABYMONSTER does not get that luxury anymore. The 13-day clock is now part of the group's story, and every future comeback has to answer the question it created: was `CHOOM` a peak, or was it only the floor?
+
+## Sources
+
+- [BABYMONSTER's “CHOOM” becomes fastest 2026 K-pop MV to reach 100 million views, Soompi](https://www.soompi.com/article/1842011wpp/babymonsters-choom-becomes-fastest-2026-k-pop-mv-to-reach-100-million-views)
+- [BABYMONSTER “CHOOM” official YG Entertainment report](https://ygfamily.com/en/news/report/7434)

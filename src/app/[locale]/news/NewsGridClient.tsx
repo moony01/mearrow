@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import { getNewsCommentCounts } from '@/lib/api/news-comments';
 import NewsCard from '@/components/news/NewsCard';
 import AdBanner from '@/components/common/AdBanner';
+import Pagination from '@/components/common/Pagination';
 import { AD_SLOTS } from '@/types/ads';
 import styles from './NewsGridClient.module.scss';
 
@@ -32,35 +33,13 @@ interface NewsGridClientProps {
   locale: string;
 }
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 10;
 
 export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
   const t = useTranslations('News');
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
-  // 댓글 수 배치 조회
-  useEffect(() => {
-    if (posts.length === 0) return;
-
-    const controller = new AbortController();
-    const slugs = posts.map((p) => p.slug);
-
-    getNewsCommentCounts(slugs, controller.signal).then((counts) => {
-      if (!controller.signal.aborted) {
-        setCommentCounts(counts);
-      }
-    });
-
-    const abortOnPageHide = () => controller.abort();
-    window.addEventListener('pagehide', abortOnPageHide);
-
-    return () => {
-      window.removeEventListener('pagehide', abortOnPageHide);
-      controller.abort();
-    };
-  }, [posts]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // 뉴스에서 고유 카테고리 추출 (출현 빈도순 정렬)
   const categories = useMemo(() => {
@@ -80,15 +59,43 @@ export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
     return posts.filter((p) => (p.category || 'General') === selectedCategory);
   }, [posts, selectedCategory]);
 
+  const totalPages = Math.ceil(filteredPosts.length / PAGE_SIZE);
+  const activePage = Math.min(currentPage, Math.max(totalPages, 1));
+  const displayedPosts = useMemo(
+    () => filteredPosts.slice((activePage - 1) * PAGE_SIZE, activePage * PAGE_SIZE),
+    [activePage, filteredPosts],
+  );
+  const displayedSlugs = useMemo(
+    () => displayedPosts.map((post) => post.slug),
+    [displayedPosts],
+  );
+
+  // 현재 페이지에 표시되는 뉴스의 댓글 수만 배치 조회
+  useEffect(() => {
+    if (displayedSlugs.length === 0) return;
+
+    const controller = new AbortController();
+
+    getNewsCommentCounts(displayedSlugs, controller.signal).then((counts) => {
+      if (!controller.signal.aborted) {
+        setCommentCounts((previous) => ({ ...previous, ...counts }));
+      }
+    });
+
+    const abortOnPageHide = () => controller.abort();
+    window.addEventListener('pagehide', abortOnPageHide);
+
+    return () => {
+      window.removeEventListener('pagehide', abortOnPageHide);
+      controller.abort();
+    };
+  }, [displayedSlugs]);
+
   // 카테고리 변경 시 페이지 리셋
   const handleCategoryChange = (cat: string | null) => {
     setSelectedCategory(cat);
-    setVisibleCount(PAGE_SIZE);
+    setCurrentPage(1);
   };
-
-  // 현재 페이지에 표시할 게시물
-  const displayedPosts = filteredPosts.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredPosts.length;
 
   return (
     <>
@@ -100,6 +107,8 @@ export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
             className={classNames(styles.filterButton, {
               [styles.active]: selectedCategory === null,
             })}
+            type="button"
+            aria-pressed={selectedCategory === null}
             onClick={() => handleCategoryChange(null)}
           >
             {t('category_all')}
@@ -111,6 +120,8 @@ export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
               className={classNames(styles.filterButton, {
                 [styles.active]: selectedCategory === cat,
               })}
+              type="button"
+              aria-pressed={selectedCategory === cat}
               onClick={() => handleCategoryChange(cat)}
             >
               {cat}
@@ -143,17 +154,17 @@ export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
         </React.Fragment>
       ))}
 
-      {/* 더 보기 버튼 */}
-      {hasMore && (
-        <div className={styles.loadMore}>
-          <button
-            className={styles.loadMoreButton}
-            onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
-          >
-            {t('loadMore')}
-          </button>
-        </div>
-      )}
+      <Pagination
+        currentPage={activePage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+        ariaLabel={t('paginationLabel')}
+        previousGroupLabel={t('previousGroup')}
+        previousLabel={t('previousPage')}
+        nextLabel={t('nextPage')}
+        nextGroupLabel={t('nextGroup')}
+        pageLabel={(page) => t('pageLabel', { page })}
+      />
 
       {/* 필터링 결과 없음 */}
       {filteredPosts.length === 0 && selectedCategory && (

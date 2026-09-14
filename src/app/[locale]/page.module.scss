@@ -239,7 +239,10 @@
   flex: 1;
   min-width: 0; // flex item overflow 방지
   width: 100%;
-  overflow: hidden; // 스와이프 시 넘침 방지
+  // The ranking is a vertical list. Hiding overflow here clips the lower
+  // cards on mobile when the flex layout temporarily measures this section
+  // shorter than its contents.
+  overflow: visible;
 }
 
 // Direct voting keeps the right side open on desktop for the next board

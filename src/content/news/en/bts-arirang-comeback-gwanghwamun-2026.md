@@ -1,19 +1,20 @@
 ---
-title: '260,000 Fans Shut Down Seoul — BTS Arirang Comeback Rewrites K-Pop History'
-excerpt: 'After 3+ years away, BTS packed 260,000 fans into Gwanghwamun Square and stopped the world on Netflix. Here''s what happened on March 21 — and what it means for K-pop.'
+title: 'BTS''s Gwanghwamun Comeback — What the 260,000-Person Forecast Got Right and Wrong'
+excerpt: 'BTS returned to Gwanghwamun on March 21. The 260,000-person forecast, later attendance estimates, and Netflix broadcast reveal the real scale of the event.'
 date: '2026-03-24'
+updatedAt: '2026-09-13'
 category: 'Artist'
 thumbnail: '/images/news/bts-arirang-comeback-gwanghwamun-2026-thumbnail.webp'
 active: true
 ---
 
-On March 21, 2026, Seoul's Gwanghwamun Square came to a standstill. BTS was back. After more than three years away, all seven members having completed their mandatory military service, they returned with a new fifth studio album — *Arirang* — and a free public concert that drew 260,000 people to the heart of Seoul while being livestreamed globally on Netflix. This wasn't just a comeback. It was K-pop's redefinition.
+On March 21, 2026, BTS returned to Seoul's Gwanghwamun Square after more than three years away. All seven members had completed their mandatory military service, and the group introduced its fifth studio album, *Arirang*, with a free public concert carried globally on Netflix. The event was large enough to trigger a 260,000-person pre-event forecast, but that forecast should not be presented as a confirmed attendance count. The more useful story is how different organizations measured the crowd afterward — and what that difference says about K-pop's ability to turn a comeback into a city-scale event.
 
-## 260,000 People. Gwanghwamun. One Night.
+## 260,000 Was the Forecast. The Real Story Was Measurement.
 
-### The Largest K-Pop Outdoor Concert in History
+### A projected crowd is not the same as a verified attendance total
 
-'BTS THE COMEBACK LIVE | ARIRANG' was staged at Gwanghwamun Square — free of charge. Despite no ticket requirement, 260,000 fans showed up in person. That's the largest single outdoor K-pop concert audience in history.
+'BTS THE COMEBACK LIVE | ARIRANG' was staged at Gwanghwamun Square — free of charge. Before the event, authorities prepared for as many as 260,000 people across the surrounding viewing and movement areas. After the show, Yonhap reported a police estimate of about 48,000 attendees, while HYBE gave a higher figure of 100,000. Other reports used different geographic or cumulative definitions. Those figures cannot be treated as interchangeable, so the responsible headline is the scale of the forecast and the event's reach, not an unsupported single attendance number.
 
 The BBC noted: "If a comeback concert of this scale — one that effectively paralyses parts of the city centre — is allowed, then other artists or agencies may well request to use the same space in the future." BTS didn't just take the stage. They took the city.
 
@@ -22,7 +23,8 @@ The BBC noted: "If a comeback concert of this scale — one that effectively par
 | Concert Name | BTS THE COMEBACK LIVE \| ARIRANG |
 | Venue | Gwanghwamun Square, Seoul |
 | Date | March 21, 2026 |
-| Live Audience | Approx. 260,000 |
+| Pre-event crowd forecast | Up to 260,000 across the surrounding area |
+| Post-event estimates | About 48,000 by police; 100,000 by HYBE |
 | Broadcast | Netflix global livestream |
 | Runtime | Approx. 1 hour |
 
@@ -88,10 +90,17 @@ Calling this a "comeback" undersells what happened. From MEARROW's perspective, 
 
 **It's evolution, not a reset.** Three years off is a long time in K-pop. Fourth-gen groups have established their footholds. Streaming dynamics have shifted. BTS responded not by ignoring the changes but by adapting — strategic collaborators (Diplo, Artemas), a Netflix partnership that integrates documentary, album, and live performance into a single content ecosystem, and a title that speaks to Korean cultural identity at a moment when that identity carries global cultural capital.
 
-**260,000 people is a proof of concept.** A free show drawing a quarter of a million fans to one square doesn't happen because of nostalgia alone. That turnout demonstrates a fandom that spent three years in waiting mode, not attrition mode. The demand compressed, then detonated.
+**The forecast-versus-count gap is a lesson in event measurement.** The event still demonstrated exceptional demand: a free, centrally located comeback required major crowd planning, public-safety coordination and global broadcast infrastructure. But the disagreement over totals also shows why editorial coverage must name the counting method instead of turning a projection into a fact. The demand was real; the exact size depends on which area and time window a source measured.
 
 **34 cities reshapes the industry calendar.** When BTS tours, other artists work around them. The second half of 2026 and early 2027 in markets from Seoul to LA to London is already being structured around BTS's presence. That's a level of market gravity no other artist in K-pop — arguably in pop music globally — currently matches.
 
 ## The K-Pop Clock Now Runs on BTS Time
 
-March 21, 2026 will be remembered. 260,000 at Gwanghwamun. Netflix global livestream. *Arirang*. Three events detonating simultaneously — not a comeback announcement but a fully armed return. From Goyang Stadium in April through 2027, the ARIRANG World Tour will write its own records. The journey has just begun.
+March 21, 2026 will be remembered. Gwanghwamun, a Netflix global livestream and *Arirang* converged into a high-stakes return. The 260,000-person forecast, the later competing attendance estimates and the broadcast scale each tell a different part of the story. From Goyang Stadium in April through 2027, the ARIRANG World Tour will write its own records — but those records should be measured with the same care.
+
+## Sources
+
+- [BTS Gwanghwamun comeback event notice, Weverse](https://weverse.io/bts/notice/33624)
+- [BTS comeback concert draws competing attendance estimates, Yonhap](https://en.yna.co.kr/view/AEN20260322001300315)
+- [Netflix: BTS comeback live reaches a global audience](https://about.netflix.com/en/news/bts-commands-the-global-stage-as-bts-the-comeback-live-draws-18-million-viewers)
+- [Gwanghwamun concert crowd report, Asia Business Daily](https://view.asiae.co.kr/en/article/2026032211062911712)

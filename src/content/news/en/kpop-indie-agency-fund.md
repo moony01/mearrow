@@ -2,6 +2,7 @@
 title: "10 Agencies, 300 Million Won Each — Korea's K-pop Middle Class Just Got a Lifeline"
 excerpt: "Korea's K-pop agency fund gives 10 smaller labels up to 300 million won a year. The real test is whether money can widen the market."
 date: '2026-06-18'
+updatedAt: '2026-09-13'
 category: 'Industry'
 thumbnail: '/images/news/kpop-indie-agency-fund-thumbnail.webp'
 active: true
@@ -59,3 +60,8 @@ That is why the selected cohort should be watched beyond the first press cycle. 
 The most honest reading is simple: 300 million won is big enough to matter and too small to hide bad strategy. That may be exactly why this program is worth watching. It gives smaller agencies a chance to make a global move, but it also exposes whether they know which move should come first.
 
 K-pop already proved it can export stars, albums and arena demand. The next layer is harder: exporting opportunity to companies that do not already have global infrastructure. If this fund helps even a few agencies build repeatable overseas playbooks, Korea's K-pop middle class gets stronger. If not, the Big Four era will keep looking less like a phase and more like the default shape of the industry.
+
+## Sources
+
+- [2026 Global Leap Forward Support project, Korea.kr](https://www.korea.kr/news/policyNewsView.do?newsId=148966592&pWise=sub&pWiseSub=C2)
+- [K-pop global leap support project, Korea Creative Content Agency](https://www.kocca.kr/kocca/pims/view.do?category=&intcNo=126D00110001&menuNo=204104&pageIndex=1&recptSt=&search=&searchWrd=)

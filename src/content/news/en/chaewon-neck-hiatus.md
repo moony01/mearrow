@@ -2,6 +2,7 @@
 title: "Kim Chaewon Neck Hiatus Hits LE SSERAFIM - The PUREFLOW Timing Is Brutal"
 excerpt: "Kim Chaewon's neck pain hiatus lands days before LE SSERAFIM's PUREFLOW, turning a health notice into a comeback-risk test."
 date: '2026-05-20'
+updatedAt: '2026-09-13'
 category: 'Artist'
 thumbnail: '/images/news/chaewon-neck-hiatus-thumbnail.webp'
 active: true
@@ -69,3 +70,8 @@ That makes this a trust test. If Chaewon's return is handled carefully and the g
 The first launch is the album. The second is the management response. LE SSERAFIM can still make `PUREFLOW pt.1` feel like a confident new chapter, but the stage now has to carry a quieter message too: the group is not ignoring the body behind the performance.
 
 That is the uncomfortable reality of this story. A health notice can be brief, but its meaning can stretch across an entire comeback cycle. Chaewon's recovery should come first. After that, the industry's lesson is plain: when choreography becomes the headline before the album even arrives, the company has to treat safety as part of the creative plan, not an afterthought.
+
+## Sources
+
+- [Additional information on Kim Chaewon's health and upcoming schedule, Weverse](https://weverse.io/lesserafim/notice/36501)
+- [Kim Chaewon suspends activities due to neck injury, KBS World](https://world.kbs.co.kr/service/contents_view.htm?board_seq=468377&lang=s)

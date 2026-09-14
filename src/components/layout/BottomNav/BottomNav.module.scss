@@ -3,7 +3,7 @@
  * 
  * 모바일 하단 네비게이션 스타일
  * iOS 안전 영역(Safe Area)을 고려한 디자인
- * LinkedIn 모바일 탭 바처럼 화면 하단에 고정된 전역 내비게이션
+ * 직접 링크를 가로로 탐색할 수 있는 화면 하단 고정 전역 내비게이션
  */
 
 @use '../../../styles/abstracts/variables' as *;
@@ -31,16 +31,17 @@
 .navGlass {
   @include mix.glass-panel;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 640px;
+  min-width: 0;
   margin: 0 auto;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+  overflow: hidden;
 }
 
 .navItem {
@@ -50,14 +51,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  min-width: 0;
+  min-height: 54px;
+  padding: 7px 2px;
+  border-radius: 14px;
+  gap: 2px;
   color: $color-text-dim;
   text-decoration: none;
   transition: color 0.2s ease;
-  min-height: 54px;
-  padding: 7px 4px;
-  border-radius: 14px;
-  min-width: 44px;
-  gap: 2px;
 
   &:active {
     transform: scale(0.95);
@@ -66,7 +67,7 @@
   &.active {
     color: $color-text;
     background: color-mix(in srgb, var(--color-primary) 8%, transparent);
-    
+
     .iconWrapper {
       color: $color-primary;
 
@@ -75,7 +76,7 @@
         filter: drop-shadow(0 0 8px rgba($color-primary, 0.5));
       }
     }
-    
+
     .label {
       color: $color-primary;
     }
@@ -89,18 +90,6 @@
   align-items: center;
   margin-bottom: 0;
   transition: all 0.2s ease;
-}
-
-.indicator {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  background-color: $color-primary;
-  border-radius: 50%;
-  box-shadow: 0 0 8px $color-primary;
 }
 
 .label {

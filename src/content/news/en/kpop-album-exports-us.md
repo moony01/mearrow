@@ -2,6 +2,7 @@
 title: "K-pop Album Exports Just Crossed $100M - The U.S. Took Japan's Crown"
 excerpt: "K-pop album exports hit $120M in Q1 as the U.S. overtook Japan, exposing a physical-album market shift fans cannot ignore."
 date: '2026-05-17'
+updatedAt: '2026-09-13'
 category: 'Market Trend'
 thumbnail: '/images/news/kpop-album-exports-us-thumbnail.webp'
 active: true
@@ -59,3 +60,8 @@ For companies, the next advantage may come from boring operational details. Fast
 The next fight will not be whether K-pop can sell physical albums overseas. That answer arrived with a $120 million quarter. The better question is whether the market can keep expanding without exhausting the fans who built it. If U.S. buyers stay on top for another quarter, every major agency will have to rewrite its global album plan around America as a physical market, not just a streaming prize.
 
 That is the real twist behind the crown change. Japan did not stop mattering. The world around it got bigger, faster and more expensive to serve.
+
+## Sources
+
+- [K-pop album exports top US$100 million for the first time in Q1, Yonhap](https://en.yna.co.kr/view/AEN20260428001800320?section=economy-finance%2Feconomy)
+- [K-pop bonanza: album exports in Q1 smash record, Korea.net](https://www.korea.net/NewsFocus/Business/view?articleId=291600&koreanId=291558)

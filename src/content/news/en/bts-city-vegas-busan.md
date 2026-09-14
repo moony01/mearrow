@@ -2,6 +2,7 @@
 title: "It's Not the Concert Anymore - BTS Is About to Turn Las Vegas and Busan Into the Real Headline"
 excerpt: "BTS THE CITY ARIRANG is expanding to Las Vegas and Busan. The bigger story is how BTS is building a destination economy outside the stadium."
 date: "2026-04-22"
+updatedAt: "2026-09-13"
 category: "Tech & Culture"
 thumbnail: "/images/news/bts-city-vegas-busan-thumbnail.webp"
 active: true
@@ -62,3 +63,8 @@ That is why this matters beyond BTS. The next phase of K-pop competition may not
 ## The Next Battle Opens Outside the Stadium
 
 The Las Vegas and Busan expansion is not just another decorative layer around a world tour. It is the real stress test for whether Seoul was a one-off spectacle or the start of a scalable model, and whether K-pop can truly build city-sized stay economies around fandom. The thing to watch now is not only the seat map. It is whether BTS can turn two more cities into full `destination events`.
+
+## Sources
+
+- [BTS THE CITY ARIRANG: Las Vegas and Busan schedule, Weverse](https://weverse.io/bts/notice/35047)
+- [BTS announces 2026 world tour dates, Associated Press](https://apnews.com/article/01db0e428723c0febc514373969333bd)

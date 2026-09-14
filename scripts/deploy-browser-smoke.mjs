@@ -136,6 +136,11 @@ function isIgnorableConsoleError(message) {
   const text = message.text();
   const sourceUrl = message.location().url;
   return (
+    // External documents such as Google's consent/auth frames can publish a
+    // report-only frame-ancestors policy. The browser logs that warning while
+    // embedding the document, but it is not an application runtime failure.
+    (text.includes('violates the following report-only Content Security Policy directive') &&
+      text.includes('frame-ancestors')) ||
     text.includes('AdSense head tag') ||
     text.includes('googlesyndication.com') ||
     text.includes('google-analytics.com') ||
@@ -168,6 +173,17 @@ async function main() {
     const supabaseResponses = [];
     const appConsoleErrors = [];
     const appPageErrors = [];
+
+    await page.addInitScript(() => {
+      try {
+        localStorage.setItem(
+          'kcl-daily-vote-modal-dismissed-date',
+          new Date().toISOString().slice(0, 10),
+        );
+      } catch {
+        // The optional daily vote modal must not affect deployment smoke.
+      }
+    });
 
     // Next's dev bootstrap logs the raw onerror Event when this optional
     // React Grab script is unavailable. Fulfill it with an empty script so
@@ -260,10 +276,19 @@ async function main() {
       `mobile home returned HTTP ${mobileHomeResponse?.status()}`,
     );
     await page.getByTestId('home-profile-feed').waitFor({ state: 'visible', timeout: 20_000 });
+    const mobileHeader = page.getByTestId('mobile-header');
     const mobileSidebar = page.getByTestId('desktop-sidebar');
     const mobileBottomNav = page.getByTestId('mobile-bottom-nav');
+    assert(await mobileHeader.isVisible(), 'mobile header is not visible at 390px');
     assert(!(await mobileSidebar.isVisible()), 'desktop sidebar is visible at 390px');
     assert(await mobileBottomNav.isVisible(), 'mobile bottom nav is not visible at 390px');
+    const mobileNavLabels = (await mobileBottomNav.getByRole('link').allTextContents()).map((label) =>
+      label.trim(),
+    );
+    assert(
+      JSON.stringify(mobileNavLabels) === JSON.stringify(['홈', '투표', '업로드', '뉴스', '프로필']),
+      `mobile navigation labels are incorrect (${JSON.stringify(mobileNavLabels)})`,
+    );
     assert(
       (await mobileBottomNav.getByRole('link', { name: '홈', exact: true }).getAttribute('aria-current')) ===
         'page',
@@ -271,18 +296,38 @@ async function main() {
     );
 
     const mobileShell = await page.evaluate(() => {
+      const header = document.querySelector('[data-testid="mobile-header"]');
       const bottomNav = document.querySelector('[data-testid="mobile-bottom-nav"]');
-      const styles = bottomNav ? getComputedStyle(bottomNav) : null;
+      const headerStyles = header ? getComputedStyle(header) : null;
+      const bottomNavStyles = bottomNav ? getComputedStyle(bottomNav) : null;
       return {
         viewportWidth: window.innerWidth,
         documentWidth: document.documentElement.scrollWidth,
         bodyWidth: document.body.scrollWidth,
-        bottomNavBackground: styles?.backgroundColor || null,
+        headerWidth: header?.getBoundingClientRect().width || 0,
+        headerHeight: header?.getBoundingClientRect().height || 0,
+        headerDisplay: headerStyles?.display || null,
+        bottomNavWidth: bottomNav?.getBoundingClientRect().width || 0,
+        bottomNavHeight: bottomNav?.getBoundingClientRect().height || 0,
+        bottomNavPosition: bottomNavStyles?.position || null,
+        bottomNavBackground: bottomNavStyles?.backgroundColor || null,
       };
     });
     assert(
       Math.max(mobileShell.documentWidth, mobileShell.bodyWidth) <= mobileShell.viewportWidth + 1,
       `mobile shell overflows horizontally (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.headerWidth >= mobileShell.viewportWidth - 1 && mobileShell.headerHeight > 0,
+      `mobile header geometry is invalid (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.bottomNavWidth >= mobileShell.viewportWidth - 1 && mobileShell.bottomNavHeight > 0,
+      `mobile bottom nav geometry is invalid (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.bottomNavPosition === 'fixed',
+      `mobile bottom nav is not fixed (${JSON.stringify(mobileShell)})`,
     );
     assert(
       mobileShell.bottomNavBackground &&
@@ -300,6 +345,65 @@ async function main() {
     const companyCount = await page.locator('[data-company-id]').count();
     assert(companyCount > 0, 'ranking rendered no company cards');
     assert(!(await page.getByText('Failed to load data').count()), 'ranking rendered data-load failure');
+
+    await page.setViewportSize({ width: 390, height: 844 });
+    const mobileRankingResponse = await page.goto(
+      `${server.baseUrl}/ko/ranking?deploy-browser-smoke=mobile-ranking`,
+      { waitUntil: 'domcontentloaded', timeout: 30_000 },
+    );
+    assert(
+      mobileRankingResponse && mobileRankingResponse.status() < 500,
+      `mobile ranking returned HTTP ${mobileRankingResponse?.status()}`,
+    );
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-company-id]').length >= 10,
+      undefined,
+      { timeout: 20_000 },
+    );
+    const mobileRanking = await page.evaluate(() => {
+      const items = Array.from(document.querySelectorAll('[data-company-id]'));
+      const getRank = (element) =>
+        element.dataset.rank || element.querySelector('[class*="rankNumber"]')?.textContent?.trim() || '';
+      const tenth = items.find((element) => getRank(element) === '10');
+      const listSection = tenth?.closest('[class*="leagueListSection"]');
+      const tenthRect = tenth?.getBoundingClientRect();
+      const sectionRect = listSection?.getBoundingClientRect();
+      return {
+        itemCount: items.length,
+        documentWidth: document.documentElement.scrollWidth,
+        viewportWidth: window.innerWidth,
+        tenth: tenthRect
+          ? {
+              top: Number(tenthRect.top.toFixed(2)),
+              bottom: Number(tenthRect.bottom.toFixed(2)),
+              height: Number(tenthRect.height.toFixed(2)),
+              display: getComputedStyle(tenth).display,
+              visibility: getComputedStyle(tenth).visibility,
+              withinListSection: Boolean(sectionRect && tenthRect.bottom <= sectionRect.bottom + 1),
+            }
+          : null,
+        listSection: listSection
+          ? {
+              clientHeight: listSection.clientHeight,
+              scrollHeight: listSection.scrollHeight,
+              overflowY: getComputedStyle(listSection).overflowY,
+            }
+          : null,
+      };
+    });
+    assert(mobileRanking.itemCount >= 10, 'mobile ranking rendered fewer than 10 company cards');
+    assert(
+      mobileRanking.tenth &&
+        mobileRanking.tenth.height > 0 &&
+        mobileRanking.tenth.display !== 'none' &&
+        mobileRanking.tenth.visibility !== 'hidden' &&
+        mobileRanking.tenth.withinListSection,
+      `mobile ranking 10th card is clipped (${JSON.stringify(mobileRanking)})`,
+    );
+    assert(
+      mobileRanking.documentWidth <= mobileRanking.viewportWidth + 1,
+      `mobile ranking overflows horizontally (${JSON.stringify(mobileRanking)})`,
+    );
     const seoEndpoints = await assertSeoEndpoints(server.baseUrl);
     const auditionSmoke = await runAuditionBrowserSmoke(page, server.baseUrl);
 
@@ -367,6 +471,7 @@ async function main() {
           desktopShell,
           mobileShell,
           companyCount,
+          mobileRanking,
           ...seoEndpoints,
           auditionSmoke,
           supabaseResponses: supabaseResponses.map(({ status, url }) => ({ status, url })),

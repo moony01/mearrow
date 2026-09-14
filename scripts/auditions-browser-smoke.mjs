@@ -1,6 +1,7 @@
 export const AUDITION_SMOKE_LOCALES = ['ko', 'en'];
 
 export const EXPECTED_AUDITION_SLUGS = [
+  '2026-yg-global-audition-bangkok',
   '2026-yg-global-audition-osaka',
   'jyp-online-audition',
   'source-music-summer-audition-2026',

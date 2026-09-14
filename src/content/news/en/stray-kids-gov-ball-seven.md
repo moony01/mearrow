@@ -2,6 +2,7 @@
 title: "Stray Kids Will Headline Gov Ball as Seven - Seungmin's Ankle Just Exposed the Real Risk"
 excerpt: "Stray Kids will headline Governors Ball as seven after Seungmin's ankle stress fracture, turning a festival slot into a health-risk test."
 date: "2026-05-24"
+updatedAt: "2026-09-13"
 category: "Artist"
 thumbnail: "/images/news/stray-kids-gov-ball-seven-thumbnail.webp"
 active: true
@@ -81,3 +82,8 @@ That is why this story is bigger than one ankle injury. It shows how quickly an 
 If Stray Kids turn Governors Ball into a powerful seven-member performance, the night will still be remembered as a milestone. But the more important measure comes after the lights go down. Does Seungmin actually get the recovery space the notice implies? Does the next update clarify the path forward? Does the group return to full strength without making rest feel like an interruption?
 
 That is the part nobody can ignore. The June 6 stage matters because Stray Kids are headlining it. The missing member matters because a global K-pop stage is only sustainable if the people inside it can keep standing after the spotlight moves on.
+
+## Sources
+
+- [Stray Kids official schedule, JYP Entertainment](https://straykids.jype.com/Mobile/Schedule)
+- [Seungmin to sit out Governors Ball 2026 due to injury, Soompi](https://www.soompi.com/article/1843012wpp/stray-kids-seungmin-to-sit-out-governors-ball-2026-due-to-injury)

@@ -2,6 +2,7 @@
 title: "AKMU Broke K-pop's Fan War - The Charts Exposed What Idols Still Can't Buy"
 excerpt: "AKMU Paradise of Rumors turned chart wins into a market warning: fandom machines still cannot fully buy Korean public listening."
 date: '2026-05-21'
+updatedAt: '2026-09-13'
 category: 'Market Trend'
 thumbnail: '/images/news/akmu-chart-war-thumbnail.webp'
 active: true
@@ -75,3 +76,8 @@ AKMU's current run does not cancel the power of major agencies, rookie fandoms, 
 The problem is sharper than that. The machine is strong, but AKMU just proved strength is not the same as inevitability.
 
 For every label planning the next comeback war, the uncomfortable question is now simple: when the fan missions end, when the voting window closes, and when the teaser cycle moves on, will the song still be there? "Paradise of Rumors" is there. That is why this win stings.
+
+## Sources
+
+- [AKMU earns Circle triple crown, Soompi](https://www.soompi.com/article/1842714wpp/akmu-earns-circle-triple-crown-cortis-bts-and-illit-top-weekly-charts)
+- [May 2026 Circle Chart: AKMU, CORTIS and BTS lead the charts, Circle Chart](https://circlechart.net/page_article/view.circle?idx=26214&sgenre=kpop)

@@ -2,11 +2,11 @@
  * AppShell
  *
  * 전역 레이아웃 셸 컴포넌트
- * LinkedIn 정보 구조를 MEARROW 브랜드에 맞게 해석한 레이아웃 구조를 제공합니다.
+ * TikTok형 좌측 사이드바 정보 구조를 MEARROW 브랜드에 맞게 해석한 레이아웃 구조를 제공합니다.
  *
  * 구조:
- * - Desktop(769px+): 사이드바 + 메인 콘텐츠
- * - Mobile(<=768px): 헤더 + 메인 콘텐츠 + 하단 네비게이션
+ * - 모든 화면: 좌측 사이드바 + 메인 콘텐츠
+ * - 1264px 이상: 사이드바에 레이블을 함께 표시
  *
  * @param children - 페이지별 콘텐츠
  */
@@ -16,8 +16,8 @@
 import { ReactNode } from 'react';
 import styles from './AppShell.module.scss';
 import Sidebar from '../Sidebar';
-import BottomNav from '../BottomNav';
 import Header from '../Header';
+import BottomNav from '../BottomNav';
 import DisclaimerBanner from '@/components/common/DisclaimerBanner';
 import DailyVoteModal from '@/components/features/vote/DailyVoteModal';
 
@@ -28,14 +28,13 @@ interface AppShellProps {
 export default function AppShell({ children }: AppShellProps) {
   return (
     <div className={styles.appContainer}>
-      {/* Desktop Sidebar - 769px 이상에서 표시 */}
+      {/* TikTok형 좌측 사이드바: 좁은 화면에서는 아이콘 레일로 고정 */}
       <div className={styles.sidebarWrapper}>
         <Sidebar />
       </div>
 
       {/* Main Content Area */}
       <main className={styles.mainContent}>
-        {/* Header - 모바일에서 상단 고정, 데스크탑에서 플로팅 언어 선택기 */}
         <Header />
 
         {/* Page Content */}
@@ -47,13 +46,9 @@ export default function AppShell({ children }: AppShellProps) {
         </footer>
       </main>
 
-      {/* Mobile Bottom Nav - 768px 미만에서 표시 */}
-      <div className={styles.bottomNavWrapper}>
-        <BottomNav />
-      </div>
-
       {/* Global daily voting participation mockup */}
       <DailyVoteModal />
+      <BottomNav />
     </div>
   );
 }

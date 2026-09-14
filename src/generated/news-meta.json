@@ -303,12 +303,20 @@
     "title": "10 Agencies, 300 Million Won Each — Korea's K-pop Middle Class Just Got a Lifeline",
     "excerpt": "Korea's K-pop agency fund gives 10 smaller labels up to 300 million won a year. The real test is whether money can widen the market.",
     "date": "2026-06-18",
-    "updatedAt": "2026-06-18",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/kpop-indie-agency-fund-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "2026 Global Leap Forward Support project, Korea.kr",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148966592&pWise=sub&pWiseSub=C2"
+      },
+      {
+        "label": "K-pop global leap support project, Korea Creative Content Agency",
+        "url": "https://www.kocca.kr/kocca/pims/view.do?category=&intcNo=126D00110001&menuNo=204104&pageIndex=1&recptSt=&search=&searchWrd="
+      }
+    ]
   },
   {
     "slug": "treasure-if-i-100m",
@@ -457,12 +465,20 @@
     "title": "K-pop Just Invaded the World Cup Soundtrack — But TWS Is the Real Test",
     "excerpt": "K-pop World Cup soundtrack buzz now has Lisa, TWS and Korea's football campaign in one frame. The real story is fandom as sports strategy.",
     "date": "2026-06-10",
-    "updatedAt": "2026-06-10",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/kpop-world-cup-soundtrack-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "TWS “Dream With Us” official cheer-song notice, Weverse",
+        "url": "https://weverse.io/tws/notice/36441"
+      },
+      {
+        "label": "2026 FIFA World Cup final halftime announcement, Associated Press",
+        "url": "https://apnews.com/article/db577fc3124cffcbd2026578641ff04b"
+      }
+    ]
   },
   {
     "slug": "mma-two-day-gamble",
@@ -565,12 +581,24 @@
     "title": "AND2BLE's 730K Debut Is A Rookie Warning Rivals Can't Ignore",
     "excerpt": "AND2BLE crossed 730,000 first-week debut-album copies and took two music-show wins within eight days, turning re-debut heat into a market test.",
     "date": "2026-06-04",
-    "updatedAt": "2026-06-04",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/and2ble-rookie-sales-record-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "K-pop rookie AND2BLE makes official debut, Yonhap News Agency",
+        "url": "https://en.yna.co.kr/view/AEN20260526008400315"
+      },
+      {
+        "label": "AND2BLE's debut sells over 731,000 copies, Forbes",
+        "url": "https://www.forbes.com/sites/jeffbenjamin/2026/06/09/and2ble-become-instant-breakout-k-pop-group-with-731000-selling-debut/"
+      },
+      {
+        "label": "AND2BLE records fourth-highest first-week sales for a K-pop group debut, Soompi",
+        "url": "https://www.soompi.com/article/1845265wpp/and2ble-records-4th-highest-1st-week-sales-for-k-pop-group-debut-album-in-hanteo-history"
+      }
+    ]
   },
   {
     "slug": "mamamoo-4ward-comeback",
@@ -578,12 +606,20 @@
     "title": "MAMAMOO's '4WARD' Isn't Just A Comeback — It's A Second-Act Test",
     "excerpt": "MAMAMOO 4WARD brings '4 Flowers,' a June 4 release and a world-tour reset after the group's long recording gap.",
     "date": "2026-06-03",
-    "updatedAt": "2026-06-03",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/mamamoo-4ward-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "MAMAMOO's 4WARD comeback report, KBS World",
+        "url": "https://world.kbs.co.kr/service/contents_view.htm?board_seq=469272&lang=e"
+      },
+      {
+        "label": "MAMAMOO official Japan artist page, RBW Japan",
+        "url": "https://rbwjapan.jp/artist/mamamoo.php"
+      }
+    ]
   },
   {
     "slug": "bts-oreo-global-bet",
@@ -591,12 +627,20 @@
     "title": "BTS Just Turned Oreos Purple - The 80-Market Bet Is Bigger Than a Cookie",
     "excerpt": "BTS Oreo launches across 80+ markets with purple wafers and hotteok flavor, turning a snack collab into a fandom commerce test.",
     "date": "2026-05-27",
-    "updatedAt": "2026-05-27",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/bts-oreo-global-bet-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BTS-inspired Oreo launches in more than 80 markets, Associated Press",
+        "url": "https://apnews.com/article/54fd43148332b87aba3b8f63326f5391"
+      },
+      {
+        "label": "OREO and BTS limited-edition collaboration announcement, Mondelez",
+        "url": "https://www.mynewsdesk.com/es/mondelez-spain/pressreleases/oreo-presenta-las-galletas-oreo-and-bts-edicion-limitada-3463786"
+      }
+    ]
   },
   {
     "slug": "bts-ama-second-aoty",
@@ -604,12 +648,20 @@
     "title": "BTS Beat Taylor Swift at the AMAs - Why This Win Hits Harder Than 2021",
     "excerpt": "BTS AMAs 2026 ended with Artist of the Year and Song of the Summer, turning a fan-voted trophy into a K-pop market warning.",
     "date": "2026-05-26",
-    "updatedAt": "2026-05-26",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/bts-ama-second-aoty-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "Winners announced for the 52nd American Music Awards, American Music Awards",
+        "url": "https://www.theamas.com/2026/05/winners-announced-for-the-52nd-american-music-awards/"
+      },
+      {
+        "label": "BTS accepts Artist of the Year at the 52nd American Music Awards, official AMAs YouTube",
+        "url": "https://www.youtube.com/watch?v=WienzuNr0HQ"
+      }
+    ]
   },
   {
     "slug": "cortis-redred-ninth-win",
@@ -617,12 +669,20 @@
     "title": "CORTIS Hit 9 Wins - The REDRED Rookie Problem Rivals Can't Explain",
     "excerpt": "CORTIS REDRED reached nine music-show wins after Inkigayo, but the sharper story is Youngkk, Spotify scale and rookie retention.",
     "date": "2026-05-25",
-    "updatedAt": "2026-05-25",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/cortis-redred-ninth-win-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "CORTIS takes ninth win for “REDRED” on Inkigayo, Soompi",
+        "url": "https://www.soompi.com/article/1843304wpp/watch-cortis-takes-9th-win-for-redred-on-inkigayo-performances-by-i-o-i-itzy-le-sserafim-and-more"
+      },
+      {
+        "label": "CORTIS takes ninth win for “REDRED,” allkpop",
+        "url": "https://www.allkpop.com/article/2026/05/cortis-takes-9th-win-with-redred-charismatic-stages-on-may-24-episode-of-inkigayo"
+      }
+    ]
   },
   {
     "slug": "stray-kids-gov-ball-seven",
@@ -630,12 +690,20 @@
     "title": "Stray Kids Will Headline Gov Ball as Seven - Seungmin's Ankle Just Exposed the Real Risk",
     "excerpt": "Stray Kids will headline Governors Ball as seven after Seungmin's ankle stress fracture, turning a festival slot into a health-risk test.",
     "date": "2026-05-24",
-    "updatedAt": "2026-05-24",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/stray-kids-gov-ball-seven-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "Stray Kids official schedule, JYP Entertainment",
+        "url": "https://straykids.jype.com/Mobile/Schedule"
+      },
+      {
+        "label": "Seungmin to sit out Governors Ball 2026 due to injury, Soompi",
+        "url": "https://www.soompi.com/article/1843012wpp/stray-kids-seungmin-to-sit-out-governors-ball-2026-due-to-injury"
+      }
+    ]
   },
   {
     "slug": "lesserafim-boompala-430k",
@@ -643,12 +711,20 @@
     "title": "LE SSERAFIM Sold 435,675 in One Day - But BOOMPALA's Real Problem Is Not the Number",
     "excerpt": "LE SSERAFIM BOOMPALA opened with 435,675 Hanteo sales, but PUREFLOW pt.1 now faces a bigger test: whether debate becomes demand.",
     "date": "2026-05-23",
-    "updatedAt": "2026-05-23",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/lesserafim-boompala-430k-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "LE SSERAFIM PUREFLOW pt.1 daily ranking, Hanteo News",
+        "url": "https://www.hanteonews.com/en/article/91584"
+      },
+      {
+        "label": "LE SSERAFIM first-day sales report, Starnews",
+        "url": "https://www.starnewskorea.com/en/music/2026/05/23/2026052310470549691"
+      }
+    ]
   },
   {
     "slug": "bts-ama-special-appearance",
@@ -656,12 +732,20 @@
     "title": "BTS AMA Special Appearance Is Official - But the Missing Word Is the Trap",
     "excerpt": "BTS AMA special appearance is official for May 25, but the AMAs avoided one word fans care about most: performance.",
     "date": "2026-05-22",
-    "updatedAt": "2026-05-22",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/bts-ama-special-appearance-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BTS to make first awards-show appearance in four years at the 52nd AMAs, Paramount Press Express",
+        "url": "https://www.paramountpressexpress.com/cbs-entertainment/shows/the-52nd-american-music-awards/releases/?view=112897-bts-to-make-first-awards-show-appearance-in-four-years-at-800-pm-et-500-pm-pt-on-cbs"
+      },
+      {
+        "label": "BTS to make a special appearance at this year's AMAs, Yonhap",
+        "url": "https://en.yna.co.kr/view/AEN20260521001200315?section=culture%2Fk-pop"
+      }
+    ]
   },
   {
     "slug": "akmu-chart-war",
@@ -669,12 +753,20 @@
     "title": "AKMU Broke K-pop's Fan War - The Charts Exposed What Idols Still Can't Buy",
     "excerpt": "AKMU Paradise of Rumors turned chart wins into a market warning: fandom machines still cannot fully buy Korean public listening.",
     "date": "2026-05-21",
-    "updatedAt": "2026-05-21",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/akmu-chart-war-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "AKMU earns Circle triple crown, Soompi",
+        "url": "https://www.soompi.com/article/1842714wpp/akmu-earns-circle-triple-crown-cortis-bts-and-illit-top-weekly-charts"
+      },
+      {
+        "label": "May 2026 Circle Chart: AKMU, CORTIS and BTS lead the charts, Circle Chart",
+        "url": "https://circlechart.net/page_article/view.circle?idx=26214&sgenre=kpop"
+      }
+    ]
   },
   {
     "slug": "chaewon-neck-hiatus",
@@ -682,12 +774,20 @@
     "title": "Kim Chaewon Neck Hiatus Hits LE SSERAFIM - The PUREFLOW Timing Is Brutal",
     "excerpt": "Kim Chaewon's neck pain hiatus lands days before LE SSERAFIM's PUREFLOW, turning a health notice into a comeback-risk test.",
     "date": "2026-05-20",
-    "updatedAt": "2026-05-20",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/chaewon-neck-hiatus-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "Additional information on Kim Chaewon's health and upcoming schedule, Weverse",
+        "url": "https://weverse.io/lesserafim/notice/36501"
+      },
+      {
+        "label": "Kim Chaewon suspends activities due to neck injury, KBS World",
+        "url": "https://world.kbs.co.kr/service/contents_view.htm?board_seq=468377&lang=s"
+      }
+    ]
   },
   {
     "slug": "cortis-redred-grand-slam",
@@ -695,12 +795,20 @@
     "title": "CORTIS Just Pulled a REDRED Grand Slam - The Melon #1 Detail Rivals Can't Ignore",
     "excerpt": "CORTIS REDRED hit six music-show wins, Melon Top 100 No. 1 and Spotify Global Top 100, turning rookie heat into a market warning.",
     "date": "2026-05-20",
-    "updatedAt": "2026-05-20",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/cortis-redred-grand-slam-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "AKMU earns Circle triple crown; CORTIS tops weekly charts, Soompi",
+        "url": "https://www.soompi.com/article/1842714wpp/akmu-earns-circle-triple-crown-cortis-bts-and-illit-top-weekly-charts"
+      },
+      {
+        "label": "May 2026 Circle Chart: AKMU, CORTIS and BTS lead the charts, Circle Chart",
+        "url": "https://circlechart.net/page_article/view.circle?idx=26214&sgenre=kpop"
+      }
+    ]
   },
   {
     "slug": "kpop-superfan-money-machine",
@@ -708,12 +816,20 @@
     "title": "Weverse Just Exposed K-pop's $4.3B Secret - Fans Are The Product Now",
     "excerpt": "K-pop superfan platforms are turning chats, lives and memberships into a $4.3B race. Weverse just showed why every label wants in.",
     "date": "2026-05-20",
-    "updatedAt": "2026-05-20",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/kpop-superfan-money-machine-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "Weverse Company: platform facts and history",
+        "url": "https://en.weverse.co/about"
+      },
+      {
+        "label": "Superfan monetisation and the $4.3 billion opportunity, Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/umg-bought-a-stake-in-superfan-app-stationhead-here-are-3-things-you-might-have-missed/"
+      }
+    ]
   },
   {
     "slug": "babymonster-choom-100m",
@@ -721,12 +837,20 @@
     "title": "100 Million in 13 Days - BABYMONSTER Just Made YG's Problem Bigger",
     "excerpt": "BABYMONSTER CHOOM 100M turns a 13-day YouTube sprint into YG's next fandom, tour, and rookie-market pressure test.",
     "date": "2026-05-19",
-    "updatedAt": "2026-05-19",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/babymonster-choom-100m-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BABYMONSTER's “CHOOM” becomes fastest 2026 K-pop MV to reach 100 million views, Soompi",
+        "url": "https://www.soompi.com/article/1842011wpp/babymonsters-choom-becomes-fastest-2026-k-pop-mv-to-reach-100-million-views"
+      },
+      {
+        "label": "BABYMONSTER “CHOOM” official YG Entertainment report",
+        "url": "https://ygfamily.com/en/news/report/7434"
+      }
+    ]
   },
   {
     "slug": "itzy-motto-identity",
@@ -734,12 +858,20 @@
     "title": "ITZY Finally Found Its Motto - But The 7-Year Fan Letter Has A Catch",
     "excerpt": "ITZY Motto turns a 12th EP comeback into a seven-year fan loyalty test while the Tunnel Vision tour keeps pressure high.",
     "date": "2026-05-19",
-    "updatedAt": "2026-05-19",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/itzy-motto-identity-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "ITZY “Motto” official discography, JYP Entertainment",
+        "url": "https://itzy.jype.com/discography/heecdbgx?AmSeq=undefined&PgIndex=undefined"
+      },
+      {
+        "label": "ITZY “Motto” official notices, JYP Entertainment",
+        "url": "https://itzy.jype.com/notice?PgIndex=8"
+      }
+    ]
   },
   {
     "slug": "newjeans-minji-cookie-signal",
@@ -751,8 +883,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/newjeans-minji-cookie-signal-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "aespa-gdragon-wda",
@@ -760,12 +891,16 @@
     "title": "aespa Pulled G-Dragon Into WDA - And the Real Target Wasn't Korea",
     "excerpt": "aespa G-Dragon WDA turns LEMONADE into a China-chart and fandom strategy test before the May 29 album drop.",
     "date": "2026-05-18",
-    "updatedAt": "2026-05-18",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/aespa-gdragon-wda-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "aespa unveils new single “WDA,” featuring G-Dragon, Yonhap",
+        "url": "https://en.yna.co.kr/view/AEN20260512006500315"
+      }
+    ]
   },
   {
     "slug": "blackpink-government-stamps",
@@ -773,12 +908,20 @@
     "title": "BLACKPINK Just Got Government Stamps - The 10-Design Signal YG Needed",
     "excerpt": "BLACKPINK commemorative stamps turn Korea Post's 10-design release into a collector signal YG can monetize beyond music.",
     "date": "2026-05-18",
-    "updatedAt": "2026-05-18",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/blackpink-government-stamps-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BLACKPINK commemorative stamps in Korea Post's official stamp portal",
+        "url": "https://stamp.epost.go.kr/sp/sg/spsg0101.jsp?mainThemeCode=06"
+      },
+      {
+        "label": "Korea Post to Issue Blackpink Stamps, KBS World",
+        "url": "https://world.kbs.co.kr/service/contents_view.htm?board_seq=469259&lang=e"
+      }
+    ]
   },
   {
     "slug": "bts-guinness-icons",
@@ -786,12 +929,20 @@
     "title": "Guinness Puts BTS Beside Taylor and Beyonce - The No. 8 Detail Fans Can't Ignore",
     "excerpt": "BTS Guinness ICONS meets ARIRANG's eighth Billboard 200 top-10 week, turning a No. 8 chart line into a fandom power signal.",
     "date": "2026-05-18",
-    "updatedAt": "2026-05-18",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/bts-guinness-icons-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "Guinness World Records: ICONS",
+        "url": "https://www.guinnessworldrecords.com/news/icons"
+      },
+      {
+        "label": "Guinness World Records: BTS most-streamed act on Spotify among groups",
+        "url": "https://www.guinnessworldrecords.com/world-records/643081-most-streamed-act-on-spotify-group"
+      }
+    ]
   },
   {
     "slug": "kpop-album-exports-us",
@@ -799,12 +950,20 @@
     "title": "K-pop Album Exports Just Crossed $100M - The U.S. Took Japan's Crown",
     "excerpt": "K-pop album exports hit $120M in Q1 as the U.S. overtook Japan, exposing a physical-album market shift fans cannot ignore.",
     "date": "2026-05-17",
-    "updatedAt": "2026-05-17",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/kpop-album-exports-us-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "K-pop album exports top US$100 million for the first time in Q1, Yonhap",
+        "url": "https://en.yna.co.kr/view/AEN20260428001800320?section=economy-finance%2Feconomy"
+      },
+      {
+        "label": "K-pop bonanza: album exports in Q1 smash record, Korea.net",
+        "url": "https://www.korea.net/NewsFocus/Business/view?articleId=291600&koreanId=291558"
+      }
+    ]
   },
   {
     "slug": "may-comeback-trap",
@@ -812,12 +971,20 @@
     "title": "Six Girl Groups, 25 Days - The May Comeback Trap Nobody Can Escape",
     "excerpt": "May K-pop comebacks pack BABYMONSTER, NMIXX, ITZY, I.O.I, LE SSERAFIM, and aespa into one ruthless calendar squeeze.",
     "date": "2026-05-17",
-    "updatedAt": "2026-05-17",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/may-comeback-trap-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "May is K-pop's biggest month for girl groups' releases in years, The Korea Times",
+        "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20260501/mays-k-pop-calendar-belongs-to-girl-groups"
+      },
+      {
+        "label": "Six girl groups in 25 days, Korea Portal",
+        "url": "https://en.koreaportal.com/articles/54448/20260506/six-girl-groups-25-days-k-pops-busiest-coincidence.htm"
+      }
+    ]
   },
   {
     "slug": "taeyang-quintessence-comeback",
@@ -829,8 +996,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/taeyang-quintessence-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-stanford-takeover",
@@ -842,8 +1008,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-stanford-takeover-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-world-cup-halftime",
@@ -855,8 +1020,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/bts-world-cup-halftime-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-billboard-record",
@@ -868,8 +1032,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/bts-arirang-billboard-record-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-latin-america-streams",
@@ -881,8 +1044,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-latin-america-streams-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "blackpink-met-gala-selfie",
@@ -894,8 +1056,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/blackpink-met-gala-selfie-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-abd-girlgroup-bet",
@@ -907,8 +1068,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/hybe-abd-girlgroup-bet-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "riize-eunseok-apology",
@@ -920,8 +1080,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/riize-eunseok-apology-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "babymonster-choom-world-tour",
@@ -933,8 +1092,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/babymonster-choom-world-tour-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-campus-festival-war",
@@ -946,8 +1104,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/kpop-campus-festival-war-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "mamamoo-4ward-tour-economics",
@@ -959,8 +1116,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/mamamoo-4ward-tour-economics-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "aespa-wda-gdragon-risk",
@@ -972,8 +1128,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/aespa-wda-gdragon-risk-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "lisa-world-cup-stage",
@@ -985,8 +1140,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/lisa-world-cup-stage-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "shinee-atmos-weather",
@@ -998,8 +1152,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/shinee-atmos-weather-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-illit-court-loss",
@@ -1011,8 +1164,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/hybe-illit-court-loss-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "nct-wish-ode-sales",
@@ -1024,8 +1176,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/nct-wish-ode-sales-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "baeksang-fan-vote-gap",
@@ -1037,8 +1188,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/baeksang-fan-vote-gap-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "meovv-awakening-test",
@@ -1050,8 +1200,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/meovv-awakening-test-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "the-scout-reboot",
@@ -1063,8 +1212,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/the-scout-reboot-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-mexico-palace",
@@ -1076,8 +1224,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-mexico-palace-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "mamamoo-4ward-return",
@@ -1089,8 +1236,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/mamamoo-4ward-return-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "sm-q1-money-machine",
@@ -1102,8 +1248,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/sm-q1-money-machine-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "cix-seven-year-end",
@@ -1115,8 +1260,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/cix-seven-year-end-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "japan-super-weekend",
@@ -1128,8 +1272,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/japan-super-weekend-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "katseye-music-bank-cancel",
@@ -1141,8 +1284,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/katseye-music-bank-cancel-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "cortis-greengreen-million",
@@ -1154,8 +1296,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/cortis-greengreen-million-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "gdragon-shirt-apology",
@@ -1167,8 +1308,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/gdragon-shirt-apology-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "nmixx-heavy-serenade",
@@ -1180,8 +1320,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/nmixx-heavy-serenade-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "black-label-yg-board",
@@ -1193,8 +1332,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/black-label-yg-board-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-six-weeks",
@@ -1206,8 +1344,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-six-weeks-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-135m-question",
@@ -1219,8 +1356,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/hybe-135m-question-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-tampa-190k",
@@ -1232,8 +1368,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-tampa-190k-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "tws-no-tragedy-million",
@@ -1245,8 +1380,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/tws-no-tragedy-million-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "yg-boygroup-september-bet",
@@ -1254,12 +1388,16 @@
     "title": "5 Members, 6 Years, 1 September Bet: Why YG's New Boy Group Already Feels Different",
     "excerpt": "YG new boy group plans now point to a five-member September launch window. The real story is why YG is betting on a smaller roster this time.",
     "date": "2026-05-03",
-    "updatedAt": "2026-05-03",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/yg-boygroup-september-bet-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "YG Entertainment announces its new five-member boy group, YG Family",
+        "url": "https://ygfamily.com/en/news/report/7430"
+      }
+    ]
   },
   {
     "slug": "babymonster-choom-comeback",
@@ -1271,8 +1409,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/babymonster-choom-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "may-girlgroup-market-war",
@@ -1284,8 +1421,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/may-girlgroup-market-war-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-q1-red-ink",
@@ -1297,8 +1433,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/hybe-q1-red-ink-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "santos-bravos-korea",
@@ -1310,8 +1445,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/santos-bravos-korea-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "andteam-we-on-fire",
@@ -1323,8 +1457,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/andteam-we-on-fire-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "fanomenon-big4-festival",
@@ -1336,8 +1469,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/fanomenon-big4-festival-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-exports-us-overtakes-japan",
@@ -1349,8 +1481,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/kpop-exports-us-overtakes-japan-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "twice-550k-north-america",
@@ -1362,8 +1493,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/twice-550k-north-america-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kcon-japan-k-life",
@@ -1375,8 +1505,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/kcon-japan-k-life-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-wristband-theft",
@@ -1388,8 +1517,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-wristband-theft-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bang-hybe-fraud-probe",
@@ -1401,8 +1529,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/bang-hybe-fraud-probe-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "ioi-loop-comeback",
@@ -1414,8 +1541,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/ioi-loop-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "india-kdream-stage",
@@ -1427,8 +1553,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/india-kdream-stage-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "aespa-lemonade-tour",
@@ -1440,8 +1565,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/aespa-lemonade-tour-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-streaming-record",
@@ -1453,8 +1577,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/bts-arirang-streaming-record-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-city-vegas-busan",
@@ -1462,12 +1585,20 @@
     "title": "It's Not the Concert Anymore - BTS Is About to Turn Las Vegas and Busan Into the Real Headline",
     "excerpt": "BTS THE CITY ARIRANG is expanding to Las Vegas and Busan. The bigger story is how BTS is building a destination economy outside the stadium.",
     "date": "2026-04-22",
-    "updatedAt": "2026-04-22",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/bts-city-vegas-busan-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BTS THE CITY ARIRANG: Las Vegas and Busan schedule, Weverse",
+        "url": "https://weverse.io/bts/notice/35047"
+      },
+      {
+        "label": "BTS announces 2026 world tour dates, Associated Press",
+        "url": "https://apnews.com/article/01db0e428723c0febc514373969333bd"
+      }
+    ]
   },
   {
     "slug": "kiss-of-life-first-win",
@@ -1479,8 +1610,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/kiss-of-life-first-win-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-bang-arrest-warrant",
@@ -1492,8 +1622,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/hybe-bang-arrest-warrant-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bigbang-august-tour",
@@ -1505,8 +1634,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bigbang-august-tour-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "nct-wish-cortis-clash",
@@ -1518,8 +1646,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/nct-wish-cortis-clash-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "idle-us-tour-cancelled",
@@ -1531,8 +1658,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/idle-us-tour-cancelled-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "taemin-coachella-first",
@@ -1544,8 +1670,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/taemin-coachella-first-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-ama-aoty",
@@ -1557,8 +1682,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-ama-aoty-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "big4-fanomenon-festival",
@@ -1570,8 +1694,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/big4-fanomenon-festival-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "jennie-time100-shift",
@@ -1583,8 +1706,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/jennie-time100-shift-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-fan-merch-crackdown",
@@ -1596,8 +1718,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/bts-fan-merch-crackdown-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "katseye-wild-manon",
@@ -1609,8 +1730,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/katseye-wild-manon-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-swim-100m",
@@ -1622,8 +1742,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/bts-swim-100m-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "jennie-lollapalooza-headliner",
@@ -1635,8 +1754,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/jennie-lollapalooza-headliner-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-korea-venue-crisis",
@@ -1648,8 +1766,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-korea-venue-crisis-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "lisa-vegas-residency",
@@ -1661,8 +1778,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/lisa-vegas-residency-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "lesserafim-pureflow-comeback",
@@ -1674,8 +1790,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/lesserafim-pureflow-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "txt-year7-comeback",
@@ -1687,8 +1802,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/txt-year7-comeback-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-china-ban-gap",
@@ -1700,8 +1814,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-china-ban-gap-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "katseye-coachella-debut",
@@ -1709,12 +1822,24 @@
     "title": "KATSEYE Reached Coachella as Five, Not Six — Why the Fandom Shook Harder Than the Stage",
     "excerpt": "KATSEYE made its Coachella debut as five. The stage landed, but Manon's hiatus and transparency questions shook the fandom harder.",
     "date": "2026-04-12",
-    "updatedAt": "2026-04-12",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/katseye-coachella-debut-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "KATSEYE Coachella notice, Weverse",
+        "url": "https://weverse.io/katseye/notice/30230"
+      },
+      {
+        "label": "KATSEYE releases “Pinky Up” ahead of Coachella, Universal Music Canada",
+        "url": "https://www.universalmusic.ca/2026/04/09/katseye-drops-new-single-pinky-up-on-the-eve-of-their-coachella-debut/"
+      },
+      {
+        "label": "Why Manon was absent from KATSEYE's Coachella performance, Marie Claire",
+        "url": "https://www.marieclaire.com/culture/music/why-manon-katseye-not-performing-coachella-hiatus/"
+      }
+    ]
   },
   {
     "slug": "bts-billboard-two-weeks",
@@ -1726,8 +1851,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/bts-billboard-two-weeks-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "nct-2026-project",
@@ -1739,8 +1863,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/nct-2026-project-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-seoul-tour-kickoff",
@@ -1752,8 +1875,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/bts-seoul-tour-kickoff-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "cortis-greengreen-preorders",
@@ -1765,8 +1887,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/cortis-greengreen-preorders-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "top-bigbang-solo-2026",
@@ -1778,8 +1899,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/top-bigbang-solo-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "coachella-2026-kpop-takeover",
@@ -1791,8 +1911,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/coachella-2026-kpop-takeover-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-stock-bts-paradox",
@@ -1804,8 +1923,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/hybe-stock-bts-paradox-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "rose-solo-kpop-records",
@@ -1817,8 +1935,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/rose-solo-kpop-records-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-india-audition-kpop",
@@ -1830,8 +1947,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/hybe-india-audition-kpop-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-concert-price-inflation-2026",
@@ -1843,8 +1959,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/kpop-concert-price-inflation-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "twice-double-injury-kpop-overwork",
@@ -1856,8 +1971,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/twice-double-injury-kpop-overwork-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "yuna-solo-debut-ice-cream",
@@ -1869,8 +1983,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/yuna-solo-debut-ice-cream-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-animation-whitewash-howard-university-2026",
@@ -1882,8 +1995,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-arirang-animation-whitewash-howard-university-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "gdragon-lawsuit-media-100-commenters-cleared-2026",
@@ -1895,8 +2007,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/gdragon-lawsuit-media-100-commenters-cleared-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-china-japan-ningning-geopolitical-war-2026",
@@ -1908,21 +2019,36 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/kpop-china-japan-ningning-geopolitical-war-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-comeback-gwanghwamun-2026",
     "locale": "en",
-    "title": "260,000 Fans Shut Down Seoul — BTS Arirang Comeback Rewrites K-Pop History",
-    "excerpt": "After 3+ years away, BTS packed 260,000 fans into Gwanghwamun Square and stopped the world on Netflix. Here's what happened on March 21 — and what it means for K-pop.",
+    "title": "BTS's Gwanghwamun Comeback — What the 260,000-Person Forecast Got Right and Wrong",
+    "excerpt": "BTS returned to Gwanghwamun on March 21. The 260,000-person forecast, later attendance estimates, and Netflix broadcast reveal the real scale of the event.",
     "date": "2026-03-24",
-    "updatedAt": "2026-03-24",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-comeback-gwanghwamun-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "BTS Gwanghwamun comeback event notice, Weverse",
+        "url": "https://weverse.io/bts/notice/33624"
+      },
+      {
+        "label": "BTS comeback concert draws competing attendance estimates, Yonhap",
+        "url": "https://en.yna.co.kr/view/AEN20260322001300315"
+      },
+      {
+        "label": "Netflix: BTS comeback live reaches a global audience",
+        "url": "https://about.netflix.com/en/news/bts-commands-the-global-stage-as-bts-the-comeback-live-draws-18-million-viewers"
+      },
+      {
+        "label": "Gwanghwamun concert crowd report, Asia Business Daily",
+        "url": "https://view.asiae.co.kr/en/article/2026032211062911712"
+      }
+    ]
   },
   {
     "slug": "bts-arirang-grammy-hunt-2026",
@@ -1934,8 +2060,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-grammy-hunt-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bekuh-boom-blackpink-yg-songwriter-abortion-contract-2026",
@@ -1947,8 +2072,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bekuh-boom-blackpink-yg-songwriter-abortion-contract-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "newjeans-ador-return-2026-comeback-without-minhejin",
@@ -1960,8 +2084,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "News",
     "thumbnail": "/images/news/newjeans-ador-return-2026-comeback-without-minhejin-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-world-tour-sellout-record-2026",
@@ -1973,8 +2096,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-world-tour-sellout-record-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-rm-ankle-injury-world-tour-countdown-2026",
@@ -1986,8 +2108,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-rm-ankle-injury-world-tour-countdown-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-concert-terror-alert-weapons-security-2026",
@@ -1999,8 +2120,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-concert-terror-alert-weapons-security-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-gwanghwamun-concert-netflix-record-2026",
@@ -2012,8 +2132,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-gwanghwamun-concert-netflix-record-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-day1-spotify-record-netflix-paywall-2026",
@@ -2025,8 +2144,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-day1-spotify-record-netflix-paywall-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-release-day-swim-gwanghwamun-concert-2026",
@@ -2038,8 +2156,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-release-day-swim-gwanghwamun-concert-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hearts2hearts-triple-crown-rude-incheon-airport-security-2026",
@@ -2051,8 +2168,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/hearts2hearts-triple-crown-rude-incheon-airport-security-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-animation-whitewashing-hbcu-controversy-2026",
@@ -2064,8 +2180,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-animation-whitewashing-hbcu-controversy-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "ive-yujin-moon-sangmin-dating-rumors-lovestagram-2026",
@@ -2077,8 +2192,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/ive-yujin-moon-sangmin-dating-rumors-lovestagram-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "heeseung-enhypen-ot7-belift-controversy",
@@ -2090,8 +2204,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/heeseung-enhypen-ot7-belift-controversy-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-swim-spotify-documentary-netflix-2026",
@@ -2103,8 +2216,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-release-day-swim-gwanghwamun-concert-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-demon-hunters-oscar-win-speech-controversy-2026",
@@ -2112,12 +2224,24 @@
     "title": "'KPop Demon Hunters' Wins Two Oscars — Then the Orchestra Cuts Off the Speech",
     "excerpt": "Netflix's KPop Demon Hunters swept the 98th Academy Awards with Best Animated Feature and Best Original Song. Then the orchestra played the team off mid-sentence — and the internet called it disrespectful.",
     "date": "2026-03-16",
-    "updatedAt": "2026-03-16",
+    "updatedAt": "2026-09-13",
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/kpop-demon-hunters-oscar-win-speech-controversy-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": [
+      {
+        "label": "98th Academy Awards, Academy of Motion Picture Arts and Sciences",
+        "url": "https://www.oscars.org/oscars/ceremonies/2026"
+      },
+      {
+        "label": "Netflix Oscar winners: KPop Demon Hunters",
+        "url": "https://www.netflix.com/tudum/articles/netflix-oscar-winners-2026"
+      },
+      {
+        "label": "KPop Demon Hunters wins two Oscars, Associated Press",
+        "url": "https://apnews.com/article/dbb9e8d1a72f5552f3d7841519ab9b59"
+      }
+    ]
   },
   {
     "slug": "bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026",
@@ -2129,8 +2253,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "/images/news/bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-trailer-1896-howard-seven-koreans-2026",
@@ -2142,8 +2265,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-trailer-1896-howard-seven-koreans-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "lee-soo-man-a2o-enter-korea-sm-war-2026",
@@ -2155,8 +2277,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/lee-soo-man-a2o-enter-korea-sm-war-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "enhypen-heeseung-protest-trucks-el-capitxn-2026",
@@ -2168,8 +2289,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/enhypen-heeseung-protest-trucks-el-capitxn-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "jungkook-winter-tattoo-gone-bts-comeback-breakup-rumors",
@@ -2181,8 +2301,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Exclusive",
     "thumbnail": "/images/news/jungkook-winter-tattoo-gone-bts-comeback-breakup-rumors-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "blackpink-go-billboard-hot100-11th-entry-record-2026",
@@ -2194,8 +2313,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/blackpink-go-billboard-hot100-11th-entry-record-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026",
@@ -2207,8 +2325,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "akmu-yg-independence-brutal-training-new-label-2026",
@@ -2220,8 +2337,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/akmu-yg-independence-brutal-training-new-label-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "enhypen-heeseung-departure-belift-lab-controversy-2026",
@@ -2233,8 +2349,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/enhypen-heeseung-departure-belift-lab-controversy-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "2026-rookie-boy-group-war-big4-debut-battle",
@@ -2246,8 +2361,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/2026-rookie-boy-group-war-big4-debut-battle-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "aespa-crisis-tokyo-dome-comeback-2026",
@@ -2259,8 +2373,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/aespa-crisis-tokyo-dome-comeback-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "ive-bang-bang-pak-record-starship-kakao-2026",
@@ -2272,8 +2385,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/ive-bang-bang-pak-record-starship-kakao-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "stray-kids-final-era-farewell-tour-jyp-2026",
@@ -2285,8 +2397,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/stray-kids-final-era-farewell-tour-jyp-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "blackpink-deadline-ep-record-sales-yg-2026",
@@ -2298,8 +2409,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/blackpink-deadline-ep-record-sales-yg-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-spotify-podcast-media-empire-2026",
@@ -2311,8 +2421,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/hybe-spotify-podcast-media-empire-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "idle-nbc-today-show-arena-tour-cube-2026",
@@ -2324,8 +2433,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/idle-nbc-today-show-arena-tour-cube-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "gdragon-lunar-new-year-china-fan-controversy",
@@ -2337,8 +2445,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/gdragon-lunar-new-year-china-fan-controversy-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "yg-bigbang-20th-anniversary-world-tour-2026",
@@ -2350,8 +2457,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/yg-bigbang-20th-anniversary-world-tour-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-arirang-comeback-2026",
@@ -2363,8 +2469,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-comeback-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "park-bom-sandara-drug-cover-up",
@@ -2376,8 +2481,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/park-bom-sandara-drug-cover-up-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "min-heejin-18m-deal-rejected",
@@ -2389,8 +2493,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/min-heejin-18m-deal-rejected-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "xg-simon-jakops-drug-arrest",
@@ -2402,8 +2505,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/xg-simon-jakops-drug-arrest-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "day6-kpop-race-war",
@@ -2415,8 +2517,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/day6-kpop-race-war-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "karina-body-shaming-fandom",
@@ -2428,8 +2529,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/karina-body-shaming-fandom-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "yg-yang-hyunsuk-audition-return",
@@ -2441,8 +2541,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/yg-yang-hyunsuk-audition-return-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "jungkook-weverse-censorship",
@@ -2454,8 +2553,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/jungkook-weverse-censorship-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "taemin-bpm-staff-salary-scandal",
@@ -2467,8 +2565,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/taemin-bpm-staff-salary-scandal-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "tzuyu-body-shaming-clap-back",
@@ -2485,8 +2582,7 @@
         "label": "THIS IS FOR WORLD TOUR IN WASHINGTON, D.C. - Day 1",
         "url": "https://x.com/JYPETWICE/status/2022524297303199965"
       }
-    ],
-    "active": false
+    ]
   },
   {
     "slug": "kpop-korean-market-optional-global-paradox",
@@ -2498,8 +2594,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/kpop-korean-market-optional-global-paradox-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "blackpink-deadline-comeback-national-museum",
@@ -2511,8 +2606,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/blackpink-deadline-comeback-national-museum-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-min-heejin-255b-ruling-fan-betrayal",
@@ -2524,8 +2618,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/hybe-min-heejin-255b-ruling-fan-betrayal-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "stray-kids-dominate-kpop-first-global-box-office",
@@ -2537,8 +2630,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/stray-kids-dominate-kpop-first-global-box-office-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-seablings-korea-sea-racism-war",
@@ -2550,8 +2642,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/kpop-seablings-korea-sea-racism-war-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-big4-japan-streaming-strategy",
@@ -2563,8 +2654,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/kpop-big4-japan-streaming-strategy-thumb.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "nmixx-brazil-carnival-first-kpop-jyp-strategy",
@@ -2576,8 +2666,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/nmixx-brazil-carnival-first-kpop-jyp-strategy-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "hybe-record-revenue-profit-plunge-73",
@@ -2589,8 +2678,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/hybe-record-revenue-profit-plunge-73-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "illit-little-monsters-newjeans-five-colors-diss",
@@ -2602,8 +2690,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/illit-little-monsters-newjeans-five-colors-diss-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-trainee-contract-reform-2026-foreign-gaps",
@@ -2615,8 +2702,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/kpop-trainee-contract-reform-2026-foreign-gaps-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "min-heejin-hybe-put-option-255b-ruling",
@@ -2628,8 +2714,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/min-heejin-hybe-put-option-255b-ruling-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "sm-xiumin-kbs-ban-jyj-pattern",
@@ -2641,8 +2726,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/sm-xiumin-kbs-ban-jyj-pattern-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "newjeans-danielle-erased-four-member-era",
@@ -2654,8 +2738,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/newjeans-danielle-erased-four-member-era-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "blackpink-deadline-interscope-independence",
@@ -2667,8 +2750,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/blackpink-deadline-interscope-independence-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "onecead-jyp-tencent-china-kpop",
@@ -2680,8 +2762,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Business",
     "thumbnail": "/images/news/onecead-jyp-tencent-china-kpop-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "foreign-trainee-reality-visa-culture",
@@ -2693,8 +2774,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/foreign-trainee-reality-visa-culture-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-demon-hunters-grammy-first-win",
@@ -2706,8 +2786,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/kpop-demon-hunters-grammy-first-win-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "wanna-one-reunion-2026-reality-show",
@@ -2719,8 +2798,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/wanna-one-reunion-2026-reality-show-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "annie-allday-project-7-years-trainee-dream",
@@ -2732,8 +2810,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/annie-allday-project-7-years-trainee-dream-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "kpop-stars-who-failed-auditions",
@@ -2745,8 +2822,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/kpop-stars-who-failed-auditions-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "2026-kpop-audition-guide",
@@ -2799,8 +2875,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/big4-trainee-requirements-attitude-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "cha-eunwoo-tax-evasion-scandal-2026",
@@ -2812,8 +2887,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Company News",
     "thumbnail": "/images/news/cha-eunwoo-tax-evasion-scandal-2026-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-march-2026-comeback-industry-impact",
@@ -2825,8 +2899,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "/images/news/bts-march-2026-comeback-industry-impact-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "newjeans-hybe-contract-dispute",
@@ -2838,8 +2911,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "/images/news/newjeans-hybe-contract-dispute-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "bts-2026-comeback-countdown",
@@ -2851,8 +2923,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-2026-comeback-countdown-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "ai-fandom-platform-evolution",
@@ -2864,8 +2935,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/ai-fandom-platform-evolution-thumbnail.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "4th-gen-global-impact",
@@ -2877,8 +2947,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/4th-gen-global-impact.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "fandom-economy",
@@ -2890,8 +2959,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "2025-kpop-market-outlook",
@@ -2903,8 +2971,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "/images/news/market-outlook.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "ai-fandom-platform",
@@ -2916,8 +2983,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/ai-fandom.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   },
   {
     "slug": "trainee-system-evolution",
@@ -2929,7 +2995,6 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/trainee-system.webp",
-    "sources": [],
-    "active": false
+    "sources": []
   }
 ]

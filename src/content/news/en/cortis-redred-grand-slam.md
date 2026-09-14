@@ -2,6 +2,7 @@
 title: "CORTIS Just Pulled a REDRED Grand Slam - The Melon #1 Detail Rivals Can't Ignore"
 excerpt: "CORTIS REDRED hit six music-show wins, Melon Top 100 No. 1 and Spotify Global Top 100, turning rookie heat into a market warning."
 date: '2026-05-20'
+updatedAt: '2026-09-13'
 category: 'Market Trend'
 thumbnail: '/images/news/cortis-redred-grand-slam-thumbnail.webp'
 active: true
@@ -77,3 +78,8 @@ The strongest version of this story is not that CORTIS won six trophies. It is t
 The next test is less dramatic and more revealing. Can `REDRED` keep enough chart stamina after the victory edits slow down? Can `GREENGREEN` turn a four-day double-million moment into durable era value? Can CORTIS make the next promotion feel like a continuation rather than a comedown?
 
 For now, the market has its answer for this week. `CORTIS REDRED` did not just collect trophies. It turned a rookie promotion cycle into a scoreboard rivals have to read carefully.
+
+## Sources
+
+- [AKMU earns Circle triple crown; CORTIS tops weekly charts, Soompi](https://www.soompi.com/article/1842714wpp/akmu-earns-circle-triple-crown-cortis-bts-and-illit-top-weekly-charts)
+- [May 2026 Circle Chart: AKMU, CORTIS and BTS lead the charts, Circle Chart](https://circlechart.net/page_article/view.circle?idx=26214&sgenre=kpop)

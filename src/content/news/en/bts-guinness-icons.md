@@ -2,6 +2,7 @@
 title: "Guinness Puts BTS Beside Taylor and Beyonce - The No. 8 Detail Fans Can't Ignore"
 excerpt: "BTS Guinness ICONS meets ARIRANG's eighth Billboard 200 top-10 week, turning a No. 8 chart line into a fandom power signal."
 date: '2026-05-18'
+updatedAt: '2026-09-13'
 category: 'Tech & Culture'
 thumbnail: '/images/news/bts-guinness-icons-thumbnail.webp'
 active: true
@@ -71,3 +72,8 @@ That is why the Guinness-Billboard overlap is so clickable. It is not just "BTS 
 BTS are now operating in a rare lane where records, charts and fandom memory reinforce each other. The Guinness page gives the group institutional language. The Billboard 200 run gives the group fresh movement. The fanbase turns both into cultural ammunition.
 
 The next question is not whether BTS can still create a headline. They clearly can. The next question is whether another K-pop act can build the same layered machine: a history that institutions recognize, a present that charts can still measure, and a fandom that knows how to turn No. 8 into something louder than most No. 1s.
+
+## Sources
+
+- [Guinness World Records: ICONS](https://www.guinnessworldrecords.com/news/icons)
+- [Guinness World Records: BTS most-streamed act on Spotify among groups](https://www.guinnessworldrecords.com/world-records/643081-most-streamed-act-on-spotify-group)

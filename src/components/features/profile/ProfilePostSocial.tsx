@@ -44,6 +44,7 @@ interface ProfilePostSocialProps {
   labels: ProfilePostSocialLabels;
   initialSocial?: ProfilePostSocialRecord;
   inline?: boolean;
+  variant?: 'default' | 'immersive';
 }
 
 function isRealMember(
@@ -77,6 +78,7 @@ export default function ProfilePostSocial({
   labels,
   initialSocial,
   inline = false,
+  variant = 'default',
 }: ProfilePostSocialProps) {
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
@@ -227,7 +229,11 @@ export default function ProfilePostSocial({
 
   return (
     <div
-      className={[styles.root, inline ? styles.inlineRoot : ''].filter(Boolean).join(' ')}
+      className={[
+        styles.root,
+        inline ? styles.inlineRoot : '',
+        variant === 'immersive' ? styles.immersiveRoot : '',
+      ].filter(Boolean).join(' ')}
       data-testid="profile-post-social"
     >
       <div className={styles.actions} aria-label={labels.commentPanel}>

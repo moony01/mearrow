@@ -1,9 +1,9 @@
 ---
 title: "JYP 온라인 오디션"
-excerpt: "JYP 엔터테인먼트의 상시 온라인 오디션은 나이·성별·국적 제한 없이 지원할 수 있습니다."
+excerpt: "JYP 엔터테인먼트의 상시 온라인 오디션은 연령·성별·국적 제한 없이 지원할 수 있습니다."
 agency: "JYP Entertainment"
 publishedAt: "2026-08-09"
-updatedAt: "2026-09-02"
+updatedAt: "2026-09-13"
 timezone: "Asia/Seoul"
 mode: "online"
 categories:
@@ -16,7 +16,7 @@ eligibility: "나이·성별·국적 제한 없음"
 status: "ongoing"
 officialUrl: "https://audition.jype.com/audition/auditions/1"
 sourceUrl: "https://audition.jype.com/audition/auditions/1"
-verifiedAt: "2026-09-02"
+verifiedAt: "2026-09-13"
 poster: "https://audition.jype.com/og.png"
 posterAlt: "JYP 엔터테인먼트 오디션 공식 홍보 이미지"
 posterWidth: 1200

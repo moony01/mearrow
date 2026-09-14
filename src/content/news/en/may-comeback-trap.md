@@ -2,6 +2,7 @@
 title: "Six Girl Groups, 25 Days - The May Comeback Trap Nobody Can Escape"
 excerpt: "May K-pop comebacks pack BABYMONSTER, NMIXX, ITZY, I.O.I, LE SSERAFIM, and aespa into one ruthless calendar squeeze."
 date: '2026-05-17'
+updatedAt: '2026-09-13'
 category: 'Industry'
 thumbnail: '/images/news/may-comeback-trap-thumbnail.webp'
 active: true
@@ -59,3 +60,8 @@ Those are not identical products. They are different answers to the same problem
 May 18 begins the decisive stretch. ITZY and I.O.I land back-to-back, LE SSERAFIM follows three days later, and aespa waits at the end of the month with the advantage and burden of closing the sequence. Every agency will claim momentum. The market will answer more quietly: replay numbers, album reorder behavior, fan-made edits, search curves, and whether casual listeners can still name the song after the next teaser drops.
 
 The trap is not that May has too much K-pop. The trap is that every comeback looks huge for 24 hours. The groups that escape will be the ones whose story still feels unfinished after the calendar moves on.
+
+## Sources
+
+- [May is K-pop's biggest month for girl groups' releases in years, The Korea Times](https://www.koreatimes.co.kr/entertainment/k-pop/20260501/mays-k-pop-calendar-belongs-to-girl-groups)
+- [Six girl groups in 25 days, Korea Portal](https://en.koreaportal.com/articles/54448/20260506/six-girl-groups-25-days-k-pops-busiest-coincidence.htm)
