@@ -72,7 +72,7 @@ export default function Header() {
   ];
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-testid="mobile-header">
       <div className={styles.headerInner}>
         <Link
           href={`/${locale}`}

@@ -276,39 +276,63 @@ async function main() {
       `mobile home returned HTTP ${mobileHomeResponse?.status()}`,
     );
     await page.getByTestId('home-profile-feed').waitFor({ state: 'visible', timeout: 20_000 });
+    const mobileHeader = page.getByTestId('mobile-header');
     const mobileSidebar = page.getByTestId('desktop-sidebar');
     const mobileBottomNav = page.getByTestId('mobile-bottom-nav');
-    assert(await mobileSidebar.isVisible(), 'mobile sidebar rail is not visible at 390px');
-    assert(!(await mobileBottomNav.isVisible()), 'mobile bottom nav is visible at 390px');
+    assert(await mobileHeader.isVisible(), 'mobile header is not visible at 390px');
+    assert(!(await mobileSidebar.isVisible()), 'desktop sidebar is visible at 390px');
+    assert(await mobileBottomNav.isVisible(), 'mobile bottom nav is not visible at 390px');
+    const mobileNavLabels = (await mobileBottomNav.getByRole('link').allTextContents()).map((label) =>
+      label.trim(),
+    );
     assert(
-      (await mobileSidebar.getByRole('link', { name: '홈', exact: true }).getAttribute('aria-current')) ===
+      JSON.stringify(mobileNavLabels) === JSON.stringify(['홈', '투표', '업로드', '뉴스', '프로필']),
+      `mobile navigation labels are incorrect (${JSON.stringify(mobileNavLabels)})`,
+    );
+    assert(
+      (await mobileBottomNav.getByRole('link', { name: '홈', exact: true }).getAttribute('aria-current')) ===
         'page',
-      'mobile sidebar home link is missing aria-current="page"',
+      'mobile home link is missing aria-current="page"',
     );
 
     const mobileShell = await page.evaluate(() => {
-      const sidebar = document.querySelector('[data-testid="desktop-sidebar"]');
-      const styles = sidebar ? getComputedStyle(sidebar) : null;
+      const header = document.querySelector('[data-testid="mobile-header"]');
+      const bottomNav = document.querySelector('[data-testid="mobile-bottom-nav"]');
+      const headerStyles = header ? getComputedStyle(header) : null;
+      const bottomNavStyles = bottomNav ? getComputedStyle(bottomNav) : null;
       return {
         viewportWidth: window.innerWidth,
         documentWidth: document.documentElement.scrollWidth,
         bodyWidth: document.body.scrollWidth,
-        sidebarWidth: sidebar?.getBoundingClientRect().width || 0,
-        sidebarLabelOpacity: sidebar?.querySelector('[class*="label"]')
-          ? getComputedStyle(sidebar.querySelector('[class*="label"]')).opacity
-          : null,
-        sidebarBackground: styles?.backgroundColor || null,
+        headerWidth: header?.getBoundingClientRect().width || 0,
+        headerHeight: header?.getBoundingClientRect().height || 0,
+        headerDisplay: headerStyles?.display || null,
+        bottomNavWidth: bottomNav?.getBoundingClientRect().width || 0,
+        bottomNavHeight: bottomNav?.getBoundingClientRect().height || 0,
+        bottomNavPosition: bottomNavStyles?.position || null,
+        bottomNavBackground: bottomNavStyles?.backgroundColor || null,
       };
     });
     assert(
       Math.max(mobileShell.documentWidth, mobileShell.bodyWidth) <= mobileShell.viewportWidth + 1,
       `mobile shell overflows horizontally (${JSON.stringify(mobileShell)})`,
     );
-    assert(mobileShell.sidebarWidth <= 73, `mobile sidebar rail expanded (${JSON.stringify(mobileShell)})`);
     assert(
-      mobileShell.sidebarBackground &&
-        !/transparent|rgba\([^)]*,\s*0\s*\)/i.test(mobileShell.sidebarBackground),
-      `mobile sidebar background is transparent (${mobileShell.sidebarBackground})`,
+      mobileShell.headerWidth >= mobileShell.viewportWidth - 1 && mobileShell.headerHeight > 0,
+      `mobile header geometry is invalid (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.bottomNavWidth >= mobileShell.viewportWidth - 1 && mobileShell.bottomNavHeight > 0,
+      `mobile bottom nav geometry is invalid (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.bottomNavPosition === 'fixed',
+      `mobile bottom nav is not fixed (${JSON.stringify(mobileShell)})`,
+    );
+    assert(
+      mobileShell.bottomNavBackground &&
+        !/transparent|rgba\([^)]*,\s*0\s*\)/i.test(mobileShell.bottomNavBackground),
+      `mobile bottom nav background is transparent (${mobileShell.bottomNavBackground})`,
     );
 
     await page.setViewportSize({ width: 1440, height: 1000 });
