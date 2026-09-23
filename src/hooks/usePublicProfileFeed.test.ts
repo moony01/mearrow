@@ -52,6 +52,28 @@ describe('usePublicProfileFeed', () => {
     expect(result.current.posts).toEqual([post]);
   });
 
+  it('keeps a server-rendered first page visible while it refreshes', async () => {
+    const serverPost = makePost('server-post', 'image');
+    const refreshedPost = makePost('refreshed-post', 'image');
+    let resolveRefresh!: (value: PublicProfileFeedPage) => void;
+    const refresh = new Promise<PublicProfileFeedPage>((resolve) => {
+      resolveRefresh = resolve;
+    });
+    fixtures.listPublicProfilePosts.mockReturnValue(refresh);
+
+    const { result } = renderHook(() => usePublicProfileFeed(undefined, page([serverPost])));
+
+    expect(result.current.posts).toEqual([serverPost]);
+    await waitFor(() => expect(fixtures.listPublicProfilePosts).toHaveBeenCalledTimes(1));
+
+    await act(async () => {
+      resolveRefresh(page([refreshedPost]));
+      await refresh;
+    });
+
+    await waitFor(() => expect(result.current.posts).toEqual([refreshedPost]));
+  });
+
   it('restarts at the first page when the media filter changes', async () => {
     const imagePost = makePost('image-post', 'image');
     const shortPost = makePost('short-post', 'short');

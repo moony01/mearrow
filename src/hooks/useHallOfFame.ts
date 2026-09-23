@@ -85,18 +85,20 @@ const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK_DATA === 'true';
  * API가 준비되면 자동으로 API 데이터를 사용하고,
  * API 호출 실패 시 Mock 데이터로 폴백합니다.
  */
-export function useHallOfFame(): UseHallOfFameReturn {
-  const [data, setData] = useState<HallOfFameData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export function useHallOfFame(initialData: HallOfFameData | null = null): UseHallOfFameReturn {
+  const [data, setData] = useState<HallOfFameData | null>(initialData);
+  const [isLoading, setIsLoading] = useState(!initialData);
   const [error, setError] = useState<string | null>(null);
-  const [dataSource, setDataSource] = useState<'mock' | 'api'>('mock');
+  const [dataSource, setDataSource] = useState<'mock' | 'api'>(initialData ? 'api' : 'mock');
 
   /** 월간 챔피언 캐시 (연도별) */
   const monthlyCache = useRef<Map<number, MonthlyChampion[]>>(new Map());
   /** 연간 경쟁현황 캐시 (연도별) */
   const raceCache = useRef<Map<number, YearlyWinCount[]>>(new Map());
   /** 전체 월간 챔피언 캐시 (연도별 조회용) */
-  const allChampionsRef = useRef<MonthlyChampion[]>([]);
+  const allChampionsRef = useRef<MonthlyChampion[]>(initialData?.currentYearMonthly ?? []);
+  /** Initial server data is already visible, so revalidation must not replace it with a skeleton. */
+  const hasVisibleDataRef = useRef(Boolean(initialData));
 
   /**
    * Supabase에서 데이터 가져오기 시도
@@ -144,7 +146,9 @@ export function useHallOfFame(): UseHallOfFameReturn {
    * 데이터 로드 (API 우선, Mock 폴백)
    */
   const fetchData = useCallback(async () => {
-    setIsLoading(true);
+    if (!hasVisibleDataRef.current) {
+      setIsLoading(true);
+    }
     setError(null);
 
     try {
@@ -167,6 +171,7 @@ export function useHallOfFame(): UseHallOfFameReturn {
       ];
 
       setData(result);
+      hasVisibleDataRef.current = true;
 
       // 캐시 초기화
       monthlyCache.current.clear();

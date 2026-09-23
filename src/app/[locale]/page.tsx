@@ -15,6 +15,7 @@ import { generatePageMetadata } from '@/lib/seo';
 import { FULL_URL, SUPPORTED_LOCALES } from '@/lib/constants';
 import { BRAND_MARK_PATH, BRAND_NAME } from '@/lib/brand';
 import { JsonLd } from '@/components/common/JsonLd';
+import { getInitialHomeFeed } from '@/lib/server/home-feed';
 import styles from './seo-content.module.scss';
 
 /** 지원하는 로케일에 대해 페이지 생성 */
@@ -52,7 +53,10 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'Home' });
+  const [t, initialFeed] = await Promise.all([
+    getTranslations({ locale, namespace: 'Home' }),
+    getInitialHomeFeed(),
+  ]);
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -73,7 +77,7 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       <JsonLd data={websiteJsonLd} />
-      <HomeFeedClient />
+      <HomeFeedClient initialFeed={initialFeed} />
 
       {/*
        * 피드 아래의 실제 서비스 안내 콘텐츠.

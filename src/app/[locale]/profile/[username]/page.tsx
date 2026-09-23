@@ -45,12 +45,15 @@ export async function generateMetadata({
   const username = decodeUsername(rawUsername);
   const t = await getTranslations({ locale, namespace: 'PublicProfile' });
 
-  return generatePageMetadata({
-    locale,
-    pathname: `/profile/${encodeURIComponent(username)}`,
-    title: `${username} | ${t('title_suffix')} | ${BRAND_NAME}`,
-    description: `${t('public')}: ${username}. ${t('posts')}. ${t('activities')}.`,
-  });
+  return {
+    ...generatePageMetadata({
+      locale,
+      pathname: `/profile/${encodeURIComponent(username)}`,
+      title: `${username} | ${t('title_suffix')} | ${BRAND_NAME}`,
+      description: `${t('public')}: ${username}. ${t('posts')}. ${t('activities')}.`,
+    }),
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function PublicProfilePage({

@@ -8,6 +8,7 @@ import { createClient } from '@/lib/supabase/client';
 import { BRAND_NAME } from '@/lib/brand';
 import { SUPPORTED_LOCALES, SupportedLocale } from '@/lib/constants';
 import type { Announcement, AnnouncementCategory, AnnouncementListItem } from '@/types/announcement';
+import type { SupabaseClient } from '@supabase/supabase-js';
 
 export const SIGNUP_EVENT_NOTICE_ID = 'event-signup-double-votes-2026-02';
 
@@ -91,13 +92,25 @@ function createSignupEventNotice(locale = 'ko'): Announcement {
   };
 }
 
-/** 공지사항 목록 조회 (공개된 것만, RLS 적용) */
-export async function getAnnouncements(
+function withSignupEventNotice(
+  notices: AnnouncementListItem[],
+  category: AnnouncementCategory | undefined,
+  locale: string,
+): AnnouncementListItem[] {
+  if (category && category !== 'event') {
+    return notices;
+  }
+
+  const eventNotice = createSignupEventNotice(locale);
+  const hasSameId = notices.some((notice) => notice.id === eventNotice.id);
+  return hasSameId ? notices : [eventNotice, ...notices];
+}
+
+async function queryAnnouncements(
+  supabase: SupabaseClient,
   category?: AnnouncementCategory,
   locale = 'ko',
 ): Promise<AnnouncementListItem[]> {
-  const supabase = createClient();
-
   let query = supabase
     .from('announcements')
     .select('id, title, category, is_pinned, is_published, view_count, created_at, updated_at')
@@ -116,24 +129,17 @@ export async function getAnnouncements(
     throw error;
   }
 
-  const notices = data || [];
-
-  if (category && category !== 'event') {
-    return notices;
-  }
-
-  const eventNotice = createSignupEventNotice(locale);
-  const hasSameId = notices.some((notice) => notice.id === eventNotice.id);
-  return hasSameId ? notices : [eventNotice, ...notices];
+  return withSignupEventNotice((data || []) as AnnouncementListItem[], category, locale);
 }
 
-/** 공지사항 상세 조회 */
-export async function getAnnouncementById(id: string, locale = 'ko'): Promise<Announcement | null> {
+async function queryAnnouncementById(
+  supabase: SupabaseClient,
+  id: string,
+  locale = 'ko',
+): Promise<Announcement | null> {
   if (id === SIGNUP_EVENT_NOTICE_ID) {
     return createSignupEventNotice(locale);
   }
-
-  const supabase = createClient();
 
   const { data, error } = await supabase
     .from('announcements')
@@ -147,7 +153,63 @@ export async function getAnnouncementById(id: string, locale = 'ko'): Promise<An
     return null;
   }
 
-  return data;
+  return data as Announcement;
+}
+
+/** 공지사항 목록 조회 (공개된 것만, RLS 적용) */
+export async function getAnnouncements(
+  category?: AnnouncementCategory,
+  locale = 'ko',
+): Promise<AnnouncementListItem[]> {
+  return queryAnnouncements(createClient(), category, locale);
+}
+
+/** 공지사항 상세 조회 */
+export async function getAnnouncementById(id: string, locale = 'ko'): Promise<Announcement | null> {
+  return queryAnnouncementById(createClient(), id, locale);
+}
+
+/**
+ * Build-time/server equivalent of getAnnouncements.
+ * Only published fields are returned, so the result is safe to serialize into
+ * a public static page.
+ */
+export async function getServerAnnouncements(
+  category?: AnnouncementCategory,
+  locale = 'ko',
+): Promise<AnnouncementListItem[]> {
+  const { createServerClient } = await import('@/lib/supabase/server');
+  const supabase = createServerClient();
+
+  if (!supabase) {
+    return withSignupEventNotice([], category, locale);
+  }
+
+  try {
+    return await queryAnnouncements(supabase, category, locale);
+  } catch {
+    return withSignupEventNotice([], category, locale);
+  }
+}
+
+/** Build-time/server equivalent of getAnnouncementById. */
+export async function getServerAnnouncementById(
+  id: string,
+  locale = 'ko',
+): Promise<Announcement | null> {
+  if (id === SIGNUP_EVENT_NOTICE_ID) {
+    return createSignupEventNotice(locale);
+  }
+
+  const { createServerClient } = await import('@/lib/supabase/server');
+  const supabase = createServerClient();
+  if (!supabase) return null;
+
+  try {
+    return await queryAnnouncementById(supabase, id, locale);
+  } catch {
+    return null;
+  }
 }
 
 /** 조회수 증가 */
