@@ -7,6 +7,7 @@ import {
   getNoticeComments,
   createNoticeComment,
   deleteNoticeComment,
+  supportsNoticeComments,
   type NoticeComment,
 } from '@/lib/api/notice-comments';
 import { useAuth } from '@/hooks/useAuth';
@@ -26,6 +27,12 @@ const MIN_SUBMIT_INTERVAL = 5000;
  * NewsComments 컴포넌트 패턴 복제 (slug → announcementId)
  */
 export default function NoticeComments({ announcementId }: NoticeCommentsProps) {
+  if (!supportsNoticeComments(announcementId)) return null;
+
+  return <NoticeCommentsContent announcementId={announcementId} />;
+}
+
+function NoticeCommentsContent({ announcementId }: NoticeCommentsProps) {
   const t = useTranslations('NoticeComments');
   const { profile } = useAuth();
 

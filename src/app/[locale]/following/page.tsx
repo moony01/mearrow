@@ -19,12 +19,15 @@ export async function generateMetadata({ params }: FollowingPageProps): Promise<
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Following' });
 
-  return generatePageMetadata({
-    locale,
-    pathname: '/following',
-    title: `${t('title')} | ${BRAND_NAME}`,
-    description: t('subtitle'),
-  });
+  return {
+    ...generatePageMetadata({
+      locale,
+      pathname: '/following',
+      title: `${t('title')} | ${BRAND_NAME}`,
+      description: t('subtitle'),
+    }),
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function FollowingPage({ params }: FollowingPageProps) {

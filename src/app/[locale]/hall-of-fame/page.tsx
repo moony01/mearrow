@@ -17,6 +17,7 @@ import { JsonLd } from '@/components/common/JsonLd';
 import AdBanner from '@/components/common/AdBanner';
 import { AD_SLOTS } from '@/types/ads';
 import PageFrame, { PageHeader } from '@/components/layout/PageFrame';
+import { getInitialHallOfFameData } from '@/lib/server/public-page-data';
 
 /** 지원하는 언어에 대해 정적 페이지 생성 */
 export function generateStaticParams() {
@@ -52,6 +53,7 @@ export default async function HallOfFamePage({ params }: HallOfFamePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'HallOfFame' });
+  const initialData = await getInitialHallOfFameData();
   const hallOfFameJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -71,7 +73,7 @@ export default async function HallOfFamePage({ params }: HallOfFamePageProps) {
       />
 
       {/* CSR 챔피언 데이터 영역 */}
-      <HallOfFameClient />
+      <HallOfFameClient initialData={initialData} />
 
       {/* 명예의 전당 하단 광고 */}
       <AdBanner adSlot={AD_SLOTS.HOF_BOTTOM} adFormat="leaderboard" />

@@ -16,6 +16,11 @@ function sanitizePassword(pw: string): string {
 /** UUID v4 형식 검사 (이벤트 공지 등 비-UUID ID를 Supabase 쿼리에서 제외) */
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
+/** 댓글 테이블과 연결할 수 있는 DB 공지사항인지 확인한다. */
+export function supportsNoticeComments(announcementId: string): boolean {
+  return UUID_RE.test(announcementId);
+}
+
 /** 공지사항 댓글 타입 */
 export interface NoticeComment {
   id: string;
@@ -53,6 +58,8 @@ export async function getNoticeComments(
   limit: number = 50,
   offset: number = 0,
 ): Promise<NoticeComment[]> {
+  if (!supportsNoticeComments(announcementId)) return [];
+
   const supabase = createClient();
 
   const { data, error } = await supabase
@@ -80,6 +87,8 @@ export async function getNoticeComments(
 export async function createNoticeComment(
   req: CreateNoticeCommentRequest,
 ): Promise<NoticeComment | null> {
+  if (!supportsNoticeComments(req.announcement_id)) return null;
+
   const supabase = createClient();
 
   const { data, error } = await supabase
@@ -131,7 +140,7 @@ export async function deleteNoticeComment(
  */
 export async function getNoticeCommentCount(announcementId: string): Promise<number> {
   // 비-UUID ID(이벤트 공지 등)는 DB 조회 없이 0 반환
-  if (!UUID_RE.test(announcementId)) return 0;
+  if (!supportsNoticeComments(announcementId)) return 0;
 
   const supabase = createClient();
   const { data, error } = await supabase
@@ -153,7 +162,7 @@ export async function getNoticeCommentCounts(
 ): Promise<Record<string, number>> {
   if (announcementIds.length === 0) return {};
   // 이벤트 공지 등 비-UUID ID를 Supabase 쿼리에서 제외 (UUID 컬럼에 문자열 전달 시 에러 방지)
-  const uuidIds = announcementIds.filter((id) => UUID_RE.test(id));
+  const uuidIds = announcementIds.filter(supportsNoticeComments);
   const counts: Record<string, number> = {};
   // UUID가 아닌 ID는 댓글 0으로 처리
   if (uuidIds.length === 0) return counts;

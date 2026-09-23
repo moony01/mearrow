@@ -6,6 +6,7 @@ import {
   PROFILE_FEED_PAGE_SIZE,
   type ProfileFeedCursor,
   type ProfileMediaType,
+  type PublicProfileFeedPage,
   type PublicProfilePostRecord,
 } from '@/lib/api/profile-content';
 
@@ -18,11 +19,16 @@ export interface UsePublicProfileFeedReturn {
   reload: () => Promise<void>;
 }
 
-export function usePublicProfileFeed(mediaType?: ProfileMediaType): UsePublicProfileFeedReturn {
-  const [posts, setPosts] = useState<PublicProfilePostRecord[]>([]);
-  const [cursor, setCursor] = useState<ProfileFeedCursor | null>(null);
-  const [hasMore, setHasMore] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+export function usePublicProfileFeed(
+  mediaType?: ProfileMediaType,
+  initialPage?: PublicProfileFeedPage | null,
+): UsePublicProfileFeedReturn {
+  const hasInitialPage = initialPage !== null && initialPage !== undefined;
+  const preserveInitialPageRef = useRef(hasInitialPage);
+  const [posts, setPosts] = useState<PublicProfilePostRecord[]>(() => initialPage?.posts ?? []);
+  const [cursor, setCursor] = useState<ProfileFeedCursor | null>(() => initialPage?.nextCursor ?? null);
+  const [hasMore, setHasMore] = useState(() => hasInitialPage ? initialPage.nextCursor !== null : true);
+  const [isLoading, setIsLoading] = useState(!hasInitialPage);
   const [error, setError] = useState<Error | null>(null);
   const requestIdRef = useRef(0);
 
@@ -58,9 +64,15 @@ export function usePublicProfileFeed(mediaType?: ProfileMediaType): UsePublicPro
   );
 
   useEffect(() => {
-    setPosts([]);
-    setCursor(null);
-    setHasMore(true);
+    // A server-rendered first page must remain visible during the background
+    // refresh. Subsequent filter changes retain the existing reset behavior.
+    const preserveInitialPage = preserveInitialPageRef.current;
+    preserveInitialPageRef.current = false;
+    if (!preserveInitialPage) {
+      setPosts([]);
+      setCursor(null);
+      setHasMore(true);
+    }
     void loadPage(null, true);
   }, [loadPage]);
 

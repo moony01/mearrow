@@ -10,6 +10,7 @@ import {
   incrementAnnouncementView,
 } from '@/lib/api/announcements';
 import { sanitizeNoticeContent } from '@/lib/sanitizeNoticeContent';
+import { getNoticePlainText } from '@/lib/notice-content';
 import { JsonLd } from '@/components/common/JsonLd';
 import NoticeComments from '@/components/features/notice/NoticeComments';
 import AdBanner from '@/components/common/AdBanner';
@@ -23,43 +24,62 @@ import styles from './page.module.scss';
 interface NoticeDetailClientProps {
   locale: string;
   noticeId: string;
+  initialNotice?: Announcement | null;
 }
 
 /**
  * 공지사항 상세 클라이언트 컴포넌트
  * 개별 공지사항 데이터를 Supabase에서 조회하여 렌더링
  */
-export default function NoticeDetailClient({ locale, noticeId }: NoticeDetailClientProps) {
+export default function NoticeDetailClient({
+  locale,
+  noticeId,
+  initialNotice = null,
+}: NoticeDetailClientProps) {
   const t = useTranslations('Notice');
 
-  const [notice, setNotice] = useState<Announcement | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [notice, setNotice] = useState<Announcement | null>(initialNotice);
+  const [loading, setLoading] = useState(!initialNotice);
   const [error, setError] = useState(false);
+  const [isInitialContent, setIsInitialContent] = useState(Boolean(initialNotice));
 
   /** 공지사항 상세 데이터 조회 */
   useEffect(() => {
     async function fetchNotice() {
       try {
-        setLoading(true);
+        if (!initialNotice) {
+          setLoading(true);
+        }
         setError(false);
         const data = await getAnnouncementById(noticeId, locale);
         if (data) {
           const sanitizedContent = await sanitizeNoticeContent(data.content);
+          if (!active) return;
           setNotice({ ...data, content: sanitizedContent });
+          setIsInitialContent(false);
           // 조회수 증가 (fire-and-forget)
           incrementAnnouncementView(noticeId);
-        } else {
+        } else if (!initialNotice) {
           setError(true);
         }
       } catch {
-        setError(true);
+        if (!initialNotice) {
+          setError(true);
+        }
       } finally {
-        setLoading(false);
+        if (active) {
+          setLoading(false);
+        }
       }
     }
 
-    fetchNotice();
-  }, [noticeId, locale]);
+    let active = true;
+    void fetchNotice();
+
+    return () => {
+      active = false;
+    };
+  }, [initialNotice, locale, noticeId]);
 
   /** 날짜 포맷팅 */
   const formatDate = (dateStr: string) => {
@@ -90,14 +110,14 @@ export default function NoticeDetailClient({ locale, noticeId }: NoticeDetailCli
         </Link>
 
         {/* 로딩 상태 */}
-        {loading && (
+        {loading && !notice && (
           <div className={styles.statusMessage}>
             <p>{t('loading')}</p>
           </div>
         )}
 
         {/* 에러 상태 */}
-        {error && !loading && (
+        {error && !notice && (
           <div className={styles.statusMessage}>
             <p>{t('error')}</p>
             <Link href={`/${locale}/notice`} className={styles.retryButton}>
@@ -107,7 +127,7 @@ export default function NoticeDetailClient({ locale, noticeId }: NoticeDetailCli
         )}
 
         {/* 상세 내용 */}
-        {notice && !loading && (
+        {notice && (
           <>
             {/* 공지 헤더 */}
             <div className={styles.detailHeader}>
@@ -123,12 +143,18 @@ export default function NoticeDetailClient({ locale, noticeId }: NoticeDetailCli
 
             {/* 본문 (Quill HTML 콘텐츠) */}
             {/* XSS 방지: DOMPurify로 HTML sanitize 처리 */}
-            <div
-              className={`${styles.detailContent} ql-editor`}
-              dangerouslySetInnerHTML={{
-                __html: notice.content,
-              }}
-            />
+            {isInitialContent ? (
+              <div className={`${styles.detailContent} ql-editor`}>
+                <p>{getNoticePlainText(notice.content)}</p>
+              </div>
+            ) : (
+              <div
+                className={`${styles.detailContent} ql-editor`}
+                dangerouslySetInnerHTML={{
+                  __html: notice.content,
+                }}
+              />
+            )}
 
             {/* JSON-LD 구조화 데이터 (Article 스키마) */}
             <JsonLd

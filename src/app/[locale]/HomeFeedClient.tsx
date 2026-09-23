@@ -9,7 +9,10 @@ import {
   Clock3,
   Share2,
 } from 'lucide-react';
-import type { PublicProfilePostRecord } from '@/lib/api/profile-content';
+import type {
+  PublicProfileFeedPage,
+  PublicProfilePostRecord,
+} from '@/lib/api/profile-content';
 import {
   getProfilePostSocial,
   type ProfilePostSocialRecord,
@@ -292,10 +295,17 @@ function FeedCard({
   );
 }
 
-export default function HomeFeedClient() {
+export default function HomeFeedClient({
+  initialFeed = null,
+}: {
+  initialFeed?: PublicProfileFeedPage | null;
+}) {
   const locale = useLocale();
   const t = useTranslations('Home');
-  const { posts, isLoading, hasMore, error, loadMore, reload } = usePublicProfileFeed();
+  const { posts, isLoading, hasMore, error, loadMore, reload } = usePublicProfileFeed(
+    undefined,
+    initialFeed,
+  );
   const [socialByPostId, setSocialByPostId] = useState<Record<string, ProfilePostSocialRecord>>({});
   const requestedSocialIdsRef = useRef(new Set<string>());
   const feedShellRef = useRef<HTMLElement | null>(null);

@@ -12,6 +12,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useHallOfFame } from '@/hooks/useHallOfFame';
+import type { HallOfFameData } from '@/types/hall-of-fame';
 
 // Feature Components
 import GrandChampionCard from '@/components/features/hall-of-fame/GrandChampionCard';
@@ -87,14 +88,18 @@ function EmptyState() {
 /**
  * 명예의 전당 클라이언트 컴포넌트
  */
-export default function HallOfFameClient() {
-  const { data, isLoading, error, getMonthlyChampions, getYearlyRace, refresh } = useHallOfFame();
+export default function HallOfFameClient({
+  initialData,
+}: {
+  initialData?: HallOfFameData | null;
+}) {
+  const { data, isLoading, error, getMonthlyChampions, getYearlyRace, refresh } = useHallOfFame(initialData);
 
   // null이면 데이터가 제공하는 현재 연도를 그대로 사용한다.
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   // 로딩 상태 - 스켈레톤 UI 표시
-  if (isLoading) {
+  if (isLoading && !data) {
     return (
       <div className={styles.container}>
         <LoadingSkeleton />

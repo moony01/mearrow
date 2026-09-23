@@ -9,6 +9,7 @@ import AdBanner from '@/components/common/AdBanner';
 import { AD_SLOTS } from '@/types/ads';
 import styles from './notice-seo.module.scss';
 import PageFrame, { PageHeader } from '@/components/layout/PageFrame';
+import { getServerAnnouncements } from '@/lib/api/announcements';
 
 /** 지원하는 언어에 대해 정적 페이지 생성 */
 export function generateStaticParams() {
@@ -40,6 +41,7 @@ export default async function NoticePage({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'Notice' });
+  const initialNotices = await getServerAnnouncements(undefined, locale);
   const noticeJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -60,7 +62,7 @@ export default async function NoticePage({ params }: { params: Promise<{ locale:
       />
 
       {/* CSR 공지사항 목록 */}
-      <NoticeClient locale={locale} />
+      <NoticeClient locale={locale} initialNotices={initialNotices} />
 
       {/* 공지사항 목록 하단 광고 */}
       <AdBanner adSlot={AD_SLOTS.NOTICE_LIST_BOTTOM} adFormat="leaderboard" />

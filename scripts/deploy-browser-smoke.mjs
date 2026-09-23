@@ -199,6 +199,9 @@ async function main() {
       return route.continue();
     });
 
+    const hasProfileFeedResponse = () =>
+      supabaseResponses.some(({ url }) => url.includes('/rest/v1/profile_posts'));
+
     page.on('response', (response) => {
       const url = response.url();
       if (url.includes('/rest/v1/')) {
@@ -233,6 +236,17 @@ async function main() {
       undefined,
       { timeout: 20_000 },
     );
+    // SSR may render the first cards before hydration starts the client refresh.
+    // Wait for that refresh response when it has not arrived yet so the smoke
+    // does not race the response listener and report a false negative.
+    if (!hasProfileFeedResponse()) {
+      await page
+        .waitForResponse(
+          (response) => response.url().includes('/rest/v1/profile_posts'),
+          { timeout: 20_000 },
+        )
+        .catch(() => undefined);
+    }
     const profileFeedCount = await page.locator('[data-testid="profile-feed-card"]').count();
     const profileFeedResponses = supabaseResponses.filter(({ url }) => url.includes('/rest/v1/profile_posts'));
     assert(

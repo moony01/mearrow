@@ -5,6 +5,7 @@ import { useLeagueData } from '@/hooks/useLeagueData';
 import { useAuth } from '@/hooks/useAuth';
 import { useVoteQuota } from '@/hooks/useVoteQuota';
 import { useRefreshCountdown } from '@/hooks/useRefreshCountdown';
+import type { CompaniesResponse } from '@/types/api';
 import BottomSheet from '@/components/ui/BottomSheet';
 import VoteController from '@/components/features/VoteController';
 import {
@@ -90,9 +91,11 @@ function postEmbedMessage(message: Record<string, unknown>) {
 export default function VoteBoardEmbedClient({
   locale,
   surfaceOverride,
+  initialData,
 }: {
   locale: string;
   surfaceOverride?: VoteBoardSurface;
+  initialData?: CompaniesResponse | null;
 }) {
   const {
     premierLeague,
@@ -101,7 +104,7 @@ export default function VoteBoardEmbedClient({
     isLoading,
     error,
     refresh,
-  } = useLeagueData({ refreshInterval: 20000 });
+  } = useLeagueData({ refreshInterval: 20000, fallbackData: initialData });
   const { user } = useAuth();
   const [options, setOptions] = useState<VoteBoardEmbedOptions>({
     surface: 'partner',

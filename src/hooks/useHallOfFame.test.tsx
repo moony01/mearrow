@@ -61,4 +61,14 @@ describe('useHallOfFame', () => {
     expect(result.current.dataSource).toBe('mock');
     expect(result.current.getMonthlyChampions(2026)).toEqual([fixtures.januaryChampion]);
   });
+
+  it('keeps server-rendered records visible while the client refreshes them', () => {
+    fixtures.getHallOfFame.mockResolvedValue(fixtures.data);
+
+    const { result } = renderHook(() => useHallOfFame(fixtures.data));
+
+    expect(result.current.isLoading).toBe(false);
+    expect(result.current.data).toEqual(fixtures.data);
+    expect(result.current.getMonthlyChampions(2026)).toEqual([fixtures.januaryChampion]);
+  });
 });

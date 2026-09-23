@@ -11,6 +11,7 @@ import styles from './page.module.scss';
 
 interface NoticeClientProps {
   locale: string;
+  initialNotices?: AnnouncementListItem[];
 }
 
 /**
@@ -18,19 +19,21 @@ interface NoticeClientProps {
  * 목록 조회 + 카테고리 필터링
  * 상세보기는 /notice/[id] 페이지로 이동
  */
-export default function NoticeClient({ locale }: NoticeClientProps) {
+export default function NoticeClient({ locale, initialNotices }: NoticeClientProps) {
   const t = useTranslations('Notice');
 
-  const [notices, setNotices] = useState<AnnouncementListItem[]>([]);
+  const [notices, setNotices] = useState<AnnouncementListItem[]>(initialNotices ?? []);
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [selectedCategory, setSelectedCategory] = useState<AnnouncementCategory | undefined>(undefined);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(initialNotices === undefined);
   const [error, setError] = useState(false);
 
   /** 공지사항 목록 조회 + 댓글 수 배치 조회 */
-  const fetchNotices = useCallback(async () => {
+  const fetchNotices = useCallback(async (preserveVisibleContent = false) => {
     try {
-      setLoading(true);
+      if (!preserveVisibleContent) {
+        setLoading(true);
+      }
       setError(false);
       const data = await getAnnouncements(selectedCategory, locale);
       setNotices(data);
@@ -49,8 +52,8 @@ export default function NoticeClient({ locale }: NoticeClientProps) {
   }, [selectedCategory, locale]);
 
   useEffect(() => {
-    fetchNotices();
-  }, [fetchNotices]);
+    void fetchNotices(initialNotices !== undefined && selectedCategory === undefined);
+  }, [fetchNotices, initialNotices, selectedCategory]);
 
   /** 카테고리 필터 변경 */
   const handleCategoryChange = (category?: AnnouncementCategory) => {
@@ -67,7 +70,7 @@ export default function NoticeClient({ locale }: NoticeClientProps) {
         />
 
         {/* 로딩 상태 */}
-        {loading && (
+        {loading && notices.length === 0 && (
           <div className={styles.statusMessage}>
             <p>{t('loading')}</p>
           </div>
@@ -77,14 +80,14 @@ export default function NoticeClient({ locale }: NoticeClientProps) {
         {error && !loading && (
           <div className={styles.statusMessage}>
             <p>{t('error')}</p>
-            <button type="button" className={styles.retryButton} onClick={fetchNotices}>
+            <button type="button" className={styles.retryButton} onClick={() => void fetchNotices()}>
               {t('retry')}
             </button>
           </div>
         )}
 
         {/* 공지사항 목록 */}
-        {!loading && !error && (
+        {!error && (
           <>
             {notices.length === 0 ? (
               <div className={styles.statusMessage}>

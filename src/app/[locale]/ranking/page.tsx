@@ -5,6 +5,7 @@ import { generatePageMetadata } from '@/lib/seo';
 import { SUPPORTED_LOCALES } from '@/lib/constants';
 import { BRAND_NAME } from '@/lib/brand';
 import PageFrame, { PageHeader } from '@/components/layout/PageFrame';
+import { getInitialLeagueData } from '@/lib/server/public-page-data';
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -31,6 +32,7 @@ export default async function RankingPage({ params }: RankingPageProps) {
   setRequestLocale(locale);
   const tNav = await getTranslations({ locale, namespace: 'Nav' });
   const tHome = await getTranslations({ locale, namespace: 'Home' });
+  const initialData = await getInitialLeagueData();
 
   return (
     <PageFrame as="section" size="wide">
@@ -39,7 +41,7 @@ export default async function RankingPage({ params }: RankingPageProps) {
         title={tNav('ranking')}
         description={tHome('title')}
       />
-      <RankingClient />
+      <RankingClient initialData={initialData} />
     </PageFrame>
   );
 }

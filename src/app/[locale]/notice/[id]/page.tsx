@@ -8,6 +8,7 @@ import {
   getAnnouncementAvailableLocales,
   getAnnouncementSeoLocale,
   getPublishedAnnouncementIds,
+  getServerAnnouncementById,
 } from '@/lib/api/announcements';
 import NoticeDetailClient from './NoticeDetailClient';
 
@@ -57,6 +58,7 @@ export async function generateMetadata({ params }: NoticeDetailPageProps): Promi
 export default async function NoticeDetailPage({ params }: NoticeDetailPageProps) {
   const { locale, id } = await params;
   setRequestLocale(locale);
+  const initialNotice = await getServerAnnouncementById(id, locale);
 
-  return <NoticeDetailClient locale={locale} noticeId={id} />;
+  return <NoticeDetailClient locale={locale} noticeId={id} initialNotice={initialNotice} />;
 }
