@@ -73,7 +73,12 @@ async function waitForServer(child, workerOutput) {
 
 function isIgnorableConsoleError(message) {
   const text = message.text();
-  return text.includes('Failed to load resource:') || text.includes('googlesyndication.com');
+  return (
+    text.includes('Failed to load resource:') ||
+    text.includes('googlesyndication.com') ||
+    text.includes('googletagmanager.com') ||
+    text.includes('google-analytics.com')
+  );
 }
 
 async function main() {
