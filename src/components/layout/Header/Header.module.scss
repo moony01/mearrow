@@ -4,7 +4,8 @@
  * 헤더 컴포넌트 스타일
  * 
  * 구조:
- * - 모바일·태블릿·데스크톱: 우측 설정 진입점을 제공하는 sticky global header
+ * - 모바일(<=768px): 로고/설정/더보기 컨트롤을 제공하는 sticky header
+ * - 태블릿·데스크톱(769px+): 좌측 Sidebar를 사용하므로 상단 헤더는 숨김
  */
 
 @use '../../../styles/abstracts/variables' as *;
@@ -24,6 +25,7 @@
   padding: 8px 0;
 
   @media (min-width: 769px) {
+    display: none;
     padding: 10px 0;
     background-color: color-mix(in srgb, var(--color-surface) 94%, transparent);
     box-shadow: 0 1px 12px color-mix(in srgb, var(--color-text) 5%, transparent);
