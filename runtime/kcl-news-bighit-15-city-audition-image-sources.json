@@ -1,0 +1,47 @@
+{
+  "workflow": "kcl-news-autopilot",
+  "slug": "bighit-15-city-audition",
+  "policy": "search-only visual assets; no AI generation",
+  "rightsGate": "PASS",
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/bighit-15-city-audition-thumbnail.webp",
+      "sourceUrl": "https://images.pexels.com/photos/2101487/pexels-photo-2101487.jpeg",
+      "pageUrl": "https://www.pexels.com/photo/microphone-2101487",
+      "provider": "Pexels",
+      "query": "Pexels free microphone stage photo",
+      "width": 2462,
+      "height": 1641,
+      "sha256": "19d876653290faa0e886325d3226612662b086fd8701853e7906ca5b67ecd4b9",
+      "licenseStatus": "Pexels License permits free website/blog use; attribution not required",
+      "rightsEvidence": "https://www.pexels.com/license/",
+      "captionPolicy": "Illustrative image; not an official BIGHIT MUSIC event image"
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/bighit-15-city-audition-1.webp",
+      "sourceUrl": "https://images.pexels.com/photos/2101488/pexels-photo-2101488.jpeg",
+      "pageUrl": "https://www.pexels.com/photo/microphone-on-stand-2101488",
+      "provider": "Pexels",
+      "query": "Pexels free microphone on stand stage photo",
+      "width": 2702,
+      "height": 1801,
+      "sha256": "b0206e63e99e96d6ab1a4aebd6f8b6b3ac1d68c4110e09c67932f5ef22676dc6",
+      "licenseStatus": "Pexels License permits free website/blog use; attribution not required",
+      "rightsEvidence": "https://www.pexels.com/license/",
+      "captionPolicy": "Illustrative image; does not depict BIGHIT MUSIC, its staff, or an audition venue"
+    }
+  ],
+  "rejectedImages": [
+    {
+      "source": "BIGHIT official audition poster assets used in the private Short",
+      "licenseStatus": "review_required",
+      "reason": "Official source confirmed, but a separate reuse license or permission for MEARROW publication was not confirmed"
+    }
+  ],
+  "imageSearchQueries": [
+    "Pexels free microphone stage photo",
+    "Pexels free microphone on stand stage photo"
+  ]
+}
