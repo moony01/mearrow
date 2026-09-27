@@ -35,8 +35,8 @@ That logic also fits the wider HYBE ecosystem. BIGHIT MUSIC is associated with B
 
 [Related: The Reality of Foreign K-pop Trainees — Visas, Language Barriers, and Cultural Survival](/en/news/foreign-trainee-reality-visa-culture)
 
-![A stage microphone representing the global audition funnel for aspiring performers](/images/news/bighit-15-city-audition-thumbnail.webp)
-_Illustrative image via Pexels; used under the [Pexels License](https://www.pexels.com/license/). This is not an official BIGHIT MUSIC event image._
+![The official BIGHIT MUSIC 2026 Global Audition poster for the 15-city campaign](/images/news/bighit-15-city-audition-thumbnail.webp)
+_Official image: [BIGHIT MUSIC Audition](https://www.bighitaudition.com/en). Separate republication permission was not confirmed._
 
 ## What BIGHIT MUSIC has actually confirmed
 
@@ -48,8 +48,8 @@ The deadline matters too. Online applications remain open through December 5, an
 
 The campaign's openness is important because it lowers two barriers at once: nationality and category. It does not remove the harder barriers of preparation, language, travel cost, or the uncertainty of entering a long trainee process. Passing an audition is not the same as receiving a debut guarantee.
 
-![A second microphone setup representing the in-person audition stage](/images/news/bighit-15-city-audition-1.webp)
-_Illustrative image via Pexels; used under the [Pexels License](https://www.pexels.com/license/). This image does not depict BIGHIT MUSIC, its staff, or an audition venue._
+![The official BIGHIT MUSIC 2024 global audition history poster](/images/news/bighit-15-city-audition-1.webp)
+_Official image: [BIGHIT MUSIC Audition history](https://www.bighitaudition.com/en/history). Separate republication permission was not confirmed._
 
 ## The BTS question needs a label, not a headline
 
@@ -84,4 +84,4 @@ The rest is still unknown. Fans can debate whether the search is part of a post-
 - [Music Business Worldwide: BIGHIT MUSIC opens a 15-city global audition](https://www.musicbusinessworldwide.com/bts-label-bighit-music-opens-global-audition-in-15-cities-in-search-of-new-male-talent)
 - [Music Ally: HYBE's BIGHIT MUSIC casts its net wide](https://musically.com/2026/09/14/hybes-bighit-music-casts-its-net-wide-with-its-latest-auditions)
 - [Digital Music News: BIGHIT MUSIC launches global auditions](https://digitalmusicnews.com/2026/09/14/bighit-music-global-auditions/)
-- [Pexels License](https://www.pexels.com/license/)
+- [BIGHIT MUSIC Audition history](https://www.bighitaudition.com/en/history)
