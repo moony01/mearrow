@@ -1,6 +1,6 @@
 {
   "runStartedAt": "2026-09-27T17:36:46+09:00",
-  "runEndedAt": "2026-09-27T17:41:01+09:00",
+  "runEndedAt": "2026-09-27T18:02:38+09:00",
   "workflow": "kcl-news-autopilot",
   "slug": "bighit-15-city-audition",
   "branch": "moony01/mearrow-bighit-official-images",
@@ -16,9 +16,10 @@
     "unitTests": "PASS_44_FILES_174_TESTS",
     "workersBuild": "PASS",
     "localWorkerPreview": "PASS",
-    "browserSmoke": "PASS_MAIN_AGENT",
+    "browserSmoke": "PASS_MAIN_AND_CI_RERUN",
     "deployEnvironment": "UNAVAILABLE_LOCAL_SECRETS",
-    "productionDeploy": "PENDING_PR_MERGE"
+    "productionDeploy": "PASS",
+    "productionReadback": "PASS"
   },
   "researchUrls": [
     "https://www.bighitaudition.com/en",
@@ -65,6 +66,27 @@
     "imageContentTypes": ["image/webp", "image/webp"],
     "naturalDimensions": [[1920, 7600], [2480, 3508]],
     "officialCaptionsRendered": 2
+  },
+  "deployment": {
+    "pullRequest": 77,
+    "pullRequestUrl": "https://github.com/moony01/mearrow/pull/77",
+    "mergeCommit": "2ef4ee84e0e1e660d484a00f291023d1fcdad43b",
+    "workflowRun": 36307332902,
+    "workflowUrl": "https://github.com/moony01/mearrow/actions/runs/36307332902",
+    "validationJob": 108586989221,
+    "deployJob": 108587518371,
+    "deploymentId": 6690199428,
+    "deploymentStatus": "success"
+  },
+  "productionReadback": {
+    "url": "https://mearrow.com/en/news/bighit-15-city-audition",
+    "routeStatus": 200,
+    "thumbnailStatus": 200,
+    "bodyImageStatus": 200,
+    "thumbnailSha256": "a534be275d1146e1abdca92b6b50e30353c5c986b1cdd593e0950effac55bd4a",
+    "bodyImageSha256": "4c3438f55716c34107a68479bb32d4e29d28a9db59beccacc21be7284f8c9f88",
+    "officialCaptionsRendered": 2,
+    "pexelsMentionPresent": false
   },
   "notes": [
     "Pexels thumbnail/body assets were replaced at the user's explicit request.",

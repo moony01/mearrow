@@ -1,10 +1,11 @@
 # BIGHIT 15-city audition official-image replacement report
 
-- Final state: LOCAL_VERIFIED_PENDING_PR
+- Final state: SUCCESS_PRODUCTION_READBACK
 - Workflow: `kcl-news-autopilot`
 - Slug: `bighit-15-city-audition`
 - Locale: `en`
 - Branch: `moony01/mearrow-bighit-official-images`
+- Merged via: [PR #77](https://github.com/moony01/mearrow/pull/77), merge commit `2ef4ee84e0e1e660d484a00f291023d1fcdad43b`
 
 ## Change
 
@@ -27,7 +28,9 @@ The two Pexels images were replaced with direct original image binaries from the
 - Workers build: PASS — `pnpm workers:build`; OpenNext bundle generated successfully.
 - Local Worker preview: PASS — route HTTP 200, both image URLs HTTP 200 with `image/webp`, browser natural dimensions 1920×7600 and 2480×3508, official captions rendered.
 - Deploy environment: UNAVAILABLE locally — WSL does not have the production Supabase variables; CI must validate them.
-- Production deploy: PENDING PR/merge.
+- CI browser gate: PASS on rerun — the first run had a transient news-image load failure; rerun `36307332902` passed all browser gates.
+- Production deploy: PASS — workflow run `36307332902`, deployment `6690199428`, status `success`.
+- Production readback: PASS — `https://mearrow.com/en/news/bighit-15-city-audition` returned 200; live image hashes match the final assets and both official captions render.
 
 ## Files
 
