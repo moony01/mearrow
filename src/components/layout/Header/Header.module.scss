@@ -4,14 +4,14 @@
  * 헤더 컴포넌트 스타일
  * 
  * 구조:
- * - Mobile(<=768px): 로고 + 전역 컨트롤 (좌우 배치)
- * - Desktop(769px+): 사이드바와 맞물리는 sticky global header
+ * - 모바일·태블릿·데스크톱: 우측 설정 진입점을 제공하는 sticky global header
  */
 
 @use '../../../styles/abstracts/variables' as *;
 @use '../../../styles/abstracts/mixins' as mix;
 
 .header {
+  display: block;
   position: sticky;
   top: 0;
   width: 100%;
@@ -27,7 +27,6 @@
     padding: 10px 0;
     background-color: color-mix(in srgb, var(--color-surface) 94%, transparent);
     box-shadow: 0 1px 12px color-mix(in srgb, var(--color-text) 5%, transparent);
-    display: none;
   }
 }
 
@@ -88,37 +87,42 @@
   margin: 0;
 }
 
-// 컨트롤 영역 (테마 토글, 언어 선택기 등)
+// 컨트롤 영역 (설정, 더보기)
 .controls {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   margin-left: auto; // 항상 우측 정렬
 }
 
-// 테마 토글 버튼
-.themeToggle {
+// 설정 페이지 진입 버튼
+.settingsLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
   min-height: 44px;
-  padding: 8px;
-  border-radius: 8px;
-  background: rgba($color-bg, 0.6);
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba($color-text, 0.12);
+  border-radius: 12px;
+  background: var(--color-surface-muted);
+  color: $color-text;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba($color-text, 0.08);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
-  &:hover {
-    background: rgba($color-text, 0.1);
-    border-color: rgba($color-primary-hover, 0.35);
+  &:hover,
+  &:focus-visible {
+    border-color: rgba($color-primary, 0.35);
+    background: $color-hover-surface;
+    color: $color-primary;
   }
 
-  // 태블릿+: 사이드바에 이미 있으므로 숨김 처리 가능
-  // 하지만 우측 상단에서도 접근성을 위해 표시 유지
-  @media (min-width: 769px) {
-    background: color-mix(in srgb, var(--color-surface) 86%, transparent);
+  &:focus-visible {
+    outline: 3px solid rgba($color-focus, 0.25);
+    outline-offset: 2px;
   }
 }
 
@@ -167,40 +171,6 @@
   user-select: none;
 }
 
-// 언어 선택 드롭다운
-.langSelect {
-  min-height: 44px;
-  max-width: 140px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba($color-text, 0.15);
-  background: var(--color-surface-muted);
-  color: $color-text-dim;
-  font-size: 0.8rem;
-  font-weight: 500;
-  outline: none;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: rgba($color-text, 0.1);
-    color: $color-text;
-    border-color: rgba($color-primary-hover, 0.35);
-  }
-
-  &:focus {
-    border-color: $color-focus;
-    box-shadow: 0 0 0 3px rgba($color-focus, 0.18);
-  }
-
-  option {
-    background-color: $color-bg;
-    color: $color-text;
-    padding: 8px;
-  }
-}
-
 .menuButton,
 .drawerClose {
   display: inline-flex;
@@ -226,6 +196,12 @@
   &:focus-visible {
     outline: 3px solid rgba($color-focus, 0.25);
     outline-offset: 2px;
+  }
+}
+
+.menuButton {
+  @media (min-width: 1264px) {
+    display: none;
   }
 }
 
@@ -318,11 +294,9 @@
     padding-inline: 12px;
   }
 
-  .langSelect {
-    width: 88px;
-    max-width: 88px;
-    padding-inline: 7px;
-    font-size: 0.7rem;
+  .settingsLink {
+    padding-inline: 10px;
+    font-size: 0.78rem;
   }
 }
 
@@ -331,8 +305,12 @@
     display: none;
   }
 
-  .langSelect {
-    width: 76px;
-    max-width: 76px;
+  .settingsLink span {
+    display: none;
+  }
+
+  .settingsLink {
+    width: 44px;
+    padding-inline: 0;
   }
 }

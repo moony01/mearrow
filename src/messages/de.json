@@ -803,5 +803,18 @@
     "no_results": "Keine Suchergebnisse.",
     "rank": "Rang {rank}",
     "votes": "{count} Stimmen"
+  },
+  "SettingsPage": {
+    "title": "Einstellungen",
+    "subtitle": "Lege die Anzeige- und Spracheinstellungen für MEARROW fest.",
+    "appearance_title": "Darstellung",
+    "appearance_description": "Wähle den Anzeigemodus für MEARROW.",
+    "theme_label": "Dunkler Modus",
+    "theme_description": "Verwende MEARROW mit einer dunklen Oberfläche.",
+    "language_title": "Sprache",
+    "language_description": "Wähle die Sprache für MEARROW.",
+    "language_label": "Anzeigesprache",
+    "meta_title": "Einstellungen",
+    "meta_description": "Lege den Anzeigemodus und die Sprache für MEARROW fest."
   }
 }
