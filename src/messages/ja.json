@@ -803,5 +803,18 @@
     "no_results": "検索結果がありません。",
     "rank": "{rank}位",
     "votes": "{count}票"
+  },
+  "SettingsPage": {
+    "title": "設定",
+    "subtitle": "MEARROWの表示と言語を設定してください。",
+    "appearance_title": "画面",
+    "appearance_description": "MEARROWで使用する表示モードを選択します。",
+    "theme_label": "ダークモード",
+    "theme_description": "ダークな画面でMEARROWを利用します。",
+    "language_title": "言語",
+    "language_description": "MEARROWで使用する表示言語を選択します。",
+    "language_label": "表示言語",
+    "meta_title": "設定",
+    "meta_description": "MEARROWの表示モードと言語を設定します。"
   }
 }

@@ -171,20 +171,24 @@ describe('Navigation Components', () => {
     expect(screen.queryByRole('dialog', { name: '더보기' })).toBeNull();
   });
 
-  it('설정 메뉴에서 테마와 언어 컨트롤을 제공하고 Escape로 닫힌다', () => {
+  it('헤더 설정 버튼은 설정 페이지로 이동한다', () => {
+    render(
+      <NextIntlClientProvider locale="ko" messages={messages}>
+        <Header />
+      </NextIntlClientProvider>,
+    );
+
+    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/ko/settings');
+  });
+
+  it('사이드바 설정 메뉴는 설정 페이지로 이동한다', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={messages}>
         <Sidebar />
       </NextIntlClientProvider>,
     );
 
-    fireEvent.click(screen.getByRole('button', { name: '설정' }));
-
-    expect(screen.getByRole('dialog', { name: '설정' })).toBeDefined();
-    expect(screen.getByRole('button', { name: /모드 전환/ })).toBeDefined();
-    expect(screen.getByRole('combobox', { name: '언어' })).toBeDefined();
-
-    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/ko/settings');
     expect(screen.queryByRole('dialog', { name: '설정' })).toBeNull();
   });
 });

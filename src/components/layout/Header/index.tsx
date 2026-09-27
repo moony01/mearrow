@@ -1,45 +1,23 @@
 'use client';
 
 /**
- * Header - 모바일 전용 상단 헤더
+ * Header - 전역 상단 헤더
  *
- * 모바일에서는 로고와 전역 컨트롤, 더보기 drawer를 제공합니다.
- * 데스크톱에서는 좌측 Sidebar가 동일한 역할을 하므로 숨깁니다.
+ * 모든 화면에서 설정 페이지 진입과 더보기 drawer를 제공합니다.
+ * 데스크톱에서는 좌측 Sidebar와 함께 사용합니다.
  */
 
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { CalendarSearch, Menu, Trophy, X } from 'lucide-react';
+import { CalendarSearch, Menu, Settings, Trophy, X } from 'lucide-react';
 import styles from './Header.module.scss';
-import ThemeToggle from '../../common/ThemeToggle';
 import { BRAND_KOREAN_NAME, BRAND_NAME, BRAND_MARK_PATH } from '@/lib/brand';
-import { SUPPORTED_LOCALES } from '@/lib/constants';
-
-const LOCALE_LABELS: Record<(typeof SUPPORTED_LOCALES)[number], string> = {
-  ko: '한국어',
-  en: 'English',
-  ja: '日本語',
-  zh: '中文(简体)',
-  es: 'Español',
-  fr: 'Français',
-  de: 'Deutsch',
-};
 
 export default function Header() {
   const locale = useLocale();
   const t = useTranslations('Nav');
-  const router = useRouter();
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-    setIsMenuOpen(false);
-    router.push(newPath);
-  };
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -90,20 +68,15 @@ export default function Header() {
         </Link>
 
         <div className={styles.controls}>
-          <ThemeToggle compact className={styles.themeToggle} />
-
-          <select
-            value={locale}
-            onChange={changeLang}
-            className={styles.langSelect}
-            aria-label={t('language')}
+          <Link
+            href={`/${locale}/settings`}
+            className={styles.settingsLink}
+            aria-label={t('settings')}
+            title={t('settings')}
           >
-            {SUPPORTED_LOCALES.map((supportedLocale) => (
-              <option value={supportedLocale} key={supportedLocale}>
-                {LOCALE_LABELS[supportedLocale]}
-              </option>
-            ))}
-          </select>
+            <Settings size={20} aria-hidden="true" />
+            <span>{t('settings')}</span>
+          </Link>
 
           <button
             type="button"

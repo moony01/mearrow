@@ -803,5 +803,18 @@
     "no_results": "No search results.",
     "rank": "Rank {rank}",
     "votes": "{count} votes"
+  },
+  "SettingsPage": {
+    "title": "Settings",
+    "subtitle": "Set your MEARROW display and language preferences.",
+    "appearance_title": "Appearance",
+    "appearance_description": "Choose the display mode for MEARROW.",
+    "theme_label": "Dark mode",
+    "theme_description": "Use MEARROW with a dark interface.",
+    "language_title": "Language",
+    "language_description": "Choose the language used across MEARROW.",
+    "language_label": "Display language",
+    "meta_title": "Settings",
+    "meta_description": "Set your MEARROW display mode and language."
   }
 }
