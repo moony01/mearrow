@@ -61,7 +61,7 @@ A stronger frame does the opposite.<!-- [unverified] --> It treats the denial as
 This is also why the rumor has short-form potential without requiring a sensational fabrication.<!-- [unverified] --> The first seconds can pose the question—“What did Jackson say about the seven-year Yuqi rumor?”—but the payoff must arrive quickly.<!-- [unverified] --> He denied it, said Yuqi had not met his parents, and described himself as single. [1][2] The tension comes from the gap between the viral claim and the documented answer.<!-- [unverified] -->
 
 ![Under the Castle official key visual used as a contextual image for Jackson Wang's Hong Kong appearance](/images/news/jackson-yuqi-rumor-denial-1.webp)
-_Official [Under the Castle artwork](https://www.teamwangdesign.com/under-the-castle) is used as event context, not as evidence about Yuqi or Jackson's private life._
+_Official [Under the Castle artwork](https://corporate.oceanpark.com.hk/en/media-partnerships/press-release/ocean-park-teams-up-with-under-the-castle-to-unleash-a-darkly-stylish-halloween-fest-2026-experience) is used as event context, not as evidence about Yuqi or Jackson's private life._
 
 ## MEARROW's Take: The Denial Is the News
 
