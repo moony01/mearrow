@@ -31,8 +31,8 @@ Yahoo Life Singapore reported the same basic exchange while adding the sharper l
 
 Those details give the short-form story its real hook.<!-- [unverified] --> There is a rumor, there is a question, and there is a clear answer.<!-- [unverified] --> The answer does not prove what happened in every earlier online post; it does establish how Jackson wants the current claim understood.[1][2]
 
-![Ocean Park Halloween Fest 2026 official visual connected to the Under the Castle event where Jackson Wang addressed the rumor](/images/news/jackson-yuqi-rumor-denial-thumbnail.webp)
-_Ocean Park's official [Halloween Fest 2026 visual](https://www.oceanpark.com.hk/en/a-day-at-the-park/events/halloween-fest-2026) provides event context; it is not evidence of a relationship._
+![Jackson Wang speaking at a Got7 event in Hong Kong](/images/news/jackson-yuqi-rumor-denial-thumbnail.webp)
+_Photo: Tiffanycyk, ["Jackson@Got7" on Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jackson%40Got7.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Cropped and resized for MEARROW; this contextual photo is not evidence of a relationship._
 
 ## Why an Old Rumor Became a New Headline
 
@@ -60,8 +60,8 @@ A stronger frame does the opposite.<!-- [unverified] --> It treats the denial as
 
 This is also why the rumor has short-form potential without requiring a sensational fabrication.<!-- [unverified] --> The first seconds can pose the question—“What did Jackson say about the seven-year Yuqi rumor?”—but the payoff must arrive quickly.<!-- [unverified] --> He denied it, said Yuqi had not met his parents, and described himself as single. [1][2] The tension comes from the gap between the viral claim and the documented answer.<!-- [unverified] -->
 
-![Under the Castle official key visual used as a contextual image for Jackson Wang's Hong Kong appearance](/images/news/jackson-yuqi-rumor-denial-1.webp)
-_Official [Under the Castle artwork](https://www.oceanpark.com.hk/en/a-day-at-the-park/events/halloween-fest-2026) is used as event context, not as evidence about Yuqi or Jackson's private life._
+![Yuqi performing during the 2023 (G)I-DLE Amsterdam concert](/images/news/jackson-yuqi-rumor-denial-1.webp)
+_Photo: Robbie Klinkenberg (Redalert2fan), ["20230911 (G)I-dle Amsterdam concert 056 Yuqi" on Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20230911_%28G%29I-dle_Amsterdam_concert_056_Yuqi.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Cropped and resized for MEARROW; this contextual photo is not evidence of a relationship._
 
 ## MEARROW's Take: The Denial Is the News
 
@@ -89,7 +89,7 @@ That is the version worth publishing.<!-- [unverified] --> The rumor explains th
 
 [3] [Koreaboo — GOT7’s Jackson Wang And i-dle’s Yuqi Embroiled In Dating Rumors — Allegations Addressed](https://www.koreaboo.com/news/got7-jackson-wang-dle-yuqi-embroiled-in-dating-rumors-allegations-addressed/)
 
-This article treats the relationship allegations as unconfirmed online claims. It does not infer private facts from photographs, old clips, alleged family meetings, or fan interpretations. The images are official event/brand context assets and are not presented as evidence of a relationship.
+This article treats the relationship allegations as unconfirmed online claims. It does not infer private facts from photographs, old clips, alleged family meetings, or fan interpretations. The images are separately licensed Wikimedia Commons photographs used for editorial context; their source pages and license terms are linked in each caption, and neither image is presented as evidence of a relationship.
 
 ## Sources
 
