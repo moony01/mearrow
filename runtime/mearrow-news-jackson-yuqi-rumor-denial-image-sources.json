@@ -29,12 +29,12 @@
     {
       "role": "body",
       "file": "public/images/news/jackson-yuqi-rumor-denial-1.webp",
-      "sourceUrl": "https://www.teamwangdesign.com/under-the-castle",
-      "pageUrl": "https://www.teamwangdesign.com/under-the-castle",
-      "provider": "Team Wang Design / Under the Castle",
+      "sourceUrl": "https://corporate.oceanpark.com.hk/en/media-partnerships/press-release/ocean-park-teams-up-with-under-the-castle-to-unleash-a-darkly-stylish-halloween-fest-2026-experience",
+      "pageUrl": "https://corporate.oceanpark.com.hk/en/media-partnerships/press-release/ocean-park-teams-up-with-under-the-castle-to-unleash-a-darkly-stylish-halloween-fest-2026-experience",
+      "provider": "Ocean Park Corporation",
       "title": "Under the Castle official key visual",
       "subject": "Under the Castle event context",
-      "sourceAuthor": "Team Wang Design",
+      "sourceAuthor": "Ocean Park Corporation / Under the Castle",
       "sourceWidth": 1752,
       "sourceHeight": 1096,
       "width": 1752,
@@ -42,9 +42,9 @@
       "sha256": "965eca9d2a92374e7c898803eae96cfa2291167c4d6822ca17697a74a21cfacf",
       "licenseStatus": "not_verified_source_attributed",
       "licenseUrl": null,
-      "rightsEvidence": "https://www.teamwangdesign.com/under-the-castle",
+      "rightsEvidence": "https://corporate.oceanpark.com.hk/en/media-partnerships/press-release/ocean-park-teams-up-with-under-the-castle-to-unleash-a-darkly-stylish-halloween-fest-2026-experience",
       "transform": "Restored official WebP context asset; no AI generation or face synthesis",
-      "captionPolicy": "Link the official Under the Castle page and state that the artwork is event context, not evidence about Yuqi or Jackson's private life."
+      "captionPolicy": "Link the official Ocean Park Under the Castle press-release page and state that the artwork is event context, not evidence about Yuqi or Jackson's private life."
     }
   ],
   "rejectedImages": [
