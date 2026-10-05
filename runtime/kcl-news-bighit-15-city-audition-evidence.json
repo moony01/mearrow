@@ -1,0 +1,74 @@
+{
+  "runStartedAt": "2026-09-27T17:36:46+09:00",
+  "runEndedAt": "2026-09-27T17:41:01+09:00",
+  "workflow": "kcl-news-autopilot",
+  "slug": "bighit-15-city-audition",
+  "branch": "moony01/mearrow-bighit-official-images",
+  "change": "Replace Pexels visuals with official BIGHIT MUSIC source images at user direction",
+  "stepResults": {
+    "officialSourceAcquisition": "PASS",
+    "imageBytesAndFormat": "PASS",
+    "imageRights": "USER_DIRECTED_REVIEW_REQUIRED",
+    "aiGeneration": "NOT_USED",
+    "content": "PASS",
+    "contentGeneration": "PASS",
+    "lint": "PASS_WITH_27_EXISTING_WARNINGS",
+    "unitTests": "PASS_44_FILES_174_TESTS",
+    "workersBuild": "PASS",
+    "localWorkerPreview": "PASS",
+    "browserSmoke": "PASS_MAIN_AGENT",
+    "deployEnvironment": "UNAVAILABLE_LOCAL_SECRETS",
+    "productionDeploy": "PENDING_PR_MERGE"
+  },
+  "researchUrls": [
+    "https://www.bighitaudition.com/en",
+    "https://www.bighitaudition.com/en/history",
+    "https://www.bighitaudition.com/en/faq",
+    "https://www.bighitaudition.com/cookies-policy",
+    "https://www.musicbusinessworldwide.com/bts-label-bighit-music-opens-global-audition-in-15-cities-in-search-of-new-male-talent",
+    "https://musically.com/2026/09/14/hybes-bighit-music-casts-its-net-wide-with-its-latest-auditions",
+    "https://digitalmusicnews.com/2026/09/14/bighit-music-global-auditions/"
+  ],
+  "imageSourcesManifest": "runtime/kcl-news-bighit-15-city-audition-image-sources.json",
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/bighit-15-city-audition-thumbnail.webp",
+      "sourceUrl": "https://www.bighitaudition.com/static/media/BHM_GLOBAL_PC_EN.1e4a3ef5520e08102d5d.jpg",
+      "pageUrl": "https://www.bighitaudition.com/en",
+      "width": 1920,
+      "height": 7600,
+      "sourceSha256": "dfb09f3fa6d1e211d0b02dcdd869738fad81fef772fbc5accf28c6866fcf3a44",
+      "sha256": "a534be275d1146e1abdca92b6b50e30353c5c986b1cdd593e0950effac55bd4a"
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/bighit-15-city-audition-1.webp",
+      "sourceUrl": "https://bighitaudition.com/BHM/HISTORY/20241227_f12a2258-31ee-43b7-bd34-849866782961.png",
+      "pageUrl": "https://www.bighitaudition.com/en/history",
+      "width": 2480,
+      "height": 3508,
+      "sourceSha256": "32e9cc45f331f3cb55694bc2dd8e0faa24193876add081b983a05c01fe784212",
+      "sha256": "4c3438f55716c34107a68479bb32d4e29d28a9db59beccacc21be7284f8c9f88"
+    }
+  ],
+  "rightsGate": "USER_DIRECTED_REVIEW_REQUIRED",
+  "rightsReview": {
+    "officialSourceConfirmed": true,
+    "separateRepublicationPermissionConfirmed": false,
+    "disclosureAddedToArticle": true
+  },
+  "browserEvidence": {
+    "route": "http://127.0.0.1:8787/en/news/bighit-15-city-audition",
+    "routeStatus": 200,
+    "imageStatuses": [200, 200],
+    "imageContentTypes": ["image/webp", "image/webp"],
+    "naturalDimensions": [[1920, 7600], [2480, 3508]],
+    "officialCaptionsRendered": 2
+  },
+  "notes": [
+    "Pexels thumbnail/body assets were replaced at the user's explicit request.",
+    "No AI-generated visual asset, AI fallback, or image upscaling was used.",
+    "Local production Supabase environment variables are unavailable; CI is the deployment-environment gate."
+  ]
+}

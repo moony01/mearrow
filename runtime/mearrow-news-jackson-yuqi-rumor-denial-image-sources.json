@@ -1,0 +1,77 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "slug": "jackson-yuqi-rumor-denial",
+  "policy": "direct-subject visual relevance; explicit CC source attribution; no AI image generation",
+  "sourceAttributionGate": "PASS",
+  "rightsStatus": "CC_BY_SA_4.0_verified",
+  "selectionNote": "The article uses separate, directly relevant portraits because no verified joint image was selected. The thumbnail depicts Jackson Wang and the body image depicts Yuqi; both are contextual identity images, not evidence of a relationship.",
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/jackson-yuqi-rumor-denial-thumbnail.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jackson%40Got7.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Jackson%40Got7.jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons Jackson Wang high resolution CC BY-SA",
+      "title": "Jackson@Got7",
+      "subject": "Jackson Wang",
+      "sourceAuthor": "Tiffanycyk",
+      "sourceDescription": "Got7 Jackson @ Hong Kong",
+      "sourceWidth": 3024,
+      "sourceHeight": 2336,
+      "sourceSha256": "f28dea594f439523271d102ffcab2e9b63ff7698fbab9cb80a0ea7f167d0620d",
+      "width": 2400,
+      "height": 1854,
+      "sha256": "fb2e9f90b13fff665249012f3963109edcd1c3ca55111b5f39713c365847778c",
+      "licenseStatus": "CC_BY_SA_4.0_verified",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rightsEvidence": "https://commons.wikimedia.org/wiki/File:Jackson%40Got7.jpg",
+      "transform": "EXIF orientation applied; resized to 2400px wide; converted from JPEG to WebP",
+      "captionPolicy": "Credit the photographer, Wikimedia Commons file page, and CC BY-SA 4.0 license; state that the image directly identifies Jackson Wang but is not relationship evidence."
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/jackson-yuqi-rumor-denial-1.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/20230911_%28G%29I-dle_Amsterdam_concert_056_Yuqi.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:20230911_(G)I-dle_Amsterdam_concert_056_Yuqi.jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons Yuqi high resolution CC BY-SA",
+      "title": "20230911 (G)I-dle Amsterdam concert 056 Yuqi.jpg",
+      "subject": "Yuqi",
+      "sourceAuthor": "Robbie Klinkenberg (Redalert2fan)",
+      "sourceDescription": "(G)I-dle Amsterdam concert in 2023, part of the 2023 (G)I-DLE WORLD TOUR [I am FREE-TY]",
+      "sourceWidth": 3000,
+      "sourceHeight": 4000,
+      "sourceSha256": "16fcb4b50f99d088c1f050119db4317334e6515fc6fcb5a83f397528b848d872",
+      "width": 2400,
+      "height": 3200,
+      "sha256": "ebd562177d5f244de1b671910c5746a7bb0a69d91ce8ba12cbfd448f3943c418",
+      "licenseStatus": "CC_BY_SA_4.0_verified",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rightsEvidence": "https://commons.wikimedia.org/wiki/File:20230911_(G)I-dle_Amsterdam_concert_056_Yuqi.jpg",
+      "transform": "EXIF orientation applied; resized to 2400px wide; converted from JPEG to WebP",
+      "captionPolicy": "Credit the photographer, Wikimedia Commons file page, and CC BY-SA 4.0 license; state that the image directly identifies Yuqi but is not relationship evidence."
+    }
+  ],
+  "rejectedImages": [
+    {
+      "provider": "Ocean Park / Under the Castle official pages",
+      "licenseStatus": "unknown",
+      "reason": "Rejected by the direct-subject relevance gate: neither asset shows Jackson Wang or Yuqi."
+    }
+  ],
+  "imageSearchQueries": [
+    "Wikimedia Commons Jackson Wang high resolution CC BY-SA",
+    "Wikimedia Commons Yuqi high resolution CC BY-SA"
+  ],
+  "visualReview": {
+    "thumbnail": "PASS: real photograph, Jackson Wang identifiable, no visible watermark, no relationship implication",
+    "body": "PASS: real photograph, Yuqi identifiable and correctly oriented, no visible watermark, no relationship implication",
+    "directSubjectRelevance": "PASS: thumbnail depicts Jackson Wang and body image depicts Yuqi; separate identity/context portraits are used because no verified joint image was selected."
+  },
+  "aiGeneration": {
+    "used": false,
+    "count": 0,
+    "fallback": false
+  }
+}

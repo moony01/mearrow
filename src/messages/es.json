@@ -803,5 +803,18 @@
     "no_results": "No hay resultados.",
     "rank": "Puesto {rank}",
     "votes": "{count} votos"
+  },
+  "SettingsPage": {
+    "title": "Configuración",
+    "subtitle": "Configura las preferencias de pantalla e idioma de MEARROW.",
+    "appearance_title": "Apariencia",
+    "appearance_description": "Elige el modo de pantalla de MEARROW.",
+    "theme_label": "Modo oscuro",
+    "theme_description": "Usa MEARROW con una interfaz oscura.",
+    "language_title": "Idioma",
+    "language_description": "Elige el idioma que se usará en MEARROW.",
+    "language_label": "Idioma de pantalla",
+    "meta_title": "Configuración",
+    "meta_description": "Configura el modo de pantalla y el idioma de MEARROW."
   }
 }

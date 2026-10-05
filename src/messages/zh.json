@@ -803,5 +803,18 @@
     "no_results": "没有搜索结果。",
     "rank": "第 {rank} 名",
     "votes": "{count} 票"
+  },
+  "SettingsPage": {
+    "title": "设置",
+    "subtitle": "设置 MEARROW 的显示和语言偏好。",
+    "appearance_title": "界面",
+    "appearance_description": "选择 MEARROW 的显示模式。",
+    "theme_label": "深色模式",
+    "theme_description": "使用深色界面浏览 MEARROW。",
+    "language_title": "语言",
+    "language_description": "选择 MEARROW 使用的显示语言。",
+    "language_label": "显示语言",
+    "meta_title": "设置",
+    "meta_description": "设置 MEARROW 的显示模式和语言。"
   }
 }

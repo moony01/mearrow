@@ -1,0 +1,62 @@
+{
+  "workflow": "kcl-news-autopilot",
+  "slug": "bighit-15-city-audition",
+  "policy": "official-source visual assets; no AI generation",
+  "rightsGate": "USER_DIRECTED_REVIEW_REQUIRED",
+  "rightsReview": {
+    "officialSourceConfirmed": true,
+    "separateRepublicationPermissionConfirmed": false,
+    "userInstruction": "Use official images like the Short",
+    "note": "The official BIGHIT MUSIC source and source pages are recorded. The official site does not provide a separate MEARROW republication license in the checked pages."
+  },
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/bighit-15-city-audition-thumbnail.webp",
+      "sourceUrl": "https://www.bighitaudition.com/static/media/BHM_GLOBAL_PC_EN.1e4a3ef5520e08102d5d.jpg",
+      "pageUrl": "https://www.bighitaudition.com/en",
+      "provider": "BIGHIT MUSIC Audition official site",
+      "query": "BIGHIT MUSIC official 2026 global audition poster",
+      "title": "2026 BIGHIT MUSIC Global Audition official poster - English desktop",
+      "width": 1920,
+      "height": 7600,
+      "sourceSha256": "dfb09f3fa6d1e211d0b02dcdd869738fad81fef772fbc5accf28c6866fcf3a44",
+      "sha256": "a534be275d1146e1abdca92b6b50e30353c5c986b1cdd593e0950effac55bd4a",
+      "licenseStatus": "official_source_rights_review_required",
+      "rightsEvidence": "https://www.bighitaudition.com/en",
+      "captionPolicy": "Official BIGHIT MUSIC image; separate republication permission was not confirmed"
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/bighit-15-city-audition-1.webp",
+      "sourceUrl": "https://bighitaudition.com/BHM/HISTORY/20241227_f12a2258-31ee-43b7-bd34-849866782961.png",
+      "pageUrl": "https://www.bighitaudition.com/en/history",
+      "provider": "BIGHIT MUSIC Audition official site",
+      "query": "BIGHIT MUSIC official audition history 2024 poster",
+      "title": "BIGHIT MUSIC official audition history poster - 2024",
+      "width": 2480,
+      "height": 3508,
+      "sourceSha256": "32e9cc45f331f3cb55694bc2dd8e0faa24193876add081b983a05c01fe784212",
+      "sha256": "4c3438f55716c34107a68479bb32d4e29d28a9db59beccacc21be7284f8c9f88",
+      "licenseStatus": "official_source_rights_review_required",
+      "rightsEvidence": "https://www.bighitaudition.com/en/history",
+      "captionPolicy": "Official BIGHIT MUSIC image; separate republication permission was not confirmed"
+    }
+  ],
+  "replacedImages": [
+    {
+      "provider": "Pexels",
+      "roles": ["thumbnail", "body"],
+      "reason": "Replaced at the user's request with official BIGHIT MUSIC source assets"
+    }
+  ],
+  "imageSearchQueries": [
+    "BIGHIT MUSIC official 2026 global audition poster",
+    "BIGHIT MUSIC official audition history 2024 poster"
+  ],
+  "aiGeneration": {
+    "used": false,
+    "count": 0,
+    "fallback": false
+  }
+}

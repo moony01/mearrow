@@ -13,37 +13,24 @@
  */
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Check, LogIn, LogOut, Mail, Settings } from 'lucide-react';
 import classNames from 'classnames';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { FEATURES } from '@/config/features';
 import { useAuth } from '@/hooks/useAuth';
 import { BRAND_KOREAN_NAME, BRAND_NAME, BRAND_MARK_PATH } from '@/lib/brand';
-import { CONTACT_EMAIL, SUPPORTED_LOCALES } from '@/lib/constants';
+import { CONTACT_EMAIL } from '@/lib/constants';
 import { getEnabledPrimaryNavItems } from '@/components/layout/navigationItems';
-import ThemeToggle from '@/components/common/ThemeToggle';
 import styles from './Sidebar.module.scss';
-
-const LOCALE_LABELS: Record<string, string> = {
-  ko: '한국어',
-  en: 'English',
-  ja: '日本語',
-  zh: '中文(简体)',
-  es: 'Español',
-  fr: 'Français',
-  de: 'Deutsch',
-};
 
 export default function Sidebar() {
   const t = useTranslations('Nav');
   const pathname = usePathname();
-  const router = useRouter();
   const locale = pathname?.split('/')[1] || 'ko';
   const { profile, isAuthenticated, signOut } = useAuth();
   const [copied, setCopied] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState(false);
 
   const handleContactClick = useCallback(async () => {
     try {
@@ -64,24 +51,6 @@ export default function Sidebar() {
   };
 
   const navItems = getEnabledPrimaryNavItems();
-
-  useEffect(() => {
-    if (!settingsOpen) return;
-
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setSettingsOpen(false);
-    };
-
-    window.addEventListener('keydown', closeOnEscape);
-    return () => window.removeEventListener('keydown', closeOnEscape);
-  }, [settingsOpen]);
-
-  const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = event.target.value;
-    const newPath = pathname?.replace(`/${locale}`, `/${newLocale}`) ?? `/${newLocale}`;
-    setSettingsOpen(false);
-    router.push(newPath);
-  };
 
   return (
     <aside className={styles.sidebar} aria-label="주요 메뉴" data-testid="desktop-sidebar">
@@ -134,59 +103,19 @@ export default function Sidebar() {
 
       <div className={styles.sidebarBottom}>
         <div className={styles.settingsSection}>
-          <button
-            type="button"
+          <Link
+            href={`/${locale}/settings`}
             className={classNames(styles.navItem, styles.settingsButton, {
-              [styles.active]: settingsOpen,
+              [styles.active]: isActive('/settings'),
             })}
             aria-label={t('settings')}
-            aria-haspopup="dialog"
-            aria-expanded={settingsOpen}
-            aria-controls="sidebar-settings-panel"
-            onClick={() => setSettingsOpen((open) => !open)}
+            aria-current={isActive('/settings') ? 'page' : undefined}
           >
             <div className={styles.iconWrapper}>
               <Settings className={styles.icon} />
             </div>
             <span className={styles.label}>{t('settings')}</span>
-          </button>
-
-          {settingsOpen && (
-            <section
-              id="sidebar-settings-panel"
-              className={styles.settingsPanel}
-              role="dialog"
-              aria-labelledby="sidebar-settings-title"
-            >
-              <div className={styles.settingsHeader}>
-                <h2 id="sidebar-settings-title">{t('settings')}</h2>
-                <button
-                  type="button"
-                  className={styles.settingsClose}
-                  aria-label={t('settings_close')}
-                  onClick={() => setSettingsOpen(false)}
-                >
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-
-              <div className={styles.settingRow}>
-                <span>{t('mode_switch')}</span>
-                <ThemeToggle compact className={styles.settingsThemeToggle} />
-              </div>
-
-              <label className={styles.languageSetting}>
-                <span>{t('language')}</span>
-                <select value={locale} onChange={changeLanguage} aria-label={t('language')}>
-                  {SUPPORTED_LOCALES.map((supportedLocale) => (
-                    <option value={supportedLocale} key={supportedLocale}>
-                      {LOCALE_LABELS[supportedLocale]}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </section>
-          )}
+          </Link>
         </div>
 
         {/* 인증 영역 (AUTH_SYSTEM 플래그 활성화 시 표시) */}

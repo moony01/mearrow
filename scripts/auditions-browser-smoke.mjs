@@ -2,7 +2,9 @@ export const AUDITION_SMOKE_LOCALES = ['ko', 'en'];
 
 export const EXPECTED_AUDITION_SLUGS = [
   '2026-yg-global-audition-bangkok',
+  '2026-yg-global-audition-hong-kong',
   '2026-yg-global-audition-osaka',
+  '2026-yg-global-audition-taipei',
   'jyp-online-audition',
   'source-music-summer-audition-2026',
   'wakeone-next-wave-audition',
@@ -49,20 +51,45 @@ export async function runAuditionBrowserSmoke(page, baseUrl) {
       `${locale} auditions list returned HTTP ${listResponse?.status()}`,
     );
 
-    const detailPaths = [
-      ...new Set(
-        await page.locator(`a[href^="/${locale}/auditions/"]`).evaluateAll(
-          (links, localeValue) =>
-            links
-              .map((link) => link.getAttribute('href'))
-              .filter(
-                (href) =>
-                  href && new RegExp(`^/${localeValue}/auditions/[^/?#]+$`).test(href),
-              ),
-          locale,
-        ),
-      ),
-    ];
+    const detailPathSet = new Set();
+    const collectDetailPaths = async () => {
+      const paths = await page.locator(`a[href^="/${locale}/auditions/"]`).evaluateAll(
+        (links, localeValue) =>
+          links
+            .map((link) => link.getAttribute('href'))
+            .filter(
+              (href) =>
+                href && new RegExp(`^/${localeValue}/auditions/[^/?#]+$`).test(href),
+            ),
+        locale,
+      );
+      paths.forEach((path) => detailPathSet.add(path));
+    };
+
+    await collectDetailPaths();
+    const totalPages = Math.max(
+      1,
+      ...(await page.locator('button').evaluateAll((buttons) =>
+        buttons
+          .map((button) => button.textContent?.trim() || '')
+          .filter((text) => /^\d+$/.test(text))
+          .map(Number),
+      )),
+    );
+    for (let pageNumber = 2; pageNumber <= totalPages; pageNumber += 1) {
+      const pageButton = page.locator('button').filter({ hasText: new RegExp(`^${pageNumber}$`) }).first();
+      await pageButton.click();
+      await page.waitForFunction(
+        (expectedPage) =>
+          Array.from(document.querySelectorAll('button[aria-current="page"]')).some(
+            (button) => button.textContent?.trim() === String(expectedPage),
+          ),
+        pageNumber,
+        { timeout: 5_000 },
+      );
+      await collectDetailPaths();
+    }
+    const detailPaths = [...detailPathSet];
     assert(
       detailPaths.length === EXPECTED_AUDITION_SLUGS.length,
       `${locale} auditions list exposed ${detailPaths.length} detail paths; expected ${EXPECTED_AUDITION_SLUGS.length}`,

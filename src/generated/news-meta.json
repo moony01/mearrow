@@ -1,5 +1,100 @@
 [
   {
+    "slug": "jackson-yuqi-rumor-denial",
+    "locale": "en",
+    "title": "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines",
+    "excerpt": "Jackson Wang directly denied the seven-year Yuqi dating rumor at a Hong Kong event. The confirmed story is the denial, not the speculation.",
+    "date": "2026-09-30",
+    "updatedAt": "2026-09-30",
+    "author": "MEARROW Editorial Desk",
+    "category": "Artist",
+    "thumbnail": "/images/news/jackson-yuqi-rumor-denial-thumbnail.webp",
+    "sources": [
+      {
+        "label": "\"Jackson@Got7\" on Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Jackson%40Got7.jpg"
+      },
+      {
+        "label": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "label": "\"20230911 (G)I-dle Amsterdam concert 056 Yuqi\" on Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:20230911_%28G%29I-dle_Amsterdam_concert_056_Yuqi.jpg"
+      },
+      {
+        "label": "The Standard — Jackson Wang hopes to return to HK with next album tour, says career comes first after 30",
+        "url": "https://thestandard.com.hk/entertainment/article/343806/Jackson-Wang-hopes-to-return-to-HK-with-next-album-tour-says-career-comes-first-after-30"
+      },
+      {
+        "label": "Yahoo Life Singapore — Jackson Wang breaks his silence on seven-year dating rumours with Song Yuqi",
+        "url": "https://sg.style.yahoo.com/jackson-wang-breaks-silence-seven-041900687.html"
+      },
+      {
+        "label": "Koreaboo — GOT7’s Jackson Wang And i-dle’s Yuqi Embroiled In Dating Rumors — Allegations Addressed",
+        "url": "https://www.koreaboo.com/news/got7-jackson-wang-dle-yuqi-embroiled-in-dating-rumors-allegations-addressed/"
+      }
+    ]
+  },
+  {
+    "slug": "bighit-15-city-audition",
+    "locale": "en",
+    "title": "Why BIGHIT MUSIC Is Going to 15 Cities for One Audition",
+    "excerpt": "BIGHIT MUSIC's 2026 audition spans 15 cities. The map is less a promise of the next BTS than a global talent-funnel test.",
+    "date": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "author": "MEARROW Editorial Desk",
+    "category": "Trainee System",
+    "thumbnail": "/images/news/bighit-15-city-audition-thumbnail.webp",
+    "sources": [
+      {
+        "label": "Music Business Worldwide's report",
+        "url": "https://www.musicbusinessworldwide.com/bts-label-bighit-music-opens-global-audition-in-15-cities-in-search-of-new-male-talent"
+      },
+      {
+        "label": "official BIGHIT MUSIC audition site",
+        "url": "https://www.bighitaudition.com/en"
+      },
+      {
+        "label": "Music Ally breakdown",
+        "url": "https://musically.com/2026/09/14/hybes-bighit-music-casts-its-net-wide-with-its-latest-auditions"
+      },
+      {
+        "label": "official audition FAQ",
+        "url": "https://www.bighitaudition.com/en/faq"
+      },
+      {
+        "label": "Digital Music News",
+        "url": "https://digitalmusicnews.com/2026/09/14/bighit-music-global-auditions/"
+      },
+      {
+        "label": "BIGHIT MUSIC Audition history",
+        "url": "https://www.bighitaudition.com/en/history"
+      }
+    ]
+  },
+  {
+    "slug": "ateez-san-wooyoung-dating-rumor",
+    "locale": "en",
+    "title": "ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke",
+    "excerpt": "A friendship tattoo joke revived dating speculation around ATEEZ's San and Wooyoung. San answered directly: they are close friends.",
+    "date": "2026-09-23",
+    "updatedAt": "2026-09-23",
+    "author": "MEARROW Editorial Desk",
+    "category": "Artist",
+    "thumbnail": "/images/news/ateez-san-wooyoung-dating-rumor-thumbnail.webp",
+    "sources": [
+      {
+        "label": "The official episode is available on YouTube",
+        "url": "https://www.youtube.com/watch?v=NDQ8u8ihGzg"
+      },
+      {
+        "label": "Sports Kyunghyang's report",
+        "url": "https://sports.khan.co.kr/article/202607161445003"
+      }
+    ]
+  },
+  {
     "slug": "katseye-wild-billboard-200",
     "locale": "en",
     "title": "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math",
