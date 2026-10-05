@@ -553,12 +553,16 @@
     "privacy_section3_item1": "Service Operation: To provide and maintain the voting and ranking features",
     "privacy_section3_item2": "Abuse Prevention: To prevent voting manipulation and ensure fair participation",
     "privacy_section3_item3": "Service Improvement: To analyze usage patterns and improve user experience",
+    "privacy_google_data_link": "How Google uses data on partner sites",
+    "privacy_ads_settings_link": "Google personalized advertising settings",
+    "privacy_analytics_optout_link": "Google Analytics opt-out browser add-on",
+    "privacy_ad_partners_optout_link": "Participating advertising partners: opt-out",
     "privacy_section4_title": "Cookies",
-    "privacy_section4_content": "MEARROW uses essential cookies to maintain your session and remember your preferences (such as language and theme settings). These cookies are necessary for the proper functioning of the service and do not track you across other websites.",
+    "privacy_section4_content": "MEARROW uses essential cookies and browser storage to maintain sessions and remember preferences such as language and theme. We also load Google Analytics and Google AdSense. These services may collect usage events, IP addresses, browser and device information, and cookie or other identifiers to measure use and provide advertising. Third-party vendors, including Google, may place and read cookies or use web beacons. Google advertising cookies enable Google and its partners to serve ads based on your prior visits to this website and other websites. You can manage personalized advertising in My Ad Center, opt out of participating advertising partners, or install the Google Analytics opt-out browser add-on using the links below. These controls do not disable essential service cookies.",
     "privacy_section5_title": "Data Security",
     "privacy_section5_content": "We implement appropriate security measures to protect your data, including encryption, secure connections (HTTPS), and access controls. However, no method of transmission over the Internet is 100% secure.",
     "privacy_section6_title": "Third-Party Sharing",
-    "privacy_section6_content": "We do not sell, trade, or otherwise transfer your personal information to third parties. Your data may only be disclosed if required by law or to protect our rights.",
+    "privacy_section6_content": "We do not sell your personal information. Google Analytics and Google AdSense may collect and process information through their scripts, cookies, and identifiers for analytics and advertising under their own policies. Information may also be disclosed where required by law or to protect our rights.",
     "privacy_section7_title": "Your Rights",
     "privacy_section7_content": "You have the right to access, correct, or delete your personal data. Since we collect minimal data and most is anonymized, you may contact us if you have specific concerns about your data."
   },
@@ -760,6 +764,7 @@
     "nickname_error_max": "Nickname must be 20 characters or less"
   },
   "PublicProfile": {
+    "intro": "Explore the introduction, image and short-form posts, and activity history shared on this public profile. Only content marked public is displayed.",
     "title_suffix": "Public profile",
     "back": "Back to home feed",
     "loading": "Loading profile…",

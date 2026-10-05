@@ -45,7 +45,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
         <PageHeader
           eyebrow={BRAND_NAME}
           title={t('privacy_title')}
-          description={`${t('last_updated')}: 2026-01-15`}
+          description={`${t('last_updated')}: 2026-10-05`}
         />
 
         <article className={styles.content}>
@@ -81,6 +81,12 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
           <section className={styles.section}>
             <h2>{t('privacy_section4_title')}</h2>
             <p>{t('privacy_section4_content')}</p>
+            <ul>
+              <li><a href="https://policies.google.com/technologies/partner-sites">{t('privacy_google_data_link')}</a></li>
+              <li><a href="https://myadcenter.google.com/">{t('privacy_ads_settings_link')}</a></li>
+              <li><a href="https://tools.google.com/dlpage/gaoptout">{t('privacy_analytics_optout_link')}</a></li>
+              <li><a href="https://optout.aboutads.info/">{t('privacy_ad_partners_optout_link')}</a></li>
+            </ul>
           </section>
 
           {/* 데이터 보안 */}

@@ -553,12 +553,16 @@
     "privacy_section3_item1": "サービス運営：投票とランキング機能の提供・維持",
     "privacy_section3_item2": "不正防止：投票操作の防止と公正な参加の確保",
     "privacy_section3_item3": "サービス改善：利用パターンの分析とユーザー体験の向上",
+    "privacy_google_data_link": "Googleによるパートナーサイトのデータ利用",
+    "privacy_ads_settings_link": "Googleのパーソナライズ広告設定",
+    "privacy_analytics_optout_link": "Google Analyticsオプトアウトアドオン",
+    "privacy_ad_partners_optout_link": "参加広告事業者のオプトアウト",
     "privacy_section4_title": "クッキー",
-    "privacy_section4_content": "MEARROWはセッション維持と設定の記憶のために必要なクッキーを使用します。",
+    "privacy_section4_content": "MEARROWは、セッションの維持と、言語やテーマなどの設定の保存に、必須Cookieとブラウザストレージを使用します。また、Google AnalyticsとGoogle AdSenseを読み込みます。これらのサービスは、利用分析と広告配信のために、利用イベント、IPアドレス、ブラウザ・端末情報、Cookieなどの識別子を収集する場合があります。Googleを含む第三者の広告事業者は、Cookieを設定・読み取り、またはウェブビーコンを使用する場合があります。Googleの広告Cookieにより、Googleとそのパートナーは、本サイトや他のサイトへの過去の訪問に基づいて広告を配信できます。以下のリンクから、マイアドセンターでパーソナライズ広告を管理したり、参加広告事業者の広告をオプトアウトしたり、Google Analyticsオプトアウトアドオンをインストールしたりできます。これらの設定は、サービスに必要なCookieを無効にするものではありません。",
     "privacy_section5_title": "データセキュリティ",
     "privacy_section5_content": "暗号化、安全な接続（HTTPS）、アクセス制御などの適切なセキュリティ対策を実施しています。",
     "privacy_section6_title": "第三者への提供",
-    "privacy_section6_content": "お客様の個人情報を第三者に販売、取引、または譲渡することはありません。",
+    "privacy_section6_content": "当社は個人情報を販売しません。Google AnalyticsとGoogle AdSenseは、各社のポリシーに従い、スクリプト、Cookie、識別子を通じて分析・広告用の情報を収集し、処理する場合があります。また、法律で要求される場合や当社の権利を保護するために必要な場合、情報を開示することがあります。",
     "privacy_section7_title": "お客様の権利",
     "privacy_section7_content": "お客様は個人データへのアクセス、修正、または削除の権利を有します。"
   },
@@ -760,6 +764,7 @@
     "nickname_error_max": "ニックネームは20文字以内で入力してください"
   },
   "PublicProfile": {
+    "intro": "この公開プロフィールでは、紹介文、画像・ショート動画の投稿、活動履歴をご覧いただけます。公開設定のコンテンツのみ表示します。",
     "title_suffix": "公開プロフィール",
     "back": "ホームフィードに戻る",
     "loading": "プロフィールを読み込み中…",

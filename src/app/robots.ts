@@ -24,11 +24,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
+        // Public rendering assets under /_next/ must remain crawlable.
         allow: '/',
         disallow: [
-          // Next.js 내부 경로
-          '/_next/',
-
           // 인증 관련 페이지 (검색 불필요)
           '/*/login',
           '/*/signup',

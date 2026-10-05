@@ -9,6 +9,8 @@ import {
 } from '@/lib/constants';
 import { JsonLd } from '@/components/common/JsonLd';
 import { generatePageMetadata } from '@/lib/seo';
+import { getInitialPublicProfile } from '@/lib/server/public-profile';
+import { notFound } from 'next/navigation';
 
 interface PublicProfilePageProps {
   params: Promise<{
@@ -18,7 +20,8 @@ interface PublicProfilePageProps {
 }
 
 /**
- * Public profiles are loaded from Supabase in the client. Pages needs one
+ * Workers embeds public profile data on first entry; the client refreshes it.
+ * Pages needs one
  * concrete shell path because arbitrary database usernames are not known at
  * build time; Cloudflare rewrites arbitrary profile URLs to this shell while
  * Workers handles the dynamic route at request time.
@@ -62,6 +65,8 @@ export default async function PublicProfilePage({
   const { locale, username: rawUsername } = await params;
   setRequestLocale(locale);
   const username = decodeUsername(rawUsername);
+  const initialData = await getInitialPublicProfile(username);
+  if (initialData && !initialData.profile) notFound();
   const profileJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
@@ -74,7 +79,7 @@ export default async function PublicProfilePage({
   return (
     <>
       <JsonLd data={profileJsonLd} />
-      <PublicProfileClient locale={locale} username={username} />
+      <PublicProfileClient key={username} locale={locale} username={username} initialData={initialData} />
     </>
   );
 }
