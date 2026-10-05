@@ -20,6 +20,7 @@
     "test": "vitest",
     "test:browser:news-popup": "node scripts/news-popup-browser-smoke.mjs",
     "test:browser:workers-auditions": "node scripts/workers-auditions-browser-smoke.mjs",
+    "test:workers:public-profile": "node scripts/workers-public-profile-smoke.mjs",
     "test:browser:deploy": "pnpm check:deploy-env && node scripts/deploy-browser-smoke.mjs"
   },
   "dependencies": {

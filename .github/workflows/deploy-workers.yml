@@ -79,6 +79,9 @@ jobs:
       - name: Build Workers bundle
         run: pnpm workers:build
 
+      - name: Workers public profile SSR regression
+        run: pnpm test:workers:public-profile
+
       - name: Workers audition detail smoke test
         run: |
           browser_path="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux64/chrome' -print -quit)"

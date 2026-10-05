@@ -11,6 +11,7 @@ import { JsonLd } from '@/components/common/JsonLd';
 import { generatePageMetadata } from '@/lib/seo';
 import { getInitialPublicProfile } from '@/lib/server/public-profile';
 import { notFound } from 'next/navigation';
+import { connection } from 'next/server';
 
 interface PublicProfilePageProps {
   params: Promise<{
@@ -64,6 +65,9 @@ export default async function PublicProfilePage({
 }: PublicProfilePageProps) {
   const { locale, username: rawUsername } = await params;
   setRequestLocale(locale);
+  // The Pages shell is static; Workers must render every profile at request
+  // time, including the shell path, before any uncached database reads.
+  if (process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers') await connection();
   const username = decodeUsername(rawUsername);
   const initialData = await getInitialPublicProfile(username);
   if (initialData && !initialData.profile) notFound();
