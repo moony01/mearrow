@@ -553,12 +553,16 @@
     "privacy_section3_item1": "服务运营：提供和维护投票和排名功能",
     "privacy_section3_item2": "防止滥用：防止投票操纵并确保公平参与",
     "privacy_section3_item3": "服务改进：分析使用模式并改善用户体验",
+    "privacy_google_data_link": "Google如何使用合作伙伴网站的数据",
+    "privacy_ads_settings_link": "Google个性化广告设置",
+    "privacy_analytics_optout_link": "Google Analytics退出浏览器插件",
+    "privacy_ad_partners_optout_link": "参与广告合作伙伴的退出设置",
     "privacy_section4_title": "Cookie",
-    "privacy_section4_content": "MEARROW使用必要的Cookie来维护您的会话并记住您的偏好设置。",
+    "privacy_section4_content": "MEARROW使用必要Cookie和浏览器存储来维持会话并记住语言、主题等偏好。我们也加载Google Analytics和Google AdSense。这些服务可能收集使用事件、IP地址、浏览器和设备信息，以及Cookie或其他标识符，用于分析使用情况和提供广告。包括Google在内的第三方广告商可能设置和读取Cookie，或使用网络信标。Google广告Cookie使Google及其合作伙伴能够根据您过去对本网站及其他网站的访问投放广告。您可以通过下方链接在我的广告中心管理个性化广告、退出参与广告合作伙伴的个性化广告，或安装Google Analytics退出浏览器插件。这些设置不会禁用服务所需的必要Cookie。",
     "privacy_section5_title": "数据安全",
     "privacy_section5_content": "我们采取适当的安全措施保护您的数据，包括加密、安全连接（HTTPS）和访问控制。",
     "privacy_section6_title": "第三方共享",
-    "privacy_section6_content": "我们不会出售、交易或以其他方式将您的个人信息转让给第三方。",
+    "privacy_section6_content": "我们不出售您的个人信息。Google Analytics和Google AdSense可能依据各自的政策，通过脚本、Cookie和标识符收集并处理用于分析和广告的信息。法律要求或保护我们的权利所必需时，也可能披露信息。",
     "privacy_section7_title": "您的权利",
     "privacy_section7_content": "您有权访问、更正或删除您的个人数据。"
   },
@@ -760,6 +764,7 @@
     "nickname_error_max": "昵称不能超过20个字符"
   },
   "PublicProfile": {
+    "intro": "您可以在此公开个人资料中查看简介、图片和短视频帖子以及活动经历。仅显示设置为公开的内容。",
     "title_suffix": "公开个人资料",
     "back": "返回首页动态",
     "loading": "正在加载个人资料…",

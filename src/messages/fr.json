@@ -553,12 +553,16 @@
     "privacy_section3_item1": "Exploitation du service: Fournir les fonctions de vote",
     "privacy_section3_item2": "Prévention des abus: Empêcher la manipulation des votes",
     "privacy_section3_item3": "Amélioration du service: Analyser les modèles d'utilisation",
+    "privacy_google_data_link": "Utilisation des données par Google sur les sites partenaires",
+    "privacy_ads_settings_link": "Paramètres de publicité personnalisée de Google",
+    "privacy_analytics_optout_link": "Module de désactivation de Google Analytics",
+    "privacy_ad_partners_optout_link": "Refuser la publicité des partenaires participants",
     "privacy_section4_title": "Cookies",
-    "privacy_section4_content": "MEARROW utilise des cookies essentiels pour les sessions et les préférences.",
+    "privacy_section4_content": "MEARROW utilise des cookies essentiels et le stockage du navigateur pour maintenir les sessions et mémoriser les préférences, notamment la langue et le thème. Nous chargeons également Google Analytics et Google AdSense. Ces services peuvent collecter des événements d’utilisation, des adresses IP, des informations sur le navigateur et l’appareil, ainsi que des cookies ou d’autres identifiants pour mesurer l’utilisation et diffuser des publicités. Des fournisseurs tiers, dont Google, peuvent déposer et lire des cookies ou utiliser des balises web. Les cookies publicitaires de Google permettent à Google et à ses partenaires de diffuser des annonces fondées sur vos visites antérieures sur ce site et d’autres sites. Les liens ci-dessous permettent de gérer la publicité personnalisée dans Mes préférences publicitaires, de la refuser auprès des partenaires participants ou d’installer le module de désactivation de Google Analytics. Ces réglages ne désactivent pas les cookies essentiels au service.",
     "privacy_section5_title": "Sécurité des données",
     "privacy_section5_content": "Nous mettons en œuvre des mesures de sécurité appropriées incluant le cryptage.",
     "privacy_section6_title": "Partage avec des tiers",
-    "privacy_section6_content": "Nous ne vendons pas vos informations personnelles à des tiers.",
+    "privacy_section6_content": "Nous ne vendons pas vos données personnelles. Google Analytics et Google AdSense peuvent collecter et traiter des informations via leurs scripts, cookies et identifiants à des fins d’analyse et de publicité, conformément à leurs propres politiques. Des informations peuvent également être divulguées lorsque la loi l’exige ou pour protéger nos droits.",
     "privacy_section7_title": "Vos droits",
     "privacy_section7_content": "Vous avez le droit d'accéder, de corriger ou de supprimer vos données."
   },
@@ -760,6 +764,7 @@
     "nickname_error_max": "Le pseudo ne doit pas dépasser 20 caractères"
   },
   "PublicProfile": {
+    "intro": "Découvrez la présentation, les publications d’images et de vidéos courtes ainsi que le parcours de ce profil public. Seul le contenu défini comme public est affiché.",
     "title_suffix": "Profil public",
     "back": "Retour au fil",
     "loading": "Chargement du profil…",

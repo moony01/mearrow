@@ -16,6 +16,7 @@ import {
   type PublicProfile,
   type PublicProfileActivity,
   type PublicProfilePost,
+  type PublicProfileSnapshot,
 } from '@/lib/api/public-profile';
 import ProfilePostSocial, {
   type ProfilePostSocialLabels,
@@ -27,6 +28,7 @@ import styles from './PublicProfileClient.module.scss';
 interface PublicProfileClientProps {
   locale: string;
   username: string;
+  initialData?: PublicProfileSnapshot | null;
 }
 
 function safeMediaUrl(value: string): string | null {
@@ -45,6 +47,8 @@ function formatDate(value: string, locale: string): string {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    // Keep the first server render and the browser render on the same date.
+    timeZone: 'UTC',
   }).format(date);
 }
 
@@ -113,6 +117,7 @@ function ProfilePostMedia({
 export default function PublicProfileClient({
   locale,
   username,
+  initialData = null,
 }: PublicProfileClientProps) {
   const t = useTranslations('PublicProfile');
   const homeT = useTranslations('Home');
@@ -120,11 +125,11 @@ export default function PublicProfileClient({
   const resolvedUsername = username === PUBLIC_PROFILE_STATIC_SHELL_USERNAME
     ? getUsernameFromPathname(pathname) || username
     : username;
-  const [profile, setProfile] = useState<PublicProfile | null>(null);
-  const [posts, setPosts] = useState<PublicProfilePost[]>([]);
-  const [activities, setActivities] = useState<PublicProfileActivity[]>([]);
+  const [profile, setProfile] = useState<PublicProfile | null>(initialData?.profile ?? null);
+  const [posts, setPosts] = useState<PublicProfilePost[]>(initialData?.posts ?? []);
+  const [activities, setActivities] = useState<PublicProfileActivity[]>(initialData?.activities ?? []);
   const [socialByPostId, setSocialByPostId] = useState<Record<string, ProfilePostSocialRecord>>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(initialData === null);
   const [hasError, setHasError] = useState(false);
 
   const loadProfile = useCallback(async (isActive: () => boolean = () => true) => {
@@ -197,9 +202,19 @@ export default function PublicProfileClient({
     retry: t('retry'),
   };
 
-  if (isLoading) {
+  if (isLoading && !profile) {
     return (
       <PageFrame size="wide" className={styles.container}>
+        <header className={styles.profileHeader}>
+          <div className={styles.profileCopy}>
+            <p className={styles.eyebrow}>{t('public')}</p>
+            <h1>{resolvedUsername === PUBLIC_PROFILE_STATIC_SHELL_USERNAME ? t('public') : resolvedUsername}</h1>
+            <p className={styles.bio}>{t('intro')}</p>
+          </div>
+        </header>
+        <Link className={styles.backLink} href={'/' + locale}>
+          <ArrowLeft size={16} aria-hidden="true" />{t('back')}
+        </Link>
         <div className={styles.state} aria-busy="true">
           <span className={styles.spinner} aria-hidden="true" />
           <p>{t('loading')}</p>
@@ -208,7 +223,7 @@ export default function PublicProfileClient({
     );
   }
 
-  if (hasError) {
+  if (hasError && !profile) {
     return (
       <PageFrame size="wide" className={styles.container}>
         <div className={styles.state} role="alert">
@@ -257,6 +272,7 @@ export default function PublicProfileClient({
           <p className={styles.eyebrow}>{t('public')}</p>
           <h1>{profile.username}</h1>
           {profile.bio && <p className={styles.bio}>{profile.bio}</p>}
+          <p className={styles.bio}>{t('intro')}</p>
         </div>
       </header>
 
