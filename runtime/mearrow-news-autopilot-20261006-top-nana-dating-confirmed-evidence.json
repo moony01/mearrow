@@ -1,8 +1,8 @@
 {
   "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
   "runStartedAt": "2026-10-06T14:55:00+09:00",
-  "lastUpdatedAt": "2026-10-06T16:02:00+09:00",
-  "executionStatus": "FAILED",
+  "lastUpdatedAt": "2026-10-06T16:42:07+09:00",
+  "executionStatus": "PASS",
   "mode": "selected_candidate",
   "topic": "T.O.P and Nana reported relationship confirmed by both agencies after their Studio54 music-video collaboration",
   "slug": "top-nana-dating-confirmed",
@@ -112,7 +112,7 @@
     "status": "PASS",
     "attempts": 5,
     "successfulAttempt": 5,
-    "baseUrl": "http://127.0.0.1:3120",
+    "baseUrl": "http://127.0.0.1:3119",
     "browser": "/home/moon/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
     "supabaseRestStatuses": [200, 200, 200],
     "profileFeedCount": 4,
@@ -179,23 +179,45 @@
     "Image Gate": "PASS",
     "Local Render Gate": "PASS",
     "Release Browser Verification": "PASS",
-    "Deploy Gate": "BLOCKED",
+    "Deploy Gate": "PASS",
     "Browser Deploy Gate": "PASS",
-    "GSC Gate": "BLOCKED"
+    "GSC Gate": "PASS"
   },
   "deploy": {
-    "status": "BLOCKED",
-    "commitSha": "b68387dd9cbe918b0c20da2367e20f15252a3887",
+    "status": "PASS",
+    "commitSha": "e3986fe",
     "branch": "moony01/mearrow-news-20261006",
     "pushed": true,
-    "cloudflareProductionSha": null,
-    "reason": "The repository deploy workflow runs production only from main or a PR merged into main. Main push and PR/merge were not authorized in this run, so production deployment was not attempted."
+    "method": "direct_workers_production_deploy_after_explicit_user_authorization",
+    "attempts": 2,
+    "firstAttempt": "FAIL_ACCOUNT_SELECTION",
+    "cloudflareProductionSha": "278aadfa-6ec4-4762-b0cc-f2c55bebaabc",
+    "workerUrl": "https://mearrow-web.mun01180.workers.dev",
+    "productionUrl": "https://mearrow.com/en/news/top-nana-dating-confirmed",
+    "productionChecks": {
+      "pageStatus": 200,
+      "newsListStatus": 200,
+      "sitemapStatus": 200,
+      "robotsStatus": 200,
+      "thumbnailStatus": 200,
+      "articleImageStatus": 200,
+      "canonical": "https://mearrow.com/en/news/top-nana-dating-confirmed",
+      "articleTextLength": 8491,
+      "browserConsoleApplicationErrors": 0,
+      "horizontalOverflow": false
+    }
   },
   "gsc": {
-    "status": "BLOCKED",
-    "requestedUrls": [],
-    "reason": "Search Console registration is downstream of production deployment and was not attempted."
+    "status": "PASS",
+    "property": "sc-domain:mearrow.com",
+    "requestedUrls": ["https://mearrow.com/en/news/top-nana-dating-confirmed"],
+    "inspectionStatusBeforeRequest": "URL이 Google에 등록되어 있지 않음",
+    "requestResult": "색인 생성 요청됨",
+    "queueMessage": "URL이 우선순위 크롤링 대기열에 추가되었습니다.",
+    "requestedAt": "2026-10-06T16:42:07+09:00",
+    "indexingCompleted": false,
+    "note": "Search Console confirmed the crawl request; actual indexing may complete later."
   },
-  "retries": {"research": 0, "image": 0, "browser": 5, "deploy": 0, "gsc": 0},
-  "lastError": "Deploy Gate blocked: feature branch was pushed, but production requires an authorized main merge or an explicitly authorized direct production deployment."
+  "retries": {"research": 0, "image": 0, "browser": 5, "deploy": 1, "gsc": 0},
+  "lastError": null
 }

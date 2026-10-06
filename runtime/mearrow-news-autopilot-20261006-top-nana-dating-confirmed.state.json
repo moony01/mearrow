@@ -1,9 +1,9 @@
 {
   "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
-  "status": "FAILED",
-  "lastPassedStep": "Release Browser Verification",
-  "nextStep": "User authorization for PR/merge or explicitly authorized production deployment",
-  "updatedAt": "2026-10-06T16:02:00+09:00",
+  "status": "PASS",
+  "lastPassedStep": "GSC Gate",
+  "nextStep": null,
+  "updatedAt": "2026-10-06T16:42:07+09:00",
   "slug": "top-nana-dating-confirmed",
   "active": true,
   "sourceAttributionGate": "PASS"

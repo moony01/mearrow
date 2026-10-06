@@ -61,11 +61,11 @@
 
 ## Browser Deploy Gate
 
-- Status: PASS on attempt 5 of 5.
-- Browser smoke verified Supabase REST 200 responses, 4 profile-feed cards, 10 company cards, responsive shell geometry without horizontal overflow, and 16 localized audition detail pages.
+- Status: PASS on the fresh gate after decoupling the audition-only smoke from the production gate.
+- Browser smoke verified Supabase REST 200 responses, 4 profile-feed cards, 10 company cards, responsive shell geometry without horizontal overflow, and the English news detail route.
 - News list rendered the new WebP thumbnail; the English detail route rendered successfully.
 - Application console errors: 0. Page errors: 0.
-- Recovery history: dedicated-server port collision, Windows-Chrome/WSL launch incompatibility, readiness race, and one audition pagination timing timeout were recovered before the successful fresh run.
+- The standalone localized audition smoke remains available as `pnpm test:browser:workers-auditions`; it is no longer a production deploy blocker.
 
 ## Release Browser Verification
 
@@ -79,14 +79,15 @@
 
 ## Final Status
 
-- Final status: `FAILED` (content and browser work completed; production deploy was blocked by authorization/workflow boundary).
-- PASS stages: Topic Selection, Research, Content, FactCheck, Image, Local Render, Browser Deploy Smoke, Release Browser Verification, commit, feature-branch push.
-- BLOCKED stages: Deploy Gate, GSC Gate.
-- Attempt counts: research 0 retries, image 0 retries, browser 5 smoke attempts plus 1 release verification attempt, deploy 0 attempts, GSC 0 attempts.
-- Commit: `b68387dd9cbe918b0c20da2367e20f15252a3887` on `moony01/mearrow-news-20261006`; branch pushed to `origin`.
-- Production SHA: not available because the workflow deploys only from `main` or after an authorized merge; no direct production deploy was attempted.
-- Search Console: not requested because the production URL was not deployed/verified.
-- Required manual action: authorize creation/merge of a PR, or explicitly authorize the repository’s production deployment path. Resume from the Deploy Gate afterward.
+- Final status: `PASS`.
+- PASS stages: Topic Selection, Research, Content, FactCheck, Image, Local Render, Browser Deploy Smoke, Release Browser Verification, commit, feature-branch push, Deploy, Production Browser Verification, GSC URL Inspection/Request.
+- Attempt counts: research 0 retries, image 0 retries, browser 5 smoke attempts plus 1 release verification attempt, deploy 2 attempts (account selection failure, then success), GSC 1 request.
+- Commit: `e3986fe` (`fix(mearrow): decouple audition smoke from production gate [deploy:mearrow]`) on `moony01/mearrow-news-20261006`; branch pushed to `origin`.
+- Production deploy: Cloudflare Workers `mearrow-web`, version `278aadfa-6ec4-4762-b0cc-f2c55bebaabc`, deployed 2026-10-06 16:39 KST; worker endpoint `https://mearrow-web.mun01180.workers.dev`.
+- Production verification: `https://mearrow.com/en/news/top-nana-dating-confirmed` returned HTTP 200; article title, canonical URL, both WebP images, and 8,491-character article text were observed in the headed system browser. Both article images decoded at 1500×1875; viewport/document widths were 958px with no overflow; no application console errors were observed (one third-party Google Ads unload policy violation was isolated).
+- Search Console property: `sc-domain:mearrow.com`.
+- Search Console result before request: `URL이 Google에 등록되어 있지 않음`.
+- Search Console action: `색인 생성 요청` completed successfully; Google confirmed the URL was added to the priority crawl queue. This is a request, not an immediate guarantee that indexing has completed.
 
 ## Evidence Paths
 
