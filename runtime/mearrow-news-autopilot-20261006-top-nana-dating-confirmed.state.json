@@ -1,0 +1,10 @@
+{
+  "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
+  "status": "IN_PROGRESS",
+  "lastPassedStep": "Release Browser Verification",
+  "nextStep": "Finish-flow preflight, commit, and Deploy Gate",
+  "updatedAt": "2026-10-06T15:55:00+09:00",
+  "slug": "top-nana-dating-confirmed",
+  "active": true,
+  "sourceAttributionGate": "PASS"
+}

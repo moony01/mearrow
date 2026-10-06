@@ -1,0 +1,85 @@
+{
+  "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
+  "slug": "top-nana-dating-confirmed",
+  "imageSearchQueries": [
+    "T.O.P Nana Studio54 official music video still 2026",
+    "T.O.P Nana official relationship confirmation agency photo October 2026",
+    "T.O.P Nana official portrait press photo 2026",
+    "T.O.P official Instagram Nana Studio54 teaser 2026"
+  ],
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/top-nana-dating-confirmed-thumbnail.webp",
+      "sourceUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2026/04/07/30001054774.jpg",
+      "pageUrl": "https://sbsstar.net/article/N1008508100/top-nanas-surprise-pairing-studio54-music-video-drops-april-8-with-squid-game-team",
+      "provider": "SBS Star / SBS Entertainment News",
+      "sourceAuthor": "TOPSPOT PICTURES",
+      "sourceMime": "image/jpeg",
+      "sourceWidth": 1500,
+      "sourceHeight": 1875,
+      "sourceSha256": "18fc1788a95e46cca7b4d8689bd53f70d5566d09597bb0f4f28a6b1754999683",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "SBS Star credits the image as Photo=TOPSPOT PICTURES and exposes the direct original image URL. Attribution and editorial context are recorded; no reuse permission is claimed.",
+      "identityMatchGate": "PASS",
+      "identitySubject": ["T.O.P", "Nana"],
+      "faceVisible": true,
+      "identityEvidence": "The downloaded source visibly shows T.O.P behind Nana in the black-and-white Studio54 concept; both faces are clear and no unknown third party is used.",
+      "visualReview": "PASS: visual inspection completed on 2026-10-06; both named subjects match the article and are identifiable.",
+      "finalFile": "public/images/news/top-nana-dating-confirmed-thumbnail.webp",
+      "width": 1500,
+      "height": 1875,
+      "mime": "image/webp",
+      "sha256": "543816710ab88da4ea17a0944d5e84d5e5db39fd10b13f6e6d59838b7e436729",
+      "transform": "sharp WebP conversion at quality 80; no crop, no upscale, no content edit"
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/top-nana-dating-confirmed-1.webp",
+      "sourceUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2026/04/07/30001054775.jpg",
+      "pageUrl": "https://sbsstar.net/article/N1008508100/top-nanas-surprise-pairing-studio54-music-video-drops-april-8-with-squid-game-team",
+      "provider": "SBS Star / SBS Entertainment News",
+      "sourceAuthor": "TOPSPOT PICTURES",
+      "sourceMime": "image/jpeg",
+      "sourceWidth": 1500,
+      "sourceHeight": 1875,
+      "sourceSha256": "ba835a77145628b96ff428f225713c690d921a0c9fbf9eb9503fd8602c23aa8c",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "SBS Star credits the image as Photo=TOPSPOT PICTURES and exposes the direct original image URL. Attribution and editorial context are recorded; no reuse permission is claimed.",
+      "identityMatchGate": "PASS",
+      "identitySubject": ["T.O.P", "Nana"],
+      "faceVisible": true,
+      "identityEvidence": "The downloaded source visibly shows T.O.P and Nana together in the full-body black-and-white Studio54 concept; both faces are clear and no unknown third party is used.",
+      "visualReview": "PASS: visual inspection completed on 2026-10-06; both named subjects match the article and are identifiable.",
+      "finalFile": "public/images/news/top-nana-dating-confirmed-1.webp",
+      "width": 1500,
+      "height": 1875,
+      "mime": "image/webp",
+      "sha256": "2fd4c883552ff15c6ee4aac7ed4f6b66b94b813f74ec6a9f2c3337e27b3133f8",
+      "transform": "sharp WebP conversion at quality 80; no crop, no upscale, no content edit"
+    }
+  ],
+  "rejectedImages": [
+    {
+      "sourceUrl": "https://www.allkpop.com/upload/2026/10/content/012358/1790913513-thumb.jpg",
+      "pageUrl": "https://www.allkpop.com/article/2026/10/top-and-nana-confirmed-to-be-dating-after-meeting-on-his-music-video-set",
+      "reason": "Search result thumbnail / media-hosted derivative rejected in favor of the credited TOPSPOT PICTURES original from SBS."
+    },
+    {
+      "sourceUrl": "https://image.starnewskorea.com/cdn-cgi/image/f%3Dauto%2Cw%3D1200%2Ch%3D1200%2Cfit%3Dcover%2Cq%3Dhigh%2Csharpen%3D2/21/2026/10/2026100517485928221_1.jpg",
+      "pageUrl": "https://www.starnewskorea.com/en/star/2026/10/05/2026100517485928221",
+      "reason": "Later editorial image with an unverified reuse path rejected to avoid relying on a media derivative when a credited official promotional source was available."
+    },
+    {
+      "sourceUrl": "https://img1.daumcdn.net/thumb/S1200x630/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fnews%2F202602%2F09%2Fsportskhan%2F20260209150612324.jpg",
+      "pageUrl": "https://v.daum.net/v/20260209150612324",
+      "reason": "CDN thumbnail derivative rejected; it is not the direct original source URL."
+    }
+  ],
+  "sourceAttributionGate": "PASS",
+  "aiGeneration": false,
+  "generatedAssets": [],
+  "notes": "Both accepted assets visibly contain both named subjects. Captions state the source, conversion, and that the images are collaboration visuals rather than relationship evidence."
+}
