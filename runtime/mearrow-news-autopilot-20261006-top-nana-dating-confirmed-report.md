@@ -77,7 +77,20 @@
 - Screenshots: `/home/moon/workspace/mearrow-en-article-1440.png`, `/home/moon/workspace/mearrow-en-article-390.png`.
 - Playwright snapshots/logs are recorded in the workspace `.playwright-mcp` directory. The initial screenshot path was rejected outside allowed roots and succeeded on retry; no application failure remained.
 
-## Pending Gates
+## Final Status
 
-- Deploy Gate: pending commit/push and production SHA confirmation
-- GSC Gate: pending English URL inspection/request
+- Final status: `FAILED` (content and browser work completed; production deploy was blocked by authorization/workflow boundary).
+- PASS stages: Topic Selection, Research, Content, FactCheck, Image, Local Render, Browser Deploy Smoke, Release Browser Verification, commit, feature-branch push.
+- BLOCKED stages: Deploy Gate, GSC Gate.
+- Attempt counts: research 0 retries, image 0 retries, browser 5 smoke attempts plus 1 release verification attempt, deploy 0 attempts, GSC 0 attempts.
+- Commit: `b68387dd9cbe918b0c20da2367e20f15252a3887` on `moony01/mearrow-news-20261006`; branch pushed to `origin`.
+- Production SHA: not available because the workflow deploys only from `main` or after an authorized merge; no direct production deploy was attempted.
+- Search Console: not requested because the production URL was not deployed/verified.
+- Required manual action: authorize creation/merge of a PR, or explicitly authorize the repository’s production deployment path. Resume from the Deploy Gate afterward.
+
+## Evidence Paths
+
+- Runtime evidence: `runtime/mearrow-news-autopilot-20261006-top-nana-dating-confirmed-evidence.json`
+- Image provenance: `runtime/mearrow-news-autopilot-20261006-top-nana-dating-confirmed-image-sources.json`
+- State checkpoint: `runtime/mearrow-news-autopilot-20261006-top-nana-dating-confirmed.state.json`
+- Browser screenshots: `/home/moon/workspace/mearrow-en-article-1440.png`, `/home/moon/workspace/mearrow-en-article-390.png`

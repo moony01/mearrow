@@ -1,8 +1,8 @@
 {
   "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
   "runStartedAt": "2026-10-06T14:55:00+09:00",
-  "lastUpdatedAt": "2026-10-06T15:55:00+09:00",
-  "executionStatus": "IN_PROGRESS",
+  "lastUpdatedAt": "2026-10-06T16:02:00+09:00",
+  "executionStatus": "FAILED",
   "mode": "selected_candidate",
   "topic": "T.O.P and Nana reported relationship confirmed by both agencies after their Studio54 music-video collaboration",
   "slug": "top-nana-dating-confirmed",
@@ -179,12 +179,23 @@
     "Image Gate": "PASS",
     "Local Render Gate": "PASS",
     "Release Browser Verification": "PASS",
-    "Deploy Gate": "PENDING",
+    "Deploy Gate": "BLOCKED",
     "Browser Deploy Gate": "PASS",
-    "GSC Gate": "PENDING"
+    "GSC Gate": "BLOCKED"
   },
-  "deploy": {"commitSha": null, "cloudflareProductionSha": null},
-  "gsc": {"requestedUrls": []},
+  "deploy": {
+    "status": "BLOCKED",
+    "commitSha": "b68387dd9cbe918b0c20da2367e20f15252a3887",
+    "branch": "moony01/mearrow-news-20261006",
+    "pushed": true,
+    "cloudflareProductionSha": null,
+    "reason": "The repository deploy workflow runs production only from main or a PR merged into main. Main push and PR/merge were not authorized in this run, so production deployment was not attempted."
+  },
+  "gsc": {
+    "status": "BLOCKED",
+    "requestedUrls": [],
+    "reason": "Search Console registration is downstream of production deployment and was not attempted."
+  },
   "retries": {"research": 0, "image": 0, "browser": 5, "deploy": 0, "gsc": 0},
-  "lastError": null
+  "lastError": "Deploy Gate blocked: feature branch was pushed, but production requires an authorized main merge or an explicitly authorized direct production deployment."
 }
