@@ -57,7 +57,7 @@ async function waitForServer(child, workerOutput) {
 
     try {
       const response = await fetch(`${baseUrl}/ko/auditions?workers-audition-smoke=ready`);
-      if (response.status < 500) return;
+      if (response.status === 200) return;
     } catch {
       // Keep polling until Wrangler is ready.
     }

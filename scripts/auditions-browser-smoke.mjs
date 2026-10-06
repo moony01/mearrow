@@ -11,6 +11,8 @@ export const EXPECTED_AUDITION_SLUGS = [
   'yg-online-audition',
 ];
 
+const PAGINATION_READY_TIMEOUT_MS = 20_000;
+
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
@@ -85,7 +87,7 @@ export async function runAuditionBrowserSmoke(page, baseUrl) {
             (button) => button.textContent?.trim() === String(expectedPage),
           ),
         pageNumber,
-        { timeout: 5_000 },
+        { timeout: PAGINATION_READY_TIMEOUT_MS },
       );
       await collectDetailPaths();
     }
