@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
 const navigationMocks = vi.hoisted(() => ({ pathname: '/ko' }));
@@ -93,29 +93,24 @@ describe('Navigation Components', () => {
     expect(screen.queryByRole('button', { name: '탐색' })).toBeNull();
     expect(screen.queryByRole('button', { name: '콘텐츠' })).toBeNull();
     expect(screen.getByText('홈')).toBeDefined();
-    expect(screen.getByText('명예의 전당')).toBeDefined();
-    expect(screen.getByRole('link', { name: '뉴스' })).toBeDefined();
-    expect(screen.getByRole('link', { name: '오디션' })).toBeDefined();
-    expect(screen.getByRole('link', { name: '오디션' }).getAttribute('href')).toBe(
-      '/ko/auditions',
-    );
+    expect(screen.queryByText('명예의 전당')).toBeNull();
+    expect(screen.queryByRole('link', { name: '뉴스' })).toBeNull();
+    expect(screen.queryByRole('link', { name: '오디션' })).toBeNull();
+    expect(screen.queryByRole('link', { name: '랭킹' })).toBeNull();
     expect(screen.queryByRole('menu')).toBeNull();
 
     // 비노출 메뉴
     expect(screen.queryByText('통계')).toBeNull();
     expect(screen.queryByText('커뮤니티')).toBeNull();
     expect(screen.queryByText('공지사항')).toBeNull();
-    // 랭킹 메뉴는 전용 route로 노출
-    expect(screen.getByRole('link', { name: '랭킹' }).getAttribute('href')).toBe('/ko/ranking');
     expect(screen.queryByRole('link', { name: '관심 피드' })).toBeNull();
     expect(screen.getByRole('link', { name: '홈' }).getAttribute('aria-current')).toBe('page');
-    expect(screen.getByRole('link', { name: '랭킹' }).getAttribute('aria-current')).toBeNull();
 
     // AUTH_SYSTEM=true이므로 로그인 링크 표시 (비로그인 상태)
     expect(screen.getByText('로그인')).toBeDefined();
   });
 
-  it('BottomNav는 모바일 핵심 동선 5개만 렌더링한다', () => {
+  it('BottomNav는 모바일 소셜 핵심 동선 3개만 렌더링한다', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={messages}>
         <BottomNav />
@@ -124,19 +119,18 @@ describe('Navigation Components', () => {
 
     const nav = screen.getByTestId('mobile-bottom-nav');
     expect(nav).toBeDefined();
-    expect(screen.getAllByRole('link')).toHaveLength(5);
+    expect(screen.getAllByRole('link')).toHaveLength(3);
     expect(screen.getByRole('link', { name: '홈' }).getAttribute('href')).toBe('/ko');
-    expect(screen.getByRole('link', { name: '투표' }).getAttribute('href')).toBe('/ko/ranking');
     expect(screen.getByRole('link', { name: '업로드' }).getAttribute('href')).toBe('/ko/my?compose=1');
-    expect(screen.getByRole('link', { name: '뉴스' }).getAttribute('href')).toBe('/ko/news');
     expect(screen.getByRole('link', { name: '프로필' }).getAttribute('href')).toBe('/ko/login');
     expect(screen.getByRole('link', { name: '홈' }).getAttribute('aria-current')).toBe('page');
-    expect(screen.getByRole('link', { name: '투표' }).getAttribute('aria-current')).toBeNull();
+    expect(screen.queryByRole('link', { name: '투표' })).toBeNull();
+    expect(screen.queryByRole('link', { name: '뉴스' })).toBeNull();
     expect(screen.queryByRole('link', { name: '명예의 전당' })).toBeNull();
     expect(screen.queryByRole('link', { name: '오디션' })).toBeNull();
   });
 
-  it('BottomNav는 현재 하위 경로에서 홈을 활성화하지 않는다', () => {
+  it('피드 메뉴에서 분리된 뉴스 경로에서는 모바일 메뉴를 활성화하지 않는다', () => {
     navigationMocks.pathname = '/ko/news';
 
     render(
@@ -146,12 +140,13 @@ describe('Navigation Components', () => {
     );
 
     expect(screen.getByRole('link', { name: '홈' }).getAttribute('aria-current')).toBeNull();
-    expect(screen.getByRole('link', { name: '뉴스' }).getAttribute('aria-current')).toBe('page');
+    expect(screen.getByRole('link', { name: '프로필' }).getAttribute('aria-current')).toBeNull();
+    expect(screen.getByRole('link', { name: '업로드' }).getAttribute('aria-current')).toBeNull();
 
     navigationMocks.pathname = '/ko';
   });
 
-  it('모바일 헤더 drawer에서 명예의 전당과 오디션을 제공한다', () => {
+  it('모바일 헤더에 더보기 drawer를 노출하지 않는다', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={messages}>
         <Header />
@@ -160,14 +155,7 @@ describe('Navigation Components', () => {
 
     expect(screen.queryByRole('link', { name: '명예의 전당' })).toBeNull();
     expect(screen.queryByRole('link', { name: '오디션' })).toBeNull();
-
-    fireEvent.click(screen.getByRole('button', { name: '더보기' }));
-
-    expect(screen.getByRole('dialog', { name: '더보기' })).toBeDefined();
-    expect(screen.getByRole('link', { name: '명예의 전당' }).getAttribute('href')).toBe('/ko/hall-of-fame');
-    expect(screen.getByRole('link', { name: '오디션' }).getAttribute('href')).toBe('/ko/auditions');
-
-    fireEvent.click(screen.getByRole('button', { name: '메뉴 닫기' }));
+    expect(screen.queryByRole('button', { name: '더보기' })).toBeNull();
     expect(screen.queryByRole('dialog', { name: '더보기' })).toBeNull();
   });
 

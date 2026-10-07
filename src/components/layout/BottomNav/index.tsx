@@ -4,8 +4,7 @@
  * BottomNav - 모바일 하단 네비게이션 컴포넌트
  *
  * 모바일(<768px)에서만 표시되는 하단 고정 네비게이션입니다.
- * 홈, 투표, 업로드, 뉴스, 프로필의 핵심 동선만 노출하고,
- * 명예의 전당과 오디션은 모바일 헤더 drawer에서 제공합니다.
+ * 홈, 업로드, 프로필의 핵심 소셜 동선만 노출합니다.
  */
 
 import { usePathname } from 'next/navigation';
@@ -19,7 +18,7 @@ import styles from './BottomNav.module.scss';
 export default function BottomNav() {
   const t = useTranslations('Nav');
   const pathname = usePathname();
-  // 현재 locale 추출 (예: /en/ranking -> 'en')
+  // 현재 locale 추출 (예: /en/my -> 'en')
   const currentLocale = pathname.split('/')[1] || 'en';
   const { isAuthenticated } = useAuth();
 
