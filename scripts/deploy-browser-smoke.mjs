@@ -300,7 +300,7 @@ async function main() {
       label.trim(),
     );
     assert(
-      JSON.stringify(mobileNavLabels) === JSON.stringify(['홈', '투표', '업로드', '뉴스', '프로필']),
+      JSON.stringify(mobileNavLabels) === JSON.stringify(['홈', '업로드', '프로필']),
       `mobile navigation labels are incorrect (${JSON.stringify(mobileNavLabels)})`,
     );
     assert(
