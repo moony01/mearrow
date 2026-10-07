@@ -9,7 +9,6 @@
 
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
 import HomeFeedClient from './HomeFeedClient';
 import { generatePageMetadata } from '@/lib/seo';
 import { FULL_URL, SUPPORTED_LOCALES } from '@/lib/constants';
@@ -116,11 +115,6 @@ export default async function HomePage({ params }: HomePageProps) {
           </article>
         </div>
 
-        <nav className={styles.seoLinks} aria-label={t('seo_links_label')}>
-          <Link href={`/${locale}/ranking`}>{t('seo_ranking_link')}</Link>
-          <Link href={`/${locale}/news`}>{t('seo_news_link')}</Link>
-          <Link href={`/${locale}/editorial`}>{t('seo_editorial_link')}</Link>
-        </nav>
       </section>
     </>
   );

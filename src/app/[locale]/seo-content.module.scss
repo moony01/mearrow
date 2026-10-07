@@ -92,27 +92,6 @@
   }
 }
 
-.seoLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid $color-border;
-
-  a {
-    color: $color-primary;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-
-    &:hover {
-      text-decoration-thickness: 2px;
-    }
-  }
-}
-
 .seoSection {
   max-width: 760px;
   margin-top: 20px;
