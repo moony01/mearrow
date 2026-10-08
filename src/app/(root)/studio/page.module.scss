@@ -1,0 +1,771 @@
+.page {
+  --studio-ink: #10131c;
+  --studio-muted: rgba(16, 19, 28, 0.66);
+  --studio-blue: #315cff;
+  --studio-lime: #c7ff32;
+  --studio-paper: #f5f7ff;
+  --studio-line: rgba(16, 19, 28, 0.12);
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--studio-paper);
+  color: var(--studio-ink);
+  font-family: Inter, var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--studio-blue);
+  outline-offset: 4px;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-bottom: 1px solid var(--studio-line);
+}
+
+.headerInner,
+.heroInner,
+.pathwaysSection,
+.nextStepInner,
+.footerInner {
+  width: min(1240px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.headerInner {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand,
+.footerBrand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.brand {
+  width: 180px;
+}
+
+.brandWordmark {
+  display: block;
+  width: 100%;
+  aspect-ratio: 360 / 82;
+  background: url('/mearrow-wordmark.svg') center / contain no-repeat;
+}
+
+.navigation,
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navigation a,
+.footerLinks a {
+  color: rgba(16, 19, 28, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 160ms ease;
+}
+
+.navigation a:hover,
+.footerLinks a:hover {
+  color: var(--studio-blue);
+}
+
+.headerCta,
+.primaryButton,
+.nextStepButton {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 17px;
+  border-radius: 999px;
+  background: var(--studio-ink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.headerCta:hover,
+.primaryButton:hover,
+.nextStepButton:hover {
+  transform: translateY(-2px);
+  background: var(--studio-blue);
+}
+
+.hero {
+  position: relative;
+  padding: 84px 0 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 72% 15%, rgba(49, 92, 255, 0.22), transparent 40%),
+    #10131c;
+  color: #f7f8ff;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.82fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 100px);
+  padding-bottom: 92px;
+}
+
+.heroCopy {
+  max-width: 650px;
+  padding-bottom: 18px;
+}
+
+.eyebrow,
+.sectionEyebrow,
+.cardEyebrow,
+.nextStepEyebrow {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 27px;
+  color: rgba(247, 248, 255, 0.72);
+}
+
+.eyebrow span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--studio-lime);
+  box-shadow: 0 0 0 5px rgba(199, 255, 50, 0.13);
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(52px, 6.4vw, 84px);
+  font-weight: 850;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.hero h1 em {
+  display: block;
+  color: var(--studio-lime);
+  font-style: normal;
+}
+
+.heroDescription {
+  max-width: 500px;
+  margin: 25px 0 0;
+  color: rgba(247, 248, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 21px;
+  margin-top: 30px;
+}
+
+.primaryButton {
+  min-height: 50px;
+  padding-inline: 20px;
+  background: var(--studio-lime);
+  color: var(--studio-ink);
+  font-size: 12px;
+}
+
+.primaryButton:hover {
+  background: #d9ff82;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f7f8ff;
+  font-size: 12px;
+  font-weight: 800;
+  transition: color 160ms ease;
+}
+
+.secondaryButton:hover {
+  color: var(--studio-lime);
+}
+
+.heroNote {
+  margin: 38px 0 0;
+  color: rgba(247, 248, 255, 0.45);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.signalPanel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 432px;
+  padding: 32px 34px 27px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #315cff 0%, #263d9e 72%, #17213a 100%);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
+}
+
+.signalPanelGlow {
+  position: absolute;
+  z-index: -1;
+  top: -158px;
+  right: -116px;
+  width: 340px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(199, 255, 50, 0.5);
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 38%, rgba(199, 255, 50, 0.16), transparent 68%);
+  box-shadow: 0 0 0 28px rgba(199, 255, 50, 0.04), 0 0 0 66px rgba(199, 255, 50, 0.025);
+  pointer-events: none;
+}
+
+.signalPanelHeader {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+}
+
+.signalMark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.signalMarkImage {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url('/mearrow-mark.svg') center / contain no-repeat;
+}
+
+.signalPanel h2 {
+  position: relative;
+  margin: 27px 0 0;
+  color: #fff;
+  font-size: clamp(32px, 3.8vw, 45px);
+  font-weight: 850;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.signalLinks {
+  display: grid;
+  margin-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.signalLink {
+  display: grid;
+  min-height: 52px;
+  grid-template-columns: 34px minmax(0, 1fr) 20px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: padding 160ms ease, color 160ms ease;
+}
+
+.signalLink:hover {
+  padding-inline: 5px;
+  color: var(--studio-lime);
+}
+
+.signalNumber {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.signalLabel {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.signalFooter {
+  margin: 21px 0 0;
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+}
+
+.heroEdge {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 5vw, 68px);
+  padding-inline: 20px;
+  background: var(--studio-lime);
+  color: var(--studio-ink);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.heroEdge i {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  transform: rotate(45deg);
+  background: var(--studio-blue);
+}
+
+.pathwaysSection {
+  padding-block: 102px 110px;
+}
+
+.sectionIntro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+
+.sectionEyebrow {
+  margin-bottom: 15px;
+  color: var(--studio-blue);
+}
+
+.sectionIntro h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(36px, 4.4vw, 57px);
+  font-weight: 850;
+  letter-spacing: -0.067em;
+  line-height: 1;
+}
+
+.sectionDescription {
+  max-width: 370px;
+  margin: 0 0 2px;
+  color: var(--studio-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pathwayCard {
+  display: flex;
+  min-height: 328px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 25px 23px;
+  border: 1px solid var(--studio-line);
+  border-radius: 15px;
+  background: #fff;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.pathwayCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(49, 92, 255, 0.35);
+  box-shadow: 0 18px 38px rgba(16, 19, 28, 0.1);
+}
+
+.cardTopline {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 43px;
+  color: var(--studio-blue);
+}
+
+.cardTopline span {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.cardEyebrow {
+  margin-bottom: 12px;
+  color: rgba(16, 19, 28, 0.48);
+  font-size: 9px;
+}
+
+.pathwayCard h3 {
+  max-width: 280px;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+.cardDescription {
+  margin: 12px 0 22px;
+  color: var(--studio-muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.cardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: var(--studio-blue);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.opportunities .cardTopline {
+  color: #4e7900;
+}
+
+.league .cardTopline,
+.league .cardAction {
+  color: #6544c4;
+}
+
+.nextStep {
+  background: #fff;
+  border-block: 1px solid var(--studio-line);
+}
+
+.nextStepInner {
+  display: flex;
+  min-height: 190px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.nextStepEyebrow {
+  margin-bottom: 12px;
+  color: var(--studio-blue);
+}
+
+.nextStep h2 {
+  margin: 0;
+  font-size: clamp(31px, 4vw, 46px);
+  font-weight: 850;
+  letter-spacing: -0.065em;
+  line-height: 1.05;
+}
+
+.nextStepButton {
+  min-height: 48px;
+  flex: 0 0 auto;
+  padding-inline: 20px;
+  background: var(--studio-blue);
+}
+
+.nextStepButton:hover {
+  background: #2549d8;
+}
+
+.footer {
+  background: #fff;
+}
+
+.footerInner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px 30px;
+  padding-block: 26px;
+}
+
+.footerBrand {
+  gap: 9px;
+  color: var(--studio-ink);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.footerMark {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  background: url('/mearrow-mark.svg') center / contain no-repeat;
+}
+
+.footerInner > p {
+  margin: 0;
+  color: rgba(16, 19, 28, 0.5);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.footerLinks {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.footerLinks a {
+  font-size: 10px;
+}
+
+.footerInner small {
+  grid-column: 1 / -1;
+  padding-top: 13px;
+  border-top: 1px solid var(--studio-line);
+  color: rgba(16, 19, 28, 0.48);
+  font-size: 9px;
+}
+
+@media (max-width: 980px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    gap: 38px;
+  }
+
+  .signalPanel {
+    min-height: 410px;
+    padding: 28px 25px 24px;
+  }
+
+  .pathwayCard {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .headerInner,
+  .heroInner,
+  .pathwaysSection,
+  .nextStepInner,
+  .footerInner {
+    width: min(100% - 40px, 560px);
+  }
+
+  .headerInner {
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .brand {
+    width: 154px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .headerCta {
+    min-height: 40px;
+    padding-inline: 13px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 58px;
+  }
+
+  .heroCopy {
+    padding-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(51px, 11.8vw, 72px);
+  }
+
+  .heroDescription {
+    font-size: 14px;
+  }
+
+  .heroNote {
+    margin-top: 27px;
+  }
+
+  .signalPanel {
+    min-height: 405px;
+    padding: 29px 27px 24px;
+    border-radius: 16px;
+  }
+
+  .heroEdge {
+    justify-content: space-around;
+    gap: 12px;
+  }
+
+  .heroEdge span {
+    font-size: 8px;
+  }
+
+  .pathwaysSection {
+    padding-block: 76px 80px;
+  }
+
+  .sectionIntro {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .sectionIntro h2 {
+    font-size: clamp(37px, 9.5vw, 52px);
+  }
+
+  .sectionDescription {
+    max-width: 450px;
+    margin-top: 17px;
+  }
+
+  .pathwayGrid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .pathwayCard {
+    min-height: 278px;
+    padding: 22px;
+  }
+
+  .cardTopline {
+    margin-bottom: 35px;
+  }
+
+  .nextStepInner {
+    min-height: 210px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    padding-block: 32px;
+  }
+
+  .nextStep h2 {
+    font-size: clamp(32px, 8.5vw, 44px);
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .footerInner > p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .footerLinks {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    grid-row: 3;
+  }
+
+  .footerInner small {
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerInner,
+  .heroInner,
+  .pathwaysSection,
+  .nextStepInner,
+  .footerInner {
+    width: calc(100% - 32px);
+  }
+
+  .brand {
+    width: 137px;
+  }
+
+  .headerCta {
+    gap: 5px;
+    padding-inline: 10px;
+    font-size: 9px;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+  }
+
+  .heroActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .signalPanel {
+    min-height: 388px;
+    padding-inline: 22px;
+  }
+
+  .signalPanel h2 {
+    font-size: 36px;
+  }
+
+  .signalLinks {
+    margin-top: 27px;
+  }
+
+  .signalLabel {
+    font-size: 9px;
+  }
+
+  .footerLinks {
+    gap: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation a,
+  .footerLinks a,
+  .headerCta,
+  .primaryButton,
+  .secondaryButton,
+  .signalLink,
+  .pathwayCard,
+  .nextStepButton {
+    transition: none;
+  }
+
+  .headerCta:hover,
+  .primaryButton:hover,
+  .pathwayCard:hover,
+  .nextStepButton:hover {
+    transform: none;
+  }
+}
