@@ -445,9 +445,9 @@ async function main() {
     const firstNewsImageLoaded = await newsImage.evaluate((image) => image.complete && image.naturalWidth > 0);
     assert(firstNewsImageLoaded, `news image failed to load: ${imageSources[0]}`);
 
-    const newsArticleHref = await page.locator('a[href^="/news/"]').first().getAttribute('href');
+    const newsArticleHref = await page.locator('a[href^="/studio/news/"]').first().getAttribute('href');
     assert(
-      newsArticleHref && /^\/news\/[^/?#]+$/.test(newsArticleHref),
+      newsArticleHref && /^\/studio\/news\/[^/?#]+$/.test(newsArticleHref),
       `news list did not expose an active article link (${newsArticleHref || 'none'})`,
     );
 
