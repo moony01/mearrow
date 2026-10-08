@@ -20,5 +20,5 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function VisualMatchTossCheckoutPage() {
   const locale = DEFAULT_LOCALE;
   setRequestLocale(locale);
-  return <PageFrame size="wide" className={styles.paymentFrame}><Suspense fallback={null}><TossCheckoutClient /></Suspense></PageFrame>;
+  return <PageFrame as="div" size="wide" className={styles.paymentFrame}><Suspense fallback={null}><TossCheckoutClient /></Suspense></PageFrame>;
 }

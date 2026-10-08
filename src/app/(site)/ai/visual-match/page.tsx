@@ -24,6 +24,7 @@ export default async function VisualMatchPage() {
 
   return (
     <PageFrame
+      as="div"
       size="wide"
       className={styles.visualPage}
       data-testid="visual-match-page"

@@ -24,7 +24,7 @@ export default async function AnalyzingPage() {
   setRequestLocale(locale);
 
   return (
-    <PageFrame size="wide" className={styles.analysisPage} data-testid="visual-match-analyzing-page">
+    <PageFrame as="div" size="wide" className={styles.analysisPage} data-testid="visual-match-analyzing-page">
       <Suspense fallback={null}><AnalyzingClient /></Suspense>
     </PageFrame>
   );

@@ -15,5 +15,5 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function VisualMatchSurveyPage() {
   const locale = DEFAULT_LOCALE;
   setRequestLocale(locale);
-  return <PageFrame size="wide" className={styles.visualPage} data-testid="visual-match-survey-page"><VisualMatchSurveyClient /></PageFrame>;
+  return <PageFrame as="div" size="wide" className={styles.visualPage} data-testid="visual-match-survey-page"><VisualMatchSurveyClient /></PageFrame>;
 }

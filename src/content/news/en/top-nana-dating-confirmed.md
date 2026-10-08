@@ -4,7 +4,8 @@ excerpt: "T.O.P and Nana dating is confirmed after their ‘Studio54’ collabor
 date: '2026-10-06'
 category: 'Artist'
 thumbnail: '/images/news/top-nana-dating-confirmed-thumbnail.webp'
-active: true
+active: false
+duplicateOf: 'top-nana-dating-studio54'
 ---
 
 `T.O.P and Nana dating` is no longer a theory built from a music-video frame. On October 2, both artists’ agencies confirmed that the former BIGBANG rapper and the former After School member are in a relationship. The confirmation arrived after a Dispatch report, but the more important detail was not the report itself. It was the timeline: the two met while making T.O.P’s “Studio54” music video, grew closer afterward, and began a romantic relationship around June, according to their agencies and Yonhap’s account of the statements. [Yonhap reported the confirmation](https://en.yna.co.kr/view/AEN20261002005000315), while [CNA documented Nana’s message to fans](https://cnalifestyle.channelnewsasia.com/entertainment/top-nana-dating-korean-stars-589901).

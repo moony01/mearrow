@@ -28,7 +28,7 @@ export default async function AIPage() {
   const t = await getTranslations({ locale, namespace: 'AIPage' });
 
   return (
-    <PageFrame size="wide" className={styles.aiPage} data-testid="ai-page">
+    <PageFrame as="div" size="wide" className={styles.aiPage} data-testid="ai-page">
       <section className={styles.landing} aria-labelledby="ai-landing-title">
         <header className={styles.landingHero}>
           <div className={styles.landingMeta}>

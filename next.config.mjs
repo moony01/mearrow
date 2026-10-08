@@ -14,6 +14,16 @@ const isWorkers = process.env.NEXT_RUNTIME_TARGET === 'workers';
 const useStaticExport = !isDev && !isWorkers;
 const legacyLocales = ['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de'];
 
+const newsConsolidationRedirects = [
+  '/studio/news/top-nana-dating-confirmed',
+  '/news/top-nana-dating-confirmed',
+  ...legacyLocales.map((locale) => `/${locale}/news/top-nana-dating-confirmed`),
+].map((source) => ({
+  source,
+  destination: '/studio/news/top-nana-dating-studio54',
+  permanent: true,
+}));
+
 const studioSections = ['news', 'auditions', 'ranking'];
 const studioRedirects = studioSections.flatMap((section) => [
   { source: `/${section}`, destination: `/studio/${section}`, permanent: true },
@@ -78,7 +88,7 @@ const securityHeaders = [
 const nextConfig = {
   allowedDevOrigins,
   ...(!useStaticExport
-    ? { redirects: async () => [...legacyEmbedRedirects, ...studioRedirects, ...legacyLocaleRedirects] }
+    ? { redirects: async () => [...newsConsolidationRedirects, ...legacyEmbedRedirects, ...studioRedirects, ...legacyLocaleRedirects] }
     : {}),
   // 기존 Pages 배포는 정적 export를 유지하고, Workers 빌드에서는
   // OpenNext가 SSR/ISR용 Next 런타임을 생성하도록 output 설정을 비활성화합니다.

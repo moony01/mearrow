@@ -8,5 +8,5 @@ import styles from '../../payment.module.scss';
 export default async function VisualMatchTossSuccessPage() {
   const locale = DEFAULT_LOCALE;
   setRequestLocale(locale);
-  return <PageFrame size="wide" className={styles.paymentFrame}><Suspense fallback={null}><TossPaymentSuccessClient /></Suspense></PageFrame>;
+  return <PageFrame as="div" size="wide" className={styles.paymentFrame}><Suspense fallback={null}><TossPaymentSuccessClient /></Suspense></PageFrame>;
 }

@@ -34,6 +34,11 @@ Legacy locale URLs permanently redirect to these routes. Specific Studio
 redirects precede the general locale removal. OAuth return destinations and
 payment callback URLs use canonical Visual Match routes.
 
+The duplicate October 6 T.O.P/Nana relationship article is retained as inactive
+source. Its Studio, legacy News, and seven locale URLs permanently redirect to
+the October 8 `top-nana-dating-studio54` article. Only that article appears in
+the public News API, previews, lists, related articles, and sitemap.
+
 ## Recovery
 
 Pre-integration source snapshots are retained as local annotated tags under

@@ -24,7 +24,7 @@ export default async function ReportPage() {
   setRequestLocale(locale);
 
   return (
-    <PageFrame size="wide" className={styles.reportFrame} data-testid="visual-match-report-page">
+    <PageFrame as="div" size="wide" className={styles.reportFrame} data-testid="visual-match-report-page">
       <Suspense fallback={null}><ReportClient /></Suspense>
     </PageFrame>
   );
