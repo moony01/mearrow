@@ -1,0 +1,464 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.aiPage {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.landing {
+  --ink: #101526;
+  --muted: rgba(16, 21, 38, 0.62);
+  --line: rgba(16, 21, 38, 0.14);
+  --blue: #315cff;
+
+  padding: clamp(32px, 6vw, 92px) clamp(20px, 6vw, 104px) clamp(46px, 6vw, 88px);
+  background: #f7f8ff;
+  color: var(--ink);
+}
+
+.landingHero,
+.serviceList,
+.guidance {
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.landingHero {
+  position: relative;
+  padding-bottom: clamp(56px, 9vw, 126px);
+}
+
+.landingMeta,
+.serviceMeta,
+.serviceTag,
+.heroFootnote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.66rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.landingMeta {
+  color: var(--blue);
+}
+
+.landingMeta p,
+.landingMeta span,
+.serviceMeta span,
+.serviceTag span,
+.heroFootnote span {
+  margin: 0;
+}
+
+.landingTitle {
+  max-width: 920px;
+  margin: clamp(52px, 10vw, 140px) 0 0;
+  font-family: $font-display;
+  font-size: clamp(3.3rem, 7.4vw, 7.6rem);
+  font-weight: 850;
+  letter-spacing: -0.093em;
+  line-height: 0.87;
+}
+
+.landingLead {
+  max-width: 510px;
+  margin: 32px 0 0 clamp(0px, 9vw, 144px);
+  color: var(--muted);
+  font-size: clamp(0.96rem, 1.45vw, 1.12rem);
+  letter-spacing: -0.022em;
+  line-height: 1.65;
+}
+
+.heroFootnote {
+  width: min(100%, 420px);
+  margin: clamp(46px, 8vw, 104px) 0 0 auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.heroFootnote span:first-child {
+  color: var(--blue);
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3vw, 40px);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.service {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.82fr);
+  min-height: clamp(440px, 44vw, 570px);
+  overflow: hidden;
+}
+
+.servicePrimary {
+  background: #101735;
+  color: #f8f9ff;
+}
+
+.serviceSecondary {
+  grid-template-columns: minmax(340px, 0.82fr) minmax(0, 0.92fr);
+  border: 1px solid var(--line);
+  background: #ebefff;
+}
+
+.serviceCopy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(28px, 4.6vw, 68px);
+}
+
+.serviceSecondary .serviceCopy {
+  grid-column: 2;
+}
+
+.serviceMeta {
+  width: 100%;
+  color: rgba(247, 249, 255, 0.58);
+}
+
+.serviceMeta span:first-child {
+  color: #aebcff;
+}
+
+.serviceSecondary .serviceMeta {
+  color: var(--muted);
+}
+
+.serviceSecondary .serviceMeta span:first-child {
+  color: var(--blue);
+}
+
+.serviceTitle {
+  max-width: 500px;
+  margin: auto 0 0;
+  font-family: $font-display;
+  font-size: clamp(2.25rem, 4.1vw, 4.7rem);
+  font-weight: 850;
+  letter-spacing: -0.082em;
+  line-height: 0.9;
+}
+
+.serviceDescription {
+  max-width: 440px;
+  margin: 22px 0 0;
+  color: rgba(247, 249, 255, 0.7);
+  font-size: clamp(0.9rem, 1.25vw, 1rem);
+  line-height: 1.65;
+}
+
+.serviceSecondary .serviceDescription {
+  color: var(--muted);
+}
+
+.serviceAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  min-width: min(100%, 224px);
+  margin-top: clamp(32px, 5vw, 58px);
+  padding: 16px 17px 16px 20px;
+  background: #f8f9ff;
+  color: #101735;
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.serviceAction svg {
+  color: var(--blue);
+  transition: transform 0.2s ease;
+}
+
+.serviceSecondary .serviceAction {
+  background: var(--blue);
+  color: #fff;
+}
+
+.serviceSecondary .serviceAction svg {
+  color: #fff;
+}
+
+.serviceAction:hover,
+.serviceAction:focus-visible {
+  background: #8ca0ff;
+  color: #0d1430;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.serviceAction:hover svg,
+.serviceAction:focus-visible svg {
+  color: currentColor;
+  transform: translate(3px, -3px);
+}
+
+.serviceAction:focus-visible {
+  box-shadow: 0 0 0 4px rgba(140, 160, 255, 0.5);
+}
+
+.serviceVisual {
+  position: relative;
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  overflow: hidden;
+}
+
+.serviceVisual::before,
+.serviceVisual::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.visualMatch {
+  grid-column: 2;
+  grid-row: 1;
+  background:
+    radial-gradient(circle at center, rgba(101, 127, 255, 0.24), transparent 28%),
+    linear-gradient(135deg, rgba(80, 109, 255, 0.18), transparent 56%);
+}
+
+.visualMatch::before {
+  inset: 0;
+  background-image: linear-gradient(rgba(184, 197, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 197, 255, 0.1) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at center, black, transparent 72%);
+}
+
+.visualMatch::after {
+  width: min(26vw, 310px);
+  aspect-ratio: 1;
+  border: 1px dashed rgba(190, 202, 255, 0.58);
+  border-radius: 50%;
+}
+
+.visualIcon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 100px;
+  height: 100px;
+  place-items: center;
+  border: 1px solid #97aaff;
+  border-radius: 50%;
+  background: rgba(58, 84, 215, 0.24);
+  box-shadow: 0 0 80px rgba(82, 109, 255, 0.38);
+  color: #c8d2ff;
+}
+
+.visualReadout {
+  position: absolute;
+  right: clamp(24px, 4vw, 54px);
+  bottom: clamp(22px, 4vw, 52px);
+  z-index: 1;
+  margin: 0;
+  color: rgba(228, 234, 255, 0.68);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  line-height: 1.65;
+  text-align: right;
+}
+
+.kpopface {
+  grid-column: 1;
+  grid-row: 1;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(49, 92, 255, 0.16), transparent 31%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(205, 216, 255, 0.54));
+}
+
+.kpopface::before {
+  width: min(28vw, 340px);
+  aspect-ratio: 0.74;
+  border: 1px solid rgba(49, 92, 255, 0.3);
+  border-radius: 50% 50% 46% 46%;
+  box-shadow: inset 0 0 0 22px rgba(255, 255, 255, 0.25);
+}
+
+.kpopface::after {
+  width: min(36vw, 460px);
+  height: min(36vw, 460px);
+  border: 1px solid rgba(49, 92, 255, 0.15);
+  border-radius: 50%;
+}
+
+.kpopface .visualIcon {
+  width: 84px;
+  height: 84px;
+  border-color: var(--blue);
+  background: #f8f9ff;
+  box-shadow: 0 0 54px rgba(49, 92, 255, 0.18);
+  color: var(--blue);
+}
+
+.serviceTag {
+  position: absolute;
+  right: clamp(24px, 4vw, 54px);
+  bottom: clamp(22px, 4vw, 52px);
+  z-index: 1;
+  color: rgba(16, 21, 38, 0.54);
+}
+
+.serviceTag span:first-child {
+  color: var(--blue);
+}
+
+.guidance {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-top: clamp(32px, 5vw, 64px);
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.guidance > span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.61rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.guidance p {
+  max-width: 660px;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .landing {
+    padding-inline: 20px;
+  }
+
+  .landingLead {
+    margin-left: 0;
+  }
+
+  .service,
+  .serviceSecondary {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    min-height: 0;
+  }
+
+  .serviceCopy,
+  .serviceSecondary .serviceCopy {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 360px;
+  }
+
+  .serviceVisual,
+  .visualMatch,
+  .kpopface {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 300px;
+  }
+
+  .visualMatch::after {
+    width: min(52vw, 310px);
+  }
+
+  .kpopface::before {
+    width: min(52vw, 310px);
+  }
+
+  .kpopface::after {
+    width: min(68vw, 430px);
+    height: min(68vw, 430px);
+  }
+}
+
+@media (max-width: 640px) {
+  .landing {
+    padding: 26px 16px 48px;
+  }
+
+  .landingTitle {
+    margin-top: 54px;
+    font-size: clamp(3.15rem, 14vw, 4.45rem);
+    line-height: 0.9;
+  }
+
+  .landingLead {
+    margin-top: 24px;
+  }
+
+  .heroFootnote {
+    margin-top: 56px;
+  }
+
+  .serviceCopy,
+  .serviceSecondary .serviceCopy {
+    min-height: 340px;
+    padding: 28px 24px;
+  }
+
+  .serviceTitle {
+    font-size: clamp(2.35rem, 11vw, 3.4rem);
+  }
+
+  .serviceAction {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .serviceVisual,
+  .visualMatch,
+  .kpopface {
+    min-height: 252px;
+  }
+
+  .visualIcon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .visualReadout {
+    right: 20px;
+    bottom: 20px;
+    font-size: 0.56rem;
+  }
+
+  .serviceTag {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .guidance {
+    display: block;
+  }
+
+  .guidance p {
+    margin-top: 7px;
+  }
+}

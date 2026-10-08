@@ -140,9 +140,8 @@ $bronze: #cd7f32;
 }
 
 .medalBadge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
+  position: relative;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,8 +154,6 @@ $bronze: #cd7f32;
   @media (min-width: 768px) {
     width: 48px;
     height: 48px;
-    top: -10px;
-    right: -10px;
   }
 }
 
@@ -451,8 +448,6 @@ $light-primary: #315CFF;
   .medalBadge {
     width: 32px;
     height: 32px;
-    top: -6px;
-    right: -6px;
   }
 
   .medalEmoji {

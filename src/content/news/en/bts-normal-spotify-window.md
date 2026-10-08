@@ -52,7 +52,7 @@ The strategy is powerful because it makes the first moment scarce. It is risky f
 
 That tension creates the real test. If the two-day lead makes the wider Sunday release feel bigger, the exclusivity will have worked as a spark. If fans experience the first look mainly as an obstacle, the campaign may generate attention while weakening the emotional promise of access. MEARROW is not assuming either result before the window opens; the meaningful evidence will be how the conversation travels from Friday to Sunday.
 
-The rollout also arrives while BTS is already proving that one event can activate much more than a venue. [Related: BTS's London return became a citywide fandom test](/en/news/bts-london-stadium-record). The same operating logic appears here at smaller scale: give fans one central moment, then design multiple paths for participation around it.
+The rollout also arrives while BTS is already proving that one event can activate much more than a venue. [Related: BTS's London return became a citywide fandom test](/studio/news/bts-london-stadium-record). The same operating logic appears here at smaller scale: give fans one central moment, then design multiple paths for participation around it.
 
 ## MEARROW's view: a B-side just became a distribution laboratory
 

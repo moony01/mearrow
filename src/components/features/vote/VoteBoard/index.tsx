@@ -13,7 +13,7 @@ import LeagueRankingItem from '@/components/features/league/LeagueRankingItem';
 import { LeagueHeader } from '@/components/features/league/LeagueHeader';
 import type { VotePolicyAdapter } from '@/components/features/VoteController/votePolicy';
 import type { VoteQuotaController } from '@/components/features/VoteController';
-import styles from '@/app/[locale]/page.module.scss';
+import styles from '@/app/(site)/page.module.scss';
 
 export interface VoteControllerRenderProps {
   company: CompanyType | null;

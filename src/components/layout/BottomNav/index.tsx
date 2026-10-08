@@ -18,20 +18,18 @@ import styles from './BottomNav.module.scss';
 export default function BottomNav() {
   const t = useTranslations('Nav');
   const pathname = usePathname();
-  // 현재 locale 추출 (예: /en/my -> 'en')
-  const currentLocale = pathname.split('/')[1] || 'en';
   const { isAuthenticated } = useAuth();
 
   const getHref = (path: string, id: string) => {
-    if (id === 'profile' && !isAuthenticated) return `/${currentLocale}/login`;
-    return `/${currentLocale}${path === '/' ? '' : path}`;
+    if (id === 'profile' && !isAuthenticated) return '/login';
+    return path;
   };
 
   const isActive = (id: string, path: string) => {
     if (id === 'upload') return false;
 
     const targetPath = id === 'profile' && !isAuthenticated ? '/login' : path.split('?')[0];
-    const linkHref = `/${currentLocale}${targetPath === '/' ? '' : targetPath}`;
+    const linkHref = targetPath;
     return pathname === linkHref ||
       (targetPath !== '/' && pathname.startsWith(`${linkHref}/`));
   };

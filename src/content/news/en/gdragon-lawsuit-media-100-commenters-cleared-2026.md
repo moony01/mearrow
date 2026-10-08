@@ -80,4 +80,4 @@ G-Dragon didn't return quietly. What that costs him in terms of ongoing media fr
 
 But one thing is already clear: the era of treating K-pop idol defamation as a cost-free sport may be coming to an end.
 
-[Related: YG's Yang Hyun-suk Returns as Audition Judge — How K-Pop Forgives Its Own](/en/news/yg-yang-hyunsuk-audition-return)
+[Related: YG's Yang Hyun-suk Returns as Audition Judge — How K-Pop Forgives Its Own](/studio/news/yg-yang-hyunsuk-audition-return)

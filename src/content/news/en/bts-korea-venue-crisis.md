@@ -30,7 +30,7 @@ The same Korea Times reporting notes that KSPO Dome and Inspire Arena, the most 
 
 ### What fans saw was not just a sellout. It was a bottleneck.
 
-The Associated Press reported that more than 40,000 fans filled the stadium on opening night despite heavy rain. Demand is not the problem. Capacity concentration is. Even Korea's biggest act faces a sharply limited set of domestic launch options at the very moment the group is trying to move at global-tour scale. For BTS, the constraint is not whether tickets will sell. It is whether the right-sized stage exists when and where the tour needs it. [Related: BTS is back, but China is still missing — the most expensive blank space on the world-tour map](/en/news/bts-china-ban-gap)
+The Associated Press reported that more than 40,000 fans filled the stadium on opening night despite heavy rain. Demand is not the problem. Capacity concentration is. Even Korea's biggest act faces a sharply limited set of domestic launch options at the very moment the group is trying to move at global-tour scale. For BTS, the constraint is not whether tickets will sell. It is whether the right-sized stage exists when and where the tour needs it. [Related: BTS is back, but China is still missing — the most expensive blank space on the world-tour map](/studio/news/bts-china-ban-gap)
 
 ## Why this story is bigger than one BTS headline
 

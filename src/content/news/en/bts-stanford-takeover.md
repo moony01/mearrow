@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-stanford-takeover-thumbnail.webp'
 active: true
 ---
 
-`BTS Stanford Stadium` is about to become the Bay Area's loudest cultural stress test of the week. On May 16, 17, and 19, BTS will bring the `ARIRANG` world tour to Stanford Stadium for three sold-out nights, turning a college football venue into a K-pop destination site. The obvious story is demand. The sharper story is logistics: traffic, transit, ride-share rules, fan projects, local businesses, and a university campus all have to absorb a fandom machine that does not behave like a normal concert crowd. [Related: BTS opened North America with 190,000 fans in Tampa](/en/news/bts-tampa-190k)
+`BTS Stanford Stadium` is about to become the Bay Area's loudest cultural stress test of the week. On May 16, 17, and 19, BTS will bring the `ARIRANG` world tour to Stanford Stadium for three sold-out nights, turning a college football venue into a K-pop destination site. The obvious story is demand. The sharper story is logistics: traffic, transit, ride-share rules, fan projects, local businesses, and a university campus all have to absorb a fandom machine that does not behave like a normal concert crowd. [Related: BTS opened North America with 190,000 fans in Tampa](/studio/news/bts-tampa-190k)
 
 ## BTS Stanford Stadium Is A Three-Night Pressure Test
 

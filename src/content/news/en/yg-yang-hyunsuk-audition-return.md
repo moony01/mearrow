@@ -48,7 +48,7 @@ The explicit mention of "shortened debut preparation" aligns with an industry-wi
 
 The "all nationalities welcome" clause is real. But what comes after document screening is a different story. Relocating to Korea, navigating language barriers, and adapting to K-pop's group-oriented training culture remain steep challenges that YG's announcement does not address. Even with a shorter training timeline, international trainees face an adjustment curve that no shortcut can eliminate.
 
-[Related: What Big 4 Agencies Actually Look for in Trainee Applicants](/en/news/big4-trainee-requirements-attitude)
+[Related: What Big 4 Agencies Actually Look for in Trainee Applicants](/studio/news/big4-trainee-requirements-attitude)
 
 ## MEARROW's Take: YG's Next Generation Bet
 

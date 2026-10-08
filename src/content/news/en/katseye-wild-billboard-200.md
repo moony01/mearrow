@@ -60,7 +60,7 @@ The answers will also determine how other companies approach global girl-group l
 
 MEARROW reads KATSEYE’s `WILD` result as a market signal, not just a record line. The group has moved from a promising global project to a No. 1 album with a sales profile that looks unmistakably fandom-powered. That is the achievement. The uncertainty is what happens next.
 
-KATSEYE’s earlier [Coachella debut](/en/news/katseye-coachella-debut) showed how a K-pop-trained global act could enter an American festival conversation. `WILD` adds the missing commercial measurement: a first-week conversion strong enough to lead the U.S. album chart. The next benchmark is repeatability across weeks, songs, cities, and touring markets.
+KATSEYE’s earlier [Coachella debut](/studio/news/katseye-coachella-debut) showed how a K-pop-trained global act could enter an American festival conversation. `WILD` adds the missing commercial measurement: a first-week conversion strong enough to lead the U.S. album chart. The next benchmark is repeatability across weeks, songs, cities, and touring markets.
 
 For now, the cleanest conclusion is simple. KATSEYE did not merely borrow the language of K-pop. With `WILD`, it demonstrated that the underlying launch machinery can produce a global girl-group No. 1. The industry will be watching to see whether that machinery can keep running after the first celebration ends.
 

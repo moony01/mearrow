@@ -8,7 +8,7 @@ thumbnail: '/images/news/babymonster-choom-100m-thumbnail.webp'
 active: true
 ---
 
-`BABYMONSTER CHOOM 100M` sounds like a clean victory headline. It is not that simple. On May 18 at about 2:50 p.m. KST, the music video for `CHOOM` crossed 100 million YouTube views, roughly 13 days and 21 hours after its May 4 release. The obvious read is that BABYMONSTER has another viral trophy. The sharper read is that YG Entertainment now has a bigger problem: every new BABYMONSTER campaign is being measured against a speed curve most young groups cannot survive. [Related: BABYMONSTER's CHOOM tour exposed YG's real plan](/en/news/babymonster-choom-world-tour)
+`BABYMONSTER CHOOM 100M` sounds like a clean victory headline. It is not that simple. On May 18 at about 2:50 p.m. KST, the music video for `CHOOM` crossed 100 million YouTube views, roughly 13 days and 21 hours after its May 4 release. The obvious read is that BABYMONSTER has another viral trophy. The sharper read is that YG Entertainment now has a bigger problem: every new BABYMONSTER campaign is being measured against a speed curve most young groups cannot survive. [Related: BABYMONSTER's CHOOM tour exposed YG's real plan](/studio/news/babymonster-choom-world-tour)
 
 ## BABYMONSTER CHOOM 100M Is Not Just A YouTube Flex
 

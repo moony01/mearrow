@@ -9,7 +9,7 @@ active: true
 
 A dating rumor can travel for weeks before the person at its center says anything. When Jackson Wang finally addressed the latest seven-year rumor linking him to i-dle's Yuqi, he did not confirm a hidden relationship or leave the question open.[1][2] He denied the speculation, denied the claim that Yuqi had met his parents, and said he is currently single. [1][2]
 
-That makes the responsible headline slightly different from the most clickable one. The story is not that Jackson Wang and Yuqi were secretly together for seven years.[1][2] The story is that an old rumor cycle resurfaced, grew into a new online claim, and received a direct answer from Jackson at a public Hong Kong event. [1][2] [Related: How BTS concert security turned one missing object into industry news](/en/news/bts-wristband-theft)
+That makes the responsible headline slightly different from the most clickable one. The story is not that Jackson Wang and Yuqi were secretly together for seven years.[1][2] The story is that an old rumor cycle resurfaced, grew into a new online claim, and received a direct answer from Jackson at a public Hong Kong event. [1][2] [Related: How BTS concert security turned one missing object into industry news](/studio/news/bts-wristband-theft)
 
 ## The Question Arrived at Ocean Park
 

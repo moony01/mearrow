@@ -62,5 +62,8 @@ wrangler.jsonc.local
 # Local git worktrees
 .worktrees/
 
+# Local browser verification evidence
+/.playwright-mcp/
+
 # Supabase CLI local link metadata (may contain connection details)
 supabase/.temp/

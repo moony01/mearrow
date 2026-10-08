@@ -16,7 +16,7 @@
  */
 
 import { useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import styles from './AuthGuard.module.scss';
 
@@ -27,15 +27,13 @@ interface AuthGuardProps {
 export default function AuthGuard({ children }: AuthGuardProps) {
   const { isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
-  const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'en';
 
   useEffect(() => {
     // 로딩 완료 후 미인증 상태면 로그인 페이지로 리다이렉트
     if (!isLoading && !isAuthenticated) {
-      router.replace(`/${locale}/login`);
+      router.replace(`/login`);
     }
-  }, [isLoading, isAuthenticated, router, locale]);
+  }, [isLoading, isAuthenticated, router]);
 
   // 로딩 중: 스피너 표시
   if (isLoading) {

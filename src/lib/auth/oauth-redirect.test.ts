@@ -1,5 +1,4 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { DEFAULT_LOCALE } from '@/lib/constants';
 import { getOAuthCallbackUrl } from './oauth-redirect';
 
 vi.hoisted(() => {
@@ -11,22 +10,22 @@ describe('getOAuthCallbackUrl', () => {
     vi.unstubAllEnvs();
   });
 
-  it('uses the canonical site URL and locale in production', () => {
+  it('uses the canonical locale-free callback URL in production', () => {
     vi.stubEnv('NODE_ENV', 'production');
 
-    expect(getOAuthCallbackUrl('ko')).toBe('https://mearrow.com/ko/auth/callback');
+    expect(getOAuthCallbackUrl('ko')).toBe('https://mearrow.com/auth/callback');
   });
 
   it('uses the current browser origin in development', () => {
     vi.stubEnv('NODE_ENV', 'development');
 
     expect(new URL(getOAuthCallbackUrl('en')).origin).toBe(window.location.origin);
-    expect(new URL(getOAuthCallbackUrl('en')).pathname).toBe('/en/auth/callback');
+    expect(new URL(getOAuthCallbackUrl('en')).pathname).toBe('/auth/callback');
   });
 
   it('preserves supported OAuth callback query parameters', () => {
     vi.stubEnv('NODE_ENV', 'production');
-    const returnTo = 'https://mearrow.com/ko/news?tab=latest&sort=desc';
+    const returnTo = 'https://mearrow.com/news?tab=latest&sort=desc';
 
     const loginCallback = getOAuthCallbackUrl('ko', { returnTo });
     const signupCallback = getOAuthCallbackUrl('ko', { flow: 'signup' });
@@ -35,12 +34,12 @@ describe('getOAuthCallbackUrl', () => {
     expect(new URL(signupCallback).searchParams.get('flow')).toBe('signup');
   });
 
-  it('falls back to the default locale for a malformed locale', () => {
+  it('ignores locale values in the callback path', () => {
     vi.stubEnv('NODE_ENV', 'production');
 
     const redirect = new URL(getOAuthCallbackUrl('//attacker'));
 
     expect(redirect.origin).toBe('https://mearrow.com');
-    expect(redirect.pathname).toBe(`/${DEFAULT_LOCALE}/auth/callback`);
+    expect(redirect.pathname).toBe('/auth/callback');
   });
 });

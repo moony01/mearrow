@@ -7,7 +7,7 @@ thumbnail: '/images/news/hybe-abd-girlgroup-bet-thumbnail.webp'
 active: true
 ---
 
-`HYBE ABD` did not arrive like a normal rookie announcement. On May 8, HYBE confirmed a new label dedicated to girl group production, with its first act planned for the second half of 2026. That is the official headline. The sharper story is what the timing exposes: HYBE is not only preparing another debut. It is building a separate operating room for girl-group IP at the exact moment when every part of its multi-label system is being judged more aggressively by fans, investors, and competitors. [Related: HYBE's Q1 red ink made the BTS comeback harder to read](/en/news/hybe-q1-red-ink)
+`HYBE ABD` did not arrive like a normal rookie announcement. On May 8, HYBE confirmed a new label dedicated to girl group production, with its first act planned for the second half of 2026. That is the official headline. The sharper story is what the timing exposes: HYBE is not only preparing another debut. It is building a separate operating room for girl-group IP at the exact moment when every part of its multi-label system is being judged more aggressively by fans, investors, and competitors. [Related: HYBE's Q1 red ink made the BTS comeback harder to read](/studio/news/hybe-q1-red-ink)
 
 ## HYBE ABD Is A Label, Not Just A Debut Notice
 

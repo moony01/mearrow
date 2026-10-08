@@ -7,7 +7,7 @@ thumbnail: "/images/news/mma-two-day-gamble-thumbnail.webp"
 active: true
 ---
 
-`MMA 2026` is no longer behaving like a single-night award show. Kakao Entertainment has turned the 2026 Melon Music Awards into a two-day event, and that calendar change is bigger than a scheduling note. It asks whether Korea’s most data-linked music awards brand can become a weekend-scale fan event: part ceremony, part livestream spectacle, part global fandom gathering. [Related: Gov Ball's K-pop weekend showed why festival scale now matters](/en/news/gov-ball-kpop-weekend)
+`MMA 2026` is no longer behaving like a single-night award show. Kakao Entertainment has turned the 2026 Melon Music Awards into a two-day event, and that calendar change is bigger than a scheduling note. It asks whether Korea’s most data-linked music awards brand can become a weekend-scale fan event: part ceremony, part livestream spectacle, part global fandom gathering. [Related: Gov Ball's K-pop weekend showed why festival scale now matters](/studio/news/gov-ball-kpop-weekend)
 
 ## The One-Night Award Show Just Became A Weekend
 

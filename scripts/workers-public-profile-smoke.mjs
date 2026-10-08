@@ -84,21 +84,21 @@ try {
     }],
   }));
 
-  for (const locale of ['en', 'ko']) {
-    const response = await mf.dispatchFetch(`https://mearrow.com/${locale}/profile/ssr-fixture`);
+  {
+    const response = await mf.dispatchFetch('https://mearrow.com/profile/ssr-fixture');
     const html = await response.text();
-    assert.equal(response.status, 200, `${locale} profile must not return a production 500`);
+    assert.equal(response.status, 200, 'locale-free profile must not return a production 500');
     for (const value of [biography, caption, activityTitle]) {
-      assert.ok(html.includes(value), `${locale} first HTML must include public profile content`);
+      assert.ok(html.includes(value), 'first HTML must include public profile content');
     }
     assert.ok(!html.includes(canary), 'Private fixture content must never be serialized');
     assert.ok(html.includes('noindex'), 'Existing public-profile indexing policy must remain');
-    const missing = await mf.dispatchFetch(`https://mearrow.com/${locale}/profile/missing-fixture`);
+    const missing = await mf.dispatchFetch('https://mearrow.com/profile/missing-fixture');
     assert.equal(missing.status, 404, 'Confirmed missing profiles must return 404');
   }
   assert.ok(reads.some((r) => r.path === '/rest/v1/profile_posts' && r.filters.limit === '12'));
   assert.ok(reads.some((r) => r.path === '/rest/v1/profile_activities' && r.filters.limit === '20'));
-  console.log('Production Worker public-profile regression PASS: EN/KO SSR, missing 404, public filters; external requests intercepted.');
+  console.log('Production Worker public-profile regression PASS: locale-free SSR, missing 404, public filters; external requests intercepted.');
   if (previewPort) {
     await mf.ready;
     console.log(`Verified production bundle available for browser gate on port ${previewPort}`);

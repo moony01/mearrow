@@ -74,4 +74,4 @@ Getting industry attention has already happened. The harder part comes next.
 
 Lee Soo-man's return is now the most closely watched project in the K-pop industry. When A2O Enter Korea's first boy group takes the stage, the power map will be redrawn — again.
 
-[Related: YG's Yang Hyun-suk Holds First Public Audition in 30 Years](/en/news/yg-yang-hyunsuk-audition-return)
+[Related: YG's Yang Hyun-suk Holds First Public Audition in 30 Years](/studio/news/yg-yang-hyunsuk-audition-return)

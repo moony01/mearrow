@@ -8,7 +8,7 @@
 
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import type { YearlyWinCount } from '@/types/hall-of-fame';
 import { getCompanyLogoBackground, getCompanyLogoUrl } from '@/lib/company-logos';
@@ -23,14 +23,13 @@ interface CurrentRaceChartProps {
 
 export default function CurrentRaceChart({ year, data }: CurrentRaceChartProps) {
   const t = useTranslations('HallOfFame');
-  const locale = useLocale();
   const leaders = data.slice(0, 3);
 
   return (
     <section className={styles.container}>
       <header className={styles.header}>
         <h2 className={styles.title}>{t('title_race', { year })}</h2>
-        <Link href={`/${locale}`} className={styles.voteCta}>
+        <Link href={`/`} className={styles.voteCta}>
           <span>{t('vote_cta')}</span>
           <span aria-hidden="true">→</span>
         </Link>

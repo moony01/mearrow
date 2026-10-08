@@ -1,0 +1,104 @@
+- generic [active] [ref=e1] [box=0,0,1425,1000]:
+  - generic [ref=e2] [box=0,0,1425,2757]:
+    - complementary "주요 메뉴" [ref=e4] [box=0,0,244,1000]:
+      - link "MEARROW (미로우) 홈" [ref=e6] [cursor=pointer] [box=18,28,209,40]:
+        - /url: /en
+        - img "MEARROW 로고" [ref=e8] [box=18,28,40,40]
+        - generic [ref=e352] [box=63,31,164,35]: MEARROW
+      - navigation "사이트 탐색" [ref=e9] [box=14,94,215,770]:
+        - list [ref=e10] [box=14,94,215,50]:
+          - listitem [ref=e11] [box=14,94,215,50]:
+            - link "Home" [ref=e12] [cursor=pointer] [box=14,94,215,50]:
+              - /url: /en
+      - generic [ref=e17] [box=14,864,215,116]:
+        - link "Settings" [ref=e19] [cursor=pointer] [box=14,864,215,50]:
+          - /url: /en/settings
+        - link "Login" [ref=e25] [cursor=pointer] [box=14,930,215,50]:
+          - /url: /en/login
+    - main [ref=e30] [box=244,0,1181,2757]:
+      - main [ref=e356] [box=280,20,1109,2555]:
+        - generic [ref=e358] [box=280,68,403,106]:
+          - paragraph [ref=e359] [box=280,68,403,13]: MEARROW
+          - heading "News & Insights" [level=1] [ref=e365] [box=318,91,332,46]
+          - paragraph [ref=e366] [box=280,149,403,25]: Latest trends and analysis reports on the K-Pop industry
+        - generic [ref=e367] [box=280,227,1109,2275]:
+          - generic [ref=e368] [box=280,227,1109,32]:
+            - button "All" [pressed] [ref=e369] [cursor=pointer] [box=280,227,54,32]
+            - button "Artist" [ref=e370] [cursor=pointer] [box=342,227,72,32]
+            - button "Industry" [ref=e371] [cursor=pointer] [box=421,227,89,32]
+            - button "Market Trend" [ref=e372] [cursor=pointer] [box=519,227,121,32]
+            - button "Tech & Culture" [ref=e373] [cursor=pointer] [box=648,227,129,32]
+            - button "Business" [ref=e374] [cursor=pointer] [box=785,227,94,32]
+            - button "Trainee System" [ref=e375] [cursor=pointer] [box=887,227,134,32]
+            - button "Industry Analysis" [ref=e376] [cursor=pointer] [box=1029,227,145,32]
+            - button "News" [ref=e377] [cursor=pointer] [box=1183,227,73,32]
+            - button "Exclusive" [ref=e378] [cursor=pointer] [box=1264,227,97,32]
+            - button "Company News" [ref=e379] [cursor=pointer] [box=1368,227,136,32]
+          - link "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter Artist T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter T.O.P and Nana confirmed their relationship on Oct. 2, months after meeting through the Studio54 music video. Oct 8, 2026 Sources (6) 2 views" [ref=e619] [cursor=pointer] [box=280,303,356,417]:
+            - /url: /en/news/top-nana-dating-studio54
+            - img "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter" [ref=e382] [box=281,304,354,199]
+            - generic [ref=e383] [box=281,504,354,216]
+          - link "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Artist Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Jackson Wang directly denied the seven-year Yuqi dating rumor at a Hong Kong event. The confirmed story is the denial, not the speculation. Sep 30, 2026 Sources (6) 59 views" [ref=e625] [cursor=pointer] [box=656,303,356,417]:
+            - /url: /en/news/jackson-yuqi-rumor-denial
+            - img "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines" [ref=e403] [box=657,304,354,199]
+            - generic [ref=e404] [box=657,504,354,216]
+          - link "Why BIGHIT MUSIC Is Going to 15 Cities for One Audition Trainee System Why BIGHIT MUSIC Is Going to 15 Cities for One Audition BIGHIT MUSIC's 2026 audition spans 15 cities. The map is less a promise of the next BTS than a global talent-funnel test. Sep 27, 2026 Sources (6) 17 views" [ref=e631] [cursor=pointer] [box=1033,303,356,417]:
+            - /url: /en/news/bighit-15-city-audition
+            - img "Why BIGHIT MUSIC Is Going to 15 Cities for One Audition" [ref=e424] [box=1034,304,354,199]
+            - generic [ref=e425] [box=1034,504,354,216]
+          - insertion [ref=e445] [box=471,780,728,280]:
+            - iframe [ref=e447] [box=471,780,728,280]:
+
+          - 'link "ATEEZ''s San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke Artist ATEEZ''s San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke A friendship tattoo joke revived dating speculation around ATEEZ''s San and Wooyoung. San answered directly: they are close friends. Sep 23, 2026 Sources (2) 19 views" [ref=e637] [cursor=pointer] [box=280,1120,356,417]':
+            - /url: /en/news/ateez-san-wooyoung-dating-rumor
+            - img "ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke" [ref=e450] [box=281,1121,354,199]
+            - generic [ref=e451] [box=281,1320,354,216]
+          - link "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math Market Trend KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math KATSEYE's WILD opened at No. 1 on the Billboard 200 with 170,000 units. Its sales-heavy mix shows how global girl groups are scaling. Aug 30, 2026 Sources (7) 29 views" [ref=e643] [cursor=pointer] [box=656,1120,356,417]:
+            - /url: /en/news/katseye-wild-billboard-200
+            - img "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math" [ref=e471] [box=657,1121,354,199]
+            - generic [ref=e472] [box=657,1320,354,216]
+          - link "80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test Market Trend 80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test BTS brings the ARIRANG tour to Arlington on August 15 and 16. The two-night AT&T Stadium stop tests whether a post-hiatus comeback can scale. Aug 16, 2026 Sources (6) 99 views" [ref=e649] [cursor=pointer] [box=1033,1120,356,417]:
+            - /url: /en/news/bts-arlington-stadium-test
+            - img "80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test" [ref=e492] [box=1034,1121,354,199]
+            - generic [ref=e493] [box=1034,1320,354,216]
+          - link "‘Gangnam Style’ Hit 6 Billion Views — and K-pop Still Measures Itself Against PSY Tech & Culture ‘Gangnam Style’ Hit 6 Billion Views — and K-pop Still Measures Itself Against PSY PSY’s ‘Gangnam Style’ is the first K-pop video past 6 billion YouTube views. Fourteen years on, its longevity still defines global reach. Jul 21, 2026 Sources (3) 617 views" [ref=e655] [cursor=pointer] [box=280,1557,356,417]:
+            - /url: /en/news/gangnam-style-6-billion
+            - img "‘Gangnam Style’ Hit 6 Billion Views — and K-pop Still Measures Itself Against PSY" [ref=e513] [box=281,1558,354,199]
+            - generic [ref=e514] [box=281,1757,354,216]
+          - link "A Bathroom Ad, a Two-Day Window — BTS Just Made Spotify the Comeback Gatekeeper Tech & Culture A Bathroom Ad, a Two-Day Window — BTS Just Made Spotify the Comeback Gatekeeper BTS will debut the ‘Normal’ video on Spotify before wider release. The two-day window turns fandom urgency into a platform experiment. Jul 16, 2026 Sources (6) 86 views" [ref=e661] [cursor=pointer] [box=656,1557,356,417]:
+            - /url: /en/news/bts-normal-spotify-window
+            - img "A Bathroom Ad, a Two-Day Window — BTS Just Made Spotify the Comeback Gatekeeper" [ref=e534] [box=657,1558,354,199]
+            - generic [ref=e535] [box=657,1757,354,216]
+          - link "When Does a BTS London Concert Become a City Takeover? Artist When Does a BTS London Concert Become a City Takeover? Live Nation reported 130,000 in aggregate attendance across two BTS London concert nights. The bigger story was the citywide cultural lift. Jul 14, 2026 Sources (4) 64 views" [ref=e667] [cursor=pointer] [box=1033,1557,356,417]:
+            - /url: /en/news/bts-london-stadium-record
+            - img "When Does a BTS London Concert Become a City Takeover?" [ref=e555] [box=1034,1558,354,199]
+            - generic [ref=e556] [box=1034,1757,354,216]
+          - link "49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked Market Trend 49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked K-pop album sales hit 49.53M in H1 2026. BTS helped, but the bigger shock is how many acts now sell at million scale. Jul 9, 2026 Sources (5) 89 views" [ref=e673] [cursor=pointer] [box=280,1994,356,417]:
+            - /url: /en/news/kpop-album-sales-record
+            - img "49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked" [ref=e576] [box=281,1995,354,199]
+            - generic [ref=e577] [box=281,2194,354,216]
+          - navigation "News pagination" [ref=e595] [box=280,2455,1109,40]:
+            - list [ref=e596] [box=631,2455,408,40]
+      - generic [ref=e244] [box=264,2635,1141,83]:
+        - paragraph [ref=e248] [box=303,2648,942,17]: This is an unofficial fan-made application. All company logos and artist information are property of their respective owners. This app is not affiliated with any entertainment company.
+        - generic [ref=e249] [box=281,2672,1107,12]:
+          - link "Terms of Service" [ref=e250] [cursor=pointer] [box=303,2672,97,12]:
+            - /url: /en/terms
+          - generic [ref=e255] [box=408,2672,3,12]: "|"
+          - link "Privacy Policy" [ref=e256] [cursor=pointer] [box=419,2672,82,12]:
+            - /url: /en/privacy
+          - generic [ref=e260] [box=509,2672,3,12]: "|"
+          - link "About MEARROW" [ref=e261] [cursor=pointer] [box=520,2672,99,12]:
+            - /url: /en/about
+          - generic [ref=e266] [box=628,2672,3,12]: "|"
+          - link "FAQ" [ref=e267] [cursor=pointer] [box=639,2672,35,12]:
+            - /url: /en/faq
+          - generic [ref=e271] [box=682,2672,3,12]: "|"
+          - link "Editorial standards" [ref=e272] [cursor=pointer] [box=694,2672,104,12]:
+            - /url: /en/editorial
+        - paragraph [ref=e276] [box=281,2692,1107,12]: © 2026 MEARROW. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e311] [cursor=pointer] [box=22,946,32,32]
+  - alert [ref=e315] [box=-1,2756,1,1]: News & Insights | MEARROW
+  - generic [ref=e340] [box=688,958,50,26]:
+    - button "Copy element" [ref=e345] [cursor=pointer] [box=696,964,14,14]
+    - button "Collapse toolbar" [expanded] [ref=e349] [cursor=pointer] [box=716,964,14,14]

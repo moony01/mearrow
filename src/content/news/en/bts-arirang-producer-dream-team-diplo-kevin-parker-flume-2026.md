@@ -89,4 +89,4 @@ At the origin of all of it: eight producers from eight different musical univers
 
 BTS has written K-pop history. Now they're aiming for pop history.
 
-[Related: BTS ARIRANG Animation Trailer — The 130-Year Connection to 7 Korean Students at Howard University](/en/news/bts-arirang-trailer-1896-howard-seven-koreans-2026)
+[Related: BTS ARIRANG Animation Trailer — The 130-Year Connection to 7 Korean Students at Howard University](/studio/news/bts-arirang-trailer-1896-howard-seven-koreans-2026)

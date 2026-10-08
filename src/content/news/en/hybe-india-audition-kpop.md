@@ -25,7 +25,7 @@ HYBE has already run this experiment twice. First in Japan: **&TEAM**, born thro
 
 Critically, KATSEYE includes **Lara Raj**, a member of Indian descent. An Indian-origin artist in a global K-pop group is proof of concept — proof that K-pop stars can come from India.
 
-[Related: The Reality of Foreign Trainees — Visas, Language Barriers, and Cultural Survival](/en/news/foreign-trainee-reality-visa-culture)
+[Related: The Reality of Foreign Trainees — Visas, Language Barriers, and Cultural Survival](/studio/news/foreign-trainee-reality-visa-culture)
 
 ## Samsung, Nongshim, H&M — Why Are Corporations Lining Up for an Audition?
 
@@ -63,7 +63,7 @@ Breaking that down:
 
 The crucial point: **selected artists may not need to move to Korea at all.** The essence of the multi-home strategy isn't "make in Korea, export everywhere" — it's **"create locally, launch locally."** Just as &TEAM operates in Japan performing in Japanese, artists from India could debut in India performing in Hindi or English.
 
-[Related: 2026 K-Pop Audition Calendar & Guide](/en/news/2026-kpop-audition-guide)
+[Related: 2026 K-Pop Audition Calendar & Guide](/studio/news/2026-kpop-audition-guide)
 
 ## MEARROW's Take: Is K-Pop Still 'Korean'?
 

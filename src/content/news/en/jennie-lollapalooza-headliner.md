@@ -7,7 +7,7 @@ thumbnail: '/images/news/jennie-lollapalooza-headliner-thumbnail.webp'
 active: true
 ---
 
-Fans reacted faster than the headline itself. First came the shock: "Jennie is headlining Lolla?" Then came the second read: this is not just another overseas booking. The real signal behind `Jennie Lollapalooza Chicago` is simple. A major U.S. festival is no longer treating K-pop as a side-stage curiosity. It is willing to place a K-pop soloist near the very top of the poster. [Related: Why BLACKPINK’s return matters now](/en/news/blackpink-deadline-ep-record-sales-yg-2026)
+Fans reacted faster than the headline itself. First came the shock: "Jennie is headlining Lolla?" Then came the second read: this is not just another overseas booking. The real signal behind `Jennie Lollapalooza Chicago` is simple. A major U.S. festival is no longer treating K-pop as a side-stage curiosity. It is willing to place a K-pop soloist near the very top of the poster. [Related: Why BLACKPINK’s return matters now](/studio/news/blackpink-deadline-ep-record-sales-yg-2026)
 
 ## The keyword that matters is headliner
 

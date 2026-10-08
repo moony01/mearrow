@@ -23,7 +23,7 @@ The sharper headline is that BTS became the first K-pop act to top the `Billboar
 
 ### Chart strength and live demand are hitting at the same moment
 
-`ARIRANG` is not only performing on charts. AP reported that BTS opened its new world tour in Goyang on April 9, 2026, while Weverse posted detailed notices for on-site merchandise sales, pickup, and sound check windows running from April 8 to April 12. That overlap matters. When week-two chart strength lands at the same time as stadium demand and venue commerce, album consumption starts converting directly into ticketing, merch, and city-level spending. [Related: Gwanghwamun Was the Teaser — What BTS Opened in Seoul Is Bigger Than a Tour](/en/news/bts-seoul-tour-kickoff)
+`ARIRANG` is not only performing on charts. AP reported that BTS opened its new world tour in Goyang on April 9, 2026, while Weverse posted detailed notices for on-site merchandise sales, pickup, and sound check windows running from April 8 to April 12. That overlap matters. When week-two chart strength lands at the same time as stadium demand and venue commerce, album consumption starts converting directly into ticketing, merch, and city-level spending. [Related: Gwanghwamun Was the Teaser — What BTS Opened in Seoul Is Bigger Than a Tour](/studio/news/bts-seoul-tour-kickoff)
 
 ![An editorial chart room visualizing BTS holding No. 1 on Billboard 200 for a second week](/images/news/bts-billboard-two-weeks-1.webp)
 _When chart durability and live demand move together, an album stops being just a release and starts acting like a market engine._

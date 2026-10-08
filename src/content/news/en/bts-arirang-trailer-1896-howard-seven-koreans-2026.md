@@ -84,4 +84,4 @@ The seven in 1896 sang not knowing if anyone would ever listen. The seven in 202
 
 That is what Arirang means, 130 years later.
 
-[Related: BTS 'ARIRANG' Comeback: Gwanghwamun Concert, Netflix Stream, and Ticket Scalping Crisis](/en/news/bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026)
+[Related: BTS 'ARIRANG' Comeback: Gwanghwamun Concert, Netflix Stream, and Ticket Scalping Crisis](/studio/news/bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026)

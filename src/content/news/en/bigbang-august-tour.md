@@ -7,7 +7,7 @@ thumbnail: "/images/news/bigbang-august-tour-thumbnail.webp"
 active: true
 ---
 
-"BIGBANG's 20th anniversary world tour begins in August." The moment G-Dragon said that on the Coachella stage, fan timelines stopped talking about stage outfits and started talking about dates. That shift is the real story. YG had already floated anniversary-tour plans in March, but a company roadmap and a festival-stage declaration do not carry the same weight. This `BIGBANG world tour` update should be read as the moment a long-rumored idea turned into a live public commitment. [Related: BIGBANG Returns…YG's 2026 Master Plan Goes From Coachella to a 20th Anniversary World Tour](/en/news/yg-bigbang-20th-anniversary-world-tour-2026)
+"BIGBANG's 20th anniversary world tour begins in August." The moment G-Dragon said that on the Coachella stage, fan timelines stopped talking about stage outfits and started talking about dates. That shift is the real story. YG had already floated anniversary-tour plans in March, but a company roadmap and a festival-stage declaration do not carry the same weight. This `BIGBANG world tour` update should be read as the moment a long-rumored idea turned into a live public commitment. [Related: BIGBANG Returns…YG's 2026 Master Plan Goes From Coachella to a 20th Anniversary World Tour](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## Why the word "August" landed harder than the March rollout
 
@@ -40,7 +40,7 @@ BIGBANG debuted in August 2006, so launching a tour in August 2026 is more than 
 
 ### This is also a live test of YG's legacy strategy
 
-The story does not stop with BIGBANG alone. YG has already spread its 2026 board across BLACKPINK, BABYMONSTER, TREASURE, and a new boy group pipeline. If BIGBANG can still reopen the premium live-market conversation in August, then YG gets reclassified from a company preserving old glory to one that can still cash in on legacy IP at scale. [Related: Coachella 2026 Wasn't Just About K-Pop Showing Up — It Was About K-Pop Changing the Weight of the Stage](/en/news/coachella-2026-kpop-takeover)
+The story does not stop with BIGBANG alone. YG has already spread its 2026 board across BLACKPINK, BABYMONSTER, TREASURE, and a new boy group pipeline. If BIGBANG can still reopen the premium live-market conversation in August, then YG gets reclassified from a company preserving old glory to one that can still cash in on legacy IP at scale. [Related: Coachella 2026 Wasn't Just About K-Pop Showing Up — It Was About K-Pop Changing the Weight of the Stage](/studio/news/coachella-2026-kpop-takeover)
 
 ## MEARROW's View on BIGBANG's August Tour
 

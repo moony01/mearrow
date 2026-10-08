@@ -92,7 +92,7 @@ A 10-city arena tour delivers value far beyond ticket revenue:
 3. **Sponsorships**: US arena tours in major cities open doors to global brand deals
 4. **Next-gen launchpad**: i-dle's success becomes a marketing asset for CUBE's future groups
 
-[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](/en/news/yg-bigbang-20th-anniversary-world-tour-2026)
+[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## The 2026 K-pop Girl Group Tour Wars
 

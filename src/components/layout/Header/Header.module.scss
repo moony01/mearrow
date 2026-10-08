@@ -4,7 +4,7 @@
  * 헤더 컴포넌트 스타일
  * 
  * 구조:
- * - 모바일(<=768px): 로고/설정 컨트롤을 제공하는 sticky header
+ * - 모바일(<=768px): 로고/더보기 컨트롤을 제공하는 sticky header
  * - 태블릿·데스크톱(769px+): 좌측 Sidebar를 사용하므로 상단 헤더는 숨김
  */
 
@@ -89,7 +89,7 @@
   margin: 0;
 }
 
-// 컨트롤 영역 (설정)
+// 컨트롤 영역 (더보기)
 .controls {
   display: flex;
   align-items: center;
@@ -97,27 +97,108 @@
   margin-left: auto; // 항상 우측 정렬
 }
 
-// 설정 페이지 진입 버튼
-.settingsLink {
+.menuButton,
+.drawerClose {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  gap: 8px;
-  padding: 8px 12px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   border: 1px solid rgba($color-text, 0.12);
   border-radius: 12px;
   background: var(--color-surface-muted);
   color: $color-text;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  backdrop-filter: blur(10px);
+  cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &:hover,
   &:focus-visible {
     border-color: rgba($color-primary, 0.35);
+    background: $color-hover-surface;
+    color: $color-primary;
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba($color-focus, 0.25);
+    outline-offset: 2px;
+  }
+}
+
+.drawerLayer {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+}
+
+.drawerBackdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: rgba(7, 10, 20, 0.42);
+  cursor: pointer;
+}
+
+.drawer {
+  position: absolute;
+  top: calc(68px + env(safe-area-inset-top, 0px));
+  right: 12px;
+  width: min(320px, calc(100% - 24px));
+  padding: 16px;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 2px 12px;
+  border-bottom: 1px solid $color-border;
+
+  h2 {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-display;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+}
+
+.drawerClose {
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
+  border-radius: 10px;
+}
+
+.drawerList {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawerLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: $color-text;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
     background: $color-hover-surface;
     color: $color-primary;
   }
@@ -177,24 +258,10 @@
   .headerInner {
     padding-inline: 12px;
   }
-
-  .settingsLink {
-    padding-inline: 10px;
-    font-size: 0.78rem;
-  }
 }
 
 @media (max-width: 360px) {
   .logoText {
     display: none;
-  }
-
-  .settingsLink span {
-    display: none;
-  }
-
-  .settingsLink {
-    width: 44px;
-    padding-inline: 0;
   }
 }

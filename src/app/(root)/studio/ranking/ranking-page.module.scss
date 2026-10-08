@@ -1,0 +1,36 @@
+@use '../../../../styles/abstracts/variables' as *;
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 16px 56px;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: $color-primary;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.title {
+  margin: 0;
+  color: $color-text;
+  font-family: $font-display;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 850;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: $color-text-dim;
+  font-size: 0.9rem;
+}

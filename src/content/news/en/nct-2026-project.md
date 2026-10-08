@@ -27,7 +27,7 @@ Mark's April 3 exit from SM and NCT made one kind of break visible. Ten's April 
 
 ### NCT Wish is being positioned as the front door
 
-The placement of NCT Wish is especially revealing. The Korea Times and Korea JoongAng Daily both highlighted the group's April 20 full-length release, `Ode to Love`, as the early anchor of the year's NCT schedule. That suggests SM is not hiding its generational handoff. The company is protecting legacy value while letting the newest, fastest-scaling unit open the year's first major chapter. [Related: How the fandom economy keeps expanding](/en/news/fandom-economy)
+The placement of NCT Wish is especially revealing. The Korea Times and Korea JoongAng Daily both highlighted the group's April 20 full-length release, `Ode to Love`, as the early anchor of the year's NCT schedule. That suggests SM is not hiding its generational handoff. The company is protecting legacy value while letting the newest, fastest-scaling unit open the year's first major chapter. [Related: How the fandom economy keeps expanding](/studio/news/fandom-economy)
 
 ![A futuristic exhibition space inspired by the NCT 2026 anniversary project](/images/news/nct-2026-project-1.webp)
 _The real product behind NCT 2026 may be time spent inside the brand, not just a single album cycle._

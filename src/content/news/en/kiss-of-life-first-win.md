@@ -7,7 +7,7 @@ thumbnail: "/images/news/kiss-of-life-first-win-thumbnail.webp"
 active: true
 ---
 
-The night KISS OF LIFE got their first music show trophy, the timeline did not turn into pure celebration. On April 16, the `KISS OF LIFE first win` headline arrived with applause, re-evaluation, and lingering discomfort all at once. That is why this story is bigger than one trophy. `Who is she`, released on April 6, was not only the group's first Korean comeback in 10 months. It was their first major test of how far they had actually moved back inside public trust after the cultural-insensitivity controversy that reshaped the way many people read their name in 2025. [Related: What happens when K-pop fandom turns into measurable economics](/en/news/fandom-economy)
+The night KISS OF LIFE got their first music show trophy, the timeline did not turn into pure celebration. On April 16, the `KISS OF LIFE first win` headline arrived with applause, re-evaluation, and lingering discomfort all at once. That is why this story is bigger than one trophy. `Who is she`, released on April 6, was not only the group's first Korean comeback in 10 months. It was their first major test of how far they had actually moved back inside public trust after the cultural-insensitivity controversy that reshaped the way many people read their name in 2025. [Related: What happens when K-pop fandom turns into measurable economics](/studio/news/fandom-economy)
 
 ## The trophy arrived late, but the timing was almost too perfect
 

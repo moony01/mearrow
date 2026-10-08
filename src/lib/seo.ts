@@ -1,14 +1,13 @@
 /**
  * SEO 유틸리티 함수
  *
- * canonical URL 및 hreflang alternates 생성
- * 다국어 페이지의 중복 콘텐츠 문제 해결을 위한 핵심 유틸리티
+ * locale-free canonical URL 및 hreflang alternates 생성
  *
  * @see https://developers.google.com/search/docs/specialty/international/localized-versions
  */
 
 import { Metadata } from 'next';
-import { FULL_URL, SUPPORTED_LOCALES, DEFAULT_LOCALE } from './constants';
+import { DEFAULT_LOCALE, FULL_URL } from './constants';
 import { BRAND_NAME } from './brand';
 
 /**
@@ -21,25 +20,10 @@ import { BRAND_NAME } from './brand';
  */
 export function generateAlternateLanguages(
   pathname: string = '',
-  availableLocales: readonly string[] = SUPPORTED_LOCALES,
-  defaultLocale: string = DEFAULT_LOCALE,
+  locale: string = DEFAULT_LOCALE,
 ): Record<string, string> {
-  const languages: Record<string, string> = {};
-
-  // 지원 로케일에 대한 hreflang 생성
-  for (const locale of availableLocales) {
-    if (!SUPPORTED_LOCALES.includes(locale as typeof SUPPORTED_LOCALES[number])) continue;
-    languages[locale] = `${FULL_URL}/${locale}${pathname}`;
-  }
-
-  const resolvedDefaultLocale = availableLocales.includes(defaultLocale)
-    ? defaultLocale
-    : availableLocales.find((locale) =>
-        SUPPORTED_LOCALES.includes(locale as typeof SUPPORTED_LOCALES[number]),
-      ) || DEFAULT_LOCALE;
-  languages['x-default'] = `${FULL_URL}/${resolvedDefaultLocale}${pathname}`;
-
-  return languages;
+  const canonical = `${FULL_URL}${pathname || '/'}`;
+  return { [locale]: canonical, 'x-default': canonical };
 }
 
 /**
@@ -51,8 +35,8 @@ export function generateAlternateLanguages(
  * @param pathname - 경로 (예: '', '/news', '/hall-of-fame')
  * @returns canonical URL
  */
-export function generateCanonicalUrl(locale: string, pathname: string = ''): string {
-  return `${FULL_URL}/${locale}${pathname}`;
+export function generateCanonicalUrl(_locale: string, pathname: string = ''): string {
+  return `${FULL_URL}${pathname || '/'}`;
 }
 
 /**
@@ -67,12 +51,10 @@ export function generateCanonicalUrl(locale: string, pathname: string = ''): str
 export function generateAlternates(
   locale: string,
   pathname: string = '',
-  availableLocales: readonly string[] = SUPPORTED_LOCALES,
-  defaultLocale: string = DEFAULT_LOCALE,
 ): Metadata['alternates'] {
   return {
     canonical: generateCanonicalUrl(locale, pathname),
-    languages: generateAlternateLanguages(pathname, availableLocales, defaultLocale),
+    languages: generateAlternateLanguages(pathname, locale),
   };
 }
 
@@ -126,9 +108,9 @@ export interface PageMetadataOptions {
   title: string;
   description: string;
   pathname?: string;
-  /** Locales with an actual translation for this page. */
+  /** @deprecated Public pages now expose one locale-free URL per pathname. */
   availableLocales?: readonly string[];
-  /** Locale used by x-default when availableLocales is restricted. */
+  /** @deprecated Public pages now expose one locale-free URL per pathname. */
   defaultLocale?: string;
   imagePath?: string;
   type?: 'website' | 'article';
@@ -151,35 +133,21 @@ export function generatePageMetadata({
   title,
   description,
   pathname = '',
-  availableLocales = SUPPORTED_LOCALES,
-  defaultLocale = DEFAULT_LOCALE,
   imagePath,
   type = 'website',
   publishedTime,
   modifiedTime,
 }: PageMetadataOptions): Metadata {
   const canonical = generateCanonicalUrl(locale, pathname);
-  const imageUrl = absoluteSeoUrl(imagePath || `/${locale}/opengraph-image`);
+  const imageUrl = absoluteSeoUrl(imagePath || '/opengraph-image');
   const finalTitle = truncateSeoTitle(title);
   const finalDescription = truncateSeoText(description, SEO_DESCRIPTION_MAX_LENGTH);
-  const alternateLocales = availableLocales.filter(
-    (supportedLocale) =>
-      supportedLocale !== locale &&
-      SUPPORTED_LOCALES.includes(supportedLocale as typeof SUPPORTED_LOCALES[number]),
-  );
   const openGraphBase = {
     title: finalTitle,
     description: finalDescription,
     url: canonical,
     siteName: BRAND_NAME,
     locale: OPEN_GRAPH_LOCALES[locale] || OPEN_GRAPH_LOCALES[DEFAULT_LOCALE],
-    ...(alternateLocales.length > 0
-      ? {
-          alternateLocale: alternateLocales.map(
-            (supportedLocale) => OPEN_GRAPH_LOCALES[supportedLocale],
-          ),
-        }
-      : {}),
     images: [
       {
         url: imageUrl,
@@ -212,7 +180,7 @@ export function generatePageMetadata({
       description: finalDescription,
       images: [imageUrl],
     },
-    alternates: generateAlternates(locale, pathname, availableLocales, defaultLocale),
+    alternates: generateAlternates(locale, pathname),
   };
 }
 

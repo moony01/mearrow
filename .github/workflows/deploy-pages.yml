@@ -59,11 +59,11 @@ jobs:
           test -n "$browser_path"
           DEPLOY_BROWSER_PATH="$browser_path" pnpm pages:build:production
 
-      - name: Browser news modal smoke test
+      - name: Browser Studio modal smoke test
         run: |
           browser_path="$(find "$HOME/.cache/ms-playwright" -type f -path '*/chrome-linux64/chrome' -print -quit)"
           test -n "$browser_path"
-          NEWS_POPUP_BROWSER_PATH="$browser_path" pnpm test:browser:news-popup
+          STUDIO_MODAL_BROWSER_PATH="$browser_path" pnpm test:browser:studio-modal
 
       - name: Deploy Pages production
         run: >-

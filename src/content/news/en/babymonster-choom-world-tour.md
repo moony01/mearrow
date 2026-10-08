@@ -7,7 +7,7 @@ thumbnail: '/images/news/babymonster-choom-world-tour-thumbnail.webp'
 active: true
 ---
 
-`BABYMONSTER CHOOM tour` news did not land like a normal schedule poster. On May 11, YG Entertainment's young girl group expanded its second world tour into a 27-show Asia and Oceania run across 18 cities, and the number is the part competitors should not ignore. This is not only a victory lap after a comeback. It is YG testing how fast a young act can be moved from release week into regional touring scale before the rest of the market catches its breath. [Related: BABYMONSTER's CHOOM comeback already reset YG's May calendar](/en/news/babymonster-choom-comeback)
+`BABYMONSTER CHOOM tour` news did not land like a normal schedule poster. On May 11, YG Entertainment's young girl group expanded its second world tour into a 27-show Asia and Oceania run across 18 cities, and the number is the part competitors should not ignore. This is not only a victory lap after a comeback. It is YG testing how fast a young act can be moved from release week into regional touring scale before the rest of the market catches its breath. [Related: BABYMONSTER's CHOOM comeback already reset YG's May calendar](/studio/news/babymonster-choom-comeback)
 
 ## The 27-Show Expansion Changed The Story
 

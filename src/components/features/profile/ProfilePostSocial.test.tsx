@@ -68,16 +68,16 @@ describe('ProfilePostSocial anonymous interactions', () => {
     mocks.listComments.mockResolvedValue([]);
   });
 
-  it('routes anonymous like attempts to the locale signup page', () => {
+  it('routes anonymous like attempts to the signup page', () => {
     render(<ProfilePostSocial postId="post-1" locale="ja" labels={labels} />);
 
     fireEvent.click(screen.getByRole('button', { name: /Sign up to like or comment.*Like/ }));
 
-    expect(mocks.routerPush).toHaveBeenCalledWith('/ja/signup');
+    expect(mocks.routerPush).toHaveBeenCalledWith('/signup');
     expect(mocks.toggleLike).not.toHaveBeenCalled();
   });
 
-  it('keeps public comments readable and exposes a locale signup CTA', async () => {
+  it('keeps public comments readable and exposes a signup CTA', async () => {
     const { container } = render(
       <ProfilePostSocial postId="post-1" locale="de" labels={labels} />,
     );
@@ -85,7 +85,7 @@ describe('ProfilePostSocial anonymous interactions', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Comments (0)' }));
 
     const signupLink = await screen.findByRole('link', { name: labels.signupRequired });
-    expect(signupLink.getAttribute('href')).toBe('/de/signup');
+    expect(signupLink.getAttribute('href')).toBe('/signup');
     await waitFor(() => expect(mocks.listComments).toHaveBeenCalledWith('post-1'));
     expect(container.querySelector('[aria-label="Post comments"]')).not.toBeNull();
   });
@@ -99,7 +99,7 @@ describe('ProfilePostSocial anonymous interactions', () => {
     await screen.findByRole('link', { name: labels.signupRequired });
     fireEvent.submit(container.querySelector('form') as HTMLFormElement);
 
-    expect(mocks.routerPush).toHaveBeenCalledWith('/en/signup');
+    expect(mocks.routerPush).toHaveBeenCalledWith('/signup');
     expect(mocks.createComment).not.toHaveBeenCalled();
   });
 });

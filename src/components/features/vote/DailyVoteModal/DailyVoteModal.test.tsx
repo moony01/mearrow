@@ -3,12 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import DailyVoteModal from './index';
 
 const mocks = vi.hoisted(() => ({
-  locale: 'ko',
-  pathname: '/ko/news',
-}));
-
-vi.mock('next-intl', () => ({
-  useLocale: () => mocks.locale,
+  pathname: '/news',
 }));
 
 vi.mock('next/navigation', () => ({
@@ -47,15 +42,14 @@ async function expectRenderOnlyClose(close: () => void) {
   await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
 
   remount.unmount();
-  mocks.pathname = '/ko/news/gangnam-style-6-billion';
+  mocks.pathname = '/news/gangnam-style-6-billion';
   render(<DailyVoteModal />);
   await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
 }
 
 describe('DailyVoteModal', () => {
   beforeEach(() => {
-    mocks.locale = 'ko';
-    mocks.pathname = '/ko/news';
+    mocks.pathname = '/news';
     window.localStorage.clear();
     window.sessionStorage.clear();
     document.body.style.overflow = '';
@@ -68,28 +62,28 @@ describe('DailyVoteModal', () => {
     const iframe = screen.getByTitle('실시간 TOP 10 직접 투표');
 
     expect(dialog).toBeDefined();
-    expect(iframe.getAttribute('src')).toBe('/embed/vote-board/ko?surface=kcl-modal&ads=off');
+    expect(iframe.getAttribute('src')).toBe('/embed/vote-board?surface=kcl-modal&ads=off');
     await waitFor(() => {
       expect(document.body.style.overflow).toBe('hidden');
     });
   });
 
   it('오디션 목록과 상세 페이지에는 모달을 노출한다', async () => {
-    mocks.pathname = '/ko/auditions';
+    mocks.pathname = '/auditions';
     render(<DailyVoteModal />);
 
     await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
 
     const { unmount } = render(<DailyVoteModal />);
     unmount();
-    mocks.pathname = '/ko/auditions/sample-audition';
+    mocks.pathname = '/auditions/sample-audition';
     render(<DailyVoteModal />);
 
     await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
   });
 
   it('뉴스·오디션 외 일반 페이지에는 모달을 노출하지 않는다', async () => {
-    for (const pathname of ['/ko/my', '/ko/about', '/ko/faq', '/ko/notice']) {
+    for (const pathname of ['/my', '/about', '/faq', '/notice']) {
       mocks.pathname = pathname;
       const { unmount } = render(<DailyVoteModal />);
 
@@ -155,12 +149,12 @@ describe('DailyVoteModal', () => {
     await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
 
     expect(screen.getByRole('link', { name: '더 투표하러 가기' }).getAttribute('href')).toBe(
-      '/ko/ranking',
+      '/studio/ranking',
     );
   });
 
   it('인증 경로에서는 모달을 노출하거나 본문 스크롤을 잠그지 않는다', async () => {
-    mocks.pathname = '/ko/login';
+    mocks.pathname = '/login';
     render(<DailyVoteModal />);
 
     await act(async () => {
@@ -172,7 +166,7 @@ describe('DailyVoteModal', () => {
   });
 
   it('홈에서는 이미 VoteBoard가 있으므로 모달을 노출하지 않는다', async () => {
-    mocks.pathname = '/ko';
+    mocks.pathname = '/';
     render(<DailyVoteModal />);
 
     await act(async () => {
@@ -183,14 +177,13 @@ describe('DailyVoteModal', () => {
     expect(document.body.style.overflow).toBe('');
   });
 
-  it('임베드 미지원 locale은 영어 임베드로 안전하게 대체한다', async () => {
-    mocks.locale = 'pt';
-    mocks.pathname = '/pt/news';
+  it('뉴스에서 locale 없는 투표 임베드 URL을 사용한다', async () => {
+    mocks.pathname = '/news';
     render(<DailyVoteModal />);
 
-    await screen.findByRole('dialog', { name: 'Live TOP 10 vote' });
-    expect(screen.getByTitle('Live TOP 10 direct voting').getAttribute('src')).toBe(
-      '/embed/vote-board/en?surface=kcl-modal&ads=off',
+    await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
+    expect(screen.getByTitle('실시간 TOP 10 직접 투표').getAttribute('src')).toBe(
+      '/embed/vote-board?surface=kcl-modal&ads=off',
     );
   });
 });

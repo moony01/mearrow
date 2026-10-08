@@ -7,7 +7,7 @@ thumbnail: '/images/news/nmixx-heavy-serenade-thumbnail.webp'
 active: true
 ---
 
-`NMIXX Heavy Serenade` is not arriving like a normal comeback. It is being staged like a locked-room test. JYP Entertainment has already given fans the date, the pre-release, the teasers, the a cappella preview, and the countdown schedule. What it has not fully given away is the shape of the title track itself. That gap is why the May 11 release feels louder than a standard EP rollout. The market is not only waiting to hear a song. It is waiting to see whether NMIXX can turn controlled mystery into a comeback that survives one of the most crowded girl-group months of 2026. [Related: May 2026 K-pop comebacks became one market war](/en/news/may-girlgroup-market-war)
+`NMIXX Heavy Serenade` is not arriving like a normal comeback. It is being staged like a locked-room test. JYP Entertainment has already given fans the date, the pre-release, the teasers, the a cappella preview, and the countdown schedule. What it has not fully given away is the shape of the title track itself. That gap is why the May 11 release feels louder than a standard EP rollout. The market is not only waiting to hear a song. It is waiting to see whether NMIXX can turn controlled mystery into a comeback that survives one of the most crowded girl-group months of 2026. [Related: May 2026 K-pop comebacks became one market war](/studio/news/may-girlgroup-market-war)
 
 ## NMIXX Heavy Serenade Is Selling Suspense Before Sound
 

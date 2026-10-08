@@ -7,7 +7,7 @@ thumbnail: '/images/news/kpop-campus-festival-war-thumbnail.webp'
 active: true
 ---
 
-`K-pop university festivals` used to look like a pleasant seasonal bonus: exams end, booths open, students crowd the sports field, and a few artists perform before everyone goes back to campus life. May 2026 makes that reading feel too small. Across Korean universities, the spring festival calendar has turned into a compressed public-stage market where RIIZE, ILLIT, Cortis, KiiiKiii, fromis_9, Kiss of Life, BIBI, Jay Park, Yerin Baek and dozens more are fighting for attention in front of crowds that are not built like ordinary fandom audiences. The question is no longer who got booked. The question is why campuses suddenly look like one of K-pop's most useful testing grounds. [Related: KCON Japan 2026 changed the product, with K-pop as the hook](/en/news/kcon-japan-k-life)
+`K-pop university festivals` used to look like a pleasant seasonal bonus: exams end, booths open, students crowd the sports field, and a few artists perform before everyone goes back to campus life. May 2026 makes that reading feel too small. Across Korean universities, the spring festival calendar has turned into a compressed public-stage market where RIIZE, ILLIT, Cortis, KiiiKiii, fromis_9, Kiss of Life, BIBI, Jay Park, Yerin Baek and dozens more are fighting for attention in front of crowds that are not built like ordinary fandom audiences. The question is no longer who got booked. The question is why campuses suddenly look like one of K-pop's most useful testing grounds. [Related: KCON Japan 2026 changed the product, with K-pop as the hook](/studio/news/kcon-japan-k-life)
 
 ## K-pop University Festivals Are Not Side Stages Anymore
 

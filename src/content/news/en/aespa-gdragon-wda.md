@@ -8,7 +8,7 @@ thumbnail: '/images/news/aespa-gdragon-wda-thumbnail.webp'
 active: true
 ---
 
-`aespa G-Dragon WDA` did not arrive like a harmless pre-release single. It arrived like a stress test. On May 11 at 6 p.m. KST, aespa released `WDA (Whole Different Animal)` featuring BIGBANG's G-Dragon ahead of the group's second full-length album `LEMONADE`, scheduled for May 29 at 1 p.m. KST. The easy headline is the feature. The sharper read is the target map: SM Entertainment used one song to pull second-generation prestige, fourth-generation concept power, China chart traction and global fan argument into the same room. [Related: The May comeback trap nobody can escape](/en/news/may-comeback-trap)
+`aespa G-Dragon WDA` did not arrive like a harmless pre-release single. It arrived like a stress test. On May 11 at 6 p.m. KST, aespa released `WDA (Whole Different Animal)` featuring BIGBANG's G-Dragon ahead of the group's second full-length album `LEMONADE`, scheduled for May 29 at 1 p.m. KST. The easy headline is the feature. The sharper read is the target map: SM Entertainment used one song to pull second-generation prestige, fourth-generation concept power, China chart traction and global fan argument into the same room. [Related: The May comeback trap nobody can escape](/studio/news/may-comeback-trap)
 
 ## WDA Is Not Acting Like A Warm-Up Single
 

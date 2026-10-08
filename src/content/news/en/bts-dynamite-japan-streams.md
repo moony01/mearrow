@@ -44,7 +44,7 @@ The same wave of coverage also pointed to another BTS catalog result: `Permissio
 
 Depth changes how labels should read catalog value. A one-song miracle can be explained by timing. A three-song replay pattern suggests durable listener behavior. `Dynamite`, `Butter` and `Permission to Dance` are all bright, accessible, pandemic-era or post-pandemic English-language pop tracks, but they also represent a specific bridge: songs that casual Japanese listeners can keep using without needing to decode a full comeback narrative.
 
-[Related: BTS Guinness Icons showed why record culture keeps compounding](/en/news/bts-guinness-icons)
+[Related: BTS Guinness Icons showed why record culture keeps compounding](/studio/news/bts-guinness-icons)
 
 ## MEARROW's View: Catalog Memory Is Becoming A Market Weapon
 

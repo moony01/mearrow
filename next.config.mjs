@@ -12,6 +12,39 @@ const __dirname = path.dirname(__filename);
 const isDev = process.env.NODE_ENV === 'development';
 const isWorkers = process.env.NEXT_RUNTIME_TARGET === 'workers';
 const useStaticExport = !isDev && !isWorkers;
+const legacyLocales = ['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de'];
+
+const newsConsolidationRedirects = [
+  '/studio/news/top-nana-dating-confirmed',
+  '/news/top-nana-dating-confirmed',
+  ...legacyLocales.map((locale) => `/${locale}/news/top-nana-dating-confirmed`),
+].map((source) => ({
+  source,
+  destination: '/studio/news/top-nana-dating-studio54',
+  permanent: true,
+}));
+
+const studioSections = ['news', 'auditions', 'ranking'];
+const studioRedirects = studioSections.flatMap((section) => [
+  { source: `/${section}`, destination: `/studio/${section}`, permanent: true },
+  { source: `/${section}/:path*`, destination: `/studio/${section}/:path*`, permanent: true },
+  ...legacyLocales.flatMap((locale) => [
+    { source: `/${locale}/${section}`, destination: `/studio/${section}`, permanent: true },
+    { source: `/${locale}/${section}/:path*`, destination: `/studio/${section}/:path*`, permanent: true },
+  ]),
+]);
+const legacyEmbedRedirects = ['vote-board', 'kpopface-vote'].flatMap((embed) =>
+  legacyLocales.map((locale) => ({
+    source: `/embed/${embed}/${locale}`,
+    destination: `/embed/${embed}?lang=${locale}`,
+    permanent: true,
+  })),
+);
+const legacyLocaleRedirects = legacyLocales.flatMap((locale) => [
+  { source: `/${locale}`, destination: '/', permanent: true },
+  { source: `/${locale}/:path*`, destination: '/:path*', permanent: true },
+]);
+
 
 // Allow the Tailnet host used to access the development server externally.
 // Keep this host-scoped; never open dev resources to arbitrary origins.
@@ -54,6 +87,9 @@ const securityHeaders = [
  */
 const nextConfig = {
   allowedDevOrigins,
+  ...(!useStaticExport
+    ? { redirects: async () => [...newsConsolidationRedirects, ...legacyEmbedRedirects, ...studioRedirects, ...legacyLocaleRedirects] }
+    : {}),
   // 기존 Pages 배포는 정적 export를 유지하고, Workers 빌드에서는
   // OpenNext가 SSR/ISR용 Next 런타임을 생성하도록 output 설정을 비활성화합니다.
   ...(useStaticExport ? { output: 'export' } : {}),

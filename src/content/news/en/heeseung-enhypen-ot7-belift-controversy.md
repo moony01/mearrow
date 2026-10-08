@@ -74,4 +74,4 @@ ENHYPEN continues as a six-member group. Heeseung begins a new path as a solo ar
 
 What the K-pop industry is watching is not whether Heeseung's solo career succeeds. It's watching how BELIFT recovers credibility with a fandom it has fractured. How a label rebuilds trust after a public breakdown — that story will become a case study for how this industry handles its most difficult business decisions.
 
-[Related: Lee Soo-man returns — K-pop's power balance shifts again](/en/news/lee-soo-man-a2o-enter-korea-sm-war-2026)
+[Related: Lee Soo-man returns — K-pop's power balance shifts again](/studio/news/lee-soo-man-a2o-enter-korea-sm-war-2026)

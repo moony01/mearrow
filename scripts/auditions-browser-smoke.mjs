@@ -1,4 +1,4 @@
-export const AUDITION_SMOKE_LOCALES = ['ko', 'en'];
+export const AUDITION_CONTENT_LOCALE = 'ko';
 
 export const EXPECTED_AUDITION_SLUGS = [
   '2026-yg-global-audition-bangkok',
@@ -18,7 +18,7 @@ function assert(condition, message) {
 }
 
 /**
- * Visit every localized audition detail exposed by the list pages.
+ * Visit every audition detail exposed by the single locale-free list page.
  *
  * The caller owns the browser/server lifecycle so this check can run against
  * Next dev, a Pages preview, or a locally bundled Workers runtime.
@@ -43,27 +43,26 @@ export async function runAuditionBrowserSmoke(page, baseUrl) {
 
   const details = [];
 
-  for (const locale of AUDITION_SMOKE_LOCALES) {
+  for (const locale of [AUDITION_CONTENT_LOCALE]) {
     const listResponse = await page.goto(
-      `${baseUrl}/${locale}/auditions?deploy-browser-smoke=auditions-${locale}`,
+      `${baseUrl}/auditions?deploy-browser-smoke=auditions`,
       { waitUntil: 'domcontentloaded', timeout: 30_000 },
     );
     assert(
       listResponse && listResponse.status() === 200,
-      `${locale} auditions list returned HTTP ${listResponse?.status()}`,
+      `auditions list returned HTTP ${listResponse?.status()}`,
     );
 
     const detailPathSet = new Set();
     const collectDetailPaths = async () => {
-      const paths = await page.locator(`a[href^="/${locale}/auditions/"]`).evaluateAll(
-        (links, localeValue) =>
+      const paths = await page.locator('a[href^="/auditions/"]').evaluateAll(
+        (links) =>
           links
             .map((link) => link.getAttribute('href'))
             .filter(
               (href) =>
-                href && new RegExp(`^/${localeValue}/auditions/[^/?#]+$`).test(href),
+                href && /^\/auditions\/[^/?#]+$/.test(href),
             ),
-        locale,
       );
       paths.forEach((path) => detailPathSet.add(path));
     };
@@ -94,14 +93,14 @@ export async function runAuditionBrowserSmoke(page, baseUrl) {
     const detailPaths = [...detailPathSet];
     assert(
       detailPaths.length === EXPECTED_AUDITION_SLUGS.length,
-      `${locale} auditions list exposed ${detailPaths.length} detail paths; expected ${EXPECTED_AUDITION_SLUGS.length}`,
+      `auditions list exposed ${detailPaths.length} detail paths; expected ${EXPECTED_AUDITION_SLUGS.length}`,
     );
 
     for (const slug of EXPECTED_AUDITION_SLUGS) {
-      const detailPath = `/${locale}/auditions/${slug}`;
+      const detailPath = `/auditions/${slug}`;
       assert(
         detailPaths.includes(detailPath),
-        `${locale} auditions list is missing ${detailPath}`,
+        `auditions list is missing ${detailPath}`,
       );
 
       const detailResponse = await page.goto(
@@ -132,7 +131,7 @@ export async function runAuditionBrowserSmoke(page, baseUrl) {
   }
 
   return {
-    listCount: AUDITION_SMOKE_LOCALES.length,
+    listCount: 1,
     detailCount: details.length,
     details,
   };

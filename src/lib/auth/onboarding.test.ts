@@ -14,16 +14,14 @@ describe('onboarding profile authority', () => {
   it('완료 사용자는 홈으로 이동한다', () => {
     expect(
       getAuthenticatedRedirect({
-        locale: 'ko',
         profile: { onboarding_completed: true },
       }),
-    ).toBe('/ko');
+    ).toBe('/');
   });
 
   it('완료 사용자만 검증된 returnTo로 이동한다', () => {
     expect(
       getAuthenticatedRedirect({
-        locale: 'ko',
         profile: { onboarding_completed: true },
         returnTo: 'https://moony01.com/kpopface/',
       }),
@@ -33,10 +31,9 @@ describe('onboarding profile authority', () => {
   it('신규·미완료 사용자는 returnTo가 있어도 온보딩을 우선한다', () => {
     expect(
       getAuthenticatedRedirect({
-        locale: 'ko',
         profile: { onboarding_completed: false },
         returnTo: 'https://moony01.com/kpopface/',
       }),
-    ).toBe('/ko/onboarding');
+    ).toBe('/onboarding');
   });
 });

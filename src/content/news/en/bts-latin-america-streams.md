@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-latin-america-streams-thumbnail.webp'
 active: true
 ---
 
-`BTS Latin America streams` just turned a fandom talking point into a market warning. According to Luminate data reported by Yonhap and MK on May 14, BTS' `ARIRANG` logged 739.1 million global first-week streams, with Brazil at 78.6 million and Mexico at 75.9 million. South Korea, the home market that once defined K-pop's center of gravity, ranked behind both at 58.3 million. The obvious question is not whether BTS is popular in Latin America. That answer has been clear for years. The harder question is why the region is now behaving less like an overseas bonus market and more like one of the engines steering K-pop's next phase. [Related: BTS kept 13 songs on Billboard for seven weeks](/en/news/bts-arirang-billboard-record)
+`BTS Latin America streams` just turned a fandom talking point into a market warning. According to Luminate data reported by Yonhap and MK on May 14, BTS' `ARIRANG` logged 739.1 million global first-week streams, with Brazil at 78.6 million and Mexico at 75.9 million. South Korea, the home market that once defined K-pop's center of gravity, ranked behind both at 58.3 million. The obvious question is not whether BTS is popular in Latin America. That answer has been clear for years. The harder question is why the region is now behaving less like an overseas bonus market and more like one of the engines steering K-pop's next phase. [Related: BTS kept 13 songs on Billboard for seven weeks](/studio/news/bts-arirang-billboard-record)
 
 ## BTS Latin America Streams Broke The Old Map
 

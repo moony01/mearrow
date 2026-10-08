@@ -19,7 +19,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import styles from './ResetPasswordForm.module.scss';
 import classNames from 'classnames';
 import { createClient } from '@/lib/supabase/client';
@@ -52,7 +51,6 @@ type FormData = z.infer<typeof schema>;
 
 export default function ResetPasswordForm() {
   const t = useTranslations('Auth');
-  const locale = useLocale();
   const supabase = createClient();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -147,7 +145,7 @@ export default function ResetPasswordForm() {
           </div>
           <h3 className={styles.successTitle}>{t('reset_link_expired_title')}</h3>
           <p className={styles.successDesc}>{t('reset_link_expired_desc')}</p>
-          <Link href={`/${locale}/forgot-password`} className={styles.loginBtn}>
+          <Link href={`/forgot-password`} className={styles.loginBtn}>
             {t('try_again')}
           </Link>
         </div>
@@ -168,7 +166,7 @@ export default function ResetPasswordForm() {
           </div>
           <h3 className={styles.successTitle}>{t('reset_success_title')}</h3>
           <p className={styles.successDesc}>{t('reset_success_desc')}</p>
-          <Link href={`/${locale}/login`} className={styles.loginBtn}>
+          <Link href={`/login`} className={styles.loginBtn}>
             {t('login_button')}
           </Link>
         </div>

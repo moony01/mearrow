@@ -1,9 +1,95 @@
-# Public profile data is client-loaded, so every username can share the
-# statically generated profile shell while the browser URL remains readable.
-/ko/profile/* /ko/profile/__profile.html 200
-/en/profile/* /en/profile/__profile.html 200
-/ja/profile/* /ja/profile/__profile.html 200
-/zh/profile/* /zh/profile/__profile.html 200
-/es/profile/* /es/profile/__profile.html 200
-/fr/profile/* /fr/profile/__profile.html 200
-/de/profile/* /de/profile/__profile.html 200
+# Duplicate T.O.P/Nana coverage resolves to the current canonical article.
+/studio/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/ko/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/en/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/ja/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/zh/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/es/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/fr/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+/de/news/top-nana-dating-confirmed /studio/news/top-nana-dating-studio54 301
+
+# Canonical Studio content aliases precede generic locale redirects.
+/news /studio/news 301
+/news/* /studio/news/:splat 301
+/ko/news /studio/news 301
+/ko/news/* /studio/news/:splat 301
+/en/news /studio/news 301
+/en/news/* /studio/news/:splat 301
+/ja/news /studio/news 301
+/ja/news/* /studio/news/:splat 301
+/zh/news /studio/news 301
+/zh/news/* /studio/news/:splat 301
+/es/news /studio/news 301
+/es/news/* /studio/news/:splat 301
+/fr/news /studio/news 301
+/fr/news/* /studio/news/:splat 301
+/de/news /studio/news 301
+/de/news/* /studio/news/:splat 301
+/auditions /studio/auditions 301
+/auditions/* /studio/auditions/:splat 301
+/ko/auditions /studio/auditions 301
+/ko/auditions/* /studio/auditions/:splat 301
+/en/auditions /studio/auditions 301
+/en/auditions/* /studio/auditions/:splat 301
+/ja/auditions /studio/auditions 301
+/ja/auditions/* /studio/auditions/:splat 301
+/zh/auditions /studio/auditions 301
+/zh/auditions/* /studio/auditions/:splat 301
+/es/auditions /studio/auditions 301
+/es/auditions/* /studio/auditions/:splat 301
+/fr/auditions /studio/auditions 301
+/fr/auditions/* /studio/auditions/:splat 301
+/de/auditions /studio/auditions 301
+/de/auditions/* /studio/auditions/:splat 301
+/ranking /studio/ranking 301
+/ranking/* /studio/ranking/:splat 301
+/ko/ranking /studio/ranking 301
+/ko/ranking/* /studio/ranking/:splat 301
+/en/ranking /studio/ranking 301
+/en/ranking/* /studio/ranking/:splat 301
+/ja/ranking /studio/ranking 301
+/ja/ranking/* /studio/ranking/:splat 301
+/zh/ranking /studio/ranking 301
+/zh/ranking/* /studio/ranking/:splat 301
+/es/ranking /studio/ranking 301
+/es/ranking/* /studio/ranking/:splat 301
+/fr/ranking /studio/ranking 301
+/fr/ranking/* /studio/ranking/:splat 301
+/de/ranking /studio/ranking 301
+/de/ranking/* /studio/ranking/:splat 301
+
+# Preserve the language of existing embedded vote links.
+/embed/vote-board/ko /embed/vote-board?lang=ko 301
+/embed/vote-board/en /embed/vote-board?lang=en 301
+/embed/vote-board/ja /embed/vote-board?lang=ja 301
+/embed/vote-board/zh /embed/vote-board?lang=zh 301
+/embed/vote-board/es /embed/vote-board?lang=es 301
+/embed/vote-board/fr /embed/vote-board?lang=fr 301
+/embed/vote-board/de /embed/vote-board?lang=de 301
+/embed/kpopface-vote/ko /embed/kpopface-vote?lang=ko 301
+/embed/kpopface-vote/en /embed/kpopface-vote?lang=en 301
+/embed/kpopface-vote/ja /embed/kpopface-vote?lang=ja 301
+/embed/kpopface-vote/zh /embed/kpopface-vote?lang=zh 301
+/embed/kpopface-vote/es /embed/kpopface-vote?lang=es 301
+/embed/kpopface-vote/fr /embed/kpopface-vote?lang=fr 301
+/embed/kpopface-vote/de /embed/kpopface-vote?lang=de 301
+
+# Global locale-free app aliases.
+/ko / 301
+/ko/* /:splat 301
+/en / 301
+/en/* /:splat 301
+/ja / 301
+/ja/* /:splat 301
+/zh / 301
+/zh/* /:splat 301
+/es / 301
+/es/* /:splat 301
+/fr / 301
+/fr/* /:splat 301
+/de / 301
+/de/* /:splat 301
+
+# Static public-profile shell.
+/profile/* /profile/__profile.html 200

@@ -4,7 +4,8 @@ excerpt: "T.O.P and Nana dating is confirmed after their ‘Studio54’ collabor
 date: '2026-10-06'
 category: 'Artist'
 thumbnail: '/images/news/top-nana-dating-confirmed-thumbnail.webp'
-active: true
+active: false
+duplicateOf: 'top-nana-dating-studio54'
 ---
 
 `T.O.P and Nana dating` is no longer a theory built from a music-video frame. On October 2, both artists’ agencies confirmed that the former BIGBANG rapper and the former After School member are in a relationship. The confirmation arrived after a Dispatch report, but the more important detail was not the report itself. It was the timeline: the two met while making T.O.P’s “Studio54” music video, grew closer afterward, and began a romantic relationship around June, according to their agencies and Yonhap’s account of the statements. [Yonhap reported the confirmation](https://en.yna.co.kr/view/AEN20261002005000315), while [CNA documented Nana’s message to fans](https://cnalifestyle.channelnewsasia.com/entertainment/top-nana-dating-korean-stars-589901).
@@ -58,7 +59,7 @@ That is powerful for attention, but it is also where editorial discipline matter
 
 The business lesson is quieter. In a fandom economy built on access, a private relationship can become a public event before the people involved are ready to narrate it. Nana’s short Bubble message worked because it acknowledged the surprise without turning the announcement into a full-time content stream. T.O.P’s wider comeback story will be stronger if the work remains the center of gravity and the relationship is allowed to exist beside it.
 
-For the broader BIGBANG context, this also adds another layer to the group’s anniversary year. [Related: BIGBANG’s 20th-anniversary world tour is turning legacy into a live test](/en/news/yg-bigbang-20th-anniversary-world-tour-2026). T.O.P is no longer only being discussed through the group he left or the controversies that followed him. He is building a solo chapter, and Nana is now part of the public beginning of that chapter.
+For the broader BIGBANG context, this also adds another layer to the group’s anniversary year. [Related: BIGBANG’s 20th-anniversary world tour is turning legacy into a live test](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026). T.O.P is no longer only being discussed through the group he left or the controversies that followed him. He is building a solo chapter, and Nana is now part of the public beginning of that chapter.
 
 ## The takeaway
 

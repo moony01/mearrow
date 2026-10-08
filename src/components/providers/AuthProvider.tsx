@@ -35,6 +35,8 @@ import {
 } from '@/lib/auth/development-test-mode';
 
 const INVALID_REFRESH_TOKEN_REGEX = /invalid refresh token|refresh token not found/i;
+const SESSION_REFRESH_LEAD_TIME_MS = 90_000;
+const SESSION_REFRESH_RETRY_DELAY_MS = 30_000;
 
 async function loadSupabase() {
   const { getSupabase } = await import('@/lib/supabase/client');
@@ -62,31 +64,49 @@ function isInvalidRefreshTokenError(error: unknown): boolean {
     return INVALID_REFRESH_TOKEN_REGEX.test(error);
   }
 
-  if (error instanceof Error) {
-    return INVALID_REFRESH_TOKEN_REGEX.test(error.message);
-  }
+  const maybeError = error as { message?: unknown; code?: unknown };
+  return maybeError.code === 'refresh_token_not_found'
+    || (typeof maybeError.message === 'string'
+      && INVALID_REFRESH_TOKEN_REGEX.test(maybeError.message));
+}
 
-  const maybeMessage = (error as { message?: unknown }).message;
-  return typeof maybeMessage === 'string' && INVALID_REFRESH_TOKEN_REGEX.test(maybeMessage);
+function getSupabaseAuthStorageKey(): string | null {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  if (!supabaseUrl) return null;
+
+  try {
+    const projectRef = new URL(supabaseUrl).hostname.split('.')[0];
+    return projectRef ? `sb-${projectRef}-auth-token` : null;
+  } catch {
+    return null;
+  }
 }
 
 function clearStaleSupabaseAuthStorage() {
   if (typeof window === 'undefined') return;
 
-  try {
-    const keysToRemove: string[] = [];
-    for (let i = 0; i < localStorage.length; i += 1) {
-      const key = localStorage.key(i);
-      if (!key) continue;
-      if (key.startsWith('sb-') && key.endsWith('-auth-token')) {
-        keysToRemove.push(key);
-      }
-    }
+  const storageKey = getSupabaseAuthStorageKey();
+  if (!storageKey) return;
 
-    keysToRemove.forEach((key) => localStorage.removeItem(key));
-  } catch (err) {
-    console.warn('[AuthProvider] 로컬 인증 스토리지 정리 실패:', err);
+  try {
+    [storageKey, `${storageKey}-user`].forEach((key) => localStorage.removeItem(key));
+  } catch {
+    console.warn('[AuthProvider] 로컬 인증 스토리지 정리 실패.');
   }
+}
+
+function isOAuthCodeCallback(): boolean {
+  return typeof window !== 'undefined'
+    && new URLSearchParams(window.location.search).has('code')
+    && /(?:^|\/)auth\/callback\/?$/.test(window.location.pathname);
+}
+
+function getSafeAuthErrorName(error: unknown): string {
+  if (error instanceof Error && error.name) return error.name;
+  if (error && typeof error === 'object' && 'name' in error && typeof error.name === 'string') {
+    return error.name;
+  }
+  return 'UnknownError';
 }
 
 /**
@@ -280,8 +300,111 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
    * 초기 세션 확인 + 인증 상태 변경 리스너 등록
    */
   useEffect(() => {
+    let disposed = false;
+    let subscription: { unsubscribe: () => void } | null = null;
+    let supabaseClient: Awaited<ReturnType<typeof loadSupabase>> | null = null;
+    let currentSession: Session | null = null;
+    let refreshTimer: ReturnType<typeof setTimeout> | null = null;
+    let staleRefreshTokenHandled = false;
+
+    const clearRefreshTimer = () => {
+      if (refreshTimer) {
+        clearTimeout(refreshTimer);
+        refreshTimer = null;
+      }
+    };
+
+    const clearInvalidRefreshTokenSession = () => {
+      clearRefreshTimer();
+      currentSession = null;
+      clearStaleSupabaseAuthStorage();
+      setUser(null);
+      setProfile(null);
+
+      if (!staleRefreshTokenHandled) {
+        console.warn('[AuthProvider] 사용할 수 없는 Refresh Token을 정리했습니다. 다시 로그인해 주세요.');
+        staleRefreshTokenHandled = true;
+      }
+    };
+
+    let refreshSessionNow: () => Promise<void> = async () => {};
+
+    const scheduleSessionRefresh = (session: Session | null, retryDelay?: number) => {
+      clearRefreshTimer();
+      currentSession = session;
+
+      if (!session?.expires_at || disposed || isDevelopmentTestModeEnabled()) return;
+
+      const refreshAt = retryDelay === undefined
+        ? session.expires_at * 1000 - SESSION_REFRESH_LEAD_TIME_MS
+        : Date.now() + retryDelay;
+      const delay = Math.max(0, refreshAt - Date.now());
+
+      refreshTimer = setTimeout(() => {
+        refreshTimer = null;
+        if (document.visibilityState === 'visible') {
+          void refreshSessionNow();
+        }
+      }, delay);
+    };
+
+    refreshSessionNow = async () => {
+      const activeSession = currentSession;
+      const activeSupabase = supabaseClient;
+      if (!activeSession || !activeSupabase || disposed || isDevelopmentTestModeEnabled()) return;
+
+      try {
+        const { data: { session }, error } = await activeSupabase.auth.refreshSession();
+        if (disposed) return;
+
+        if (error) {
+          if (isInvalidRefreshTokenError(error)) {
+            clearInvalidRefreshTokenSession();
+            return;
+          }
+
+          console.warn(
+            `[AuthProvider] 세션 갱신 실패 (${getSafeAuthErrorName(error)}). 재시도합니다.`,
+          );
+          if (currentSession) {
+            scheduleSessionRefresh(currentSession, SESSION_REFRESH_RETRY_DELAY_MS);
+          }
+          return;
+        }
+
+        if (session && currentSession?.user.id === activeSession.user.id) {
+          scheduleSessionRefresh(session);
+          setUser(session.user);
+        }
+      } catch (err) {
+        if (disposed) return;
+
+        if (isInvalidRefreshTokenError(err)) {
+          clearInvalidRefreshTokenSession();
+          return;
+        }
+
+        console.warn(
+          `[AuthProvider] 세션 갱신 실패 (${getSafeAuthErrorName(err)}). 재시도합니다.`,
+        );
+        if (currentSession) {
+          scheduleSessionRefresh(currentSession, SESSION_REFRESH_RETRY_DELAY_MS);
+        }
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        if (currentSession) scheduleSessionRefresh(currentSession);
+      } else {
+        clearRefreshTimer();
+      }
+    };
+
     const syncDevelopmentTestMode = () => {
       if (isDevelopmentTestModeEnabled()) {
+        clearRefreshTimer();
+        currentSession = null;
         setUser(getDevelopmentTestUser());
         setProfile(DEVELOPMENT_TEST_PROFILE);
         setIsLoading(false);
@@ -316,52 +439,80 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
       };
     }
 
-    let disposed = false;
-    let subscription: { unsubscribe: () => void } | null = null;
+    // CallbackClient owns the PKCE code exchange. Avoid reading the previous
+    // session while its verifier is in use; the app will initialize normally
+    // after the callback redirects with the new session persisted.
+    if (isOAuthCodeCallback()) {
+      setIsLoading(false);
+      return () => {
+        window.removeEventListener(
+          DEVELOPMENT_TEST_MODE_CHANGE_EVENT,
+          handleDevelopmentTestModeChange,
+        );
+      };
+    }
 
     const initializeAuth = async () => {
       const supabase = await loadSupabase();
+      supabaseClient = supabase;
       if (disposed || isDevelopmentTestModeEnabled()) return;
 
       // 1. 현재 세션 확인 (페이지 로드 시)
       const initSession = async () => {
         try {
           const sessionQuery = supabase.auth.getSession();
-          const { data: { session } } = await withTimeout<Awaited<ReturnType<typeof supabase.auth.getSession>>>(
+          const { data: { session }, error } = await withTimeout<Awaited<ReturnType<typeof supabase.auth.getSession>>>(
             sessionQuery,
             8000,
             'AuthProvider getSession',
           );
-          if (isDevelopmentTestModeEnabled()) return;
+          if (disposed || isDevelopmentTestModeEnabled()) return;
+
+          if (error) {
+            if (isInvalidRefreshTokenError(error)) {
+              clearInvalidRefreshTokenSession();
+            } else {
+              console.warn(
+                `[AuthProvider] 초기 세션 확인 실패 (${getSafeAuthErrorName(error)}). 저장된 인증 상태는 유지합니다.`,
+              );
+            }
+            return;
+          }
+
           if (session?.user) {
+            scheduleSessionRefresh(session);
             setUser(session.user);
-            await fetchProfile(session.user.id);
+            void fetchProfile(session.user.id);
           }
         } catch (err) {
+          if (disposed) return;
           if (isInvalidRefreshTokenError(err)) {
-            console.warn('[AuthProvider] 만료/유효하지 않은 Refresh Token 감지. 로컬 세션을 정리합니다.');
-            try {
-              await supabase.auth.signOut({ scope: 'local' });
-            } catch {
-              // 로컬 정리가 목적이므로 signOut 실패는 무시
-            }
-            clearStaleSupabaseAuthStorage();
-            setUser(null);
-            setProfile(null);
+            clearInvalidRefreshTokenSession();
+          } else {
+            console.warn(
+              `[AuthProvider] 초기 세션 확인 실패 (${getSafeAuthErrorName(err)}). 저장된 인증 상태는 유지합니다.`,
+            );
           }
-          console.warn('[AuthProvider] 초기 세션 확인 실패:', err);
         } finally {
-          setIsLoading(false);
+          if (!disposed) setIsLoading(false);
         }
       };
 
-      void initSession();
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      // Read and clean up an invalid stored session before subscribing. The
+      // SDK's INITIAL_SESSION callback reads storage again and logs returned
+      // auth errors directly to console.error.
+      await initSession();
+      if (disposed || isDevelopmentTestModeEnabled()) return;
 
       // 2. 인증 상태 변경 리스너 (로그인/로그아웃/토큰 갱신)
       const authSubscription = supabase.auth.onAuthStateChange(
         async (event: AuthChangeEvent, session: Session | null) => {
-          if (isDevelopmentTestModeEnabled()) return;
+          if (disposed || isDevelopmentTestModeEnabled()) return;
           if (session?.user) {
+            staleRefreshTokenHandled = false;
+            scheduleSessionRefresh(session);
             setUser(session.user);
             // 신규 가입(SIGNED_IN) 또는 토큰 갱신 시 프로필 조회
             // 주의: 여기서 await하면 Auth 상태 전환이 lock에 묶일 수 있으므로 non-blocking으로 실행
@@ -371,6 +522,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
               });
             }
           } else {
+            scheduleSessionRefresh(null);
             setUser(null);
             setProfile(null);
           }
@@ -385,7 +537,9 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
     // 3. 클린업: 리스너 해제
     return () => {
       disposed = true;
+      clearRefreshTimer();
       subscription?.unsubscribe();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener(
         DEVELOPMENT_TEST_MODE_CHANGE_EVENT,
         handleDevelopmentTestModeChange,

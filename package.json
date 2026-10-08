@@ -18,7 +18,7 @@
     "lint": "eslint",
     "pretest": "pnpm generate:content",
     "test": "vitest",
-    "test:browser:news-popup": "node scripts/news-popup-browser-smoke.mjs",
+    "test:browser:studio-modal": "node scripts/studio-modal-browser-smoke.mjs",
     "test:browser:workers-auditions": "node scripts/workers-auditions-browser-smoke.mjs",
     "test:workers:public-profile": "node scripts/workers-public-profile-smoke.mjs",
     "test:browser:deploy": "pnpm check:deploy-env && node scripts/deploy-browser-smoke.mjs"
@@ -27,6 +27,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.90.1",
+    "@tosspayments/tosspayments-sdk": "2.9.0",
     "@types/canvas-confetti": "^1.9.0",
     "canvas-confetti": "^1.9.4",
     "classnames": "^2.5.1",

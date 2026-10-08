@@ -56,7 +56,7 @@ async function waitForServer(child, workerOutput) {
     }
 
     try {
-      const response = await fetch(`${baseUrl}/ko/auditions?workers-audition-smoke=ready`);
+      const response = await fetch(`${baseUrl}/auditions?workers-audition-smoke=ready`);
       if (response.status === 200) return;
     } catch {
       // Keep polling until Wrangler is ready.
@@ -133,7 +133,7 @@ async function main() {
 
     const auditionSmoke = await runAuditionBrowserSmoke(page, baseUrl);
     const missingDetailResponse = await fetch(
-      `${baseUrl}/ko/auditions/does-not-exist?workers-audition-smoke=missing`,
+      `${baseUrl}/auditions/does-not-exist?workers-audition-smoke=missing`,
     );
     if (missingDetailResponse.status !== 404) {
       throw new Error(`missing audition detail returned HTTP ${missingDetailResponse.status}`);

@@ -3,8 +3,15 @@ import { describe, expect, it, vi } from 'vitest';
 import HomeBoardHeader from './HomeBoardHeader';
 
 vi.mock('next-intl', () => ({
-  useTranslations: () => (_key: string, values?: { max?: number }) =>
-    `* 카드를 길게 누르고 ${values?.max ?? ''}표 투표하기`,
+  useTranslations: (namespace: string) => (key: string, values?: Record<string, string | number>) => {
+    if (namespace === 'League.season') {
+      if (key === 'title') return `${values?.month} ${values?.year} Season`;
+      if (key === 'countdown') return `${values?.seconds}s`;
+      if (key === 'refreshing') return 'Updating...';
+    }
+    if (namespace === 'Vote.quota' && key === 'title') return "Today's Votes";
+    return `* 카드를 길게 누르고 ${values?.max ?? ''}표 투표하기`;
+  },
 }));
 
 const season = { year: 2026, month: 8, daysRemaining: 14 };
@@ -22,6 +29,23 @@ function getMetaSlotIds() {
 }
 
 describe('HomeBoardHeader', () => {
+  it('uses English season and quota copy on Studio and English embeds', () => {
+    const { rerender } = render(
+      <HomeBoardHeader locale="en" season={season} quotaRemaining={30} countdown={5} isRefreshing={false} />,
+    );
+
+    expect(screen.getByTestId('home-season-label').textContent).toBe('August 2026 Season');
+    expect(screen.getByTestId('home-today-votes').textContent).toBe("Today's Votes: 30");
+    expect(screen.getByTestId('home-refresh-indicator').textContent).toBe('5s');
+    expect(screen.getByTestId('home-today-votes').getAttribute('aria-label')).toBe("Today's Votes: 30");
+    expect(getMetaSlotIds()).toEqual(expectedMetaSlots);
+
+    rerender(
+      <HomeBoardHeader locale="en" season={season} quotaRemaining={30} countdown={20} isRefreshing />,
+    );
+    expect(screen.getByTestId('home-refresh-indicator').textContent).toBe('Updating...');
+  });
+
   it('keeps quota, refresh, and D-day in stable meta slots across countdown states', () => {
     const { rerender } = render(
       <HomeBoardHeader

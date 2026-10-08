@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-arirang-six-weeks-thumbnail.webp'
 active: true
 ---
 
-`BTS ARIRANG Billboard 200` momentum has now moved past the normal language of a comeback. The album placed at `No. 5` in its sixth consecutive week inside the chart's top five, with `56,000 equivalent album units` in the latest tracking week, according to Yonhap's report citing Billboard's Sunday chart preview. That is the part fans can screenshot. The harder part for the industry is what the number says after the opening noise is gone: BTS is not only winning the first week. BTS is keeping the room from moving on. [Related: BTS Drew 190,000 in Tampa - Then a Stadium Full of U.S. Fans Sang 'Arirang' Back](/en/news/bts-tampa-190k)
+`BTS ARIRANG Billboard 200` momentum has now moved past the normal language of a comeback. The album placed at `No. 5` in its sixth consecutive week inside the chart's top five, with `56,000 equivalent album units` in the latest tracking week, according to Yonhap's report citing Billboard's Sunday chart preview. That is the part fans can screenshot. The harder part for the industry is what the number says after the opening noise is gone: BTS is not only winning the first week. BTS is keeping the room from moving on. [Related: BTS Drew 190,000 in Tampa - Then a Stadium Full of U.S. Fans Sang 'Arirang' Back](/studio/news/bts-tampa-190k)
 
 ## The Sixth Week Is The Real Test
 

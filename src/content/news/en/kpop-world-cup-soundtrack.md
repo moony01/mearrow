@@ -41,7 +41,7 @@ For Korean entertainment companies, this changes the ambition. A World Cup-linke
 
 ### Sports is becoming a distribution channel
 
-MEARROW has been tracking the same pattern in live events: K-pop is moving into spaces that were not built for idol fandom first. [Related: Gov Ball Just Became K-pop's Weekend — 3 Acts, One NYC Test Nobody Can Ignore](/en/news/gov-ball-kpop-weekend). Festivals, brand collaborations and now football soundtracks all work because they place idol systems in front of audiences that did not intentionally enter a fandom space.
+MEARROW has been tracking the same pattern in live events: K-pop is moving into spaces that were not built for idol fandom first. [Related: Gov Ball Just Became K-pop's Weekend — 3 Acts, One NYC Test Nobody Can Ignore](/studio/news/gov-ball-kpop-weekend). Festivals, brand collaborations and now football soundtracks all work because they place idol systems in front of audiences that did not intentionally enter a fandom space.
 
 The risk is that these placements can look bigger than they actually are. A World Cup headline guarantees attention, not loyalty. If the song is generic, fans will stream it once and move on. If the campaign leans too heavily on national symbolism without giving the group a memorable hook, the artist becomes a logo carrier rather than a beneficiary. The best version gives both sides what they need: football gets emotional lift; the artist gets identity expansion.
 

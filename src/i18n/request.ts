@@ -1,16 +1,8 @@
-import {getRequestConfig} from 'next-intl/server';
- 
-const locales = ['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de'];
+import { getRequestConfig } from 'next-intl/server';
+import koMessages from '@/messages/ko.json';
+import enMessages from '@/messages/en.json';
 
-export default getRequestConfig(async ({requestLocale}) => {
-  let locale = await requestLocale;
- 
-  if (!locale || !locales.includes(locale)) {
-    locale = 'en';
-  }
- 
-  return {
-    locale,
-    messages: (await import(`../messages/${locale}.json`)).default
-  };
+export default getRequestConfig(async ({ requestLocale }) => {
+  const locale = (await requestLocale) === 'en' ? 'en' : 'ko';
+  return { locale, messages: locale === 'en' ? enMessages : koMessages };
 });

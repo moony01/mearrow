@@ -8,7 +8,7 @@ thumbnail: '/images/news/kpop-album-exports-us-thumbnail.webp'
 active: true
 ---
 
-`K-pop album exports` just crossed a line the industry cannot treat as collector noise anymore. Korea's first-quarter physical album exports reached $120 million, according to Korea Customs Service data reported by Yonhap and Korea JoongAng Daily, clearing $100 million in a single quarter for the first time. The headline number is loud. The hidden twist is louder: the United States overtook Japan as the biggest export destination. [Related: BTS Latin America streams changed the market map](/en/news/bts-latin-america-streams)
+`K-pop album exports` just crossed a line the industry cannot treat as collector noise anymore. Korea's first-quarter physical album exports reached $120 million, according to Korea Customs Service data reported by Yonhap and Korea JoongAng Daily, clearing $100 million in a single quarter for the first time. The headline number is loud. The hidden twist is louder: the United States overtook Japan as the biggest export destination. [Related: BTS Latin America streams changed the market map](/studio/news/bts-latin-america-streams)
 
 ## The $100M Quarter Was Not A Normal Spike
 

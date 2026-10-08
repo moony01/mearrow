@@ -96,12 +96,13 @@ export function getAllAuditions(locale: string = 'ko'): AuditionMeta[] {
   return sortAuditions([...localePosts, ...englishFallbacks]);
 }
 
-/** Load only a real translation. Detail routes intentionally do not fallback. */
+/** Load Korean details first, then fall back to the English original. */
 export async function getAuditionBySlug(
   slug: string,
   locale: string,
 ): Promise<AuditionPost | null> {
-  const post = await loadAuditionPost(slug, locale);
+  const post = await loadAuditionPost(slug, locale)
+    ?? (locale === 'ko' ? await loadAuditionPost(slug, 'en') : null);
   return post && post.active !== false ? (post as AuditionPost) : null;
 }
 

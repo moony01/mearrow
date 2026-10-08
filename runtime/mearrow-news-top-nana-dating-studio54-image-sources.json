@@ -1,0 +1,83 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "slug": "top-nana-dating-studio54",
+  "policy": "direct-subject visual relevance; explicit source attribution; no AI image generation",
+  "sourceAttributionGate": "PASS",
+  "rightsStatus": "not_verified_source_attributed",
+  "selectionNote": "Two TOPSPOT PICTURES promotional images published by SBS Star show both named subjects. They document a music-video collaboration and are not presented as relationship evidence.",
+  "acceptedImages": [
+    {
+      "role": "thumbnail",
+      "file": "public/images/news/top-nana-dating-studio54-thumbnail.webp",
+      "sourceUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2026/04/07/30001054774.jpg",
+      "pageUrl": "https://news.sbs.co.kr/english/article.do?news_id=N1008508100",
+      "provider": "SBS Star / TOPSPOT PICTURES",
+      "query": "T.O.P Nana Studio54 TOPSPOT Pictures official press images",
+      "title": "T.O.P and Nana — Studio54 music video promotional image",
+      "subject": [
+        "T.O.P",
+        "Nana"
+      ],
+      "sourceAuthor": "TOPSPOT PICTURES (photo credit on SBS Star page)",
+      "sourceWidth": 1500,
+      "sourceHeight": 1875,
+      "sourceSha256": "18fc1788a95e46cca7b4d8689bd53f70d5566d09597bb0f4f28a6b1754999683",
+      "width": 1500,
+      "height": 1875,
+      "sha256": "543816710ab88da4ea17a0944d5e84d5e5db39fd10b13f6e6d59838b7e436729",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "SBS Star article credits the press image to TOPSPOT PICTURES. Reuse license was not verified and is not claimed.",
+      "identityMatchGate": "PASS",
+      "identityEvidence": "SBS Star identifies the image as T.O.P and Nana; visual review confirms both people are clearly visible.",
+      "faceVisible": true,
+      "visualReview": "PASS: original promotional photograph, both identified subjects visible; not represented as evidence of their private relationship.",
+      "transform": "Converted from JPEG to WebP at quality 80; no crop, resize, or upscale.",
+      "captionPolicy": "Credit TOPSPOT PICTURES via SBS Star and clarify that the image documents their music-video collaboration, not a private relationship."
+    },
+    {
+      "role": "body",
+      "file": "public/images/news/top-nana-dating-studio54-1.webp",
+      "sourceUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2026/04/07/30001054775.jpg",
+      "pageUrl": "https://news.sbs.co.kr/english/article.do?news_id=N1008508100",
+      "provider": "SBS Star / TOPSPOT PICTURES",
+      "query": "T.O.P Nana Studio54 TOPSPOT Pictures official press images",
+      "title": "T.O.P and Nana — Studio54 music video promotional image",
+      "subject": [
+        "T.O.P",
+        "Nana"
+      ],
+      "sourceAuthor": "TOPSPOT PICTURES (photo credit on SBS Star page)",
+      "sourceWidth": 1500,
+      "sourceHeight": 1875,
+      "sourceSha256": "ba835a77145628b96ff428f225713c690d921a0c9fbf9eb9503fd8602c23aa8c",
+      "width": 1500,
+      "height": 1875,
+      "sha256": "2fd4c883552ff15c6ee4aac7ed4f6b66b94b813f74ec6a9f2c3337e27b3133f8",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "SBS Star article credits the press image to TOPSPOT PICTURES. Reuse license was not verified and is not claimed.",
+      "identityMatchGate": "PASS",
+      "identityEvidence": "SBS Star identifies the image as T.O.P and Nana; visual review confirms both people are clearly visible.",
+      "faceVisible": true,
+      "visualReview": "PASS: original promotional photograph, both identified subjects visible; not represented as evidence of their private relationship.",
+      "transform": "Converted from JPEG to WebP at quality 80; no crop, resize, or upscale.",
+      "captionPolicy": "Credit TOPSPOT PICTURES via SBS Star and clarify that the image documents their music-video collaboration, not a private relationship."
+    }
+  ],
+  "rejectedImages": [],
+  "imageSearchQueries": [
+    "T.O.P Nana Studio54 TOPSPOT Pictures official press images",
+    "SBS Star T.O.P Nana Studio54 promotional image TOPSPOT PICTURES"
+  ],
+  "visualReview": {
+    "thumbnail": "PASS: both T.O.P and Nana are identifiable in the original agency-provided promotional portrait.",
+    "body": "PASS: both T.O.P and Nana are identifiable in a distinct original promotional portrait.",
+    "directSubjectRelevance": "PASS: both named subjects are visible in each image; neither image is described as proof of their relationship."
+  },
+  "aiGeneration": {
+    "used": false,
+    "count": 0,
+    "fallback": false
+  }
+}

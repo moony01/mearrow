@@ -7,7 +7,7 @@ thumbnail: '/images/news/hybe-q1-red-ink-thumbnail.webp'
 active: true
 ---
 
-`HYBE Q1 2026` should have been an easy victory lap. Revenue reached `698.3 billion won`, the company’s biggest first quarter ever, even though January through March is usually a slower stretch for the music business. Then the headline twisted. Instead of celebrating clean profitability, HYBE reported an operating loss of `196.6 billion won`. That is why this quarter matters. It was not a sign that BTS came back and failed to move the business. It was the opposite. The comeback was powerful enough to expose how large HYBE’s machine has become, and how confusing the optics can get once accounting charges, fandom monetization and investor expectations collide in the same report. [Related: HYBE’s $1.86B Revenue Record Hides a Brutal Truth — Profit Fell 73%](/en/news/hybe-record-revenue-profit-plunge-73)
+`HYBE Q1 2026` should have been an easy victory lap. Revenue reached `698.3 billion won`, the company’s biggest first quarter ever, even though January through March is usually a slower stretch for the music business. Then the headline twisted. Instead of celebrating clean profitability, HYBE reported an operating loss of `196.6 billion won`. That is why this quarter matters. It was not a sign that BTS came back and failed to move the business. It was the opposite. The comeback was powerful enough to expose how large HYBE’s machine has become, and how confusing the optics can get once accounting charges, fandom monetization and investor expectations collide in the same report. [Related: HYBE’s $1.86B Revenue Record Hides a Brutal Truth — Profit Fell 73%](/studio/news/hybe-record-revenue-profit-plunge-73)
 
 ## The Quarter Looked Huge Before The Bottom Line Broke The Mood
 
