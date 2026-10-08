@@ -23,6 +23,7 @@ export interface HomeBoardHeaderProps {
   quotaRemaining: number;
   countdown: number;
   isRefreshing: boolean;
+  locale?: string;
   /** Show the home-only card voting guidance below the season label. */
   showVoteHelper?: boolean;
   voteHelperMax?: number;
@@ -34,16 +35,34 @@ export default function HomeBoardHeader({
   quotaRemaining,
   countdown,
   isRefreshing,
+  locale = 'ko',
   showVoteHelper = false,
   voteHelperMax = 100,
 }: HomeBoardHeaderProps) {
   const t = useTranslations('Vote');
+  const tSeason = useTranslations('League.season');
+  const tQuota = useTranslations('Vote.quota');
+  const isKorean = locale === 'ko';
+  const month = ['ko', 'ja', 'zh'].includes(locale)
+    ? String(season.month)
+    : new Intl.DateTimeFormat(locale, { month: 'long' })
+      .format(new Date(season.year, season.month - 1, 1));
+  const seasonLabel = isKorean
+    ? formatHomeSeasonLabel(season.year, season.month)
+    : tSeason('title', { year: season.year, month });
+  const remaining = quotaRemaining.toLocaleString(locale);
+  const quotaLabel = isKorean
+    ? `오늘 ${remaining}표 남음`
+    : `${tQuota('title')}: ${remaining}`;
+  const refreshLabel = isKorean
+    ? (isRefreshing ? '갱신 중…' : `${countdown}초`)
+    : (isRefreshing ? tSeason('refreshing') : tSeason('countdown', { seconds: countdown }));
 
   return (
-    <header className={styles.homeHeader} aria-label="현재 시즌">
+    <header className={styles.homeHeader} aria-label={isKorean ? '현재 시즌' : seasonLabel}>
       <div className={styles.seasonContext}>
         <span className={styles.seasonLabel} data-testid="home-season-label">
-          {formatHomeSeasonLabel(season.year, season.month)}
+          {seasonLabel}
         </span>
         {showVoteHelper && (
           <span
@@ -64,16 +83,18 @@ export default function HomeBoardHeader({
         <span
           className={styles.todayVotes}
           data-testid="home-today-votes"
-          aria-label={`오늘 남은 투표권 ${quotaRemaining.toLocaleString()}표`}
+          aria-label={isKorean ? `오늘 남은 투표권 ${remaining}표` : quotaLabel}
         >
-          오늘 {quotaRemaining.toLocaleString()}표 남음
+          {quotaLabel}
         </span>
 
         <span
           className={styles.refreshIndicator}
           data-testid="home-refresh-indicator"
           data-refreshing={isRefreshing}
-          aria-label={isRefreshing ? '데이터 갱신 중' : `다음 갱신까지 ${countdown}초`}
+          aria-label={isKorean
+            ? (isRefreshing ? '데이터 갱신 중' : `다음 갱신까지 ${countdown}초`)
+            : refreshLabel}
         >
           {isRefreshing ? (
             <Loader2
@@ -90,7 +111,7 @@ export default function HomeBoardHeader({
               aria-hidden="true"
             />
           )}
-          <span>{isRefreshing ? '갱신 중…' : `${countdown}초`}</span>
+          <span>{refreshLabel}</span>
         </span>
 
         <span

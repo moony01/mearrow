@@ -168,6 +168,7 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
   return (
     <div className={styles.dashboardContainer}>
       <HomeBoardHeader
+        locale={locale}
         season={season}
         quotaRemaining={quota.remaining}
         countdown={countdown}

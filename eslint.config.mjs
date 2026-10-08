@@ -13,6 +13,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Recovery worktrees and browser evidence are outside the active app.
+    ".worktrees/**",
+    ".playwright-mcp/**",
   ]),
 ]);
 

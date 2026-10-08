@@ -241,6 +241,7 @@ export default function VoteBoardEmbedClient({
         data-testid="vote-board-embed"
       >
         <HomeBoardHeader
+          locale={locale}
           season={season}
           quotaRemaining={quota.remaining}
           countdown={countdown}
