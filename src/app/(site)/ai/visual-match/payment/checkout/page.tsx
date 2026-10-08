@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import PageFrame from '@/components/layout/PageFrame';
@@ -19,5 +20,5 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function VisualMatchTossCheckoutPage() {
   const locale = DEFAULT_LOCALE;
   setRequestLocale(locale);
-  return <PageFrame size="wide" className={styles.paymentFrame}><TossCheckoutClient /></PageFrame>;
+  return <PageFrame size="wide" className={styles.paymentFrame}><Suspense fallback={null}><TossCheckoutClient /></Suspense></PageFrame>;
 }

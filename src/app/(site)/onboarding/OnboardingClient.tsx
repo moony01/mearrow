@@ -1,9 +1,9 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import classNames from 'classnames';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getSupabase } from '@/lib/supabase/client';
 import { hasCompletedOnboarding } from '@/lib/auth/onboarding';
 import { useAuth } from '@/hooks/useAuth';
@@ -45,8 +45,7 @@ function toDisplayName(valueKo: string | null, valueEn: string | null, isKo: boo
 export default function OnboardingClient() {
   const t = useTranslations('Onboarding');
   const router = useRouter();
-  const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'en';
+  const locale = useLocale();
   const isKo = locale === 'ko';
 
   const { user, isLoading, refreshProfile } = useAuth();

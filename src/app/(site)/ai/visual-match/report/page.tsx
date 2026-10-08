@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import PageFrame from '@/components/layout/PageFrame';
@@ -24,7 +25,7 @@ export default async function ReportPage() {
 
   return (
     <PageFrame size="wide" className={styles.reportFrame} data-testid="visual-match-report-page">
-      <ReportClient />
+      <Suspense fallback={null}><ReportClient /></Suspense>
     </PageFrame>
   );
 }

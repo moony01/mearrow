@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import PageFrame from '@/components/layout/PageFrame';
@@ -24,7 +25,7 @@ export default async function AnalyzingPage() {
 
   return (
     <PageFrame size="wide" className={styles.analysisPage} data-testid="visual-match-analyzing-page">
-      <AnalyzingClient />
+      <Suspense fallback={null}><AnalyzingClient /></Suspense>
     </PageFrame>
   );
 }

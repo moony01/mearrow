@@ -3,6 +3,7 @@
  * Next.js ImageResponse를 사용하여 언어별 OG 이미지 생성
  */
 import { ImageResponse } from 'next/og';
+export const dynamic = 'force-static';
 import { SITE_URL } from '@/lib/constants';
 import { BRAND_NAME, BRAND_TAGLINE } from '@/lib/brand';
 

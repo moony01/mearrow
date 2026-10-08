@@ -7,8 +7,9 @@
  * 저장·업로드·소셜 데이터 연동은 다음 단계에서 붙인다.
  */
 
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -310,9 +311,8 @@ const toHandle = (value: string) => {
 
 export default function MyProfile() {
   const { user, profile, signOut, deleteAccount } = useAuth();
-  const pathname = usePathname();
   const router = useRouter();
-  const locale = pathname?.split('/')[1] || 'en';
+  const locale = useLocale();
   const isKorean = locale === 'ko';
 
   const [feedFilter, setFeedFilter] = useState<FeedFilter>('all');
