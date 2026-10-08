@@ -1,0 +1,65 @@
+@use '../../../../styles/abstracts/variables' as *;
+
+.paymentFrame { min-width: 0; }
+
+.paymentPage {
+  position: relative;
+  display: grid;
+  min-height: min(720px, calc(100dvh - 170px));
+  place-items: center;
+  isolation: isolate;
+}
+
+.paymentPage::before {
+  position: absolute;
+  z-index: -1;
+  width: min(740px, 100vw);
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, $color-primary 13%, transparent), transparent 68%);
+  content: '';
+}
+
+.paymentCard {
+  width: min(100%, 580px);
+  padding: clamp(30px, 5vw, 50px);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, $color-border);
+  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  box-shadow: 0 28px 96px color-mix(in srgb, var(--color-primary) 12%, transparent);
+  text-align: center;
+}
+
+.icon { display: inline-grid; width: 42px; height: 42px; place-items: center; border: 1px solid color-mix(in srgb, var(--color-primary) 48%, transparent); border-radius: 50%; color: $color-primary; }
+.heading > p { margin: 16px 0 0; color: $color-primary; font-size: .68rem; font-weight: 850; letter-spacing: .14em; line-height: 1.2; }
+.heading h1 { margin: 18px 0 0; color: $color-text; font-family: $font-display; font-size: clamp(2rem, 5vw, 3rem); font-weight: 850; letter-spacing: -.07em; line-height: 1.05; }
+.heading > span { display: block; max-width: 420px; margin: 18px auto 0; color: $color-text-dim; font-size: .91rem; line-height: 1.7; }
+
+.featureList { display: grid; gap: 0; margin: 36px 0 0; padding: 0; border-top: 1px solid $color-border; list-style: none; text-align: left; }
+.featureList li { display: flex; align-items: center; gap: 12px; min-height: 48px; border-bottom: 1px solid $color-border; color: $color-text; font-size: .84rem; font-weight: 700; line-height: 1.45; }
+.featureList svg { flex: 0 0 auto; color: $color-primary; }
+
+.priceBlock { display: grid; gap: 7px; margin-top: 34px; }
+.priceBlock > span { color: $color-text-dim; font-size: .68rem; font-weight: 850; letter-spacing: .12em; }
+.priceBlock strong { color: $color-text; font-family: $font-display; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 850; letter-spacing: -.06em; line-height: 1; }
+.priceBlock small { color: $color-text-dim; font-size: .75rem; line-height: 1.5; }
+
+.checkoutButton { display: inline-flex; width: 100%; min-height: 52px; align-items: center; justify-content: center; gap: 9px; margin-top: 28px; padding: 13px 20px; border: 1px solid $color-primary; background: $color-primary; color: $color-bg; cursor: pointer; font: inherit; font-size: .86rem; font-weight: 850; }
+.checkoutButton:hover:not(:disabled), .checkoutButton:focus-visible:not(:disabled) { background: transparent; color: $color-primary; }
+.checkoutButton:disabled { cursor: wait; opacity: .7; }
+.spinner { animation: checkout-spin .9s linear infinite; }
+.error, .testNotice, .notice { margin: 14px 0 0; font-size: .74rem; line-height: 1.55; }
+.error { color: #d1495b; }
+.testNotice { color: $color-primary; }
+.notice { margin-top: 18px; color: $color-text-dim; }
+.tossCheckoutCard { max-width: 680px; text-align: left; }
+.tossCheckoutCard .heading { text-align: center; }
+.backButton { display: inline-flex; align-items: center; gap: 6px; margin: -8px 0 18px; padding: 0; border: 0; background: transparent; color: $color-text-dim; cursor: pointer; font: inherit; font-size: .78rem; font-weight: 700; }
+.backButton:hover, .backButton:focus-visible { color: $color-primary; }
+.tossPrice { margin: 30px 0 12px; color: $color-text; font-size: 1rem; font-weight: 850; text-align: center; }
+.tossWidget { min-height: 188px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; }
+.tossAgreement { min-height: 72px; }
+.centerSpinner { display: block; margin: 32px auto 0; color: $color-primary; animation: checkout-spin .9s linear infinite; }
+
+@keyframes checkout-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 600px) { .paymentPage { min-height: calc(100dvh - 130px); } .paymentCard { padding: 30px 22px; } .featureList li { min-height: 54px; } }

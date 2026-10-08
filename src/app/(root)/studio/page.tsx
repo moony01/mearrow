@@ -166,11 +166,12 @@ export default function StudioPage() {
           </div>
         </div>
         <div className={styles.serviceGrid}>
-          <article className={`${styles.serviceCard} ${styles.visualMatch}`}>
+          <Link className={`${styles.serviceCard} ${styles.visualMatch}`} href="/ai/visual-match">
             <span className={styles.serviceNumber}>01</span>
             <h3>Visual Match</h3>
             <p>MEARROW&apos;s AI visual matching service.</p>
-          </article>
+            <span className={styles.serviceAction}>Open Visual Match <ArrowUpRight size={14} aria-hidden="true" /></span>
+          </Link>
           <a
             className={`${styles.serviceCard} ${styles.kpopface}`}
             href="https://moony01.com/kpopface/"

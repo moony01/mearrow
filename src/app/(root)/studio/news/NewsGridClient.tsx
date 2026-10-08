@@ -36,7 +36,7 @@ interface NewsGridClientProps {
 
 const PAGE_SIZE = 10;
 
-export default function NewsGridClient({ posts, locale, basePath = `/${locale}/news` }: NewsGridClientProps) {
+export default function NewsGridClient({ posts, locale, basePath = '/studio/news' }: NewsGridClientProps) {
   const t = useTranslations('News');
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

@@ -129,11 +129,16 @@ function createNoopSupabaseClient() {
     }),
   };
 
+  const noopFunctions = {
+    invoke: async () => ({ data: null, error: configurationError() }),
+  };
+
   return {
     auth: noopAuth,
     from: () => createNoopQuery(),
     rpc: () => createNoopQuery({ rejectMutations: true }),
     storage: noopStorage,
+    functions: noopFunctions,
   } as unknown as SupabaseClient;
 }
 
@@ -176,8 +181,12 @@ export function getSupabase(): SupabaseClient {
        * - 자동 교환과 수동 교환의 경쟁 상태(race condition) 방지
        */
       detectSessionInUrl: false,
-      /** 자동 토큰 갱신 활성화 */
-      autoRefreshToken: true,
+      /**
+       * AuthProvider가 초기 세션을 확인한 뒤 만료 시간을 기준으로 갱신합니다.
+       * SDK 시작 복구는 거절된 refresh token을 console.error로 출력하므로
+       * stale 세션을 앱이 분류·정리한 다음 갱신을 시작합니다.
+       */
+      autoRefreshToken: false,
     },
   });
 

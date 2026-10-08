@@ -1,0 +1,845 @@
+@use '../../../../styles/abstracts/variables' as *;
+
+@page {
+  size: 210mm 297mm;
+  margin: 0;
+}
+
+.reportFrame {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.reportDocument {
+  --pdf-ink: #10131c;
+  --pdf-muted: rgba(16, 19, 28, 0.58);
+  --pdf-border: rgba(16, 19, 28, 0.14);
+  --pdf-blue: #315cff;
+  --pdf-lime: #c7ff32;
+  --pdf-dark: #080b14;
+  width: 100%;
+  min-width: 210mm;
+  padding: 28px 0 64px;
+  background: #e9edf6;
+  color: var(--pdf-ink);
+  font-family: $font-stack;
+}
+
+.pdfPage {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  box-sizing: border-box;
+  margin: 0 auto 24px;
+  padding: 16mm 16mm 14mm;
+  overflow: hidden;
+  background: #ffffff;
+  break-after: page;
+  page-break-after: always;
+  box-shadow: 0 16px 48px rgba(16, 19, 28, 0.13);
+}
+
+.pdfPage:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.coverPage {
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(49, 92, 255, 0.34), transparent 30%),
+    linear-gradient(145deg, #080b14 0%, #11182b 68%, #17213a 100%);
+  color: #f7f8ff;
+}
+
+.coverTop,
+.pageFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brandLockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f7f8ff;
+  font-family: $font-display;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+}
+
+.brandLockup img {
+  width: 30px;
+  height: 30px;
+}
+
+.coverSerial,
+.pageFooter {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.63rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.coverSerial {
+  color: rgba(247, 248, 255, 0.56);
+}
+
+.coverMain {
+  margin-top: auto;
+  margin-bottom: 22mm;
+}
+
+.coverEyebrow,
+.documentKicker {
+  margin: 0;
+  color: var(--pdf-blue);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+.coverEyebrow {
+  color: var(--pdf-lime);
+}
+
+.coverMain h1 {
+  max-width: 150mm;
+  margin: 13mm 0 0;
+  color: #f7f8ff;
+  font-family: $font-display;
+  font-size: 29pt;
+  font-weight: 850;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.coverDescription {
+  max-width: 126mm;
+  margin: 9mm 0 0;
+  color: rgba(247, 248, 255, 0.68);
+  font-size: 10pt;
+  line-height: 1.7;
+}
+
+.coverRule {
+  width: 100%;
+  height: 1px;
+  margin: 13mm 0 0;
+  background: linear-gradient(90deg, var(--pdf-lime), rgba(199, 255, 50, 0));
+}
+
+.coverFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14mm;
+  margin: 8mm 0 0;
+}
+
+.coverFacts div,
+.signalGrid div {
+  display: grid;
+  gap: 5px;
+}
+
+.coverFacts dt,
+.signalGrid dt {
+  color: rgba(247, 248, 255, 0.48);
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coverFacts dd,
+.signalGrid dd {
+  margin: 0;
+  color: #f7f8ff;
+  font-size: 9pt;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12mm;
+  padding-top: 8mm;
+  border-top: 1px solid rgba(247, 248, 255, 0.16);
+}
+
+.signalGrid dd {
+  color: var(--pdf-lime);
+}
+
+.coverPage .pageFooter {
+  margin-top: auto;
+  padding-top: 8mm;
+  border-top: 1px solid rgba(247, 248, 255, 0.16);
+  color: rgba(247, 248, 255, 0.48);
+}
+
+.previewStamp {
+  position: absolute;
+  right: 16mm;
+  top: 31mm;
+  padding: 5px 8px;
+  border: 1px solid rgba(199, 255, 50, 0.52);
+  color: var(--pdf-lime);
+  font-size: 7pt;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.rankingPage {
+  display: flex;
+  flex-direction: column;
+  padding: 13mm 15mm 10mm;
+  color: var(--pdf-ink);
+}
+
+.rankingHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16mm;
+  padding-bottom: 5mm;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.rankingHeader h2 {
+  margin: 6mm 0 0;
+  color: var(--pdf-ink);
+  font-family: $font-display;
+  font-size: 22pt;
+  font-weight: 850;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.rankingDescription {
+  max-width: 116mm;
+  margin: 4mm 0 0;
+  color: var(--pdf-muted);
+  font-size: 9pt;
+  line-height: 1.65;
+}
+
+.rankingSummary {
+  display: grid;
+  flex: 0 0 29mm;
+  gap: 3px;
+  align-content: end;
+  padding-left: 7mm;
+  border-left: 3px solid var(--pdf-blue);
+}
+
+.rankingSummary strong {
+  color: var(--pdf-blue);
+  font-family: $font-display;
+  font-size: 25pt;
+  font-weight: 850;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+}
+
+.rankingSummary span {
+  color: var(--pdf-muted);
+  font-size: 7pt;
+  line-height: 1.4;
+}
+
+.rankingTableHeader,
+.rankingRow {
+  display: grid;
+  grid-template-columns: 14mm minmax(0, 1fr) 21mm 31mm;
+  align-items: center;
+  gap: 6mm;
+}
+
+.rankingTableHeader {
+  min-height: 8mm;
+  color: var(--pdf-muted);
+  font-size: 6.5pt;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rankingTableHeader span:nth-child(3),
+.rankingTableHeader span:nth-child(4) {
+  text-align: right;
+}
+
+.rankingList {
+  border-top: 1px solid var(--pdf-border);
+}
+
+.rankingRow {
+  min-height: 7.8mm;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.rankingRowLocked {
+  background: linear-gradient(90deg, rgba(49, 92, 255, 0.08), rgba(49, 92, 255, 0));
+  box-shadow: inset 3px 0 0 var(--pdf-blue);
+}
+
+.rankingRank {
+  padding-left: 3mm;
+  color: var(--pdf-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8pt;
+  font-weight: 850;
+}
+
+.rankingCompany {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.rankingCompany strong {
+  overflow: hidden;
+  color: var(--pdf-ink);
+  font-size: 8.5pt;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rankingCompany span {
+  overflow: hidden;
+  color: var(--pdf-muted);
+  font-size: 6.9pt;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rankingScore {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  color: var(--pdf-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8pt;
+  font-weight: 850;
+}
+
+.rankingRowLocked .rankingScore {
+  color: var(--pdf-muted);
+}
+
+.rankingAccess {
+  justify-self: end;
+  color: var(--pdf-muted);
+  font-size: 6.8pt;
+  font-weight: 750;
+  text-align: right;
+}
+
+.rankingRowFree .rankingAccess {
+  color: var(--pdf-blue);
+}
+
+.unlockPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10mm;
+  align-items: end;
+  margin-top: auto;
+  padding-top: 5mm;
+  border-top: 1.5px solid var(--pdf-ink);
+}
+
+.unlockPanel h3 {
+  margin: 0;
+  color: var(--pdf-ink);
+  font-family: $font-display;
+  font-size: 12pt;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.unlockPanel p {
+  max-width: 116mm;
+  margin: 3mm 0 0;
+  color: var(--pdf-muted);
+  font-size: 7.5pt;
+  line-height: 1.6;
+}
+
+.unlockFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5mm 8mm;
+  margin: 5mm 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.unlockFeatures li {
+  color: var(--pdf-ink);
+  font-size: 7.2pt;
+  font-weight: 750;
+}
+
+.unlockFeatures li::before {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 6px 1px 0;
+  border-radius: 50%;
+  background: var(--pdf-blue);
+  content: '';
+}
+
+.unlockPrice {
+  display: grid;
+  min-width: 25mm;
+  gap: 3px;
+  justify-items: end;
+}
+
+.unlockPrice span {
+  color: var(--pdf-muted);
+  font-size: 6.7pt;
+}
+
+.unlockPrice strong {
+  color: var(--pdf-blue);
+  font-family: $font-display;
+  font-size: 17pt;
+  font-weight: 850;
+  letter-spacing: -0.06em;
+}
+
+.rankingPage .pageFooter {
+  margin-top: 4mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--pdf-border);
+  color: var(--pdf-muted);
+}
+
+@media print {
+  .reportDocument {
+    min-width: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .pdfPage {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .reportDocument :global([data-pdf-ui]) {
+    display: none !important;
+  }
+
+  :global([data-testid='desktop-sidebar']),
+  :global([data-testid='mobile-header']),
+  :global([data-testid='mobile-bottom-nav']),
+  :global([data-testid='app-legal-footer']) {
+    display: none !important;
+  }
+
+  :global([data-testid='app-main-content']) {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :global([data-testid='app-content-inner']) {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
+
+/* Paid report pages: these are deliberately document-like rather than app cards. */
+.profilePage,
+.topFivePage,
+.detailPage,
+.auditionPage {
+  display: flex;
+  flex-direction: column;
+  color: var(--pdf-ink);
+}
+
+.profileLayout {
+  display: grid;
+  grid-template-columns: 66mm minmax(0, 1fr);
+  gap: 12mm;
+  margin-top: 11mm;
+}
+
+.profileImageFrame {
+  display: flex;
+  min-height: 155mm;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--pdf-dark);
+}
+
+.profileImageFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileImageFrame span {
+  color: rgba(247, 248, 255, 0.52);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 7pt;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.profileFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  border-top: 1px solid var(--pdf-border);
+}
+
+.profileFacts div {
+  display: grid;
+  gap: 3mm;
+  min-height: 28mm;
+  padding: 5mm 0;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.profileFacts div:nth-child(odd) {
+  padding-right: 6mm;
+  border-right: 1px solid var(--pdf-border);
+}
+
+.profileFacts div:nth-child(even) {
+  padding-left: 6mm;
+}
+
+.profileFacts dt,
+.detailOutline dt,
+.auditionPageFacts dt {
+  color: var(--pdf-muted);
+  font-size: 6.5pt;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.profileFacts dd,
+.detailOutline dd,
+.auditionPageFacts dd {
+  margin: 0;
+  color: var(--pdf-ink);
+  font-size: 9pt;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.profileNotice {
+  max-width: 128mm;
+  margin-top: 12mm;
+  padding: 6mm 7mm;
+  border-left: 3px solid var(--pdf-blue);
+  background: rgba(49, 92, 255, 0.045);
+}
+
+.profileNotice p {
+  margin: 0;
+  color: var(--pdf-muted);
+  font-size: 8.2pt;
+  line-height: 1.7;
+}
+
+.noticeLabel,
+.topFiveNote p,
+.focusBlock p,
+.auditionNotice p {
+  margin: 0 0 3mm;
+  color: var(--pdf-blue);
+  font-size: 6.5pt;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+}
+
+.rankingPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.rankingTableHeader,
+.rankingRow {
+  grid-template-columns: 13mm minmax(0, 1fr) 23mm 21mm;
+  gap: 5mm;
+}
+
+.rankingRow {
+  min-height: 8.05mm;
+}
+
+.rankingRowTop {
+  background: linear-gradient(90deg, rgba(49, 92, 255, 0.08), transparent 72%);
+  box-shadow: inset 3px 0 0 var(--pdf-blue);
+}
+
+.rankingRead {
+  justify-self: end;
+  color: var(--pdf-muted);
+  font-size: 6.2pt;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.rankingRowTop .rankingRead,
+.rankingRowTop .rankingScore {
+  color: var(--pdf-blue);
+}
+
+.topFiveList {
+  margin: 12mm 0 0;
+  padding: 0;
+  border-top: 1px solid var(--pdf-border);
+  list-style: none;
+}
+
+.topFiveList li {
+  display: grid;
+  grid-template-columns: 18mm minmax(0, 1fr) auto;
+  gap: 6mm;
+  align-items: center;
+  min-height: 27mm;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.topFiveRank,
+.detailHero span {
+  color: var(--pdf-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8.5pt;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.topFiveName {
+  display: grid;
+  gap: 2mm;
+}
+
+.topFiveName strong {
+  color: var(--pdf-ink);
+  font-family: $font-display;
+  font-size: 14pt;
+  font-weight: 850;
+  letter-spacing: -0.045em;
+}
+
+.topFiveName small {
+  color: var(--pdf-muted);
+  font-size: 7.5pt;
+  line-height: 1.45;
+}
+
+.topFiveScore {
+  color: var(--pdf-blue);
+  font-family: $font-display;
+  font-size: 15pt;
+  font-weight: 850;
+  letter-spacing: -0.06em;
+}
+
+.topFiveNote {
+  max-width: 130mm;
+  margin-top: 12mm;
+  padding-top: 7mm;
+  border-top: 1.5px solid var(--pdf-ink);
+}
+
+.topFiveNote strong {
+  color: var(--pdf-ink);
+  font-size: 10pt;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.detailHero {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 13mm;
+  padding: 8mm 0;
+  border-top: 2px solid var(--pdf-ink);
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.detailHero strong {
+  color: var(--pdf-blue);
+  font-family: $font-display;
+  font-size: 30pt;
+  font-weight: 850;
+  letter-spacing: -0.09em;
+  line-height: 0.85;
+}
+
+.detailOutline {
+  display: grid;
+  gap: 0;
+  margin: 11mm 0 0;
+  border-top: 1px solid var(--pdf-border);
+}
+
+.detailOutline div {
+  display: grid;
+  grid-template-columns: 31mm minmax(0, 1fr);
+  gap: 7mm;
+  padding: 8mm 0;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.detailOutline dd {
+  font-size: 9.3pt;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.focusBlock {
+  margin-top: 10mm;
+  padding: 7mm;
+  background: var(--pdf-dark);
+}
+
+.focusBlock p {
+  color: var(--pdf-lime);
+}
+
+.focusBlock ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4mm 7mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.focusBlock li {
+  color: #f7f8ff;
+  font-size: 8pt;
+  font-weight: 750;
+}
+
+.focusBlock li::before {
+  color: var(--pdf-lime);
+  content: '• ';
+}
+
+.auditionPageList {
+  display: grid;
+  gap: 0;
+  margin-top: 10mm;
+  border-top: 1px solid var(--pdf-border);
+}
+
+.auditionPageRow {
+  display: grid;
+  grid-template-columns: 47mm minmax(0, 1fr);
+  gap: 8mm;
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--pdf-border);
+}
+
+.auditionPageRank {
+  display: grid;
+  gap: 2mm;
+  align-content: start;
+}
+
+.auditionPageRank span {
+  color: var(--pdf-blue);
+  font-size: 6.5pt;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.auditionPageRank strong {
+  color: var(--pdf-ink);
+  font-family: $font-display;
+  font-size: 11pt;
+  font-weight: 850;
+}
+
+.auditionPageRank small {
+  color: var(--pdf-muted);
+  font-size: 6.8pt;
+}
+
+.auditionPageFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5mm;
+}
+
+.auditionPageFacts div {
+  display: grid;
+  gap: 2mm;
+}
+
+.auditionPageFacts dd {
+  font-size: 7pt;
+  line-height: 1.55;
+}
+
+.auditionNotice {
+  margin-top: 8mm;
+  padding: 5mm 6mm;
+  border: 1px solid var(--pdf-border);
+  color: var(--pdf-muted);
+  font-size: 7.3pt;
+  line-height: 1.6;
+}
+
+.auditionNotice p {
+  margin-bottom: 2mm;
+}
+
+.auditionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5mm;
+  margin-top: 3.5mm;
+  color: var(--pdf-blue);
+  font-size: 7.5pt;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.auditionLink:hover,
+.auditionLink:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 1.2mm;
+}
+
+@media (max-width: 720px) {
+  .reportDocument {
+    min-width: 0;
+    padding: 0 0 24px;
+  }
+
+  .pdfPage {
+    width: 100%;
+    height: auto;
+    min-height: 297mm;
+    margin-bottom: 12px;
+  }
+}

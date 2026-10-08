@@ -161,6 +161,17 @@ describe('CallbackClient onboarding redirect', () => {
     expect(getSafeReturnTo('https://example.com/kpopface/', 'production')).toBeNull();
   });
 
+  it('Visual Match의 내부 결제 경로를 OAuth 이후 returnTo로 보존한다', () => {
+    expect(getSafeReturnTo('/ai/visual-match/payment', 'production')).toBe('/ai/visual-match/payment');
+    expect(getSafeReturnTo('/ko/ai/visual-match/payment', 'production')).toBe('/ai/visual-match/payment');
+    expect(getSafeReturnTo('/en/ai/visual-match/payment?checkout=canceled', 'production')).toBe('/ai/visual-match/payment?checkout=canceled');
+    expect(getSafeReturnTo('//example.com/ko/ai/visual-match/payment', 'production')).toBeNull();
+    expect(getSafeReturnTo('/ko/settings', 'production')).toBeNull();
+    expect(getSafeReturnTo('/ai/visual-match/../../settings', 'production')).toBeNull();
+    expect(getSafeReturnTo('/ai/visual-match/%2e%2e/%2e%2e/settings', 'production')).toBeNull();
+    expect(getSafeReturnTo('/ai/visual-match/%2f%2fevil.example', 'production')).toBeNull();
+  });
+
   it('Supabase 환경변수가 없으면 fetch 없이 온보딩으로 fail-closed한다', async () => {
     vi.spyOn(console, 'warn').mockImplementation(() => {});
     const fetchImpl = vi.fn();

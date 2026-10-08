@@ -45,6 +45,23 @@ export function getSafeReturnTo(
 ): string | null {
   if (!value) return null;
 
+  // Internal app routes are safe to preserve across OAuth. Keep this narrow
+  // to the Visual Match flow so arbitrary query values cannot become a
+  // general redirect mechanism.
+  if (
+    value.startsWith('/')
+    && !value.startsWith('//')
+    && !value.includes('\\')
+    && !/[\u0000-\u001f\u007f]/.test(value)
+    && !/%(?:2f|5c)/i.test(value)
+  ) {
+    const canonical = value.replace(/^\/(ko|en|ja|zh|es|fr|de)(?=\/ai\/)/, '');
+    const internal = new URL(canonical, 'https://mearrow.invalid');
+    if (/^\/ai\/visual-match(?:\/|$)/.test(internal.pathname)) {
+      return `${internal.pathname}${internal.search}${internal.hash}`;
+    }
+  }
+
   try {
     const target = new URL(value);
     const isKpopfacePath = target.pathname === '/kpopface' || target.pathname.startsWith('/kpopface/');
