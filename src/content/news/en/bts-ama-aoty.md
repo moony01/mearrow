@@ -7,7 +7,7 @@ thumbnail: "/images/news/bts-ama-aoty-thumbnail.webp"
 active: true
 ---
 
-The first thing fans spread was not the voting link. It was the screenshot. The reason was obvious: BTS was not sitting only inside the `Best Male K-pop Artist` lane. Their name was placed directly in the `Artist of the Year` main field. That is why the `BTS AMA Artist of the Year` story feels bigger than one more nomination. It reads like a sign that a major U.S. music award show is placing BTS back inside the central pop conversation, not merely treating them as a successful international category act. [Related: BTS Didn’t Just Hold No. 1 Again — Why America Is Still Buying This Album](/en/news/bts-billboard-two-weeks)
+The first thing fans spread was not the voting link. It was the screenshot. The reason was obvious: BTS was not sitting only inside the `Best Male K-pop Artist` lane. Their name was placed directly in the `Artist of the Year` main field. That is why the `BTS AMA Artist of the Year` story feels bigger than one more nomination. It reads like a sign that a major U.S. music award show is placing BTS back inside the central pop conversation, not merely treating them as a successful international category act. [Related: BTS Didn’t Just Hold No. 1 Again — Why America Is Still Buying This Album](//news/bts-billboard-two-weeks)
 
 ## Why This Slot Feels Different
 

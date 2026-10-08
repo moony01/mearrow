@@ -9,7 +9,7 @@ active: true
 
 No arrest is the headline. More pressure is the story.
 
-On April 24, 2026, South Korean prosecutors rejected police's request for an arrest warrant against HYBE chairman Bang Si-hyuk in the company's long-running IPO-related fraud case. That sounds, at first glance, like a break for HYBE. It is not. The prosecutors did not clear Bang. They sent the filing back and told police to strengthen the case. In other words, the `Bang Si-hyuk arrest warrant` story did not end. The `HYBE fraud probe` simply moved into a more dangerous phase: one where the company cannot rely on a single procedural headline to calm investors, fans, or business partners. [Related: Right Before BTS's U.S. Tour, Bang Si-hyuk Faces an Arrest Warrant — HYBE's Real Risk Starts Now](/en/news/hybe-bang-arrest-warrant)
+On April 24, 2026, South Korean prosecutors rejected police's request for an arrest warrant against HYBE chairman Bang Si-hyuk in the company's long-running IPO-related fraud case. That sounds, at first glance, like a break for HYBE. It is not. The prosecutors did not clear Bang. They sent the filing back and told police to strengthen the case. In other words, the `Bang Si-hyuk arrest warrant` story did not end. The `HYBE fraud probe` simply moved into a more dangerous phase: one where the company cannot rely on a single procedural headline to calm investors, fans, or business partners. [Related: Right Before BTS's U.S. Tour, Bang Si-hyuk Faces an Arrest Warrant — HYBE's Real Risk Starts Now](//news/hybe-bang-arrest-warrant)
 
 ## What prosecutors actually did
 

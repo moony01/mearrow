@@ -8,7 +8,7 @@ thumbnail: "/images/news/bts-oreo-global-bet-thumbnail.webp"
 active: true
 ---
 
-`BTS Oreo` sounds like a cute grocery-aisle headline until the scale shows up. Mondelez says the limited-edition cookie will move across more than `80` markets, with online presale beginning June 1 and a retail rollout starting June 8. That turns a purple sandwich cookie into something bigger than merch: a live test of whether K-pop fandom can carry a snack brand across borders, shelves, social feeds, and local taste memory at the same time. [Related: BTS AMAs 2026 turned a fan-voted trophy into a market warning](/en/news/bts-ama-second-aoty)
+`BTS Oreo` sounds like a cute grocery-aisle headline until the scale shows up. Mondelez says the limited-edition cookie will move across more than `80` markets, with online presale beginning June 1 and a retail rollout starting June 8. That turns a purple sandwich cookie into something bigger than merch: a live test of whether K-pop fandom can carry a snack brand across borders, shelves, social feeds, and local taste memory at the same time. [Related: BTS AMAs 2026 turned a fan-voted trophy into a market warning](//news/bts-ama-second-aoty)
 
 ## BTS Oreo Is Built Like A Global Drop
 

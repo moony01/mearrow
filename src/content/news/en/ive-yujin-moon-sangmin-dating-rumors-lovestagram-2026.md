@@ -78,7 +78,7 @@ But here's what the lovestagram incident actually reveals about IVE's position: 
 | Dating rumor risk | Higher visibility = higher scrutiny of private life |
 | Starship response | Strategic silence — standard playbook for thin evidence |
 
-[Related: IVE Dethrones BTS — 'BANG BANG' Shatters All-Time Perfect All-Kill Record](/en/news/ive-bang-bang-pak-record-starship-kakao-2026)
+[Related: IVE Dethrones BTS — 'BANG BANG' Shatters All-Time Perfect All-Kill Record](//news/ive-bang-bang-pak-record-starship-kakao-2026)
 
 ## MEARROW's Take: The Rumor Mill as a Fame Thermometer
 

@@ -48,7 +48,7 @@ For international applicants, The Scout should be read less as a dream doorway a
 
 K-pop selection is not a single gate. It is a chain of gates: audition, contract, training, team fit, concept timing, debut budget, fan conversion, and company patience. Missing one gate can send a performer back to the start. The Scout is interesting because it admits that the industry produces unfinished careers, not only finished stars.
 
-[Related: What Big 4 Agencies Actually Look for in Trainee Applicants](/en/news/big4-trainee-requirements-attitude)
+[Related: What Big 4 Agencies Actually Look for in Trainee Applicants](//news/big4-trainee-requirements-attitude)
 
 ## MEARROW's View: The Reboot Format Is A Mirror
 

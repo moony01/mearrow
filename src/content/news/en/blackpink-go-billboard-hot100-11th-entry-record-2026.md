@@ -68,7 +68,7 @@ This gap is not about talent or domestic popularity. It's about the specific mec
 
 Before March 11, 2026, the K-pop girl group Hot 100 ceiling was 10 entries. It is now 11. The next target is 12. BLACKPINK would need another 'DEADLINE'-era single cycle, or a solo feature collaboration, to get there. Given the trajectory — two singles from one EP both reaching the Hot 100 in the same chart cycle — the path to 12 is shorter than the path to 11 was.
 
-[Related: BLACKPINK 'DEADLINE' Sells 1.77M First Week — K-Pop Girl Group Sales Record Shattered](/en/news/blackpink-deadline-ep-record-sales-yg-2026)
+[Related: BLACKPINK 'DEADLINE' Sells 1.77M First Week — K-Pop Girl Group Sales Record Shattered](//news/blackpink-deadline-ep-record-sales-yg-2026)
 
 ## MEARROW's Take
 

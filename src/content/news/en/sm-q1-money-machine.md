@@ -7,7 +7,7 @@ thumbnail: '/images/news/sm-q1-money-machine-thumbnail.webp'
 active: true
 ---
 
-`SM Entertainment Q1` numbers landed with a strange twist. The company reported `279.1 billion won` in consolidated revenue for the first quarter of 2026, up `20.6 percent` from a year earlier, while operating profit rose `18.5 percent` to `38.6 billion won`. That sounds like a clean album-era victory at first. It was not. The sharper story is that SM grew while the parent company's physical album and digital music revenue fell. The engine under the quarter was not only songs in boxes. It was concerts, merchandise, light sticks, pop-ups, subsidiaries, and the fan-platform layer around them. [Related: The U.S. just took Japan's K-pop crown - and the $120M quarter is the warning shot](/en/news/kpop-exports-us-overtakes-japan)
+`SM Entertainment Q1` numbers landed with a strange twist. The company reported `279.1 billion won` in consolidated revenue for the first quarter of 2026, up `20.6 percent` from a year earlier, while operating profit rose `18.5 percent` to `38.6 billion won`. That sounds like a clean album-era victory at first. It was not. The sharper story is that SM grew while the parent company's physical album and digital music revenue fell. The engine under the quarter was not only songs in boxes. It was concerts, merchandise, light sticks, pop-ups, subsidiaries, and the fan-platform layer around them. [Related: The U.S. just took Japan's K-pop crown - and the $120M quarter is the warning shot](//news/kpop-exports-us-overtakes-japan)
 
 ## The 279.1 Billion Won Quarter Had A Hidden Center
 

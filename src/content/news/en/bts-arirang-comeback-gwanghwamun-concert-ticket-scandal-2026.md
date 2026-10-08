@@ -86,4 +86,4 @@ The ticket scam investigation, the 260,000 projected visitors, the Netflix deal 
 
 Eight days.
 
-[Related: ENHYPEN's Heeseung Departs — The Shocking Split That Leaves Five](/en/news/enhypen-heeseung-departure-belift-lab-controversy-2026)
+[Related: ENHYPEN's Heeseung Departs — The Shocking Split That Leaves Five](//news/enhypen-heeseung-departure-belift-lab-controversy-2026)

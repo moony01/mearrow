@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Info, FileText, Shield, HelpCircle, MessageCircle, BookOpen } from 'lucide-react';
 import styles from './DisclaimerBanner.module.scss';
@@ -14,8 +13,6 @@ import styles from './DisclaimerBanner.module.scss';
  */
 export function DisclaimerBanner() {
   const t = useTranslations('Disclaimer');
-  const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'en';
 
   return (
     <div className={styles.disclaimerBanner}>
@@ -24,27 +21,27 @@ export function DisclaimerBanner() {
         <p className={styles.text}>{t('banner')}</p>
       </div>
       <div className={styles.links}>
-        <Link href={`/${locale}/terms`} className={styles.link}>
+        <Link href={`/terms`} className={styles.link}>
           <FileText size={12} />
           <span>{t('terms')}</span>
         </Link>
         <span className={styles.divider}>|</span>
-        <Link href={`/${locale}/privacy`} className={styles.link}>
+        <Link href={`/privacy`} className={styles.link}>
           <Shield size={12} />
           <span>{t('privacy')}</span>
         </Link>
         <span className={styles.divider}>|</span>
-        <Link href={`/${locale}/about`} className={styles.link}>
+        <Link href={`/about`} className={styles.link}>
           <HelpCircle size={12} />
           <span>{t('about')}</span>
         </Link>
         <span className={styles.divider}>|</span>
-        <Link href={`/${locale}/faq`} className={styles.link}>
+        <Link href={`/faq`} className={styles.link}>
           <MessageCircle size={12} />
           <span>{t('faq')}</span>
         </Link>
         <span className={styles.divider}>|</span>
-        <Link href={`/${locale}/editorial`} className={styles.link}>
+        <Link href={`/editorial`} className={styles.link}>
           <BookOpen size={12} />
           <span>{t('editorial')}</span>
         </Link>

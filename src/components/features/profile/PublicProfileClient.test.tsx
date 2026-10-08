@@ -6,7 +6,7 @@ import PublicProfileClient from './PublicProfileClient';
 
 const mocks = vi.hoisted(() => ({ getProfile: vi.fn(), posts: vi.fn(), activities: vi.fn(), social: vi.fn() }));
 vi.mock('next-intl', () => ({ useTranslations: () => (key: string) => key }));
-vi.mock('next/navigation', () => ({ usePathname: () => '/en/profile/artist' }));
+vi.mock('next/navigation', () => ({ usePathname: () => '/profile/artist' }));
 vi.mock('@/lib/api/public-profile', () => ({
   getPublicProfileByUsername: mocks.getProfile,
   listPublicProfilePosts: mocks.posts,
@@ -37,7 +37,7 @@ describe('public profile initial document', () => {
     const html = renderToStaticMarkup(<PublicProfileClient locale="en" username="artist" />);
     expect(html).toContain('<h1>artist</h1>');
     expect(html).toContain('intro');
-    expect(html).toContain('href="/en"');
+    expect(html).toContain('href="/"');
   });
 
   it('keeps preloaded content visible during a pending refresh and a refresh failure', async () => {

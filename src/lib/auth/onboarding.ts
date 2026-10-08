@@ -3,7 +3,6 @@ export interface OnboardingProfileState {
 }
 
 interface AuthenticatedRedirectInput {
-  locale: string;
   profile: OnboardingProfileState | null | undefined;
   returnTo?: string | null;
 }
@@ -23,13 +22,12 @@ export function hasCompletedOnboarding(
  * New, missing, or incomplete profiles must finish onboarding first.
  */
 export function getAuthenticatedRedirect({
-  locale,
   profile,
   returnTo,
 }: AuthenticatedRedirectInput): string {
   if (!hasCompletedOnboarding(profile)) {
-    return `/${locale}/onboarding`;
+    return '/onboarding';
   }
 
-  return returnTo || `/${locale}`;
+  return returnTo || '/';
 }

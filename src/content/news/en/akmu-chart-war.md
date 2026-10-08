@@ -12,7 +12,7 @@ active: true
 
 On May 20, Circle Chart's weekly rankings for May 3 to 9 put AKMU at the center of the domestic market conversation. "Paradise of Rumors" topped the overall digital chart, download chart, and streaming chart, giving the duo a Circle triple crown while the album market around them was being crowded by CORTIS, BABYMONSTER, BTS, ILLIT, and other fandom-heavy names. That is the part rivals cannot ignore. A song built on public trust, Korean lyricism, and long-term artist identity is still capable of cutting through the loudest fan war.
 
-[Related: AKMU's independence already changed the YG story](/en/news/akmu-yg-independence-brutal-training-new-label-2026)
+[Related: AKMU's independence already changed the YG story](//news/akmu-yg-independence-brutal-training-new-label-2026)
 
 ## AKMU Paradise of Rumors Turned Public Listening Into Leverage
 

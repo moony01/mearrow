@@ -68,7 +68,7 @@ function LoginFormInner() {
     // 로그인 페이지를 새로 열었을 때도 이미 활성화된 개발자 테스트 세션을
     // 로그인 대기 상태로 남겨두지 않고, 토글 클릭과 동일하게 홈으로 보낸다.
     if (localTestModeEnabled) {
-      router.replace(`/${locale}`);
+      router.replace(`/`);
     }
 
     // localStorage에서 마지막 로그인 프로바이더 읽기
@@ -136,7 +136,7 @@ function LoginFormInner() {
     setDevelopmentTestModeEnabled(nextValue);
     setLocalTestMode(nextValue);
     if (nextValue) {
-      router.replace(`/${locale}`);
+      router.replace(`/`);
     }
   };
 

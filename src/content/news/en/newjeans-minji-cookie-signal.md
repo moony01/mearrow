@@ -7,7 +7,7 @@ thumbnail: '/images/news/newjeans-minji-cookie-signal-thumbnail.webp'
 active: true
 ---
 
-`NewJeans Minji return` rumors did not restart with a comeback poster, a press conference, or a clean agency timetable. They restarted with cookies. On May 7, ADOR said discussions about Minji's future activities were moving in a positive direction, the same day NewJeans' official channels acknowledged her birthday with images connected to cookies she had prepared for fans. The easy read is that NewJeans may be closer to a four-member return. The sharper read is that ADOR has started testing whether a soft personal signal can survive one of K-pop's most damaged trust environments. [Related: Is This Still NewJeans?](/en/news/newjeans-ador-return-2026-comeback-without-minhejin)
+`NewJeans Minji return` rumors did not restart with a comeback poster, a press conference, or a clean agency timetable. They restarted with cookies. On May 7, ADOR said discussions about Minji's future activities were moving in a positive direction, the same day NewJeans' official channels acknowledged her birthday with images connected to cookies she had prepared for fans. The easy read is that NewJeans may be closer to a four-member return. The sharper read is that ADOR has started testing whether a soft personal signal can survive one of K-pop's most damaged trust environments. [Related: Is This Still NewJeans?](//news/newjeans-ador-return-2026-comeback-without-minhejin)
 
 ## NewJeans Minji Return Rumors Start With A Cookie
 

@@ -7,7 +7,7 @@ thumbnail: '/images/news/tws-no-tragedy-million-thumbnail.webp'
 active: true
 ---
 
-`TWS NO TRAGEDY` did not need a long runway to prove this comeback was different. Four days was enough. By `April 30`, the group's fifth mini album had reached `1,003,844` copies sold, turning TWS into a first-time million seller almost immediately after release. That number matters on its own, but the timing matters more. In K-pop, a million seller used to sound like the end of a long climb. For TWS, it now looks like the speed of the climb is becoming the real headline. [Related: Japan Just Lost Its K-pop Crown - The U.S. Is Now the Biggest Export Market](/en/news/kpop-exports-us-overtakes-japan)
+`TWS NO TRAGEDY` did not need a long runway to prove this comeback was different. Four days was enough. By `April 30`, the group's fifth mini album had reached `1,003,844` copies sold, turning TWS into a first-time million seller almost immediately after release. That number matters on its own, but the timing matters more. In K-pop, a million seller used to sound like the end of a long climb. For TWS, it now looks like the speed of the climb is becoming the real headline. [Related: Japan Just Lost Its K-pop Crown - The U.S. Is Now the Biggest Export Market](//news/kpop-exports-us-overtakes-japan)
 
 ## TWS No Tragedy Stopped Feeling Like a Normal Rookie Win
 

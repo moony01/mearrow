@@ -36,7 +36,7 @@ _A visual metaphor for a comeback that feels more tense than nostalgic._
 
 ### Following BTS Changes The Temperature Immediately
 
-The timing is brutal in the best possible way. BTS already reset the scale of the K-pop conversation in March, and TXT now arrives inside the first big April traffic jam. The Korea Times described April as the last relatively open runway in an already crowded first-half calendar, with TXT placed right in the middle of that squeeze. That is a difficult slot because comparison becomes automatic. But it is also an opportunity: if TXT can hold attention in the immediate aftermath of a BTS cycle, the group stops looking like supporting traffic and starts looking like one of the label’s main scheduling engines. [Related: HYBE’s Japan streaming strategy is already rewriting how Big 4 labels make money](/en/news/kpop-big4-japan-streaming-strategy)
+The timing is brutal in the best possible way. BTS already reset the scale of the K-pop conversation in March, and TXT now arrives inside the first big April traffic jam. The Korea Times described April as the last relatively open runway in an already crowded first-half calendar, with TXT placed right in the middle of that squeeze. That is a difficult slot because comparison becomes automatic. But it is also an opportunity: if TXT can hold attention in the immediate aftermath of a BTS cycle, the group stops looking like supporting traffic and starts looking like one of the label’s main scheduling engines. [Related: HYBE’s Japan streaming strategy is already rewriting how Big 4 labels make money](//news/kpop-big4-japan-streaming-strategy)
 
 ### The Showcase And KCON LA Already Point Beyond Release Week
 

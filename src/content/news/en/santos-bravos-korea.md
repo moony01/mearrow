@@ -7,7 +7,7 @@ thumbnail: '/images/news/santos-bravos-korea-thumbnail.webp'
 active: true
 ---
 
-`Santos Bravos Korea` looked like a novelty headline at first: a Latin boy band under HYBE landing in Seoul, speaking Korean on camera, and performing in Brazilian Portuguese on `M Countdown`. But the real story is sharper than culture-shock curiosity. This was not a sentimental trip back to the birthplace of the company that built them. It was a distribution play. HYBE did not send Santos Bravos to Korea because Korea alone was the prize. It sent them because Seoul is still the fastest way to reach the larger ecosystem of fans who consume K-pop through Korean stages, Korean edits, Korean challenge clips, and Korean media formats even when the artists on screen are not Korean at all. [Related: HYBE's India Audition Is Testing Whether K-pop Can Export Its Whole System](/en/news/hybe-india-audition-kpop)
+`Santos Bravos Korea` looked like a novelty headline at first: a Latin boy band under HYBE landing in Seoul, speaking Korean on camera, and performing in Brazilian Portuguese on `M Countdown`. But the real story is sharper than culture-shock curiosity. This was not a sentimental trip back to the birthplace of the company that built them. It was a distribution play. HYBE did not send Santos Bravos to Korea because Korea alone was the prize. It sent them because Seoul is still the fastest way to reach the larger ecosystem of fans who consume K-pop through Korean stages, Korean edits, Korean challenge clips, and Korean media formats even when the artists on screen are not Korean at all. [Related: HYBE's India Audition Is Testing Whether K-pop Can Export Its Whole System](//news/hybe-india-audition-kpop)
 
 ## The Night the K-pop Frame Stopped Looking Fully Korean
 

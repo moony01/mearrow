@@ -76,4 +76,4 @@ Whether the tree falls is a question for January 2027. Right now, the numbers ar
 
 Something has to give eventually. BTS, at minimum, has made it structurally harder than ever to explain why it shouldn't.
 
-[Related: BTS Sold Out 41 Stadiums Before Playing a Single Note](/en/news/bts-arirang-world-tour-sellout-record-2026)
+[Related: BTS Sold Out 41 Stadiums Before Playing a Single Note](//news/bts-arirang-world-tour-sellout-record-2026)

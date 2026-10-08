@@ -8,7 +8,7 @@ thumbnail: '/images/news/kpop-indie-agency-fund-thumbnail.webp'
 active: true
 ---
 
-The `K-pop agency fund` story is not only about government money. South Korea's Ministry of Culture, Sports and Tourism and the Korea Creative Content Agency have selected 10 smaller K-pop teams for a new Global Leap Forward Support project, according to Korea.kr, The Korea Herald, The Korea Times and Digital Music News. Each selected agency can receive up to 300 million won a year. The sharper question is whether that money can create a real middle lane between Big Four dominance and survival-mode indie promotion. [Related: K-pop album exports just crossed $100M](/en/news/kpop-album-exports-us)
+The `K-pop agency fund` story is not only about government money. South Korea's Ministry of Culture, Sports and Tourism and the Korea Creative Content Agency have selected 10 smaller K-pop teams for a new Global Leap Forward Support project, according to Korea.kr, The Korea Herald, The Korea Times and Digital Music News. Each selected agency can receive up to 300 million won a year. The sharper question is whether that money can create a real middle lane between Big Four dominance and survival-mode indie promotion. [Related: K-pop album exports just crossed $100M](//news/kpop-album-exports-us)
 
 ## Korea Is Trying To Build A K-pop Middle Class
 

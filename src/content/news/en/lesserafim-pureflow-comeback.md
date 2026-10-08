@@ -50,7 +50,7 @@ MEARROW thinks the elegance of this strategy lies in the bait-and-switch. Most a
 
 ### In the fourth-generation girl-group race, the next sentence matters more than the next teaser
 
-The 2026 fourth-generation landscape is already overcrowded, which means one strong hook is not enough anymore. What matters is whether a group can create the next two or three sentences of its own story before competitors take the oxygen. `pt.1` is valuable because it implies continuation before the first full chapter has even landed. If `Celebration` captures the atmosphere first and `PUREFLOW` deepens it later, LE SSERAFIM will look less like a group returning and more like a group reopening its own universe. [Related: The fourth generation did not peak and fade — the global K-pop game is getting bigger in structure, not just fandom size](/en/news/4th-gen-global-impact)
+The 2026 fourth-generation landscape is already overcrowded, which means one strong hook is not enough anymore. What matters is whether a group can create the next two or three sentences of its own story before competitors take the oxygen. `pt.1` is valuable because it implies continuation before the first full chapter has even landed. If `Celebration` captures the atmosphere first and `PUREFLOW` deepens it later, LE SSERAFIM will look less like a group returning and more like a group reopening its own universe. [Related: The fourth generation did not peak and fade — the global K-pop game is getting bigger in structure, not just fandom size](//news/4th-gen-global-impact)
 
 ## The Real Split Happens The Day After The Celebration
 

@@ -9,7 +9,6 @@ import styles from './NoticeList.module.scss';
 
 interface NoticeListProps {
   notices: AnnouncementListItem[];
-  locale: string;
   commentCounts?: Record<string, number>;
 }
 
@@ -17,7 +16,7 @@ interface NoticeListProps {
  * 공지사항 목록 컴포넌트
  * 클릭 시 /notice/[id] 상세 페이지로 이동
  */
-export default function NoticeList({ notices, locale, commentCounts = {} }: NoticeListProps) {
+export default function NoticeList({ notices, commentCounts = {} }: NoticeListProps) {
   const t = useTranslations('Notice');
 
   /** 카테고리 라벨 매핑 */
@@ -41,7 +40,7 @@ export default function NoticeList({ notices, locale, commentCounts = {} }: Noti
       {notices.map((notice) => (
         <Link
           key={notice.id}
-          href={`/${locale}/notice/${notice.id}`}
+          href={`/notice/${notice.id}`}
           className={classNames(styles.noticeItem, {
             [styles.pinned]: notice.is_pinned,
           })}

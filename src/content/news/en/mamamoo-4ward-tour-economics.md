@@ -7,7 +7,7 @@ thumbnail: '/images/news/mamamoo-4ward-tour-economics-thumbnail.webp'
 active: true
 ---
 
-`MAMAMOO 4WARD tour` is no longer only a reunion headline. On May 11, the story changed from "MAMAMOO is coming back" to something more measurable: three Seoul nights, a 12th-anniversary opening, and a route that pushes the group from Korea into Asia and the United States. That is why this announcement matters beyond nostalgia. Fans already knew Solar, Moonbyul, Wheein, and Hwasa could still command emotional loyalty. The sharper question is whether RBW can convert that loyalty into modern K-pop tour economics when every legacy act is being asked to prove that memory still sells seats. [Related: MAMAMOO's 4WARD teaser already changed the comeback clock](/en/news/mamamoo-4ward-return)
+`MAMAMOO 4WARD tour` is no longer only a reunion headline. On May 11, the story changed from "MAMAMOO is coming back" to something more measurable: three Seoul nights, a 12th-anniversary opening, and a route that pushes the group from Korea into Asia and the United States. That is why this announcement matters beyond nostalgia. Fans already knew Solar, Moonbyul, Wheein, and Hwasa could still command emotional loyalty. The sharper question is whether RBW can convert that loyalty into modern K-pop tour economics when every legacy act is being asked to prove that memory still sells seats. [Related: MAMAMOO's 4WARD teaser already changed the comeback clock](//news/mamamoo-4ward-return)
 
 ## 3 Seoul Nights Turn Anniversary Into Inventory
 

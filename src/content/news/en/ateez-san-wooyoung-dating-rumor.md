@@ -62,7 +62,7 @@ The launch of `9트쫑` changes the context around every interaction. On a stand
 
 That is powerful programming because it gives fans a repeatable reason to return. It also increases the number of moments that can be clipped, translated, and debated. A line about a tattoo can become a short-form hook. A pause can become a reaction meme. A joke about dating can travel farther than the original conversation because it compresses an entire friendship dynamic into one sentence.
 
-The channel is also arriving at a time when idol content is increasingly built around direct, recurring access rather than one-off promotional appearances. [Related: How a crowded K-pop comeback calendar turns every clip into a campaign](/en/news/june-kpop-comeback-pileup)
+The channel is also arriving at a time when idol content is increasingly built around direct, recurring access rather than one-off promotional appearances. [Related: How a crowded K-pop comeback calendar turns every clip into a campaign](//news/june-kpop-comeback-pileup)
 
 For San and Wooyoung, the commercial advantage is clear: their chemistry gives the channel a recognizable identity before every episode has a major guest or elaborate mission. The trade-off is that the same chemistry will keep producing interpretations they may not intend. The more natural the friendship looks, the more aggressively the internet may try to label it.
 

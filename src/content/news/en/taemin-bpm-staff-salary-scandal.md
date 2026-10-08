@@ -50,7 +50,7 @@ Under standard exclusive contracts, artists cannot easily exit even when an agen
 
 The deeper issue is **settlement transparency**. Artists often have limited visibility into how much they've earned and when they'll be paid. Cha Ga Won's situation is an extreme case, but the structural vulnerability it exposes is industry-wide.
 
-[Related: SM Did It Again — Xiumin's KBS Ban and the JYJ Pattern That Won't Die](/en/news/sm-xiumin-kbs-ban-jyj-pattern)
+[Related: SM Did It Again — Xiumin's KBS Ban and the JYJ Pattern That Won't Die](//news/sm-xiumin-kbs-ban-jyj-pattern)
 
 ## MEARROW's Take
 

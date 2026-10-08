@@ -66,7 +66,7 @@ describe('LoginForm development controls', () => {
 
     render(<LoginForm />);
 
-    expect(mocks.routerReplace).toHaveBeenCalledWith('/ko');
+    expect(mocks.routerReplace).toHaveBeenCalledWith('/');
   });
 
   it('keeps the server markup independent of the browser test-mode marker', () => {
@@ -85,7 +85,7 @@ describe('LoginForm development controls', () => {
     fireEvent.click(screen.getByTestId('developer-test-mode-toggle'));
 
     expect(window.localStorage.getItem(DEVELOPMENT_TEST_MODE_STORAGE_KEY)).toBe('true');
-    expect(mocks.routerReplace).toHaveBeenCalledWith('/ko');
+    expect(mocks.routerReplace).toHaveBeenCalledWith('/');
     expect(screen.getByTestId('developer-test-mode-status').textContent).toContain(
       'local authenticated user',
     );
@@ -133,7 +133,7 @@ describe('LoginForm development controls', () => {
     ['kakao', 'kakao_login'],
   ] as const)('uses the canonical production callback for %s login', async (provider, label) => {
     vi.stubEnv('NODE_ENV', 'production');
-    const returnTo = 'https://mearrow.com/ko/news?source=login';
+    const returnTo = 'https://mearrow.com/news?source=login';
     mocks.getSearchParams.mockReturnValue(new URLSearchParams({ returnTo }));
 
     render(<LoginForm />);
@@ -144,7 +144,7 @@ describe('LoginForm development controls', () => {
     const [{ options }] = mocks.signInWithOAuth.mock.calls[0];
     const redirect = new URL(options.redirectTo);
     expect(redirect.origin).toBe('https://mearrow.com');
-    expect(redirect.pathname).toBe('/ko/auth/callback');
+    expect(redirect.pathname).toBe('/auth/callback');
     expect(redirect.searchParams.get('returnTo')).toBe(returnTo);
     expect(mocks.signInWithOAuth.mock.calls[0][0].provider).toBe(provider);
   });

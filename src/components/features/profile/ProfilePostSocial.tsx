@@ -82,7 +82,7 @@ export default function ProfilePostSocial({
 }: ProfilePostSocialProps) {
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
-  const signupPath = `/${locale}/signup`;
+  const signupPath = `/signup`;
   const canMutate = useMemo(
     () => isRealMember(user, isAuthenticated),
     [isAuthenticated, user],

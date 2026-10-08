@@ -7,7 +7,7 @@ thumbnail: "/images/news/hybe-illit-court-loss-thumbnail.webp"
 active: true
 ---
 
-`HYBE ILLIT lawsuit` was supposed to draw a legal line under one of K-pop's ugliest rumor cycles. Instead, the first public headline now reads like the opposite: HYBE, Belift Lab, and ILLIT lost a damages suit against FastView, the company linked to YouTube channels accused of spreading claims that ILLIT copied other artists. That does not mean the court validated every online accusation. It does mean HYBE failed, at least in this round, to turn reputational injury into a civil win. For a group still carrying the weight of the NewJeans comparison debate, that distinction may be legally important and publicly brutal. [Related: ILLIT's new comeback debate was already bigger than one song](/en/news/illit-little-monsters-newjeans-five-colors-diss)
+`HYBE ILLIT lawsuit` was supposed to draw a legal line under one of K-pop's ugliest rumor cycles. Instead, the first public headline now reads like the opposite: HYBE, Belift Lab, and ILLIT lost a damages suit against FastView, the company linked to YouTube channels accused of spreading claims that ILLIT copied other artists. That does not mean the court validated every online accusation. It does mean HYBE failed, at least in this round, to turn reputational injury into a civil win. For a group still carrying the weight of the NewJeans comparison debate, that distinction may be legally important and publicly brutal. [Related: ILLIT's new comeback debate was already bigger than one song](//news/illit-little-monsters-newjeans-five-colors-diss)
 
 ## The May 8 Ruling Changed the Temperature
 

@@ -50,7 +50,7 @@ _The emotional center of this comeback is not just reunion. It is the space betw
 
 I.O.I's brand power came from more than hit songs. It came from the memory of a public vote producing a lineup that felt collectively owned. That is why even now, reunion updates ripple through fan communities faster than many active-group announcements. Reddit's `r/kpop` has logged multiple four-figure engagement bursts around the comeback cycle this month, from the official fan club name to the new group concept photos. The group still triggers collective memory at scale.
 
-That makes this comeback structurally important beyond I.O.I itself. [Related: Wanna One Reunites After 7 Years - The Produce 101 Legends Return](/en/news/wanna-one-reunion-2026-reality-show) If I.O.I can convert anniversary emotion into real release and concert demand in 2026, the market gets new evidence that project-group nostalgia is not just social-media noise. It is monetizable, mobilizable, and still capable of generating live-event gravity.
+That makes this comeback structurally important beyond I.O.I itself. [Related: Wanna One Reunites After 7 Years - The Produce 101 Legends Return](//news/wanna-one-reunion-2026-reality-show) If I.O.I can convert anniversary emotion into real release and concert demand in 2026, the market gets new evidence that project-group nostalgia is not just social-media noise. It is monetizable, mobilizable, and still capable of generating live-event gravity.
 
 ### The concerts make the return impossible to dismiss
 

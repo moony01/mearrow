@@ -7,7 +7,7 @@ thumbnail: '/images/news/aespa-lemonade-tour-thumbnail.webp'
 active: true
 ---
 
-`LEMONADE` landed first. Less than a day later, the 25-region world tour poster arrived. That is why this `aespa world tour` story is bigger than a standard comeback update. What SM just put in front of the market is not only a new album rollout, but a coordinated attempt to move aespa back into K-pop's highest global pricing tier. Once May 29, the August 7 Seoul opener, and the North America-Europe routing were presented as one package, fans stopped reading this as "new music is coming" and started reading it as a scale play. [Related: K-pop's next battlefield was bigger than the Coachella lineup](/en/news/coachella-2026-kpop-takeover)
+`LEMONADE` landed first. Less than a day later, the 25-region world tour poster arrived. That is why this `aespa world tour` story is bigger than a standard comeback update. What SM just put in front of the market is not only a new album rollout, but a coordinated attempt to move aespa back into K-pop's highest global pricing tier. Once May 29, the August 7 Seoul opener, and the North America-Europe routing were presented as one package, fans stopped reading this as "new music is coming" and started reading it as a scale play. [Related: K-pop's next battlefield was bigger than the Coachella lineup](//news/coachella-2026-kpop-takeover)
 
 ## Why April 21 felt louder than May 29
 

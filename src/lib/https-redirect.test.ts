@@ -3,9 +3,9 @@ import { getHttpsRedirect } from './https-redirect';
 
 describe('public HTTPS redirect', () => {
   it.each(['mearrow.com', 'www.mearrow.com'])('preserves path and query on %s', (host) => {
-    const response = getHttpsRedirect(`http://${host}/ko/news/article?from=home&lang=ko`);
+    const response = getHttpsRedirect(`http://${host}/news/article?from=home&lang=ko`);
     expect(response?.status).toBe(308);
-    expect(response?.headers.get('location')).toBe(`https://${host}/ko/news/article?from=home&lang=ko`);
+    expect(response?.headers.get('location')).toBe(`https://${host}/news/article?from=home&lang=ko`);
   });
 
   it.each(['/ads.txt', '/robots.txt', '/sitemap.xml', '/_next/static/app.js', '/api/news.json'])('also redirects %s', (path) => {

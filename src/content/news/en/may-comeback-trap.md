@@ -8,7 +8,7 @@ thumbnail: '/images/news/may-comeback-trap-thumbnail.webp'
 active: true
 ---
 
-`May K-pop comebacks` have stopped being a calendar note. They have become a pressure test. Between May 4 and May 29, six commercially important girl-group releases are landing inside the same 25-day lane: BABYMONSTER, NMIXX, ITZY, I.O.I, LE SSERAFIM, and aespa. The obvious story is abundance. The sharper story is competition for the same oxygen: fandom budgets, short-form clips, playlist slots, media headlines, and the one thing no agency can manufacture on command - memory. [Related: K-pop album exports crossed $100M as the U.S. overtook Japan](/en/news/kpop-album-exports-us)
+`May K-pop comebacks` have stopped being a calendar note. They have become a pressure test. Between May 4 and May 29, six commercially important girl-group releases are landing inside the same 25-day lane: BABYMONSTER, NMIXX, ITZY, I.O.I, LE SSERAFIM, and aespa. The obvious story is abundance. The sharper story is competition for the same oxygen: fandom budgets, short-form clips, playlist slots, media headlines, and the one thing no agency can manufacture on command - memory. [Related: K-pop album exports crossed $100M as the U.S. overtook Japan](//news/kpop-album-exports-us)
 
 ## May K-pop Comebacks Became A 25-Day Collision
 

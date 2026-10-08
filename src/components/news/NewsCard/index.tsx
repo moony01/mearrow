@@ -56,7 +56,7 @@ export default function NewsCard({
   });
 
   return (
-    <Link href={`/${locale}/news/${slug}`} className={styles.card}>
+    <Link href={`/news/${slug}`} className={styles.card}>
       {/* 썸네일 영역 */}
       <div className={styles.thumbnailWrapper}>
         {thumbnail ? (

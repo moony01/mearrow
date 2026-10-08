@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-mexico-palace-thumbnail.webp'
 active: true
 ---
 
-`BTS Mexico Palace` did not look like a normal pre-concert appearance. On `May 6`, before the first Mexico City stop of the ARIRANG world tour, BTS entered Palacio Nacional, met Mexican President Claudia Sheinbaum, and stepped onto a balcony in front of thousands of fans gathered around the Zocalo. The concert had not started. The stadium lights were still waiting. Yet the most viral image of the day was already political, cultural, and unmistakably global: seven Korean artists standing inside the symbolic center of Mexican state power while ARMY turned a civic square into a fandom scene. [Related: BTS City turned Vegas and Busan into K-pop economies before ARIRANG](/en/news/bts-city-vegas-busan)
+`BTS Mexico Palace` did not look like a normal pre-concert appearance. On `May 6`, before the first Mexico City stop of the ARIRANG world tour, BTS entered Palacio Nacional, met Mexican President Claudia Sheinbaum, and stepped onto a balcony in front of thousands of fans gathered around the Zocalo. The concert had not started. The stadium lights were still waiting. Yet the most viral image of the day was already political, cultural, and unmistakably global: seven Korean artists standing inside the symbolic center of Mexican state power while ARMY turned a civic square into a fandom scene. [Related: BTS City turned Vegas and Busan into K-pop economies before ARIRANG](//news/bts-city-vegas-busan)
 
 ## The Palace Moment Arrived Before The Stadium
 

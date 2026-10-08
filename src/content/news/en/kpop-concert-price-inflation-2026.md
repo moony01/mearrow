@@ -46,7 +46,7 @@ Labels offer a consistent explanation: production costs have skyrocketed. Massiv
 
 But as The Korea Herald documented, fan communities are split. One camp argues that "seeing your idol in person is worth any price." The other calls it "exploitation of fan loyalty as a pricing experiment." The Korea Times described it as ticket prices that "test fan tolerance."
 
-The uncomfortable truth: both sides are right. In a market where fan loyalty suppresses price resistance to near-zero, labels are measuring exactly how high they can push before demand cracks. So far, the answer has been: "it still sells." [Related: BTS ARIRANG World Tour Sellout Records](/en/news/bts-arirang-world-tour-sellout-record-2026)
+The uncomfortable truth: both sides are right. In a market where fan loyalty suppresses price resistance to near-zero, labels are measuring exactly how high they can push before demand cracks. So far, the answer has been: "it still sells." [Related: BTS ARIRANG World Tour Sellout Records](//news/bts-arirang-world-tour-sellout-record-2026)
 
 ## BTS's $1.87 Billion Tour — Challenging Taylor Swift's Record
 
@@ -71,7 +71,7 @@ This year's K-pop touring market is in a state of unprecedented oversupply. BTS 
 
 ### Military Cycles + Gen 4 Expansion = Supply Explosion
 
-The cause is structural. The return cycle of second- and third-generation legends (BTS, BIGBANG, EXO) after military service coincided exactly with fourth-generation groups (Stray Kids, IVE, NMIXX) expanding their global touring operations. With fan budgets finite, **multi-fandom supporters face a financial reckoning in 2026**. [Related: TWICE's Double Injury and the Overwork System Behind 43-City Tours](/en/news/twice-double-injury-kpop-overwork)
+The cause is structural. The return cycle of second- and third-generation legends (BTS, BIGBANG, EXO) after military service coincided exactly with fourth-generation groups (Stray Kids, IVE, NMIXX) expanding their global touring operations. With fan budgets finite, **multi-fandom supporters face a financial reckoning in 2026**. [Related: TWICE's Double Injury and the Overwork System Behind 43-City Tours](//news/twice-double-injury-kpop-overwork)
 
 ### The Math of Being a Multi-Fan
 

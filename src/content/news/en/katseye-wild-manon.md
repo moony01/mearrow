@@ -7,7 +7,7 @@ thumbnail: '/images/news/katseye-wild-manon-thumbnail.webp'
 active: true
 ---
 
-`KATSEYE WILD` should have landed as a clean comeback headline. The group confirmed on April 15 that the new EP will arrive on August 14. But fans did not stay on the release date for long. They stayed on the absence. After Coachella already turned `Manon hiatus` into the central question around the group, the `WILD` rollout made that question feel less temporary and more structural. [Related: KATSEYE Reached Coachella as 5, Not 6 — Why Fans Were Even More Shaken](/en/news/katseye-coachella-debut)
+`KATSEYE WILD` should have landed as a clean comeback headline. The group confirmed on April 15 that the new EP will arrive on August 14. But fans did not stay on the release date for long. They stayed on the absence. After Coachella already turned `Manon hiatus` into the central question around the group, the `WILD` rollout made that question feel less temporary and more structural. [Related: KATSEYE Reached Coachella as 5, Not 6 — Why Fans Were Even More Shaken](//news/katseye-coachella-debut)
 
 ## Why This Read More Like a Status Report Than a Comeback Notice
 

@@ -8,7 +8,7 @@ thumbnail: '/images/news/kpop-superfan-money-machine-thumbnail.webp'
 active: true
 ---
 
-`K-pop superfan platforms` are no longer side apps where fans wait for selfies. They are becoming the money machine behind the music. Weverse's public company profile lists more than 100 million service downloads, more than 10 million monthly active users, artists from 120 or more acts, and activity across 245 countries and regions. Those are platform-scale signals, not a claim that every user is a paying superfan. The sharper read is that K-pop may have built the direct-to-fan model the rest of the global music business is now studying. [Related: SM just showed where K-pop's money machine really lives](/en/news/sm-q1-money-machine)
+`K-pop superfan platforms` are no longer side apps where fans wait for selfies. They are becoming the money machine behind the music. Weverse's public company profile lists more than 100 million service downloads, more than 10 million monthly active users, artists from 120 or more acts, and activity across 245 countries and regions. Those are platform-scale signals, not a claim that every user is a paying superfan. The sharper read is that K-pop may have built the direct-to-fan model the rest of the global music business is now studying. [Related: SM just showed where K-pop's money machine really lives](//news/sm-q1-money-machine)
 
 ## K-pop Superfan Platforms Are Not Just Communities
 

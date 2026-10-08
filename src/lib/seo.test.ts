@@ -9,7 +9,7 @@ import { FULL_URL, SUPPORTED_LOCALES } from './constants';
 import { getAllNewsParams } from './news';
 
 describe('SEO metadata helpers', () => {
-  it('creates localized canonical, hreflang, OG, and Twitter metadata', () => {
+  it('creates locale-free canonical, hreflang, OG, and Twitter metadata', () => {
     const metadata = generatePageMetadata({
       locale: 'ko',
       pathname: '/news/example',
@@ -19,14 +19,14 @@ describe('SEO metadata helpers', () => {
       type: 'article',
     });
 
-    expect(metadata.alternates?.canonical).toBe(`${FULL_URL}/ko/news/example`);
+    expect(metadata.alternates?.canonical).toBe(`${FULL_URL}/news/example`);
     expect(metadata.alternates?.languages).toEqual(
       generateAlternateLanguages('/news/example'),
     );
     expect(metadata.openGraph).toMatchObject({
       title: '한국어 뉴스 | MEARROW',
       description: '한국어 뉴스 설명',
-      url: `${FULL_URL}/ko/news/example`,
+      url: `${FULL_URL}/news/example`,
       type: 'article',
       images: [{ url: `${FULL_URL}/news/example.jpg` }],
     });
@@ -37,12 +37,13 @@ describe('SEO metadata helpers', () => {
     });
   });
 
-  it('limits hreflang to the seven supported source locales plus x-default', () => {
+  it('uses the default language on one locale-free URL', () => {
     const languages = generateAlternateLanguages();
 
-    expect(Object.keys(languages)).toEqual([...SUPPORTED_LOCALES, 'x-default']);
-    expect(languages).not.toHaveProperty('pt');
-    expect(languages['x-default']).toBe(`${FULL_URL}/en`);
+    expect(languages).toEqual({
+      ko: `${FULL_URL}/`,
+      'x-default': `${FULL_URL}/`,
+    });
   });
 
   it('supports pages whose only translated source is English', () => {
@@ -55,10 +56,10 @@ describe('SEO metadata helpers', () => {
       defaultLocale: 'en',
     });
 
-    expect(metadata.alternates?.canonical).toBe(`${FULL_URL}/en/news/source-only`);
+    expect(metadata.alternates?.canonical).toBe(`${FULL_URL}/news/source-only`);
     expect(metadata.alternates?.languages).toEqual({
-      en: `${FULL_URL}/en/news/source-only`,
-      'x-default': `${FULL_URL}/en/news/source-only`,
+      en: `${FULL_URL}/news/source-only`,
+      'x-default': `${FULL_URL}/news/source-only`,
     });
     expect(metadata.openGraph).not.toHaveProperty('alternateLocale');
   });
@@ -97,7 +98,7 @@ describe('SEO metadata helpers', () => {
     expect(truncateSeoText(description, 150)).toBe(description);
   });
 
-  it('generates news detail params for every supported route locale', () => {
+  it('loads localized news sources while keeping the public route locale-free', () => {
     const params = getAllNewsParams(SUPPORTED_LOCALES as unknown as string[]);
 
     expect(params.length).toBeGreaterThan(0);

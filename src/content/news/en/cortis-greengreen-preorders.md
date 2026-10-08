@@ -64,4 +64,4 @@ For aspiring trainees, the message is severe but useful: the market no longer re
 
 So far, anticipation has done the heavy lifting. The real test comes next: whether `REDRED` and the full `GREENGREEN` release can convert advance demand into first-week sales, chart stamina, and a longer growth curve. If that happens, CORTIS will stop being discussed as a hot 2025 rookie and start being treated as one of the market-setting acts of 2026.
 
-[Related: The Hunt for the Next BTS — Big 4, Lee Soo-man, and Min Hee-jin all launch boy groups](/en/news/2026-rookie-boy-group-war-big4-debut-battle)
+[Related: The Hunt for the Next BTS — Big 4, Lee Soo-man, and Min Hee-jin all launch boy groups](//news/2026-rookie-boy-group-war-big4-debut-battle)

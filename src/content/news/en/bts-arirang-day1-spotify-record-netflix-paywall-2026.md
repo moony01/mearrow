@@ -93,4 +93,4 @@ The *New York Times* noted this week that BTS "is back, but the K-pop landscape 
 
 ARIRANG is out. BTS is back. The rest is, apparently, complicated.
 
-[Related: BTS ARIRANG Drops Today — SWIM MV Reveal, Gwanghwamun Concert D-1](/en/news)
+[Related: BTS ARIRANG Drops Today — SWIM MV Reveal, Gwanghwamun Concert D-1](//news)

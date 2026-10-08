@@ -18,7 +18,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import styles from './ForgotPasswordForm.module.scss';
 import classNames from 'classnames';
 import { createClient } from '@/lib/supabase/client';
@@ -34,7 +33,6 @@ type FormData = z.infer<typeof schema>;
 
 export default function ForgotPasswordForm() {
   const t = useTranslations('Auth');
-  const locale = useLocale();
   const supabase = createClient();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -57,7 +55,7 @@ export default function ForgotPasswordForm() {
     setError(null);
 
     const { error } = await supabase.auth.resetPasswordForEmail(data.email, {
-      redirectTo: `${window.location.origin}/${locale}/auth/reset-password`,
+      redirectTo: `${window.location.origin}/auth/reset-password`,
     });
 
     if (error) {
@@ -85,7 +83,7 @@ export default function ForgotPasswordForm() {
           <p className={styles.emailSentDesc}>
             {t('reset_email_sent_desc', { email: sentEmail })}
           </p>
-          <Link href={`/${locale}/login`} className={styles.backToLogin}>
+          <Link href={`/login`} className={styles.backToLogin}>
             <ArrowLeft size={16} />
             {t('login_button')}
           </Link>
@@ -123,7 +121,7 @@ export default function ForgotPasswordForm() {
       </form>
 
       {/* 로그인으로 돌아가기 */}
-      <Link href={`/${locale}/login`} className={styles.backToLogin}>
+      <Link href={`/login`} className={styles.backToLogin}>
         <ArrowLeft size={16} />
         {t('back_to_login')}
       </Link>

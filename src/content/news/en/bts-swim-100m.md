@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-swim-100m-thumbnail.webp'
 active: true
 ---
 
-`BTS SWIM 100 million views` looks like the kind of story that should end with a simple congratulations headline. It does not. When the milestone landed on April 15, the real reaction across fandom spaces was not surprise at the number itself, but at the speed. Twenty-six days is what made people stop scrolling. In the `ARIRANG` era, BTS is not just winning a comeback cycle. The group is proving it can still turn album sales, streaming, touring, and video consumption into one reinforcing wave. [Related: BTS Filled Goyang - And Exposed the 50,000-Seat Gap Korea Still Hasn't Fixed](/en/news/bts-korea-venue-crisis)
+`BTS SWIM 100 million views` looks like the kind of story that should end with a simple congratulations headline. It does not. When the milestone landed on April 15, the real reaction across fandom spaces was not surprise at the number itself, but at the speed. Twenty-six days is what made people stop scrolling. In the `ARIRANG` era, BTS is not just winning a comeback cycle. The group is proving it can still turn album sales, streaming, touring, and video consumption into one reinforcing wave. [Related: BTS Filled Goyang - And Exposed the 50,000-Seat Gap Korea Still Hasn't Fixed](//news/bts-korea-venue-crisis)
 
 ## The first real headline is the 26-day clock
 

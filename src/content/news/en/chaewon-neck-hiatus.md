@@ -8,7 +8,7 @@ thumbnail: '/images/news/chaewon-neck-hiatus-thumbnail.webp'
 active: true
 ---
 
-`Kim Chaewon neck hiatus` is the kind of update fans dread because it sounds small until the calendar makes it huge. On May 19, Source Music said Kim Chaewon recently received hospital treatment for neck pain and was advised by medical staff to rest for a period while monitoring her recovery. That would already be serious. The timing makes it sharper: LE SSERAFIM is days away from releasing `PUREFLOW pt.1` on May 22. [Related: LE SSERAFIM's PUREFLOW comeback already carried pressure](/en/news/lesserafim-pureflow-comeback)
+`Kim Chaewon neck hiatus` is the kind of update fans dread because it sounds small until the calendar makes it huge. On May 19, Source Music said Kim Chaewon recently received hospital treatment for neck pain and was advised by medical staff to rest for a period while monitoring her recovery. That would already be serious. The timing makes it sharper: LE SSERAFIM is days away from releasing `PUREFLOW pt.1` on May 22. [Related: LE SSERAFIM's PUREFLOW comeback already carried pressure](//news/lesserafim-pureflow-comeback)
 
 ## Kim Chaewon's Hiatus Lands At The Worst Possible Moment
 

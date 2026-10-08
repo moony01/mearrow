@@ -1,9 +1,20 @@
+# Locale prefixes were removed. Keep old shared URLs pointing to the same
+# locale-free pages while crawlers and saved links transition.
+/ko / 301
+/ko/* /:splat 301
+/en / 301
+/en/* /:splat 301
+/ja / 301
+/ja/* /:splat 301
+/zh / 301
+/zh/* /:splat 301
+/es / 301
+/es/* /:splat 301
+/fr / 301
+/fr/* /:splat 301
+/de / 301
+/de/* /:splat 301
+
 # Public profile data is client-loaded, so every username can share the
 # statically generated profile shell while the browser URL remains readable.
-/ko/profile/* /ko/profile/__profile.html 200
-/en/profile/* /en/profile/__profile.html 200
-/ja/profile/* /ja/profile/__profile.html 200
-/zh/profile/* /zh/profile/__profile.html 200
-/es/profile/* /es/profile/__profile.html 200
-/fr/profile/* /fr/profile/__profile.html 200
-/de/profile/* /de/profile/__profile.html 200
+/profile/* /profile/__profile.html 200

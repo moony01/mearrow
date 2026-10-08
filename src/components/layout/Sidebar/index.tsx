@@ -28,7 +28,6 @@ import styles from './Sidebar.module.scss';
 export default function Sidebar() {
   const t = useTranslations('Nav');
   const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'ko';
   const { profile, isAuthenticated, signOut } = useAuth();
   const [copied, setCopied] = useState(false);
 
@@ -43,11 +42,13 @@ export default function Sidebar() {
   }, []);
 
   const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === `/${locale}` || pathname === `/${locale}/`;
+    if (path === '/studio') {
+      return pathname === path || pathname?.startsWith(`${path}/`);
     }
-    const localizedPath = `/${locale}${path}`;
-    return pathname === localizedPath || pathname?.startsWith(`${localizedPath}/`);
+    if (path === '/') {
+      return pathname === '/';
+    }
+    return pathname === path || pathname?.startsWith(`${path}/`);
   };
 
   const navItems = getEnabledPrimaryNavItems();
@@ -57,7 +58,7 @@ export default function Sidebar() {
       {/* Logo Area */}
       <div className={styles.logoArea}>
         <Link
-          href={`/${locale}`}
+          href="/"
           className={styles.brand}
           aria-label={`${BRAND_NAME} (${BRAND_KOREAN_NAME}) 홈`}
         >
@@ -85,7 +86,7 @@ export default function Sidebar() {
             return (
               <li key={item.id}>
                 <Link
-                  href={`/${locale}${item.path === '/' ? '' : item.path}`}
+                  href={item.path}
                   className={classNames(styles.navItem, { [styles.active]: active })}
                   aria-label={label}
                   aria-current={active ? 'page' : undefined}
@@ -104,7 +105,7 @@ export default function Sidebar() {
       <div className={styles.sidebarBottom}>
         <div className={styles.settingsSection}>
           <Link
-            href={`/${locale}/settings`}
+            href="/settings"
             className={classNames(styles.navItem, styles.settingsButton, {
               [styles.active]: isActive('/settings'),
             })}
@@ -146,7 +147,7 @@ export default function Sidebar() {
 
                 {/* 프로필 정보 */}
                 <Link
-                  href={`/${locale}/my`}
+                  href="/my"
                   className={classNames(styles.navItem, styles.profileItem)}
                   aria-label={profile?.username || t('my')}
                 >
@@ -173,7 +174,7 @@ export default function Sidebar() {
             ) : (
               /* 로그인 버튼 */
               <Link
-                href={`/${locale}/login`}
+                href="/login"
                 className={classNames(styles.navItem, styles.loginBtn)}
                 aria-label={t('login')}
               >

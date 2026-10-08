@@ -7,7 +7,7 @@ thumbnail: '/images/news/baeksang-fan-vote-gap-thumbnail.webp'
 active: true
 ---
 
-Baeksang Popularity Award voting was supposed to be a side race before the serious trophies. Instead, it became the cleanest fan-power chart of the week. YoonA finished the female race with 58.1 percent, while Park Jihoon took the male side with 48.7 percent, according to reports citing Naver vote data after polling closed. The number is the hook, but the deeper story is not only who won. It is that two idols who moved into acting are still being carried by fandom systems that behave like organized campaign infrastructure. [Related: KATSEYE's Music Bank cancellation showed how quickly fan trust becomes a measurable signal](/en/news/katseye-music-bank-cancel)
+Baeksang Popularity Award voting was supposed to be a side race before the serious trophies. Instead, it became the cleanest fan-power chart of the week. YoonA finished the female race with 58.1 percent, while Park Jihoon took the male side with 48.7 percent, according to reports citing Naver vote data after polling closed. The number is the hook, but the deeper story is not only who won. It is that two idols who moved into acting are still being carried by fandom systems that behave like organized campaign infrastructure. [Related: KATSEYE's Music Bank cancellation showed how quickly fan trust becomes a measurable signal](//news/katseye-music-bank-cancel)
 
 ## The Baeksang Popularity Award Became A Fandom Test
 

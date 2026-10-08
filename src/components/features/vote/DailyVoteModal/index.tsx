@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronRight, EyeOff, Flame, X } from 'lucide-react';
-import { useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import styles from './DailyVoteModal.module.scss';
 
@@ -17,31 +16,18 @@ type VoteModalCopy = {
   iframeTitle: string;
 };
 
-const COPY: Record<'ko' | 'en', VoteModalCopy> = {
-  ko: {
-    eyebrow: 'LIVE · DAILY VOTE',
-    title: '실시간 TOP 10 투표',
-    subtitle: '지금 순위를 확인하고 오늘의 투표권으로 바로 응원하세요.',
-    closeAriaLabel: '투표 모달 닫기',
-    backdropAriaLabel: '투표 모달 배경 닫기',
-    todayDismiss: '오늘 하루 보지 않기',
-    moreVotes: '더 투표하러 가기',
-    iframeTitle: '실시간 TOP 10 직접 투표',
-  },
-  en: {
-    eyebrow: 'LIVE · DAILY VOTE',
-    title: 'Live TOP 10 vote',
-    subtitle: "Check the ranking and use today's votes for your pick.",
-    closeAriaLabel: 'Close vote modal',
-    backdropAriaLabel: 'Close vote modal backdrop',
-    todayDismiss: "Don't show again today",
-    moreVotes: 'Vote more',
-    iframeTitle: 'Live TOP 10 direct voting',
-  },
+const COPY: VoteModalCopy = {
+  eyebrow: 'LIVE · DAILY VOTE',
+  title: '실시간 TOP 10 투표',
+  subtitle: '지금 순위를 확인하고 오늘의 투표권으로 바로 응원하세요.',
+  closeAriaLabel: '투표 모달 닫기',
+  backdropAriaLabel: '투표 모달 배경 닫기',
+  todayDismiss: '오늘 하루 보지 않기',
+  moreVotes: '더 투표하러 가기',
+  iframeTitle: '실시간 TOP 10 직접 투표',
 };
 
 const VISIBLE_ROUTE_SEGMENTS = new Set(['news', 'auditions']);
-const SUPPORTED_EMBED_LOCALES = new Set(['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de']);
 const DAILY_DISMISS_KEY = 'kcl-daily-vote-modal-dismissed-date';
 
 function getLocalDateKey(date = new Date()) {
@@ -51,7 +37,7 @@ function getLocalDateKey(date = new Date()) {
 }
 
 function shouldHideVoteModal(pathname: string) {
-  const [, , section] = pathname.split('/');
+  const [, section] = pathname.split('/');
   // The canonical VoteBoard belongs to the home page. Keep the global modal
   // limited to content-discovery routes where the voting nudge is relevant.
   return !section || !VISIBLE_ROUTE_SEGMENTS.has(section);
@@ -74,10 +60,7 @@ function writeStorage(storage: Storage, key: string, value: string) {
 }
 
 export default function DailyVoteModal() {
-  const locale = useLocale();
   const pathname = usePathname();
-  const copy = locale === 'ko' ? COPY.ko : COPY.en;
-  const embedLocale = SUPPORTED_EMBED_LOCALES.has(locale) ? locale : 'en';
   const isHiddenRoute = shouldHideVoteModal(pathname);
   const [isOpen, setIsOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -132,7 +115,7 @@ export default function DailyVoteModal() {
         type="button"
         className={styles.backdrop}
         onClick={closeModal}
-        aria-label={copy.backdropAriaLabel}
+        aria-label={COPY.backdropAriaLabel}
         tabIndex={-1}
       />
 
@@ -147,10 +130,10 @@ export default function DailyVoteModal() {
           <div className={styles.headingCopy}>
             <div className={styles.eyebrow}>
               <span className={styles.liveDot} aria-hidden="true" />
-              {copy.eyebrow}
+              {COPY.eyebrow}
             </div>
-            <h2 id="daily-vote-modal-title">{copy.title}</h2>
-            <p id="daily-vote-modal-description">{copy.subtitle}</p>
+            <h2 id="daily-vote-modal-title">{COPY.title}</h2>
+            <p id="daily-vote-modal-description">{COPY.subtitle}</p>
           </div>
 
           <button
@@ -158,7 +141,7 @@ export default function DailyVoteModal() {
             type="button"
             className={styles.closeButton}
             onClick={closeModal}
-            aria-label={copy.closeAriaLabel}
+            aria-label={COPY.closeAriaLabel}
           >
             <X size={20} aria-hidden="true" />
           </button>
@@ -167,23 +150,23 @@ export default function DailyVoteModal() {
         <div className={styles.iframeShell}>
           <iframe
             className={styles.iframe}
-            src={`/embed/vote-board/${embedLocale}?surface=kcl-modal&ads=off`}
-            title={copy.iframeTitle}
+            src="/embed/vote-board?surface=kcl-modal&ads=off"
+            title={COPY.iframeTitle}
           />
         </div>
 
         <footer className={styles.footer}>
           <button type="button" className={styles.todayButton} onClick={dismissForToday}>
             <EyeOff size={17} aria-hidden="true" />
-            <span>{copy.todayDismiss}</span>
+            <span>{COPY.todayDismiss}</span>
           </button>
           <a
             className={styles.moreVotesButton}
-            href={`/${locale}/ranking`}
+            href={`/ranking`}
             onClick={closeModal}
           >
             <Flame size={18} aria-hidden="true" />
-            <span>{copy.moreVotes}</span>
+            <span>{COPY.moreVotes}</span>
             <ChevronRight size={18} aria-hidden="true" />
           </a>
         </footer>

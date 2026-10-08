@@ -3,7 +3,7 @@
 import { Loader2, RefreshCw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { SeasonInfo } from '@/types/league';
-import styles from '@/app/[locale]/page.module.scss';
+import styles from '@/app/(site)/page.module.scss';
 
 export const HOME_VOTE_HELPER_ID = 'home-vote-helper';
 

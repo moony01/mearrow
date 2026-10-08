@@ -39,7 +39,7 @@ The Netflix broadcast reached 18.4 million concurrent viewers across 190 countri
 
 By the metrics, BTS's influence has arguably expanded since their hiatus — not contracted.
 
-[Related: "Purple Gwanghwamun" — BTS's First Full-Group Stage in 3 Years Sets Netflix K-Pop Record](/en/news/bts-arirang-gwanghwamun-concert-netflix-record-2026)
+[Related: "Purple Gwanghwamun" — BTS's First Full-Group Stage in 3 Years Sets Netflix K-Pop Record](//news/bts-arirang-gwanghwamun-concert-netflix-record-2026)
 
 ## Wall Street's Calculus — Bodies Over Bytes
 

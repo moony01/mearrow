@@ -8,7 +8,7 @@ thumbnail: "/images/news/cortis-redred-ninth-win-thumbnail.webp"
 active: true
 ---
 
-`CORTIS REDRED` has moved past the easy rookie-breakout headline. On May 24, the song took its ninth music-show trophy on SBS's `Inkigayo`, and the margin was almost too useful for the story: CORTIS finished with `5,904` points, just ahead of NMIXX's `5,865`, while ILLIT followed with `4,794`. That is not a victory lap. It is a pressure test. A close win forces the market to ask whether `REDRED` is still being pushed by launch-week heat, or whether CORTIS has built the harder thing: retention after the noise should have started fading. [Related: CORTIS already turned REDRED into a rookie-market warning](/en/news/cortis-redred-grand-slam)
+`CORTIS REDRED` has moved past the easy rookie-breakout headline. On May 24, the song took its ninth music-show trophy on SBS's `Inkigayo`, and the margin was almost too useful for the story: CORTIS finished with `5,904` points, just ahead of NMIXX's `5,865`, while ILLIT followed with `4,794`. That is not a victory lap. It is a pressure test. A close win forces the market to ask whether `REDRED` is still being pushed by launch-week heat, or whether CORTIS has built the harder thing: retention after the noise should have started fading. [Related: CORTIS already turned REDRED into a rookie-market warning](//news/cortis-redred-grand-slam)
 
 ## Nine Wins Changed The Shape Of The Argument
 

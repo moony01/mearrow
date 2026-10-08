@@ -92,4 +92,4 @@ K-pop globalizes by entering markets. But every market it enters brings its poli
 
 K-pop can no longer afford to be apolitical by default. The politics have already arrived.
 
-[Related: The JYP-Tencent China Deal — Is China Trying to Absorb K-Pop?](/en/news/onecead-jyp-tencent-china-kpop)
+[Related: The JYP-Tencent China Deal — Is China Trying to Absorb K-Pop?](//news/onecead-jyp-tencent-china-kpop)

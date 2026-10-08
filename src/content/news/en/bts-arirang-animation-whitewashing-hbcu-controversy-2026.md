@@ -103,7 +103,7 @@ That story is profound. The resonance it creates with BTS's own history — a gr
 
 But the story of those seven Koreans at Howard is not a story that happened in a vacuum. It happened in a Black institution, among Black students who were themselves fighting not to be erased from American life. To animate that story while rendering those Black students nearly invisible is, at minimum, a failure of historical imagination. At worst, it reproduces the very erasure the album is meant to protest.
 
-[Related: BTS ARIRANG — The 130-Year Link Hidden in the Animation Trailer](/en/news/bts-arirang-trailer-1896-howard-seven-koreans-2026)
+[Related: BTS ARIRANG — The 130-Year Link Hidden in the Animation Trailer](//news/bts-arirang-trailer-1896-howard-seven-koreans-2026)
 
 HYBE may have had every good intention. The animation may be artistically beautiful. The album — which drops tomorrow — may be extraordinary.
 

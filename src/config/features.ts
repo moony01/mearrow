@@ -19,34 +19,34 @@
 export const FEATURES = {
   /**
    * 명예의 전당 (Hall of Fame)
-   * - 경로: /[locale]/hall-of-fame
+   * - 경로: /hall-of-fame
    * - 상태: Phase 1에서 활성화
    */
   HALL_OF_FAME_PAGE: true,
 
   /**
    * 뉴스 페이지 (News)
-   * - 경로: /[locale]/news
+   * - 경로: /news
    * - 상태: Phase 1에서 활성화
    */
   NEWS_PAGE: true,
 
   /**
    * 오디션 정보 페이지 (Auditions)
-   * - 경로: /[locale]/auditions
+   * - 경로: /auditions
    * - 정적 콘텐츠 + 검색 색인용 상세 페이지
    */
   AUDITIONS_PAGE: true,
 
   /**
    * 관심 피드 (소속사·아티스트 팔로우)
-   * - 경로: /[locale]/following
+   * - 경로: /following
    */
   FOLLOWING_PAGE: true,
 
   /**
    * 프로필/로그인 (Profile/Auth)
-   * - 경로: /[locale]/my, /[locale]/login
+   * - 경로: /my, /login
    * - 상태: T1.70에서 활성화 (Google/Kakao OAuth + 이메일 로그인)
    */
   AUTH_SYSTEM: true,

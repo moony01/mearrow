@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename);
 const isDev = process.env.NODE_ENV === 'development';
 const isWorkers = process.env.NEXT_RUNTIME_TARGET === 'workers';
 const useStaticExport = !isDev && !isWorkers;
+const legacyLocales = ['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de'];
 
 // Allow the Tailnet host used to access the development server externally.
 // Keep this host-scoped; never open dev resources to arbitrary origins.
@@ -99,6 +100,18 @@ const nextConfig = {
   // `public/_headers` file does not cover this runtime.
   ...(isWorkers
     ? {
+        redirects: async () => legacyLocales.flatMap((locale) => [
+          {
+            source: `/${locale}`,
+            destination: '/',
+            permanent: true,
+          },
+          {
+            source: `/${locale}/:path*`,
+            destination: '/:path*',
+            permanent: true,
+          },
+        ]),
         headers: async () => [
           {
             source: '/:path*',

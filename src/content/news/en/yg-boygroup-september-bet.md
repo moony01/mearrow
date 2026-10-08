@@ -8,7 +8,7 @@ thumbnail: '/images/news/yg-boygroup-september-bet-thumbnail.webp'
 active: true
 ---
 
-`YG new boy group` is no longer a vague 2026 rumor. It now has a sharper shape: `five members`, a `September` introduction target, and the weight of being YG Entertainment's first new boy group since `TREASURE` in 2020. That alone is enough to make headlines. The more interesting part is what sits behind the number. When Yang Hyun-suk says the team will be built differently from Treasure, he is not only talking about lineup size. He is signaling a different kind of rookie bet, one that looks tighter, riskier and more strategically staged than the oversized-survival-show energy many fans now associate with modern boy-group launches. [Related: K-pop's biggest rookie boy-group battle is already forming](/en/news/2026-rookie-boy-group-war-big4-debut-battle)
+`YG new boy group` is no longer a vague 2026 rumor. It now has a sharper shape: `five members`, a `September` introduction target, and the weight of being YG Entertainment's first new boy group since `TREASURE` in 2020. That alone is enough to make headlines. The more interesting part is what sits behind the number. When Yang Hyun-suk says the team will be built differently from Treasure, he is not only talking about lineup size. He is signaling a different kind of rookie bet, one that looks tighter, riskier and more strategically staged than the oversized-survival-show energy many fans now associate with modern boy-group launches. [Related: K-pop's biggest rookie boy-group battle is already forming](//news/2026-rookie-boy-group-war-big4-debut-battle)
 
 ## The September Window Is Not an Accident
 

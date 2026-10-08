@@ -29,8 +29,8 @@ export const SUPPORTED_LOCALES = [
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
-/** 기본 언어 */
-export const DEFAULT_LOCALE: SupportedLocale = 'en';
+/** 현재 사이트 기본 언어. 경로에 locale을 노출하지 않습니다. */
+export const DEFAULT_LOCALE: SupportedLocale = 'ko';
 
 /**
  * Static-export shell used for public profiles.

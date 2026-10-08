@@ -9,7 +9,7 @@ active: true
 
 `BTS ARIRANG Billboard` momentum has stopped behaving like a comeback cycle. Seven weeks after release, the album is still inside the Billboard 200 top 10, "SWIM" is back at No. 1 on Global Excl. U.S., and the deeper album tracks are still part of the global chart conversation. That is not normal durability. It is the kind of hold that forces the market to ask a harder question: if one K-pop album can keep thirteen vocal tracks alive this long, did the streaming era actually kill the album - or did most companies just stop building albums strong enough to survive it?
 
-The latest chart week turns the story from hype into structure. First-week domination can be explained by fandom coordination. A seventh-week rebound is different. It suggests repeat listening, tour heat, radio movement, collector behavior, and fan identity are feeding one another instead of fading in separate lanes. [Related: The 6-week Billboard trap showed why BTS was not only winning launch week](/en/news/bts-arirang-six-weeks)
+The latest chart week turns the story from hype into structure. First-week domination can be explained by fandom coordination. A seventh-week rebound is different. It suggests repeat listening, tour heat, radio movement, collector behavior, and fan identity are feeding one another instead of fading in separate lanes. [Related: The 6-week Billboard trap showed why BTS was not only winning launch week](//news/bts-arirang-six-weeks)
 
 ## BTS ARIRANG Billboard Run Is Now About Survival
 

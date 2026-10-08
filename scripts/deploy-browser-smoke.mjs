@@ -349,7 +349,7 @@ async function main() {
     );
 
     await page.setViewportSize({ width: 1440, height: 1000 });
-    const rankingResponse = await page.goto(`${server.baseUrl}/ko/ranking?deploy-browser-smoke=ranking`, {
+    const rankingResponse = await page.goto(`${server.baseUrl}/ranking?deploy-browser-smoke=ranking`, {
       waitUntil: 'domcontentloaded',
       timeout: 30_000,
     });
@@ -361,7 +361,7 @@ async function main() {
 
     await page.setViewportSize({ width: 390, height: 844 });
     const mobileRankingResponse = await page.goto(
-      `${server.baseUrl}/ko/ranking?deploy-browser-smoke=mobile-ranking`,
+      `${server.baseUrl}/ranking?deploy-browser-smoke=mobile-ranking`,
       { waitUntil: 'domcontentloaded', timeout: 30_000 },
     );
     assert(
@@ -419,7 +419,7 @@ async function main() {
     );
     const seoEndpoints = await assertSeoEndpoints(server.baseUrl);
 
-    const newsResponse = await page.goto(`${server.baseUrl}/en/news?deploy-browser-smoke=news`, {
+    const newsResponse = await page.goto(`${server.baseUrl}/news?deploy-browser-smoke=news`, {
       waitUntil: 'domcontentloaded',
       timeout: 30_000,
     });
@@ -445,9 +445,9 @@ async function main() {
     const firstNewsImageLoaded = await newsImage.evaluate((image) => image.complete && image.naturalWidth > 0);
     assert(firstNewsImageLoaded, `news image failed to load: ${imageSources[0]}`);
 
-    const newsArticleHref = await page.locator('a[href^="/en/news/"]').first().getAttribute('href');
+    const newsArticleHref = await page.locator('a[href^="/news/"]').first().getAttribute('href');
     assert(
-      newsArticleHref && /^\/en\/news\/[^/?#]+$/.test(newsArticleHref),
+      newsArticleHref && /^\/news\/[^/?#]+$/.test(newsArticleHref),
       `news list did not expose an active article link (${newsArticleHref || 'none'})`,
     );
 

@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-world-cup-halftime-thumbnail.webp'
 active: true
 ---
 
-`BTS World Cup halftime` is no longer a fan fantasy or a sponsor rumor. FIFA and Global Citizen have put BTS on the same bill as Madonna and Shakira for the first-ever FIFA World Cup Final Halftime Show on July 19, 2026. That booking does more than add K-pop to a sports broadcast. It turns the World Cup final into a live test of how global fandom, legacy pop, football tradition, and social-impact branding can share one of the most protected stages in culture. [Related: BTS Latin America streams changed the market map](/en/news/bts-latin-america-streams)
+`BTS World Cup halftime` is no longer a fan fantasy or a sponsor rumor. FIFA and Global Citizen have put BTS on the same bill as Madonna and Shakira for the first-ever FIFA World Cup Final Halftime Show on July 19, 2026. That booking does more than add K-pop to a sports broadcast. It turns the World Cup final into a live test of how global fandom, legacy pop, football tradition, and social-impact branding can share one of the most protected stages in culture. [Related: BTS Latin America streams changed the market map](//news/bts-latin-america-streams)
 
 ## BTS World Cup Halftime Is The New Broadcast Test
 

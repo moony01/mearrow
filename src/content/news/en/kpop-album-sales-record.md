@@ -38,7 +38,7 @@ The million-seller list is where the story becomes more interesting for agencies
 
 That spread matters because the 2023 high point leaned heavily on a few monster boy-group releases. In 2026, BTS was the only team above 4 million in first-week sales, but the number of acts reaching million status increased. Hanteo also pointed out that newer names such as NCT WISH, CORTIS and ALPHA DRIVE ONE joined the million-seller ranks, while ATEEZ achieved the mark twice.
 
-[Related: Korea's K-pop middle class just got a lifeline](/en/news/kpop-indie-agency-fund)
+[Related: Korea's K-pop middle class just got a lifeline](//news/kpop-indie-agency-fund)
 
 For fans, that looks like more buying power across more communities. For companies, it means a successful album campaign now depends on repeatable collector infrastructure: version planning, photocard logic, preorder timing, fan-sign incentives, shipping capacity and enough post-release content to keep the purchase feeling emotionally active.
 

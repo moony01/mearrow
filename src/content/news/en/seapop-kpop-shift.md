@@ -41,7 +41,7 @@ Those numbers still sit below the scale of South Korea, Japan and China. But the
 
 K-pop already proved the commercial ceiling. Al Jazeera noted that the K-pop industry earned $893 million overseas in 2023, citing South Korea’s Korea Culture and Tourism Institute. That success gave the rest of Asia a playbook: build disciplined pop systems, use short-form platforms, professionalize fan communication and aim beyond national borders.
 
-[Related: Korea's K-pop middle class just got a lifeline](/en/news/kpop-indie-agency-fund)
+[Related: Korea's K-pop middle class just got a lifeline](//news/kpop-indie-agency-fund)
 
 ## Social Media Is The Shortcut K-pop Did Not Have At First
 ### SEA pop can skip part of the old export ladder

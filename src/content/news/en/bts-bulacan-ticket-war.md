@@ -44,7 +44,7 @@ The Philippine stop also looks different when placed beside nearby tour demand. 
 
 That cross-market echo is the bigger signal. Bulacan was not an isolated spike caused by one local fandom frenzy. It arrived after another Southeast Asian market had already shown heavy demand. [Yahoo Entertainment](https://www.yahoo.com/entertainment/music/article/2026-bts-world-tour-how-to-get-tickets-to-sold-out-shows-prices-newly-added-dates-and-more-162330418.html) framed the wider BTS tour as an enormous global run, describing more than 80 dates across over 34 cities and noting that many dates had already sold out. When one region keeps repeating the same pattern, labels stop seeing it as noise.
 
-[Related: BTS Dynamite Japan streams showed why old hits can still move markets](/en/news/bts-dynamite-japan-streams)
+[Related: BTS Dynamite Japan streams showed why old hits can still move markets](//news/bts-dynamite-japan-streams)
 
 ## MEARROW's View: The Scarcity Is The Product Test
 

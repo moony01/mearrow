@@ -52,7 +52,7 @@ Second, the **recurring pattern**. Chaeyoung had collapsed from vasovagal syncop
 
 Third, **Jeongyeon's canceled brand deal**. Her only brand partnership in a decade was scrapped due to scheduling failures. Jeongyeon herself said: "I'm really upset about it, too. Just like ONCE, I feel the same way." Trust in the agency's management capabilities is eroding.
 
-[Related: BTS RM's ankle injury also raised tour alarms](/en/news/bts-rm-ankle-injury-world-tour-countdown-2026)
+[Related: BTS RM's ankle injury also raised tour alarms](//news/bts-rm-ankle-injury-world-tour-countdown-2026)
 
 ## MEARROW's Perspective: K-pop's Overwork Machine
 

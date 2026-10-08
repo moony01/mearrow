@@ -212,7 +212,7 @@ export default function PublicProfileClient({
             <p className={styles.bio}>{t('intro')}</p>
           </div>
         </header>
-        <Link className={styles.backLink} href={'/' + locale}>
+        <Link className={styles.backLink} href={'/'}>
           <ArrowLeft size={16} aria-hidden="true" />{t('back')}
         </Link>
         <div className={styles.state} aria-busy="true">
@@ -241,7 +241,7 @@ export default function PublicProfileClient({
       <PageFrame size="wide" className={styles.container}>
         <div className={styles.state}>
           <p>{t('not_found')}</p>
-          <Link className={styles.backLink} href={'/' + locale}>
+          <Link className={styles.backLink} href={'/'}>
             <ArrowLeft size={16} aria-hidden="true" />
             {t('back')}
           </Link>
@@ -254,7 +254,7 @@ export default function PublicProfileClient({
 
   return (
     <PageFrame size="wide" className={styles.container}>
-      <Link className={styles.backLink} href={'/' + locale}>
+      <Link className={styles.backLink} href={'/'}>
         <ArrowLeft size={16} aria-hidden="true" />
         {t('back')}
       </Link>

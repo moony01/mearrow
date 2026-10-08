@@ -33,7 +33,7 @@ export default function AuthGuard({ children }: AuthGuardProps) {
   useEffect(() => {
     // 로딩 완료 후 미인증 상태면 로그인 페이지로 리다이렉트
     if (!isLoading && !isAuthenticated) {
-      router.replace(`/${locale}/login`);
+      router.replace(`/login`);
     }
   }, [isLoading, isAuthenticated, router, locale]);
 

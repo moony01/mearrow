@@ -76,7 +76,7 @@ The concert was just the opening act. BTS's full-scale world tour 'BTS WORLD TOU
 
 Thirty-four cities. Twelve months. The concert calendar for the next year effectively revolves around BTS.
 
-[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](/en/news/yg-bigbang-20th-anniversary-world-tour-2026)
+[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](//news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## The *Kpop Demon Hunters* Effect
 

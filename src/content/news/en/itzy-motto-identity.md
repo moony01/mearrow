@@ -8,7 +8,7 @@ thumbnail: '/images/news/itzy-motto-identity-thumbnail.webp'
 active: true
 ---
 
-`ITZY Motto` did not arrive as a clean reset button. It arrived like a question the group had been circling for years: what happens when an act built on self-belief has to prove that message again after the market has changed around it? On May 18 at 6 p.m. KST, ITZY released the new mini album `Motto` and the music video for its title track. The easy read is another comeback inside a packed May calendar. The sharper read is that ITZY has turned a 12th EP into a seven-year fan letter, a tour fuel source, and a test of whether the group's original identity still moves listeners in 2026. [Related: The May comeback trap nobody can escape](/en/news/may-comeback-trap)
+`ITZY Motto` did not arrive as a clean reset button. It arrived like a question the group had been circling for years: what happens when an act built on self-belief has to prove that message again after the market has changed around it? On May 18 at 6 p.m. KST, ITZY released the new mini album `Motto` and the music video for its title track. The easy read is another comeback inside a packed May calendar. The sharper read is that ITZY has turned a 12th EP into a seven-year fan letter, a tour fuel source, and a test of whether the group's original identity still moves listeners in 2026. [Related: The May comeback trap nobody can escape](//news/may-comeback-trap)
 
 ## ITZY Motto Is Selling Loyalty Before Sound
 

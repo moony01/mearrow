@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-fan-merch-crackdown-thumbnail.webp'
 active: true
 ---
 
-After the concert, the image that spread fastest was not the setlist. It was the trash bag. That is why the `BTS fan-made merch crackdown` suddenly feels bigger than a venue rule dispute. Fans have long treated slogan towels, photo-card packs, and handmade gift bags as part of the ritual of showing up. Once stories began circulating that unofficial items were being stopped or thrown away at the venue, the argument changed. This was no longer just about counterfeits. It became a fight over whether the same enforcement logic now covers the unofficial but non-commercial layer of ARMY culture. [Related: BTS turned Seoul into a market, not just a tour start](/en/news/bts-seoul-tour-kickoff)
+After the concert, the image that spread fastest was not the setlist. It was the trash bag. That is why the `BTS fan-made merch crackdown` suddenly feels bigger than a venue rule dispute. Fans have long treated slogan towels, photo-card packs, and handmade gift bags as part of the ritual of showing up. Once stories began circulating that unofficial items were being stopped or thrown away at the venue, the argument changed. This was no longer just about counterfeits. It became a fight over whether the same enforcement logic now covers the unofficial but non-commercial layer of ARMY culture. [Related: BTS turned Seoul into a market, not just a tour start](//news/bts-seoul-tour-kickoff)
 
 ## The First Line Appeared in Goyang
 

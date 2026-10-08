@@ -57,7 +57,7 @@ export default function RelatedNewsGrid({ posts, locale }: RelatedNewsGridProps)
       {posts.map((related) => (
         <Link
           key={related.slug}
-          href={`/${locale}/news/${related.slug}`}
+          href={`/news/${related.slug}`}
           className={styles.relatedCard}
         >
           <div className={styles.relatedImage}>

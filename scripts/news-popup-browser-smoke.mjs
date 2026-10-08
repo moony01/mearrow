@@ -13,7 +13,7 @@ const STORAGE_KEYS = {
   session: 'kcl-daily-vote-modal-dismissed-session',
 };
 const MODAL_TITLE = '실시간 TOP 10 투표';
-const IFRAME_SRC = '/embed/vote-board/ko?surface=kcl-modal&ads=off';
+const IFRAME_SRC = '/embed/vote-board?surface=kcl-modal&ads=off';
 const DEFAULT_PORT = '3107';
 const SCREENSHOT_DIR =
   process.env.NEWS_POPUP_SCREENSHOT_DIR || '/tmp/news-popup-browser-smoke';
@@ -61,7 +61,7 @@ async function waitForServer(baseUrl, child, getOutput) {
     }
 
     try {
-      const response = await fetch(`${baseUrl}/ko/news?news-popup-browser-smoke=1`, {
+      const response = await fetch(`${baseUrl}/news?news-popup-browser-smoke=1`, {
         redirect: 'manual',
       });
       lastStatus = `HTTP ${response.status}`;
@@ -257,13 +257,13 @@ async function expectNoModal(page, reason) {
 }
 
 async function expectRenderOnlyCloseAndNewsReentry(page, baseUrl, action, close) {
-  await goto(page, baseUrl, '/ko/news');
+  await goto(page, baseUrl, '/news');
   const dialog = await expectModal(page);
   await close(dialog, page);
   await expectNoModal(page, `after ${action}`);
   await expectRenderOnlyDismissed(page, action);
 
-  await goto(page, baseUrl, '/ko/news/gangnam-style-6-billion');
+  await goto(page, baseUrl, '/news/gangnam-style-6-billion');
   await expectModal(page);
 }
 
@@ -316,7 +316,7 @@ async function main() {
       {
         name: 'news-list-first-visit',
         run: async (page) => {
-          await goto(page, server.baseUrl, '/ko/news');
+          await goto(page, server.baseUrl, '/news');
           await expectModal(page);
           await takeScreenshot(page, 'news-list-first-visit');
         },
@@ -324,7 +324,7 @@ async function main() {
       {
         name: 'news-detail-first-visit',
         run: async (page) => {
-          await goto(page, server.baseUrl, '/ko/news/gangnam-style-6-billion');
+          await goto(page, server.baseUrl, '/news/gangnam-style-6-billion');
           await expectModal(page);
           await takeScreenshot(page, 'news-detail-first-visit');
         },
@@ -381,13 +381,13 @@ async function main() {
       {
         name: 'today-dismiss-suppresses-news-reentry',
         run: async (page) => {
-          await goto(page, server.baseUrl, '/ko/news');
+          await goto(page, server.baseUrl, '/news');
           const dialog = await expectModal(page);
           await dialog.getByRole('button', { name: '오늘 하루 보지 않기' }).click();
           await expectNoModal(page, 'after today dismiss');
           await expectTodayDismissed(page);
 
-          await goto(page, server.baseUrl, '/ko/news/gangnam-style-6-billion');
+          await goto(page, server.baseUrl, '/news/gangnam-style-6-billion');
           await expectNoModal(page, 'after today dismiss and article navigation');
         },
       },

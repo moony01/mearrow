@@ -38,7 +38,7 @@ Those details explain why the number kept moving. `Seven` was not designed like 
 
 The timing also changes the reading. This milestone did not arrive on release week. It arrived after the original promotional heat, after countless newer K-pop releases, and after the industry had already moved through multiple comeback cycles. In other words, `Seven` did not only win attention. It kept a place in listeners’ routines.
 
-That is where K-pop companies should pay attention. The next streaming race will not be decided only by who can mobilize the loudest first 24 hours. It will be decided by which tracks can become reusable assets: songs that fans replay, algorithms keep recommending, casual listeners save, and media outlets revisit whenever a new record falls. [Related: BLACKPINK Got the Guinness ICON Stamp — 16.9 Billion Streams Changed the Scoreboard](/en/news/blackpink-guinness-icon)
+That is where K-pop companies should pay attention. The next streaming race will not be decided only by who can mobilize the loudest first 24 hours. It will be decided by which tracks can become reusable assets: songs that fans replay, algorithms keep recommending, casual listeners save, and media outlets revisit whenever a new record falls. [Related: BLACKPINK Got the Guinness ICON Stamp — 16.9 Billion Streams Changed the Scoreboard](//news/blackpink-guinness-icon)
 
 ## MEARROW’s View: Jungkook Just Raised The Solo Benchmark
 ### The ceiling moved from debut impact to catalog proof

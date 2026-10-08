@@ -7,7 +7,7 @@ thumbnail: '/images/news/twice-550k-north-america-thumbnail.webp'
 active: true
 ---
 
-`TWICE North America record` sounds like a fandom headline until you look at the scale. `550,000 fans` across 35 shows is not just another milestone graphic for social media. It is the kind of number that forces the market to update its assumptions about how far a K-pop girl group can stretch in the United States and Canada without shrinking back to a few coastal strongholds. That is why the new `TWICE 550,000 fans` figure matters beyond bragging rights. It suggests North America is no longer a promotional side quest for elite girl groups. It is starting to look like a repeatable arena business. [Related: TWICE's Double Injury Exposed the Cost of a 43-City Tour](/en/news/twice-double-injury-kpop-overwork)
+`TWICE North America record` sounds like a fandom headline until you look at the scale. `550,000 fans` across 35 shows is not just another milestone graphic for social media. It is the kind of number that forces the market to update its assumptions about how far a K-pop girl group can stretch in the United States and Canada without shrinking back to a few coastal strongholds. That is why the new `TWICE 550,000 fans` figure matters beyond bragging rights. It suggests North America is no longer a promotional side quest for elite girl groups. It is starting to look like a repeatable arena business. [Related: TWICE's Double Injury Exposed the Cost of a 43-City Tour](//news/twice-double-injury-kpop-overwork)
 
 ## Why The 550,000 Number Lands So Hard
 
@@ -40,7 +40,7 @@ JYP's gain here is larger than a celebratory press cycle. A tour at this scale s
 
 ### The timing makes the record even more valuable
 
-This result arrives while the broader K-pop touring economy is under real scrutiny. Ticket-price fatigue, oversupply fears, and debate over whether the market has been stretched too far have all been part of the 2026 conversation. Against that background, TWICE's numbers function like a rebuttal. They do not prove every K-pop act can tour at this level, but they do show that top-tier demand has not disappeared. It has become more selective, more route-sensitive, and more dependent on acts with years of fan trust already banked. [Related: Why 2026 K-pop Concert Prices Started Feeling Like a Breaking Point](/en/news/kpop-concert-price-inflation-2026)
+This result arrives while the broader K-pop touring economy is under real scrutiny. Ticket-price fatigue, oversupply fears, and debate over whether the market has been stretched too far have all been part of the 2026 conversation. Against that background, TWICE's numbers function like a rebuttal. They do not prove every K-pop act can tour at this level, but they do show that top-tier demand has not disappeared. It has become more selective, more route-sensitive, and more dependent on acts with years of fan trust already banked. [Related: Why 2026 K-pop Concert Prices Started Feeling Like a Breaking Point](//news/kpop-concert-price-inflation-2026)
 
 ## MEARROW's View On The TWICE North America Record
 

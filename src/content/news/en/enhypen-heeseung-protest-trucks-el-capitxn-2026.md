@@ -23,7 +23,7 @@ When BELIFT LAB announced Heeseung's departure, they framed it as a mutual decis
 
 That phrase — "the direction suggested by the company" — is not how voluntary departures are typically worded in K-pop. Fans know the difference between "I wanted this" and "the company proposed this and I accepted." The ambiguity was immediate, and ENGENE's reaction was accordingly immediate.
 
-[Related: Was Heeseung Pushed Out? ENHYPEN's Shocking 6-Member Announcement](/en/news/enhypen-heeseung-departure-belift-lab-controversy-2026)
+[Related: Was Heeseung Pushed Out? ENHYPEN's Shocking 6-Member Announcement](//news/enhypen-heeseung-departure-belift-lab-controversy-2026)
 
 ## The Trucks
 

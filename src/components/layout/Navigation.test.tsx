@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
-const navigationMocks = vi.hoisted(() => ({ pathname: '/ko' }));
+const navigationMocks = vi.hoisted(() => ({ pathname: '/' }));
 import Sidebar from './Sidebar/index';
 import BottomNav from './BottomNav/index';
 import Header from './Header/index';
@@ -68,6 +68,7 @@ const messages = {
     following: '관심 피드',
     theme: '테마',
     settings: '설정',
+    studio: 'MEARROW Studio',
     language: '언어',
     settings_close: '설정 닫기',
     mode_switch: '모드 전환',
@@ -93,6 +94,7 @@ describe('Navigation Components', () => {
     expect(screen.queryByRole('button', { name: '탐색' })).toBeNull();
     expect(screen.queryByRole('button', { name: '콘텐츠' })).toBeNull();
     expect(screen.getByText('홈')).toBeDefined();
+    expect(screen.getByRole('link', { name: 'MEARROW Studio' }).getAttribute('href')).toBe('/studio');
     expect(screen.queryByText('명예의 전당')).toBeNull();
     expect(screen.queryByRole('link', { name: '뉴스' })).toBeNull();
     expect(screen.queryByRole('link', { name: '오디션' })).toBeNull();
@@ -120,9 +122,9 @@ describe('Navigation Components', () => {
     const nav = screen.getByTestId('mobile-bottom-nav');
     expect(nav).toBeDefined();
     expect(screen.getAllByRole('link')).toHaveLength(3);
-    expect(screen.getByRole('link', { name: '홈' }).getAttribute('href')).toBe('/ko');
-    expect(screen.getByRole('link', { name: '업로드' }).getAttribute('href')).toBe('/ko/my?compose=1');
-    expect(screen.getByRole('link', { name: '프로필' }).getAttribute('href')).toBe('/ko/login');
+    expect(screen.getByRole('link', { name: '홈' }).getAttribute('href')).toBe('/');
+    expect(screen.getByRole('link', { name: '업로드' }).getAttribute('href')).toBe('/my?compose=1');
+    expect(screen.getByRole('link', { name: '프로필' }).getAttribute('href')).toBe('/login');
     expect(screen.getByRole('link', { name: '홈' }).getAttribute('aria-current')).toBe('page');
     expect(screen.queryByRole('link', { name: '투표' })).toBeNull();
     expect(screen.queryByRole('link', { name: '뉴스' })).toBeNull();
@@ -131,7 +133,7 @@ describe('Navigation Components', () => {
   });
 
   it('피드 메뉴에서 분리된 뉴스 경로에서는 모바일 메뉴를 활성화하지 않는다', () => {
-    navigationMocks.pathname = '/ko/news';
+    navigationMocks.pathname = '/news';
 
     render(
       <NextIntlClientProvider locale="ko" messages={messages}>
@@ -143,30 +145,22 @@ describe('Navigation Components', () => {
     expect(screen.getByRole('link', { name: '프로필' }).getAttribute('aria-current')).toBeNull();
     expect(screen.getByRole('link', { name: '업로드' }).getAttribute('aria-current')).toBeNull();
 
-    navigationMocks.pathname = '/ko';
+    navigationMocks.pathname = '/';
   });
 
-  it('모바일 헤더에 더보기 drawer를 노출하지 않는다', () => {
+  it('모바일 더보기 메뉴에서 Studio와 설정으로 이동할 수 있다', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={messages}>
         <Header />
       </NextIntlClientProvider>,
     );
 
-    expect(screen.queryByRole('link', { name: '명예의 전당' })).toBeNull();
-    expect(screen.queryByRole('link', { name: '오디션' })).toBeNull();
-    expect(screen.queryByRole('button', { name: '더보기' })).toBeNull();
-    expect(screen.queryByRole('dialog', { name: '더보기' })).toBeNull();
-  });
+    expect(screen.queryByRole('link', { name: '설정' })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: '더보기' }));
 
-  it('헤더 설정 버튼은 설정 페이지로 이동한다', () => {
-    render(
-      <NextIntlClientProvider locale="ko" messages={messages}>
-        <Header />
-      </NextIntlClientProvider>,
-    );
-
-    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/ko/settings');
+    expect(screen.getByRole('dialog', { name: '더보기' })).toBeDefined();
+    expect(screen.getByRole('link', { name: 'MEARROW Studio' }).getAttribute('href')).toBe('/studio');
+    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/settings');
   });
 
   it('사이드바 설정 메뉴는 설정 페이지로 이동한다', () => {
@@ -176,7 +170,7 @@ describe('Navigation Components', () => {
       </NextIntlClientProvider>,
     );
 
-    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/ko/settings');
+    expect(screen.getByRole('link', { name: '설정' }).getAttribute('href')).toBe('/settings');
     expect(screen.queryByRole('dialog', { name: '설정' })).toBeNull();
   });
 });

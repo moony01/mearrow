@@ -831,7 +831,7 @@ export default function MyProfile() {
   const handleSignOut = async () => {
     setShowProfileMenu(false);
     await signOut();
-    router.replace(`/${locale}`);
+    router.replace(`/`);
   };
 
   const handleDeleteAccount = async () => {
@@ -846,7 +846,7 @@ export default function MyProfile() {
     const result = await deleteAccount();
 
     if (result.success) {
-      router.replace(`/${locale}`);
+      router.replace(`/`);
       return;
     }
 
@@ -894,7 +894,7 @@ export default function MyProfile() {
               {showProfileMenu && (
                 <div className={styles.profileMenu} role="menu">
                   <Link
-                    href={`/${locale}/following`}
+                    href={`/following`}
                     onClick={() => setShowProfileMenu(false)}
                     role="menuitem"
                   >

@@ -43,7 +43,7 @@ describe('SignupForm OAuth redirect', () => {
     const [{ options }] = mocks.signInWithOAuth.mock.calls[0];
     const redirect = new URL(options.redirectTo);
     expect(redirect.origin).toBe('https://mearrow.com');
-    expect(redirect.pathname).toBe('/ko/auth/callback');
+    expect(redirect.pathname).toBe('/auth/callback');
     expect(redirect.searchParams.get('flow')).toBe('signup');
     expect(mocks.signInWithOAuth.mock.calls[0][0].provider).toBe(provider);
   });

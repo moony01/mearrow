@@ -7,7 +7,7 @@ thumbnail: '/images/news/cortis-greengreen-million-thumbnail.webp'
 active: true
 ---
 
-`CORTIS GREENGREEN` no longer looks like a hot rookie comeback. It looks like a market correction. On `May 4`, the BIGHIT MUSIC group released its second EP and sold `1,196,961` copies on the first day alone, according to Hanteo Chart data cited by Soompi, Sports Kyunghyang and StarNews. The number is loud because it is simple: one day, one million, one rookie group suddenly being priced like a major engine. The harder question is what the industry does with a group whose second era already behaves as if the waiting period is over. [Related: CORTIS already changed the rookie pre-order market](/en/news/cortis-greengreen-preorders)
+`CORTIS GREENGREEN` no longer looks like a hot rookie comeback. It looks like a market correction. On `May 4`, the BIGHIT MUSIC group released its second EP and sold `1,196,961` copies on the first day alone, according to Hanteo Chart data cited by Soompi, Sports Kyunghyang and StarNews. The number is loud because it is simple: one day, one million, one rookie group suddenly being priced like a major engine. The harder question is what the industry does with a group whose second era already behaves as if the waiting period is over. [Related: CORTIS already changed the rookie pre-order market](//news/cortis-greengreen-preorders)
 
 ## CORTIS GREENGREEN Turned Anticipation Into Proof
 

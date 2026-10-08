@@ -45,7 +45,7 @@ The international response was fierce. "I'm so sick of Korean beauty standards,"
 
 Some Korean netizens pushed back, arguing that Tzuyu has been recognized as a visual member since debut and that it's unfair to generalize Korean beauty standards based on a handful of trolls.
 
-[Related: Racism in K-pop — The SEAblings Movement](/en/news/kpop-seablings-korea-sea-racism-war)
+[Related: Racism in K-pop — The SEAblings Movement](//news/kpop-seablings-korea-sea-racism-war)
 
 ## Why Paying to Hate Hits Different
 

@@ -65,7 +65,7 @@ His decision to personally deliver the 2026 roadmap sends two messages:
 1. **Confidence**: YG has recovered and is ready for aggressive expansion
 2. **Leadership reaffirmation**: "I'm still steering the ship" — a signal aimed at both internal stakeholders and the broader industry
 
-[Related: Min Heejin vs HYBE — The 25.5 Billion Won Put Option Ruling That Could Decide ADOR's Fate](/en/news/min-heejin-hybe-put-option-255b-ruling)
+[Related: Min Heejin vs HYBE — The 25.5 Billion Won Put Option Ruling That Could Decide ADOR's Fate](//news/min-heejin-hybe-put-option-255b-ruling)
 
 ## MEARROW's Take: What YG's 2026 Strategy Really Means
 
