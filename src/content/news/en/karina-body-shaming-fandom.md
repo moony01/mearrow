@@ -40,7 +40,7 @@ Second, the language of defense shifted. Instead of "Karina is perfect," the dom
 
 Third, the learning effect from the Tzuyu incident is showing up. In February 2026, TWICE's Tzuyu responded directly to a toxic fan on Bubble who body-shamed her legs, telling them to "spend their money better." Since then, K-pop fandoms have been learning to respond to targeted harassment in an organized, coordinated way rather than passively absorbing it.
 
-[Related: How Tzuyu Clapped Back at a Body Shamer — and What It Meant](/en/news/tzuyu-body-shaming-clap-back)
+[Related: How Tzuyu Clapped Back at a Body Shamer — and What It Meant](/studio/news/tzuyu-body-shaming-clap-back)
 
 ## MEARROW's Take: A Possible Inflection Point
 

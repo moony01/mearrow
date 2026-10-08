@@ -7,7 +7,7 @@ thumbnail: "/images/news/japan-super-weekend-thumbnail.webp"
 active: true
 ---
 
-Japan K-pop concerts stopped looking like isolated tour stops over one weekend in late April. They looked like a stress test that Japan passed in public. From April 25 to April 26, TVXQ, TWICE, aespa, and DAY6 were all moving major crowds through Japan's venue system at the same time. Allkpop estimated the combined audience at more than 420,000 people in just 48 hours. The obvious story is demand. The sharper story is infrastructure: Japan had enough stadiums, domes, arenas, transport habits, and fan spending depth to let four major K-pop events coexist without one swallowing the other. [Related: Japan lost the album-export crown to the U.S., but the live market tells a different story](/en/news/kpop-exports-us-overtakes-japan)
+Japan K-pop concerts stopped looking like isolated tour stops over one weekend in late April. They looked like a stress test that Japan passed in public. From April 25 to April 26, TVXQ, TWICE, aespa, and DAY6 were all moving major crowds through Japan's venue system at the same time. Allkpop estimated the combined audience at more than 420,000 people in just 48 hours. The obvious story is demand. The sharper story is infrastructure: Japan had enough stadiums, domes, arenas, transport habits, and fan spending depth to let four major K-pop events coexist without one swallowing the other. [Related: Japan lost the album-export crown to the U.S., but the live market tells a different story](/studio/news/kpop-exports-us-overtakes-japan)
 
 ## Japan K-pop Concerts Turned One Weekend Into A Market Signal
 

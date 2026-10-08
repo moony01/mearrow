@@ -27,7 +27,7 @@ This did not begin yesterday. AP and The Korea Times both trace the long freeze 
 
 ### Hong Kong and Macau are open, but mainland approval is different
 
-That is why so many K-pop acts still route through Hong Kong and Macau. They offer access to Greater China demand without fully depending on mainland approvals. The Korea Times recently described how K-pop performances have concentrated there while mainland restrictions remain uncertain. AP framed BTS’ mainland absence in the same broader reality. Even the case that once looked like a breakthrough — EPEX’s planned Fuzhou concert — ended in postponement, underlining just how fragile the situation remains. [Related: JYP Finally Moved With China — The Hidden Goal Behind Its Tencent Joint Venture](/en/news/onecead-jyp-tencent-china-kpop)
+That is why so many K-pop acts still route through Hong Kong and Macau. They offer access to Greater China demand without fully depending on mainland approvals. The Korea Times recently described how K-pop performances have concentrated there while mainland restrictions remain uncertain. AP framed BTS’ mainland absence in the same broader reality. Even the case that once looked like a breakthrough — EPEX’s planned Fuzhou concert — ended in postponement, underlining just how fragile the situation remains. [Related: JYP Finally Moved With China — The Hidden Goal Behind Its Tencent Joint Venture](/studio/news/onecead-jyp-tencent-china-kpop)
 
 ![Neon concert map showing the BTS China gap in the K-pop China market](/images/news/bts-china-ban-gap-1.webp)
 _A world-tour map with mainland China left dark captures the most visible unfinished gap in K-pop’s market recovery._

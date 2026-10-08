@@ -8,7 +8,7 @@ thumbnail: "/images/news/bts-city-vegas-busan-thumbnail.webp"
 active: true
 ---
 
-Twelve days. Seventeen days. The most important numbers in this `BTS THE CITY` story are not chart positions. They are the lengths of time Las Vegas and Busan will be turned into `ARIRANG` experience zones. BTS has not needed another proof-of-demand story for a long time. What the market is watching now is something else: how long the group can keep fans spending, moving, and staying inside a city even when they are not inside the stadium. [Related: BTS already proved in Seoul that the city can move before the concert does](/en/news/bts-seoul-tour-kickoff)
+Twelve days. Seventeen days. The most important numbers in this `BTS THE CITY` story are not chart positions. They are the lengths of time Las Vegas and Busan will be turned into `ARIRANG` experience zones. BTS has not needed another proof-of-demand story for a long time. What the market is watching now is something else: how long the group can keep fans spending, moving, and staying inside a city even when they are not inside the stadium. [Related: BTS already proved in Seoul that the city can move before the concert does](/studio/news/bts-seoul-tour-kickoff)
 
 ## The Schedule Has Become Bigger Than the Show
 

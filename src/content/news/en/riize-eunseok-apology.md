@@ -7,7 +7,7 @@ thumbnail: '/images/news/riize-eunseok-apology-thumbnail.webp'
 active: true
 ---
 
-`RIIZE Eunseok apology` should have been a narrow story: one deleted caption, one Bubble message, one public correction. Instead, it became a second crisis about how fandoms behave when an idol's mistake hurts international fans. On May 5, Eunseok shared childhood photos for Children's Day and used a Korean expression that multiple outlets described as racially insensitive or derogatory toward Black people. By May 6, he had apologized. The harder part came after, when reports said parts of the fan community answered criticism with more racist language. That turned a single caption into a global trust test for RIIZE, SM Entertainment and K-pop's comeback machine. [Related: G-Dragon's shirt apology became a cultural review problem](/en/news/gdragon-shirt-apology)
+`RIIZE Eunseok apology` should have been a narrow story: one deleted caption, one Bubble message, one public correction. Instead, it became a second crisis about how fandoms behave when an idol's mistake hurts international fans. On May 5, Eunseok shared childhood photos for Children's Day and used a Korean expression that multiple outlets described as racially insensitive or derogatory toward Black people. By May 6, he had apologized. The harder part came after, when reports said parts of the fan community answered criticism with more racist language. That turned a single caption into a global trust test for RIIZE, SM Entertainment and K-pop's comeback machine. [Related: G-Dragon's shirt apology became a cultural review problem](/studio/news/gdragon-shirt-apology)
 
 ## RIIZE Eunseok Apology Started With One Deleted Caption
 

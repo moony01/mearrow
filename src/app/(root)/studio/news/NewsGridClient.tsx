@@ -31,11 +31,12 @@ interface NewsPost {
 interface NewsGridClientProps {
   posts: NewsPost[];
   locale: string;
+  basePath?: string;
 }
 
 const PAGE_SIZE = 10;
 
-export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
+export default function NewsGridClient({ posts, locale, basePath = `/${locale}/news` }: NewsGridClientProps) {
   const t = useTranslations('News');
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -143,6 +144,7 @@ export default function NewsGridClient({ posts, locale }: NewsGridClientProps) {
             sourceCount={post.sourceCount}
             sourceCountLabel={t('sourcesLabel', { count: post.sourceCount ?? 0 })}
             locale={locale}
+            basePath={basePath}
             commentCount={commentCounts[post.slug] ?? 0}
           />
           {/* 3번째 카드 뒤에 in-feed 광고 삽입 (전체 너비) */}

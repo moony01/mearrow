@@ -7,7 +7,7 @@ thumbnail: "/images/news/nct-wish-cortis-clash-thumbnail.webp"
 active: true
 ---
 
-K-pop feels unusually loud today for one simple reason: **6 p.m. KST** has been claimed by both SM's `NCT WISH` and BIGHIT MUSIC's `CORTIS`. One is dropping a first full-length album, `ODE TO LOVE`; the other is launching `REDRED`, the pre-release single that opens the runway to the EP `GREENGREEN`. Fans are not reading this as a shallow "who wins?" story. They are reading it as proof that by 2026, K-pop's release calendar has become so dense that even the exact hour of debut-stage attention is now a battlefield. [Related: Why SM framed `NCT 2026` like a full system reset](/en/news/nct-2026-project)
+K-pop feels unusually loud today for one simple reason: **6 p.m. KST** has been claimed by both SM's `NCT WISH` and BIGHIT MUSIC's `CORTIS`. One is dropping a first full-length album, `ODE TO LOVE`; the other is launching `REDRED`, the pre-release single that opens the runway to the EP `GREENGREEN`. Fans are not reading this as a shallow "who wins?" story. They are reading it as proof that by 2026, K-pop's release calendar has become so dense that even the exact hour of debut-stage attention is now a battlefield. [Related: Why SM framed `NCT 2026` like a full system reset](/studio/news/nct-2026-project)
 
 ## Why 6 p.m. looks bigger than a normal comeback slot
 
@@ -23,7 +23,7 @@ According to `Korea JoongAng Daily` and `The Korea Times`, `ODE TO LOVE` is NCT 
 
 ### NCT WISH is being pushed toward the center of the NCT brand
 
-The key for NCT WISH is not speed, but position. A first full album is already a major signal for a team barely two years into its career, but this one also arrives as part of NCT's 10th-anniversary framework. In other words, SM is effectively telling the market where the next entry point into NCT now sits. NCT WISH has spent its early phase widening the base with a brighter, youthful identity. `ODE TO LOVE` is the test of whether that broader identity can hold full-album weight. [Related: Why `NCT 2026` feels less like nostalgia and more like reorganization](/en/news/nct-2026-project)
+The key for NCT WISH is not speed, but position. A first full album is already a major signal for a team barely two years into its career, but this one also arrives as part of NCT's 10th-anniversary framework. In other words, SM is effectively telling the market where the next entry point into NCT now sits. NCT WISH has spent its early phase widening the base with a brighter, youthful identity. `ODE TO LOVE` is the test of whether that broader identity can hold full-album weight. [Related: Why `NCT 2026` feels less like nostalgia and more like reorganization](/studio/news/nct-2026-project)
 
 ### CORTIS already forced the market to look at the numbers first
 

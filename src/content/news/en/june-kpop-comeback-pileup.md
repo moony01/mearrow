@@ -7,7 +7,7 @@ thumbnail: "/images/news/june-kpop-comeback-pileup-thumbnail.webp"
 active: true
 ---
 
-`June K-pop comeback lineup` is not just a search term this week. It is the shape of the market. A normal comeback window gives each act enough oxygen to own a few days of fan edits, music-show clips and playlist conversation. June 2026 is different: the calendar itself is now the battlefield, and every release has to fight not only for listeners, but for attention slots. [Related: MAMAMOO's 4WARD comeback turned reunion emotion into a second-act test](/en/news/mamamoo-4ward-comeback)
+`June K-pop comeback lineup` is not just a search term this week. It is the shape of the market. A normal comeback window gives each act enough oxygen to own a few days of fan edits, music-show clips and playlist conversation. June 2026 is different: the calendar itself is now the battlefield, and every release has to fight not only for listeners, but for attention slots. [Related: MAMAMOO's 4WARD comeback turned reunion emotion into a second-act test](/studio/news/mamamoo-4ward-comeback)
 
 ## A Dozen Releases Turned June Into A Collision Zone
 

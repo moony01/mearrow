@@ -82,6 +82,6 @@ The fact that this footage emerged the same week as a triple crown is almost too
 
 SM Entertainment had not issued a formal statement on the airport security approach as of publication.
 
-[Related: Hearts2Hearts Drops Rule-Breaking 'RUDE!' for Comeback](/en/news)
+[Related: Hearts2Hearts Drops Rule-Breaking 'RUDE!' for Comeback](/studio/news)
 
 Triple crown. Human circle. That is March 2026 for Hearts2Hearts in two images.

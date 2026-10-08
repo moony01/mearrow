@@ -19,7 +19,7 @@ BIGBANG (G-Dragon, Taeyang, Daesung) takes the Coachella stage on April 12 and 1
 
 BIGBANG was actually confirmed for Coachella 2020. The pandemic erased everything. They've come full circle six years later. This isn't just a comeback — it's a reaffirmation of second-generation K-pop's global standing. If BLACKPINK's 2019 Coachella debut opened the American festival era for K-pop, BIGBANG's 2026 return reminds the world where that era's roots lie.
 
-[Related: BLACKPINK's Deadline Shatters Girl Group Sales Records](/en/news/blackpink-deadline-ep-record-sales-yg-2026)
+[Related: BLACKPINK's Deadline Shatters Girl Group Sales Records](/studio/news/blackpink-deadline-ep-record-sales-yg-2026)
 
 ## 'Next to Michael Jackson' — Taemin's Grammy Museum Milestone
 
@@ -54,7 +54,7 @@ KATSEYE was formed through HYBE's "Dream Academy" project — a multinational gi
 
 BINI is the first P-pop (Philippine pop) act to perform at Coachella, taking the stage on April 10 and 17. They represent the K-pop idol system's expansion into Southeast Asia — and its return to the global stage.
 
-[Related: HYBE India Auditions — K-pop System Goes Global](/en/news/hybe-india-audition-kpop)
+[Related: HYBE India Auditions — K-pop System Goes Global](/studio/news/hybe-india-audition-kpop)
 
 The full Asian lineup exceeds nine acts:
 

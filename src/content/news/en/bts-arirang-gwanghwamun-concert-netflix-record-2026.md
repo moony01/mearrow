@@ -116,4 +116,4 @@ ARMY kept the memory alive for 1,250 days. Tonight, in Gwanghwamun, BTS found th
 
 The world tour starts in April. The story is just beginning.
 
-[Related: ARIRANG Day 1: Spotify hits 5M pre-saves, Netflix concert sparks ARMY debate](/en/news/bts-arirang-day1-spotify-record-netflix-paywall-2026)
+[Related: ARIRANG Day 1: Spotify hits 5M pre-saves, Netflix concert sparks ARMY debate](/studio/news/bts-arirang-day1-spotify-record-netflix-paywall-2026)

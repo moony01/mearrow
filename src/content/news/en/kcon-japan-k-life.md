@@ -9,7 +9,7 @@ active: true
 
 Three days at Makuhari Messe now have to carry more than a lineup.
 
-`KCON Japan 2026` was already positioned as a major fan event the moment CJ ENM locked in May 8 to 10 in Chiba and began rolling out artists in waves. But the most revealing update did not come from another performer announcement. It came from the floor plan. Korea JoongAng Daily reported on April 22 that this year's edition will push an AI-powered film showcase, Olive Young's first global festival tour stop, and expanded K-content experiences alongside the concert engine. That changes the frame. `KCON Japan 2026` is no longer just selling stage time. It is testing whether a K-pop convention can function as a full `K-lifestyle festival`. [Related: India Just Became K-pop's Hardest Market to Ignore](/en/news/india-kdream-stage)
+`KCON Japan 2026` was already positioned as a major fan event the moment CJ ENM locked in May 8 to 10 in Chiba and began rolling out artists in waves. But the most revealing update did not come from another performer announcement. It came from the floor plan. Korea JoongAng Daily reported on April 22 that this year's edition will push an AI-powered film showcase, Olive Young's first global festival tour stop, and expanded K-content experiences alongside the concert engine. That changes the frame. `KCON Japan 2026` is no longer just selling stage time. It is testing whether a K-pop convention can function as a full `K-lifestyle festival`. [Related: India Just Became K-pop's Hardest Market to Ignore](/studio/news/india-kdream-stage)
 
 ## Why KCON Japan 2026 Feels Bigger Than A Lineup Drop
 

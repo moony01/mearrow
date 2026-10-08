@@ -93,8 +93,8 @@ export default async function EditorialPage({
           </section>
 
           <nav className={styles.linkRow} aria-label={t('explore_label')}>
-            <Link href={`/${locale}/news`}>{t('news_link')}</Link>
-            <Link href={`/${locale}/ranking`}>{t('ranking_link')}</Link>
+            <Link href="/studio/news">{t('news_link')}</Link>
+            <Link href="/studio/ranking">{t('ranking_link')}</Link>
             <Link href={`/${locale}/about`}>{t('about_link')}</Link>
           </nav>
 

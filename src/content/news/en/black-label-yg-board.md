@@ -7,7 +7,7 @@ thumbnail: '/images/news/black-label-yg-board-thumbnail.webp'
 active: true
 ---
 
-`THE BLACK LABEL YG board` story looks clean at first glance: YG Entertainment's people are no longer sitting inside the company Teddy helped build. For fans, that should sound like freedom. For investors, it should sound like a cleaner IPO story. But the reason this headline is spreading is more complicated. The board may now look independent, while the label's artist schedule, production bottlenecks, and remaining shareholding ties still leave one uncomfortable question: does independence actually change how THE BLACK LABEL operates? [Related: BLACKPINK's distribution independence also changed the K-pop power map](/en/news/blackpink-deadline-interscope-independence)
+`THE BLACK LABEL YG board` story looks clean at first glance: YG Entertainment's people are no longer sitting inside the company Teddy helped build. For fans, that should sound like freedom. For investors, it should sound like a cleaner IPO story. But the reason this headline is spreading is more complicated. The board may now look independent, while the label's artist schedule, production bottlenecks, and remaining shareholding ties still leave one uncomfortable question: does independence actually change how THE BLACK LABEL operates? [Related: BLACKPINK's distribution independence also changed the K-pop power map](/studio/news/blackpink-deadline-interscope-independence)
 
 ## The Boardroom Door Finally Closed
 

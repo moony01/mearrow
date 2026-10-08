@@ -12,6 +12,34 @@ const __dirname = path.dirname(__filename);
 const isDev = process.env.NODE_ENV === 'development';
 const isWorkers = process.env.NEXT_RUNTIME_TARGET === 'workers';
 const useStaticExport = !isDev && !isWorkers;
+const supportedLocales = ['ko', 'en', 'ja', 'zh', 'es', 'fr', 'de'];
+const studioContentRedirects = supportedLocales.flatMap((locale) => [
+  {
+    source: `/${locale}/ranking`,
+    destination: '/studio/ranking',
+    permanent: true,
+  },
+  {
+    source: `/${locale}/news`,
+    destination: '/studio/news',
+    permanent: true,
+  },
+  {
+    source: `/${locale}/news/:slug`,
+    destination: '/studio/news/:slug',
+    permanent: true,
+  },
+  {
+    source: `/${locale}/auditions`,
+    destination: '/studio/auditions',
+    permanent: true,
+  },
+  {
+    source: `/${locale}/auditions/:slug`,
+    destination: '/studio/auditions/:slug',
+    permanent: true,
+  },
+]);
 
 // Allow the Tailnet host used to access the development server externally.
 // Keep this host-scoped; never open dev resources to arbitrary origins.
@@ -54,6 +82,9 @@ const securityHeaders = [
  */
 const nextConfig = {
   allowedDevOrigins,
+  ...(!useStaticExport
+    ? { redirects: async () => studioContentRedirects }
+    : {}),
   // 기존 Pages 배포는 정적 export를 유지하고, Workers 빌드에서는
   // OpenNext가 SSR/ISR용 Next 런타임을 생성하도록 output 설정을 비활성화합니다.
   ...(useStaticExport ? { output: 'export' } : {}),

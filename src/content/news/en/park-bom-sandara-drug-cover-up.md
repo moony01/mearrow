@@ -82,7 +82,7 @@ That's a question about power. About how K-pop agencies manage risk — and whos
 
 Park Bom's letter is, at this stage, an unverified personal account. Sandara denies it. YG is silent. The full truth remains out of reach.
 
-[Related: Yang Hyun-suk's Return to YG's Frontline — What It Means](/en/news/yg-yang-hyunsuk-audition-return)
+[Related: Yang Hyun-suk's Return to YG's Frontline — What It Means](/studio/news/yg-yang-hyunsuk-audition-return)
 
 ## The Question That Won't Go Away
 

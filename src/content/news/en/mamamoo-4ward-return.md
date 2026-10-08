@@ -7,7 +7,7 @@ thumbnail: '/images/news/mamamoo-4ward-return-thumbnail.webp'
 active: true
 ---
 
-`MAMAMOO 4WARD` did not need a music-video drop to change the temperature of the week. At midnight KST on `May 7`, the group revealed the first teaser for a four-member comeback, and the image immediately carried more weight than a normal "coming soon" poster. The reason is not only nostalgia. It is the timing: a June full-group return, a 12th-anniversary frame, and a world-tour machine that has already started taking shape. For a group whose last full-group release arrived in `2022`, one teaser now has to answer a brutal question: can a vocal legacy act come back as a living market force, not just a memory? [Related: May's girl-group comeback war is already stretching fan budgets](/en/news/may-girlgroup-market-war)
+`MAMAMOO 4WARD` did not need a music-video drop to change the temperature of the week. At midnight KST on `May 7`, the group revealed the first teaser for a four-member comeback, and the image immediately carried more weight than a normal "coming soon" poster. The reason is not only nostalgia. It is the timing: a June full-group return, a 12th-anniversary frame, and a world-tour machine that has already started taking shape. For a group whose last full-group release arrived in `2022`, one teaser now has to answer a brutal question: can a vocal legacy act come back as a living market force, not just a memory? [Related: May's girl-group comeback war is already stretching fan budgets](/studio/news/may-girlgroup-market-war)
 
 ## The Teaser Did More Than Announce A Comeback
 

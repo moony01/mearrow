@@ -33,7 +33,7 @@ For an agency, the value of a multi-city audition is not only the number of peop
 
 That logic also fits the wider HYBE ecosystem. BIGHIT MUSIC is associated with BTS, TOMORROW X TOGETHER, and CORTIS, while other HYBE projects have explored locally rooted or internationally assembled groups. [Digital Music News](https://digitalmusicnews.com/2026/09/14/bighit-music-global-auditions/) places the audition inside that broader expansion of artist development, but the existence of a broad search should not be confused with a confirmed debut lineup or a declared replacement plan.
 
-[Related: The Reality of Foreign K-pop Trainees — Visas, Language Barriers, and Cultural Survival](/en/news/foreign-trainee-reality-visa-culture)
+[Related: The Reality of Foreign K-pop Trainees — Visas, Language Barriers, and Cultural Survival](/studio/news/foreign-trainee-reality-visa-culture)
 
 ![The official BIGHIT MUSIC 2026 Global Audition poster for the 15-city campaign](/images/news/bighit-15-city-audition-thumbnail.webp)
 _Official image: [BIGHIT MUSIC Audition](https://www.bighitaudition.com/en). Separate republication permission was not confirmed._

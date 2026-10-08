@@ -3,7 +3,7 @@
  * Next.js ImageResponse를 사용하여 언어별 OG 이미지 생성
  */
 import { ImageResponse } from 'next/og';
-import { SITE_URL, SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/constants';
+import { SITE_URL } from '@/lib/constants';
 import { BRAND_NAME, BRAND_TAGLINE } from '@/lib/brand';
 
 /** OG 이미지 크기 설정 (권장 사이즈) */
@@ -16,46 +16,12 @@ export const contentType = 'image/png';
 
 const SITE_HOST = SITE_URL.replace(/^https?:\/\//, '').replace(/\/+$/, '');
 
-/** 언어별 타이틀 */
-const titles: Record<SupportedLocale, string> = {
-  ko: `${BRAND_NAME} 뉴스 & 인사이트`,
-  en: `${BRAND_NAME} News & Insights`,
-  ja: `${BRAND_NAME} ニュース & インサイト`,
-  zh: `${BRAND_NAME} 新闻与洞察`,
-  es: `${BRAND_NAME} Noticias e Insights`,
-  fr: `${BRAND_NAME} Actualités et Analyses`,
-  de: `${BRAND_NAME} Nachrichten & Insights`,
-};
-
-/** 언어별 부제목 */
-const subtitles: Record<SupportedLocale, string> = {
-  ko: 'K-Pop 산업 트렌드와 분석',
-  en: 'K-Pop Industry Trends & Analysis',
-  ja: 'K-Pop業界トレンドと分析',
-  zh: 'K-Pop行业趋势与分析',
-  es: 'Tendencias y Análisis de la Industria K-Pop',
-  fr: "Tendances et Analyses de l'Industrie K-Pop",
-  de: 'K-Pop Branchentrends & Analysen',
-};
-
-/**
- * 정적 export를 위한 모든 locale 경로 생성
- */
-export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
-}
-
 /**
  * OG 이미지 생성 함수
  */
-export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const safeLocale = (
-    SUPPORTED_LOCALES.includes(locale as SupportedLocale) ? locale : 'en'
-  ) as SupportedLocale;
-
-  const title = titles[safeLocale];
-  const subtitle = subtitles[safeLocale];
+export default async function Image() {
+  const title = `${BRAND_NAME} News & Insights`;
+  const subtitle = 'K-Pop Industry Trends & Analysis';
 
   return new ImageResponse(
     (
@@ -132,7 +98,7 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
             fontWeight: 500,
           }}
         >
-          {`${SITE_HOST}/news · ${BRAND_TAGLINE}`}
+          {`${SITE_HOST}/studio/news · ${BRAND_TAGLINE}`}
         </div>
       </div>
     ),

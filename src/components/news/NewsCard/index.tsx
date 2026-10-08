@@ -24,6 +24,8 @@ interface NewsCardProps {
   thumbnail?: string;
   /** 언어 코드 */
   locale: string;
+  /** Override the article route for the locale-less Studio archive. */
+  basePath?: string;
   /** 댓글 수 (목록에서 배치 조회) */
   commentCount?: number;
   /** 본문에 연결된 외부 출처 수 */
@@ -44,6 +46,7 @@ export default function NewsCard({
   category = 'General',
   thumbnail,
   locale,
+  basePath = `/${locale}/news`,
   commentCount,
   sourceCount = 0,
   sourceCountLabel,
@@ -56,7 +59,7 @@ export default function NewsCard({
   });
 
   return (
-    <Link href={`/${locale}/news/${slug}`} className={styles.card}>
+    <Link href={`${basePath}/${slug}`} className={styles.card}>
       {/* 썸네일 영역 */}
       <div className={styles.thumbnailWrapper}>
         {thumbnail ? (

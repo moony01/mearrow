@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronRight, EyeOff, Flame, X } from 'lucide-react';
+import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import styles from './DailyVoteModal.module.scss';
@@ -177,15 +178,15 @@ export default function DailyVoteModal() {
             <EyeOff size={17} aria-hidden="true" />
             <span>{copy.todayDismiss}</span>
           </button>
-          <a
+          <Link
             className={styles.moreVotesButton}
-            href={`/${locale}/ranking`}
+            href="/studio/ranking"
             onClick={closeModal}
           >
             <Flame size={18} aria-hidden="true" />
             <span>{copy.moreVotes}</span>
             <ChevronRight size={18} aria-hidden="true" />
-          </a>
+          </Link>
         </footer>
       </section>
     </div>

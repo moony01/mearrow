@@ -54,7 +54,7 @@ Netflix has aggressively invested in K-pop content since 2023, but an exclusive,
 
 The world tour launching after the album release will run for nearly a full year. BTS's last full-group tour, 'Permission to Dance On Stage' (2021–2022), was constrained by pandemic restrictions. This is the first unencumbered global tour in years — and it's happening at a moment when the K-pop concert market is booming.
 
-[Related: Stray Kids Make History as First K-Pop Act to Top Global Box Office](/en/news/stray-kids-dominate-kpop-first-global-box-office)
+[Related: Stray Kids Make History as First K-Pop Act to Top Global Box Office](/studio/news/stray-kids-dominate-kpop-first-global-box-office)
 
 ## MEARROW's Take: What 'ARIRANG' Is Really Betting On
 

@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { FULL_URL, SUPPORTED_LOCALES, SupportedLocale } from '@/lib/constants';
-import { getAllActualAuditions, getAuditionLocales } from '@/lib/auditions';
+import { getAllAuditions } from '@/lib/auditions';
 import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import {
   ANNOUNCEMENT_SOURCE_LOCALE,
@@ -31,33 +31,10 @@ export const dynamic = 'force-static';
 const SITEMAP_LOCALES = SUPPORTED_LOCALES;
 
 /**
- * 뉴스 콘텐츠가 존재하는 언어 목록
- * /src/content/news/ 폴더에 실제 콘텐츠가 있는 언어만
- */
-const NEWS_LOCALES: SupportedLocale[] = [NEWS_SOURCE_LOCALE];
-
-/**
  * 최신 뉴스로 간주할 개수
  * 최신 N개의 뉴스는 높은 priority (0.8) 부여
  */
 const RECENT_NEWS_COUNT = 5;
-
-/**
- * 뉴스 페이지용 alternates 생성
- * 실제 콘텐츠가 있는 언어만 포함
- */
-function generateNewsAlternates(path: string): Record<string, string> {
-  const alternates: Record<string, string> = {};
-
-  for (const locale of NEWS_LOCALES) {
-    alternates[locale] = `${FULL_URL}/${locale}${path}`;
-  }
-
-  // x-default: 영어 버전
-  alternates['x-default'] = `${FULL_URL}/en${path}`;
-
-  return alternates;
-}
 
 /**
  * 정적 페이지용 alternates 생성
@@ -89,23 +66,6 @@ function generateNoticeAlternates(
   return alternates;
 }
 
-/** Audition detail alternates include only translations that really exist. */
-function generateAuditionAlternates(slug: string): Record<string, string> {
-  const alternates: Record<string, string> = {};
-  const locales = getAuditionLocales(slug);
-
-  for (const locale of locales) {
-    alternates[locale] = `${FULL_URL}/${locale}/auditions/${slug}`;
-  }
-
-  const defaultLocale = locales.includes('en') ? 'en' : locales[0];
-  if (defaultLocale) {
-    alternates['x-default'] = `${FULL_URL}/${defaultLocale}/auditions/${slug}`;
-  }
-
-  return alternates;
-}
-
 /**
  * 정적 페이지 정의
  * 활성화된 기능 페이지만 포함 (FEATURES 플래그 참조)
@@ -127,15 +87,8 @@ const STATIC_PAGES: StaticPage[] = [
   // 명예의 전당 - 활성화됨
   { path: '/hall-of-fame', priority: 0.8, changeFrequency: 'weekly' },
 
-  // 뉴스 목록 - 활성화됨
-  { path: '/news', priority: 0.8, changeFrequency: 'daily' },
-
-  // 실시간 랭킹 및 공지사항 - 공개 페이지
-  { path: '/ranking', priority: 0.9, changeFrequency: 'daily' },
+  // 공지사항 - 공개 페이지
   { path: '/notice', priority: 0.5, changeFrequency: 'weekly' },
-
-  // 오디션 정보 목록 - 활성화됨
-  { path: '/auditions', priority: 0.9, changeFrequency: 'daily' },
 
   // About & FAQ - AdSense 필수 페이지
   { path: '/about', priority: 0.6, changeFrequency: 'monthly' },
@@ -169,47 +122,45 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // 3. 뉴스 상세 페이지 (영어 원문 locale만)
-  for (const locale of NEWS_LOCALES) {
-    try {
-      const posts = getAllNews(locale);
+  // Studio hub and its English-only content archives use locale-less canonicals.
+  sitemapEntries.push(
+    { url: `${FULL_URL}/studio`, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${FULL_URL}/studio/ranking`, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${FULL_URL}/studio/news`, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${FULL_URL}/studio/auditions`, changeFrequency: 'daily', priority: 0.8 },
+  );
 
-      for (let i = 0; i < posts.length; i++) {
-        const post = posts[i];
-        const newsPath = `/news/${post.slug}`;
+  // News detail pages use the single English source and Studio canonical paths.
+  try {
+    const posts = getAllNews(NEWS_SOURCE_LOCALE);
 
-        // 최신 5개 뉴스는 0.8, 나머지는 0.6
-        const priority = i < RECENT_NEWS_COUNT ? 0.8 : 0.6;
+    for (let i = 0; i < posts.length; i++) {
+      const post = posts[i];
+      const priority = i < RECENT_NEWS_COUNT ? 0.8 : 0.6;
 
-        sitemapEntries.push({
-          url: `${FULL_URL}/${locale}${newsPath}`,
-          lastModified: new Date(post.date),
-          changeFrequency: i < RECENT_NEWS_COUNT ? 'weekly' : 'monthly',
-          priority,
-          alternates: {
-            languages: generateNewsAlternates(newsPath),
-          },
-        });
-      }
-    } catch {
-      // 해당 언어의 뉴스가 없는 경우 스킵
-      console.warn(`[sitemap] No news found for locale: ${locale}`);
+      sitemapEntries.push({
+        url: `${FULL_URL}/studio/news/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: i < RECENT_NEWS_COUNT ? 'weekly' : 'monthly',
+        priority,
+      });
     }
+  } catch {
+    console.warn('[sitemap] No news found for Studio.');
   }
 
-  // 4. 오디션 상세 페이지 (실제 번역 파일이 있는 URL만)
-  for (const post of getAllActualAuditions()) {
-    const auditionPath = `/auditions/${post.slug}`;
+  // English audition detail pages include closed records in the archive.
+  const auditions = getAllAuditions('en').sort(
+    (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
+  );
+  for (const post of auditions) {
     const isActive = post.status !== 'closed';
 
     sitemapEntries.push({
-      url: `${FULL_URL}/${post.locale}${auditionPath}`,
-      lastModified: new Date(post.updatedAt),
+      url: `${FULL_URL}/studio/auditions/${post.slug}`,
+      lastModified: new Date(post.updatedAt || post.publishedAt),
       changeFrequency: isActive ? 'daily' : 'monthly',
       priority: isActive ? 0.8 : 0.5,
-      alternates: {
-        languages: generateAuditionAlternates(post.slug),
-      },
     });
   }
 

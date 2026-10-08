@@ -29,7 +29,7 @@ The reason this tour carries the weight of 'The Final Era' is the unavoidable re
 
 Lee Know (Lee Minho), the group's eldest member born in 1998, must enlist by age 28 under South Korean military law. The most likely scenario points to **late 2026 or early 2027 enlistment**. While Bang Chan holds Australian citizenship, his Korean-based group activities will inevitably be affected.
 
-As [BTS's comeback proved](/en/news/bts-arirang-comeback-2026), military enlistment isn't merely a hiatus for K-pop groups — it's a generational turning point.
+As [BTS's comeback proved](/studio/news/bts-arirang-comeback-2026), military enlistment isn't merely a hiatus for K-pop groups — it's a generational turning point.
 
 ![An ocean of blue lightsticks at a K-pop concert](/images/news/stray-kids-final-era-farewell-tour-jyp-2026-1.webp)
 _The iconic sea of blue light — STAY's lightsticks illuminating a Stray Kids concert_

@@ -7,7 +7,7 @@ thumbnail: '/images/news/jennie-time100-shift-thumbnail.webp'
 active: true
 ---
 
-"Jennie is a star." That short sentence is the part of the `Jennie TIME100` story that is likely to last the longest. Getting onto the list is already big news. But the line that fans and industry watchers keep circling is not just the honor itself. It is the way Jennie is being described. At this point, the question is no longer whether she is famous. That was settled a while ago. The real question behind `TIME 100 Jennie` is whether the U.S. mainstream still needs to frame her as a K-pop import first, or whether Jennie is starting to function as a standalone cultural figure whose brand makes sense even without the genre footnote. [Related: It’s Not Coachella. It’s Not a Tour. Why Jennie Is Suddenly Sitting at the Top of Lollapalooza](/en/news/jennie-lollapalooza-headliner)
+"Jennie is a star." That short sentence is the part of the `Jennie TIME100` story that is likely to last the longest. Getting onto the list is already big news. But the line that fans and industry watchers keep circling is not just the honor itself. It is the way Jennie is being described. At this point, the question is no longer whether she is famous. That was settled a while ago. The real question behind `TIME 100 Jennie` is whether the U.S. mainstream still needs to frame her as a K-pop import first, or whether Jennie is starting to function as a standalone cultural figure whose brand makes sense even without the genre footnote. [Related: It’s Not Coachella. It’s Not a Tour. Why Jennie Is Suddenly Sitting at the Top of Lollapalooza](/studio/news/jennie-lollapalooza-headliner)
 
 ## The most important thing about TIME100 is not the list. It is the sentence.
 
@@ -23,7 +23,7 @@ Celebrity lists are common. `TIME100` is different because it asks who is pushin
 
 ### `Ruby` created the numbers, and Lollapalooza opened the next door
 
-This TIME100 moment reads bigger because it arrived at exactly the right time. Soompi reported in March that Jennie became the first female K-pop soloist to chart three songs simultaneously on the Billboard Hot 100 thanks to tracks from `Ruby`. Last month, she also became one of the headline names for `Lollapalooza Chicago 2026`, moving the conversation from streaming performance into live-market status. Put together, that makes TIME100 feel less like a random blessing and more like a formal document wrapping several signals into one line of recognition. [Related: It’s Not Coachella. It’s Not a Tour. Why Jennie Is Suddenly Sitting at the Top of Lollapalooza](/en/news/jennie-lollapalooza-headliner)
+This TIME100 moment reads bigger because it arrived at exactly the right time. Soompi reported in March that Jennie became the first female K-pop soloist to chart three songs simultaneously on the Billboard Hot 100 thanks to tracks from `Ruby`. Last month, she also became one of the headline names for `Lollapalooza Chicago 2026`, moving the conversation from streaming performance into live-market status. Put together, that makes TIME100 feel less like a random blessing and more like a formal document wrapping several signals into one line of recognition. [Related: It’s Not Coachella. It’s Not a Tour. Why Jennie Is Suddenly Sitting at the Top of Lollapalooza](/studio/news/jennie-lollapalooza-headliner)
 
 ### The BLACKPINK halo alone no longer explains the full picture
 

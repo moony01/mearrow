@@ -84,4 +84,4 @@ Three things stand out in this situation.
 
 Neither BLACKPINK nor YG Entertainment has spoken. Until they do, this story is missing at least half of its evidence. What's already visible is enough to keep the K-pop industry's structural problems front and center — exactly where they have been for years.
 
-[Related: Min Heejin vs HYBE — The $18M Settlement She Rejected, and Why](/en/news/min-heejin-18m-deal-rejected)
+[Related: Min Heejin vs HYBE — The $18M Settlement She Rejected, and Why](/studio/news/min-heejin-18m-deal-rejected)

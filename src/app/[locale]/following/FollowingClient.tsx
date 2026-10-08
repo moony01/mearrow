@@ -257,7 +257,7 @@ export default function FollowingClient() {
             placeholder={t('search_placeholder')}
           />
         </label>
-        <Link className={styles.rankingLink} href={`/${locale}/ranking`}>
+        <Link className={styles.rankingLink} href="/studio/ranking">
           {t('open_ranking')}
           <ArrowUpRight size={15} aria-hidden="true" />
         </Link>

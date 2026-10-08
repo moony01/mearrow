@@ -13,6 +13,7 @@ const PAGE_SIZE = 6;
 interface AuditionsGridClientProps {
   posts: AuditionMeta[];
   locale: string;
+  basePath?: string;
 }
 
 function formatDate(value: string, locale: string, timezone?: string, includeTime = false) {
@@ -29,11 +30,11 @@ function formatDate(value: string, locale: string, timezone?: string, includeTim
   }).format(date);
 }
 
-function auditionPath(post: AuditionMeta) {
-  return `/${post.locale}/auditions/${post.slug}`;
+function auditionPath(post: AuditionMeta, basePath?: string) {
+  return `${basePath ?? `/${post.locale}/auditions`}/${post.slug}`;
 }
 
-export default function AuditionsGridClient({ posts, locale }: AuditionsGridClientProps) {
+export default function AuditionsGridClient({ posts, locale, basePath }: AuditionsGridClientProps) {
   const t = useTranslations('Auditions');
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(posts.length / PAGE_SIZE);
@@ -48,7 +49,7 @@ export default function AuditionsGridClient({ posts, locale }: AuditionsGridClie
 
         return (
           <article className={styles.card} key={`${post.locale}:${post.slug}`} lang={post.locale}>
-            <Link className={styles.posterLink} href={auditionPath(post)}>
+            <Link className={styles.posterLink} href={auditionPath(post, basePath)}>
               {/* Official posters are remote assets and remain source-attributed. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -70,7 +71,7 @@ export default function AuditionsGridClient({ posts, locale }: AuditionsGridClie
               </div>
 
               <h2>
-                <Link href={auditionPath(post)}>{post.title}</Link>
+                <Link href={auditionPath(post, basePath)}>{post.title}</Link>
               </h2>
               <p className={styles.excerpt}>{post.excerpt}</p>
 
@@ -102,7 +103,7 @@ export default function AuditionsGridClient({ posts, locale }: AuditionsGridClie
                 )}
               </dl>
 
-              <Link className={styles.readMore} href={auditionPath(post)}>
+              <Link className={styles.readMore} href={auditionPath(post, basePath)}>
                 {t('viewDetails')} <span aria-hidden="true">→</span>
               </Link>
             </div>

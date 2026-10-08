@@ -86,4 +86,4 @@ Plenty of groups have survived label disputes. Few have survived the particular 
 
 2026 is where NewJeans either proves they were always more than one person's vision — or proves the opposite.
 
-[Related: The Full NewJeans vs. HYBE Contract Dispute Timeline](/en/news/newjeans-hybe-contract-dispute)
+[Related: The Full NewJeans vs. HYBE Contract Dispute Timeline](/studio/news/newjeans-hybe-contract-dispute)

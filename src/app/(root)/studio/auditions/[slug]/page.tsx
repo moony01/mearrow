@@ -20,18 +20,16 @@ import { JsonLd } from '@/components/common/JsonLd';
 import {
   getAllAuditionParams,
   getAuditionBySlug,
-  getAuditionLocales,
   getRelatedAuditions,
   type AuditionPost,
 } from '@/lib/auditions';
-import { DEFAULT_LOCALE, FULL_URL } from '@/lib/constants';
+import { FULL_URL } from '@/lib/constants';
 import { BRAND_NAME } from '@/lib/brand';
-import { generatePageMetadata } from '@/lib/seo';
 import PageFrame from '@/components/layout/PageFrame';
 import styles from './page.module.scss';
 
 interface AuditionDetailPageProps {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -40,7 +38,9 @@ export function generateStaticParams() {
   // static export.
   if (process.env.NEXT_RUNTIME_TARGET === 'workers') return [];
 
-  return getAllAuditionParams();
+  return getAllAuditionParams()
+    .filter(({ locale }) => locale === 'en')
+    .map(({ slug }) => ({ slug }));
 }
 
 function absoluteUrl(value: string) {
@@ -49,46 +49,28 @@ function absoluteUrl(value: string) {
     : `${FULL_URL}${value}`;
 }
 
-function detailAlternates(locale: string, slug: string): Metadata['alternates'] {
-  const actualLocales = getAuditionLocales(slug);
-  const languages: Record<string, string> = {};
-
-  for (const translatedLocale of actualLocales) {
-    languages[translatedLocale] = `${FULL_URL}/${translatedLocale}/auditions/${slug}`;
-  }
-
-  const defaultLocale = actualLocales.includes(DEFAULT_LOCALE) ? DEFAULT_LOCALE : actualLocales[0];
-  if (defaultLocale) languages['x-default'] = `${FULL_URL}/${defaultLocale}/auditions/${slug}`;
-
-  return {
-    canonical: `${FULL_URL}/${locale}/auditions/${slug}`,
-    languages,
-  };
-}
-
 export async function generateMetadata({ params }: AuditionDetailPageProps): Promise<Metadata> {
-  const { locale, slug } = await params;
-  const post = await getAuditionBySlug(slug, locale);
+  const { slug } = await params;
+  const post = await getAuditionBySlug(slug, 'en');
 
   if (!post) return { title: 'Audition not found' };
 
   const poster = absoluteUrl(post.poster);
-  const actualLocales = getAuditionLocales(slug);
-  const defaultLocale = actualLocales.includes(DEFAULT_LOCALE) ? DEFAULT_LOCALE : actualLocales[0];
+  const canonical = `${FULL_URL}/studio/auditions/${slug}`;
   return {
-    ...generatePageMetadata({
-      locale,
-      pathname: `/auditions/${slug}`,
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
       title: post.title,
       description: post.excerpt,
-      type: 'article',
-      imagePath: poster,
+      url: canonical,
+      images: [poster],
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      availableLocales: actualLocales,
-      ...(defaultLocale ? { defaultLocale } : {}),
-    }),
-    alternates: detailAlternates(locale, slug),
+    },
+    twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [poster] },
   };
 }
 
@@ -156,14 +138,15 @@ function buildEventJsonLd(post: AuditionPost, canonical: string) {
 }
 
 export default async function AuditionDetailPage({ params }: AuditionDetailPageProps) {
-  const { locale, slug } = await params;
+  const { slug } = await params;
+  const locale = 'en';
   setRequestLocale(locale);
 
   const post = await getAuditionBySlug(slug, locale);
   if (!post) notFound();
 
   const t = await getTranslations({ locale, namespace: 'Auditions' });
-  const canonical = `${FULL_URL}/${locale}/auditions/${slug}`;
+  const canonical = `${FULL_URL}/studio/auditions/${slug}`;
   const location = [post.venueName, post.city, post.country].filter(Boolean).join(', ');
   const relatedPosts = getRelatedAuditions(slug, locale, 3);
   const eventJsonLd = buildEventJsonLd(post, canonical);
@@ -199,7 +182,7 @@ export default async function AuditionDetailPage({ params }: AuditionDetailPageP
         }}
       />
 
-      <Link className={styles.backLink} href={`/${locale}/auditions`}>
+      <Link className={styles.backLink} href="/studio/auditions">
         <ArrowLeft aria-hidden="true" /> {t('backToList')}
       </Link>
 
@@ -343,8 +326,8 @@ export default async function AuditionDetailPage({ params }: AuditionDetailPageP
             {relatedPosts.map((related) => (
               <Link
                 key={`${related.locale}:${related.slug}`}
-                href={`/${related.locale}/auditions/${related.slug}`}
-                lang={related.locale}
+                href={`/studio/auditions/${related.slug}`}
+                lang="en"
               >
                 <span>{related.agency}</span>
                 <strong>{related.title}</strong>
