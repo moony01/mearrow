@@ -13,10 +13,9 @@ const STORAGE_KEYS = {
   session: 'kcl-daily-vote-modal-dismissed-session',
 };
 const MODAL_TITLE = '실시간 TOP 10 투표';
-const IFRAME_SRC = '/embed/vote-board?surface=kcl-modal&ads=off';
 const DEFAULT_PORT = '3107';
 const SCREENSHOT_DIR =
-  process.env.NEWS_POPUP_SCREENSHOT_DIR || '/tmp/news-popup-browser-smoke';
+  process.env.STUDIO_MODAL_SCREENSHOT_DIR || '/tmp/studio-modal-browser-smoke';
 
 class RuntimeUnavailableError extends Error {}
 
@@ -29,7 +28,7 @@ function describeError(error) {
 }
 
 function getBrowserExecutablePath() {
-  const configuredPath = process.env.NEWS_POPUP_BROWSER_PATH;
+  const configuredPath = process.env.STUDIO_MODAL_BROWSER_PATH;
   const candidates = [
     configuredPath,
     process.env.CHROME_BIN,
@@ -61,7 +60,7 @@ async function waitForServer(baseUrl, child, getOutput) {
     }
 
     try {
-      const response = await fetch(`${baseUrl}/news?news-popup-browser-smoke=1`, {
+      const response = await fetch(`${baseUrl}/studio/news?studio-modal-browser-smoke=1`, {
         redirect: 'manual',
       });
       lastStatus = `HTTP ${response.status}`;
@@ -79,7 +78,7 @@ async function waitForServer(baseUrl, child, getOutput) {
 }
 
 async function startServer() {
-  const configuredBaseUrl = process.env.NEWS_POPUP_BASE_URL;
+  const configuredBaseUrl = process.env.STUDIO_MODAL_BASE_URL;
   if (configuredBaseUrl) {
     return {
       baseUrl: configuredBaseUrl.replace(/\/+$/, ''),
@@ -87,7 +86,7 @@ async function startServer() {
     };
   }
 
-  const port = process.env.NEWS_POPUP_PORT || DEFAULT_PORT;
+  const port = process.env.STUDIO_MODAL_PORT || DEFAULT_PORT;
   const command = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm';
   const child = spawn(command, ['dev', '--hostname', '127.0.0.1', '--port', port], {
     cwd: process.cwd(),
@@ -177,7 +176,7 @@ async function createCleanPage(browser, baseUrl) {
     const page = await context.newPage();
     // A fresh context is isolated by Playwright. The explicit removal below
     // also documents and enforces the two product keys this smoke test owns.
-    await page.goto(`${baseUrl}/ko?news-popup-browser-smoke=reset`, {
+    await page.goto(`${baseUrl}/ko?studio-modal-browser-smoke=reset`, {
       waitUntil: 'domcontentloaded',
       timeout: 30_000,
     });
@@ -217,54 +216,15 @@ async function getDismissState(page) {
   }), STORAGE_KEYS);
 }
 
-async function expectRenderOnlyDismissed(page, action) {
-  const state = await getDismissState(page);
-  assert(
-    state.daily === null && state.session === null,
-    `${action} wrote dismiss state unexpectedly: ${JSON.stringify(state)}`,
-  );
-}
-
-async function expectTodayDismissed(page) {
-  const state = await getDismissState(page);
-  const today = await page.evaluate(() => {
-    const date = new Date();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${date.getFullYear()}-${month}-${day}`;
-  });
-  assert(
-    state.daily === today && state.session === null,
-    `today dismiss did not write only the current local date: ${JSON.stringify(state)}`,
-  );
-}
-
-async function expectModal(page) {
-  const dialog = page.getByRole('dialog', { name: MODAL_TITLE });
-  await dialog.waitFor({ state: 'visible', timeout: 15_000 });
-  assert((await dialog.getAttribute('aria-modal')) === 'true', 'vote modal is not aria-modal');
-
-  const iframe = dialog.locator('iframe');
-  await iframe.waitFor({ state: 'visible', timeout: 15_000 });
-  assert((await iframe.getAttribute('src')) === IFRAME_SRC, 'vote iframe src changed');
-  return dialog;
-}
-
 async function expectNoModal(page, reason) {
   await page.waitForTimeout(350);
   const count = await page.getByRole('dialog', { name: MODAL_TITLE }).count();
   assert(count === 0, `${reason}: expected no vote modal, found ${count}`);
-}
-
-async function expectRenderOnlyCloseAndNewsReentry(page, baseUrl, action, close) {
-  await goto(page, baseUrl, '/news');
-  const dialog = await expectModal(page);
-  await close(dialog, page);
-  await expectNoModal(page, `after ${action}`);
-  await expectRenderOnlyDismissed(page, action);
-
-  await goto(page, baseUrl, '/news/gangnam-style-6-billion');
-  await expectModal(page);
+  const state = await getDismissState(page);
+  assert(
+    state.daily === null && state.session === null,
+    `${reason}: no-modal route wrote dismiss state: ${JSON.stringify(state)}`,
+  );
 }
 
 async function runIsolatedTest(browser, baseUrl, name, body) {
@@ -287,7 +247,7 @@ async function main() {
   const executablePath = getBrowserExecutablePath();
   if (!executablePath) {
     console.error(
-      'UNAVAILABLE browser runtime: set NEWS_POPUP_BROWSER_PATH to a Chromium/Chrome executable.',
+      'UNAVAILABLE browser runtime: set STUDIO_MODAL_BROWSER_PATH to a Chromium/Chrome executable.',
     );
     process.exitCode = 2;
     return;
@@ -299,7 +259,7 @@ async function main() {
     try {
       browser = await chromium.launch({
         executablePath,
-        headless: process.env.NEWS_POPUP_HEADLESS !== 'false',
+        headless: process.env.STUDIO_MODAL_HEADLESS !== 'false',
         args: process.platform === 'linux' ? ['--no-sandbox'] : [],
       });
     } catch (error) {
@@ -314,88 +274,63 @@ async function main() {
 
     const tests = [
       {
-        name: 'news-list-first-visit',
+        name: 'studio-news-list-has-no-global-vote-modal',
+        run: async (page) => {
+          await goto(page, server.baseUrl, '/studio/news');
+          assert(new URL(page.url()).pathname === '/studio/news', 'Studio news list URL changed');
+          await expectNoModal(page, 'Studio news list');
+          await takeScreenshot(page, 'studio-news-list-no-modal');
+        },
+      },
+      {
+        name: 'studio-news-detail-has-no-global-vote-modal',
+        run: async (page) => {
+          await goto(page, server.baseUrl, '/studio/news/top-nana-dating-studio54');
+          assert(
+            new URL(page.url()).pathname === '/studio/news/top-nana-dating-studio54',
+            'Studio news detail URL changed',
+          );
+          await page.getByRole('heading', { level: 1, name: /T\.O\.P and Nana Confirm/ }).waitFor({
+            state: 'visible',
+            timeout: 15_000,
+          });
+          await expectNoModal(page, 'Studio news detail');
+          await takeScreenshot(page, 'studio-news-detail-no-modal');
+        },
+      },
+      {
+        name: 'studio-auditions-has-no-global-vote-modal',
+        run: async (page) => {
+          await goto(page, server.baseUrl, '/studio/auditions');
+          assert(new URL(page.url()).pathname === '/studio/auditions', 'Studio auditions URL changed');
+          await expectNoModal(page, 'Studio auditions');
+          await takeScreenshot(page, 'studio-auditions-no-modal');
+        },
+      },
+      {
+        name: 'legacy-news-route-lands-on-studio-without-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/news');
-          await expectModal(page);
-          await takeScreenshot(page, 'news-list-first-visit');
+          assert(new URL(page.url()).pathname === '/studio/news', 'legacy /news did not reach Studio news');
+          await expectNoModal(page, 'legacy /news redirect');
         },
       },
       {
-        name: 'news-detail-first-visit',
+        name: 'legacy-news-detail-route-lands-on-studio-without-modal',
         run: async (page) => {
-          await goto(page, server.baseUrl, '/news/gangnam-style-6-billion');
-          await expectModal(page);
-          await takeScreenshot(page, 'news-detail-first-visit');
-        },
-      },
-      {
-        name: 'close-reopens-on-news-reentry',
-        run: async (page) => {
-          await expectRenderOnlyCloseAndNewsReentry(
-            page,
-            server.baseUrl,
-            'close',
-            (dialog) => dialog.getByRole('button', { name: '투표 모달 닫기' }).click(),
+          await goto(page, server.baseUrl, '/news/top-nana-dating-studio54');
+          assert(
+            new URL(page.url()).pathname === '/studio/news/top-nana-dating-studio54',
+            'legacy news detail did not reach Studio news detail',
           );
+          await expectNoModal(page, 'legacy news detail redirect');
         },
       },
       {
-        name: 'backdrop-reopens-on-news-reentry',
-        run: async (page) => {
-          await expectRenderOnlyCloseAndNewsReentry(
-            page,
-            server.baseUrl,
-            'backdrop close',
-            async (_dialog, currentPage) => {
-              const backdrop = currentPage.getByRole('button', { name: '투표 모달 배경 닫기' });
-              const box = await backdrop.boundingBox();
-              assert(box, 'vote modal backdrop has no layout box');
-              await currentPage.mouse.click(box.x + 10, box.y + 10);
-            },
-          );
-        },
-      },
-      {
-        name: 'escape-reopens-on-news-reentry',
-        run: async (page) => {
-          await expectRenderOnlyCloseAndNewsReentry(
-            page,
-            server.baseUrl,
-            'Escape',
-            () => page.keyboard.press('Escape'),
-          );
-        },
-      },
-      {
-        name: 'cta-reopens-on-news-reentry',
-        run: async (page) => {
-          await expectRenderOnlyCloseAndNewsReentry(
-            page,
-            server.baseUrl,
-            'CTA',
-            (dialog) => dialog.getByRole('link', { name: '더 투표하러 가기' }).click(),
-          );
-        },
-      },
-      {
-        name: 'today-dismiss-suppresses-news-reentry',
-        run: async (page) => {
-          await goto(page, server.baseUrl, '/news');
-          const dialog = await expectModal(page);
-          await dialog.getByRole('button', { name: '오늘 하루 보지 않기' }).click();
-          await expectNoModal(page, 'after today dismiss');
-          await expectTodayDismissed(page);
-
-          await goto(page, server.baseUrl, '/news/gangnam-style-6-billion');
-          await expectNoModal(page, 'after today dismiss and article navigation');
-        },
-      },
-      {
-        name: 'home-hides-modal',
+        name: 'community-home-has-no-global-vote-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/ko');
-          await expectNoModal(page, 'home route');
+          await expectNoModal(page, 'community home');
           await takeScreenshot(page, 'home-no-modal');
         },
       },
@@ -408,10 +343,10 @@ async function main() {
 
     const failed = results.filter((passed) => !passed).length;
     if (failed > 0) {
-      console.error(`FAIL browser smoke: ${failed}/${results.length} scenario(s) failed`);
+      console.error(`FAIL Studio modal smoke: ${failed}/${results.length} scenario(s) failed`);
       process.exitCode = 1;
     } else {
-      console.log(`PASS browser smoke: ${results.length}/${results.length} scenarios`);
+      console.log(`PASS Studio modal smoke: ${results.length}/${results.length} scenarios`);
       process.exitCode = 0;
     }
   } catch (error) {
@@ -419,7 +354,7 @@ async function main() {
       console.error(`UNAVAILABLE ${error.message}`);
       process.exitCode = 2;
     } else {
-      console.error(`FAIL browser smoke: ${describeError(error)}`);
+      console.error(`FAIL Studio modal smoke: ${describeError(error)}`);
       process.exitCode = 1;
     }
   } finally {
