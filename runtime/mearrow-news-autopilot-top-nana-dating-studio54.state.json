@@ -1,0 +1,52 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "slug": "top-nana-dating-studio54",
+  "runStartedAt": "2026-10-08T06:32:39.070Z",
+  "runStartedAtBasis": "Earliest observed task worktree creation timestamp.",
+  "currentStep": "finalization",
+  "stepResults": {
+    "research": {
+      "status": "PASS",
+      "urlsReviewed": 8,
+      "trustedSources": 6
+    },
+    "content": {
+      "status": "PASS",
+      "wordCount": 1118,
+      "excerptLength": 109,
+      "internalLinkTarget": "present"
+    },
+    "image": {
+      "status": "PASS",
+      "acceptedImages": 2,
+      "sourceAttributionGate": "PASS",
+      "licenseStatus": "not_verified_source_attributed"
+    },
+    "localRender": {
+      "status": "PASS",
+      "articleStatus": 200,
+      "apiStatus": 200,
+      "thumbnailStatus": 200,
+      "bodyImageStatus": 200
+    },
+    "playwrightVerification": {
+      "status": "PASS",
+      "agent": "mearrow_news_playwright_qa",
+      "uiGate": "PASS",
+      "integrationGate": "PASS",
+      "pageErrors": 0,
+      "consoleErrors": 0,
+      "freshViewCounterRpcIntercepted": 3,
+      "report": "runtime/mearrow-news-top-nana-dating-studio54-playwright-report.md"
+    },
+    "deploy": {
+      "status": "NOT_REQUESTED"
+    },
+    "gsc": {
+      "status": "NOT_REQUESTED"
+    }
+  },
+  "overallStatus": "PASS_LOCAL",
+  "knownSideEffect": "An earlier browser/Orca article visit may have incremented the view counter; exact test-caused count is uncertain and no rollback was attempted. The fresh focused run intercepted all three RPC attempts locally.",
+  "deployStatus": "NOT_REQUESTED"
+}
