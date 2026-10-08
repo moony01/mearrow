@@ -1,0 +1,186 @@
+- generic [active] [ref=e1] [box=0,0,1425,1000]:
+  - generic [ref=e2] [box=0,0,1425,7116]:
+    - complementary "주요 메뉴" [ref=e4] [box=0,0,244,1000]:
+      - link "MEARROW (미로우) 홈" [ref=e6] [cursor=pointer] [box=18,28,209,40]:
+        - /url: /en
+        - img "MEARROW 로고" [ref=e8] [box=18,28,40,40]
+        - generic [ref=e352] [box=63,31,164,35]: MEARROW
+      - navigation "사이트 탐색" [ref=e9] [box=14,94,215,770]:
+        - list [ref=e10] [box=14,94,215,50]:
+          - listitem [ref=e11] [box=14,94,215,50]:
+            - link "Home" [ref=e12] [cursor=pointer] [box=14,94,215,50]:
+              - /url: /en
+      - generic [ref=e17] [box=14,864,215,116]:
+        - link "Settings" [ref=e19] [cursor=pointer] [box=14,864,215,50]:
+          - /url: /en/settings
+        - link "Login" [ref=e25] [cursor=pointer] [box=14,930,215,50]:
+          - /url: /en/login
+    - main [ref=e30] [box=244,0,1181,7116]:
+      - main [ref=e32] [box=405,20,860,6914]:
+        - link "Back to News" [ref=e33] [cursor=pointer] [box=405,68,119,18]:
+          - /url: /en/news
+        - generic [ref=e37] [box=405,110,860,707]:
+          - img "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter" [ref=e39] [box=424,129,822,462]
+          - generic [ref=e40] [box=424,611,69,15]: Artist
+          - heading "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter" [level=1] [ref=e45] [box=424,638,822,83]
+          - generic [ref=e46] [box=424,737,822,28]:
+            - generic [ref=e47] [box=424,743,216,17]:
+              - time [ref=e51] [box=448,743,112,17]: October 8, 2026
+              - generic [ref=e316] [box=575,744,64,15]: 2 views
+            - generic [ref=e52] [box=1033,737,212,28]:
+              - generic [ref=e53] [box=1033,744,34,15]: Share
+              - generic [ref=e54] [box=1084,737,162,28]
+          - generic [ref=e69] [box=424,779,822,19]:
+            - generic [ref=e70] [box=424,779,176,19]: "By: MEARROW Editorial Desk"
+            - generic [ref=e71] [box=616,779,162,19]: Published October 8, 2026
+        - article [ref=e72] [box=455,845,760,4498]:
+          - generic [ref=e73] [box=455,845,760,222]:
+            - paragraph [ref=e74] [box=455,845,760,115]: "On October 2, T.O.P and Nana became more than the subjects of a dating report: both artists’ agencies confirmed that they are in a relationship. Their statements also connected the story to a project audiences already knew. The two first met through the filming of T.O.P’s “Studio54” music video, and the agencies said their relationship became romantic around June."
+            - paragraph [ref=e75] [box=455,980,760,86]: That distinction matters. The confirmation came from the representatives of both artists, while the timeline is limited to what those statements actually said. The music video is part of the public record; the private life around it is not an invitation to fill in every blank.
+          - generic [ref=e76] [box=455,1115,760,815]:
+            - heading "What the agencies confirmed" [level=2] [ref=e77] [box=455,1115,760,57]
+            - heading "The report became an on-record confirmation" [level=3] [ref=e78] [box=455,1204,760,33]
+            - paragraph [ref=e79] [box=455,1249,760,115]:
+              - text: T.O.P’s agency, TOPSPOT PICTURES, said the pair first met while filming a music video, grew closer, and began a romantic relationship around June. Nana’s agency, Sublime, separately confirmed that they are dating and linked their first connection to the same project. Soompi and Yonhap both reported the statements on October 2 (
+              - link "Soompi" [ref=e80] [cursor=pointer] [box=750,1339,57,20]:
+                - /url: https://www.soompi.com/article/1874901wpp/breaking-t-o-p-and-nana-confirm-theyre-dating
+              - text: ","
+              - link "Yonhap" [ref=e81] [cursor=pointer] [box=816,1339,57,20]:
+                - /url: https://en.yna.co.kr/view/AEN20261002005000315
+              - text: ).
+            - paragraph [ref=e82] [box=455,1384,760,86]: "The shared point is clear: their agencies confirmed the relationship and identified the music video shoot as where they first met. The exact start is approximate, not a day-by-day timeline. That is the reliable boundary of the announcement."
+            - heading "What the statements leave private" [level=3] [ref=e83] [box=455,1503,760,33]
+            - paragraph [ref=e84] [box=455,1548,760,115]: Neither agency offered a detailed account of the relationship, and the confirmation does not turn every reported sighting or online theory into established fact. The useful news is the confirmation itself, the professional connection that preceded it, and the broad timing the agencies chose to share.
+            - paragraph [ref=e85] [box=455,1683,760,115]: That boundary is especially important in celebrity coverage. Once a relationship is confirmed, speculation can quickly be presented as if it were additional reporting. Here, the agencies gave readers a straightforward account. The responsible version of the story can remain just as straightforward.
+            - generic [ref=e86] [box=455,1830,760,100]:
+              - insertion [box=455,1830,760,0]
+          - generic [ref=e87] [box=455,1978,760,1695]:
+            - heading "“Studio54” was the professional connection" [level=2] [ref=e88] [box=455,1978,760,57]
+            - heading "A collaboration audiences had already seen" [level=3] [ref=e89] [box=455,2067,760,33]
+            - paragraph [ref=e90] [box=455,2112,760,115]:
+              - text: T.O.P released his first full-length solo album, “ANOTHER DIMENSION,” in April. The “Studio54” music video followed on April 8 and starred Nana alongside T.O.P. The official video description lists both performers and credits TOPSPOT PICTURES (
+              - link "official music video" [ref=e91] [cursor=pointer] [box=839,2174,146,20]:
+                - /url: https://www.youtube.com/watch?v=cfaybWG25D4
+              - text: ); Soompi also reported Nana’s role in the video when it premiered.
+            - paragraph [ref=e92] [box=455,2247,760,86]: "The sequence is now easy to describe without turning it into a romance clue: a music collaboration brought the two artists together, and their agencies say the relationship developed later. The public watched the work first and learned about the personal connection months afterward."
+            - paragraph [ref=e93] [box=455,2358,760,1017]:
+              - img "T.O.P stands behind Nana in a monochrome promotional portrait for the Studio54 music video" [ref=e95] [box=455,2358,760,950]
+              - emphasis [ref=e96] [box=455,3329,760,46]
+            - heading "On-screen chemistry is not evidence" [level=3] [ref=e98] [box=455,3407,760,33]
+            - paragraph [ref=e99] [box=455,3452,760,115]: The visual closeness of a performance can make a later announcement feel like a plot twist. But the music video was a creative project, and its imagery should be understood as part of that work. A pose, lyric, or dance scene cannot establish when a real relationship began. The agencies’ statements—not a retrospective reading of the video—are the basis for the confirmed timeline.
+            - paragraph [ref=e100] [box=455,3587,760,86]: That separation also leaves the work intact. Viewers can revisit “Studio54” as a collaboration between two established performers without being asked to treat the video as a coded announcement. The music stands on its own, and the relationship has its own timeline.
+          - generic [ref=e101] [box=455,3721,760,566]:
+            - heading "Why this pairing resonates with longtime K-pop fans" [level=2] [ref=e102] [box=455,3721,760,57]
+            - paragraph [ref=e103] [box=455,3798,760,115]: T.O.P debuted with BIGBANG in 2006, while Nana debuted with After School in 2009, according to Yonhap. Both entered public life through major second-generation groups and later built careers that extended beyond group promotions. For fans who followed that era, the news links two familiar artistic histories that had previously crossed in a music video.
+            - paragraph [ref=e104] [box=455,3934,760,86]: That shared background is a point of context, not a reason to assume the pair’s private lives were destined to intersect. Their agencies say they met through work. Their public careers explain why the news travels widely; they do not explain or prove anything beyond the statements.
+            - paragraph [ref=e105] [box=455,4040,760,115]:
+              - text: For readers following T.O.P’s recent solo chapter, MEARROW previously looked at how his “ANOTHER DIMENSION” release positioned him outside BIGBANG’s group activities (
+              - 'link "related: T.O.P’s solo return and BIGBANG’s anniversary" [ref=e106] [cursor=pointer] [box=455,4073,752,49]':
+                - /url: /en/news/top-bigbang-solo-2026
+              - text: ). The new relationship news adds a personal development to that timeline, while leaving the music and group histories as separate stories.
+            - generic [ref=e107] [box=455,4187,760,100]:
+              - insertion [box=455,4187,760,0]
+          - generic [ref=e108] [box=455,4335,760,498]:
+            - heading "How the public sees this revelation" [level=2] [ref=e109] [box=455,4335,760,57]
+            - paragraph [ref=e110] [box=455,4412,760,179]:
+              - text: T.O.P’s public image has carried difficult context. His 2017 marijuana conviction and long absence from entertainment were part of the debate when he returned to acting in “Squid Game 2.” In January 2025,
+              - emphasis [ref=e111] [box=455,4487,760,23]: The Korea Times
+              - text: reported immediate backlash around his casting, while SBS later described contrasting reactions to his performance in Korea and overseas (
+              - link "The Korea Times" [ref=e112] [cursor=pointer] [box=761,4567,128,20]:
+                - /url: https://www.koreatimes.co.kr/entertainment/shows-dramas/20250124/can-netflixs-squid-game-2-be-tops-lifeline-for-a-comeback
+              - text: ","
+              - link "SBS" [ref=e113] [cursor=pointer] [box=898,4567,31,20]:
+                - /url: https://news.sbs.co.kr/amp/news.amp?news_id=N1007935376
+              - text: ).
+            - paragraph [ref=e114] [box=455,4611,760,115]: Those reports show that earlier coverage of his return was not uniform. They do not measure how audiences feel today, and they do not determine whether the relationship is real. That fact rests on the October 2 confirmations from both agencies. Public perception and the factual record are separate layers.
+            - paragraph [ref=e115] [box=455,4747,760,86]: Nana’s career also includes years of public work across music and acting. The announcement does not need to be framed as a comeback, a marketing tactic, or a referendum on either artist. The verified update is simply that both agencies confirmed the relationship.
+          - generic [ref=e116] [box=455,4881,760,463]:
+            - 'heading "MEARROW’s view: keep the story on the public record" [level=2] [ref=e117] [box=455,4881,760,57]'
+            - paragraph [ref=e118] [box=455,4958,760,115]: "The strongest angle is the timing between a public collaboration and a private relationship: “Studio54” introduced the artists on screen in April, while the agencies say their connection became romantic around June and confirmed it in October. That is a clear sequence, and it is more compelling than trying to turn ordinary performance details into clues."
+            - paragraph [ref=e119] [box=455,5093,760,115]: There is also a useful editorial line here. Artists can choose to confirm a relationship without making every detail public. Reporting the statement accurately respects that choice while still giving fans the context they came for. The story does not need private addresses, speculative motives, or a forensic reading of old footage to make sense.
+            - paragraph [ref=e120] [box=455,5228,760,115]: "For longtime fans, the news connects two names from a familiar generation of K-pop. For newer audiences, it connects a music-video collaboration to a later announcement. In both cases, the same boundary holds: the agencies confirmed the relationship; the rest remains theirs to share, if they choose."
+        - complementary [ref=e121] [box=455,5376,760,352]:
+          - heading "Sources & further reading" [level=2] [ref=e125] [box=504,5397,212,20]
+          - paragraph [ref=e126] [box=478,5427,714,45]: This article separates reported facts from MEARROW's analysis. The links below are source material used when available.
+          - list [ref=e127] [box=478,5486,714,170]:
+            - listitem [ref=e128] [box=498,5486,694,22]:
+              - link "Soompi" [ref=e129] [cursor=pointer] [box=502,5487,68,21]:
+                - /url: https://www.soompi.com/article/1874901wpp/breaking-t-o-p-and-nana-confirm-theyre-dating
+            - listitem [ref=e135] [box=498,5516,694,22]:
+              - link "Yonhap" [ref=e136] [cursor=pointer] [box=502,5517,68,21]:
+                - /url: https://en.yna.co.kr/view/AEN20261002005000315
+            - listitem [ref=e142] [box=498,5545,694,22]:
+              - link "official music video" [ref=e143] [cursor=pointer] [box=502,5546,145,21]:
+                - /url: https://www.youtube.com/watch?v=cfaybWG25D4
+            - listitem [ref=e149] [box=498,5575,694,22]:
+              - link "SBS Star" [ref=e150] [cursor=pointer] [box=502,5576,76,21]:
+                - /url: https://news.sbs.co.kr/english/article.do?news_id=N1008508100
+            - listitem [ref=e156] [box=498,5605,694,22]:
+              - link "The Korea Times" [ref=e157] [cursor=pointer] [box=502,5606,129,21]:
+                - /url: https://www.koreatimes.co.kr/entertainment/shows-dramas/20250124/can-netflixs-squid-game-2-be-tops-lifeline-for-a-comeback
+            - listitem [ref=e163] [box=498,5634,694,22]:
+              - link "SBS" [ref=e164] [cursor=pointer] [box=502,5635,46,21]:
+                - /url: https://news.sbs.co.kr/amp/news.amp?news_id=N1007935376
+          - paragraph [ref=e170] [box=478,5672,714,35]: Found an error or an outdated detail? Contact us at contact@kcl.fan so we can review it.
+        - generic [ref=e171] [box=405,5768,860,122]:
+          - paragraph [ref=e172] [box=430,5793,810,19]: Did you enjoy this article? Share it with fellow K-pop fans!
+          - generic [ref=e173] [box=430,5828,810,37]:
+            - generic [ref=e174] [box=615,5838,40,17]: Share
+            - generic [ref=e175] [box=671,5828,383,37]:
+              - button "카카오톡으로 공유" [ref=e176] [cursor=pointer] [box=671,5828,100,37]
+              - button "Share on X (Twitter)" [ref=e180] [cursor=pointer] [box=779,5829,61,34]
+              - button "Share on Facebook" [ref=e184] [cursor=pointer] [box=848,5829,113,34]
+              - button "Copy link" [ref=e188] [cursor=pointer] [box=969,5829,85,34]
+        - generic [ref=e194] [box=405,5938,860,338]:
+          - heading "More Stories" [level=3] [ref=e195] [box=428,5961,814,24]
+          - generic [ref=e196] [box=428,6005,814,248]:
+            - link "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Artist Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Sep 30, 2026 59" [ref=e321] [cursor=pointer] [box=428,6005,261,248]:
+              - /url: /en/news/jackson-yuqi-rumor-denial
+              - img "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines" [ref=e199] [box=428,6005,261,147]
+              - generic [ref=e200] [box=428,6151,261,101]
+            - link "ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke Artist ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke Sep 23, 2026 19" [ref=e327] [cursor=pointer] [box=704,6005,261,248]:
+              - /url: /en/news/ateez-san-wooyoung-dating-rumor
+              - img "ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke" [ref=e207] [box=704,6005,261,147]
+              - generic [ref=e208] [box=704,6151,261,101]
+            - link "When Does a BTS London Concert Become a City Takeover? Artist When Does a BTS London Concert Become a City Takeover? Jul 14, 2026 64" [ref=e333] [cursor=pointer] [box=981,6005,261,248]:
+              - /url: /en/news/bts-london-stadium-record
+              - img "When Does a BTS London Concert Become a City Takeover?" [ref=e215] [box=981,6005,261,147]
+              - generic [ref=e216] [box=981,6151,261,101]
+        - generic [ref=e221] [box=405,6324,860,384]:
+          - generic [ref=e222] [box=405,6357,860,24]:
+            - heading "Comments" [level=3] [ref=e225] [box=433,6358,94,21]
+            - generic [ref=e226] [box=535,6357,24,24]: "0"
+          - generic [ref=e227] [box=405,6405,860,199]:
+            - generic [ref=e228] [box=422,6422,826,37]:
+              - textbox "Nickname" [ref=e229] [box=422,6422,409,37]
+              - textbox "Password" [ref=e230] [box=839,6422,409,37]
+            - textbox "Write a comment..." [ref=e232] [box=422,6467,826,80]
+            - generic [ref=e233] [box=422,6555,826,32]:
+              - generic [ref=e234] [box=422,6563,34,15]: 0/500
+              - button "Post" [ref=e235] [cursor=pointer] [box=1168,6555,80,32]
+          - paragraph [ref=e241] [box=437,6660,796,16]: Be the first to comment!
+        - generic [ref=e242] [box=471,6740,728,90]:
+          - insertion [box=471,6740,728,0]
+      - generic [ref=e244] [box=264,6994,1141,83]:
+        - paragraph [ref=e248] [box=303,7007,942,17]: This is an unofficial fan-made application. All company logos and artist information are property of their respective owners. This app is not affiliated with any entertainment company.
+        - generic [ref=e249] [box=281,7031,1107,12]:
+          - link "Terms of Service" [ref=e250] [cursor=pointer] [box=303,7031,97,12]:
+            - /url: /en/terms
+          - generic [ref=e255] [box=408,7031,3,12]: "|"
+          - link "Privacy Policy" [ref=e256] [cursor=pointer] [box=419,7031,82,12]:
+            - /url: /en/privacy
+          - generic [ref=e260] [box=509,7031,3,12]: "|"
+          - link "About MEARROW" [ref=e261] [cursor=pointer] [box=520,7031,99,12]:
+            - /url: /en/about
+          - generic [ref=e266] [box=628,7031,3,12]: "|"
+          - link "FAQ" [ref=e267] [cursor=pointer] [box=639,7031,35,12]:
+            - /url: /en/faq
+          - generic [ref=e271] [box=682,7031,3,12]: "|"
+          - link "Editorial standards" [ref=e272] [cursor=pointer] [box=694,7031,104,12]:
+            - /url: /en/editorial
+        - paragraph [ref=e276] [box=281,7051,1107,12]: © 2026 MEARROW. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e311] [cursor=pointer] [box=22,946,32,32]
+  - alert [ref=e315] [box=-1,7115,1,1]
+  - generic [ref=e340] [box=688,958,50,26]:
+    - button "Copy element" [ref=e345] [cursor=pointer] [box=696,964,14,14]
+    - button "Collapse toolbar" [expanded] [ref=e349] [cursor=pointer] [box=716,964,14,14]

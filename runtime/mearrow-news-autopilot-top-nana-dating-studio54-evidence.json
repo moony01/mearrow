@@ -1,0 +1,86 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "slug": "top-nana-dating-studio54",
+  "date": "2026-10-08",
+  "overallStatus": "PASS_LOCAL",
+  "steps": {
+    "research": {
+      "status": "PASS",
+      "urlsReviewed": 8,
+      "trustedSources": 6,
+      "factcheck": "runtime/mearrow-news-top-nana-dating-studio54-factcheck.md"
+    },
+    "content": {
+      "status": "PASS",
+      "wordCount": 1118,
+      "excerptLength": 109,
+      "internalLinkTarget": "present",
+      "article": "src/content/news/en/top-nana-dating-studio54.md"
+    },
+    "images": {
+      "status": "PASS",
+      "accepted": 2,
+      "sourceAttributionGate": "PASS",
+      "licenseStatus": "not_verified_source_attributed",
+      "provenance": "runtime/mearrow-news-top-nana-dating-studio54-image-sources.json",
+      "thumbnailSha256": "543816710ab88da4ea17a0944d5e84d5e5db39fd10b13f6e6d59838b7e436729",
+      "bodySha256": "2fd4c883552ff15c6ee4aac7ed4f6b66b94b813f74ec6a9f2c3337e27b3133f8"
+    },
+    "localRender": {
+      "status": "PASS",
+      "articleHttp": 200,
+      "apiHttp": 200,
+      "thumbnailHttp": 200,
+      "bodyImageHttp": 200,
+      "generation": "PASS"
+    },
+    "playwright": {
+      "status": "PASS",
+      "uiGate": "PASS",
+      "integrationGate": "PASS",
+      "desktopViewport": "1440x1000 and 958x910 CSS px",
+      "mobileViewport": "390x844 CSS px in desktop Chrome",
+      "pageErrors": 0,
+      "consoleErrors": 0,
+      "freshCounterRpcAttempts": 3,
+      "freshCounterRpcInterceptedLocally": 3,
+      "freshCounterRpcReachedSupabase": 0,
+      "report": "runtime/mearrow-news-top-nana-dating-studio54-playwright-report.md"
+    },
+    "repository": {
+      "branchTargets": [
+        "main",
+        "nana-top-relationship-news"
+      ],
+      "remotePush": "NOT_REQUESTED",
+      "deployment": "NOT_REQUESTED"
+    }
+  },
+  "sideEffectsAndLimits": [
+    "An earlier browser/Orca article visit triggered the automatic increment_kcl_news_view RPC. The exact test-caused increment count is uncertain; no rollback was attempted.",
+    "The fresh focused Playwright pass intercepted all three article-view RPC attempts locally before they could reach Supabase.",
+    "No physical-device testing was performed.",
+    "The images are attributed to TOPSPOT PICTURES via SBS Star; a reuse license was not verified or claimed."
+  ],
+  "screenshots": [
+    "runtime/mearrow-top-nana-article-desktop.png",
+    "runtime/mearrow-top-nana-article-image-desktop.png",
+    "runtime/mearrow-top-nana-article-mobile.png",
+    "runtime/mearrow-top-nana-article-image-mobile.png",
+    "runtime/mearrow-top-nana-article-mobile-reentry-image.png",
+    "runtime/mearrow-top-nana-article-fresh.png",
+    "runtime/mearrow-top-nana-article-fresh-reentry-image.png",
+    "runtime/mearrow-news-list-desktop.png",
+    "runtime/mearrow-news-list-mobile.png",
+    "runtime/mearrow-news-list-fresh.png"
+  ],
+  "accessibilitySnapshots": [
+    "runtime/mearrow-top-nana-article-desktop-a11y.md",
+    "runtime/mearrow-top-nana-article-mobile-a11y.md",
+    "runtime/mearrow-top-nana-article-mobile-reentry-a11y.md",
+    "runtime/mearrow-top-nana-article-fresh-a11y.md",
+    "runtime/mearrow-news-list-desktop-a11y.md",
+    "runtime/mearrow-news-list-mobile-a11y.md",
+    "runtime/mearrow-news-list-fresh-a11y.md"
+  ]
+}
