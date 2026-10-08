@@ -1,0 +1,9 @@
+{
+  "runId": "mearrow-news-autopilot-20261006-topic-selection",
+  "status": "INVALIDATED_BY_POLICY_UPDATE",
+  "lastPassedStep": "Research Gate",
+  "nextStep": "Rerun topic research and publish exactly three General plus two Rumor / Relationship candidates",
+  "candidateCount": 5,
+  "updatedAt": "2026-10-06T14:54:43+09:00",
+  "reason": "The previously shown candidates predate the mandatory two-rumor-candidate rule and must not be selected."
+}

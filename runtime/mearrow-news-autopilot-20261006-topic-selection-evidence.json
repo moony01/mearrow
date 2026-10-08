@@ -1,0 +1,196 @@
+{
+  "runId": "mearrow-news-autopilot-20261006-topic-selection",
+  "mode": "candidate_list",
+  "runStartedAt": "2026-10-06T14:39:00+09:00",
+  "runEndedAt": "2026-10-06T14:49:40+09:00",
+  "executionStatus": "INVALIDATED_BY_POLICY_UPDATE",
+  "invalidatedAt": "2026-10-06T14:54:43+09:00",
+  "invalidatedReason": "The candidate list was generated before the mandatory two Rumor / Relationship candidates rule was added.",
+  "selected": null,
+  "recentToneAndCategory": {
+    "recent5": [
+      {
+        "slug": "twice-double-injury-kpop-overwork",
+        "tone": "Negative",
+        "category": "Industry"
+      },
+      {
+        "slug": "yuna-solo-debut-ice-cream",
+        "tone": "Positive",
+        "category": "Artist"
+      },
+      {
+        "slug": "yg-yang-hyunsuk-audition-return",
+        "tone": "Neutral",
+        "category": "Trainee System"
+      },
+      {
+        "slug": "yg-boygroup-september-bet",
+        "tone": "Positive",
+        "category": "Business"
+      },
+      {
+        "slug": "yg-bigbang-20th-anniversary-world-tour-2026",
+        "tone": "Positive",
+        "category": "Industry"
+      }
+    ],
+    "toneDistribution": {
+      "Negative": 1,
+      "Positive": 3,
+      "Neutral": 1
+    },
+    "categoryPenaltyAppliedTo": [
+      "Industry",
+      "Artist",
+      "Trainee System"
+    ],
+    "toneRule": "No forced tone correction is required: the recent five contain one Negative, three Positive, and one Neutral story, with no three-negative run."
+  },
+  "researchQueries": [
+    "K-pop breaking news today October 2026",
+    "K-pop controversy scandal October 2026",
+    "K-pop company news HYBE SM JYP YG October 2026",
+    "K-pop comeback release October 2026",
+    "K-pop new album MV teaser October 2026",
+    "K-pop idol debut announcement October 2026",
+    "K-pop chart record milestone 2026",
+    "K-pop Billboard streaming record October 2026",
+    "K-pop concert tour sold out October 2026",
+    "K-pop fan project viral October 2026 fandom achievement",
+    "K-pop industry revenue market growth 2026 global expansion",
+    "K-pop trainee audition 2026 survival show October",
+    "BTS Stray Kids Grammy submission Asian Pop category 2026 Variety",
+    "Recording Academy Best Asian Pop Performance category 2026 BTS Stray Kids",
+    "BABYMONSTER October 23 2026 coming soon teaser official YG",
+    "WE GO-6 October 2026 debut official virtual K-pop group"
+  ],
+  "researchSources": [
+    {
+      "source": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20261006/ive-illit-riize-collide-as-october-k-pop-comeback-race-heats-up",
+      "supports": "Oct. 26 simultaneous IVE, ILLIT, and RIIZE releases and the crowded October calendar",
+      "reliability": "major_media"
+    },
+    {
+      "source": "KPOP MAGAZINE",
+      "url": "https://thekpopmagazine.com/articles/october-2026-kpop-comeback-calendar/",
+      "supports": "Independent October 2026 comeback-calendar corroboration",
+      "reliability": "specialist_media"
+    },
+    {
+      "source": "Variety",
+      "url": "https://au.variety.com/2026/music/news/stray-kids-bts-not-submitting-grammy-awards-40964/",
+      "supports": "Stray Kids did not submit music for the 69th Grammy Awards and BTS had already announced the same decision",
+      "reliability": "major_media"
+    },
+    {
+      "source": "Recording Academy",
+      "url": "https://www.grammy.com/awards/categories/best-asian-pop-music-performance/",
+      "supports": "Official Best Asian Pop Music Performance category scope and language rules",
+      "reliability": "official"
+    },
+    {
+      "source": "Music Business Worldwide",
+      "url": "https://www.musicbusinessworldwide.com/grammys-will-keep-asian-pop-category-for-2027-awards-as-stray-kids-follow-bts-in-declining-to-submit-music/",
+      "supports": "The category proceeding for the 2027 awards despite the submission controversy",
+      "reliability": "specialist_media"
+    },
+    {
+      "source": "YG LIFE",
+      "url": "https://yg-life.com/archives/197854?lang=ko",
+      "supports": "BABYMONSTER teaser and Oct. 23, 2026 1 p.m. KST release date",
+      "reliability": "official_company_media"
+    },
+    {
+      "source": "Soompi",
+      "url": "https://www.soompi.com/article/1875548wpp/babymonster-hints-at-new-release-with-mysterious-teaser",
+      "supports": "Independent report of BABYMONSTER's official coming-soon teaser",
+      "reliability": "specialist_media"
+    },
+    {
+      "source": "IFPI",
+      "url": "https://www.ifpi.org/global-music-report-2026-global-recorded-music-revenues-grow-6-4-as-record-companies-drive-innovation/",
+      "supports": "2025 global recorded-music growth of 6.4%, Asia growth of 10.9%, and physical-format growth of 8.0%",
+      "reliability": "official_industry_report"
+    },
+    {
+      "source": "JYP AUDITION",
+      "url": "https://audition.jype.com/audition/posts/50",
+      "supports": "Official Project Noir: Band Audition notice for trainee-targeted coverage",
+      "reliability": "official_company_source"
+    }
+  ],
+  "scoredCandidates": [
+    {
+      "rank": 1,
+      "topic": "October 26 becomes K-pop's three-way comeback collision: IVE, ILLIT, and RIIZE",
+      "category": "Market Trend",
+      "tone": "Positive",
+      "rawScore": 92,
+      "categoryPenalty": 0,
+      "score": 92,
+      "reason": "A same-day release collision reported today creates a strong comparison hook, high fan participation, and durable SEO around the October comeback calendar."
+    },
+    {
+      "rank": 2,
+      "topic": "Stray Kids joins BTS in sitting out the 2027 Grammys as the Asian Pop category goes ahead",
+      "category": "Business",
+      "tone": "Negative",
+      "rawScore": 90,
+      "categoryPenalty": 0,
+      "score": 90,
+      "reason": "Two global K-pop acts, an official Grammy rule change, and a fresh submission deadline create unusually strong cross-market discussion."
+    },
+    {
+      "rank": 3,
+      "topic": "K-pop's next growth map: Asia's 10.9% music-market rise and the global streaming economy",
+      "category": "Market Trend",
+      "tone": "Neutral",
+      "rawScore": 78,
+      "categoryPenalty": 0,
+      "score": 78,
+      "reason": "IFPI's current global data gives MEARROW a durable, numbers-led industry story with an Asia and fandom-economy angle."
+    },
+    {
+      "rank": 4,
+      "topic": "BABYMONSTER's four-month turnaround: why YG is speeding up the next release",
+      "category": "Artist",
+      "tone": "Positive",
+      "rawScore": 84,
+      "categoryPenalty": 30,
+      "score": 59,
+      "reason": "A same-day official teaser and an Oct. 23 release create immediate fan interest, but Artist receives the recent-category penalty."
+    },
+    {
+      "rank": 5,
+      "topic": "JYP's Project Noir band audition: what the next trainee pipeline is really recruiting for",
+      "category": "Trainee System",
+      "tone": "Neutral",
+      "rawScore": 77,
+      "categoryPenalty": 30,
+      "score": 54,
+      "reason": "The official audition notice gives trainees a practical, searchable topic; Trainee System receives the recent-category penalty."
+    }
+  ],
+  "imageSearchQueries": [],
+  "imageSources": [],
+  "acceptedImages": [],
+  "rejectedImages": [],
+  "sourceAttributionGate": "PENDING_TOPIC_SELECTION",
+  "stepResults": {
+    "Research Gate": "PASS",
+    "Topic Selection Gate": "INVALIDATED_BY_POLICY_UPDATE",
+    "Content Gate": "PENDING",
+    "Image Gate": "PENDING",
+    "Local Render Gate": "PENDING",
+    "Deploy Gate": "PENDING",
+    "Browser Deploy Gate": "PENDING",
+    "GSC Gate": "PENDING"
+  },
+  "retries": {
+    "webSearch": 0,
+    "browser": 0
+  },
+  "lastError": null
+}

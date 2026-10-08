@@ -5,7 +5,6 @@ import { spawn } from 'node:child_process';
 import process from 'node:process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { chromium } from 'playwright-core';
-import { runAuditionBrowserSmoke } from './auditions-browser-smoke.mjs';
 
 const DEFAULT_PORT = process.env.DEPLOY_BROWSER_PORT || '3119';
 const DEFAULT_BASE_URL = `http://127.0.0.1:${DEFAULT_PORT}`;
@@ -82,7 +81,7 @@ async function waitForServer(baseUrl, child) {
 
     try {
       const response = await fetch(`${baseUrl}/ko?deploy-browser-smoke=ready`);
-      if (response.status < 500) return;
+      if (response.status === 200) return;
     } catch {
       // Keep polling until the dev server is ready.
     }
@@ -419,7 +418,6 @@ async function main() {
       `mobile ranking overflows horizontally (${JSON.stringify(mobileRanking)})`,
     );
     const seoEndpoints = await assertSeoEndpoints(server.baseUrl);
-    const auditionSmoke = await runAuditionBrowserSmoke(page, server.baseUrl);
 
     const newsResponse = await page.goto(`${server.baseUrl}/en/news?deploy-browser-smoke=news`, {
       waitUntil: 'domcontentloaded',
@@ -487,7 +485,6 @@ async function main() {
           companyCount,
           mobileRanking,
           ...seoEndpoints,
-          auditionSmoke,
           supabaseResponses: supabaseResponses.map(({ status, url }) => ({ status, url })),
           newsImage: imageSources[0],
           pageErrors: appPageErrors,

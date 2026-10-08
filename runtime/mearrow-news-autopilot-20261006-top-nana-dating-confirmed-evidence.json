@@ -1,0 +1,223 @@
+{
+  "runId": "mearrow-news-autopilot-20261006-top-nana-dating-confirmed",
+  "runStartedAt": "2026-10-06T14:55:00+09:00",
+  "lastUpdatedAt": "2026-10-06T16:42:07+09:00",
+  "executionStatus": "PASS",
+  "mode": "selected_candidate",
+  "topic": "T.O.P and Nana reported relationship confirmed by both agencies after their Studio54 music-video collaboration",
+  "slug": "top-nana-dating-confirmed",
+  "date": "2026-10-06",
+  "category": "Artist",
+  "titleCandidates": [
+    "T.O.P and Nana Dating Confirmed—The ‘Studio54’ Set Wasn’t the Whole Story",
+    "T.O.P and Nana Made It Official—But the ‘Studio54’ Set Was Only the Beginning",
+    "The T.O.P and Nana Relationship Was Reported in One Morning—Then Both Agencies Confirmed It"
+  ],
+  "selectedTitle": "T.O.P and Nana Dating Confirmed—The ‘Studio54’ Set Wasn’t the Whole Story",
+  "targetKeywords": ["T.O.P and Nana dating", "T.O.P Nana relationship"],
+  "researchQueries": [
+    "T.O.P Nana agencies confirmed relationship October 2 2026 Yonhap Soompi CNA",
+    "T.O.P Nana Studio54 music video April 8 2026 official TOPSPOT Pictures",
+    "T.O.P 2017 marijuana case Squid Game 2 December 2024 Yonhap Korea Times",
+    "T.O.P Another Dimension April 2026 album Studio54 interview hiatus",
+    "T.O.P current public perception recent public behavior 2026 after Squid Game 2",
+    "T.O.P recent public behavior 2026 public image solo album Nana relationship"
+  ],
+  "researchResults": [
+    {"provider": "Yonhap News Agency", "url": "https://en.yna.co.kr/view/AEN20261002005000315", "supports": "Both agencies confirmed the relationship, the Studio54 meeting, the approximate June start, and career timeline."},
+    {"provider": "Soompi", "url": "https://www.soompi.com/article/1874901wpp/breaking-t-o-p-and-nana-confirm-theyre-dating", "supports": "Independent report of the agency confirmations and relationship timeline."},
+    {"provider": "CNA Lifestyle", "url": "https://cnalifestyle.channelnewsasia.com/entertainment/top-nana-dating-korean-stars-589901", "supports": "Independent confirmation, Nana's Bubble response, and career context."},
+    {"provider": "SBS Star", "url": "https://sbsstar.net/article/N1008508100/top-nanas-surprise-pairing-studio54-music-video-drops-april-8-with-squid-game-team", "supports": "Studio54 collaboration, April release context, and TOPSPOT PICTURES image credit."},
+    {"provider": "SBS World News", "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008780608", "supports": "Independent confirmation and agency wording."},
+    {"provider": "Maeil Business", "url": "https://www.mk.co.kr/en/musics/12009784", "supports": "Studio54 promotional context and TOPSPOT PICTURES photo credit."},
+    {"provider": "Maeil Business", "url": "https://www.mk.co.kr/en/musics/12141463", "supports": "Recent interview framing of T.O.P's long absence and creative return."},
+    {"provider": "GQ Hong Kong", "url": "https://gqhongkong.com/en/highlight-eng/gq-hype-digital-cover%EF%BC%9At-o-p-another-dimension", "supports": "Recent public-image framing around the quiet years and return."}
+  ],
+  "recentPublicPerceptionResearch": {
+    "required": true,
+    "queriesRun": 4,
+    "finding": "Current coverage presents a layered reception: continued interest in T.O.P's music and acting return alongside recurring reference to the 2017 controversy and long absence. The article treats this as an evidence-based media framing, not a quantified public-opinion claim.",
+    "sources": [
+      "https://en.yna.co.kr/view/AEN20261002005000315",
+      "https://www.mk.co.kr/en/musics/12141463",
+      "https://gqhongkong.com/en/highlight-eng/gq-hype-digital-cover%EF%BC%9At-o-p-another-dimension"
+    ]
+  },
+  "contentChecks": {
+    "bodyWordCount": 1482,
+    "wordCountGate": "PASS",
+    "h2Count": 5,
+    "h3Count": 5,
+    "imageCount": 2,
+    "internalLinkCount": 1,
+    "excerptCharacters": 145,
+    "slugWordCount": 4,
+    "encodingReplacementCharacters": 0,
+    "internalReviewMarkers": 0,
+    "active": true,
+    "contentGate": "PASS"
+  },
+  "factCheck": {
+    "claimsReviewed": 10,
+    "pass": 10,
+    "fix": 0,
+    "remove": 0,
+    "verificationRate": 100,
+    "status": "PASS",
+    "claims": [
+      {"claim": "Both agencies confirmed the relationship on October 2, 2026.", "status": "PASS", "sources": ["Yonhap", "Soompi", "CNA"]},
+      {"claim": "The pair met while filming T.O.P's music video, grew closer, and began a romantic relationship around June.", "status": "PASS", "sources": ["Yonhap", "Soompi", "SBS"]},
+      {"claim": "Nana appeared in the Studio54 music video from T.O.P's April album project.", "status": "PASS", "sources": ["SBS", "MK", "Soompi"]},
+      {"claim": "Nana acknowledged the announcement through Bubble and described continuing happily and healthily.", "status": "PASS", "sources": ["CNA", "KStarTrend"]},
+      {"claim": "T.O.P debuted with BIGBANG in 2006 and his 2017 marijuana case and later return remain part of current coverage.", "status": "PASS", "sources": ["Yonhap", "CNA", "SBS"]},
+      {"claim": "T.O.P returned to the spotlight through Squid Game Season 2 in December 2024.", "status": "PASS", "sources": ["Yonhap", "CNA"]},
+      {"claim": "ANOTHER DIMENSION was released in April 2026 and Studio54 was a double-title track.", "status": "PASS", "sources": ["Yonhap", "SBS", "SBS World News"]},
+      {"claim": "Recent interviews frame T.O.P's long absence as a period of reflection and creative rebuilding.", "status": "PASS", "sources": ["MK", "GQ Hong Kong", "SBS"]},
+      {"claim": "Nana came from After School and has balanced music and acting.", "status": "PASS", "sources": ["Yonhap", "CNA", "SBS World News"]},
+      {"claim": "The images are credited to TOPSPOT PICTURES by SBS Star.", "status": "PASS", "sources": ["SBS Star", "MK"]}
+    ]
+  },
+  "imageSources": ["runtime/mearrow-news-autopilot-20261006-top-nana-dating-confirmed-image-sources.json"],
+  "acceptedImages": [
+    "public/images/news/top-nana-dating-confirmed-thumbnail.webp",
+    "public/images/news/top-nana-dating-confirmed-1.webp"
+  ],
+  "rejectedImages": [
+    "https://www.allkpop.com/upload/2026/10/content/012358/1790913513-thumb.jpg",
+    "https://image.starnewskorea.com/cdn-cgi/image/f%3Dauto%2Cw%3D1200%2Ch%3D1200%2Cfit%3Dcover%2Cq%3Dhigh%2Csharpen%3D2/21/2026/10/2026100517485928221_1.jpg",
+    "https://img1.daumcdn.net/thumb/S1200x630/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fnews%2F202602%2F09%2Fsportskhan%2F20260209150612324.jpg"
+  ],
+  "acceptedImageCount": 2,
+  "rejectedImageCount": 3,
+  "sourceAttributionGate": "PASS",
+  "localRender": {
+    "status": "PASS",
+    "baseUrl": "http://127.0.0.1:3106",
+    "page": {"url": "/en/news/top-nana-dating-confirmed", "status": 200, "contentType": "text/html"},
+    "assets": [
+      {"url": "/images/news/top-nana-dating-confirmed-thumbnail.webp", "status": 200, "contentType": "image/webp"},
+      {"url": "/images/news/top-nana-dating-confirmed-1.webp", "status": 200, "contentType": "image/webp"},
+      {"url": "/images/news/nextImageExportOptimizer/top-nana-dating-confirmed-thumbnail-opt-800.WEBP", "status": 200, "contentType": "image/webp"},
+      {"url": "/images/news/nextImageExportOptimizer/top-nana-dating-confirmed-1-opt-800.WEBP", "status": 200, "contentType": "image/webp"}
+    ],
+    "pageMarkers": ["title", "Studio54", "top-nana-dating-confirmed-thumbnail.webp", "top-nana-dating-confirmed-1.webp"]
+  },
+  "deployPreflight": {
+    "status": "PASS",
+    "attempts": 2,
+    "firstAttempt": "FAIL_MISSING_ENV",
+    "resolvedWith": "approved local .env.local exported into the process without printing secret values"
+  },
+  "browserDeploySmoke": {
+    "status": "PASS",
+    "attempts": 5,
+    "successfulAttempt": 5,
+    "baseUrl": "http://127.0.0.1:3119",
+    "browser": "/home/moon/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "supabaseRestStatuses": [200, 200, 200],
+    "profileFeedCount": 4,
+    "companyCount": 10,
+    "mobileOverflow": false,
+    "auditionDetailCount": 16,
+    "newsImage": "/images/news/top-nana-dating-confirmed-thumbnail.webp",
+    "newsImageFormat": "webp",
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedAttempts": [
+      "attempt 1: pre-existing dedicated dev server occupied the smoke port",
+      "attempt 2: Windows Chrome could not launch through WSL remote-debugging pipe",
+      "attempt 3: smoke readiness accepted an initial 404 before route compilation",
+      "attempt 4: existing audition pagination smoke timed out at 5 seconds",
+      "attempt 5: PASS"
+    ]
+  },
+  "releaseBrowserVerification": {
+    "status": "PASS",
+    "dispatchId": "ctx_8f37689ee830",
+    "agentId": "01a10ff3-3745-7c33-8454-76330394d77b",
+    "attempts": 1,
+    "routes": [
+      "/en/news",
+      "/en/news/top-nana-dating-confirmed",
+      "/ko/news/top-nana-dating-confirmed",
+      "/ko"
+    ],
+    "images": [
+      {"path": "/images/news/top-nana-dating-confirmed-thumbnail.webp", "status": 200, "decoded": true, "dimensions": "1500x1875"},
+      {"path": "/images/news/top-nana-dating-confirmed-1.webp", "status": 200, "decoded": true, "dimensions": "1500x1875"}
+    ],
+    "sourceCaptionsVisible": true,
+    "internalLinkNavigation": true,
+    "koreanFallback": true,
+    "responsive": {
+      "desktopViewport": "1440x1000",
+      "desktopDocumentWidth": 1425,
+      "mobileViewport": "390x844",
+      "mobileDocumentWidth": 375,
+      "horizontalOverflow": false
+    },
+    "supabaseReadback": {"endpoint": "/rest/v1/profile_posts", "status": 200},
+    "automaticViewRpc": {"endpoint": "/rest/v1/rpc/increment_kcl_news_view", "status": 204},
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "screenshots": [
+      "/home/moon/workspace/mearrow-en-article-1440.png",
+      "/home/moon/workspace/mearrow-en-article-390.png"
+    ],
+    "evidence": [
+      "/home/moon/workspace/.playwright-mcp/page-2026-10-06T06-45-15-840Z.yml",
+      "/home/moon/workspace/.playwright-mcp/page-2026-10-06T06-46-06-372Z.yml",
+      "/home/moon/workspace/.playwright-mcp/page-2026-10-06T06-47-59-441Z.yml"
+    ],
+    "lastError": "Initial /tmp screenshot save was outside allowed roots; retry saved screenshots under workspace. No application failure."
+  },
+  "stepResults": {
+    "Topic Selection Gate": "PASS",
+    "Research Gate": "PASS",
+    "Content Gate": "PASS",
+    "FactCheck Gate": "PASS",
+    "Image Gate": "PASS",
+    "Local Render Gate": "PASS",
+    "Release Browser Verification": "PASS",
+    "Deploy Gate": "PASS",
+    "Browser Deploy Gate": "PASS",
+    "GSC Gate": "PASS"
+  },
+  "deploy": {
+    "status": "PASS",
+    "commitSha": "e3986fe",
+    "branch": "moony01/mearrow-news-20261006",
+    "pushed": true,
+    "method": "direct_workers_production_deploy_after_explicit_user_authorization",
+    "attempts": 2,
+    "firstAttempt": "FAIL_ACCOUNT_SELECTION",
+    "cloudflareProductionSha": "278aadfa-6ec4-4762-b0cc-f2c55bebaabc",
+    "workerUrl": "https://mearrow-web.mun01180.workers.dev",
+    "productionUrl": "https://mearrow.com/en/news/top-nana-dating-confirmed",
+    "productionChecks": {
+      "pageStatus": 200,
+      "newsListStatus": 200,
+      "sitemapStatus": 200,
+      "robotsStatus": 200,
+      "thumbnailStatus": 200,
+      "articleImageStatus": 200,
+      "canonical": "https://mearrow.com/en/news/top-nana-dating-confirmed",
+      "articleTextLength": 8491,
+      "browserConsoleApplicationErrors": 0,
+      "horizontalOverflow": false
+    }
+  },
+  "gsc": {
+    "status": "PASS",
+    "property": "sc-domain:mearrow.com",
+    "requestedUrls": ["https://mearrow.com/en/news/top-nana-dating-confirmed"],
+    "inspectionStatusBeforeRequest": "URL이 Google에 등록되어 있지 않음",
+    "requestResult": "색인 생성 요청됨",
+    "queueMessage": "URL이 우선순위 크롤링 대기열에 추가되었습니다.",
+    "requestedAt": "2026-10-06T16:42:07+09:00",
+    "indexingCompleted": false,
+    "note": "Search Console confirmed the crawl request; actual indexing may complete later."
+  },
+  "retries": {"research": 0, "image": 0, "browser": 5, "deploy": 1, "gsc": 0},
+  "lastError": null
+}
