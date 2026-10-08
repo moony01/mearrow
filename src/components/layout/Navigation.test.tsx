@@ -54,6 +54,7 @@ vi.mock('@/hooks/useAuth', () => ({
 const messages = {
   Nav: {
     home: '홈',
+    ai: 'AI',
     ranking: '랭킹',
     vote: '투표',
     upload: '업로드',
@@ -93,6 +94,7 @@ describe('Navigation Components', () => {
     expect(screen.queryByRole('button', { name: '탐색' })).toBeNull();
     expect(screen.queryByRole('button', { name: '콘텐츠' })).toBeNull();
     expect(screen.getByText('홈')).toBeDefined();
+    expect(screen.getByRole('link', { name: 'AI' }).getAttribute('href')).toBe('/ko/ai');
     expect(screen.getByText('명예의 전당')).toBeDefined();
     expect(screen.getByRole('link', { name: '뉴스' })).toBeDefined();
     expect(screen.getByRole('link', { name: '오디션' })).toBeDefined();
@@ -164,6 +166,7 @@ describe('Navigation Components', () => {
     fireEvent.click(screen.getByRole('button', { name: '더보기' }));
 
     expect(screen.getByRole('dialog', { name: '더보기' })).toBeDefined();
+    expect(screen.getByRole('link', { name: 'AI' }).getAttribute('href')).toBe('/ko/ai');
     expect(screen.getByRole('link', { name: '명예의 전당' }).getAttribute('href')).toBe('/ko/hall-of-fame');
     expect(screen.getByRole('link', { name: '오디션' }).getAttribute('href')).toBe('/ko/auditions');
 

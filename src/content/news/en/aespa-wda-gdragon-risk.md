@@ -4,7 +4,7 @@ excerpt: "aespa WDA drops May 11 with G-Dragon, turning LEMONADE's comeback roll
 date: '2026-05-11'
 category: 'Tech & Culture'
 thumbnail: '/images/news/aespa-wda-gdragon-risk-thumbnail.webp'
-active: true
+active: false
 ---
 
 `aespa WDA` arrives on May 11 at 6 p.m. KST, but the pre-release single is no longer moving like a normal warm-up. Once G-Dragon's feature surfaced through KBS music video review results and was then carried by Korean entertainment media, the song became something sharper than a comeback checkpoint. It became a pressure test for how much risk SM Entertainment can attach to the `LEMONADE` era before the album itself lands on May 29. The question is not whether a G-Dragon feature can create attention. It obviously can. The harder question is whether that attention now helps aespa dominate the month or drags the group into someone else's public-image storm. [Related: aespa already linked LEMONADE to a 25-region tour](/en/news/aespa-lemonade-tour)

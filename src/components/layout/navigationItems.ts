@@ -4,6 +4,7 @@ import {
   Home,
   ListOrdered,
   Newspaper,
+  Sparkles,
   Trophy,
   Upload,
   UserRound,
@@ -34,6 +35,7 @@ export const MOBILE_NAV_ITEMS: readonly MobileNavigationItem[] = [
 
 export type PrimaryNavigationLabelKey =
   | 'home'
+  | 'ai'
   | 'ranking'
   | 'hall_of_fame'
   | 'news'
@@ -56,6 +58,7 @@ export type PrimaryNavigationItem = {
  */
 export const PRIMARY_NAV_ITEMS: readonly PrimaryNavigationItem[] = [
   { id: 'home', labelKey: 'home', path: '/', icon: Home },
+  { id: 'ai', labelKey: 'ai', path: '/ai', icon: Sparkles },
   { id: 'ranking', labelKey: 'ranking', path: '/ranking', icon: ListOrdered },
   {
     id: 'hall_of_fame',

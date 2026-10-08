@@ -34,14 +34,14 @@ export default function AppShell({ children }: AppShellProps) {
       </div>
 
       {/* Main Content Area */}
-      <main className={styles.mainContent}>
+      <main className={styles.mainContent} data-testid="app-main-content">
         <Header />
 
         {/* Page Content */}
-        <div className={styles.contentInner}>{children}</div>
+        <div className={styles.contentInner} data-testid="app-content-inner">{children}</div>
 
         {/* Legal Footer with Disclaimer Banner */}
-        <footer className={styles.legalFooter}>
+        <footer className={styles.legalFooter} data-testid="app-legal-footer">
           <DisclaimerBanner />
         </footer>
       </main>

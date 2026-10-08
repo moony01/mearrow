@@ -4,7 +4,7 @@ excerpt: "MEOVV comeback teasers dropped on May 8 with 'AWAKENING' and 'ready to
 date: '2026-05-08'
 category: 'Artist'
 thumbnail: '/images/news/meovv-awakening-test-thumbnail.webp'
-active: true
+active: false
 ---
 
 `MEOVV comeback` speculation did not need a date to start moving. It only needed a few words: `AWAKENING`, `ready to strike`, `Instinct gauge`, and `One bite at the apple`. On May 8, those phrases began spreading through MEOVV's social channels and fan communities, attached to cryptic images and short clips that looked more like a coded threat than a standard comeback notice. That is exactly why the rollout works. It gives fans enough to decode, but not enough to settle. [Related: THE BLACK LABEL's board reset raised the same question fans keep asking about artist schedules](/en/news/black-label-yg-board)

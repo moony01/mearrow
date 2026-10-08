@@ -4,7 +4,7 @@ excerpt: 'The 3 year 9 month wait is over. At 1PM KST on March 20, 2026, BTS''s 
 date: '2026-03-20'
 category: 'Artist'
 thumbnail: '/images/news/bts-arirang-release-day-swim-gwanghwamun-concert-2026-thumbnail.webp'
-active: true
+active: false
 ---
 
 March 20, 2026. 1:00 PM KST. Three years and nine months of waiting — over.

@@ -4,7 +4,7 @@ excerpt: "Lisa World Cup stage at SoFi puts BLACKPINK's solo star beside Katy Pe
 date: '2026-05-11'
 category: 'Market Trend'
 thumbnail: '/images/news/lisa-world-cup-stage-thumbnail.webp'
-active: true
+active: false
 ---
 
 `Lisa World Cup` is not a normal booking rumor anymore. It is the kind of crossover that forces K-pop to leave its usual scoreboard and walk into a much larger one: football, national broadcast windows, host-country ceremony politics, and a stadium audience that did not buy a ticket for an idol concert. AP reported that FIFA announced entertainment for the first matches in all three 2026 host nations, with Lisa included in the United States ceremony at SoFi Stadium. That turns one short Los Angeles stage into a bigger question. If a BLACKPINK soloist can enter the World Cup's opening frame beside Katy Perry, Future, Anitta, Rema, Tyla, and Sanjoy, is K-pop still chasing global pop visibility, or has it become part of the machinery that produces it? [Related: Lisa's Vegas residency already changed the U.S. business model](/en/news/lisa-vegas-residency)

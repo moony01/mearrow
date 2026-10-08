@@ -4,7 +4,7 @@ excerpt: '500 wristbands were stolen at BTS’s Goyang show. The bigger story is
 date: '2026-04-26'
 category: 'Industry'
 thumbnail: '/images/news/bts-wristband-theft-thumbnail.webp'
-active: true
+active: false
 ---
 
 At 3:20 p.m. on April 11, the biggest problem around BTS's Goyang concert was suddenly not the weather, the set list, or the resale market. It was the wristband.

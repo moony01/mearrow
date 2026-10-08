@@ -17,6 +17,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.90.1
         version: 2.90.1
+      '@tosspayments/tosspayments-sdk':
+        specifier: 2.9.0
+        version: 2.9.0
       '@types/canvas-confetti':
         specifier: ^1.9.0
         version: 1.9.0
@@ -2078,6 +2081,9 @@ packages:
         optional: true
       '@types/react-dom':
         optional: true
+
+  '@tosspayments/tosspayments-sdk@2.9.0':
+    resolution: {integrity: sha512-/gyBo9cQSYwNGFcbJwXbEfIdebPvQwoTeXbzSrT+7u3C8VcaWxfNt9LnT6YiZhwmrTbg3/SuV9i5ji7pJsSw7w==}
 
   '@tsconfig/node18@1.0.3':
     resolution: {integrity: sha512-RbwvSJQsuN9TB04AQbGULYfOGE/RnSFk/FLQ5b0NmDf5Kx2q/lABZbHQPKCO1vZ6Fiwkplu+yb9pGdLy1iGseQ==}
@@ -6952,6 +6958,8 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.7
       '@types/react-dom': 19.2.3(@types/react@19.2.7)
+
+  '@tosspayments/tosspayments-sdk@2.9.0': {}
 
   '@tsconfig/node18@1.0.3': {}
 

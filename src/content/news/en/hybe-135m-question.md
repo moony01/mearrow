@@ -4,7 +4,7 @@ excerpt: "Bang Si-hyuk's warrant was rejected, but HYBE's investor-fraud probe n
 date: '2026-05-04'
 category: 'Industry'
 thumbnail: '/images/news/hybe-135m-question-thumbnail.webp'
-active: true
+active: false
 ---
 
 `Bang Si-hyuk warrant` is the kind of phrase HYBE never wanted sitting next to a BTS comeback cycle. Yet that is where the company now is. Prosecutors have rejected the police request to arrest HYBE's chairman, but the rejection did not erase the investigation. It only changed the shape of the story: Bang avoided immediate detention, while the market, fans and regulators are still left with a much larger question about how one of K-pop's most valuable companies handled its pre-IPO past. [Related: HYBE's Q1 red ink exposed the other side of BTS's comeback cycle](/en/news/hybe-q1-red-ink)

@@ -1,9 +1,3 @@
-# Public profile data is client-loaded, so every username can share the
-# statically generated profile shell while the browser URL remains readable.
-/ko/profile/* /ko/profile/__profile.html 200
-/en/profile/* /en/profile/__profile.html 200
-/ja/profile/* /ja/profile/__profile.html 200
-/zh/profile/* /zh/profile/__profile.html 200
-/es/profile/* /es/profile/__profile.html 200
-/fr/profile/* /fr/profile/__profile.html 200
-/de/profile/* /de/profile/__profile.html 200
+# Profile redirects are appended to the Pages export in scripts/postbuild.mjs.
+# Keeping this source file free of those redirects lets Workers route dynamic
+# profile requests before the static asset resolver sees them.

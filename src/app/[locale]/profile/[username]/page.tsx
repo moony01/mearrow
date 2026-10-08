@@ -20,10 +20,14 @@ interface PublicProfilePageProps {
 /**
  * Public profiles are loaded from Supabase in the client. Pages needs one
  * concrete shell path because arbitrary database usernames are not known at
- * build time; Cloudflare rewrites arbitrary profile URLs to this shell while
- * Workers handles the dynamic route at request time.
+ * build time. Workers keeps the dynamic route server-rendered so every
+ * username can resolve at request time.
  */
 export function generateStaticParams() {
+  if (process.env.NEXT_RUNTIME_TARGET === 'workers') {
+    return [];
+  }
+
   return SUPPORTED_LOCALES.map((locale) => ({
     locale,
     username: PUBLIC_PROFILE_STATIC_SHELL_USERNAME,

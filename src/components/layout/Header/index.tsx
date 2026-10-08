@@ -10,7 +10,7 @@
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { CalendarSearch, Menu, Settings, Trophy, X } from 'lucide-react';
+import { CalendarSearch, Menu, Settings, Sparkles, Trophy, X } from 'lucide-react';
 import styles from './Header.module.scss';
 import { BRAND_KOREAN_NAME, BRAND_NAME, BRAND_MARK_PATH } from '@/lib/brand';
 
@@ -37,6 +37,11 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const drawerItems = [
+    {
+      href: `/${locale}/ai`,
+      label: t('ai'),
+      Icon: Sparkles,
+    },
     {
       href: `/${locale}/hall-of-fame`,
       label: t('hall_of_fame'),

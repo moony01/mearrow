@@ -1223,7 +1223,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/aespa-wda-gdragon-risk-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "lisa-world-cup-stage",
@@ -1235,7 +1236,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/lisa-world-cup-stage-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "shinee-atmos-weather",
@@ -1295,7 +1297,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/meovv-awakening-test-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "the-scout-reboot",
@@ -1331,7 +1334,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/mamamoo-4ward-return-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "sm-q1-money-machine",
@@ -1451,7 +1455,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/hybe-135m-question-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "bts-tampa-190k",
@@ -1612,7 +1617,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/bts-wristband-theft-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "bang-hybe-fraud-probe",
@@ -1825,7 +1831,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry",
     "thumbnail": "/images/news/katseye-wild-manon-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "bts-swim-100m",
@@ -2251,7 +2258,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Artist",
     "thumbnail": "/images/news/bts-arirang-release-day-swim-gwanghwamun-concert-2026-thumbnail.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "hearts2hearts-triple-crown-rude-incheon-airport-security-2026",

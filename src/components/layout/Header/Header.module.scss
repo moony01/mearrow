@@ -29,7 +29,6 @@
     padding: 10px 0;
     background-color: color-mix(in srgb, var(--color-surface) 94%, transparent);
     box-shadow: 0 1px 12px color-mix(in srgb, var(--color-text) 5%, transparent);
-    display: none;
   }
 }
 
@@ -94,7 +93,7 @@
 .controls {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   margin-left: auto; // 항상 우측 정렬
 }
 
@@ -346,6 +345,12 @@
   }
 }
 
+.menuButton {
+  @media (min-width: 1264px) {
+    display: none;
+  }
+}
+
 .drawerLayer {
   position: fixed;
   inset: 0;
@@ -435,11 +440,9 @@
     padding-inline: 12px;
   }
 
-  .langSelect {
-    width: 88px;
-    max-width: 88px;
-    padding-inline: 7px;
-    font-size: 0.7rem;
+  .settingsLink {
+    padding-inline: 10px;
+    font-size: 0.78rem;
   }
 }
 
@@ -448,8 +451,12 @@
     display: none;
   }
 
-  .langSelect {
-    width: 76px;
-    max-width: 76px;
+  .settingsLink span {
+    display: none;
+  }
+
+  .settingsLink {
+    width: 44px;
+    padding-inline: 0;
   }
 }

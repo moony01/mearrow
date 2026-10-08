@@ -45,6 +45,18 @@ export function getSafeReturnTo(
 ): string | null {
   if (!value) return null;
 
+  // Internal app routes are safe to preserve across OAuth. Keep this narrow
+  // to the Visual Match flow so arbitrary query values cannot become a
+  // general redirect mechanism.
+  if (
+    value.startsWith('/')
+    && !value.startsWith('//')
+    && !value.includes('\\')
+    && /^\/(ko|en|ja|zh|es|fr|de)\/ai\/visual-match(?:[/?#]|$)/.test(value)
+  ) {
+    return value;
+  }
+
   try {
     const target = new URL(value);
     const isKpopfacePath = target.pathname === '/kpopface' || target.pathname.startsWith('/kpopface/');
