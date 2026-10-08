@@ -73,7 +73,7 @@ The speech was cut off at the moment EJAE was about to address Korea directly. W
 
 Recognition and respect are not the same thing. K-pop now clearly has the first. Whether the second fully follows is the question the next decade will answer. The awards are a confirmed result; the intent behind the shortened speech remains an interpretation, so those two claims should not be reported as if they have the same evidentiary status.
 
-[Related: 'KPop Demon Hunters' Grammy Win — K-Pop's First Grammy Trophy and What It Means](//news/kpop-demon-hunters-grammy-first-win)
+[Related: 'KPop Demon Hunters' Grammy Win — K-Pop's First Grammy Trophy and What It Means](/studio/news/kpop-demon-hunters-grammy-first-win)
 
 ## Sources
 

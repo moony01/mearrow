@@ -1,12 +1,10 @@
 /**
  * 뉴스 목록 페이지 OG 이미지 동적 생성
- * Next.js ImageResponse를 사용하여 한국어 기본 OG 이미지를 생성합니다.
+ * Next.js ImageResponse를 사용하여 언어별 OG 이미지 생성
  */
 import { ImageResponse } from 'next/og';
-import { SITE_URL, type SupportedLocale } from '@/lib/constants';
+import { SITE_URL } from '@/lib/constants';
 import { BRAND_NAME, BRAND_TAGLINE } from '@/lib/brand';
-
-export const dynamic = 'force-static';
 
 /** OG 이미지 크기 설정 (권장 사이즈) */
 export const size = {
@@ -18,36 +16,12 @@ export const contentType = 'image/png';
 
 const SITE_HOST = SITE_URL.replace(/^https?:\/\//, '').replace(/\/+$/, '');
 
-/** 언어별 타이틀 */
-const titles: Record<SupportedLocale, string> = {
-  ko: `${BRAND_NAME} 뉴스 & 인사이트`,
-  en: `${BRAND_NAME} News & Insights`,
-  ja: `${BRAND_NAME} ニュース & インサイト`,
-  zh: `${BRAND_NAME} 新闻与洞察`,
-  es: `${BRAND_NAME} Noticias e Insights`,
-  fr: `${BRAND_NAME} Actualités et Analyses`,
-  de: `${BRAND_NAME} Nachrichten & Insights`,
-};
-
-/** 언어별 부제목 */
-const subtitles: Record<SupportedLocale, string> = {
-  ko: 'K-Pop 산업 트렌드와 분석',
-  en: 'K-Pop Industry Trends & Analysis',
-  ja: 'K-Pop業界トレンドと分析',
-  zh: 'K-Pop行业趋势与分析',
-  es: 'Tendencias y Análisis de la Industria K-Pop',
-  fr: "Tendances et Analyses de l'Industrie K-Pop",
-  de: 'K-Pop Branchentrends & Analysen',
-};
-
 /**
  * OG 이미지 생성 함수
  */
 export default async function Image() {
-  const safeLocale: SupportedLocale = 'ko';
-
-  const title = titles[safeLocale];
-  const subtitle = subtitles[safeLocale];
+  const title = `${BRAND_NAME} News & Insights`;
+  const subtitle = 'K-Pop Industry Trends & Analysis';
 
   return new ImageResponse(
     (
@@ -124,7 +98,7 @@ export default async function Image() {
             fontWeight: 500,
           }}
         >
-          {`${SITE_HOST}/news · ${BRAND_TAGLINE}`}
+          {`${SITE_HOST}/studio/news · ${BRAND_TAGLINE}`}
         </div>
       </div>
     ),

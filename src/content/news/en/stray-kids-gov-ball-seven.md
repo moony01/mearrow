@@ -8,7 +8,7 @@ thumbnail: "/images/news/stray-kids-gov-ball-seven-thumbnail.webp"
 active: true
 ---
 
-`Stray Kids Governors Ball` was supposed to be a clean U.S. festival headline. Now it carries a second story before the group even reaches New York: Seungmin will not attend after JYP Entertainment confirmed a left ankle stress fracture, and Stray Kids will take the stage as seven. That changes the emotional weight of the June 6 local-time performance. A headliner slot is still a milestone. But the sharper question is whether K-pop's global live machine can protect an artist's body without making the stage feel smaller. [Related: RM's ankle injury turned a world-tour countdown into a risk test](//news/bts-rm-ankle-injury-world-tour-countdown-2026)
+`Stray Kids Governors Ball` was supposed to be a clean U.S. festival headline. Now it carries a second story before the group even reaches New York: Seungmin will not attend after JYP Entertainment confirmed a left ankle stress fracture, and Stray Kids will take the stage as seven. That changes the emotional weight of the June 6 local-time performance. A headliner slot is still a milestone. But the sharper question is whether K-pop's global live machine can protect an artist's body without making the stage feel smaller. [Related: RM's ankle injury turned a world-tour countdown into a risk test](/studio/news/bts-rm-ankle-injury-world-tour-countdown-2026)
 
 ## The Seven-Member Headline Changed The Countdown
 

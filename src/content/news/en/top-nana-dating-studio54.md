@@ -48,7 +48,7 @@ T.O.P debuted with BIGBANG in 2006, while Nana debuted with After School in 2009
 
 That shared background is a point of context, not a reason to assume the pair’s private lives were destined to intersect. Their agencies say they met through work. Their public careers explain why the news travels widely; they do not explain or prove anything beyond the statements.
 
-For readers following T.O.P’s recent solo chapter, MEARROW previously looked at how his “ANOTHER DIMENSION” release positioned him outside BIGBANG’s group activities ([related: T.O.P’s solo return and BIGBANG’s anniversary](/en/news/top-bigbang-solo-2026)). The new relationship news adds a personal development to that timeline, while leaving the music and group histories as separate stories.
+For readers following T.O.P’s recent solo chapter, MEARROW previously looked at how his “ANOTHER DIMENSION” release positioned him outside BIGBANG’s group activities ([related: T.O.P’s solo return and BIGBANG’s anniversary](/studio/news/top-bigbang-solo-2026)). The new relationship news adds a personal development to that timeline, while leaving the music and group histories as separate stories.
 
 ## How the public sees this revelation
 

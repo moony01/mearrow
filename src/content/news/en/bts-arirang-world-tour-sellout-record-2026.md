@@ -58,7 +58,7 @@ At the March 21 Gwanghwamun comeback concert, RM performed seated on a stool aft
 
 No official statement about tour schedule changes has been issued. ARMY is simultaneously praying for RM's recovery and watching the clock.
 
-[Related: RM Needs 2 Weeks in a Cast. The ARIRANG World Tour Starts in 18 Days.](//news/bts-rm-ankle-injury-world-tour-countdown-2026)
+[Related: RM Needs 2 Weeks in a Cast. The ARIRANG World Tour Starts in 18 Days.](/studio/news/bts-rm-ankle-injury-world-tour-countdown-2026)
 
 ## Most-Attended Tour by an Asian Act — Record Reclaimed
 

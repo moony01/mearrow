@@ -7,7 +7,7 @@ thumbnail: '/images/news/nct-wish-ode-sales-thumbnail.webp'
 active: true
 ---
 
-`NCT WISH Ode to Love` has moved past the polite language usually reserved for a young unit. The first full-length album did not simply sell well. It sold `1,825,925` copies in its first week, pushed the title track to a new Melon career high, and gave NCT WISH three straight public-broadcast music-show wins across KBS, MBC, and SBS. That combination changes the read. A group can be charming, bright, and junior in brand tone while still becoming one of SM Entertainment's most useful growth engines. The question now is not whether NCT WISH can be accepted as part of NCT. The question is whether SM has quietly found the cleanest bridge between NCT's legacy system and its next fan economy. [Related: NCT WISH and CORTIS targeted the same fandom wallets at 6 p.m.](//news/nct-wish-cortis-clash)
+`NCT WISH Ode to Love` has moved past the polite language usually reserved for a young unit. The first full-length album did not simply sell well. It sold `1,825,925` copies in its first week, pushed the title track to a new Melon career high, and gave NCT WISH three straight public-broadcast music-show wins across KBS, MBC, and SBS. That combination changes the read. A group can be charming, bright, and junior in brand tone while still becoming one of SM Entertainment's most useful growth engines. The question now is not whether NCT WISH can be accepted as part of NCT. The question is whether SM has quietly found the cleanest bridge between NCT's legacy system and its next fan economy. [Related: NCT WISH and CORTIS targeted the same fandom wallets at 6 p.m.](/studio/news/nct-wish-cortis-clash)
 
 ## NCT WISH Ode to Love Turned Into A Numbers Trap
 

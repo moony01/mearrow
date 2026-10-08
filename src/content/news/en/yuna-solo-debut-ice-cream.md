@@ -63,7 +63,7 @@ Yuna's 'Ice Cream' is distributed through Imperial and Republic Records — a gl
 
 This isn't simply a story of "different members, different music." After Yeji's AIR earned critical praise but couldn't crack the Billboard 200, JYP played the opposite card with Yuna. Bright, accessible pop sound. Multi-genre composition. Enhanced global distribution. The strategy is clear: compare market responses from both solos to find the optimal direction for ITZY's solo lineup.
 
-[Related: Stray Kids Announce Farewell Tour Ahead of Military Service — JYP's Clock Stops](//news/stray-kids-final-era-farewell-tour-jyp-2026)
+[Related: Stray Kids Announce Farewell Tour Ahead of Military Service — JYP's Clock Stops](/studio/news/stray-kids-final-era-farewell-tour-jyp-2026)
 
 At the same time, JYP's other flagship act Stray Kids announced a farewell tour ahead of military enlistment. JYP needs ITZY members' solo activities to fill the Stray Kids vacuum. The precise one-year spacing between Yeji and Yuna's solos reads clearly in this context.
 

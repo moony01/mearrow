@@ -87,7 +87,7 @@ As of 2026, comparing each company's flagship artists on domestic charts makes I
 
 IVE is the only active group in K-pop that can legitimately claim the title of "chart monster." No other group currently achieves PAK with every single release.
 
-[Related: HYBE × Spotify Form Unprecedented Alliance — 751M Users, Netflix, Weverse, and the Blueprint for K-pop's First Media Empire](//news/hybe-spotify-podcast-media-empire-2026)
+[Related: HYBE × Spotify Form Unprecedented Alliance — 751M Users, Netflix, Weverse, and the Blueprint for K-pop's First Media Empire](/studio/news/hybe-spotify-podcast-media-empire-2026)
 
 ## BTS vs IVE — Fandom Power vs Mainstream Appeal
 

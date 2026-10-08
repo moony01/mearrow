@@ -7,7 +7,7 @@ thumbnail: '/images/news/may-girlgroup-market-war-thumbnail.webp'
 active: true
 ---
 
-`Four comebacks in 26 days` is not a normal calendar quirk. It is the clearest sign yet that `May 2026 K-pop comebacks` have stopped behaving like isolated release events and started functioning like a coordinated market stress test. `BABYMONSTER` is set for `May 4`, `NMIXX` for `May 11`, `LE SSERAFIM` for `May 22`, and `aespa` for `May 29`. Put those dates next to each other and the question changes immediately. This is no longer only about which song wins the fastest headline. It is about which label can turn one month of attention into the longest runway for summer. [Related: BABYMONSTER's 'CHOOM' Lands May 4 — And YG Is Already Betting a World Tour on It](//news/babymonster-choom-comeback)
+`Four comebacks in 26 days` is not a normal calendar quirk. It is the clearest sign yet that `May 2026 K-pop comebacks` have stopped behaving like isolated release events and started functioning like a coordinated market stress test. `BABYMONSTER` is set for `May 4`, `NMIXX` for `May 11`, `LE SSERAFIM` for `May 22`, and `aespa` for `May 29`. Put those dates next to each other and the question changes immediately. This is no longer only about which song wins the fastest headline. It is about which label can turn one month of attention into the longest runway for summer. [Related: BABYMONSTER's 'CHOOM' Lands May 4 — And YG Is Already Betting a World Tour on It](/studio/news/babymonster-choom-comeback)
 
 ## May 2026 K-pop Comebacks Became One Story
 

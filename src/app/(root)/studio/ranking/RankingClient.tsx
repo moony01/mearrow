@@ -4,7 +4,7 @@ import type { CompaniesResponse } from '@/types/api';
 
 // Keep the existing vote/ranking implementation intact while moving it off
 // the community-first home route.
-import { HomeClient } from '../HomeClient';
+import { HomeClient } from '../../../[locale]/HomeClient';
 
 export default function RankingClient({
   initialData,

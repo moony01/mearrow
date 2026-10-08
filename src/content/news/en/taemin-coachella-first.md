@@ -7,7 +7,7 @@ thumbnail: '/images/news/taemin-coachella-first-thumbnail.webp'
 active: true
 ---
 
-The screenshot fans kept reposting after Coachella weekend one was not the final bow. It was the opening sequence and the unreleased-song clips spreading fast across U.S. X timelines and short-form feeds. Taemin making the lineup was already historic, but the real hook is what happened after the set ended: the conversation moved from "first appearance" to "new standard." That is why `Taemin Coachella` reads as more than a milestone headline. It looks like proof that a male K-pop solo performance can now operate inside a major U.S. festival's core grammar, not just on the edge of it. [Related: Why Coachella 2026 Became a K-pop takeover](//news/coachella-2026-kpop-takeover)
+The screenshot fans kept reposting after Coachella weekend one was not the final bow. It was the opening sequence and the unreleased-song clips spreading fast across U.S. X timelines and short-form feeds. Taemin making the lineup was already historic, but the real hook is what happened after the set ended: the conversation moved from "first appearance" to "new standard." That is why `Taemin Coachella` reads as more than a milestone headline. It looks like proof that a male K-pop solo performance can now operate inside a major U.S. festival's core grammar, not just on the edge of it. [Related: Why Coachella 2026 Became a K-pop takeover](/studio/news/coachella-2026-kpop-takeover)
 
 ## Why the "first" slot suddenly feels so expensive
 

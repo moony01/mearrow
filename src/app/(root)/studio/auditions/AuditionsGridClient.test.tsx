@@ -59,7 +59,7 @@ describe('AuditionsGridClient pagination', () => {
     expect(screen.getAllByRole('article')).toHaveLength(1);
     expect(screen.getByRole('heading', { name: 'Audition 7' })).toBeDefined();
     expect(screen.getByRole('link', { name: 'Audition 7' }).getAttribute('href')).toBe(
-      '/auditions/audition-7',
+      '/ko/auditions/audition-7',
     );
     expect(screen.getByText('마감 임박')).toBeDefined();
     expect(document.querySelector('time')?.getAttribute('datetime')).toBe('2026-12-31');

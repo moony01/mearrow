@@ -7,7 +7,7 @@ thumbnail: '/images/news/meovv-awakening-test-thumbnail.webp'
 active: true
 ---
 
-`MEOVV comeback` speculation did not need a date to start moving. It only needed a few words: `AWAKENING`, `ready to strike`, `Instinct gauge`, and `One bite at the apple`. On May 8, those phrases began spreading through MEOVV's social channels and fan communities, attached to cryptic images and short clips that looked more like a coded threat than a standard comeback notice. That is exactly why the rollout works. It gives fans enough to decode, but not enough to settle. [Related: THE BLACK LABEL's board reset raised the same question fans keep asking about artist schedules](//news/black-label-yg-board)
+`MEOVV comeback` speculation did not need a date to start moving. It only needed a few words: `AWAKENING`, `ready to strike`, `Instinct gauge`, and `One bite at the apple`. On May 8, those phrases began spreading through MEOVV's social channels and fan communities, attached to cryptic images and short clips that looked more like a coded threat than a standard comeback notice. That is exactly why the rollout works. It gives fans enough to decode, but not enough to settle. [Related: THE BLACK LABEL's board reset raised the same question fans keep asking about artist schedules](/studio/news/black-label-yg-board)
 
 The obvious question is whether MEOVV is coming back. The sharper question is whether THE BLACK LABEL can turn this kind of mystery into a full campaign before the market gets impatient again. In 2026, a teaser is no longer just a teaser. It is a promise that attention will be paid back with music, timing, and a reason to keep watching.
 

@@ -54,4 +54,4 @@ Can K-pop continue to be sold as an authentically Korean cultural export if Kore
 
 The agencies aren't wrong to follow the money. Markets exist to be served. But the moment K-pop loses its identity as Korean music — not just music that happens to come from Korea — the meaning that global fans attach to it may shift in ways that are difficult to predict or reverse. Right now, K-pop is running an experiment: how far can you grow without your roots? The answer isn't in yet.
 
-[Related: HYBE's Record Revenue Masks a 73% Profit Plunge](//news/hybe-record-revenue-profit-plunge-73)
+[Related: HYBE's Record Revenue Masks a 73% Profit Plunge](/studio/news/hybe-record-revenue-profit-plunge-73)

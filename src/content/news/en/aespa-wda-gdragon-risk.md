@@ -7,7 +7,7 @@ thumbnail: '/images/news/aespa-wda-gdragon-risk-thumbnail.webp'
 active: true
 ---
 
-`aespa WDA` arrives on May 11 at 6 p.m. KST, but the pre-release single is no longer moving like a normal warm-up. Once G-Dragon's feature surfaced through KBS music video review results and was then carried by Korean entertainment media, the song became something sharper than a comeback checkpoint. It became a pressure test for how much risk SM Entertainment can attach to the `LEMONADE` era before the album itself lands on May 29. The question is not whether a G-Dragon feature can create attention. It obviously can. The harder question is whether that attention now helps aespa dominate the month or drags the group into someone else's public-image storm. [Related: aespa already linked LEMONADE to a 25-region tour](//news/aespa-lemonade-tour)
+`aespa WDA` arrives on May 11 at 6 p.m. KST, but the pre-release single is no longer moving like a normal warm-up. Once G-Dragon's feature surfaced through KBS music video review results and was then carried by Korean entertainment media, the song became something sharper than a comeback checkpoint. It became a pressure test for how much risk SM Entertainment can attach to the `LEMONADE` era before the album itself lands on May 29. The question is not whether a G-Dragon feature can create attention. It obviously can. The harder question is whether that attention now helps aespa dominate the month or drags the group into someone else's public-image storm. [Related: aespa already linked LEMONADE to a 25-region tour](/studio/news/aespa-lemonade-tour)
 
 ## aespa WDA Changed Shape Before Release Day
 
@@ -46,7 +46,7 @@ _A symbolic release-day crowd captures how `WDA` turns anticipation into argumen
 
 Controversy does not automatically damage a release in K-pop. Sometimes it creates the exact compression that makes a song impossible to ignore. The `WDA` discussion now has multiple entry points: aespa's second full album, G-Dragon's feature, the KBS review reveal, the darker teaser concept, and the larger May girl-group battlefield. Each angle gives fans a different reason to post, defend, criticize, stream, or compare.
 
-That is why the collaboration is commercially potent even before the song is heard. It gives aespa a headline that is not only "new single today." It gives the release a conflict structure. Supporters can frame it as a generational bridge. Critics can frame it as questionable timing. Casual listeners can click because the pairing feels too strange to ignore. In a crowded comeback month, strange is sometimes more valuable than safe. [Related: May's girl-group comeback war is already stretching fan budgets](//news/may-girlgroup-market-war)
+That is why the collaboration is commercially potent even before the song is heard. It gives aespa a headline that is not only "new single today." It gives the release a conflict structure. Supporters can frame it as a generational bridge. Critics can frame it as questionable timing. Casual listeners can click because the pairing feels too strange to ignore. In a crowded comeback month, strange is sometimes more valuable than safe. [Related: May's girl-group comeback war is already stretching fan budgets](/studio/news/may-girlgroup-market-war)
 
 ### But argument traffic is harder to control than teaser traffic
 

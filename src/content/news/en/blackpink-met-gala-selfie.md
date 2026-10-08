@@ -7,7 +7,7 @@ thumbnail: '/images/news/blackpink-met-gala-selfie-thumbnail.webp'
 active: true
 ---
 
-`BLACKPINK Met Gala` coverage should have been easy to split into four solo fashion stories. Jisoo had her long-awaited debut. Jennie, Rosé, and Lisa each arrived with their own luxury orbit. The event took place on May 4, 2026, at the Metropolitan Museum of Art in New York, where the year's art-and-costume framing made every look a cultural argument. Then one image changed the reading. Inside the gala, the four members appeared together in a mirror-style moment, and the internet treated it less like a cute party photo than proof that BLACKPINK's group gravity still overrides everything around them. [Related: BLACKPINK's Hot 100 record made the comeback bigger than one song](//news/blackpink-go-billboard-hot100-11th-entry-record-2026)
+`BLACKPINK Met Gala` coverage should have been easy to split into four solo fashion stories. Jisoo had her long-awaited debut. Jennie, Rosé, and Lisa each arrived with their own luxury orbit. The event took place on May 4, 2026, at the Metropolitan Museum of Art in New York, where the year's art-and-costume framing made every look a cultural argument. Then one image changed the reading. Inside the gala, the four members appeared together in a mirror-style moment, and the internet treated it less like a cute party photo than proof that BLACKPINK's group gravity still overrides everything around them. [Related: BLACKPINK's Hot 100 record made the comeback bigger than one song](/studio/news/blackpink-go-billboard-hot100-11th-entry-record-2026)
 
 ## BLACKPINK Met Gala Became A Group Story Anyway
 

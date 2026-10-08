@@ -8,7 +8,7 @@ thumbnail: "/images/news/mamamoo-4ward-comeback-thumbnail.webp"
 active: true
 ---
 
-`MAMAMOO 4WARD` could have been filed as another reunion headline: respected vocal group returns, fans celebrate, tour dates follow. The more interesting story is sharper. MAMAMOO are trying to turn a long recording gap into a controlled second-act reset, and the first signal is not nostalgia. It is a title track called `4 Flowers`, a special single album landing June 4, and a tour calendar designed to prove that the quartet still moves as one. [Related: BLACKPINK's comeback turned a long gap into a YG capacity test](//news/blackpink-deadline-ep-record-sales-yg-2026)
+`MAMAMOO 4WARD` could have been filed as another reunion headline: respected vocal group returns, fans celebrate, tour dates follow. The more interesting story is sharper. MAMAMOO are trying to turn a long recording gap into a controlled second-act reset, and the first signal is not nostalgia. It is a title track called `4 Flowers`, a special single album landing June 4, and a tour calendar designed to prove that the quartet still moves as one. [Related: BLACKPINK's comeback turned a long gap into a YG capacity test](/studio/news/blackpink-deadline-ep-record-sales-yg-2026)
 
 ## The Teaser Sells Warmth, Not Shock
 

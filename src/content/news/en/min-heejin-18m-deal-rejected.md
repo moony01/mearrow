@@ -72,4 +72,4 @@ Watch what Ooak Records does next. If Min Hee-jin can prove that "Min Hee-jin mu
 
 ---
 
-[Related: The HYBE vs Min Hee-jin Put Option Ruling — What $18M Really Means](//news/min-heejin-hybe-put-option-255b-ruling)
+[Related: The HYBE vs Min Hee-jin Put Option Ruling — What $18M Really Means](/studio/news/min-heejin-hybe-put-option-255b-ruling)

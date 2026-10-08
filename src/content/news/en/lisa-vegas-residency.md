@@ -40,7 +40,7 @@ Las Vegas residencies have long felt like a home field for Western legacy and su
 
 ### That is why this story connects to BLACKPINK's broader business shift too
 
-This move also makes more sense when you place it next to the group's wider strategic evolution. As MEARROW argued in [Related: BLACKPINK Just Dropped Interscope — Why 'Deadline' Could Reshape K-pop's Global Playbook](//news/blackpink-deadline-interscope-independence), the BLACKPINK story in 2026 is no longer only about new music. It is also about choosing distribution structures and performance formats more deliberately. Lisa's Vegas residency fits that same pattern. The question is no longer just how far K-pop can go in America. It is how much more precisely that reach can be monetized.
+This move also makes more sense when you place it next to the group's wider strategic evolution. As MEARROW argued in [Related: BLACKPINK Just Dropped Interscope — Why 'Deadline' Could Reshape K-pop's Global Playbook](/studio/news/blackpink-deadline-interscope-independence), the BLACKPINK story in 2026 is no longer only about new music. It is also about choosing distribution structures and performance formats more deliberately. Lisa's Vegas residency fits that same pattern. The question is no longer just how far K-pop can go in America. It is how much more precisely that reach can be monetized.
 
 ## The MEARROW View on Lisa Las Vegas residency
 

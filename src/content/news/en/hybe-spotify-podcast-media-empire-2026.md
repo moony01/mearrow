@@ -94,7 +94,7 @@ SM's Bubble is a 1:1 messaging service — closer to a value-add feature than a 
 
 This gap doesn't close quickly. It took years to build Weverse and additional years to reach profitability. Even if SM, JYP, or YG started today, the infrastructure gap represents a 3–5 year head start.
 
-[Related: BLACKPINK's 'Deadline' Shatters Every Record — 1.77M First-Week Sales Marks the Biggest Girl Group Album in K-pop History](//news/blackpink-deadline-ep-record-sales-yg-2026)
+[Related: BLACKPINK's 'Deadline' Shatters Every Record — 1.77M First-Week Sales Marks the Biggest Girl Group Album in K-pop History](/studio/news/blackpink-deadline-ep-record-sales-yg-2026)
 
 ## HYBE's 2026 Media Roadmap
 

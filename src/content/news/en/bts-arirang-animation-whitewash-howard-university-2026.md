@@ -71,4 +71,4 @@ HYBE's silence makes it worse. A prompt acknowledgment — even a partial one �
 
 Whether this becomes a sustained controversy or fades in the news cycle depends largely on whether HYBE responds. But what it has already revealed is a familiar pattern: K-pop reaching into Black cultural spaces for historical weight and artistic credibility, while failing to hold that history with the care it demands.
 
-[Related: Caught Between China and Japan — 120,000 Petitioned to Remove a K-Pop Member for Being Chinese](//news/kpop-china-japan-ningning-geopolitical-war-2026)
+[Related: Caught Between China and Japan — 120,000 Petitioned to Remove a K-Pop Member for Being Chinese](/studio/news/kpop-china-japan-ningning-geopolitical-war-2026)

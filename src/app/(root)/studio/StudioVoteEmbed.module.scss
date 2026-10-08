@@ -1,0 +1,31 @@
+.embedWrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.embedFrame {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  transition: height 0.2s ease;
+}
+
+.embedWrapper noscript {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.embedWrapper noscript a {
+  color: #315cff;
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embedFrame {
+    transition: none;
+  }
+}

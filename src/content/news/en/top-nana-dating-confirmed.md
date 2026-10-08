@@ -58,7 +58,7 @@ That is powerful for attention, but it is also where editorial discipline matter
 
 The business lesson is quieter. In a fandom economy built on access, a private relationship can become a public event before the people involved are ready to narrate it. Nana’s short Bubble message worked because it acknowledged the surprise without turning the announcement into a full-time content stream. T.O.P’s wider comeback story will be stronger if the work remains the center of gravity and the relationship is allowed to exist beside it.
 
-For the broader BIGBANG context, this also adds another layer to the group’s anniversary year. [Related: BIGBANG’s 20th-anniversary world tour is turning legacy into a live test](//news/yg-bigbang-20th-anniversary-world-tour-2026). T.O.P is no longer only being discussed through the group he left or the controversies that followed him. He is building a solo chapter, and Nana is now part of the public beginning of that chapter.
+For the broader BIGBANG context, this also adds another layer to the group’s anniversary year. [Related: BIGBANG’s 20th-anniversary world tour is turning legacy into a live test](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026). T.O.P is no longer only being discussed through the group he left or the controversies that followed him. He is building a solo chapter, and Nana is now part of the public beginning of that chapter.
 
 ## The takeaway
 

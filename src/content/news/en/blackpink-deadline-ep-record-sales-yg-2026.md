@@ -73,7 +73,7 @@ All five tracks landing in the Global Top 40 is exceptional for any girl group.
 
 When the 2023 re-signing was announced, the dominant industry narrative was that "group activities are effectively over." Each member establishing their own label and focusing on solo careers led many analysts to conclude that a BLACKPINK group comeback was nearly impossible. 'Deadline' obliterated that prediction.
 
-[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](//news/yg-bigbang-20th-anniversary-world-tour-2026)
+[Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## YG Entertainment — Where They Stand in MEARROW
 

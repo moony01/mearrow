@@ -7,7 +7,7 @@ thumbnail: '/images/news/bts-arirang-streaming-record-thumbnail.webp'
 active: true
 ---
 
-The `BTS ARIRANG streaming record` is not another victory-lap statistic. It is a market signal. According to fan-tracker compilations circulating across K-pop communities and a Los40 report on April 22, `ARIRANG` has moved past roughly 1.5 billion streams in its first month, with Reddit tracking posts placing the total at 1,581,853,766 Spotify streams. That number should be treated carefully because Spotify has not packaged it as an official press release. But the scale is no longer hard to read: BTS has turned a comeback album into a platform-wide pressure test. [Related: BTS already turned cities into part of the comeback machine](//news/bts-city-vegas-busan)
+The `BTS ARIRANG streaming record` is not another victory-lap statistic. It is a market signal. According to fan-tracker compilations circulating across K-pop communities and a Los40 report on April 22, `ARIRANG` has moved past roughly 1.5 billion streams in its first month, with Reddit tracking posts placing the total at 1,581,853,766 Spotify streams. That number should be treated carefully because Spotify has not packaged it as an official press release. But the scale is no longer hard to read: BTS has turned a comeback album into a platform-wide pressure test. [Related: BTS already turned cities into part of the comeback machine](/studio/news/bts-city-vegas-busan)
 
 ## The 1.58B number changed the frame
 

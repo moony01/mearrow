@@ -65,4 +65,4 @@ XG's first performances without Simon Jakops are scheduled for March in Japan. W
 
 The question fans are left with: **Was XG's soul Simon Jakops, or was it always the seven of them?**
 
-[Related: BTS Return — The Industry Impact K-pop Has Been Waiting For](//news/bts-march-2026-comeback-industry-impact)
+[Related: BTS Return — The Industry Impact K-pop Has Been Waiting For](/studio/news/bts-march-2026-comeback-industry-impact)

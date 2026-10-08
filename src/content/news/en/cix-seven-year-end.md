@@ -7,7 +7,7 @@ thumbnail: '/images/news/cix-seven-year-end-thumbnail.webp'
 active: true
 ---
 
-`CIX disbandment` landed like a contract notice at first. Then `Seunghun retirement` turned it into something heavier. The facts are direct enough: CIX will end group activities after seven years, the members' contracts are closing on different dates, and Yonghee is heading into military service. But the part fans kept replaying was not only the business timeline. It was Seunghun saying, through a handwritten letter, that he would set aside the title of singer and try to live away from the stage. In K-pop, where endings are often softened with "new chapter" language, that sounded unusually naked. [Related: YG's five-member September bet shows how agencies are rebuilding the rookie pipeline](//news/yg-boygroup-september-bet)
+`CIX disbandment` landed like a contract notice at first. Then `Seunghun retirement` turned it into something heavier. The facts are direct enough: CIX will end group activities after seven years, the members' contracts are closing on different dates, and Yonghee is heading into military service. But the part fans kept replaying was not only the business timeline. It was Seunghun saying, through a handwritten letter, that he would set aside the title of singer and try to live away from the stage. In K-pop, where endings are often softened with "new chapter" language, that sounded unusually naked. [Related: YG's five-member September bet shows how agencies are rebuilding the rookie pipeline](/studio/news/yg-boygroup-september-bet)
 
 ## The Seven-Year Wall Finally Caught CIX
 

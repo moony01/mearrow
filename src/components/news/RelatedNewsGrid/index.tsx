@@ -19,13 +19,18 @@ interface RelatedPost {
 interface RelatedNewsGridProps {
   posts: RelatedPost[];
   locale: string;
+  basePath?: string;
 }
 
 /**
  * 관련 뉴스 그리드 클라이언트 컴포넌트
  * 조회수와 댓글 수를 배치 조회하여 각 카드에 표시
  */
-export default function RelatedNewsGrid({ posts, locale }: RelatedNewsGridProps) {
+export default function RelatedNewsGrid({
+  posts,
+  locale,
+  basePath = '/studio/news',
+}: RelatedNewsGridProps) {
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [viewCounts, setViewCounts] = useState<Record<string, number>>({});
 
@@ -57,7 +62,7 @@ export default function RelatedNewsGrid({ posts, locale }: RelatedNewsGridProps)
       {posts.map((related) => (
         <Link
           key={related.slug}
-          href={`/news/${related.slug}`}
+          href={`${basePath}/${related.slug}`}
           className={styles.relatedCard}
         >
           <div className={styles.relatedImage}>

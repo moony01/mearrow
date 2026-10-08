@@ -7,7 +7,7 @@ thumbnail: '/images/news/babymonster-choom-comeback-thumbnail.webp'
 active: true
 ---
 
-`May 4` is not just another release date on the K-pop calendar. For `BABYMONSTER CHOOM`, it looks more like the moment YG Entertainment is trying to flip a whole quarter of momentum in one move. The group’s third mini album arrives with `four tracks`, a heavily staged visual rollout, a fan-participation event in Seoul, and a world tour opener that is already locked for late June. That is why this comeback matters. It is not being framed like a single-week chart play. It is being built like a multi-month relay. [Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan Revealed](//news/yg-bigbang-20th-anniversary-world-tour-2026)
+`May 4` is not just another release date on the K-pop calendar. For `BABYMONSTER CHOOM`, it looks more like the moment YG Entertainment is trying to flip a whole quarter of momentum in one move. The group’s third mini album arrives with `four tracks`, a heavily staged visual rollout, a fan-participation event in Seoul, and a world tour opener that is already locked for late June. That is why this comeback matters. It is not being framed like a single-week chart play. It is being built like a multi-month relay. [Related: BIGBANG Is Back — 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan Revealed](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## Why This Does Not Feel Like a Normal Comeback
 

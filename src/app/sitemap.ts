@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { FULL_URL } from '@/lib/constants';
-import { getAllActualAuditions } from '@/lib/auditions';
+import { getAllAuditions } from '@/lib/auditions';
 import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import { getPublishedAnnouncementIds } from '@/lib/api/announcements';
 
@@ -15,10 +15,11 @@ const STATIC_PAGES: Array<{
 }> = [
   { path: '/', priority: 1.0, changeFrequency: 'daily' },
   { path: '/hall-of-fame', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/news', priority: 0.8, changeFrequency: 'daily' },
-  { path: '/ranking', priority: 0.9, changeFrequency: 'daily' },
+  { path: '/studio', priority: 1.0, changeFrequency: 'daily' },
+  { path: '/studio/news', priority: 0.8, changeFrequency: 'daily' },
+  { path: '/studio/ranking', priority: 0.9, changeFrequency: 'daily' },
   { path: '/notice', priority: 0.5, changeFrequency: 'weekly' },
-  { path: '/auditions', priority: 0.9, changeFrequency: 'daily' },
+  { path: '/studio/auditions', priority: 0.9, changeFrequency: 'daily' },
   { path: '/about', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/editorial', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
@@ -37,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = getAllNews(NEWS_SOURCE_LOCALE);
     posts.forEach((post, index) => {
       entries.push({
-        url: `${FULL_URL}/news/${post.slug}`,
+        url: `${FULL_URL}/studio/news/${post.slug}`,
         lastModified: new Date(post.date),
         changeFrequency: index < RECENT_NEWS_COUNT ? 'weekly' : 'monthly',
         priority: index < RECENT_NEWS_COUNT ? 0.8 : 0.6,
@@ -47,15 +48,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.warn('[sitemap] No news found for the source locale.');
   }
 
-  const auditionPostsBySlug = new Map<string, ReturnType<typeof getAllActualAuditions>[number]>();
-  for (const post of getAllActualAuditions()) {
+  const auditionPostsBySlug = new Map<string, ReturnType<typeof getAllAuditions>[number]>();
+  for (const post of getAllAuditions('en')) {
     if (!auditionPostsBySlug.has(post.slug)) auditionPostsBySlug.set(post.slug, post);
   }
 
   for (const post of auditionPostsBySlug.values()) {
     const isActive = post.status !== 'closed';
     entries.push({
-      url: `${FULL_URL}/auditions/${post.slug}`,
+      url: `${FULL_URL}/studio/auditions/${post.slug}`,
       lastModified: new Date(post.updatedAt),
       changeFrequency: isActive ? 'daily' : 'monthly',
       priority: isActive ? 0.8 : 0.5,

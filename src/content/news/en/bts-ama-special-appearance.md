@@ -10,7 +10,7 @@ active: true
 
 `BTS AMA special appearance` is official, but the announcement is built around the one word it refuses to clarify. On May 20, the American Music Awards confirmed that BTS will make a special live appearance at the 52nd ceremony on May 25. That should be a clean comeback-era headline. Instead, it instantly became a fan investigation: appearance, attendance, presenting, surprise performance, or all of the above?
 
-That gap is exactly why the story is moving. BTS are already nominated in three categories, including `Artist of the Year`, `Song of the Summer` for `SWIM`, and `Best Male K-Pop Artist`. The ceremony is days away. The group is active again after its full-group return. The AMAs did not need to tease much to make fans react. It only needed to leave one door half open. [Related: BTS finally got the AMA slot K-pop rarely touches](//news/bts-ama-aoty)
+That gap is exactly why the story is moving. BTS are already nominated in three categories, including `Artist of the Year`, `Song of the Summer` for `SWIM`, and `Best Male K-Pop Artist`. The ceremony is days away. The group is active again after its full-group return. The AMAs did not need to tease much to make fans react. It only needed to leave one door half open. [Related: BTS finally got the AMA slot K-pop rarely touches](/studio/news/bts-ama-aoty)
 
 ## BTS AMA Special Appearance Turns One Phrase Into A Countdown
 

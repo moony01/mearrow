@@ -46,7 +46,7 @@ K-pop's structural logic is built around agency control — debuts, comebacks, h
 
 Whether it succeeds commercially is a different question. But the attempt itself matters. T.O.P is running a real-time experiment in whether a K-pop star can sustain an independent creative identity — and whether the audience will follow.
 
-[Related: Coachella 2026 — The Night K-pop Stood Next to Michael Jackson's Legacy](//news/coachella-2026-kpop-takeover)
+[Related: Coachella 2026 — The Night K-pop Stood Next to Michael Jackson's Legacy](/studio/news/coachella-2026-kpop-takeover)
 
 ## The Next Stage Is Open
 

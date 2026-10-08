@@ -33,7 +33,7 @@ The event also brought in first lady Kim Hea-kyung and South Korea's culture min
 
 ### An Indian idol is already part of the picture
 
-Korea JoongAng Daily reported that X:IN and YOUNITE performed at the event, and X:IN member Aria remains one of the clearest proof points that an Indian-born performer can hold visible space inside a K-pop act. That matters because ambition scales faster when fans can point to a face and say, "someone from here already did it." It is one thing to admire Korean idols from afar. It is another to see a practical bridge between local fandom and an actual debut path. [Related: HYBE already tested the same question through its India auditions](//news/hybe-india-audition-kpop)
+Korea JoongAng Daily reported that X:IN and YOUNITE performed at the event, and X:IN member Aria remains one of the clearest proof points that an Indian-born performer can hold visible space inside a K-pop act. That matters because ambition scales faster when fans can point to a face and say, "someone from here already did it." It is one thing to admire Korean idols from afar. It is another to see a practical bridge between local fandom and an actual debut path. [Related: HYBE already tested the same question through its India auditions](/studio/news/hybe-india-audition-kpop)
 
 ### Companies are no longer evaluating India only as a ticket market
 

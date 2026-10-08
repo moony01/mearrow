@@ -8,7 +8,7 @@ thumbnail: '/images/news/cortis-redred-grand-slam-thumbnail.webp'
 active: true
 ---
 
-`CORTIS REDRED` did not win the week like a normal rookie breakout. It made three different scoreboards point in the same direction: Korean music shows, domestic public charts, and global streaming. On May 15, the track collected its fifth music-show trophy on `Music Bank`. One day later, it added a sixth win on `Show! Music Core`. The fan shorthand is already simple: a `REDRED` grand slam. The more useful read is harsher for rivals. CORTIS is no longer being measured by rookie curiosity. It is being measured by whether the market can keep up with its acceleration. [Related: CORTIS already broke the rookie ceiling](//news/cortis-greengreen-million)
+`CORTIS REDRED` did not win the week like a normal rookie breakout. It made three different scoreboards point in the same direction: Korean music shows, domestic public charts, and global streaming. On May 15, the track collected its fifth music-show trophy on `Music Bank`. One day later, it added a sixth win on `Show! Music Core`. The fan shorthand is already simple: a `REDRED` grand slam. The more useful read is harsher for rivals. CORTIS is no longer being measured by rookie curiosity. It is being measured by whether the market can keep up with its acceleration. [Related: CORTIS already broke the rookie ceiling](/studio/news/cortis-greengreen-million)
 
 ## CORTIS REDRED Is No Longer A Rookie Fluke
 

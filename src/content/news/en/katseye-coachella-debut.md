@@ -25,7 +25,7 @@ _An editorial image symbolizing the desert stage and the visual tension of a fiv
 
 That same moment, however, was read very differently by fans. Even as the performance generated buzz, the center of gravity in online reaction kept drifting back to one question: why five, and why now? KATSEYE was introduced to the market as a six-member team, so Manon's absence inevitably became larger once Coachella turned into the first major live milestone of this era. What should have been a pure celebration became a test of emotional trust inside the fandom.
 
-[Related: 'Next to Michael Jackson' — K-pop Just Landed at the Grammy Museum, and Coachella 2026 Is the Encore](//news/coachella-2026-kpop-takeover)
+[Related: 'Next to Michael Jackson' — K-pop Just Landed at the Grammy Museum, and Coachella 2026 Is the Encore](/studio/news/coachella-2026-kpop-takeover)
 
 ## How the Public Is Reading the Hiatus
 

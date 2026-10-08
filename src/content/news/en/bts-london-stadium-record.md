@@ -42,7 +42,7 @@ BTS did not arrive in London with a culturally neutral stadium package. The BBC 
 
 The set moved between new `Arirang` tracks and older songs such as "Fire," "Idol" and "Dynamite." This mattered because the reunion had two jobs. It had to reward fans who waited through the hiatus, and it had to prove that the current BTS could carry a stadium without surviving only on memory. The production answered by letting the catalog and the new Korean-rooted concept share the same stage.
 
-[Related: BTS's Gwanghwamun comeback turned a city square into a global launchpad](//news/bts-arirang-comeback-gwanghwamun-2026)
+[Related: BTS's Gwanghwamun comeback turned a city square into a global launchpad](/studio/news/bts-arirang-comeback-gwanghwamun-2026)
 
 The London weekend was therefore less a copy of Wembley 2019 than a revision of it. Wembley established that a Korean group could headline a British landmark. Tottenham showed what happens when the concert becomes the anchor for a larger cultural program.
 

@@ -52,7 +52,7 @@ According to reporting from The Rakyat Post, Asia News Network, and Batam News A
 
 What made the response notable was that it didn't stay defensive. Indonesian girl group No Na gained significant attention during the movement, and broader discussions about Southeast Asian music scenes began trending alongside #SEAblings. A conflict had been converted into a moment of regional pride.
 
-[Related: How the 4th Generation Is Reshaping K-Pop's Global Reach](//news/4th-gen-global-impact)
+[Related: How the 4th Generation Is Reshaping K-Pop's Global Reach](/studio/news/4th-gen-global-impact)
 
 ## What MEARROW Sees in This Conflict's Structure
 

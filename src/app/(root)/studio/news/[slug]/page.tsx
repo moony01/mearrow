@@ -8,12 +8,11 @@ import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {
   getNewsBySlug,
-  getAllNewsParams,
+  getAllNews,
   getRelatedNews,
   NEWS_SOURCE_LOCALE,
 } from '@/lib/news';
-import { generatePageMetadata } from '@/lib/seo';
-import { DEFAULT_LOCALE, FULL_URL } from '@/lib/constants';
+import { FULL_URL } from '@/lib/constants';
 import { BRAND_MARK_PATH, BRAND_NAME } from '@/lib/brand';
 import { JsonLd } from '@/components/common/JsonLd';
 import ShareButtons from '@/components/common/ShareButtons';
@@ -45,23 +44,20 @@ function absoluteNewsImage(value: string | null | undefined): string {
 const AD_INSERT_AFTER_SECTIONS = [1, 3];
 
 /**
- * 정적 경로 생성
- * Pages 배포를 위해 뉴스 slug를 locale 없는 경로로 생성
+ * Generate one English-only route for each published article.
  */
 export function generateStaticParams() {
   // Workers에서는 본문을 ASSETS에서 요청 시 읽어 Worker 번들에 포함하지 않는다.
   if (process.env.NEXT_RUNTIME_TARGET === 'workers') return [];
 
-  return getAllNewsParams([NEWS_SOURCE_LOCALE]).map(({ slug }) => ({ slug }));
+  return getAllNews(NEWS_SOURCE_LOCALE).map(({ slug }) => ({ slug }));
 }
 
 /**
  * 뉴스 상세 페이지 Props
  */
 interface NewsDetailPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ slug: string }>;
 }
 
 /**
@@ -78,17 +74,29 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
     };
   }
 
-  return generatePageMetadata({
-    locale: NEWS_SOURCE_LOCALE,
-    pathname: `/news/${slug}`,
+  const canonical = `${FULL_URL}/studio/news/${slug}`;
+  const image = absoluteNewsImage(post.thumbnail);
+
+  return {
     title: `${post.title} | ${BRAND_NAME} News`,
     description: post.excerpt,
-    type: 'article',
-    imagePath: post.thumbnail ?? undefined,
-    publishedTime: post.date,
-    availableLocales: [NEWS_SOURCE_LOCALE],
-    defaultLocale: NEWS_SOURCE_LOCALE,
-  });
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.excerpt,
+      url: canonical,
+      images: [image],
+      publishedTime: post.date,
+      modifiedTime: post.updatedAt ?? post.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [image],
+    },
+  };
 }
 
 /**
@@ -97,7 +105,7 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
  */
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const { slug } = await params;
-  const locale = DEFAULT_LOCALE;
+  const locale = NEWS_SOURCE_LOCALE;
 
   // next-intl 정적 생성 지원
   setRequestLocale(locale);
@@ -113,7 +121,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     notFound();
   }
 
-  const canonical = `${FULL_URL}/news/${slug}`;
+  const canonical = `${FULL_URL}/studio/news/${slug}`;
   const articleImage = absoluteNewsImage(post.thumbnail);
 
   // 날짜 포맷팅
@@ -132,7 +140,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   return (
     <PageFrame size="narrow">
       {/* 뒤로가기 링크 */}
-      <Link href={`/news`} className={styles.backLink}>
+      <Link href="/studio/news" className={styles.backLink}>
         <ArrowLeft size={18} />
         <span>{t('backToList')}</span>
       </Link>
@@ -181,7 +189,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           </div>
           <ShareButtons
             title={post.title}
-            url={`${FULL_URL}/news/${slug}`}
+            url={canonical}
             description={post.excerpt}
             imageUrl={post.thumbnail ? `${FULL_URL}${post.thumbnail}` : undefined}
             size="sm"
@@ -271,7 +279,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         <p className={styles.sharePrompt}>{t('sharePrompt')}</p>
         <ShareButtons
           title={post.title}
-          url={`${FULL_URL}/news/${slug}`}
+          url={canonical}
           description={post.excerpt}
           imageUrl={post.thumbnail ? `${FULL_URL}${post.thumbnail}` : undefined}
           size="md"
@@ -294,6 +302,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
                 thumbnail: r.thumbnail ?? undefined,
               }))}
               locale={locale}
+              basePath="/studio/news"
             />
           </section>
         );

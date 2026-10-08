@@ -149,4 +149,4 @@ On March 21, 2026, at Gwanghwamun Square: nothing happened. BTS sang. 260,000 pe
 
 That is the whole story — and the hidden one.
 
-[Related: "Purple Gwanghwamun" — BTS Returns After 1,250 Days in First-Ever K-Pop Concert at Historic Palace Gate](//news/bts-arirang-gwanghwamun-concert-netflix-record-2026)
+[Related: "Purple Gwanghwamun" — BTS Returns After 1,250 Days in First-Ever K-Pop Concert at Historic Palace Gate](/studio/news/bts-arirang-gwanghwamun-concert-netflix-record-2026)

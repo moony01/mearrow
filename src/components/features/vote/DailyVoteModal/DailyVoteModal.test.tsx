@@ -149,7 +149,7 @@ describe('DailyVoteModal', () => {
     await screen.findByRole('dialog', { name: '실시간 TOP 10 투표' });
 
     expect(screen.getByRole('link', { name: '더 투표하러 가기' }).getAttribute('href')).toBe(
-      '/ranking',
+      '/studio/ranking',
     );
   });
 

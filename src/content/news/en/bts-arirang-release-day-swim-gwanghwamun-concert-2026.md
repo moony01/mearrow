@@ -81,4 +81,4 @@ Bang Si-hyuk's description says it all: "Arirang is sung when parting — and wh
 
 Watch the Gwanghwamun concert tomorrow. Watch where ARIRANG lands on the Billboard Hot 100. Today is a day K-pop fans will talk about for years.
 
-[Related: BTS ARIRANG Producer Dream Team — Diplo (5 Tracks), Kevin Parker, Flume & JPEGMAFIA](//news/bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026)
+[Related: BTS ARIRANG Producer Dream Team — Diplo (5 Tracks), Kevin Parker, Flume & JPEGMAFIA](/studio/news/bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026)

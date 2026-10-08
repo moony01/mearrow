@@ -52,7 +52,7 @@ Yet infrastructure does not automatically produce a universal joke. PSY’s vide
 
 This is why the record should not be read as an instruction to recreate the horse dance. The transferable lesson is that global accessibility does not require cultural neutrality. A release can be locally legible and internationally irresistible when the visual idea is strong enough to cross the language gap.
 
-That question also sits behind newer platform experiments. [Related: BTS turned a two-day Spotify video window into a test of fandom distribution](//news/bts-normal-spotify-window). BTS can deliberately redirect a massive audience through one service. “Gangnam Style” represents the opposite kind of power: an open video whose audience kept widening long after the launch plan ended.
+That question also sits behind newer platform experiments. [Related: BTS turned a two-day Spotify video window into a test of fandom distribution](/studio/news/bts-normal-spotify-window). BTS can deliberately redirect a massive audience through one service. “Gangnam Style” represents the opposite kind of power: an open video whose audience kept widening long after the launch plan ended.
 
 ## MEARROW’s view: the record belongs to culture as much as scale
 

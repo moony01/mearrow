@@ -7,7 +7,7 @@ thumbnail: '/images/news/taeyang-quintessence-comeback-thumbnail.webp'
 active: true
 ---
 
-`Taeyang QUINTESSENCE` is not moving like a routine solo comeback. It is arriving on `May 18 at 6 p.m. KST` as Taeyang's fourth full-length album, his first full-length record in about nine years, and the first major solo release after BIGBANG turned its 20th anniversary cycle back on at Coachella. That timing is the hook. The Kid LAROI feature will get the fastest global clicks, but the real question sits underneath it: is this album a personal return, or the first pressure test for how expensive BIGBANG's comeback year can become? [Related: BIGBANG's August tour line reopened the 20th anniversary era](//news/bigbang-august-tour)
+`Taeyang QUINTESSENCE` is not moving like a routine solo comeback. It is arriving on `May 18 at 6 p.m. KST` as Taeyang's fourth full-length album, his first full-length record in about nine years, and the first major solo release after BIGBANG turned its 20th anniversary cycle back on at Coachella. That timing is the hook. The Kid LAROI feature will get the fastest global clicks, but the real question sits underneath it: is this album a personal return, or the first pressure test for how expensive BIGBANG's comeback year can become? [Related: BIGBANG's August tour line reopened the 20th anniversary era](/studio/news/bigbang-august-tour)
 
 ## Taeyang QUINTESSENCE Is Selling A Long Wait
 

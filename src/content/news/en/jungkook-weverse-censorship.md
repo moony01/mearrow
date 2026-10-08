@@ -30,7 +30,7 @@ The problem is perception: if fans first see deletion rather than explanation, m
 ### Authenticity is now a competitive asset
 Today’s fandom often rewards unscripted honesty more than polished messaging. That makes candid livestream moments both risky and valuable. If management remains centered on removal-only responses, fans may read it as institutional opacity rather than care.
 
-[Related: Taemin BPM staff salary scandal analysis](//news/taemin-bpm-staff-salary-scandal)
+[Related: Taemin BPM staff salary scandal analysis](/studio/news/taemin-bpm-staff-salary-scandal)
 
 ## MEARROW View: This Is a Governance Problem, Not a Binary War
 ### “Company vs artist” is too simplistic

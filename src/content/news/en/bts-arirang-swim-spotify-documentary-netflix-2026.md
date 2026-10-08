@@ -100,4 +100,4 @@ Eleven days from now, 'BTS: The Return' shows what happened in the years nobody 
 
 **This isn't a comeback. It's a media event. And it's just getting started.**
 
-[Related: BTS Arirang Producer Dream Team — Why Diplo, Kevin Parker, Flume, and JPEGMAFIA All Said Yes](//news/bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026)
+[Related: BTS Arirang Producer Dream Team — Why Diplo, Kevin Parker, Flume, and JPEGMAFIA All Said Yes](/studio/news/bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026)

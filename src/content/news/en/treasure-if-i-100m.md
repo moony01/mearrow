@@ -9,7 +9,7 @@ active: true
 
 `TREASURE IF I 100 million views` is not just another YouTube milestone headline. It is a speed signal. [Soompi](https://www.soompi.com/article/1847488wpp/treasures-if-i-becomes-fastest-k-pop-mv-of-2026-to-hit-100-million-views) reported that, according to YG Entertainment, TREASURE’s music video for `IF I` surpassed `100 million` YouTube views on June 13 at about `4:49 p.m. KST`. The same report said the video was released on June 1 at `6 p.m. KST`, meaning it reached the mark in `11 days, 22 hours and 49 minutes` — the fastest K-pop music video of 2026 to do so.
 
-That matters because the number is not floating alone. `IF I` is tied to TREASURE’s fourth mini-album `NEW WAV`, a comeback arriving inside one of the most crowded K-pop months of the year. [Related: June K-pop comeback pileup showed why the calendar became the real fight](//news/june-kpop-comeback-pileup). In that environment, a view count does more than measure curiosity. It shows whether a fandom can create enough repeat motion to keep one song visible while the rest of the market keeps moving.
+That matters because the number is not floating alone. `IF I` is tied to TREASURE’s fourth mini-album `NEW WAV`, a comeback arriving inside one of the most crowded K-pop months of the year. [Related: June K-pop comeback pileup showed why the calendar became the real fight](/studio/news/june-kpop-comeback-pileup). In that environment, a view count does more than measure curiosity. It shows whether a fandom can create enough repeat motion to keep one song visible while the rest of the market keeps moving.
 
 ## TREASURE’s IF I Milestone Is About Speed
 
@@ -40,7 +40,7 @@ The `100 million` view mark also changes how `NEW WAV` is read. Allkpop reported
 
 A strong album figure says the core fandom bought in. A fast video milestone says the visual campaign created ongoing attention. Regional iTunes and album-chart movement say the rollout is not trapped in one domestic lane. None of those alone would settle TREASURE’s 2026 position. Together, they make the comeback feel like a coordinated push rather than one lucky headline.
 
-This is where YG’s larger boy-group strategy becomes relevant. MEARROW has already been watching how the company is preparing its next male act. [Related: YG’s five-member September boy group bet shows the label is optimizing for clarity](//news/yg-boygroup-september-bet). TREASURE’s current run now becomes part of the same label-wide question: can YG move with enough speed and discipline to keep established acts, new releases and future rookies in one connected momentum cycle?
+This is where YG’s larger boy-group strategy becomes relevant. MEARROW has already been watching how the company is preparing its next male act. [Related: YG’s five-member September boy group bet shows the label is optimizing for clarity](/studio/news/yg-boygroup-september-bet). TREASURE’s current run now becomes part of the same label-wide question: can YG move with enough speed and discipline to keep established acts, new releases and future rookies in one connected momentum cycle?
 
 ## The Fandom Test Is Now Different
 

@@ -44,7 +44,7 @@ An August release window carries a different burden than a random fourth-quarter
 
 That creates a clean but unforgiving test. If Red Velvet lean too heavily into nostalgia, the comeback may feel like a museum piece. If they run too far from the identity fans are waiting for, the "summer queen" hook loses its emotional power. The strongest version would not repeat an old formula. It would make the familiar contrast feel current: playful enough for summer, strange enough to be Red Velvet, and polished enough to compete in a market where every comeback arrives with instant visual packaging.
 
-[Related: June K-pop comeback pileup showed why release timing is now part of the product](//news/june-kpop-comeback-pileup)
+[Related: June K-pop comeback pileup showed why release timing is now part of the product](/studio/news/june-kpop-comeback-pileup)
 
 ## MEARROW's View: This Is A Loyalty Stress Test
 

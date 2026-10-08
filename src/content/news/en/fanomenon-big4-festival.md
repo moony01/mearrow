@@ -7,7 +7,7 @@ thumbnail: "/images/news/fanomenon-big4-festival-thumbnail.webp"
 active: true
 ---
 
-`K-pop festival joint venture` is the kind of phrase that sounds corporate until you read the names attached to it. `HYBE`, `SM Entertainment`, `JYP Entertainment`, and `YG Entertainment` are not just market rivals. They are the four companies that trained fans to think of K-pop competition as a permanent state of war. That is why the emerging `Fanomenon` plan matters. If the industry's biggest labels are serious about building a shared mega-festival, this is not only another live-event headline. It is a signal that K-pop's most powerful companies may have decided the next global stage is too important to leave to somebody else's festival economy. [Related: KCON Japan 2026 Just Changed the Product — K-pop Was Only the Hook](//news/kcon-japan-k-life)
+`K-pop festival joint venture` is the kind of phrase that sounds corporate until you read the names attached to it. `HYBE`, `SM Entertainment`, `JYP Entertainment`, and `YG Entertainment` are not just market rivals. They are the four companies that trained fans to think of K-pop competition as a permanent state of war. That is why the emerging `Fanomenon` plan matters. If the industry's biggest labels are serious about building a shared mega-festival, this is not only another live-event headline. It is a signal that K-pop's most powerful companies may have decided the next global stage is too important to leave to somebody else's festival economy. [Related: KCON Japan 2026 Just Changed the Product — K-pop Was Only the Hook](/studio/news/kcon-japan-k-life)
 
 ## Why This Headline Feels Bigger Than A Normal Partnership
 
@@ -40,7 +40,7 @@ A normal world tour sells tickets, merchandise, VIP packages, and whatever local
 
 ### Coachella is the symbol, not the exact template
 
-AJU Press used Coachella's scale to explain the ambition, noting the California festival's two-weekend footprint and attendance that can top `120,000 people per day`. But the more useful comparison is strategic, not literal. K-pop does not need to copy the desert, the camping culture, or the indie-pop blend that made Coachella what it is. It needs to prove that Korean entertainment companies can build a premium recurring event that fans around the world plan entire travel calendars around. [Related: BTS Filled Goyang — And Exposed the 50,000-Seat Gap Korea Still Hasn't Fixed](//news/bts-korea-venue-crisis)
+AJU Press used Coachella's scale to explain the ambition, noting the California festival's two-weekend footprint and attendance that can top `120,000 people per day`. But the more useful comparison is strategic, not literal. K-pop does not need to copy the desert, the camping culture, or the indie-pop blend that made Coachella what it is. It needs to prove that Korean entertainment companies can build a premium recurring event that fans around the world plan entire travel calendars around. [Related: BTS Filled Goyang — And Exposed the 50,000-Seat Gap Korea Still Hasn't Fixed](/studio/news/bts-korea-venue-crisis)
 
 ## Why Fans Are Reacting So Fast
 

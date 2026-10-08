@@ -7,7 +7,7 @@ thumbnail: '/images/news/gdragon-shirt-apology-thumbnail.webp'
 active: true
 ---
 
-`G-Dragon shirt apology` moved fast. Acceptance did not. Within roughly a day of his `May 2` performance at K-SPARK in Macau, Galaxy Corporation had issued an apology over the outfit he wore onstage. The harder part is what came after: fans were not only asking how a shirt with a Dutch anti-Black racial slur reached a global stage, but why a veteran artist and his team still needed the internet to catch it first. That is why this story is traveling beyond one styling mistake. It puts K-pop's global expansion next to a blunt question about who actually reviews the symbols, words and images attached to world-facing artists. [Related: BIGBANG Is Back - 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan Revealed](//news/yg-bigbang-20th-anniversary-world-tour-2026)
+`G-Dragon shirt apology` moved fast. Acceptance did not. Within roughly a day of his `May 2` performance at K-SPARK in Macau, Galaxy Corporation had issued an apology over the outfit he wore onstage. The harder part is what came after: fans were not only asking how a shirt with a Dutch anti-Black racial slur reached a global stage, but why a veteran artist and his team still needed the internet to catch it first. That is why this story is traveling beyond one styling mistake. It puts K-pop's global expansion next to a blunt question about who actually reviews the symbols, words and images attached to world-facing artists. [Related: BIGBANG Is Back - 20th Anniversary World Tour, Coachella, and YG's Full 2026 Masterplan Revealed](/studio/news/yg-bigbang-20th-anniversary-world-tour-2026)
 
 ## The Macau Outfit Became A Global Test Case
 

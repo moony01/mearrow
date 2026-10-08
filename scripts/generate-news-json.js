@@ -267,7 +267,7 @@ function main() {
       author: item.author,
       category: item.category,
       sources: item.sources,
-      url: `${PUBLIC_SITE_URL}/news/${item.slug}`,
+      url: `${PUBLIC_SITE_URL}/studio/news/${item.slug}`,
     }));
   fs.writeFileSync(PUBLIC_API_OUTPUT, JSON.stringify(publicApiData, null, 2), 'utf8');
 

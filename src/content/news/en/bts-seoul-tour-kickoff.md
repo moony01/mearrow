@@ -48,7 +48,7 @@ Yonhap and The Korea Times reported that the `ARIRANG` world tour is launching a
 
 MEARROW's view is that the sold-out crowd is only the first layer. BTS already used the free Gwanghwamun comeback concert to restore symbolic momentum. The Goyang kickoff now converts that momentum into paid demand. Add merch pickup, digital viewing, city activations, and travel spillover, and the result is a tour that translates fandom emotion into multiple revenue channels at once. What opened near Seoul on April 9 was not simply a concert. It was a working blueprint for the next phase of K-pop touring.
 
-[Related: BTS Tour Tickets Sold Out Before Opening Night — 2.4 Million Seats, 41 Stadium Dates, and a Real Shot at Taylor Swift's Numbers](//news/bts-arirang-world-tour-sellout-record-2026)
+[Related: BTS Tour Tickets Sold Out Before Opening Night — 2.4 Million Seats, 41 Stadium Dates, and a Real Shot at Taylor Swift's Numbers](/studio/news/bts-arirang-world-tour-sellout-record-2026)
 
 ## The Next Pricing Signal Starts Here
 

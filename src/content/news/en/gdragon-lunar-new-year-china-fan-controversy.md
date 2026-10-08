@@ -76,4 +76,4 @@ G-Dragon didn't say anything factually wrong. What he revealed — accidentally,
 
 The industry markets itself as borderless. The market it depends on most is anything but.
 
-[Related: K-pop's Global Paradox — When the Korean Market Becomes Optional](//news/kpop-korean-market-optional-global-paradox)
+[Related: K-pop's Global Paradox — When the Korean Market Becomes Optional](/studio/news/kpop-korean-market-optional-global-paradox)

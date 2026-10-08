@@ -7,7 +7,7 @@ thumbnail: "/images/news/gov-ball-kpop-weekend-thumbnail.webp"
 active: true
 ---
 
-`Gov Ball K-pop` is not a side note anymore. Across June 5–7, New York’s Governors Ball placed Stray Kids, Jennie and KATSEYE inside the same festival weekend, turning what could have been three separate fan stories into one broader market signal. The sharper question is not whether K-pop can appear on a U.S. festival poster. That question is already old. The harder test is whether K-pop acts can make a mixed festival crowd behave like a fandom-driven event without losing the casual audience standing beside it. [Related: Stray Kids' seven-member Gov Ball risk test](//news/stray-kids-gov-ball-seven)
+`Gov Ball K-pop` is not a side note anymore. Across June 5–7, New York’s Governors Ball placed Stray Kids, Jennie and KATSEYE inside the same festival weekend, turning what could have been three separate fan stories into one broader market signal. The sharper question is not whether K-pop can appear on a U.S. festival poster. That question is already old. The harder test is whether K-pop acts can make a mixed festival crowd behave like a fandom-driven event without losing the casual audience standing beside it. [Related: Stray Kids' seven-member Gov Ball risk test](/studio/news/stray-kids-gov-ball-seven)
 
 ## The Poster Stopped Treating K-pop As A Guest Slot
 

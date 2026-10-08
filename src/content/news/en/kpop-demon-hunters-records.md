@@ -46,7 +46,7 @@ There is a danger hidden inside a record like this. When a property stays hot fo
 
 But Netflix has one major advantage. The film already has a clean franchise promise: pop stars, supernatural stakes, a global fandom and music that can exist outside the screen. Deadline reported that Netflix confirmed a sequel is in the works, with Maggie Kang and Chris Appelhans returning as directors and Sony Pictures Animation producing. If that sequel lands, the 52-week streak will not look like an isolated miracle. It will look like the pilot episode of a much larger system.
 
-[Related: `KPop Demon Hunters` Wins Two Oscars — Then the Orchestra Cuts Off the Speech](//news/kpop-demon-hunters-oscar-win-speech-controversy-2026)
+[Related: `KPop Demon Hunters` Wins Two Oscars — Then the Orchestra Cuts Off the Speech](/studio/news/kpop-demon-hunters-oscar-win-speech-controversy-2026)
 
 ## MEARROW’s View: Netflix Just Found the Idol Blueprint
 ### The next battle is not movie vs music — it is ecosystem vs ecosystem

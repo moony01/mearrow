@@ -8,7 +8,7 @@ thumbnail: '/images/news/bts-guinness-icons-thumbnail.webp'
 active: true
 ---
 
-`BTS Guinness ICONS` is not a nostalgia badge. It is a timing problem for everyone still trying to explain BTS as a peak that already passed. Guinness World Records' current ICONS page places BTS in the Pop Culture lane near names such as Taylor Swift, Beyonce, Drake, Elton John and Paul McCartney. At the same time, `ARIRANG` has reached its eighth straight week inside the Billboard 200 top 10, sitting at No. 8 on the May 17 update. The obvious story is another fan celebration. The sharper question is why a No. 8 chart position suddenly looks more dangerous than a No. 1 debut. [Related: BTS kept 13 songs on Billboard for 7 weeks](//news/bts-arirang-billboard-record)
+`BTS Guinness ICONS` is not a nostalgia badge. It is a timing problem for everyone still trying to explain BTS as a peak that already passed. Guinness World Records' current ICONS page places BTS in the Pop Culture lane near names such as Taylor Swift, Beyonce, Drake, Elton John and Paul McCartney. At the same time, `ARIRANG` has reached its eighth straight week inside the Billboard 200 top 10, sitting at No. 8 on the May 17 update. The obvious story is another fan celebration. The sharper question is why a No. 8 chart position suddenly looks more dangerous than a No. 1 debut. [Related: BTS kept 13 songs on Billboard for 7 weeks](/studio/news/bts-arirang-billboard-record)
 
 ## BTS Guinness ICONS Is Bigger Than A Trophy Page
 

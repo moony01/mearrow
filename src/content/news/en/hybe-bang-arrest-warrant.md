@@ -7,7 +7,7 @@ thumbnail: '/images/news/hybe-bang-arrest-warrant-thumbnail.webp'
 active: true
 ---
 
-The word defining HYBE today is not comeback. It is warrant. On April 21, 2026, police moved to seek an arrest warrant for chairman Bang Si-hyuk, and the mood around the company changed instantly. BTS's U.S. tour dates are approaching, yet the headline pulling focus is not music, sales, or staging. It is governance. That is why this story matters beyond one executive's legal exposure: it exposes how deeply HYBE's corporate narrative has been tied to the authority and mythology of one man. [Related: HYBE Stock Crashed 15% in a Day — Why K-Pop's Biggest Album Couldn't Save It](//news/hybe-stock-bts-paradox)
+The word defining HYBE today is not comeback. It is warrant. On April 21, 2026, police moved to seek an arrest warrant for chairman Bang Si-hyuk, and the mood around the company changed instantly. BTS's U.S. tour dates are approaching, yet the headline pulling focus is not music, sales, or staging. It is governance. That is why this story matters beyond one executive's legal exposure: it exposes how deeply HYBE's corporate narrative has been tied to the authority and mythology of one man. [Related: HYBE Stock Crashed 15% in a Day — Why K-Pop's Biggest Album Couldn't Save It](/studio/news/hybe-stock-bts-paradox)
 
 ## What Has Actually Been Filed
 
@@ -40,7 +40,7 @@ Public perception amplifies the shock. Bang is still widely recognized as the ar
 
 ### Public mood and legal fact are not the same thing
 
-Still, current distrust cannot determine whether the 2019 allegations are true. Public fatigue with HYBE may intensify the reaction, but it cannot replace a court's finding of fact. Those are different layers, and mixing them is how analysis turns into factional noise. [Related: Min Hee-jin Offered to Walk Away From $18 Million — HYBE's Answer Was Even More Telling](//news/min-heejin-18m-deal-rejected)
+Still, current distrust cannot determine whether the 2019 allegations are true. Public fatigue with HYBE may intensify the reaction, but it cannot replace a court's finding of fact. Those are different layers, and mixing them is how analysis turns into factional noise. [Related: Min Hee-jin Offered to Walk Away From $18 Million — HYBE's Answer Was Even More Telling](/studio/news/min-heejin-18m-deal-rejected)
 
 ## MEARROW's Take on the Real Risk
 

@@ -120,6 +120,6 @@ But right now, 18 days out, the cast is still on and the clock is running.
 
 ---
 
-*Related: ["Purple Gwanghwamun" — BTS Returns After 1,250 Days in First-Ever K-Pop Concert at Historic Palace Gate](//news/bts-arirang-gwanghwamun-concert-netflix-record-2026)*
+*Related: ["Purple Gwanghwamun" — BTS Returns After 1,250 Days in First-Ever K-Pop Concert at Historic Palace Gate](/studio/news/bts-arirang-gwanghwamun-concert-netflix-record-2026)*
 
-*Related: [Bomb Threats, Gas Guns, and a Terror Alert: The Full Story of BTS Gwanghwamun's Unprecedented Security Operation](//news/bts-arirang-concert-terror-alert-weapons-security-2026)*
+*Related: [Bomb Threats, Gas Guns, and a Terror Alert: The Full Story of BTS Gwanghwamun's Unprecedented Security Operation](/studio/news/bts-arirang-concert-terror-alert-weapons-security-2026)*

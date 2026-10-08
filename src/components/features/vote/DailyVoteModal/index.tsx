@@ -162,7 +162,7 @@ export default function DailyVoteModal() {
           </button>
           <a
             className={styles.moreVotesButton}
-            href={`/ranking`}
+            href={`/studio/ranking`}
             onClick={closeModal}
           >
             <Flame size={18} aria-hidden="true" />

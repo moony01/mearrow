@@ -9,7 +9,7 @@ active: true
 
 At 3:20 p.m. on April 11, the biggest problem around BTS's Goyang concert was suddenly not the weather, the set list, or the resale market. It was the wristband.
 
-Police said a man fled with about 500 admission wristbands from a ticket booth at the auxiliary stadium of the Goyang Sports Complex, just hours before one of the most tightly controlled concert entries in Korea was supposed to work as designed. On paper, that sounds like a strange side incident. In practice, the `BTS wristband theft` story exposed something more serious about `K-pop concert security`: once a tour reaches BTS scale, even a low-tech object can become a pressure point for the whole live system. [Related: BTS turned Seoul into a market, not just a tour start](//news/bts-seoul-tour-kickoff)
+Police said a man fled with about 500 admission wristbands from a ticket booth at the auxiliary stadium of the Goyang Sports Complex, just hours before one of the most tightly controlled concert entries in Korea was supposed to work as designed. On paper, that sounds like a strange side incident. In practice, the `BTS wristband theft` story exposed something more serious about `K-pop concert security`: once a tour reaches BTS scale, even a low-tech object can become a pressure point for the whole live system. [Related: BTS turned Seoul into a market, not just a tour start](/studio/news/bts-seoul-tour-kickoff)
 
 ## What Actually Happened in Goyang
 

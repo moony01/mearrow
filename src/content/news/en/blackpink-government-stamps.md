@@ -8,7 +8,7 @@ thumbnail: '/images/news/blackpink-government-stamps-thumbnail.webp'
 active: true
 ---
 
-`BLACKPINK commemorative stamps` sound too small for a group that built its image on stadiums, luxury houses, global charts and impossible scarcity. That is exactly why the move is more interesting than a normal anniversary product. YG Entertainment says BLACKPINK's 10th debut anniversary will be marked through Korea Post, under the Ministry of Science and ICT, with a national commemorative stamp issue scheduled for June 16. The easy read is nostalgia. The sharper read is institutional validation: BLACKPINK is being packaged as something Korea can archive, sell, mail and export at the same time. [Related: BLACKPINK dropped Interscope and made its next global playbook harder to read](//news/blackpink-deadline-interscope-independence)
+`BLACKPINK commemorative stamps` sound too small for a group that built its image on stadiums, luxury houses, global charts and impossible scarcity. That is exactly why the move is more interesting than a normal anniversary product. YG Entertainment says BLACKPINK's 10th debut anniversary will be marked through Korea Post, under the Ministry of Science and ICT, with a national commemorative stamp issue scheduled for June 16. The easy read is nostalgia. The sharper read is institutional validation: BLACKPINK is being packaged as something Korea can archive, sell, mail and export at the same time. [Related: BLACKPINK dropped Interscope and made its next global playbook harder to read](/studio/news/blackpink-deadline-interscope-independence)
 
 ## BLACKPINK Commemorative Stamps Are Not Normal Merch
 

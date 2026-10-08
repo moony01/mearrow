@@ -8,7 +8,7 @@ thumbnail: "/images/news/lesserafim-boompala-430k-thumbnail.webp"
 active: true
 ---
 
-`LE SSERAFIM BOOMPALA` did not enter the market quietly. On May 22, `PUREFLOW pt.1` sold `435,675` copies on Hanteo's daily physical album ranking and took the No. 1 spot for the day. That is the screenshot fans wanted. The harder story starts after the number, because `BOOMPALA` is already being discussed as more than a title track. It is a sales win, a concept reset, a performance hook, and a fan-debate machine arriving at the same time. [Related: Kim Chaewon's hiatus made PUREFLOW's timing more complicated](//news/chaewon-neck-hiatus)
+`LE SSERAFIM BOOMPALA` did not enter the market quietly. On May 22, `PUREFLOW pt.1` sold `435,675` copies on Hanteo's daily physical album ranking and took the No. 1 spot for the day. That is the screenshot fans wanted. The harder story starts after the number, because `BOOMPALA` is already being discussed as more than a title track. It is a sales win, a concept reset, a performance hook, and a fan-debate machine arriving at the same time. [Related: Kim Chaewon's hiatus made PUREFLOW's timing more complicated](/studio/news/chaewon-neck-hiatus)
 
 ## 435,675 Copies Changed The Starting Line
 

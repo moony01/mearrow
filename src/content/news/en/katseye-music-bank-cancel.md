@@ -58,7 +58,7 @@ A domestic K-pop group can sometimes survive an opaque notice because the fandom
 
 ### Manon's hiatus shaped the atmosphere around the cancellation
 
-The Music Bank issue also landed in an existing public mood around KATSEYE's lineup visibility. An earlier Weverse update said Manon would pause activities for health and well-being, and previous reporting around the group has shown how quickly absence becomes the center of the story. MEARROW covered that same tension during the group's Coachella era, when the performance succeeded but the five-member optics kept pulling fans back into transparency questions. [Related: KATSEYE reached Coachella as five, not six](//news/katseye-coachella-debut)
+The Music Bank issue also landed in an existing public mood around KATSEYE's lineup visibility. An earlier Weverse update said Manon would pause activities for health and well-being, and previous reporting around the group has shown how quickly absence becomes the center of the story. MEARROW covered that same tension during the group's Coachella era, when the performance succeeded but the five-member optics kept pulling fans back into transparency questions. [Related: KATSEYE reached Coachella as five, not six](/studio/news/katseye-coachella-debut)
 
 That background does not prove why Music Bank was cancelled. It should not be used to turn a scheduling notice into a conspiracy. But current perception affects interpretation. When a fandom already feels under-informed, every new vague update gets stacked on top of the last one. The May 1 notice was judged not only as a single message, but as part of a pattern fans are trying to decode.
 

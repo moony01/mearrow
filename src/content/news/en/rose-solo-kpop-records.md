@@ -57,7 +57,7 @@ The most recent milestone landed just three days ago. At the 2026 iHeartRadio Mu
 
 iHeartRadio operates the largest radio network in the United States. A K-pop act had never taken the Best Collaboration trophy, and no woman had ever been named K-pop Artist of the Year at the ceremony. At the Grammys and at iHeartRadio, Rosé keeps writing the word "first" next to her name.
 
-[Related: BLACKPINK's 'GO' enters Billboard Hot 100 at No. 63, setting K-pop girl group record](//news/blackpink-go-billboard-hot100-11th-entry-record-2026)
+[Related: BLACKPINK's 'GO' enters Billboard Hot 100 at No. 63, setting K-pop girl group record](/studio/news/blackpink-go-billboard-hot100-11th-entry-record-2026)
 
 ## MEARROW's Take — The Solo Era Has Truly Arrived
 

@@ -125,4 +125,4 @@ After twelve years, AKMU is making their first truly independent record. Yang Hy
 
 MEARROW will be watching.
 
-[Related: Yang Hyun-suk Returns to the Audition Stage — What Is YG Building Next?](//news/yg-yang-hyunsuk-audition-return)
+[Related: Yang Hyun-suk Returns to the Audition Stage — What Is YG Building Next?](/studio/news/yg-yang-hyunsuk-audition-return)

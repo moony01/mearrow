@@ -7,7 +7,7 @@ thumbnail: '/images/news/shinee-atmos-weather-thumbnail.webp'
 active: true
 ---
 
-`SHINee Atmos` did not arrive as a loud market takeover. It arrived like weather: quiet at first, then suddenly everywhere in the room. On May 11, SM Entertainment confirmed that SHINee will release its sixth EP, `Atmos`, on June 1 at 6 p.m. KST. The detail fans caught fastest was not only the date. It was the shape of the rollout: six tracks, a title song also called `Atmos`, preorders opening immediately, and a three-night KSPO Dome concert series landing right before the album. That is where the question begins. Is this a normal veteran comeback, or is SM using SHINee to test how much emotional pressure a legacy group can still convert into present-tense demand? [Related: SM's Q1 money machine was not only albums](//news/sm-q1-money-machine)
+`SHINee Atmos` did not arrive as a loud market takeover. It arrived like weather: quiet at first, then suddenly everywhere in the room. On May 11, SM Entertainment confirmed that SHINee will release its sixth EP, `Atmos`, on June 1 at 6 p.m. KST. The detail fans caught fastest was not only the date. It was the shape of the rollout: six tracks, a title song also called `Atmos`, preorders opening immediately, and a three-night KSPO Dome concert series landing right before the album. That is where the question begins. Is this a normal veteran comeback, or is SM using SHINee to test how much emotional pressure a legacy group can still convert into present-tense demand? [Related: SM's Q1 money machine was not only albums](/studio/news/sm-q1-money-machine)
 
 ## SHINee Atmos Is Timed Like A Pressure System
 
