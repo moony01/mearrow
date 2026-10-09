@@ -621,6 +621,19 @@
   gap: 20px;
 }
 
+// Studio's progressive ranking should use the full width of its landing section.
+.dashboardContainer[data-visible-rank-limit] .directMode .leagueListSection {
+  max-width: none;
+}
+
+.dashboardContainer[data-visible-rank-limit] .directMode .contentLayout {
+  justify-content: flex-start;
+}
+
+.dashboardContainer[data-visible-rank-limit] .directMode .communityColumn {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .dashboardContainer {
     min-height: 0;
