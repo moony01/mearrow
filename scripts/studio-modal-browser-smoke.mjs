@@ -60,7 +60,7 @@ async function waitForServer(baseUrl, child, getOutput) {
     }
 
     try {
-      const response = await fetch(`${baseUrl}/studio/news?studio-modal-browser-smoke=1`, {
+      const response = await fetch(`${baseUrl}/studio?studio-modal-browser-smoke=1`, {
         redirect: 'manual',
       });
       lastStatus = `HTTP ${response.status}`;
@@ -277,7 +277,7 @@ async function main() {
         name: 'studio-news-list-has-no-global-vote-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/studio/news');
-          assert(new URL(page.url()).pathname === '/studio/news', 'Studio news list URL changed');
+          assert(new URL(page.url()).pathname === '/studio' && new URL(page.url()).hash === '#news', 'Studio news archive did not reach landing section');
           await expectNoModal(page, 'Studio news list');
           await takeScreenshot(page, 'studio-news-list-no-modal');
         },
@@ -302,7 +302,7 @@ async function main() {
         name: 'studio-auditions-has-no-global-vote-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/studio/auditions');
-          assert(new URL(page.url()).pathname === '/studio/auditions', 'Studio auditions URL changed');
+          assert(new URL(page.url()).pathname === '/studio' && new URL(page.url()).hash === '#auditions', 'Studio auditions archive did not reach landing section');
           await expectNoModal(page, 'Studio auditions');
           await takeScreenshot(page, 'studio-auditions-no-modal');
         },
@@ -311,7 +311,7 @@ async function main() {
         name: 'legacy-news-route-lands-on-studio-without-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/news');
-          assert(new URL(page.url()).pathname === '/studio/news', 'legacy /news did not reach Studio news');
+          assert(new URL(page.url()).pathname === '/studio' && new URL(page.url()).hash === '#news', 'legacy /news did not reach Studio landing news section');
           await expectNoModal(page, 'legacy /news redirect');
         },
       },

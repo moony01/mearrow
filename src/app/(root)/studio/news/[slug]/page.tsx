@@ -140,7 +140,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   return (
     <PageFrame size="narrow">
       {/* 뒤로가기 링크 */}
-      <Link href="/studio/news" className={styles.backLink}>
+      <Link href="/studio#news" className={styles.backLink}>
         <ArrowLeft size={18} />
         <span>{t('backToList')}</span>
       </Link>

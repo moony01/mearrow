@@ -57,6 +57,10 @@ export interface VoteBoardProps {
   showKpopfaceAd?: boolean;
   /** Kpopface keeps its compact TOP 4 + “Show top 10” interaction. */
   compactTopTen?: boolean;
+  /** Optional progressive rank ceiling for the Studio list (for example 5, 10, then 20). */
+  rankDisplayLimit?: number;
+  /** Explicit label for staged expansion controls. */
+  toggleLabel?: string;
   expandLabel?: string;
   collapseLabel?: string;
   panelId?: string;
@@ -120,6 +124,8 @@ export default function VoteBoard({
   votePolicy,
   showKpopfaceAd = true,
   compactTopTen = false,
+  rankDisplayLimit,
+  toggleLabel,
   expandLabel,
   collapseLabel,
   panelId,
@@ -132,13 +138,24 @@ export default function VoteBoard({
   quotaController,
 }: VoteBoardProps) {
   const companiesBelow11 = useMemo(() => allCompanies.slice(10), [allCompanies]);
-  const companiesToReveal = compactTopTen ? [] : companiesBelow11;
-  const displayedPremierLeague = compactTopTen && !isExpanded
-    ? premierLeague.slice(0, 4)
-    : premierLeague;
-  const shouldShowExpansion = compactTopTen
-    ? premierLeague.length > 4
-    : companiesBelow11.length > 0;
+  const companiesToReveal = rankDisplayLimit !== undefined
+    ? allCompanies.slice(10, Math.min(rankDisplayLimit, 20))
+    : compactTopTen
+      ? []
+      : companiesBelow11;
+  const displayedPremierLeague = rankDisplayLimit !== undefined
+    ? premierLeague.slice(0, Math.min(rankDisplayLimit, 10))
+    : compactTopTen && !isExpanded
+      ? premierLeague.slice(0, 4)
+      : premierLeague;
+  const shouldShowExpansion = rankDisplayLimit !== undefined
+    ? allCompanies.length > 5 || rankDisplayLimit > 5
+    : compactTopTen
+      ? premierLeague.length > 4
+      : companiesBelow11.length > 0;
+  const isCollapseAction = toggleLabel
+    ? toggleLabel === (collapseLabel || 'Collapse')
+    : isExpanded;
   const handleSearchSelect = onSearchSelect ?? onVote ?? (() => undefined);
   const handleGuestQuotaExhausted = onGuestQuotaExhausted ?? onSheetClose;
   const isDirectMode = interactionMode === 'direct';
@@ -225,9 +242,9 @@ export default function VoteBoard({
                 aria-expanded={isExpanded}
               >
                 <span>
-                  {isExpanded
-                    ? (collapseLabel || 'Collapse')
-                    : (expandLabel || (compactTopTen ? 'Show top 10' : 'Show more'))}
+                {toggleLabel ?? (isExpanded
+                  ? (collapseLabel || 'Collapse')
+                  : (expandLabel || (compactTopTen ? 'Show top 10' : 'Show more')))}
                 </span>
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +256,7 @@ export default function VoteBoard({
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  animate={{ rotate: isCollapseAction ? 180 : 0 }}
                   transition={{ duration: 0.25, ease: 'easeOut' }}
                   aria-hidden="true"
                 >

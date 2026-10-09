@@ -50,7 +50,7 @@ export default function StudioVoteEmbed() {
         allow="clipboard-write"
       />
       <noscript>
-        <Link href="/studio/ranking">Open the K-pop company rankings and vote</Link>
+        <Link href="/studio#fan-vote">Open the K-pop company rankings and vote</Link>
       </noscript>
     </div>
   );

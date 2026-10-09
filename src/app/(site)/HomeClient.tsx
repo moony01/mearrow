@@ -36,6 +36,8 @@ export { HOME_DIRECT_VOTE_UNIT, getDirectVoteAmount as getHomeDirectVoteAmount }
 
 interface HomeClientProps {
   initialData?: CompaniesResponse | null;
+  embedded?: boolean;
+  progressiveRanking?: boolean;
 }
 
 interface EventModalCopy {
@@ -83,7 +85,7 @@ function normalizeVoteDockCompany(value?: string | null) {
 }
 
 /** Keep the legacy home shell while making each ranking card the vote surface. */
-export function HomeClient({ initialData }: HomeClientProps = {}) {
+export function HomeClient({ initialData, embedded = false, progressiveRanking = false }: HomeClientProps = {}) {
   const locale = useLocale();
   const { user, isLoading: isAuthLoading, isAuthenticated } = useAuth();
   const {
@@ -108,6 +110,7 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
     refreshingDurationMs: 1500,
   });
   const [isExpanded, setIsExpanded] = useState(false);
+  const [visibleRankLimit, setVisibleRankLimit] = useState(5);
   const [isEventModalOpen, setIsEventModalOpen] = useState(false);
 
   const eventModalCopy = EVENT_MODAL_COPY[locale] ?? EVENT_MODAL_COPY.en;
@@ -145,6 +148,14 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
     setIsEventModalOpen(true);
   }, [isAuthLoading, isAuthenticated]);
 
+  const handleRankLimitToggle = useCallback(() => {
+    setVisibleRankLimit((current) => {
+      if (current < 10) return 10;
+      if (current < 20 && allCompanies.length > 10) return 20;
+      return 5;
+    });
+  }, [allCompanies.length]);
+
   if (isLoading && allCompanies.length === 0) {
     return (
       <div className={styles.loadingContainer}>
@@ -166,7 +177,10 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
   }
 
   return (
-    <div className={styles.dashboardContainer}>
+    <div
+      className={`${styles.dashboardContainer} ${embedded ? styles.embeddedDashboard : ''}`}
+      data-visible-rank-limit={progressiveRanking ? visibleRankLimit : undefined}
+    >
       <HomeBoardHeader
         locale={locale}
         season={season}
@@ -184,13 +198,15 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
         selectedCompany={null}
         selectedSubLabelId={null}
         selectedArtistName={null}
-        isExpanded={isExpanded}
+        isExpanded={progressiveRanking ? visibleRankLimit > 5 : isExpanded}
         isSheetOpen={false}
         isMobile={false}
         onVote={handleVote}
         onVoteSuccess={handleVoteSuccess}
         onGuestQuotaExhausted={handleGuestQuotaExhausted}
-        onToggleExpand={() => setIsExpanded((current) => !current)}
+        onToggleExpand={progressiveRanking
+          ? handleRankLimitToggle
+          : () => setIsExpanded((current) => !current)}
         onSheetClose={() => undefined}
         voteControllerComponent={VoteController}
         bottomSheetComponent={BottomSheet}
@@ -201,6 +217,13 @@ export function HomeClient({ initialData }: HomeClientProps = {}) {
         interactionMode="direct"
         voteSurfaceDescriptionId={HOME_VOTE_HELPER_ID}
         quotaController={{ quota, useVote: consumeVote, isLoading: isQuotaLoading }}
+        rankDisplayLimit={progressiveRanking ? visibleRankLimit : undefined}
+        toggleLabel={progressiveRanking
+          ? (visibleRankLimit > 5 && (visibleRankLimit >= 20 || allCompanies.length <= visibleRankLimit)
+            ? 'Show less'
+            : 'Show more')
+          : undefined}
+        collapseLabel={progressiveRanking ? 'Show less' : undefined}
       />
 
       <Modal

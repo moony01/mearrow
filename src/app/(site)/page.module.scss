@@ -610,7 +610,9 @@
 }
 
 .directMode .leagueListSection {
-  flex: 0 1 760px;
+  // This list stacks vertically below 1024px, so a desktop pixel basis would
+  // become a large empty height after the final visible rank.
+  flex: 0 1 auto;
   width: 100%;
   max-width: 760px;
 }
@@ -631,4 +633,11 @@
   .dashboardContainer {
     padding-bottom: 92px;
   }
+}
+
+.dashboardContainer.embeddedDashboard {
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }

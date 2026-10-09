@@ -25,11 +25,16 @@ const newsConsolidationRedirects = [
 }));
 
 const studioSections = ['news', 'auditions', 'ranking'];
+const studioArchiveTargets = {
+  news: '/studio#news',
+  auditions: '/studio#auditions',
+  ranking: '/studio#fan-vote',
+};
 const studioRedirects = studioSections.flatMap((section) => [
-  { source: `/${section}`, destination: `/studio/${section}`, permanent: true },
+  { source: `/${section}`, destination: studioArchiveTargets[section], permanent: true },
   { source: `/${section}/:path*`, destination: `/studio/${section}/:path*`, permanent: true },
   ...legacyLocales.flatMap((locale) => [
-    { source: `/${locale}/${section}`, destination: `/studio/${section}`, permanent: true },
+    { source: `/${locale}/${section}`, destination: studioArchiveTargets[section], permanent: true },
     { source: `/${locale}/${section}/:path*`, destination: `/studio/${section}/:path*`, permanent: true },
   ]),
 ]);
@@ -132,14 +137,19 @@ const nextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: '0',
   },
   // Cloudflare Workers serve SSR responses through OpenNext, so the Pages
-  // `public/_headers` file does not cover this runtime.
-  ...(isWorkers
+  // `public/_headers` file does not cover this runtime. Retired archive
+  // noindex headers also apply in development; detail paths are not matched.
+  ...(!useStaticExport
     ? {
         headers: async () => [
-          {
+          ...(isWorkers ? [{
             source: '/:path*',
             headers: securityHeaders,
-          },
+          }] : []),
+          ...studioSections.map((section) => ({
+            source: `/studio/${section}`,
+            headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }],
+          })),
         ],
       }
     : {}),

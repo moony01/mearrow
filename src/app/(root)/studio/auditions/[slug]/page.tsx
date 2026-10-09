@@ -182,7 +182,7 @@ export default async function AuditionDetailPage({ params }: AuditionDetailPageP
         }}
       />
 
-      <Link className={styles.backLink} href="/studio/auditions">
+      <Link className={styles.backLink} href="/studio#auditions">
         <ArrowLeft aria-hidden="true" /> {t('backToList')}
       </Link>
 
