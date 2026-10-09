@@ -1,0 +1,17 @@
+{
+  "name": "plostack-design-kit",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "plodikit": "./bin/plodikit.js"
+  },
+  "scripts": {
+    "design": "npx --yes http-server . -p 8090 -c-1",
+    "extract:product": "node tools/extract-existing-ui.mjs",
+    "generate:portfolio": "bash tools/generate-portfolio-pages.sh",
+    "export:portfolio": "node tools/capture-mearrow-portfolio.mjs all",
+    "export:web": "node tools/capture-mearrow-portfolio.mjs web",
+    "serve": "npm run design"
+  }
+}

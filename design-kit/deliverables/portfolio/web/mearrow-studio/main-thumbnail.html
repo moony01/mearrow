@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MEARROW Studio web portfolio thumbnail</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../mearrow-device-frames.css">
+</head>
+<body class="asset-page mearrow-web-asset-page mearrow-web-thumbnail-page">
+  <div class="asset-actions"><a class="primary" href="../../../../screenshots/deliverables/portfolio/web/mearrow-studio-main-thumbnail.png" download>MEARROW Studio PNG</a><a href="./">Portfolio</a></div>
+  <main>
+    <article class="portfolio-canvas mearrow-web-thumbnail" aria-label="MEARROW Studio responsive web portfolio thumbnail">
+      <div class="mearrow-web-orbit mearrow-web-orbit--one" aria-hidden="true"></div>
+      <div class="mearrow-web-orbit mearrow-web-orbit--two" aria-hidden="true"></div>
+      <header class="mearrow-web-main-copy">
+        <p class="eyebrow">EDITORIAL DISCOVERY / RESPONSIVE WEB</p>
+        <h1>MEARROW Studio<br>Editorial Web</h1>
+        <p class="mearrow-web-main-subtitle">K-pop stories, auditions, and fan voting.</p>
+      </header>
+      <section class="mearrow-web-device-showcase mearrow-web-thumbnail-showcase" aria-label="MEARROW Studio desktop, tablet, and mobile web previews">
+        <div class="mearrow-web-monitor">
+          <div class="mearrow-web-monitor-screen">
+            <div class="mearrow-web-monitor-bar"><span class="mearrow-web-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mearrow-web-browser-address">mearrow.com / mearrow-studio</span></div>
+            <div class="mearrow-web-monitor-viewport"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio desktop web screen" loading="eager" scrolling="no"></iframe></div>
+          </div>
+          <div class="mearrow-web-monitor-stand" aria-hidden="true"></div>
+          <div class="mearrow-web-monitor-base" aria-hidden="true"></div>
+        </div>
+        <div class="mearrow-web-tablet" aria-label="Tablet web screen"><div class="mearrow-web-tablet-screen"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio tablet web screen" loading="eager" scrolling="no" ></iframe></div></div>
+        <div class="mearrow-web-phone" aria-label="Mobile web screen"><div class="mearrow-web-phone-screen"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio mobile web screen" loading="eager" scrolling="no"></iframe></div></div>
+      </section>
+    </article>
+  </main>
+  <script>
+    const alignTabletFeeds = () => {
+      const frames = document.querySelectorAll(".mearrow-web-tablet-screen iframe[data-initial-scroll-y]");
+      const alignFeeds = () => frames.forEach((frame) => {
+        const scroller = frame.contentDocument?.scrollingElement;
+        if (scroller) {
+          scroller.style.scrollBehavior = "auto";
+          scroller.scrollTop = Number(frame.dataset.initialScrollY);
+        }
+      });
+      requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(alignFeeds, 0)));
+    };
+    if (document.readyState === "complete") setTimeout(alignTabletFeeds, 0);
+    else window.addEventListener("load", alignTabletFeeds, { once: true });
+  </script>
+</body>
+</html>

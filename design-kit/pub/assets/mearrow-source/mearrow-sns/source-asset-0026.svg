@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>MEARROW mark</title>
+  <defs>
+    <linearGradient id="mearrow-blue" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#315CFF"/>
+      <stop offset="1" stop-color="#2549D8"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="20" fill="url(#mearrow-blue)"/>
+  <path d="M13 45V19H21.5L32 33.5L42.5 19H51V45H43V31.5L36 41.5H28L21 31.5V45H13Z" fill="#F7F8FF"/>
+  <path d="M28.5 48.5H51V25.5M43 25.5H51V33.5" stroke="#C7FF32" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

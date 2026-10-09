@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MEARROW Studio web portfolio detail</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../mearrow-device-frames.css">
+</head>
+<body class="asset-page mearrow-web-asset-page mearrow-web-detail-page">
+  <div class="asset-actions"><a class="primary" href="../../../../screenshots/deliverables/portfolio/web/mearrow-studio-detail-page.png" download>MEARROW Studio PNG</a><a href="./">Portfolio</a></div>
+  <main>
+    <article class="portfolio-canvas mearrow-web-detail" aria-label="MEARROW Studio responsive web portfolio detail">
+      <div class="mearrow-web-orbit mearrow-web-orbit--one" aria-hidden="true"></div>
+      <div class="mearrow-web-orbit mearrow-web-orbit--two" aria-hidden="true"></div>
+      <header class="mearrow-web-detail-head">
+        <div class="mearrow-web-brand-lockup">
+          <img src="../../../../assets/brand/mearrow-mark.svg" alt="">
+          <div><p>RESPONSIVE WEB / MEARROW</p><h1>MEARROW Studio</h1></div>
+        </div>
+        <p class="mearrow-web-detail-lead">Desktop, tablet, mobile.<br>One connected studio.</p>
+        <dl class="mearrow-web-detail-meta"><div><dt>TYPE</dt><dd>WEBSITE</dd></div><div><dt>SCOPE</dt><dd>PC · TABLET · MOBILE</dd></div><div><dt>SCREEN</dt><dd>STUDIO HOME</dd></div></dl>
+      </header>
+      <section class="mearrow-web-device-showcase" aria-label="MEARROW Studio desktop, tablet, and mobile web previews">
+        <div class="mearrow-web-monitor" aria-label="Desktop web screen">
+          <div class="mearrow-web-monitor-screen">
+            <div class="mearrow-web-monitor-bar"><span class="mearrow-web-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mearrow-web-browser-address">desktop / mearrow.com</span></div>
+            <div class="mearrow-web-monitor-viewport"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio desktop responsive screen" loading="eager" scrolling="no"></iframe></div>
+          </div>
+          <div class="mearrow-web-monitor-stand" aria-hidden="true"></div>
+          <div class="mearrow-web-monitor-base" aria-hidden="true"></div>
+        </div>
+        <div class="mearrow-web-tablet" aria-label="Tablet web screen"><div class="mearrow-web-tablet-screen"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio tablet responsive screen" loading="eager" scrolling="no" ></iframe></div></div>
+        <div class="mearrow-web-phone" aria-label="Mobile web screen"><div class="mearrow-web-phone-screen"><iframe src="../../../../pub/admin/mearrow-studio/index.html" title="MEARROW Studio mobile responsive screen" loading="eager" scrolling="no"></iframe></div></div>
+      </section>
+      <section class="mearrow-web-feature-list" aria-label="MEARROW Studio features"><p>EDITORIAL STORIES</p><p>AUDITION NEWS</p><p>FAN VOTE</p><p>DISCOVERY</p></section>
+      <footer class="mearrow-web-detail-footer"><p>MEARROW Studio / WEB</p><strong>Responsive web experience · 2026</strong></footer>
+    </article>
+  </main>
+  <script>
+    const alignTabletFeeds = () => {
+      const frames = document.querySelectorAll(".mearrow-web-tablet-screen iframe[data-initial-scroll-y]");
+      const alignFeeds = () => frames.forEach((frame) => {
+        const scroller = frame.contentDocument?.scrollingElement;
+        if (scroller) {
+          scroller.style.scrollBehavior = "auto";
+          scroller.scrollTop = Number(frame.dataset.initialScrollY);
+        }
+      });
+      requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(alignFeeds, 0)));
+    };
+    if (document.readyState === "complete") setTimeout(alignTabletFeeds, 0);
+    else window.addEventListener("load", alignTabletFeeds, { once: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+/* The web boards use the device composition of the Jeonbuk Youth Village kit. */
+body.asset-page {
+  background: #e8e5dc;
+}
+
+/* Scale only the portfolio canvas visually. CSS zoom changes nested iframe
+   viewport widths by a pixel at some browser sizes and can flip product
+   breakpoints, so keep the embedded product CSS viewports fixed. */
+body.mearrow-web-asset-page > main {
+  --mearrow-web-canvas-scale: calc(min(100cqw, 1200px) / 1200px);
+  width: 1200px;
+  margin-bottom: calc((var(--mearrow-web-canvas-scale) - 1) * var(--mearrow-web-canvas-height));
+  zoom: 1;
+  transform: scale(var(--mearrow-web-canvas-scale));
+  transform-origin: top left;
+}
+
+body.mearrow-web-thumbnail-page > main {
+  --mearrow-web-canvas-height: 1200px;
+}
+
+body.mearrow-web-detail-page > main {
+  --mearrow-web-canvas-height: 2100px;
+}
+
+.mearrow-web-thumbnail,
+.mearrow-web-detail {
+  --device-ink: #20242a;
+  --device-muted: #69717c;
+  --device-line: rgba(32, 36, 42, .12);
+  --device-accent: #315cff;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--device-ink);
+  background:
+    radial-gradient(circle at 16% 14%, rgba(255, 255, 255, .8), transparent 26%),
+    radial-gradient(circle at 84% 28%, rgba(225, 231, 255, .7), transparent 30%),
+    linear-gradient(180deg, #f4f3ef, #e8e5dc);
+}
+
+.mearrow-web-thumbnail {
+  height: 1200px;
+  background: #f4f3ef;
+}
+
+.mearrow-web-detail {
+  height: 2100px;
+  background: #f4f3ef;
+}
+
+.mearrow-web-orbit {
+  position: absolute;
+  border: 1px solid var(--device-line);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mearrow-web-thumbnail .mearrow-web-orbit--one {
+  left: 112px;
+  top: 254px;
+  width: 132px;
+  height: 132px;
+}
+
+.mearrow-web-thumbnail .mearrow-web-orbit--two {
+  right: 110px;
+  top: 490px;
+  width: 520px;
+  height: 520px;
+  transform: rotate(12deg);
+}
+
+.mearrow-web-detail .mearrow-web-orbit--one {
+  left: 120px;
+  top: 540px;
+  width: 940px;
+  height: 360px;
+  transform: rotate(-10deg);
+}
+
+.mearrow-web-detail .mearrow-web-orbit--two {
+  right: -160px;
+  bottom: 210px;
+  width: 540px;
+  height: 540px;
+}
+
+.mearrow-web-main-copy {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  padding: 70px 80px 0;
+  text-align: center;
+}
+
+.mearrow-web-main-copy .eyebrow {
+  margin: 0;
+  color: var(--device-muted);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.mearrow-web-main-copy h1 {
+  margin: 12px 0 0;
+  color: var(--device-ink);
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+.mearrow-web-main-copy .mearrow-web-main-subtitle {
+  width: 860px;
+  max-width: 860px;
+  margin: 24px auto 0;
+  color: #47515d;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+.mearrow-web-hero-device {
+  position: absolute;
+  left: 50%;
+  top: 360px;
+  z-index: 3;
+  width: 800px;
+  transform: translateX(-50%);
+}
+
+.mearrow-web-monitor {
+  position: relative;
+  width: 100%;
+}
+
+.mearrow-web-monitor-screen {
+  overflow: hidden;
+  border: 10px solid #101419;
+  border-radius: 34px;
+  background: #101419;
+  box-shadow: 0 42px 88px rgba(5, 8, 12, .36), inset 0 1px 0 rgba(255, 255, 255, .18);
+}
+
+.mearrow-web-monitor-bar {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) 88px;
+  gap: 14px;
+  align-items: center;
+  height: 58px;
+  padding: 0 18px;
+  background: linear-gradient(180deg, #1f252c, #12161b);
+}
+
+.mearrow-web-browser-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.mearrow-web-browser-dots i {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f56565;
+}
+
+.mearrow-web-browser-dots i:nth-child(2) { background: #f6d174; }
+.mearrow-web-browser-dots i:nth-child(3) { background: #2f9a73; }
+
+.mearrow-web-browser-address {
+  display: flex;
+  min-width: 0;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+  color: rgba(255, 255, 255, .82);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mearrow-web-monitor-viewport,
+.mearrow-web-tablet-screen,
+.mearrow-web-phone-screen {
+  position: relative;
+  overflow: hidden;
+  background: #f8f6f1;
+}
+
+.mearrow-web-monitor-viewport {
+  height: 422px;
+}
+
+.mearrow-web-monitor-viewport iframe,
+.mearrow-web-tablet-screen iframe,
+.mearrow-web-phone-screen iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: none;
+  border: 0;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.mearrow-web-monitor-viewport iframe {
+  width: 1440px;
+  height: 1040px;
+  transform: scale(.541667);
+}
+
+.mearrow-web-monitor-stand {
+  width: 118px;
+  height: 78px;
+  margin: -1px auto 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .18), transparent 30%), linear-gradient(180deg, #30363d, #171d23 60%, #090c10);
+  clip-path: polygon(32% 0, 68% 0, 82% 100%, 18% 100%);
+  filter: drop-shadow(0 10px 12px rgba(5, 8, 12, .18));
+}
+
+.mearrow-web-monitor-base {
+  position: relative;
+  width: 260px;
+  height: 20px;
+  margin: -1px auto 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #20262d, #11161b 58%, #07090c);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, .08), 0 12px 22px rgba(5, 8, 12, .24);
+}
+
+.mearrow-web-monitor-base::before {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  top: 4px;
+  height: 4px;
+  content: "";
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .1);
+}
+
+.mearrow-web-detail-head {
+  position: relative;
+  z-index: 4;
+  padding: 82px 84px 0;
+}
+
+.mearrow-web-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.mearrow-web-brand-lockup img {
+  width: 96px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.mearrow-web-brand-lockup p {
+  margin: 0;
+  color: var(--device-muted);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mearrow-web-brand-lockup h1 {
+  margin: 8px 0 0;
+  color: var(--device-ink);
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.mearrow-web-detail-lead {
+  width: 940px;
+  margin: 28px 0 0;
+  color: var(--device-ink);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.mearrow-web-detail-meta {
+  display: grid;
+  width: 580px;
+  gap: 12px;
+  margin: 54px 0 0;
+}
+
+.mearrow-web-detail-meta div {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--device-line);
+}
+
+.mearrow-web-detail-meta dt,
+.mearrow-web-detail-meta dd {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.mearrow-web-detail-meta dt {
+  color: #8b939c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mearrow-web-detail-meta dd {
+  color: var(--device-ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.mearrow-web-device-showcase {
+  position: absolute;
+  left: 50%;
+  top: 700px;
+  z-index: 3;
+  width: 940px;
+  height: 860px;
+  transform: translateX(-50%);
+}
+
+.mearrow-web-thumbnail-showcase {
+  top: 360px;
+  height: 720px;
+}
+
+.mearrow-web-device-showcase .mearrow-web-monitor {
+  width: 790px;
+  margin: 0 auto;
+}
+
+.mearrow-web-device-showcase .mearrow-web-monitor-viewport iframe {
+  transform: scale(.534722);
+}
+
+.mearrow-web-device-showcase .mearrow-web-monitor-stand {
+  width: 96px;
+  height: 70px;
+}
+
+.mearrow-web-device-showcase .mearrow-web-monitor-base {
+  width: 220px;
+  height: 18px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-monitor {
+  width: 800px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-monitor-viewport iframe {
+  transform: scale(.541667);
+}
+
+/* Match the embedded page's CSS viewport to each device so its 100dvh feed card
+   and first post media share one vertical center across the responsive previews. */
+.mearrow-web-thumbnail-showcase .mearrow-web-monitor-viewport iframe[src*="mearrow-sns"] {
+  height: 778px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-monitor-stand {
+  width: 118px;
+  height: 78px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-monitor-base {
+  width: 260px;
+  height: 20px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-tablet {
+  top: 370px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-tablet-screen {
+  height: 346px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-tablet-screen iframe {
+  height: 1014px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-phone {
+  top: 370px;
+}
+
+.mearrow-web-thumbnail-showcase .mearrow-web-phone-screen iframe[src*="mearrow-sns"] {
+  /* Account for the app header and bottom navigation in the mobile layout. */
+  height: 894px;
+}
+
+/* Match tablet source viewport height to the physical screen. SNS desktop and
+   phone views also account for the different detail-board monitor scale and
+   the bottom navigation visible in the mobile layout. */
+.mearrow-web-device-showcase:not(.mearrow-web-thumbnail-showcase) .mearrow-web-monitor-viewport iframe[src*="mearrow-sns"] {
+  height: 789px;
+}
+
+.mearrow-web-device-showcase:not(.mearrow-web-thumbnail-showcase) .mearrow-web-tablet-screen iframe {
+  height: 1014px;
+}
+
+.mearrow-web-device-showcase:not(.mearrow-web-thumbnail-showcase) .mearrow-web-phone-screen iframe[src*="mearrow-sns"] {
+  height: 894px;
+}
+
+.mearrow-web-tablet {
+  position: absolute;
+  left: -30px;
+  top: 280px;
+  z-index: 4;
+  width: 286px;
+  padding: 12px;
+  border-radius: 38px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .18), transparent 18%), linear-gradient(140deg, #30343a, #090b0e 58%, #020304);
+  box-shadow: 0 34px 70px rgba(5, 8, 12, .36), inset 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+.mearrow-web-tablet::before {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border-radius: 50%;
+  background: #090b0e;
+  transform: translateX(-50%);
+}
+
+.mearrow-web-tablet-screen {
+  height: 346px;
+  border-radius: 26px;
+}
+
+.mearrow-web-tablet-screen iframe {
+  width: 768px;
+  height: 1040px;
+  transform: scale(.341146);
+}
+
+.mearrow-web-phone {
+  position: absolute;
+  right: -10px;
+  top: 300px;
+  z-index: 5;
+  width: 166px;
+  padding: 8px;
+  border-radius: 34px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .18), transparent 18%), linear-gradient(140deg, #30343a, #090b0e 58%, #020304);
+  box-shadow: 0 34px 70px rgba(5, 8, 12, .42), inset 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+.mearrow-web-phone-screen {
+  height: 344px;
+  border-radius: 25px;
+}
+
+.mearrow-web-phone-screen iframe {
+  width: 390px;
+  height: 1280px;
+  transform: scale(.384615);
+}
+
+.mearrow-web-feature-list {
+  position: absolute;
+  left: 84px;
+  top: 1550px;
+  display: grid;
+  gap: 10px;
+  width: 520px;
+}
+
+.mearrow-web-feature-list p {
+  margin: 0;
+  color: var(--device-ink);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mearrow-web-feature-list p::before {
+  content: "· ";
+  color: var(--device-accent);
+}
+
+.mearrow-web-detail-footer {
+  position: absolute;
+  left: 86px;
+  right: 86px;
+  bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  border-top: 2px solid rgba(32, 36, 42, .18);
+  padding-top: 24px;
+}
+
+.mearrow-web-detail-footer p,
+.mearrow-web-detail-footer strong {
+  margin: 0;
+  color: #4b5560;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mearrow-web-detail-footer strong {
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .mearrow-web-asset-page .asset-actions {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: flex-end;
+    padding: 12px 16px;
+  }
+}

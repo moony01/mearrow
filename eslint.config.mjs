@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
     // Recovery worktrees and browser evidence are outside the active app.
     ".worktrees/**",
     ".playwright-mcp/**",
+    // Third-party minified bundles are not application source.
+    "design-kit/vendor/**",
   ]),
 ]);
 

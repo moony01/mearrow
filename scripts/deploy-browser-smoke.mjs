@@ -378,12 +378,38 @@ async function main() {
       undefined,
       { timeout: 20_000 },
     );
-    await page.getByRole('button', { name: 'Show more' }).click();
-    await page.waitForFunction(
-      () => document.querySelector('[data-visible-rank-limit="10"]') &&
-        document.querySelectorAll('[data-company-id]').length >= 10,
-      undefined,
-      { timeout: 20_000 },
+    const mobileShowMoreButton = page.getByRole('button', { name: 'Show more' });
+    const mobileRankExpansionDeadline = Date.now() + 20_000;
+    let mobileRankExpansionState = { rankLimit: null, itemCount: 0 };
+    while (Date.now() < mobileRankExpansionDeadline) {
+      mobileRankExpansionState = await page.evaluate(() => ({
+        rankLimit:
+          document.querySelector('[data-visible-rank-limit]')?.getAttribute('data-visible-rank-limit') ??
+          null,
+        itemCount: document.querySelectorAll('[data-company-id]').length,
+      }));
+
+      if (mobileRankExpansionState.rankLimit === '10' && mobileRankExpansionState.itemCount >= 10) {
+        break;
+      }
+
+      // The five cards and button can be present in server-rendered HTML before
+      // React hydrates. Retry while still at the initial rank limit so an early
+      // click that had no handler attached yet cannot fail the smoke test.
+      if (mobileRankExpansionState.rankLimit === '5') {
+        await mobileShowMoreButton.click();
+      }
+      await page.waitForTimeout(250);
+    }
+    mobileRankExpansionState = await page.evaluate(() => ({
+      rankLimit:
+        document.querySelector('[data-visible-rank-limit]')?.getAttribute('data-visible-rank-limit') ??
+        null,
+      itemCount: document.querySelectorAll('[data-company-id]').length,
+    }));
+    assert(
+      mobileRankExpansionState.rankLimit === '10' && mobileRankExpansionState.itemCount >= 10,
+      `mobile ranking did not expand to 10 cards (${JSON.stringify(mobileRankExpansionState)})`,
     );
     const mobileRanking = await page.evaluate(() => {
       const items = Array.from(document.querySelectorAll('[data-company-id]'));

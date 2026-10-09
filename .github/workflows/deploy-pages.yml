@@ -1,6 +1,9 @@
 name: MEARROW Pages Production
 
 on:
+  # This workflow is manual-only. If push/pull_request triggers are added, use
+  # paths-ignore:
+  #   - 'design-kit/**'
   workflow_dispatch:
     inputs:
       confirm:
