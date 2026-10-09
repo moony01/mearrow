@@ -20,10 +20,6 @@ vi.mock('@/components/news/NewsCard', () => ({
   ),
 }));
 
-vi.mock('@/components/common/AdBanner', () => ({
-  default: () => null,
-}));
-
 const newsPosts = Array.from({ length: 25 }, (_, index) => ({
   slug: `news-${index + 1}`,
   title: `News ${index + 1}`,
@@ -46,10 +42,10 @@ describe('NewsGridClient pagination', () => {
     mocks.getNewsCommentCounts.mockImplementation(() => new Promise(() => undefined));
   });
 
-  it('shows ten posts per page, fetches only visible slugs, and resets after filtering', async () => {
+  it('shows six posts per page and fetches comments only for visible slugs', async () => {
     renderNewsGrid();
 
-    expect(screen.getAllByTestId('news-card')).toHaveLength(10);
+    expect(screen.getAllByTestId('news-card')).toHaveLength(6);
     expect(screen.queryByRole('button', { name: '더 보기' })).toBeNull();
     expect(screen.getByRole('button', { name: '1페이지' }).getAttribute('aria-current')).toBe('page');
     expect((screen.getByRole('button', { name: '이전 페이지' }) as HTMLButtonElement).disabled).toBe(true);
@@ -57,30 +53,34 @@ describe('NewsGridClient pagination', () => {
 
     await waitFor(() => {
       expect(mocks.getNewsCommentCounts.mock.calls[0]?.[0]).toEqual(
-        newsPosts.slice(0, 10).map((post) => post.slug),
+        newsPosts.slice(0, 6).map((post) => post.slug),
       );
     });
 
     fireEvent.click(screen.getByRole('button', { name: '2페이지' }));
 
-    expect(screen.getByRole('heading', { name: 'News 11' })).toBeDefined();
+    expect(screen.getAllByTestId('news-card')).toHaveLength(6);
+    expect(screen.getByRole('heading', { name: 'News 7' })).toBeDefined();
     expect(screen.queryByRole('heading', { name: 'News 1' })).toBeNull();
     expect(screen.getByRole('button', { name: '2페이지' }).getAttribute('aria-current')).toBe('page');
 
     await waitFor(() => {
       const lastCall = mocks.getNewsCommentCounts.mock.calls.at(-1);
-        expect(lastCall?.[0]).toEqual(newsPosts.slice(10, 20).map((post) => post.slug));
+      expect(lastCall?.[0]).toEqual(newsPosts.slice(6, 12).map((post) => post.slug));
     });
 
-    fireEvent.click(screen.getByRole('button', { name: /^B$/ }));
+    fireEvent.click(screen.getByRole('button', { name: '3페이지' }));
 
-    expect(screen.getAllByTestId('news-card')).toHaveLength(10);
-    expect(screen.getByRole('heading', { name: 'News 16' })).toBeDefined();
-    expect(screen.queryByRole('navigation', { name: '뉴스 페이지 탐색' })).toBeNull();
+    expect(screen.getAllByTestId('news-card')).toHaveLength(6);
+    expect(screen.getByRole('heading', { name: 'News 13' })).toBeDefined();
+    expect(screen.getByRole('button', { name: '3페이지' }).getAttribute('aria-current')).toBe('page');
 
     await waitFor(() => {
       const lastCall = mocks.getNewsCommentCounts.mock.calls.at(-1);
-      expect(lastCall?.[0]).toEqual(newsPosts.slice(15, 25).map((post) => post.slug));
+      expect(lastCall?.[0]).toEqual(newsPosts.slice(12, 18).map((post) => post.slug));
     });
+
+    expect(screen.queryByRole('button', { name: /^A$/ })).toBeNull();
+    expect(screen.queryByRole('button', { name: /^B$/ })).toBeNull();
   });
 });

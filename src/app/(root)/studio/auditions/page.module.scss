@@ -86,7 +86,19 @@
   }
 }
 
-.posterLink {
+.cardLink {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: -3px;
+  }
+}
+
+.poster {
   position: relative;
   display: block;
   aspect-ratio: 16 / 10;
@@ -101,9 +113,10 @@
     transition: transform 240ms ease;
   }
 
-  &:hover img {
-    transform: scale(1.02);
-  }
+}
+
+.cardLink:hover .poster img {
+  transform: scale(1.02);
 }
 
 .status {
@@ -136,20 +149,13 @@
 .cardBody {
   padding: 1.35rem;
 
-  h2 {
+  h2,
+  h3 {
     margin: 0.7rem 0 0.65rem;
     font-size: 1.3rem;
     line-height: 1.35;
     letter-spacing: -0.02em;
 
-    a {
-      color: $color-text;
-      text-decoration: none;
-
-      &:hover {
-        color: $color-primary;
-      }
-    }
   }
 }
 
@@ -187,55 +193,6 @@
   line-height: 1.65;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
-.facts {
-  display: grid;
-  gap: 0.65rem;
-  margin: 1.1rem 0 1.25rem;
-  padding: 0.9rem 0;
-  border-block: 1px solid $color-border;
-
-  > div {
-    display: grid;
-    grid-template-columns: minmax(105px, 0.8fr) 1.2fr;
-    gap: 0.75rem;
-  }
-
-  dt,
-  dd {
-    margin: 0;
-    font-size: 0.8rem;
-    line-height: 1.45;
-  }
-
-  dt {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: $color-text-dim;
-
-    svg {
-      width: 0.9rem;
-      height: 0.9rem;
-    }
-  }
-
-  dd {
-    color: $color-text;
-    font-weight: 650;
-    text-align: right;
-  }
-}
-
-.readMore {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: $color-primary;
-  font-size: 0.9rem;
-  font-weight: 750;
-  text-decoration: none;
 }
 
 .notice {
@@ -279,7 +236,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-.posterLink {
+.poster {
   aspect-ratio: 16 / 9;
 }
 
@@ -292,24 +249,6 @@
   left: 14px;
   padding: 7px 10px;
   backdrop-filter: blur(14px);
-}
-
-.facts {
-  gap: 10px;
-  margin-top: 18px;
-  padding: 14px 0;
-}
-
-.readMore {
-  min-height: 38px;
-  padding: 0 13px;
-  border-radius: 10px;
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.readMore:hover {
-  background: var(--color-primary-hover);
 }
 
 .notice {

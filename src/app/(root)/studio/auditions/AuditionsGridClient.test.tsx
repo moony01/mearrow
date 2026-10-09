@@ -43,7 +43,7 @@ function createAudition(index: number): AuditionMeta {
 const auditions = Array.from({ length: 7 }, (_, index) => createAudition(index + 1));
 
 describe('AuditionsGridClient pagination', () => {
-  it('keeps the card data and links while paginating six cards at a time', () => {
+  it('keeps card links and paginates six cards at a time without the metadata block', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={koMessages}>
         <AuditionsGridClient posts={auditions} locale="ko" />
@@ -62,7 +62,8 @@ describe('AuditionsGridClient pagination', () => {
       '/ko/auditions/audition-7',
     );
     expect(screen.getByText('마감 임박')).toBeDefined();
-    expect(document.querySelector('time')?.getAttribute('datetime')).toBe('2026-12-31');
+    expect(document.querySelector('dl.facts')).toBeNull();
+    expect(document.querySelector('time')).toBeNull();
     expect(screen.getByRole('button', { name: '2페이지' }).getAttribute('aria-current')).toBe('page');
     expect((screen.getByRole('button', { name: '다음 페이지' }) as HTMLButtonElement).disabled).toBe(true);
 

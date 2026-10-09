@@ -610,13 +610,28 @@
 }
 
 .directMode .leagueListSection {
-  flex: 0 1 760px;
+  // This list stacks vertically below 1024px, so a desktop pixel basis would
+  // become a large empty height after the final visible rank.
+  flex: 0 1 auto;
   width: 100%;
   max-width: 760px;
 }
 
 .directMode .contentLayout {
   gap: 20px;
+}
+
+// Studio's progressive ranking should use the full width of its landing section.
+.dashboardContainer[data-visible-rank-limit] .directMode .leagueListSection {
+  max-width: none;
+}
+
+.dashboardContainer[data-visible-rank-limit] .directMode .contentLayout {
+  justify-content: flex-start;
+}
+
+.dashboardContainer[data-visible-rank-limit] .directMode .communityColumn {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -631,4 +646,11 @@
   .dashboardContainer {
     padding-bottom: 92px;
   }
+}
+
+.dashboardContainer.embeddedDashboard {
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }

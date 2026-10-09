@@ -8,10 +8,12 @@ import { HomeClient } from '@/app/(site)/HomeClient';
 
 export default function RankingClient({
   initialData,
+  embedded = false,
 }: {
   initialData?: CompaniesResponse | null;
+  embedded?: boolean;
 }) {
-  return <HomeClient initialData={initialData} />;
+  return <HomeClient initialData={initialData} embedded={embedded} progressiveRanking />;
 }
 
 export { HomeClient };

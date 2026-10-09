@@ -356,7 +356,11 @@ async function main() {
     assert(rankingResponse && rankingResponse.status() < 500, `ranking returned HTTP ${rankingResponse?.status()}`);
     await page.locator('[data-company-id]').first().waitFor({ state: 'visible', timeout: 20_000 });
     const companyCount = await page.locator('[data-company-id]').count();
-    assert(companyCount > 0, 'ranking rendered no company cards');
+    assert(companyCount === 5, `ranking should default to five cards (${companyCount})`);
+    assert(
+      await page.locator('[data-visible-rank-limit="5"]').count() === 1,
+      'ranking did not start with a five-rank limit',
+    );
     assert(!(await page.getByText('Failed to load data').count()), 'ranking rendered data-load failure');
 
     await page.setViewportSize({ width: 390, height: 844 });
@@ -369,7 +373,15 @@ async function main() {
       `mobile ranking returned HTTP ${mobileRankingResponse?.status()}`,
     );
     await page.waitForFunction(
-      () => document.querySelectorAll('[data-company-id]').length >= 10,
+      () => document.querySelector('[data-visible-rank-limit="5"]') &&
+        document.querySelectorAll('[data-company-id]').length === 5,
+      undefined,
+      { timeout: 20_000 },
+    );
+    await page.getByRole('button', { name: 'Show more' }).click();
+    await page.waitForFunction(
+      () => document.querySelector('[data-visible-rank-limit="10"]') &&
+        document.querySelectorAll('[data-company-id]').length >= 10,
       undefined,
       { timeout: 20_000 },
     );
