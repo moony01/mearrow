@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEARROW responsive web designs</title>
+  <meta name="robots" content="noindex">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f7f8fb;color:#161a22;font:16px/1.5 Inter,Arial,sans-serif}
+    main{width:min(1120px,calc(100% - 40px));margin:64px auto}
+    .eyebrow{color:#315cff;font-size:12px;font-weight:800;letter-spacing:.14em}
+    h1{margin:10px 0;font-size:clamp(34px,6vw,58px);letter-spacing:-.06em}
+    p{color:#667080}
+    .tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:36px}
+    a{display:block;border:1px solid #e3e7ee;border-radius:18px;background:#fff;padding:26px;color:#161a22;text-decoration:none;transition:transform .16s,border-color .16s}
+    a:hover{transform:translateY(-2px);border-color:#aabaff}a strong{font-size:20px}a span{display:block;margin-top:8px;color:#667080}
+    @media(max-width:620px){main{margin:36px auto}.tracks{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <span class="eyebrow">MEARROW DESIGN KIT / RESPONSIVE WEB</span>
+  <h1>Two products.<br>One K-pop community.</h1>
+  <p>Responsive web surfaces are adapted from the current MEARROW product code. Open a track to review its raw screen board.</p>
+  <nav class="tracks" aria-label="MEARROW web design tracks">
+    <a href="./mearrow-sns/"><strong>MEARROW SNS · Web</strong><span>Community feed · fan vote · creator profile</span></a>
+    <a href="./mearrow-studio/"><strong>MEARROW Studio · Web</strong><span>Editorial discovery · fan vote · auditions</span></a>
+  </nav>
+</main></body>
+</html>

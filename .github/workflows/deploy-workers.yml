@@ -5,9 +5,13 @@ on:
     branches:
       - main
       - feat/cloudflare-workers-migration
+    paths-ignore:
+      - 'design-kit/**'
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - 'design-kit/**'
   workflow_dispatch:
     inputs:
       environment:

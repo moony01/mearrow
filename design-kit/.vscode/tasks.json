@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Plostack: start design server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "design"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Runs npm run design on port 8090."
+    }
+  ]
+}

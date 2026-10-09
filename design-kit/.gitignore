@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+dist/
+.playwright-mcp/
+.worktrees/
+
+.env
+.env.*
+!.env.example
+
+pub/kakao-config.local.js

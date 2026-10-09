@@ -1,0 +1,251 @@
+:root {
+  color-scheme: light;
+  --page: #f7f5f1;
+  --ink: #1e1a17;
+  --ink-soft: #3c342d;
+  --muted: #6d6359;
+  --muted-soft: #5f554d;
+  --line: #ddd5ca;
+  --line-strong: #c8beb0;
+  --accent: #2e6a57;
+  --accent-deep: #1f4a3d;
+  --accent-soft: #f1f8f4;
+  --warn: #8b4f13;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(221, 213, 202, 0.34) 1px, transparent 1px) 0 0 / 80px 80px,
+    var(--page);
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p,
+dl,
+dd {
+  margin: 0;
+}
+
+.kit-console {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+.artifact-ledger {
+  border-top: 2px solid var(--ink);
+}
+
+.ledger-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ledger-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 98px minmax(160px, 280px) minmax(0, 1fr) 108px;
+  gap: 16px;
+  align-items: center;
+  min-height: 72px;
+  padding: 0 0 0 12px;
+  border-bottom: 1px solid var(--line);
+  transition:
+    background-color 180ms ease-out,
+    color 180ms ease-out;
+}
+
+.ledger-row::before,
+.ledger-subrow::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: transparent;
+  content: "";
+}
+
+.ledger-row:hover,
+.ledger-subrow:hover {
+  background: rgba(241, 248, 244, 0.74);
+}
+
+.ledger-row:hover::before,
+.ledger-row:focus-visible::before,
+.ledger-subrow:hover::before,
+.ledger-subrow:focus-visible::before {
+  background: var(--accent);
+}
+
+.ledger-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.ledger-row--group:hover {
+  background: transparent;
+}
+
+.ledger-row--group:hover::before {
+  background: transparent;
+}
+
+.ledger-sublist {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-subrow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 98px minmax(160px, 280px) minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 0 0 36px;
+  background: rgba(255, 255, 255, 0.28);
+  transition:
+    background-color 180ms ease-out,
+    color 180ms ease-out;
+}
+
+.ledger-subrow::before {
+  left: 24px;
+}
+
+.ledger-subrow + .ledger-subrow,
+.ledger-sublist li + li .ledger-subrow {
+  border-top: 1px solid rgba(221, 213, 202, 0.72);
+}
+
+.ledger-code,
+.ledger-path,
+.ledger-state {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.ledger-code {
+  color: var(--warn);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.ledger-path {
+  min-width: 0;
+  color: var(--accent-deep);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+
+.ledger-purpose {
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.ledger-state {
+  justify-self: end;
+  min-width: 84px;
+  padding: 4px 8px;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.kit-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.kit-footer a {
+  color: var(--muted-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .kit-console {
+    width: min(100% - 32px, 1120px);
+    padding: 28px 0 44px;
+  }
+
+  .ledger-row {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 6px 12px;
+    min-height: 76px;
+    padding: 12px 0 12px 12px;
+  }
+
+  .ledger-subrow {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 6px 12px;
+    min-height: 62px;
+    padding: 10px 0 10px 28px;
+  }
+
+  .ledger-subrow::before {
+    left: 16px;
+  }
+
+  .ledger-purpose,
+  .ledger-state {
+    grid-column: 2;
+  }
+
+  .ledger-subrow .ledger-purpose {
+    grid-column: 2;
+  }
+
+  .ledger-state {
+    justify-self: start;
+    min-width: 0;
+    padding: 0;
+    border-left: 0;
+    color: var(--muted-soft);
+    text-align: left;
+  }
+
+  .kit-footer {
+    justify-content: flex-start;
+  }
+}
