@@ -26,30 +26,14 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  color: #151922;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
   text-decoration: none;
 }
 
 .brandLogo {
   display: block;
-  width: 146px;
+  width: 220px;
   height: auto;
   flex: 0 1 auto;
-}
-
-.brandDivider {
-  color: #a4aab5;
-  font-weight: 500;
-}
-
-.brandSection {
-  color: #315cff;
-  font-size: 11px;
-  letter-spacing: 0.13em;
 }
 
 .communityLink {
@@ -106,11 +90,7 @@
   }
 
   .brandLogo {
-    width: 122px;
-  }
-
-  .brand {
-    gap: 7px;
+    width: 190px;
   }
 
   .communityLink {

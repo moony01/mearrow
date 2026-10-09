@@ -3,7 +3,7 @@ title: "WAKEONE Next Wave Online Audition"
 excerpt: "WAKEONE's ongoing online audition accepts applicants of any age, gender, or nationality who have no impediment to international travel."
 agency: "WAKEONE"
 publishedAt: "2026-08-09"
-updatedAt: "2026-09-13"
+updatedAt: "2026-10-09"
 timezone: "Asia/Seoul"
 mode: "online"
 categories:
@@ -15,7 +15,7 @@ eligibility: "No restrictions on gender, age, or nationality; applicants must ha
 status: "ongoing"
 officialUrl: "https://wake-one.com/en/audition/"
 sourceUrl: "https://wake-one.com/en/audition/"
-verifiedAt: "2026-09-13"
+verifiedAt: "2026-10-09"
 poster: "https://cdn.wake-one.com/wp-content/uploads/2023/01/25170543/%EC%98%A4%EB%94%94%EC%85%98-scaled.jpeg"
 posterAlt: "Official WAKEONE Next Wave audition promotional image"
 posterWidth: 2560

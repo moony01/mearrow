@@ -261,7 +261,8 @@
     "officialSource": "Source officielle",
     "verifiedAt": "Vérifié par MEARROW",
     "updatedAt": "Annonce mise à jour",
-    "relatedAuditions": "Autres auditions"
+    "relatedAuditions": "Autres auditions",
+    "views": "{count} vues"
   },
   "NewsComments": {
     "title": "Commentaires",

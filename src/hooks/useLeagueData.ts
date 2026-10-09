@@ -19,6 +19,7 @@
 'use client';
 
 import useSWR from 'swr';
+import { useEffect, useMemo, useSyncExternalStore } from 'react';
 import type {
   CompanyRanking,
   LeagueTier,
@@ -43,6 +44,7 @@ const fetcher = async (): Promise<CompaniesResponse> => {
 
 /** localStorage 키: 이전 리그 순위 저장용 */
 const PREV_LEAGUE_RANKS_KEY = 'kcl_previous_league_ranks';
+const PREV_LEAGUE_RANKS_EVENT = 'kcl-previous-league-ranks-change';
 
 /**
  * 이전 리그 순위 데이터 타입
@@ -96,6 +98,41 @@ function loadPreviousLeagueRanks(): PreviousLeagueRanksData | null {
   }
 }
 
+function subscribeToPreviousLeagueRanks(onChange: () => void): () => void {
+  if (typeof window === 'undefined') return () => {};
+
+  window.addEventListener('storage', onChange);
+  window.addEventListener(PREV_LEAGUE_RANKS_EVENT, onChange);
+  return () => {
+    window.removeEventListener('storage', onChange);
+    window.removeEventListener(PREV_LEAGUE_RANKS_EVENT, onChange);
+  };
+}
+
+function getPreviousLeagueRanksSnapshot(): string | null {
+  if (!loadPreviousLeagueRanks()) return null;
+
+  try {
+    return localStorage.getItem(PREV_LEAGUE_RANKS_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function getServerPreviousLeagueRanksSnapshot(): null {
+  return null;
+}
+
+function parsePreviousLeagueRanksSnapshot(snapshot: string | null): PreviousLeagueRanksData | null {
+  if (!snapshot) return null;
+
+  try {
+    return JSON.parse(snapshot) as PreviousLeagueRanksData;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * 현재 순위를 localStorage에 저장
  * - 이전 순위가 없을 때만 저장 (기준점 설정)
@@ -103,22 +140,14 @@ function loadPreviousLeagueRanks(): PreviousLeagueRanksData | null {
  *
  * @param allCompanies - 전체 회사 배열 (rank 순)
  */
-function savePreviousLeagueRanks(
+function loadOrInitializePreviousLeagueRanks(
   allCompanies: CompanyRanking[],
-): void {
-  if (typeof window === 'undefined') return;
+): PreviousLeagueRanksData | null {
+  if (typeof window === 'undefined') return null;
 
   try {
-    const existing = localStorage.getItem(PREV_LEAGUE_RANKS_KEY);
-    if (existing) {
-      const data: PreviousLeagueRanksData = JSON.parse(existing);
-      // 같은 UTC 날짜의 데이터가 있으면 유지 (UTC 자정까지 기준점 고정)
-      const savedDate = new Date(data.savedAt);
-      const savedDateUTC = `${savedDate.getUTCFullYear()}-${String(savedDate.getUTCMonth() + 1).padStart(2, '0')}-${String(savedDate.getUTCDate()).padStart(2, '0')}`;
-      if (savedDateUTC === getTodayUTC()) {
-        return;
-      }
-    }
+    const existing = loadPreviousLeagueRanks();
+    if (existing) return existing;
 
     // 새 기준점 저장: 배열 인덱스 + 1 = 전체 순위
     const premier: Record<string, number> = {};
@@ -133,8 +162,11 @@ function savePreviousLeagueRanks(
     };
 
     localStorage.setItem(PREV_LEAGUE_RANKS_KEY, JSON.stringify(data));
+    window.dispatchEvent(new Event(PREV_LEAGUE_RANKS_EVENT));
+    return data;
   } catch {
     // localStorage 접근 실패 시 무시
+    return null;
   }
 }
 
@@ -353,6 +385,15 @@ export function useLeagueData(options: UseLeagueDataOptions = {}): UseLeagueData
   // 개발 환경에서 불필요한 API 호출 방지
   const isDev = process.env.NODE_ENV === 'development';
   const hasFallback = !!fallbackData;
+  const previousLeagueRanksSnapshot = useSyncExternalStore(
+    subscribeToPreviousLeagueRanks,
+    getPreviousLeagueRanksSnapshot,
+    getServerPreviousLeagueRanksSnapshot,
+  );
+  const previousLeagueRanks = useMemo(
+    () => parsePreviousLeagueRanksSnapshot(previousLeagueRanksSnapshot),
+    [previousLeagueRanksSnapshot],
+  );
 
   // [DEV] 개발 환경: 옵션으로 전달된 refreshInterval도 무시하고 0으로 강제 (DB 부하 방지)
   // 프로덕션: 전달된 값 또는 기본값(20초) 사용
@@ -369,13 +410,20 @@ export function useLeagueData(options: UseLeagueDataOptions = {}): UseLeagueData
     fallbackData: fallbackData || undefined, // SSR 초기 데이터 전달
   });
 
-  // 이전 리그 순위 데이터 로드 (localStorage)
-  const previousLeagueRanks = loadPreviousLeagueRanks();
-
   // 전체 소속사 변환 (rank 순 정렬)
-  const allCompaniesRaw = (data?.companies || [])
-    .map((company) => transformToCompanyRanking(company))
-    .sort((a, b) => a.rank - b.rank);
+  const allCompaniesRaw = useMemo(
+    () => (data?.companies || [])
+      .map((company) => transformToCompanyRanking(company))
+      .sort((a, b) => a.rank - b.rank),
+    [data?.companies],
+  );
+
+  // Initialize the local baseline after hydration; the external store reads
+  // it with a null server snapshot so the first client render matches the SSR.
+  useEffect(() => {
+    if (allCompaniesRaw.length === 0) return;
+    loadOrInitializePreviousLeagueRanks(allCompaniesRaw);
+  }, [allCompaniesRaw]);
 
   // 순위 변동 계산 (전체 순위 기반)
   const allCompaniesWithRankChange = calculateLeagueRankChanges(
@@ -392,11 +440,6 @@ export function useLeagueData(options: UseLeagueDataOptions = {}): UseLeagueData
     isPromotionZone: false,
     promotionStatus: 'safe' as const,
   }));
-
-  // 현재 순위를 localStorage에 저장 (기준점 설정)
-  if (allCompanies.length > 0) {
-    savePreviousLeagueRanks(allCompanies);
-  }
 
   // 하위 호환: premierLeague = 1~10위, challengers = 빈 배열
   const premierLeague = allCompanies.slice(0, 10);

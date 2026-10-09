@@ -17,6 +17,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { JsonLd } from '@/components/common/JsonLd';
+import AuditionViewCounter from '@/components/auditions/AuditionViewCounter';
 import {
   getAllAuditionParams,
   getAuditionBySlug,
@@ -214,6 +215,10 @@ export default async function AuditionDetailPage({ params }: AuditionDetailPageP
           </div>
           <h1>{post.title}</h1>
           <p className={styles.lead}>{post.excerpt}</p>
+          <div className={styles.meta}>
+            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt, locale)}</time>
+            <AuditionViewCounter slug={post.slug} incrementOnMount iconSize={14} />
+          </div>
           <a
             className={styles.applyButton}
             href={post.officialUrl}

@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { Calendar } from 'lucide-react';
 import Pagination from '@/components/common/Pagination';
+import AuditionViewCounter from '@/components/auditions/AuditionViewCounter';
 import type { AuditionMeta } from '@/lib/auditions';
 import styles from './page.module.scss';
 
@@ -64,6 +66,20 @@ export default function AuditionsGridClient({ posts, locale, basePath, headingLe
 
                 <CardHeading>{post.title}</CardHeading>
                 <p className={styles.excerpt}>{post.excerpt}</p>
+                <div className={styles.metaRow}>
+                  <time className={styles.date} dateTime={post.publishedAt}>
+                    <Calendar size={14} aria-hidden="true" />
+                    <span>
+                      {new Intl.DateTimeFormat(locale, {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        timeZone: 'UTC',
+                      }).format(new Date(`${post.publishedAt.slice(0, 10)}T12:00:00Z`))}
+                    </span>
+                  </time>
+                  <AuditionViewCounter slug={post.slug} />
+                </div>
               </div>
             </Link>
           </article>

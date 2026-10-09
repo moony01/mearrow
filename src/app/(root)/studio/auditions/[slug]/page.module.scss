@@ -146,6 +146,15 @@
   line-height: 1.7;
 }
 
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: -0.55rem 0 1.4rem;
+  color: $color-text-dim;
+  font-size: 0.85rem;
+}
+
 .applyButton {
   display: inline-flex;
   align-items: center;
