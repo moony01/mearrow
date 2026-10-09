@@ -1,5 +1,5 @@
-<svg width="360" height="82" viewBox="0 0 360 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <title>MEARROW wordmark</title>
+<svg width="360" height="64" viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>MEARROW Studio wordmark</title>
   <defs>
     <linearGradient id="mearrow-blue" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
       <stop stop-color="#315CFF"/>
@@ -10,5 +10,6 @@
   <path d="M13 45V19H21.5L32 33.5L42.5 19H51V45H43V31.5L36 41.5H28L21 31.5V45H13Z" fill="#F7F8FF"/>
   <path d="M28.5 48.5H51V25.5M43 25.5H51V33.5" stroke="#C7FF32" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="78" y="41" fill="#10131C" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" letter-spacing="1.6">MEARROW</text>
-  <text x="80" y="61" fill="#315CFF" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="2.4">CONTENT BECOMES OPPORTUNITY.</text>
+  <path d="M267 27V43" stroke="#A4AAB5" stroke-width="1.5"/>
+  <text x="279" y="40" fill="#315CFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="1.45">STUDIO</text>
 </svg>

@@ -261,7 +261,8 @@
     "officialSource": "公式出典",
     "verifiedAt": "MEARROW確認日",
     "updatedAt": "告知更新日",
-    "relatedAuditions": "ほかのオーディション"
+    "relatedAuditions": "ほかのオーディション",
+    "views": "{count}回閲覧"
   },
   "NewsComments": {
     "title": "コメント",
