@@ -5,6 +5,10 @@ import type { AuditionMeta } from '@/lib/auditions';
 import koMessages from '@/messages/ko.json';
 import AuditionsGridClient from './AuditionsGridClient';
 
+vi.mock('@/components/auditions/AuditionViewCounter', () => ({
+  default: ({ slug }: { slug: string }) => <span>{`views:${slug}`}</span>,
+}));
+
 vi.mock('next/link', () => ({
   default: ({ children, href, ...props }: React.ComponentProps<'a'> & { href: string }) => (
     <a href={href} {...props}>
@@ -43,7 +47,7 @@ function createAudition(index: number): AuditionMeta {
 const auditions = Array.from({ length: 7 }, (_, index) => createAudition(index + 1));
 
 describe('AuditionsGridClient pagination', () => {
-  it('keeps card links and paginates six cards at a time without the metadata block', () => {
+  it('keeps card links, date and view metadata, and paginates six cards at a time', () => {
     render(
       <NextIntlClientProvider locale="ko" messages={koMessages}>
         <AuditionsGridClient posts={auditions} locale="ko" />
@@ -62,8 +66,8 @@ describe('AuditionsGridClient pagination', () => {
       '/ko/auditions/audition-7',
     );
     expect(screen.getByText('마감 임박')).toBeDefined();
-    expect(document.querySelector('dl.facts')).toBeNull();
-    expect(document.querySelector('time')).toBeNull();
+    expect(screen.getByText('2026년 1월 1일')).toBeDefined();
+    expect(screen.getByText('views:audition-7')).toBeDefined();
     expect(screen.getByRole('button', { name: '2페이지' }).getAttribute('aria-current')).toBe('page');
     expect((screen.getByRole('button', { name: '다음 페이지' }) as HTMLButtonElement).disabled).toBe(true);
 

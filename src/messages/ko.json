@@ -261,7 +261,8 @@
     "officialSource": "공식 출처",
     "verifiedAt": "MEARROW 확인일",
     "updatedAt": "공고 갱신일",
-    "relatedAuditions": "다른 오디션 정보"
+    "relatedAuditions": "다른 오디션 정보",
+    "views": "조회 {count}"
   },
   "NewsComments": {
     "title": "댓글",

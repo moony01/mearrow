@@ -11,9 +11,7 @@ export default function StudioFrame({ children }: { children: ReactNode }) {
           <Link className={styles.brand} href="/studio" aria-label="MEARROW Studio home">
             {/* Use the source SVG directly; this project has a custom optimizer loader. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className={styles.brandLogo} src="/mearrow-wordmark.svg" alt="" width="360" height="82" />
-            <span className={styles.brandDivider} aria-hidden="true">/</span>
-            <span className={styles.brandSection}>STUDIO</span>
+            <img className={styles.brandLogo} src="/mearrow-wordmark.svg" alt="" width="360" height="64" />
           </Link>
           <Link className={styles.communityLink} href="/">
             Explore MEARROW <ArrowUpRight size={15} aria-hidden="true" />

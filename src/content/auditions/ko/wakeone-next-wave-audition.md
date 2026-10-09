@@ -3,7 +3,7 @@ title: "WAKEONE Next Wave 온라인 오디션"
 excerpt: "WAKEONE의 상시 온라인 오디션은 성별·연령·국적 제한 없이 지원할 수 있으며, 해외 출입국에 결격사유가 없어야 합니다."
 agency: "WAKEONE"
 publishedAt: "2026-08-09"
-updatedAt: "2026-09-13"
+updatedAt: "2026-10-09"
 timezone: "Asia/Seoul"
 mode: "online"
 categories:
@@ -15,7 +15,7 @@ eligibility: "성별·연령·국적 무관, 해외 출입국에 결격사유가
 status: "ongoing"
 officialUrl: "https://wake-one.com/audition/"
 sourceUrl: "https://wake-one.com/audition/"
-verifiedAt: "2026-09-13"
+verifiedAt: "2026-10-09"
 poster: "https://cdn.wake-one.com/wp-content/uploads/2023/01/25170543/%EC%98%A4%EB%94%94%EC%85%98-scaled.jpeg"
 posterAlt: "WAKEONE Next Wave 온라인 오디션 공식 홍보 이미지"
 posterWidth: 2560

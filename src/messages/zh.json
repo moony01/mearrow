@@ -261,7 +261,8 @@
     "officialSource": "官方来源",
     "verifiedAt": "MEARROW核对日期",
     "updatedAt": "公告更新日期",
-    "relatedAuditions": "其他试镜"
+    "relatedAuditions": "其他试镜",
+    "views": "{count}次浏览"
   },
   "NewsComments": {
     "title": "评论",
