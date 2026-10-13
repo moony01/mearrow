@@ -1,0 +1,476 @@
+{
+  "workflow": "mearrow-news",
+  "slug": "kpop-group-survival-study",
+  "runId": "20261013-001",
+  "articleUrl": "https://mearrow.com/studio/news/kpop-group-survival-study",
+  "runStartedAt": "2026-10-13T05:37:21Z",
+  "runEndedAt": "2026-10-13T07:15:34Z",
+  "authorization": {
+    "actor": "user",
+    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+    "confirmedAt": "2026-10-13T06:40:15Z",
+    "method": "explicit_mearrow_news_autopilot_invocation_and_user_topic_selection",
+    "evidence": "User directly requested MEARROW news automation, selected candidate 3, and explicitly asked to update this skill so publication and indexing run automatically."
+  },
+  "stepResults": {
+    "topicDedupe": "PASS",
+    "research": "PASS",
+    "content": "PASS",
+    "image": "PASS",
+    "localQa": "PASS",
+    "browserQa": "PASS",
+    "publish": "PENDING",
+    "deploy": "PENDING",
+    "gsc": "PENDING"
+  },
+  "research": {
+    "queries": [
+      {
+        "query": "K-pop 1,182 groups 4.12 years survival 55.03% 2026 study",
+        "resultUrls": [
+          "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+          "https://view.asiae.co.kr/en/article/2026080516272694487",
+          "https://en.edaily.co.kr/news/eda202608185590/"
+        ]
+      },
+      {
+        "query": "site:kci.go.kr ART003366423 Survival and Hit Structure 1182",
+        "resultUrls": [
+          "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003366423"
+        ]
+      },
+      {
+        "query": "site:law.go.kr 2024 standard singer exclusive contract 7 years",
+        "resultUrls": [
+          "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flSeq=140964437",
+          "https://www.mcst.go.kr/site/s_data/ordinance/instruction/instructionView.jsp?pSeq=3436"
+        ]
+      },
+      {
+        "query": "Wikimedia Commons Students dancing Taipei Expo Park mirror space recital performance dance studio",
+        "resultUrls": [
+          "https://commons.wikimedia.org/wiki/File:Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg"
+        ]
+      },
+      {
+        "query": "site:commons.wikimedia.org/wiki/File \"Recital performance in a dance studio.jpg\"",
+        "resultUrls": [
+          "https://commons.wikimedia.org/wiki/File:Recital_performance_in_a_dance_studio.jpg"
+        ]
+      }
+    ],
+    "urls": [
+      "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003366423",
+      "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+      "https://view.asiae.co.kr/en/article/2026080516272694487",
+      "https://en.sedaily.ai/culture/2026/08/04/k-pop-success-a-needles-eye-only-19-of-1182-groups-went",
+      "https://en.edaily.co.kr/news/eda202608185590/",
+      "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flSeq=140964437",
+      "https://www.mcst.go.kr/site/s_data/ordinance/instruction/instructionView.jsp?pSeq=3436",
+      "https://www.koreajoongangdaily.com/entertainment/behind-the-anniversary-boom-are-k-pop-groups-finally-beating-the-sevenyear-curse/12853743"
+    ],
+    "trustedUrls": [
+      "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003366423",
+      "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+      "https://view.asiae.co.kr/en/article/2026080516272694487",
+      "https://en.edaily.co.kr/news/eda202608185590/",
+      "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flSeq=140964437",
+      "https://www.mcst.go.kr/site/s_data/ordinance/instruction/instructionView.jsp?pSeq=3436",
+      "https://en.sedaily.ai/culture/2026/08/04/k-pop-success-a-needles-eye-only-19-of-1182-groups-went"
+    ],
+    "sourceCaveat": "Major outlets report the same underlying 2026 study; these are cross-checks of one dataset, not independent empirical replications. Seoul Economic Daily English page is AI-translated; its Korean click-through returned 403 Forbidden and was not relied on.",
+    "facts": [
+      {
+        "claim": "Study covers 1,182 groups debuting 1996–2025 and combines statistical/cohort analysis with expert interviews.",
+        "status": "PASS",
+        "sources": [
+          "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003366423"
+        ]
+      },
+      {
+        "claim": "Average activity period is 4.12 years; 55.03% remain active at year three, so 44.97% are no longer active by that point; this does not mean all formally disbanded.",
+        "status": "PASS",
+        "sources": [
+          "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+          "https://view.asiae.co.kr/en/article/2026080516272694487",
+          "https://en.edaily.co.kr/news/eda202608185590/"
+        ]
+      },
+      {
+        "claim": "Cohort survival figures reported at years 1/3/5/7/10 are 87.99%/55.03%/36.62%/26.14%/17.92%.",
+        "status": "PASS",
+        "sources": [
+          "https://view.asiae.co.kr/en/article/2026080516272694487"
+        ]
+      },
+      {
+        "claim": "42 groups (3.55%) passed 300,000 single-album sales and 19 (1.61%) passed one million.",
+        "status": "PASS",
+        "sources": [
+          "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+          "https://en.edaily.co.kr/news/eda202608185590/"
+        ]
+      },
+      {
+        "claim": "Reported average activity periods are 5.11 years for boy groups and 3.13 for girl groups; article frames explanations as a cited interpretation, not a rule about individuals.",
+        "status": "PASS",
+        "sources": [
+          "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+          "https://en.edaily.co.kr/news/eda202608185590/"
+        ]
+      },
+      {
+        "claim": "The 2024 standard singer contract form sets a seven-year maximum unless extended by written agreement; this is not a guarantee of group activity.",
+        "status": "PASS",
+        "sources": [
+          "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flSeq=140964437",
+          "https://www.mcst.go.kr/site/s_data/ordinance/instruction/instructionView.jsp?pSeq=3436"
+        ]
+      }
+    ]
+  },
+  "topicDedupe": {
+    "indexSource": "src/content/news/en/*.md; runtime/mearrow-news-topic-dedupe-20261013.json",
+    "indexedAt": "2026-10-13T05:37:21Z",
+    "fileCount": 205,
+    "publishedCount": 204,
+    "draftCount": 1,
+    "liveListing": "https://mearrow.com/en/news returned HTTP 200 but initial server HTML contained zero news anchors; full local corpus used.",
+    "indexedActiveSlugsCount": 204,
+    "indexedDraftSlugs": [
+      "top-nana-dating-confirmed"
+    ],
+    "candidateChecks": [
+      {
+        "topic": "2026 journal census of 1,182 K-pop groups; average 4.12-year activity and 44.97% not active at year three, framed for trainees/new groups.",
+        "status": "PASS",
+        "matchedExistingSlugs": [
+          "trainee-system-evolution",
+          "big4-trainee-requirements-attitude",
+          "the-scout-reboot",
+          "kpop-trainee-contract-reform-2026-foreign-gaps",
+          "foreign-trainee-reality-visa-culture"
+        ],
+        "overlap": "Existing files cover auditions, contracts, or training systems but not this dataset or its survival statistics.",
+        "newEventEvidence": "2026 journal paper covers groups debuting 1996–2025.",
+        "sourceUrls": [
+          "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003366423",
+          "https://www.newsis.com/view/NISX20260804_0003735284?pc_view=1",
+          "https://www.koreajoongangdaily.com/entertainment/behind-the-anniversary-boom-are-k-pop-groups-finally-beating-the-sevenyear-curse/12853743"
+        ]
+      }
+    ],
+    "excludedCandidates": [
+      "T.O.P and Nana relationship reaction (overlaps top-nana-dating-studio54)",
+      "ATEEZ San dating rumor (overlaps ateez-san-wooyoung-dating-rumor)",
+      "Jungkook/Winter speculation (same relationship claim)",
+      "Unverified allegation involving an idol and minor (insufficient reliable sourcing)"
+    ]
+  },
+  "content": {
+    "title": "45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check",
+    "titleOptions": [
+      {
+        "title": "45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check",
+        "score": 22,
+        "outOf": 25,
+        "selected": true
+      },
+      {
+        "title": "1,182 Debuts, 4.12 Years: K-Pop’s Brutal Survival Clock",
+        "score": 21,
+        "outOf": 25,
+        "selected": false
+      },
+      {
+        "title": "The K-Pop Debut Dream Has a Three-Year Wall — Here’s What 30 Years of Data Show",
+        "score": 20,
+        "outOf": 25,
+        "selected": false
+      }
+    ],
+    "excerpt": "A 30-year study found K-pop groups averaged 4.12 years of activity. For trainees, the question is whether support lasts beyond debut.",
+    "excerptLength": 133,
+    "wordCount": 1305,
+    "h2Count": 6,
+    "h3Count": 6,
+    "sourceCount": 9,
+    "qualityEligible": true,
+    "encodingReplacementCharacters": 0,
+    "internalLinks": [
+      "/studio/news/kpop-trainee-contract-reform-2026-foreign-gaps",
+      "/studio/news/kpop-indie-agency-fund"
+    ],
+    "factsDistinguishActivityFromFormalDisbandment": true,
+    "activityIsNotContractExpiry": true
+  },
+  "images": {
+    "workflow": "mearrow-news",
+    "slug": "kpop-group-survival-study",
+    "runId": "20261013-001",
+    "imageSearchQueries": [
+      "Wikimedia Commons Students dancing Taipei Expo Park mirror space recital performance dance studio",
+      "site:commons.wikimedia.org/wiki/File \"Recital performance in a dance studio.jpg\""
+    ],
+    "sourceAttributionGate": "PASS",
+    "acceptedImages": [
+      {
+        "id": "thumbnail",
+        "type": "licensed-source",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+        "provider": "Wikimedia Commons",
+        "sourceAuthor": "Solomon203",
+        "sourceMime": "image/jpeg",
+        "sourceDimensions": {
+          "width": 3520,
+          "height": 1980
+        },
+        "sourceBytes": 1191515,
+        "sourceSha256": "1284cff422a355c0cb929590ee5f9cc04df2a38a042484fa2ec4dd0cc0ca1aea",
+        "licenseStatus": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "rightsEvidence": "Commons file page identifies Solomon203 as author and states CC BY-SA 4.0; license permits adaptation with attribution, license link, and change indication.",
+        "aiGenerated": false,
+        "visualReview": "PASS; image shows students dancing at a mirrored public space in Taipei, not K-pop trainees or study participants.",
+        "finalPath": "public/images/news/kpop-group-survival-study-thumbnail.webp",
+        "transform": "16:9 crop (x=300,y=500,width=2489,height=1400), converted to WebP quality 82",
+        "finalDimensions": {
+          "width": 2489,
+          "height": 1400
+        },
+        "finalSha256": "7bcbeca72735b3cd372db25a2ddab1e210ea72f4664d87c40a2e02dff7a1698f",
+        "finalBytes": 319150,
+        "mtime": "2026-10-13T06:26:07.052Z",
+        "localOriginalPath": ".resource/originals/kpop-group-survival-study-thumbnail.jpg",
+        "stagingPath": ".resource/kpop-group-survival-study-thumbnail.webp"
+      },
+      {
+        "id": "body",
+        "type": "licensed-source",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Recital_performance_in_a_dance_studio.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Recital_performance_in_a_dance_studio.jpg",
+        "provider": "Wikimedia Commons",
+        "sourceAuthor": "Nenad Stojković (Shixart1985)",
+        "sourceMime": "image/jpeg",
+        "sourceDimensions": {
+          "width": 6048,
+          "height": 4024
+        },
+        "sourceBytes": 8741341,
+        "sourceSha256": "e4b18dcd9d6889713c3b7804bda4b1dcb8b596c6e6812ce9322c30157eb1be2",
+        "licenseStatus": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "rightsEvidence": "Commons file page identifies the photographer and states CC BY 2.0; license permits adaptation with attribution, license link, and change indication.",
+        "aiGenerated": false,
+        "visualReview": "PASS; image depicts a presenter watching dancers at a studio recital, not K-pop trainees or study participants.",
+        "finalPath": "public/images/news/kpop-group-survival-study-1.webp",
+        "transform": "Centered 16:9 crop (y=311), converted to WebP",
+        "finalDimensions": {
+          "width": 6048,
+          "height": 3402
+        },
+        "finalSha256": "cff0ecb6c9119b7baf7364245ee39049f4d387262ea9f6809406d23edca75b5e",
+        "finalBytes": 521696,
+        "mtime": "2026-10-13T06:26:07.054Z",
+        "localOriginalPath": ".resource/originals/kpop-group-survival-study-1.jpg",
+        "stagingPath": ".resource/kpop-group-survival-study-1.webp"
+      }
+    ],
+    "rejectedImages": [
+      {
+        "file": "dance-rehearsal.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Rehearsal_for_dancing.jpg",
+        "sourceAuthor": "Pauloleong2002",
+        "licenseStatus": "CC BY-SA 4.0",
+        "sha256": "0507722aa65e42c7ec8872600c310dbc549501dbc81151bb21ee2dff269ca699",
+        "reason": "Visual review rejected: unrelated outdoor dance practice with hand fans; weak fit for this data-led trainee article. Not published."
+      }
+    ],
+    "note": "Both selected images are illustrative only. Article captions disclose that neither image is a K-pop agency training session nor part of the study.",
+    "items": [
+      {
+        "id": "thumbnail",
+        "type": "licensed-source",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+        "provider": "Wikimedia Commons",
+        "sourceAuthor": "Solomon203",
+        "sourceMime": "image/jpeg",
+        "sourceDimensions": {
+          "width": 3520,
+          "height": 1980
+        },
+        "sourceBytes": 1191515,
+        "sourceSha256": "1284cff422a355c0cb929590ee5f9cc04df2a38a042484fa2ec4dd0cc0ca1aea",
+        "licenseStatus": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "rightsEvidence": "Commons file page identifies Solomon203 as author and states CC BY-SA 4.0; license permits adaptation with attribution, license link, and change indication.",
+        "aiGenerated": false,
+        "visualReview": "PASS; image shows students dancing at a mirrored public space in Taipei, not K-pop trainees or study participants.",
+        "finalPath": "public/images/news/kpop-group-survival-study-thumbnail.webp",
+        "transform": "16:9 crop (x=300,y=500,width=2489,height=1400), converted to WebP quality 82",
+        "finalDimensions": {
+          "width": 2489,
+          "height": 1400
+        },
+        "finalSha256": "7bcbeca72735b3cd372db25a2ddab1e210ea72f4664d87c40a2e02dff7a1698f",
+        "finalBytes": 319150,
+        "mtime": "2026-10-13T06:26:07.052Z",
+        "localOriginalPath": ".resource/originals/kpop-group-survival-study-thumbnail.jpg",
+        "stagingPath": ".resource/kpop-group-survival-study-thumbnail.webp"
+      },
+      {
+        "id": "body",
+        "type": "licensed-source",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Recital_performance_in_a_dance_studio.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Recital_performance_in_a_dance_studio.jpg",
+        "provider": "Wikimedia Commons",
+        "sourceAuthor": "Nenad Stojković (Shixart1985)",
+        "sourceMime": "image/jpeg",
+        "sourceDimensions": {
+          "width": 6048,
+          "height": 4024
+        },
+        "sourceBytes": 8741341,
+        "sourceSha256": "e4b18dcd9d6889713c3b7804bda4b1dcb8b596c6e6812ce9322c30157eb1be2",
+        "licenseStatus": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "rightsEvidence": "Commons file page identifies the photographer and states CC BY 2.0; license permits adaptation with attribution, license link, and change indication.",
+        "aiGenerated": false,
+        "visualReview": "PASS; image depicts a presenter watching dancers at a studio recital, not K-pop trainees or study participants.",
+        "finalPath": "public/images/news/kpop-group-survival-study-1.webp",
+        "transform": "Centered 16:9 crop (y=311), converted to WebP",
+        "finalDimensions": {
+          "width": 6048,
+          "height": 3402
+        },
+        "finalSha256": "cff0ecb6c9119b7baf7364245ee39049f4d387262ea9f6809406d23edca75b5e",
+        "finalBytes": 521696,
+        "mtime": "2026-10-13T06:26:07.054Z",
+        "localOriginalPath": ".resource/originals/kpop-group-survival-study-1.jpg",
+        "stagingPath": ".resource/kpop-group-survival-study-1.webp"
+      }
+    ]
+  },
+  "localQa": {
+    "commands": [
+      {
+        "command": "pnpm generate:content",
+        "exitCode": 0,
+        "result": "206 records; 205 active, 1 explicitly inactive"
+      },
+      {
+        "command": "pnpm lint",
+        "exitCode": 0,
+        "result": "0 errors; 31 existing warnings"
+      },
+      {
+        "command": "pnpm test --run",
+        "exitCode": 0,
+        "result": "49 files, 206 tests passed"
+      },
+      {
+        "command": "pnpm workers:build",
+        "exitCode": 0,
+        "result": "OpenNext Workers bundle complete; TypeScript passed; existing Sass/Supabase environment warnings"
+      },
+      {
+        "command": "pnpm exec next dev --hostname 0.0.0.0 --port 3102",
+        "exitCode": 0,
+        "result": "Development server ready"
+      }
+    ],
+    "urls": [
+      "http://localhost:3102/studio/news/kpop-group-survival-study",
+      "http://localhost:3102/api/news.json",
+      "http://localhost:3102/api/news-content/en/kpop-group-survival-study.json",
+      "http://localhost:3102/images/news/kpop-group-survival-study-thumbnail.webp",
+      "http://localhost:3102/images/news/kpop-group-survival-study-1.webp"
+    ],
+    "httpStatuses": [
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "articleTitle": "45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check",
+    "canonical": "https://mearrow.com/studio/news/kpop-group-survival-study",
+    "browserStatus": "UNVERIFIED",
+    "browserNote": "Orca embedded browser snapshot returned browser_tab_not_found; recorded in Vault. Fresh Playwright release verification against the local Workers preview passed separately.",
+    "artifacts": [],
+    "developmentPlaywright": {
+      "status": "FAIL",
+      "report": "/tmp/mearrow-news-kpop-group-survival-study-browser-20261013/fresh-02/report.md",
+      "evidence": "/tmp/mearrow-news-kpop-group-survival-study-browser-20261013/fresh-02/evidence.json",
+      "reason": "One Next dev HMR websocket console error after browser history return (Page entered Back-Forward Cache); pageerror and first-party HTTP failures were zero."
+    }
+  },
+  "publish": {
+    "commitSha": null,
+    "branch": "task/mearrow-news-survival-20261013"
+  },
+  "production": {
+    "productionSha": null,
+    "url": "https://mearrow.com/studio/news/kpop-group-survival-study",
+    "lastChecked": "2026-10-13",
+    "articleStatus": "HTTP 404; article absent from production /api/news.json"
+  },
+  "gsc": {
+    "property": "sc-domain:mearrow.com",
+    "inspectedUrl": null,
+    "requestedUrls": [],
+    "requestStatus": "NOT_RUN",
+    "actualIndexingStatus": "NOT_CHECKED",
+    "confirmationEvidence": null
+  },
+  "retries": [
+    {
+      "step": "Open Seoul Economic Daily Korean original",
+      "attempts": 1,
+      "lastError": "403 Forbidden; source was nonessential, not retried, and the claims were checked against KCI, Newsis, Asiae, Edaily, and official documents."
+    }
+  ],
+  "build": {
+    "command": "pnpm workers:build",
+    "exitCode": 0,
+    "completed": true,
+    "route": "/studio/news/[slug]",
+    "warningSummary": [
+      "existing Sass darken() deprecation",
+      "build-time Supabase variables absent in local environment"
+    ]
+  },
+  "status": "BROWSER_QA_PASS_AWAITING_PRODUCTION_FLOW",
+  "lastPassedStep": "browserQa",
+  "nextStep": "commit_push_then_production_workflow",
+  "browserQa": {
+    "status": "PASS",
+    "run": "fresh-03",
+    "environment": "Local Workers preview at http://127.0.0.1:3103",
+    "verifier": "/root/gsc_test_only (test-only subagent)",
+    "report": "/tmp/mearrow-news-kpop-group-survival-study-browser-20261013/fresh-03/report.md",
+    "evidence": "/tmp/mearrow-news-kpop-group-survival-study-browser-20261013/fresh-03/evidence.json",
+    "uiGate": "PASS",
+    "integrationGate": "PASS",
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "firstPartyRequestFailures": 0,
+    "screenshots": [
+      {
+        "path": "desktop-1440x1000.png",
+        "sha256": "0f882f1f2297626d83f6ee51534d84f3c921f4899f8fb5b373cd550d79d24970"
+      },
+      {
+        "path": "mobile-390x844.png",
+        "sha256": "d83ec3379fbdbbb942726e08a3ea11400434cb405fc6f80e27b9244cd836a106"
+      },
+      {
+        "path": "mobile-344x844.png",
+        "sha256": "d8ebef6c359cabb3f65a743dd4a9732dd53497655cf64059ae41d97ee7de4894"
+      }
+    ],
+    "note": "Optional full warning transcript retrieval returned Playwright MCP Transport closed after checks; captured page/console/network error arrays were empty and the system-browser summary reported zero errors."
+  }
+}

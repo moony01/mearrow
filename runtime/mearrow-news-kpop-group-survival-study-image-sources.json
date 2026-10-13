@@ -1,0 +1,85 @@
+{
+  "workflow": "mearrow-news",
+  "slug": "kpop-group-survival-study",
+  "runId": "20261013-001",
+  "imageSearchQueries": [
+    "Wikimedia Commons Students dancing Taipei Expo Park mirror space recital performance dance studio",
+    "site:commons.wikimedia.org/wiki/File \"Recital performance in a dance studio.jpg\""
+  ],
+  "sourceAttributionGate": "PASS",
+  "acceptedImages": [
+    {
+      "id": "thumbnail",
+      "type": "licensed-source",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Students_dancing_at_Taipei_Expo_Park_mirror_space_20220528.jpg",
+      "provider": "Wikimedia Commons",
+      "sourceAuthor": "Solomon203",
+      "sourceMime": "image/jpeg",
+      "sourceDimensions": {
+        "width": 3520,
+        "height": 1980
+      },
+      "sourceBytes": 1191515,
+      "sourceSha256": "1284cff422a355c0cb929590ee5f9cc04df2a38a042484fa2ec4dd0cc0ca1aea",
+      "licenseStatus": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rightsEvidence": "Commons file page identifies Solomon203 as author and states CC BY-SA 4.0; license permits adaptation with attribution, license link, and change indication.",
+      "aiGenerated": false,
+      "visualReview": "PASS; image shows students dancing at a mirrored public space in Taipei, not K-pop trainees or study participants.",
+      "finalPath": "public/images/news/kpop-group-survival-study-thumbnail.webp",
+      "transform": "16:9 crop (x=300,y=500,width=2489,height=1400), converted to WebP quality 82",
+      "finalDimensions": {
+        "width": 2489,
+        "height": 1400
+      },
+      "finalSha256": "7bcbeca72735b3cd372db25a2ddab1e210ea72f4664d87c40a2e02dff7a1698f",
+      "finalBytes": 319150,
+      "mtime": "2026-10-13T06:26:07.052Z",
+      "localOriginalPath": ".resource/originals/kpop-group-survival-study-thumbnail.jpg",
+      "stagingPath": ".resource/kpop-group-survival-study-thumbnail.webp"
+    },
+    {
+      "id": "body",
+      "type": "licensed-source",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Recital_performance_in_a_dance_studio.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Recital_performance_in_a_dance_studio.jpg",
+      "provider": "Wikimedia Commons",
+      "sourceAuthor": "Nenad Stojković (Shixart1985)",
+      "sourceMime": "image/jpeg",
+      "sourceDimensions": {
+        "width": 6048,
+        "height": 4024
+      },
+      "sourceBytes": 8741341,
+      "sourceSha256": "e4b18dcd9d6889713c3b7804bda4b1dcb8b596c6e6812ce9322c30157eb1be2",
+      "licenseStatus": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "rightsEvidence": "Commons file page identifies the photographer and states CC BY 2.0; license permits adaptation with attribution, license link, and change indication.",
+      "aiGenerated": false,
+      "visualReview": "PASS; image depicts a presenter watching dancers at a studio recital, not K-pop trainees or study participants.",
+      "finalPath": "public/images/news/kpop-group-survival-study-1.webp",
+      "transform": "Centered 16:9 crop (y=311), converted to WebP",
+      "finalDimensions": {
+        "width": 6048,
+        "height": 3402
+      },
+      "finalSha256": "cff0ecb6c9119b7baf7364245ee39049f4d387262ea9f6809406d23edca75b5e",
+      "finalBytes": 521696,
+      "mtime": "2026-10-13T06:26:07.054Z",
+      "localOriginalPath": ".resource/originals/kpop-group-survival-study-1.jpg",
+      "stagingPath": ".resource/kpop-group-survival-study-1.webp"
+    }
+  ],
+  "rejectedImages": [
+    {
+      "file": "dance-rehearsal.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Rehearsal_for_dancing.jpg",
+      "sourceAuthor": "Pauloleong2002",
+      "licenseStatus": "CC BY-SA 4.0",
+      "sha256": "0507722aa65e42c7ec8872600c310dbc549501dbc81151bb21ee2dff269ca699",
+      "reason": "Visual review rejected: unrelated outdoor dance practice with hand fans; weak fit for this data-led trainee article. Not published."
+    }
+  ],
+  "note": "Both selected images are illustrative only. Article captions disclose that neither image is a K-pop agency training session nor part of the study."
+}

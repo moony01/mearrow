@@ -1,0 +1,27 @@
+{
+  "workflow": "mearrow-news",
+  "slug": "kpop-group-survival-study",
+  "runId": "20261013-001",
+  "updatedAt": "2026-10-13T07:15:34Z",
+  "status": "BROWSER_QA_PASS_AWAITING_PRODUCTION_FLOW",
+  "lastPassedStep": "browserQa",
+  "nextStep": "commit_push_then_production_workflow",
+  "authorization": {
+    "actor": "user",
+    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+    "confirmedAt": "2026-10-13T06:40:15Z",
+    "method": "explicit_mearrow_news_autopilot_invocation_and_user_topic_selection",
+    "evidence": "User directly requested MEARROW news automation, selected candidate 3, and explicitly asked to update this skill so publication and indexing run automatically."
+  },
+  "stepResults": {
+    "topicDedupe": "PASS",
+    "research": "PASS",
+    "content": "PASS",
+    "image": "PASS",
+    "localQa": "PENDING",
+    "browserQa": "PASS",
+    "publish": "PENDING",
+    "deploy": "PENDING",
+    "gsc": "PENDING"
+  }
+}
