@@ -4,7 +4,7 @@
   "runId": "20261013-001",
   "articleUrl": "https://mearrow.com/studio/news/kpop-group-survival-study",
   "runStartedAt": "2026-10-13T05:37:21Z",
-  "runEndedAt": "2026-10-13T07:15:34Z",
+  "runEndedAt": "2026-10-13T07:21:16Z",
   "authorization": {
     "actor": "user",
     "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
@@ -408,14 +408,52 @@
     }
   },
   "publish": {
-    "commitSha": null,
-    "branch": "task/mearrow-news-survival-20261013"
+    "status": "FEATURE_BRANCH_PUSHED",
+    "commitSha": "b6a0157a9b54d95e5ca2f8e080faabd5bd62280a",
+    "branch": "task/mearrow-news-survival-20261013",
+    "remote": "origin/task/mearrow-news-survival-20261013",
+    "remoteValidation": {
+      "id": 38361820491,
+      "url": "https://github.com/moony01/mearrow/actions/runs/38361820491",
+      "event": "workflow_dispatch",
+      "headSha": "b6a0157a9b54d95e5ca2f8e080faabd5bd62280a",
+      "validateJob": "PASS",
+      "checks": [
+        "Check deployment environment",
+        "Lint",
+        "Unit tests",
+        "Browser data smoke test",
+        "Browser Studio modal smoke test",
+        "Build Workers bundle",
+        "Workers public profile SSR regression"
+      ],
+      "deployJob": "SKIPPED",
+      "deployReason": "Production job condition requires refs/heads/main; this verification ran on the feature branch."
+    }
   },
   "production": {
     "productionSha": null,
     "url": "https://mearrow.com/studio/news/kpop-group-survival-study",
-    "lastChecked": "2026-10-13",
-    "articleStatus": "HTTP 404; article absent from production /api/news.json"
+    "lastChecked": "2026-10-13T07:21:16Z",
+    "articleStatus": "HTTP 404; article absent from production /api/news.json",
+    "workflowRun": {
+      "id": 38361820491,
+      "url": "https://github.com/moony01/mearrow/actions/runs/38361820491",
+      "event": "workflow_dispatch",
+      "headSha": "b6a0157a9b54d95e5ca2f8e080faabd5bd62280a",
+      "validateJob": "PASS",
+      "checks": [
+        "Check deployment environment",
+        "Lint",
+        "Unit tests",
+        "Browser data smoke test",
+        "Browser Studio modal smoke test",
+        "Build Workers bundle",
+        "Workers public profile SSR regression"
+      ],
+      "deployJob": "SKIPPED",
+      "deployReason": "Production job condition requires refs/heads/main; this verification ran on the feature branch."
+    }
   },
   "gsc": {
     "property": "sc-domain:mearrow.com",
@@ -442,9 +480,9 @@
       "build-time Supabase variables absent in local environment"
     ]
   },
-  "status": "BROWSER_QA_PASS_AWAITING_PRODUCTION_FLOW",
+  "status": "INCOMPLETE_AWAITING_MAIN_RELEASE_AND_REVIEWER",
   "lastPassedStep": "browserQa",
-  "nextStep": "commit_push_then_production_workflow",
+  "nextStep": "main_release_then_production_sha_and_gsc",
   "browserQa": {
     "status": "PASS",
     "run": "fresh-03",
