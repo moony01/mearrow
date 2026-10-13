@@ -2,10 +2,10 @@
   "workflow": "mearrow-news",
   "slug": "kpop-group-survival-study",
   "runId": "20261013-001",
-  "updatedAt": "2026-10-13T07:21:16Z",
-  "status": "INCOMPLETE_AWAITING_MAIN_RELEASE_AND_REVIEWER",
+  "updatedAt": "2026-10-13T08:07:00Z",
+  "status": "INCOMPLETE_AWAITING_PR_CI_MAIN_RELEASE_AND_GSC",
   "lastPassedStep": "browserQa",
-  "nextStep": "main_release_then_production_sha_and_gsc",
+  "nextStep": "create_pr_wait_required_ci_merge_deploy_verify_production_sha_then_gsc",
   "authorization": {
     "actor": "user",
     "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
@@ -18,10 +18,29 @@
     "research": "PASS",
     "content": "PASS",
     "image": "PASS",
-    "localQa": "PENDING",
+    "localQa": "PASS",
     "browserQa": "PASS",
     "publish": "PENDING",
     "deploy": "PENDING",
     "gsc": "PENDING"
+  },
+  "reviewerGate": {
+    "environment": "workers-production",
+    "requestedByUser": true,
+    "request": "Remove the reviewer approval step so this MEARROW news run completes through deployment and indexing.",
+    "before": {
+      "requiredReviewerCount": 1,
+      "reviewerUserId": 36956285
+    },
+    "after": {
+      "protectionRules": [],
+      "deploymentBranchPolicy": null
+    },
+    "changed": [
+      "required_reviewers only"
+    ],
+    "otherProtectionRulesChanged": false,
+    "secretsChanged": false,
+    "verifiedAt": "2026-10-13T08:07:00Z"
   }
 }

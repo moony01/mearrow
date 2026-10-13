@@ -408,7 +408,7 @@
     }
   },
   "publish": {
-    "status": "FEATURE_BRANCH_PUSHED",
+    "status": "FEATURE_BRANCH_PUSHED_PR_PENDING",
     "commitSha": "b6a0157a9b54d95e5ca2f8e080faabd5bd62280a",
     "branch": "task/mearrow-news-survival-20261013",
     "remote": "origin/task/mearrow-news-survival-20261013",
@@ -429,7 +429,8 @@
       ],
       "deployJob": "SKIPPED",
       "deployReason": "Production job condition requires refs/heads/main; this verification ran on the feature branch."
-    }
+    },
+    "latestEvidenceCommitSha": "8f05c8a"
   },
   "production": {
     "productionSha": null,
@@ -453,7 +454,10 @@
       ],
       "deployJob": "SKIPPED",
       "deployReason": "Production job condition requires refs/heads/main; this verification ran on the feature branch."
-    }
+    },
+    "reviewerGateStatus": "REMOVED",
+    "reviewerGateVerifiedAt": "2026-10-13T08:07:00Z",
+    "releaseStatus": "PENDING_PR_MERGE_AND_MAIN_DEPLOYMENT"
   },
   "gsc": {
     "property": "sc-domain:mearrow.com",
@@ -480,9 +484,9 @@
       "build-time Supabase variables absent in local environment"
     ]
   },
-  "status": "INCOMPLETE_AWAITING_MAIN_RELEASE_AND_REVIEWER",
+  "status": "INCOMPLETE_AWAITING_PR_CI_MAIN_RELEASE_AND_GSC",
   "lastPassedStep": "browserQa",
-  "nextStep": "main_release_then_production_sha_and_gsc",
+  "nextStep": "create_pr_wait_required_ci_merge_deploy_verify_production_sha_then_gsc",
   "browserQa": {
     "status": "PASS",
     "run": "fresh-03",
@@ -510,5 +514,24 @@
       }
     ],
     "note": "Optional full warning transcript retrieval returned Playwright MCP Transport closed after checks; captured page/console/network error arrays were empty and the system-browser summary reported zero errors."
+  },
+  "reviewerGate": {
+    "environment": "workers-production",
+    "requestedByUser": true,
+    "request": "Remove the reviewer approval step so this MEARROW news run completes through deployment and indexing.",
+    "before": {
+      "requiredReviewerCount": 1,
+      "reviewerUserId": 36956285
+    },
+    "after": {
+      "protectionRules": [],
+      "deploymentBranchPolicy": null
+    },
+    "changed": [
+      "required_reviewers only"
+    ],
+    "otherProtectionRulesChanged": false,
+    "secretsChanged": false,
+    "verifiedAt": "2026-10-13T08:07:00Z"
   }
 }

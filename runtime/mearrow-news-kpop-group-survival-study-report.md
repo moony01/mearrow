@@ -1,6 +1,6 @@
 # MEARROW News Run — kpop-group-survival-study
 
-- Status: INCOMPLETE (feature branch pushed and remote validation passed; production deployment and GSC await the repository release path)
+- Status: INCOMPLETE (feature branch pushed and remote validation passed; production deployment and GSC await PR/CI/main release)
 - Topic: 2026 census of 1,182 K-pop groups; average activity period 4.12 years and 55.03% activity at year three.
 - Selected headline: 45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check
 - Canonical target: https://mearrow.com/studio/news/kpop-group-survival-study
@@ -17,7 +17,7 @@
 | Local render | PASS | Feature-branch article is active for preview; route, both APIs, and both public WebP assets return HTTP 200 in Next dev and Workers preview. |
 | Browser UI/integration | PASS | Fresh-03 Playwright verification on the Workers preview passed both gates: exact route, metadata, both images, navigation/back, three viewport widths, public index and content readback; zero page errors, console errors, or first-party request failures. |
 | Feature branch / remote CI | PASS | Commit `b6a0157` pushed to `origin/task/mearrow-news-survival-20261013`; GitHub validation run [38361820491](https://github.com/moony01/mearrow/actions/runs/38361820491) passed environment, lint, unit, browser smoke, Workers build, and SSR regression checks. |
-| Production deploy / GSC | PENDING | Production article still returns HTTP 404. The workflow's production job was skipped because this run used a feature branch; production deploy requires `main` and the `workers-production` reviewer gate. GSC requires the deployed SHA and live canonical URL first. |
+| Production deploy / GSC | PENDING | Production article returned HTTP 404 at the prior check. The production job requires `main`; the `workers-production` required-reviewer rule was removed at 2026-10-13 08:07 UTC at the user's direction, with other protection rules and secrets untouched. Create the PR, pass required CI, merge through the standard path, then verify production SHA and canonical URL before GSC. |
 
 ## Image artifacts
 
@@ -34,4 +34,4 @@ The separate development-server Playwright run recorded one Next HMR websocket e
 
 ## Next
 
-Promote this branch through the approved `main` release path and complete the `workers-production` reviewer approval. Then verify the production SHA and canonical URL before requesting GSC indexing. No PR was opened, and no production workflow or indexing request was bypassed or simulated.
+Open the standard PR, wait for required CI, merge through the repository release path, and wait for the production workflow. The `workers-production` reviewer rule is removed; no other protection or CI gate was bypassed. Then verify the production SHA and canonical URL and request GSC indexing. No PR has been opened yet; no production workflow or indexing request was bypassed or simulated.
