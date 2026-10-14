@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import Script from 'next/script';
 import { BRAND_NAME, BRAND_TAGLINE } from '@/lib/brand';
-import { ADSENSE_PUBLISHER_ID, FULL_URL } from '@/lib/constants';
+import { FULL_URL } from '@/lib/constants';
 import StudioFrame from './StudioFrame';
 import AuthProvider from '@/components/providers/AuthProvider';
 import { SWRProvider } from '@/components/providers/SWRProvider';
@@ -46,12 +46,6 @@ export default async function StudioLayout({ children }: { children: React.React
           gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <Script
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
-        crossOrigin="anonymous"
-        strategy="lazyOnload"
-      />
       <SWRProvider>
         <AuthProvider>
           <StudioFrame>{children}</StudioFrame>

@@ -10,15 +10,14 @@
 import { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import type { CompaniesResponse } from '@/types/api';
 import { useLeagueData } from '@/hooks/useLeagueData';
 import { useAuth } from '@/hooks/useAuth';
 import { useVoteQuota } from '@/hooks/useVoteQuota';
 import { useRefreshCountdown } from '@/hooks/useRefreshCountdown';
-import HomeBoardHeader, {
-  HOME_VOTE_HELPER_ID,
-} from '@/components/features/home/HomeBoardHeader';
+import HomeBoardHeader from '@/components/features/home/HomeBoardHeader';
+import { HOME_VOTE_HELPER_ID } from '@/components/features/home/constants';
 import VoteBoard from '@/components/features/vote/VoteBoard';
 import styles from './page.module.scss';
 
@@ -87,6 +86,7 @@ function normalizeVoteDockCompany(value?: string | null) {
 /** Keep the legacy home shell while making each ranking card the vote surface. */
 export function HomeClient({ initialData, embedded = false, progressiveRanking = false }: HomeClientProps = {}) {
   const locale = useLocale();
+  const tVote = useTranslations('Vote');
   const { user, isLoading: isAuthLoading, isAuthenticated } = useAuth();
   const {
     premierLeague,
@@ -187,8 +187,6 @@ export function HomeClient({ initialData, embedded = false, progressiveRanking =
         quotaRemaining={quota.remaining}
         countdown={countdown}
         isRefreshing={isRefreshing}
-        showVoteHelper
-        voteHelperMax={100}
       />
 
       <VoteBoard
@@ -225,6 +223,17 @@ export function HomeClient({ initialData, embedded = false, progressiveRanking =
           : undefined}
         collapseLabel={progressiveRanking ? 'Show less' : undefined}
       />
+
+      {!embedded && (
+        <p
+          id={HOME_VOTE_HELPER_ID}
+          className={styles.homeVoteHelper}
+          data-testid={HOME_VOTE_HELPER_ID}
+          style={{ pointerEvents: 'none' }}
+        >
+          {tVote('card_power_hint', { max: 100 })}
+        </p>
+      )}
 
       <Modal
         isOpen={isEventModalOpen}

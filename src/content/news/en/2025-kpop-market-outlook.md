@@ -4,6 +4,7 @@ excerpt: "Beyond North America and Europe, K-Pop is reaching Latin America and t
 date: '2025-01-15'
 category: 'Industry Analysis'
 thumbnail: '/images/news/market-outlook.webp'
+active: false
 ---
 
 ## A New Paradigm for the Global K-Pop Market

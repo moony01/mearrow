@@ -3,6 +3,7 @@ import { FULL_URL } from '@/lib/constants';
 import { getAllAuditions } from '@/lib/auditions';
 import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import { getPublishedAnnouncementIds } from '@/lib/api/announcements';
+import { AUDITIONS_ARCHIVE_PAGE_SIZE, NEWS_ARCHIVE_PAGE_SIZE } from '@/lib/content-archive';
 
 export const dynamic = 'force-static';
 
@@ -16,6 +17,8 @@ const STATIC_PAGES: Array<{
   { path: '/', priority: 1.0, changeFrequency: 'daily' },
   { path: '/hall-of-fame', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/studio', priority: 1.0, changeFrequency: 'daily' },
+  { path: '/studio/news', priority: 0.8, changeFrequency: 'weekly' },
+  { path: '/studio/auditions', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/notice', priority: 0.5, changeFrequency: 'weekly' },
   { path: '/about', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/editorial', priority: 0.6, changeFrequency: 'monthly' },
@@ -33,6 +36,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   try {
     const posts = getAllNews(NEWS_SOURCE_LOCALE);
+    const pageCount = Math.ceil(posts.length / NEWS_ARCHIVE_PAGE_SIZE);
+    for (let pageNumber = 2; pageNumber <= pageCount; pageNumber += 1) {
+      entries.push({
+        url: `${FULL_URL}/studio/news/page/${pageNumber}`,
+        changeFrequency: 'weekly',
+        priority: 0.6,
+      });
+    }
+
     posts.forEach((post, index) => {
       entries.push({
         url: `${FULL_URL}/studio/news/${post.slug}`,
@@ -45,8 +57,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.warn('[sitemap] No news found for the source locale.');
   }
 
+  const auditionPosts = getAllAuditions('en');
+  const auditionPageCount = Math.ceil(auditionPosts.length / AUDITIONS_ARCHIVE_PAGE_SIZE);
+  for (let pageNumber = 2; pageNumber <= auditionPageCount; pageNumber += 1) {
+    entries.push({
+      url: `${FULL_URL}/studio/auditions/page/${pageNumber}`,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    });
+  }
+
   const auditionPostsBySlug = new Map<string, ReturnType<typeof getAllAuditions>[number]>();
-  for (const post of getAllAuditions('en')) {
+  for (const post of auditionPosts) {
     if (!auditionPostsBySlug.has(post.slug)) auditionPostsBySlug.set(post.slug, post);
   }
 

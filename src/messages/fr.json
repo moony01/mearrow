@@ -356,6 +356,7 @@
     "error": "Échec du vote. Veuillez réessayer.",
     "daily_limit": "Vous avez atteint votre limite quotidienne de votes.",
     "card_power_hint": "* Maintenez la carte enfoncée pour voter {max} fois",
+    "card_tap_longpress_hint": "Appui : 1 vote · Maintenir : jusqu’à 100 votes",
     "quota": {
       "title": "Votes du Jour",
       "remaining": "{remaining}/{max}",
@@ -522,7 +523,7 @@
   },
   "Legal": {
     "last_updated": "Dernière mise à jour",
-    "legal_review_notice": "Ce document est sujet à révision juridique et peut être mis à jour.",
+    "legal_review_notice": "Cette page peut être mise à jour si les services de MEARROW évoluent. Consultez la date de mise à jour ci-dessus pour connaître la version en vigueur.",
     "contact_title": "Nous contacter",
     "contact_content": "Pour toute question sur cette politique, contactez-nous à contact@kcl.fan",
     "terms_title": "Conditions d'utilisation",
@@ -633,7 +634,7 @@
     "q1": "Qu'est-ce que MEARROW ?",
     "a1": "MEARROW (K-pop Talent Network) est une plateforme mondiale d'engagement des fans où les fans de K-pop du monde entier votent pour leurs sociétés de divertissement préférées afin de créer des classements en temps réel. C'est un service non officiel créé par des fans, sans affiliation avec aucune société de divertissement.",
     "q2": "Comment voter ?",
-    "a2": "Cliquez simplement sur le bouton 'Voter' à côté de votre société préférée sur la page principale. Les votes sont renouvelés quotidiennement à minuit et tout le monde peut participer sans inscription.",
+    "a2": "Ouvrez MEARROW Studio et votez pour une entreprise dans la section Fan Vote. Les votes sont renouvelés chaque jour à minuit (KST) et la participation ne nécessite pas d'inscription.",
     "q3": "Comment les votes sont-ils renouvelés ?",
     "a3": "Les votes sont automatiquement renouvelés à minuit (KST). Le nombre de votes quotidiens est limité pour garantir une compétition équitable.",
     "q4": "Comment fonctionne le système de ligue ?",

@@ -4,6 +4,7 @@ excerpt: 'Fandom culture has become a massive axis moving the industry beyond si
 date: '2025-01-20'
 category: 'Industry Analysis'
 thumbnail: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop'
+active: false
 ---
 
 ## Fandoms: From Consumers to Shareholders

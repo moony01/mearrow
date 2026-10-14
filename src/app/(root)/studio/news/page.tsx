@@ -1,18 +1,23 @@
 import type { Metadata } from 'next';
-import { permanentRedirect } from 'next/navigation';
 import { FULL_URL } from '@/lib/constants';
-import StudioArchiveRedirect from '../StudioArchiveRedirect';
+import NewsArchiveContent from './NewsArchiveContent';
+
+const canonical = `${FULL_URL}/studio/news`;
 
 export const metadata: Metadata = {
-  title: 'News',
-  robots: { index: false, follow: true },
-  alternates: { canonical: `${FULL_URL}/studio` },
+  title: { absolute: 'K-pop News | MEARROW Studio' },
+  description: 'Browse K-pop news and analysis from current updates to long-form features.',
+  alternates: { canonical },
+  openGraph: {
+    title: 'K-pop News | MEARROW Studio',
+    description: 'Browse K-pop news and analysis from current updates to long-form features.',
+    siteName: 'MEARROW',
+    url: canonical,
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function NewsArchivePage() {
-  if (process.env.NODE_ENV === 'development' || process.env.NEXT_RUNTIME_TARGET === 'workers') {
-    permanentRedirect('/studio#news');
-  }
-
-  return <StudioArchiveRedirect href="/studio#news" label="Go to Studio News" />;
+  return <NewsArchiveContent />;
 }

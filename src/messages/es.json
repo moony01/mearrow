@@ -356,6 +356,7 @@
     "error": "Error al votar. Por favor intenta de nuevo.",
     "daily_limit": "Has alcanzado tu límite diario de votos.",
     "card_power_hint": "* Mantén pulsada la tarjeta para votar {max} veces",
+    "card_tap_longpress_hint": "Toca: 1 voto · Mantén: hasta 100 votos",
     "quota": {
       "title": "Votos de Hoy",
       "remaining": "{remaining}/{max}",
@@ -522,7 +523,7 @@
   },
   "Legal": {
     "last_updated": "Última Actualización",
-    "legal_review_notice": "Este documento está sujeto a revisión legal y puede actualizarse. Por favor, revíselo periódicamente.",
+    "legal_review_notice": "Esta página puede actualizarse cuando cambien los servicios de MEARROW. Consulta la fecha de actualización indicada arriba para ver la versión vigente.",
     "contact_title": "Contáctenos",
     "contact_content": "Si tiene preguntas sobre esta política, contáctenos en contact@kcl.fan",
     "terms_title": "Términos de Servicio",
@@ -633,7 +634,7 @@
     "q1": "¿Qué es MEARROW?",
     "a1": "MEARROW (K-pop Talent Network) es una plataforma global de participación de fans donde los fans de K-pop de todo el mundo votan por sus empresas de entretenimiento favoritas para crear clasificaciones en tiempo real. Es un servicio no oficial creado por fans y no está afiliado con ninguna empresa de entretenimiento.",
     "q2": "¿Cómo voto?",
-    "a2": "Simplemente haz clic en el botón 'Votar' junto a tu empresa favorita en la página principal. Los votos se renuevan diariamente a medianoche y cualquiera puede participar sin registro.",
+    "a2": "Abre MEARROW Studio y vota por una empresa en la sección Fan Vote. Los votos se renuevan cada día a medianoche (KST) y cualquiera puede participar sin registrarse.",
     "q3": "¿Cómo se renuevan los votos?",
     "a3": "Los votos se renuevan automáticamente a medianoche (KST). El número de votos diarios es limitado para garantizar una competencia justa.",
     "q4": "¿Cómo funciona el sistema de ligas?",

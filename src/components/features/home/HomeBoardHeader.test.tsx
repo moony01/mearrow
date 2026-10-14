@@ -19,13 +19,18 @@ const expectedMetaSlots = ['home-today-votes', 'home-refresh-indicator', 'home-s
 
 function getMetaSlotIds() {
   const quota = screen.getByTestId('home-today-votes');
-  const meta = quota.parentElement;
+  const meta = quota.parentElement?.parentElement;
 
   if (!meta) {
     throw new Error('Expected today-votes to be inside homeHeaderMeta');
   }
 
-  return Array.from(meta.children).map((child) => child.getAttribute('data-testid'));
+  return Array.from(meta.children).map((child) => {
+    const slot = child.matches('[data-testid]')
+      ? child
+      : child.querySelector('[data-testid]');
+    return slot?.getAttribute('data-testid') ?? null;
+  });
 }
 
 describe('HomeBoardHeader', () => {
@@ -84,36 +89,21 @@ describe('HomeBoardHeader', () => {
     expect(screen.getByTestId('home-season-dday').textContent).toBe('D-14');
   });
 
-  it('shows the home-only card voting helper directly below the season label', () => {
+  it('keeps the season header focused on season metadata without the vote hint', () => {
     render(
       <HomeBoardHeader
         season={season}
         quotaRemaining={100}
         countdown={20}
         isRefreshing={false}
-        showVoteHelper
-        voteHelperMax={100}
       />,
     );
 
     const seasonLabel = screen.getByTestId('home-season-label');
-    const helper = screen.getByTestId('home-vote-helper');
-
-    expect(helper.textContent).toBe('* 카드를 길게 누르고 100표 투표하기');
-    expect(seasonLabel.nextElementSibling).toBe(helper);
-    expect(helper.style.pointerEvents).toBe('none');
-  });
-
-  it('does not add the helper to shared header/embed layouts by default', () => {
-    render(
-      <HomeBoardHeader
-        season={season}
-        quotaRemaining={100}
-        countdown={20}
-        isRefreshing={false}
-      />,
-    );
+    const todayVotes = screen.getByTestId('home-today-votes');
 
     expect(screen.queryByTestId('home-vote-helper')).toBeNull();
+    expect(seasonLabel.parentElement?.contains(todayVotes)).toBe(false);
   });
+
 });

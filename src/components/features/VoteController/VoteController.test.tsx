@@ -24,6 +24,7 @@ vi.mock('next-intl', () => ({
       'button.vote': 'Vote',
       'button.exhausted': 'No votes left',
       card_power_hint: '* Long-press the card to vote {max} times',
+      card_tap_longpress_hint: 'Tap: 1 vote · Hold: up to 100 votes',
     };
     return (translations[key] ?? values?.defaultValue ?? key).replace(
       '{max}',
@@ -101,6 +102,7 @@ describe('VoteController artist selection persistence', () => {
   });
 
   beforeEach(() => {
+    sessionStorage.clear();
     mocks.mockSubmitVote.mockReset();
     mocks.mockSubmitVote.mockResolvedValue({ success: true, voteScore: 1 });
     mocks.mockConsumeVote.mockReset();
@@ -274,6 +276,24 @@ describe('VoteController artist selection persistence', () => {
         expect.objectContaining({ companyId: 'company-sm', votePower: 1, voteSource: 'web' }),
       );
     });
+    expect(screen.getByTestId('vote-card-tip').textContent).toBe(
+      'Tap: 1 vote · Hold: up to 100 votes',
+    );
+  });
+
+  it('shows the card tip once per session without adding a second vote', async () => {
+    const { unmount } = render(<VoteController company={smCompany} renderMode="card" />);
+    fireEvent.click(screen.getByTestId('direct-vote-company-sm'));
+
+    await waitFor(() => expect(mocks.mockSubmitVote).toHaveBeenCalledTimes(1));
+    expect(screen.getByTestId('vote-card-tip')).toBeDefined();
+
+    unmount();
+    render(<VoteController company={smCompany} renderMode="card" />);
+    fireEvent.click(screen.getByTestId('direct-vote-company-sm'));
+
+    await waitFor(() => expect(mocks.mockSubmitVote).toHaveBeenCalledTimes(2));
+    expect(screen.queryByTestId('vote-card-tip')).toBeNull();
   });
 
   it('activates one vote from Enter and Space on an available card surface', async () => {
@@ -281,7 +301,9 @@ describe('VoteController artist selection persistence', () => {
     const voteSurface = screen.getByTestId('direct-vote-company-sm');
 
     fireEvent.keyDown(voteSurface, { key: 'Enter' });
-    fireEvent.keyDown(voteSurface, { key: ' ' });
+    await waitFor(() => expect(mocks.mockSubmitVote).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(screen.getByText('+1')).toBeDefined());
+    fireEvent.keyDown(screen.getByTestId('direct-vote-company-sm'), { key: ' ' });
 
     await waitFor(() => {
       expect(mocks.mockSubmitVote).toHaveBeenCalledTimes(2);

@@ -356,6 +356,7 @@
     "error": "投票失败。请重试。",
     "daily_limit": "您已达到每日投票限制。",
     "card_power_hint": "* 长按卡片投出 {max} 票",
+    "card_tap_longpress_hint": "点击投1票・长按最多100票",
     "quota": {
       "title": "今日投票券",
       "remaining": "{remaining}/{max}",
@@ -522,7 +523,7 @@
   },
   "Legal": {
     "last_updated": "最后更新",
-    "legal_review_notice": "本文件可能在法律审查后更新。请定期查看变更。",
+    "legal_review_notice": "MEARROW 服务变更时，本文件可能会更新。当前版本请以上方的最后更新日期为准。",
     "contact_title": "联系我们",
     "contact_content": "如有任何关于本政策的问题，请发送邮件至 contact@kcl.fan",
     "terms_title": "服务条款",
@@ -633,7 +634,7 @@
     "q1": "MEARROW是什么？",
     "a1": "MEARROW（K-pop Talent Network）是一个全球粉丝参与平台，全世界的K-pop粉丝可以为自己喜欢的娱乐公司投票，创建实时排名。它是非官方的粉丝制作服务，与任何娱乐公司无关。",
     "q2": "如何投票？",
-    "a2": "在主页上点击您喜欢的公司旁边的「投票」按钮即可。投票权每天午夜刷新，无需注册即可参与。",
+    "a2": "前往 MEARROW Studio 的 Fan Vote 区域，为您支持的公司投票。投票权每天午夜（KST）刷新，无需注册即可参与。",
     "q3": "投票权如何刷新？",
     "a3": "投票权在每天午夜（KST）自动刷新。每日投票数量有限，以确保公平竞争。",
     "q4": "联赛系统如何运作？",

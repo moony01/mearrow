@@ -3162,7 +3162,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Market Trend",
     "thumbnail": "/images/news/4th-gen-global-impact.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "fandom-economy",
@@ -3174,7 +3175,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "2025-kpop-market-outlook",
@@ -3186,7 +3188,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Industry Analysis",
     "thumbnail": "/images/news/market-outlook.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "ai-fandom-platform",
@@ -3198,7 +3201,8 @@
     "author": "MEARROW Editorial Desk",
     "category": "Tech & Culture",
     "thumbnail": "/images/news/ai-fandom.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   },
   {
     "slug": "trainee-system-evolution",
@@ -3210,6 +3214,7 @@
     "author": "MEARROW Editorial Desk",
     "category": "Trainee System",
     "thumbnail": "/images/news/trainee-system.webp",
-    "sources": []
+    "sources": [],
+    "active": false
   }
 ]

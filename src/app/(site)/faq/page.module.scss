@@ -46,7 +46,7 @@
   background: var(--color-surface);
   transition: border-color 0.2s ease;
 
-  &.open {
+  &[open] {
     border-color: var(--color-primary);
   }
 }
@@ -66,6 +66,11 @@
   color: var(--color-text);
   line-height: 1.5;
   gap: 12px;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &:hover {
     color: var(--color-primary);
@@ -77,26 +82,36 @@
   color: var(--color-text-muted);
   transition: transform 0.3s ease;
 
-  &.rotated {
-    transform: rotate(180deg);
-  }
+}
+
+.faqItem[open] .chevron {
+  transform: rotate(180deg);
 }
 
 .faqAnswer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-
-  &.expanded {
-    max-height: 500px;
-  }
-
   p {
     padding: 0 20px 16px;
     font-size: 14px;
     line-height: 1.8;
     color: var(--color-text-dim);
     margin: 0;
+  }
+}
+
+.answerLink {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 20px 16px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 }
 

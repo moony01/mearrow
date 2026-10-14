@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 /**
  * 개인정보처리방침 페이지
- * 법률 검토 후 상세 내용 업데이트 예정
+ * 서비스 변경에 따라 최신 내용을 유지합니다.
  */
 export default async function PrivacyPage() {
   const locale = 'ko';
@@ -35,7 +35,7 @@ export default async function PrivacyPage() {
         <PageHeader
           eyebrow={BRAND_NAME}
           title={t('privacy_title')}
-          description={`${t('last_updated')}: 2026-10-05`}
+          description={`${t('last_updated')}: 2026-10-14`}
         />
 
         <article className={styles.content}>
@@ -104,7 +104,7 @@ export default async function PrivacyPage() {
           </section>
         </article>
 
-        {/* 법률 검토 예정 안내 */}
+        {/* 정책 업데이트 안내 */}
         <div className={styles.legalNotice}>
           <p>{t('legal_review_notice')}</p>
         </div>

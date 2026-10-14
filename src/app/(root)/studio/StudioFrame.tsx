@@ -23,8 +23,20 @@ export default function StudioFrame({ children }: { children: ReactNode }) {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span>MEARROW STUDIO</span>
-          <span>Content becomes opportunity.</span>
+          <div className={styles.footerCopy}>
+            <span className={styles.footerBrand}>MEARROW STUDIO</span>
+            <span>Content becomes opportunity.</span>
+            <span className={styles.footerNotice}>
+              Independent, fan-made service. Not affiliated with any entertainment company.
+            </span>
+          </div>
+          <nav className={styles.footerLinks} aria-label="Site information">
+            <Link href="/about">About</Link>
+            <Link href="/faq">FAQ</Link>
+            <Link href="/editorial">Editorial standards</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/privacy">Privacy</Link>
+          </nav>
         </div>
       </footer>
     </div>

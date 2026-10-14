@@ -15,6 +15,8 @@ interface AuditionsGridClientProps {
   posts: AuditionMeta[];
   locale: string;
   basePath?: string;
+  paginationBasePath?: string;
+  initialPage?: number;
   headingLevel?: 2 | 3;
 }
 
@@ -22,13 +24,23 @@ function auditionPath(post: AuditionMeta, basePath?: string) {
   return `${basePath ?? `/${post.locale}/auditions`}/${post.slug}`;
 }
 
-export default function AuditionsGridClient({ posts, locale, basePath, headingLevel = 2 }: AuditionsGridClientProps) {
+export default function AuditionsGridClient({
+  posts,
+  locale,
+  basePath,
+  paginationBasePath,
+  initialPage = 1,
+  headingLevel = 2,
+}: AuditionsGridClientProps) {
   const t = useTranslations('Auditions');
   const CardHeading = headingLevel === 3 ? 'h3' : 'h2';
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const totalPages = Math.ceil(posts.length / PAGE_SIZE);
   const activePage = Math.min(currentPage, Math.max(totalPages, 1));
   const displayedPosts = posts.slice((activePage - 1) * PAGE_SIZE, activePage * PAGE_SIZE);
+  const pageHref = paginationBasePath
+    ? (page: number) => (page === 1 ? paginationBasePath : `${paginationBasePath}/page/${page}`)
+    : undefined;
 
   return (
     <section className={styles.grid} aria-label={t('listLabel')}>
@@ -90,6 +102,7 @@ export default function AuditionsGridClient({ posts, locale, basePath, headingLe
         currentPage={activePage}
         totalPages={totalPages}
         onPageChange={setCurrentPage}
+        getPageHref={pageHref}
         ariaLabel={t('paginationLabel')}
         previousGroupLabel={t('previousGroup')}
         previousLabel={t('previousPage')}
