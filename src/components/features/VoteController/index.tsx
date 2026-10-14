@@ -50,6 +50,9 @@ const POWER_VOTE = {
   FULL_CHARGE_MS: 3000,
 } as const;
 
+const VOTE_CARD_TIP_SESSION_KEY = 'mearrow-vote-card-tip-shown';
+const VOTE_CARD_TIP_DURATION_MS = 4500;
+
 export interface VoteControllerProps {
   /** 선택된 회사 데이터 */
   company: CompanyType | null;
@@ -148,6 +151,7 @@ export default function VoteController({
   // 선택된 아티스트 상태 (초기값은 props에서 전달받거나 첫번째 아티스트)
   const [chosenArtist, setChosenArtist] = useState<string | null>(selectedArtist || null);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showVoteCardTip, setShowVoteCardTip] = useState(false);
   /** 마지막 투표 점수 (성공 애니메이션에 표시) */
   const [lastScore, setLastScore] = useState(1);
 
@@ -184,6 +188,25 @@ export default function VoteController({
   const powerLevelRef = useRef<number>(0);
   /** pointerup과 click이 같은 탭에서 중복 투표를 보내지 않도록 방지 */
   const didHandlePointerVoteRef = useRef(false);
+  const voteCardTipTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const showVoteCardTipOnce = useCallback(() => {
+    if (renderMode !== 'card' || typeof window === 'undefined') return;
+
+    try {
+      if (window.sessionStorage.getItem(VOTE_CARD_TIP_SESSION_KEY)) return;
+      window.sessionStorage.setItem(VOTE_CARD_TIP_SESSION_KEY, 'shown');
+    } catch {
+      // Keep the vote action usable if browser storage is unavailable.
+    }
+
+    setShowVoteCardTip(true);
+    if (voteCardTipTimerRef.current) clearTimeout(voteCardTipTimerRef.current);
+    voteCardTipTimerRef.current = setTimeout(() => {
+      setShowVoteCardTip(false);
+      voteCardTipTimerRef.current = null;
+    }, VOTE_CARD_TIP_DURATION_MS);
+  }, [renderMode]);
 
   // T1.75: 서브레이블 유무 판단
   const hasSubLabels = FEATURES.SUB_LABEL_VOTING && (company?.subLabels?.length ?? 0) > 0;
@@ -380,9 +403,10 @@ export default function VoteController({
     }
 
     if (canVote) {
+      showVoteCardTipOnce();
       executeVote(1);
     }
-  }, [canVote, executeVote, onGuestQuotaExhausted]);
+  }, [canVote, executeVote, onGuestQuotaExhausted, showVoteCardTipOnce]);
 
   /**
    * 롱프레스 종료 (pointerup / pointerleave)
@@ -404,6 +428,7 @@ export default function VoteController({
       // 짧은 탭 → 1표 일반 투표
       setPowerLevel(0);
       didHandlePointerVoteRef.current = true;
+      showVoteCardTipOnce();
       executeVote(1);
     } else if (finalPower > 0) {
       // 롱프레스 → 파워 레벨만큼 투표
@@ -413,7 +438,7 @@ export default function VoteController({
     } else {
       setPowerLevel(0);
     }
-  }, [clearTimers, executeVote]);
+  }, [clearTimers, executeVote, showVoteCardTipOnce]);
 
   /**
    * 포인터가 투표 surface를 벗어나면 취소
@@ -432,6 +457,12 @@ export default function VoteController({
   useEffect(() => {
     return () => clearTimers();
   }, [clearTimers]);
+
+  useEffect(() => {
+    return () => {
+      if (voteCardTipTimerRef.current) clearTimeout(voteCardTipTimerRef.current);
+    };
+  }, []);
 
 
   // 회사가 선택되지 않았을 때
@@ -570,6 +601,18 @@ export default function VoteController({
                 </motion.div>
               ) : null}
             </AnimatePresence>
+
+            {showVoteCardTip && (
+              <span
+                className={styles.voteCardTip}
+                data-vote-card-tip
+                data-testid="vote-card-tip"
+                role="status"
+                aria-live="polite"
+              >
+                {t('card_tap_longpress_hint')}
+              </span>
+            )}
           </motion.div>
         ) : (
           <motion.button

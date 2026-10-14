@@ -356,6 +356,7 @@
     "error": "투표 실패. 다시 시도해주세요.",
     "daily_limit": "오늘의 투표 한도에 도달했습니다.",
     "card_power_hint": "* 카드를 길게 누르고 {max}표 투표하기",
+    "card_tap_longpress_hint": "탭: 1표 · 길게 누르기: 최대 100표",
     "quota": {
       "title": "오늘의 투표권",
       "remaining": "{remaining}/{max}",

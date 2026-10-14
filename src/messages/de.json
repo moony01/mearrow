@@ -356,6 +356,7 @@
     "error": "Abstimmung fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "daily_limit": "Sie haben Ihr tägliches Abstimmungslimit erreicht.",
     "card_power_hint": "* Halte die Karte gedrückt, um {max} Stimmen abzugeben",
+    "card_tap_longpress_hint": "Tippen: 1 Stimme · Halten: bis zu 100 Stimmen",
     "quota": {
       "title": "Heutige Stimmen",
       "remaining": "{remaining}/{max}",

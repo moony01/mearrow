@@ -356,6 +356,7 @@
     "error": "投票失败。请重试。",
     "daily_limit": "您已达到每日投票限制。",
     "card_power_hint": "* 长按卡片投出 {max} 票",
+    "card_tap_longpress_hint": "点击投1票・长按最多100票",
     "quota": {
       "title": "今日投票券",
       "remaining": "{remaining}/{max}",

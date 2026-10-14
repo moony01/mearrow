@@ -25,6 +25,8 @@
 
 .brand {
   display: inline-flex;
+  min-width: 0;
+  flex: 0 1 220px;
   align-items: center;
   text-decoration: none;
 }
@@ -32,6 +34,8 @@
 .brandLogo {
   display: block;
   width: 220px;
+  max-width: 100%;
+  min-width: 0;
   height: auto;
   flex: 0 1 auto;
 }
@@ -44,6 +48,8 @@
   font-size: 13px;
   font-weight: 650;
   text-decoration: none;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .communityLink:hover {
@@ -87,6 +93,11 @@
 
   .headerInner {
     min-height: 60px;
+    gap: 12px;
+  }
+
+  .brand {
+    flex-basis: 190px;
   }
 
   .brandLogo {

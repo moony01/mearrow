@@ -356,6 +356,7 @@
     "error": "Failed to vote. Please try again.",
     "daily_limit": "You've reached your daily vote limit.",
     "card_power_hint": "* Long-press the card to vote {max} times",
+    "card_tap_longpress_hint": "Tap: 1 vote · Hold: up to 100 votes",
     "quota": {
       "title": "Today's Votes",
       "remaining": "{remaining}/{max}",

@@ -55,6 +55,10 @@
     // browser takes ownership of a vertical gesture.
     touch-action: pan-y;
 
+    &:has([data-vote-card-tip]) {
+      overflow: visible;
+    }
+
     &[aria-disabled='true'] {
       cursor: default;
     }
@@ -80,6 +84,55 @@
 
   .cardVoteAction {
     display: inline-flex;
+  }
+
+  .voteCardTip {
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    left: auto;
+    z-index: 3;
+    display: inline-block;
+    width: max-content;
+    max-width: calc(100% - 16px);
+    padding: 2px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 9px;
+    background: rgba(24, 31, 49, 0.94);
+    box-shadow: 0 4px 14px rgba(18, 25, 45, 0.24);
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-shadow: none;
+    pointer-events: none;
+    animation: voteCardTipEnter 180ms ease-out both;
+
+    &::after {
+      position: absolute;
+      right: 18px;
+      bottom: -4px;
+      width: 6px;
+      height: 6px;
+      border-right: 1px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(24, 31, 49, 0.94);
+      content: '';
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@keyframes voteCardTipEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

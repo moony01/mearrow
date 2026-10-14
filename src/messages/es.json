@@ -356,6 +356,7 @@
     "error": "Error al votar. Por favor intenta de nuevo.",
     "daily_limit": "Has alcanzado tu límite diario de votos.",
     "card_power_hint": "* Mantén pulsada la tarjeta para votar {max} veces",
+    "card_tap_longpress_hint": "Toca: 1 voto · Mantén: hasta 100 votos",
     "quota": {
       "title": "Votos de Hoy",
       "remaining": "{remaining}/{max}",
