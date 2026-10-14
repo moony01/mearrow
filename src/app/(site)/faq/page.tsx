@@ -23,12 +23,18 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function FaqPage() {
   const locale = 'ko';
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'FAQ' });
+  const [t, home] = await Promise.all([
+    getTranslations({ locale, namespace: 'FAQ' }),
+    getTranslations({ locale, namespace: 'Home' }),
+  ]);
 
   /** FAQ 항목 목록 (서버에서 생성하여 클라이언트로 전달) */
   const faqItems = Array.from({ length: 9 }, (_, i) => ({
     question: t(`q${i + 1}`),
     answer: t(`a${i + 1}`),
+    ...(i === 1
+      ? { actionHref: '/studio#fan-vote', actionLabel: home('seo_vote_title') }
+      : {}),
   }));
 
   /**

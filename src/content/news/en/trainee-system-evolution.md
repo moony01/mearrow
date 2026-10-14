@@ -4,6 +4,7 @@ excerpt: 'From closed dormitory training to public audition programs and data-dr
 date: '2024-12-28'
 category: 'Trainee System'
 thumbnail: '/images/news/trainee-system.webp'
+active: false
 ---
 
 ## From Hungry Spirit to Systematic Management

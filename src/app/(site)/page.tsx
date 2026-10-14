@@ -8,6 +8,7 @@
  */
 
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HomeFeedClient from './HomeFeedClient';
 import { generatePageMetadata } from '@/lib/seo';
@@ -15,6 +16,7 @@ import { DEFAULT_LOCALE, FULL_URL } from '@/lib/constants';
 import { BRAND_MARK_PATH, BRAND_NAME } from '@/lib/brand';
 import { JsonLd } from '@/components/common/JsonLd';
 import { getInitialHomeFeed } from '@/lib/server/home-feed';
+import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import styles from './seo-content.module.scss';
 
 /**
@@ -40,10 +42,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   const locale = DEFAULT_LOCALE;
   setRequestLocale(locale);
-  const [t, initialFeed] = await Promise.all([
+  const [t, newsT, initialFeed] = await Promise.all([
     getTranslations({ locale, namespace: 'Home' }),
+    getTranslations({ locale, namespace: 'News' }),
     getInitialHomeFeed(),
   ]);
+  const featuredNews = getAllNews(NEWS_SOURCE_LOCALE)[0];
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -64,6 +68,33 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd data={websiteJsonLd} />
+      <section className={styles.discovery} aria-labelledby="home-discovery-title">
+        <div className={styles.discoveryCopy}>
+          <p className={styles.discoveryEyebrow}>MEARROW STUDIO</p>
+          <h1 id="home-discovery-title">{t('seo_title')}</h1>
+          <p className={styles.discoveryIntro}>{t('seo_intro')}</p>
+          <Link className={styles.discoveryVoteLink} href="/studio#fan-vote">
+            {t('seo_vote_title')}
+          </Link>
+        </div>
+        {featuredNews && (
+          <article className={styles.featuredStory} lang={featuredNews.locale}>
+            <p className={styles.featuredEyebrow}>{newsT('title')}</p>
+            <h2>
+              <Link href={`/studio/news/${featuredNews.slug}`}>{featuredNews.title}</Link>
+            </h2>
+            <p className={styles.featuredExcerpt}>{featuredNews.excerpt}</p>
+            {featuredNews.sources && featuredNews.sources.length > 0 && (
+              <p className={styles.featuredSources}>
+                {newsT('sourcesLabel', { count: featuredNews.sources.length })}
+              </p>
+            )}
+            <Link className={styles.featuredReadMore} href={`/studio/news/${featuredNews.slug}`}>
+              {newsT('readMore')}
+            </Link>
+          </article>
+        )}
+      </section>
       <HomeFeedClient initialFeed={initialFeed} />
 
       {/*
@@ -73,14 +104,10 @@ export default async function HomePage() {
        * 원문 콘텐츠이므로 피드 UI와 별개의 의미 있는 문서 영역이다.
        */}
       <section className={styles.seoSection} aria-labelledby="home-content-title">
-        <h2 id="home-content-title" className={styles.seoTitle}>{t('seo_title')}</h2>
-        <p className={styles.seoIntro}>{t('seo_intro')}</p>
+        <h2 id="home-content-title" className={styles.seoTitle}>{t('seo_how_title')}</h2>
+        <p className={styles.seoIntro}>{t('seo_how_desc')}</p>
 
         <div className={styles.seoGrid}>
-          <article className={styles.seoCard}>
-            <h3>{t('seo_how_title')}</h3>
-            <p>{t('seo_how_desc')}</p>
-          </article>
           <article className={styles.seoCard}>
             <h3>{t('seo_vote_title')}</h3>
             <p>{t('seo_vote_desc')}</p>

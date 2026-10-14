@@ -379,14 +379,14 @@ export default function HomeFeedClient({
   return (
     <section
       ref={feedShellRef}
-      className={styles.feedShell}
+      className={`${styles.feedShell} ${styles.feedShellWithIntro}`}
       aria-labelledby="home-feed-title"
       data-testid="home-profile-feed"
       tabIndex={0}
     >
       <div className={styles.feedLayout}>
         <div className={styles.feedMain}>
-          <h1 id="home-feed-title" className={styles.visuallyHidden}>{t('feed_title')}</h1>
+          <h2 id="home-feed-title" className={styles.visuallyHidden}>{t('feed_title')}</h2>
 
           {isLoading && posts.length === 0 && (
             <div className={styles.feedState} aria-busy="true" aria-live="polite">

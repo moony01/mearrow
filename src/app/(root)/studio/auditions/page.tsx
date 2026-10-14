@@ -1,18 +1,23 @@
 import type { Metadata } from 'next';
-import { permanentRedirect } from 'next/navigation';
 import { FULL_URL } from '@/lib/constants';
-import StudioArchiveRedirect from '../StudioArchiveRedirect';
+import AuditionsArchiveContent from './AuditionsArchiveContent';
+
+const canonical = `${FULL_URL}/studio/auditions`;
 
 export const metadata: Metadata = {
-  title: 'Auditions',
-  robots: { index: false, follow: true },
-  alternates: { canonical: `${FULL_URL}/studio` },
+  title: { absolute: 'K-pop Auditions | MEARROW Studio' },
+  description: 'Browse official-source K-pop audition notices, application status, and eligibility.',
+  alternates: { canonical },
+  openGraph: {
+    title: 'K-pop Auditions | MEARROW Studio',
+    description: 'Browse official-source K-pop audition notices, application status, and eligibility.',
+    siteName: 'MEARROW',
+    url: canonical,
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function AuditionsArchivePage() {
-  if (process.env.NODE_ENV === 'development' || process.env.NEXT_RUNTIME_TARGET === 'workers') {
-    permanentRedirect('/studio#auditions');
-  }
-
-  return <StudioArchiveRedirect href="/studio#auditions" label="Go to Studio Auditions" />;
+  return <AuditionsArchiveContent />;
 }

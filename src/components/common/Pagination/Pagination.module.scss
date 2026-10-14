@@ -19,7 +19,8 @@
 
 .directionButton,
 .jumpButton,
-.pageButton {
+.pageButton,
+.pageLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -62,6 +63,12 @@
   padding: 0;
 }
 
+.pageLink {
+  width: 40px;
+  padding: 0;
+  text-decoration: none;
+}
+
 .current {
   border-color: var(--color-primary);
   background: var(--color-primary);
@@ -75,13 +82,15 @@
 
   .directionButton,
   .jumpButton,
-  .pageButton {
+  .pageButton,
+  .pageLink {
     min-height: 38px;
   }
 
   .directionButton,
   .jumpButton,
-  .pageButton {
+  .pageButton,
+  .pageLink {
     width: 38px;
   }
 }

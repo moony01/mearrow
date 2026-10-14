@@ -4,6 +4,7 @@ excerpt: 'Analyzing the incredible global achievements of 4th generation groups 
 date: '2025-01-20'
 category: 'Market Trend'
 thumbnail: '/images/news/4th-gen-global-impact.webp'
+active: false
 ---
 
 ## Faster and Wider: The Rise of the 4th Generation

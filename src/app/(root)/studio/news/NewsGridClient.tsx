@@ -26,14 +26,22 @@ interface NewsGridClientProps {
   posts: NewsPost[];
   locale: string;
   basePath?: string;
+  paginationBasePath?: string;
+  initialPage?: number;
 }
 
 const PAGE_SIZE = 6;
 
-export default function NewsGridClient({ posts, locale, basePath = '/studio/news' }: NewsGridClientProps) {
+export default function NewsGridClient({
+  posts,
+  locale,
+  basePath = '/studio/news',
+  paginationBasePath,
+  initialPage = 1,
+}: NewsGridClientProps) {
   const t = useTranslations('News');
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(initialPage);
 
   const totalPages = Math.ceil(posts.length / PAGE_SIZE);
   const activePage = Math.min(currentPage, Math.max(totalPages, 1));
@@ -45,6 +53,9 @@ export default function NewsGridClient({ posts, locale, basePath = '/studio/news
     () => displayedPosts.map((post) => post.slug),
     [displayedPosts],
   );
+  const pageHref = paginationBasePath
+    ? (page: number) => (page === 1 ? paginationBasePath : `${paginationBasePath}/page/${page}`)
+    : undefined;
 
   // 현재 페이지에 표시되는 뉴스의 댓글 수만 배치 조회
   useEffect(() => {
@@ -90,6 +101,7 @@ export default function NewsGridClient({ posts, locale, basePath = '/studio/news
         currentPage={activePage}
         totalPages={totalPages}
         onPageChange={setCurrentPage}
+        getPageHref={pageHref}
         ariaLabel={t('paginationLabel')}
         previousGroupLabel={t('previousGroup')}
         previousLabel={t('previousPage')}

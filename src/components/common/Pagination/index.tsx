@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import styles from './Pagination.module.scss';
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
-  onPageChange: (page: number) => void;
+  onPageChange?: (page: number) => void;
+  getPageHref?: (page: number) => string;
   ariaLabel: string;
   previousGroupLabel: string;
   previousLabel: string;
@@ -16,6 +18,7 @@ export default function Pagination({
   currentPage,
   totalPages,
   onPageChange,
+  getPageHref,
   ariaLabel,
   previousGroupLabel,
   previousLabel,
@@ -34,32 +37,42 @@ export default function Pagination({
   );
   const previousWindowStart = Math.max(pageWindowStart - 5, 1);
   const nextWindowStart = pageWindowStart + 5;
+  const renderControl = (
+    page: number,
+    label: string,
+    className: string,
+    content: string,
+    disabled = false,
+    current = false,
+  ) => {
+    const href = !disabled && !current ? getPageHref?.(page) : undefined;
+    if (href) {
+      return <Link className={className} href={href} aria-label={label}>{content}</Link>;
+    }
+
+    return (
+      <button
+        type="button"
+        className={className}
+        aria-label={label}
+        aria-current={current ? 'page' : undefined}
+        onClick={() => onPageChange?.(page)}
+        disabled={disabled || current}
+      >
+        {content}
+      </button>
+    );
+  };
 
   return (
     <nav className={styles.pagination} aria-label={ariaLabel}>
       <ul className={styles.list}>
         <li>
-          <button
-            type="button"
-            className={styles.jumpButton}
-            aria-label={previousGroupLabel}
-            onClick={() => onPageChange(previousWindowStart)}
-            disabled={pageWindowStart === 1}
-          >
-            <span aria-hidden="true">{'<<'}</span>
-          </button>
+          {renderControl(previousWindowStart, previousGroupLabel, styles.jumpButton, '<<', pageWindowStart === 1)}
         </li>
 
         <li>
-          <button
-            type="button"
-            className={styles.directionButton}
-            aria-label={previousLabel}
-            onClick={() => onPageChange(safeCurrentPage - 1)}
-            disabled={safeCurrentPage === 1}
-          >
-            <span aria-hidden="true">{'<'}</span>
-          </button>
+          {renderControl(safeCurrentPage - 1, previousLabel, styles.directionButton, '<', safeCurrentPage === 1)}
         </li>
 
         {pages.map((page) => {
@@ -67,41 +80,24 @@ export default function Pagination({
 
           return (
             <li key={page}>
-              <button
-                type="button"
-                className={`${styles.pageButton} ${isCurrent ? styles.current : ''}`}
-                onClick={() => onPageChange(page)}
-                aria-label={pageLabel(page)}
-                aria-current={isCurrent ? 'page' : undefined}
-              >
-                {page}
-              </button>
+              {renderControl(
+                page,
+                pageLabel(page),
+                `${styles.pageButton} ${isCurrent ? styles.current : ''}`,
+                String(page),
+                false,
+                isCurrent,
+              )}
             </li>
           );
         })}
 
         <li>
-          <button
-            type="button"
-            className={styles.directionButton}
-            aria-label={nextLabel}
-            onClick={() => onPageChange(safeCurrentPage + 1)}
-            disabled={safeCurrentPage === totalPages}
-          >
-            <span aria-hidden="true">{'>'}</span>
-          </button>
+          {renderControl(safeCurrentPage + 1, nextLabel, styles.directionButton, '>', safeCurrentPage === totalPages)}
         </li>
 
         <li>
-          <button
-            type="button"
-            className={styles.jumpButton}
-            aria-label={nextGroupLabel}
-            onClick={() => onPageChange(nextWindowStart)}
-            disabled={nextWindowStart > totalPages}
-          >
-            <span aria-hidden="true">{'>>'}</span>
-          </button>
+          {renderControl(nextWindowStart, nextGroupLabel, styles.jumpButton, '>>', nextWindowStart > totalPages)}
         </li>
       </ul>
     </nav>

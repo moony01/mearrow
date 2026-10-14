@@ -14,6 +14,7 @@ const configuredGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GA_MEASUREMENT_ID = configuredGaMeasurementId && /^[A-Z0-9-]+$/.test(configuredGaMeasurementId)
   ? configuredGaMeasurementId
   : 'G-LWCB5XG3S9';
+const ADSENSE_SCRIPT_URL = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`;
 
 const inter = Inter({
   subsets: ['latin'],
@@ -130,9 +131,9 @@ export default async function SiteLayout({
         {/* Google AdSense */}
         <Script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
+          src={ADSENSE_SCRIPT_URL}
           crossOrigin="anonymous"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <ThemeProvider
           attribute="data-theme"

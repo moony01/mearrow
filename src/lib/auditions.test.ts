@@ -63,7 +63,6 @@ describe('audition content routing', () => {
       '2026-yg-global-audition-bangkok',
       'jyp-project-noir-band-audition',
       '2026-yg-global-audition-sydney-auckland',
-      '2026-yg-global-audition-usa',
       'jyp-online-audition',
       'wakeone-next-wave-audition',
       'yg-online-audition',
@@ -71,6 +70,7 @@ describe('audition content routing', () => {
       '2026-yg-global-audition-osaka',
       '2026-yg-global-audition-hong-kong',
       '2026-yg-global-audition-taipei',
+      '2026-yg-global-audition-usa',
     ]);
   });
 });

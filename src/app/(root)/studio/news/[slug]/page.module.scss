@@ -112,6 +112,15 @@
   gap: 16px;
 }
 
+.metaShare {
+  min-width: 0;
+  max-width: 100%;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
 .date {
   display: flex;
   align-items: center;

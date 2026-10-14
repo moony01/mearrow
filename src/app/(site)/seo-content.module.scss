@@ -5,6 +5,135 @@
 
 @use '../../styles/abstracts/variables' as *;
 
+.discovery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  align-items: stretch;
+  gap: 20px;
+  width: min(1180px, calc(100% - 32px));
+  margin: 20px auto 0;
+}
+
+.discoveryCopy,
+.featuredStory {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  background: $color-panel-bg;
+}
+
+.discoveryCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.discoveryEyebrow,
+.featuredEyebrow {
+  margin: 0 0 10px;
+  color: $color-primary;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.discoveryCopy h1 {
+  margin: 0;
+  color: $color-text;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.discoveryIntro {
+  max-width: 64ch;
+  margin: 12px 0 18px;
+  color: $color-text-dim;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.discoveryVoteLink,
+.featuredReadMore {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 999px;
+  background: $color-primary;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.discoveryVoteLink:focus-visible,
+.featuredReadMore:focus-visible,
+.featuredStory h2 a:focus-visible {
+  outline: 3px solid $color-primary;
+  outline-offset: 3px;
+}
+
+.featuredStory {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(145deg, $color-panel-bg 35%, #eef2ff 100%);
+}
+
+.featuredStory h2 {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.35;
+}
+
+.featuredStory h2 a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+.featuredExcerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 10px 0 0;
+  color: $color-text-dim;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.featuredSources {
+  margin: 9px 0 12px;
+  color: $color-text-dim;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.featuredReadMore {
+  min-height: 34px;
+  padding-inline: 12px;
+  background: transparent;
+  color: $color-primary;
+  border: 1px solid currentColor;
+}
+
+@media (max-width: 700px) {
+  .discovery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .discoveryCopy,
+  .featuredStory {
+    padding: 18px;
+  }
+}
+
 .pageTitle {
   font-size: 1.5rem;
   font-weight: 700;

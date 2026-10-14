@@ -33,6 +33,7 @@
 }
 
 .sectionHeading h2,
+.archiveTitle,
 .snsSection h2 {
   margin: 0;
   color: #151922;
@@ -40,6 +41,17 @@
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.15;
+}
+
+.archiveTitle {
+  margin: 0;
+}
+
+.archivePageStatus {
+  margin: 12px 0 0;
+  color: #697384;
+  font-size: 13px;
+  text-align: center;
 }
 
 .sectionHeading p:not(.sectionEyebrow),

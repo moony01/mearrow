@@ -522,7 +522,7 @@
   },
   "Legal": {
     "last_updated": "Last Updated",
-    "legal_review_notice": "This document is subject to legal review and may be updated. Please check back periodically for changes.",
+    "legal_review_notice": "This page may be updated as MEARROW changes. Check the last-updated date above for the current version.",
     "contact_title": "Contact Us",
     "contact_content": "If you have any questions about this policy, please contact us at contact@kcl.fan",
     "terms_title": "Terms of Service",
@@ -633,7 +633,7 @@
     "q1": "What is MEARROW?",
     "a1": "MEARROW (K-pop Talent Network) is a global fan engagement platform where K-pop fans worldwide vote for their favorite entertainment companies to create real-time rankings. It is an unofficial fan-made service not affiliated with any entertainment company.",
     "q2": "How do I vote?",
-    "a2": "Simply click the 'Vote' button next to your favorite company on the main page. Votes are refreshed daily at midnight, and anyone can participate without registration.",
+    "a2": "Open MEARROW Studio and vote for a company in the Fan Vote section. Votes refresh daily at midnight (KST), and anyone can participate without registering.",
     "q3": "How are votes refreshed?",
     "a3": "Votes are automatically refreshed at midnight (KST). The number of daily votes is limited to ensure fair competition.",
     "q4": "How does the league system work?",

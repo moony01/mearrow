@@ -1,0 +1,2 @@
+export const NEWS_ARCHIVE_PAGE_SIZE = 6;
+export const AUDITIONS_ARCHIVE_PAGE_SIZE = 6;

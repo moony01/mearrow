@@ -188,6 +188,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             <NewsViewCounter slug={slug} incrementOnMount />
           </div>
           <ShareButtons
+            className={styles.metaShare}
             title={post.title}
             url={canonical}
             description={post.excerpt}

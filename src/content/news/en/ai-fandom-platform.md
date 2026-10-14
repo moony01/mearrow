@@ -4,6 +4,7 @@ excerpt: 'Beyond 1:1 private messages to AI voice, real-time translation, and pe
 date: '2025-01-10'
 category: 'Tech & Culture'
 thumbnail: '/images/news/ai-fandom.webp'
+active: false
 ---
 
 ## When Fandom Meets Technology

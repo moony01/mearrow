@@ -277,7 +277,9 @@ async function main() {
         name: 'studio-news-list-has-no-global-vote-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/studio/news');
-          assert(new URL(page.url()).pathname === '/studio' && new URL(page.url()).hash === '#news', 'Studio news archive did not reach landing section');
+          assert(new URL(page.url()).pathname === '/studio/news', 'Studio news archive did not stay on its indexable route');
+          await page.getByRole('heading', { level: 1, name: 'News' }).waitFor({ state: 'visible' });
+          assert(await page.locator('main a[href^="/studio/news/"]:not([href*="/page/"])').count() === 6, 'Studio news archive did not render its first six cards');
           await expectNoModal(page, 'Studio news list');
           await takeScreenshot(page, 'studio-news-list-no-modal');
         },
@@ -302,7 +304,9 @@ async function main() {
         name: 'studio-auditions-has-no-global-vote-modal',
         run: async (page) => {
           await goto(page, server.baseUrl, '/studio/auditions');
-          assert(new URL(page.url()).pathname === '/studio' && new URL(page.url()).hash === '#auditions', 'Studio auditions archive did not reach landing section');
+          assert(new URL(page.url()).pathname === '/studio/auditions', 'Studio auditions archive did not stay on its indexable route');
+          await page.getByRole('heading', { level: 1, name: 'Auditions' }).waitFor({ state: 'visible' });
+          assert(await page.locator('main article').count() === 6, 'Studio auditions archive did not render its first six cards');
           await expectNoModal(page, 'Studio auditions');
           await takeScreenshot(page, 'studio-auditions-no-modal');
         },
