@@ -5,8 +5,6 @@ import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import { FULL_URL } from '@/lib/constants';
 import { NEWS_ARCHIVE_PAGE_SIZE } from '@/lib/content-archive';
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   const totalPages = Math.ceil(getAllNews(NEWS_SOURCE_LOCALE).length / NEWS_ARCHIVE_PAGE_SIZE);
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => ({
