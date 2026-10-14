@@ -5,8 +5,6 @@ import { getAllAuditions } from '@/lib/auditions';
 import { FULL_URL } from '@/lib/constants';
 import { AUDITIONS_ARCHIVE_PAGE_SIZE } from '@/lib/content-archive';
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   const totalPages = Math.ceil(getAllAuditions('en').length / AUDITIONS_ARCHIVE_PAGE_SIZE);
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => ({
