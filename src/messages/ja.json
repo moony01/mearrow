@@ -356,6 +356,7 @@
     "error": "投票に失敗しました。もう一度お試しください。",
     "daily_limit": "本日の投票上限に達しました。",
     "card_power_hint": "* カードを長押しして{max}票投票",
+    "card_tap_longpress_hint": "タップで1票・長押しで最大100票",
     "quota": {
       "title": "本日の投票権",
       "remaining": "{remaining}/{max}",

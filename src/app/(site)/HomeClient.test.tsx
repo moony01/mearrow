@@ -60,17 +60,20 @@ vi.mock('@/components/features/vote/VoteBoard', () => ({
     selectedCompany,
     showLeagueHeader,
     showSearchBar,
+    voteSurfaceDescriptionId,
   }: {
     allCompanies: Array<{ companyId: string; nameEn: string }>;
     selectedCompany: { name: { en: string } } | null;
     showLeagueHeader?: boolean;
     showSearchBar?: boolean;
+    voteSurfaceDescriptionId?: string;
   }) => (
     <section data-testid="legacy-vote-board">
       <div data-testid="board-selected-company">{selectedCompany?.name.en ?? 'none'}</div>
       <div data-testid="board-card-count">{allCompanies.length}</div>
       <div data-testid="board-header-enabled">{String(showLeagueHeader)}</div>
       <div data-testid="board-search-enabled">{String(showSearchBar)}</div>
+      <div data-testid="board-description-id">{voteSurfaceDescriptionId}</div>
     </section>
   ),
 }));
@@ -149,9 +152,10 @@ describe('HomeClient legacy vote board surface', () => {
     render(<HomeClient />);
 
     expect(screen.getByTestId('home-season-label').textContent).toBe('2026년 08시즌');
-    expect(screen.getByTestId('home-vote-helper').textContent).toBe(
-      '* 카드를 길게 누르고 100표 투표하기',
-    );
+    const helper = screen.getByTestId('home-vote-helper');
+    expect(helper.textContent).toBe('* 카드를 길게 누르고 100표 투표하기');
+    expect(screen.getByTestId('legacy-vote-board').nextElementSibling).toBe(helper);
+    expect(screen.getByTestId('board-description-id').textContent).toBe('home-vote-helper');
     expect(screen.getByTestId('home-today-votes').textContent).toBe('오늘 100표 남음');
     expect(screen.getByTestId('home-refresh-indicator').textContent).toBe('20초');
     expect(screen.getByTestId('home-season-dday').textContent).toBe('D-15');
@@ -167,6 +171,14 @@ describe('HomeClient legacy vote board surface', () => {
 
     expect(screen.getByTestId('board-card-count').textContent).toBe('2');
     expect(screen.getByTestId('board-selected-company').textContent).toBe('none');
+  });
+
+  it('uses the Studio intro as the vote-card description when embedded', () => {
+    render(<HomeClient embedded />);
+
+    expect(screen.queryByTestId('home-vote-helper')).toBeNull();
+    expect(screen.getByTestId('legacy-vote-board')).toBeDefined();
+    expect(screen.getByTestId('board-description-id').textContent).toBe('home-vote-helper');
   });
 
   it('retains the existing home label format helpers', () => {

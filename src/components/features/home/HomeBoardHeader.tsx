@@ -5,8 +5,6 @@ import { useTranslations } from 'next-intl';
 import type { SeasonInfo } from '@/types/league';
 import styles from '@/app/(site)/page.module.scss';
 
-export const HOME_VOTE_HELPER_ID = 'home-vote-helper';
-
 export function formatHomeSeasonLabel(year: number, month: number): string {
   return `${year}년 ${String(month).padStart(2, '0')}시즌`;
 }
@@ -24,9 +22,6 @@ export interface HomeBoardHeaderProps {
   countdown: number;
   isRefreshing: boolean;
   locale?: string;
-  /** Show the home-only card voting guidance below the season label. */
-  showVoteHelper?: boolean;
-  voteHelperMax?: number;
 }
 
 /** The small context row shared by the home board and every board embed. */
@@ -36,10 +31,7 @@ export default function HomeBoardHeader({
   countdown,
   isRefreshing,
   locale = 'ko',
-  showVoteHelper = false,
-  voteHelperMax = 100,
 }: HomeBoardHeaderProps) {
-  const t = useTranslations('Vote');
   const tSeason = useTranslations('League.season');
   const tQuota = useTranslations('Vote.quota');
   const isKorean = locale === 'ko';
@@ -64,29 +56,18 @@ export default function HomeBoardHeader({
         <span className={styles.seasonLabel} data-testid="home-season-label">
           {seasonLabel}
         </span>
-        {showVoteHelper && (
-          <span
-            id={HOME_VOTE_HELPER_ID}
-            className={styles.homeVoteHelper}
-            data-testid={HOME_VOTE_HELPER_ID}
-            style={{ pointerEvents: 'none' }}
-          >
-            {t('card_power_hint', {
-              max: voteHelperMax,
-              defaultValue: `* Long-press the card to vote ${voteHelperMax} times`,
-            })}
-          </span>
-        )}
       </div>
 
       <div className={styles.homeHeaderMeta}>
-        <span
-          className={styles.todayVotes}
-          data-testid="home-today-votes"
-          aria-label={isKorean ? `오늘 남은 투표권 ${remaining}표` : quotaLabel}
-        >
-          {quotaLabel}
-        </span>
+        <div className={styles.todayVotesGroup}>
+          <span
+            className={styles.todayVotes}
+            data-testid="home-today-votes"
+            aria-label={isKorean ? `오늘 남은 투표권 ${remaining}표` : quotaLabel}
+          >
+            {quotaLabel}
+          </span>
+        </div>
 
         <span
           className={styles.refreshIndicator}

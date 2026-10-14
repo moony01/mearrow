@@ -356,6 +356,7 @@
     "error": "Échec du vote. Veuillez réessayer.",
     "daily_limit": "Vous avez atteint votre limite quotidienne de votes.",
     "card_power_hint": "* Maintenez la carte enfoncée pour voter {max} fois",
+    "card_tap_longpress_hint": "Appui : 1 vote · Maintenir : jusqu’à 100 votes",
     "quota": {
       "title": "Votes du Jour",
       "remaining": "{remaining}/{max}",

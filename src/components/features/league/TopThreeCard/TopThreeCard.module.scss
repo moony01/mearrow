@@ -31,6 +31,11 @@ $bronze: #cd7f32;
   cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.3s ease, filter 0.2s ease;
 
+  &:has([data-vote-card-tip]) {
+    z-index: 21;
+    overflow: visible;
+  }
+
   // 1위 카드 특별 스타일
   &[data-rank='1'] {
     border: 2px solid rgba($gold, 0.4);

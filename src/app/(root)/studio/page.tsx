@@ -5,6 +5,7 @@ import { getAllAuditions } from '@/lib/auditions';
 import { getAllNews, NEWS_SOURCE_LOCALE } from '@/lib/news';
 import { FULL_URL } from '@/lib/constants';
 import { getInitialLeagueData } from '@/lib/server/public-page-data';
+import { HOME_VOTE_HELPER_ID } from '@/components/features/home/constants';
 import StudioMainBanner from './StudioMainBanner';
 import RankingClient from './ranking/RankingClient';
 import NewsGridClient from './news/NewsGridClient';
@@ -50,7 +51,9 @@ export default async function StudioPage() {
           <div>
             <p className={styles.sectionEyebrow}>TAKE PART</p>
             <h2 id="fan-vote-title">Fan Vote</h2>
-            <p>See how fans are supporting K-pop companies right now.</p>
+            <p id={HOME_VOTE_HELPER_ID}>
+              See how fans support K-pop companies. Long-press a company card to cast up to 100 votes.
+            </p>
           </div>
         </div>
         <RankingClient initialData={initialLeagueData} embedded />
