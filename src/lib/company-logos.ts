@@ -6,6 +6,7 @@
  * prefer the verified brand assets below whenever a company ID or name is known.
  */
 const OFFICIAL_COMPANY_LOGOS: Record<string, string> = {
+  '71315875-2632-4406-8e60-c571f2008955': '/images/company-logos/a2o.svg',
   'ba57c11a-bf5b-4058-93e8-449c572d72c2': '/images/company-logos/yg.svg',
   'df715750-e434-441b-b361-3134b29d320f': '/images/company-logos/sm.webp',
   '9e920899-4937-4c61-9aa6-5539e4953d2b': '/images/company-logos/the-muze.webp',
@@ -19,6 +20,8 @@ const OFFICIAL_COMPANY_LOGOS: Record<string, string> = {
 };
 
 const OFFICIAL_COMPANY_LOGOS_BY_NAME: Record<string, string> = {
+  a2o: '/images/company-logos/a2o.svg',
+  'a2o entertainment': '/images/company-logos/a2o.svg',
   hybe: '/images/company-logos/hybe.svg',
   'hybe corporation': '/images/company-logos/hybe.svg',
   sm: '/images/company-logos/sm.webp',

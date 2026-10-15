@@ -112,15 +112,6 @@
   gap: 16px;
 }
 
-.metaShare {
-  min-width: 0;
-  max-width: 100%;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
-}
-
 .date {
   display: flex;
   align-items: center;
@@ -244,8 +235,8 @@
     margin: 1.5rem 0;
   }
 
-  /* 이미지 캡션 (마크다운 em 태그) */
-  em {
+  /* 이미지 다음 문단의 단독 이탤릭은 이미지 캡션으로 표시 */
+  p:has(> .contentImage) + p > em {
     display: block;
     text-align: center;
     color: $color-text-dim;
@@ -317,22 +308,13 @@
 
 /* 기사 하단 공유 섹션 */
 .shareSection {
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-  background: $color-panel-bg;
-  border-radius: 12px;
-  text-align: center;
+  max-width: 760px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
 
-  .sharePrompt {
-    margin: 0 0 1rem;
-    font-size: 0.95rem;
-    color: $color-text-dim;
-    font-weight: 500;
-  }
-
-  // 공유 버튼 중앙 정렬
-  > div {
-    justify-content: center;
+  @media (max-width: 768px) {
+    padding-inline: 16px;
   }
 }
 
@@ -473,92 +455,16 @@
   max-width: 760px;
   margin: 0 auto;
   font-size: 1rem;
-}
 
-.byline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  margin-top: 14px;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.sources {
-  max-width: 760px;
-  margin: 32px auto 0;
-  padding: 20px 22px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-muted);
-}
-
-.sourcesHeading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-primary);
-
-  h2 {
-    margin: 0;
-    color: var(--color-text);
-    font-size: 1.05rem;
-    font-weight: 750;
+  @media (max-width: 768px) {
+    padding-inline: 16px;
   }
 }
 
-.sourcesIntro {
-  margin: 10px 0 14px;
-  color: var(--color-text-dim);
-  font-size: 0.86rem;
-  line-height: 1.65;
-}
-
-.sourceList {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding-left: 20px;
-
-  li {
-    padding-left: 4px;
-  }
-
-  a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--color-primary);
-    font-size: 0.86rem;
-    line-height: 1.5;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-
-    &:hover {
-      text-decoration-thickness: 2px;
-    }
-  }
-}
-
-.correctionNote {
-  margin: 16px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-.shareSection,
 .relatedSection {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
-}
-
-.shareSection {
-  border-radius: var(--radius-md);
 }
 
 .relatedSection {

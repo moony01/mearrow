@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import ExportedImage from 'next-image-export-optimizer';
-import { ArrowLeft, BookOpen, Calendar, ExternalLink, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {
@@ -130,11 +130,6 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     month: 'long',
     day: 'numeric',
   });
-  const formattedUpdatedDate = new Date(post.updatedAt ?? post.date).toLocaleDateString(locale, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
   const sources = post.sources ?? [];
 
   return (
@@ -178,7 +173,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         {/* 제목 */}
         <h1 className={styles.title}>{post.title}</h1>
 
-        {/* 메타 정보 (날짜 + 조회수 + 공유 버튼) */}
+        {/* 메타 정보 (날짜 + 조회수) */}
         <div className={styles.meta}>
           <div className={styles.metaLeft}>
             <div className={styles.date}>
@@ -187,27 +182,6 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             </div>
             <NewsViewCounter slug={slug} incrementOnMount />
           </div>
-          <ShareButtons
-            className={styles.metaShare}
-            title={post.title}
-            url={canonical}
-            description={post.excerpt}
-            imageUrl={post.thumbnail ? `${FULL_URL}${post.thumbnail}` : undefined}
-            size="sm"
-          />
-        </div>
-        <div className={styles.byline}>
-          <span>
-            {t('authorLabel')}: {post.author || BRAND_NAME}
-          </span>
-          <span>
-            {post.updatedAt && post.updatedAt !== post.date
-              ? t('updatedLabel')
-              : t('publishedLabel')}{' '}
-            {post.updatedAt && post.updatedAt !== post.date
-              ? formattedUpdatedDate
-              : formattedDate}
-          </span>
         </div>
       </header>
 
@@ -254,36 +228,16 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         })()}
       </article>
 
-      {sources.length > 0 && (
-        <aside className={styles.sources} aria-labelledby="news-sources-title">
-          <div className={styles.sourcesHeading}>
-            <BookOpen size={18} aria-hidden="true" />
-            <h2 id="news-sources-title">{t('sourcesTitle')}</h2>
-          </div>
-          <p className={styles.sourcesIntro}>{t('sourcesIntro')}</p>
-          <ol className={styles.sourceList}>
-            {sources.map((source) => (
-              <li key={source.url}>
-                <a href={source.url} target="_blank" rel="noopener noreferrer">
-                  <span>{source.label}</span>
-                  <ExternalLink size={13} aria-hidden="true" />
-                </a>
-              </li>
-            ))}
-          </ol>
-          <p className={styles.correctionNote}>{t('correctionNote')}</p>
-        </aside>
-      )}
-
       {/* 기사 하단 공유 버튼 */}
       <div className={styles.shareSection}>
-        <p className={styles.sharePrompt}>{t('sharePrompt')}</p>
         <ShareButtons
           title={post.title}
           url={canonical}
           description={post.excerpt}
           imageUrl={post.thumbnail ? `${FULL_URL}${post.thumbnail}` : undefined}
           size="md"
+          showLabel={false}
+          showKakaoButton={false}
         />
       </div>
 

@@ -10,12 +10,63 @@
  * @updated 2026-01-31 - 카카오톡 공유 추가
  */
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import classNames from 'classnames';
 import styles from './ShareButtons.module.scss';
 import { BRAND_NAME, BRAND_POSITIONING } from '@/lib/brand';
 import { FULL_URL } from '@/lib/constants';
+
+let kakaoSdkLoadPromise: Promise<void> | null = null;
+
+function loadKakaoSdk(): Promise<void> {
+  if (typeof window === 'undefined') {
+    return Promise.reject(new Error('Kakao SDK can only load in a browser.'));
+  }
+
+  if (window.Kakao) return Promise.resolve();
+  if (kakaoSdkLoadPromise) return kakaoSdkLoadPromise;
+
+  const existingScript = document.querySelector<HTMLScriptElement>(
+    'script[data-kakao-share-sdk="true"]',
+  );
+
+  kakaoSdkLoadPromise = new Promise<void>((resolve, reject) => {
+    const script = existingScript ?? document.createElement('script');
+    const cleanup = () => {
+      script.removeEventListener('load', handleLoad);
+      script.removeEventListener('error', handleError);
+    };
+    const handleLoad = () => {
+      cleanup();
+      if (window.Kakao) resolve();
+      else reject(new Error('Kakao SDK did not initialize.'));
+    };
+    const handleError = () => {
+      cleanup();
+      script.remove();
+      reject(new Error('Kakao SDK failed to load.'));
+    };
+
+    script.addEventListener('load', handleLoad, { once: true });
+    script.addEventListener('error', handleError, { once: true });
+
+    if (!existingScript) {
+      script.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js';
+      script.integrity =
+        'sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4';
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+      script.dataset.kakaoShareSdk = 'true';
+      document.head.appendChild(script);
+    }
+  }).catch((error: unknown) => {
+    kakaoSdkLoadPromise = null;
+    throw error;
+  });
+
+  return kakaoSdkLoadPromise;
+}
 
 /** X(Twitter) 아이콘 SVG */
 function XIcon({ size = 18 }: { size?: number }) {
@@ -99,6 +150,8 @@ interface ShareButtonsProps {
   direction?: 'horizontal' | 'vertical';
   /** 레이블 표시 여부 */
   showLabel?: boolean;
+  /** 카카오톡 공유 버튼 표시 여부 */
+  showKakaoButton?: boolean;
   /** 버튼 크기 */
   size?: 'sm' | 'md' | 'lg';
   /** 추가 CSS 클래스 */
@@ -121,42 +174,47 @@ export default function ShareButtons({
   imageUrl,
   direction = 'horizontal',
   showLabel = true,
+  showKakaoButton = true,
   size = 'md',
   className,
 }: ShareButtonsProps) {
+  const kakaoJsKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY?.trim();
   const [copied, setCopied] = useState(false);
   const [kakaoReady, setKakaoReady] = useState(false);
+  const [kakaoError, setKakaoError] = useState<string | null>(
+    showKakaoButton && !kakaoJsKey
+      ? '카카오톡 공유 설정이 필요합니다. 링크 복사를 이용해 주세요.'
+      : null,
+  );
+  const kakaoStatusId = useId();
 
   // 카카오 SDK 초기화
   useEffect(() => {
-    // 이미 로드되었는지 확인
-    if (typeof window !== 'undefined' && window.Kakao) {
-      if (!window.Kakao.isInitialized()) {
-        // 카카오 JavaScript 키 (공개 키)
-        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY || '');
-      }
-      const readyTimer = window.setTimeout(() => setKakaoReady(true), 0);
-      return () => window.clearTimeout(readyTimer);
-    }
+    if (!showKakaoButton || !kakaoJsKey) return;
 
-    // 카카오 SDK 동적 로드
-    const script = document.createElement('script');
-    script.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js';
-    script.integrity = 'sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4';
-    script.crossOrigin = 'anonymous';
-    script.async = true;
-    script.onload = () => {
-      if (window.Kakao && !window.Kakao.isInitialized()) {
-        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY || '');
-      }
-      setKakaoReady(true);
-    };
-    document.head.appendChild(script);
+    let active = true;
+    loadKakaoSdk()
+      .then(() => {
+        if (!window.Kakao) throw new Error('Kakao SDK is unavailable.');
+        if (!window.Kakao.isInitialized()) window.Kakao.init(kakaoJsKey);
+        if (!window.Kakao.isInitialized()) throw new Error('Kakao SDK did not initialize.');
+        if (active) {
+          setKakaoReady(true);
+          setKakaoError(null);
+        }
+      })
+      .catch(() => {
+        console.error('Failed to initialize Kakao sharing.');
+        if (active) {
+          setKakaoReady(false);
+          setKakaoError('카카오톡 공유를 불러오지 못했습니다. 링크 복사를 이용해 주세요.');
+        }
+      });
 
     return () => {
-      // cleanup은 하지 않음 (SDK는 한 번 로드되면 유지)
+      active = false;
     };
-  }, []);
+  }, [kakaoJsKey, showKakaoButton]);
 
   // 공유 URL 결정 (SSR 안전하게 처리)
   const getShareUrl = useCallback(() => {
@@ -169,33 +227,39 @@ export default function ShareButtons({
    */
   const shareToKakao = useCallback(() => {
     if (!kakaoReady || !window.Kakao) {
-      console.warn('Kakao SDK not ready');
+      setKakaoError('카카오톡 공유를 사용할 수 없습니다. 링크 복사를 이용해 주세요.');
       return;
     }
 
     const shareUrl = getShareUrl();
 
-    window.Kakao.Share.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: title,
-        description: description || `${BRAND_NAME} - ${BRAND_POSITIONING}`,
-        imageUrl: imageUrl || `${FULL_URL}/opengraph-image`,
-        link: {
-          mobileWebUrl: shareUrl,
-          webUrl: shareUrl,
-        },
-      },
-      buttons: [
-        {
-          title: '자세히 보기',
+    try {
+      window.Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: title,
+          description: description || `${BRAND_NAME} - ${BRAND_POSITIONING}`,
+          imageUrl: imageUrl || `${FULL_URL}/opengraph-image`,
           link: {
             mobileWebUrl: shareUrl,
             webUrl: shareUrl,
           },
         },
-      ],
-    });
+        buttons: [
+          {
+            title: '자세히 보기',
+            link: {
+              mobileWebUrl: shareUrl,
+              webUrl: shareUrl,
+            },
+          },
+        ],
+      });
+      setKakaoError(null);
+    } catch {
+      console.error('Failed to open Kakao sharing.');
+      setKakaoError('카카오톡 공유에 실패했습니다. 링크 복사를 이용해 주세요.');
+    }
   }, [title, description, imageUrl, getShareUrl, kakaoReady]);
 
   /**
@@ -241,54 +305,48 @@ export default function ShareButtons({
       {showLabel && <span className={styles.label}>Share</span>}
 
       <div className={styles.buttons}>
-        {/* 카카오톡 공유 버튼 */}
-        <motion.button
-          type="button"
-          onClick={shareToKakao}
-          className={classNames(styles.shareBtn, styles.kakao)}
-          aria-label="카카오톡으로 공유"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          disabled={!kakaoReady}
-        >
-          <KakaoIcon size={size === 'sm' ? 14 : size === 'lg' ? 20 : 16} />
-          {size !== 'sm' && <span className={styles.btnText}>카카오톡</span>}
-        </motion.button>
+        {showKakaoButton && (
+          <button
+            type="button"
+            onClick={shareToKakao}
+            className={classNames(styles.shareBtn, styles.kakao)}
+            aria-label="카카오톡으로 공유"
+            aria-describedby={kakaoError ? kakaoStatusId : undefined}
+            disabled={!kakaoReady}
+          >
+            <KakaoIcon size={size === 'sm' ? 14 : size === 'lg' ? 20 : 16} />
+            {size !== 'sm' && <span className={styles.btnText}>카카오톡</span>}
+          </button>
+        )}
 
         {/* X(Twitter) 공유 버튼 */}
-        <motion.button
+        <button
           type="button"
           onClick={shareToX}
           className={classNames(styles.shareBtn, styles.twitter)}
           aria-label="Share on X (Twitter)"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           <XIcon size={size === 'sm' ? 14 : size === 'lg' ? 20 : 16} />
           {size !== 'sm' && <span className={styles.btnText}>X</span>}
-        </motion.button>
+        </button>
 
         {/* Facebook 공유 버튼 */}
-        <motion.button
+        <button
           type="button"
           onClick={shareToFacebook}
           className={classNames(styles.shareBtn, styles.facebook)}
           aria-label="Share on Facebook"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           <FacebookIcon size={size === 'sm' ? 14 : size === 'lg' ? 20 : 16} />
           {size !== 'sm' && <span className={styles.btnText}>Facebook</span>}
-        </motion.button>
+        </button>
 
         {/* 링크 복사 버튼 */}
-        <motion.button
+        <button
           type="button"
           onClick={copyLink}
           className={classNames(styles.shareBtn, styles.copy, { [styles.copied]: copied })}
           aria-label={copied ? 'Link copied!' : 'Copy link'}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           <AnimatePresence mode="wait" initial={false}>
             {copied ? (
@@ -316,8 +374,13 @@ export default function ShareButtons({
             )}
           </AnimatePresence>
           {size !== 'sm' && <span className={styles.btnText}>{copied ? 'Copied!' : 'Copy'}</span>}
-        </motion.button>
+        </button>
       </div>
+      {showKakaoButton && kakaoError && (
+        <span id={kakaoStatusId} className={styles.kakaoStatus} role="status">
+          {kakaoError}
+        </span>
+      )}
     </div>
   );
 }
