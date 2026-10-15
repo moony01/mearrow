@@ -36,6 +36,7 @@ jobs:
     env:
       # NEXT_PUBLIC_* 값은 Next.js client/server bundle에 필요합니다.
       NEXT_PUBLIC_SITE_URL: https://mearrow.com
+      NEXT_PUBLIC_KAKAO_JS_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_JS_KEY }}
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
       NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
     steps:
@@ -117,12 +118,14 @@ jobs:
         run: >-
           pnpm workers:deploy:production --
           --var "NEXT_PUBLIC_SITE_URL:${NEXT_PUBLIC_SITE_URL}"
+          --var "NEXT_PUBLIC_KAKAO_JS_KEY:${NEXT_PUBLIC_KAKAO_JS_KEY}"
           --var "NEXT_PUBLIC_SUPABASE_URL:${NEXT_PUBLIC_SUPABASE_URL}"
           --var "NEXT_PUBLIC_SUPABASE_ANON_KEY:${NEXT_PUBLIC_SUPABASE_ANON_KEY}"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           NEXT_PUBLIC_SITE_URL: https://mearrow.com
+          NEXT_PUBLIC_KAKAO_JS_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_JS_KEY }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 

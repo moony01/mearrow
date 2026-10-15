@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-const required = ['NEXT_PUBLIC_SUPABASE_URL', 'NEXT_PUBLIC_SUPABASE_ANON_KEY'];
+const required = [
+  'NEXT_PUBLIC_SUPABASE_URL',
+  'NEXT_PUBLIC_SUPABASE_ANON_KEY',
+  'NEXT_PUBLIC_KAKAO_JS_KEY',
+];
 const missing = required.filter((name) => !process.env[name]?.trim());
 const canonicalSiteOrigin = 'https://mearrow.com';
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -10,7 +14,7 @@ if (missing.length > 0) {
     `[deploy-env] Missing required deployment environment variable(s): ${missing.join(', ')}`,
   );
   console.error(
-    '[deploy-env] Refusing to build or deploy because the browser data client would be unavailable.',
+    '[deploy-env] Refusing to build or deploy because a required browser integration is unavailable.',
   );
   process.exit(1);
 }

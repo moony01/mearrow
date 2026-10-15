@@ -305,19 +305,23 @@ function determinePromotionStatus(
  * 현재 시즌 정보 생성
  */
 function getCurrentSeason(): SeasonInfo {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
+  // Cloudflare renders in UTC while browsers may use a local timezone. Use
+  // KST calendar boundaries in both environments so SSR and hydration agree.
+  const kstOffsetMs = 9 * 60 * 60 * 1000;
+  const kstNow = new Date(Date.now() + kstOffsetMs);
+  const year = kstNow.getUTCFullYear();
+  const month = kstNow.getUTCMonth() + 1;
+  const day = kstNow.getUTCDate();
 
   // 월말까지 남은 일수 계산
-  const lastDay = new Date(year, month, 0).getDate();
-  const daysRemaining = lastDay - now.getDate();
+  const lastDay = new Date(Date.UTC(year, month, 0)).getUTCDate();
+  const daysRemaining = lastDay - day;
 
   return {
     year,
     month,
-    startDate: new Date(year, month - 1, 1).toISOString(),
-    endDate: new Date(year, month, 0).toISOString(),
+    startDate: new Date(Date.UTC(year, month - 1, 1) - kstOffsetMs).toISOString(),
+    endDate: new Date(Date.UTC(year, month, 1) - kstOffsetMs - 1).toISOString(),
     daysRemaining,
     isActive: true,
   };
