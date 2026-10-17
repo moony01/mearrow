@@ -20,7 +20,7 @@ export default function KpopfaceTestAdCard({ placement }: { placement: AdPlaceme
         target="_blank"
         rel="noopener noreferrer"
         className={styles.link}
-        aria-label="Open the free JYP vs YG vs SM K-pop face match test (opens in a new tab)"
+        aria-label="Open the free KPOP FACE TEST to find which agency's idols you resemble most (opens in a new tab)"
       >
         <div className={styles.imageWrap}>
           <ExportedImage
@@ -38,9 +38,12 @@ export default function KpopfaceTestAdCard({ placement }: { placement: AdPlaceme
         </div>
 
         <div className={styles.content}>
-          <span className={styles.eyebrow}>KPOPFACE</span>
+          <span className={styles.eyebrow}>KPOP FACE TEST</span>
           <span className={styles.title}>JYP vs YG vs SM</span>
-          <span className={styles.description}>AI trained on 100K+ idol images</span>
+          <span className={styles.description}>
+            Upload your photo for free to see which agency&apos;s idols you resemble most.
+          </span>
+          <span className={styles.proof}>AI trained on 100K+ idol images</span>
         </div>
 
         <span className={styles.action}>
