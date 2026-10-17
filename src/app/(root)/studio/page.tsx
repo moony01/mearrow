@@ -80,6 +80,7 @@ export default async function StudioPage() {
                 date: post.date,
                 category: post.category,
                 thumbnail: post.thumbnail ?? undefined,
+                thumbnailPosition: post.thumbnailPosition ?? undefined,
                 sourceCount: post.sources?.length ?? 0,
               }))}
               locale={NEWS_SOURCE_LOCALE}

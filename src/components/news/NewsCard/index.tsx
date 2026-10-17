@@ -22,6 +22,8 @@ interface NewsCardProps {
   category?: string;
   /** 썸네일 이미지 경로 */
   thumbnail?: string;
+  /** 썸네일 이미지 초점 위치 */
+  thumbnailPosition?: string | null;
   /** 언어 코드 */
   locale: string;
   /** Override the article route for the locale-less Studio archive. */
@@ -45,6 +47,7 @@ export default function NewsCard({
   date,
   category = 'General',
   thumbnail,
+  thumbnailPosition,
   locale,
   basePath = '/studio/news',
   commentCount,
@@ -74,6 +77,7 @@ export default function NewsCard({
               process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers'
             }
             className={styles.thumbnail}
+            style={{ objectPosition: thumbnailPosition ?? undefined }}
           />
         ) : (
           <div className={styles.placeholderThumbnail}>

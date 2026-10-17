@@ -19,6 +19,7 @@ interface NewsPost {
   date: string;
   category?: string;
   thumbnail?: string;
+  thumbnailPosition?: string | null;
   sourceCount?: number;
 }
 
@@ -89,6 +90,7 @@ export default function NewsGridClient({
           date={post.date}
           category={post.category}
           thumbnail={post.thumbnail}
+          thumbnailPosition={post.thumbnailPosition}
           sourceCount={post.sourceCount}
           sourceCountLabel={t('sourcesLabel', { count: post.sourceCount ?? 0 })}
           locale={locale}

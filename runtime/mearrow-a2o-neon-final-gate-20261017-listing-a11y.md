@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "MEARROW Studio home" [ref=e5] [cursor=pointer]:
+          - /url: /studio
+        - link "Explore MEARROW" [ref=e6] [cursor=pointer]:
+          - /url: /
+    - main [ref=e10]:
+      - region [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - paragraph [ref=e14]: WHAT'S HAPPENING
+            - heading "News" [level=1] [ref=e15]
+            - paragraph [ref=e16]: K-pop news and analysis from across the industry, from current updates to long-form features.
+          - link "Back to Studio" [ref=e17] [cursor=pointer]:
+            - /url: /studio#news
+        - generic [ref=e18]:
+          - link "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure? Market Trend A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure? A2O LITE’s “NEON” hit Melon’s Top 100 No. 1 in 29 hours. Here’s what the chart formula says—and what a peak cannot prove. Oct 16, 2026 Sources (7) 2 views" [ref=e19] [cursor=pointer]:
+            - /url: /studio/news/a2o-lite-neon-melon-peak
+            - img "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?" [ref=e21]
+            - generic [ref=e22]
+          - link "45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check Trainee System 45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check A 30-year study found K-pop groups averaged 4.12 years of activity. For trainees, the question is whether support lasts beyond debut. Oct 13, 2026 Sources (9) 36 views" [ref=e45] [cursor=pointer]:
+            - /url: /studio/news/kpop-group-survival-study
+            - img "45% of K-Pop Groups Aren't Active After Year Three — The 1,182-Group Reality Check" [ref=e47]
+            - generic [ref=e48]
+          - link "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter Artist T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter T.O.P and Nana confirmed their relationship on Oct. 2, months after meeting through the Studio54 music video. Oct 8, 2026 Sources (6) 90 views" [ref=e71] [cursor=pointer]:
+            - /url: /studio/news/top-nana-dating-studio54
+            - img "T.O.P and Nana Confirm They’re Dating — The “Studio54” Story Has a New Chapter" [ref=e73]
+            - generic [ref=e74]
+          - link "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Artist Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines Jackson Wang directly denied the seven-year Yuqi dating rumor at a Hong Kong event. The confirmed story is the denial, not the speculation. Sep 30, 2026 Sources (6) 83 views" [ref=e97] [cursor=pointer]:
+            - /url: /studio/news/jackson-yuqi-rumor-denial
+            - img "Jackson Wang Answers the Seven-Year Yuqi Rumor — The Record Is Clearer Than the Headlines" [ref=e99]
+            - generic [ref=e100]
+          - link "Why BIGHIT MUSIC Is Going to 15 Cities for One Audition Trainee System Why BIGHIT MUSIC Is Going to 15 Cities for One Audition BIGHIT MUSIC's 2026 audition spans 15 cities. The map is less a promise of the next BTS than a global talent-funnel test. Sep 27, 2026 Sources (6) 28 views" [ref=e123] [cursor=pointer]:
+            - /url: /studio/news/bighit-15-city-audition
+            - img "Why BIGHIT MUSIC Is Going to 15 Cities for One Audition" [ref=e125]
+            - generic [ref=e126]
+          - 'link "ATEEZ''s San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke Artist ATEEZ''s San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke A friendship tattoo joke revived dating speculation around ATEEZ''s San and Wooyoung. San answered directly: they are close friends. Sep 23, 2026 Sources (2) 34 views" [ref=e149] [cursor=pointer]':
+            - /url: /studio/news/ateez-san-wooyoung-dating-rumor
+            - img "ATEEZ's San and Wooyoung Address a Dating Rumor After a Friendship Tattoo Joke" [ref=e151]
+            - generic [ref=e152]
+          - navigation "News pagination" [ref=e175]:
+            - list [ref=e176]
+        - paragraph [ref=e195]: Page 1 of 34
+    - contentinfo [ref=e196]:
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - generic [ref=e199]: MEARROW STUDIO
+          - generic [ref=e200]: Content becomes opportunity.
+          - generic [ref=e201]: Independent, fan-made service. Not affiliated with any entertainment company.
+        - navigation "Site information" [ref=e202]:
+          - link "About" [ref=e203] [cursor=pointer]:
+            - /url: /about
+          - link "FAQ" [ref=e204] [cursor=pointer]:
+            - /url: /faq
+          - link "Editorial standards" [ref=e205] [cursor=pointer]:
+            - /url: /editorial
+          - link "Terms" [ref=e206] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e207] [cursor=pointer]:
+            - /url: /privacy
+  - button "Open Next.js Dev Tools" [ref=e213] [cursor=pointer]
+  - alert [ref=e217]

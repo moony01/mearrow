@@ -1,0 +1,239 @@
+{
+  "verification": "test-only formal Playwright",
+  "verifier": "/root/a2o_news_local_playwright_retry",
+  "date": "2026-10-17",
+  "browser": {
+    "harness": "READY",
+    "engine": "Windows Chrome via configured Playwright MCP/CDP",
+    "orca_browser_used": false,
+    "local_url": "http://localhost:3102",
+    "route": "/studio/news/a2o-lite-neon-melon-peak"
+  },
+  "gates": {
+    "direct_route_render": "PASS",
+    "desktop_visual_1440x1000": "PASS",
+    "mobile_visual_390x844": "PASS",
+    "listing_card_navigation": "PASS",
+    "api_and_asset_readback": "PASS",
+    "view_rpc_side_effect_guard": "PASS",
+    "overall": "PASS_WITH_FINDINGS"
+  },
+  "article": {
+    "slug": "a2o-lite-neon-melon-peak",
+    "title": "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?",
+    "date": "2026-10-16",
+    "category": "Market Trend",
+    "canonical": "https://mearrow.com/studio/news/a2o-lite-neon-melon-peak",
+    "description_matches_excerpt": true,
+    "og_title_matches_h1": true,
+    "og_image": "https://mearrow.com/images/news/a2o-lite-neon-melon-peak-thumbnail.webp",
+    "h2_headings": [
+      "A2O LITE’s Melon peak came 29 hours after release",
+      "Melon’s formula gives the No. 1 a narrower meaning",
+      "The next signal is whether listeners come back"
+    ],
+    "source_links": 7,
+    "internal_a2o_link_present": true,
+    "images": [
+      {
+        "src": "/images/news/a2o-lite-neon-melon-peak-thumbnail.webp",
+        "alt": "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?",
+        "loaded": true,
+        "http_status": 200,
+        "content_type": "image/webp",
+        "bytes": 161384
+      },
+      {
+        "src": "/images/news/a2o-lite-neon-melon-peak-1.webp",
+        "alt": "A2O LITE member Aijing performs “NEON” at the group’s debut showcase, with the group’s stage lighting behind her.",
+        "loaded": true,
+        "http_status": 200,
+        "content_type": "image/webp",
+        "bytes": 184196
+      }
+    ],
+    "caption_text_present": true
+  },
+  "api_readback": {
+    "news_list": {
+      "url": "/api/news.json",
+      "http_status": 200,
+      "record_count": 201,
+      "slug_found": true,
+      "title_matches": true,
+      "date_matches": true,
+      "category_matches": true
+    },
+    "article_content": {
+      "url": "/api/news-content/en/a2o-lite-neon-melon-peak.json",
+      "http_status": 200,
+      "slug_matches": true,
+      "title_matches": true,
+      "date_matches": true,
+      "category_matches": true,
+      "source_count": 7,
+      "thumbnail_matches_rendered_hero": true
+    },
+    "article_route_http_status": 200
+  },
+  "view_count_guard": {
+    "interception_armed_before_navigation": true,
+    "attempted_request": "POST /rest/v1/rpc/increment_kcl_news_view",
+    "outcome": "Aborted by Playwright route interception before reaching Supabase; no response was returned.",
+    "console_error": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "read_only_views_get_http_status": 200,
+    "read_only_views_get_body": [],
+    "comments_and_views_reads_only": true,
+    "note": "The page displayed 1 view after the blocked attempt; read-only GET returned an empty row set, confirming no persisted view was created by this run."
+  },
+  "viewport_checks": {
+    "desktop": {
+      "viewport": "1440x1000",
+      "document_scroll_width": 1425,
+      "document_client_width": 1425,
+      "horizontal_overflow": false,
+      "main_box": {
+        "x": 282.5,
+        "width": 860
+      },
+      "article_box": {
+        "x": 332.5,
+        "width": 760
+      },
+      "h1_box": {
+        "x": 301.5,
+        "width": 822,
+        "height": 83.2,
+        "font_size": "32px",
+        "line_height": "41.6px"
+      },
+      "hero_box": {
+        "x": 301.5,
+        "width": 822,
+        "height": 462.4
+      }
+    },
+    "mobile": {
+      "viewport": "390x844",
+      "document_scroll_width": 375,
+      "document_client_width": 375,
+      "horizontal_overflow": false,
+      "main_box": {
+        "x": 0,
+        "width": 375
+      },
+      "article_box": {
+        "x": 0,
+        "width": 375,
+        "padding": "0px 16px"
+      },
+      "h1_box": {
+        "x": 19,
+        "width": 337,
+        "height": 93.6,
+        "font_size": "24px",
+        "line_height": "31.2px"
+      },
+      "hero_box": {
+        "x": 19,
+        "width": 337,
+        "height": 189.6
+      }
+    }
+  },
+  "listing_card_navigation": {
+    "anchor_href": "/studio/news/a2o-lite-neon-melon-peak",
+    "fresh_session": {
+      "result": "PASS",
+      "internal_link": {
+        "href": "/studio",
+        "click_event": true,
+        "navigation": "http://localhost:3102/studio"
+      },
+      "existing_article_link": {
+        "href": "/studio/news/kpop-group-survival-study",
+        "click_event": true,
+        "navigation": "http://localhost:3102/studio/news/kpop-group-survival-study"
+      },
+      "a2o_link": {
+        "href": "/studio/news/a2o-lite-neon-melon-peak",
+        "click_event": true,
+        "click_target": "IMG inside anchor",
+        "click_coordinates": {
+          "x": 242,
+          "y": 457
+        },
+        "navigation": "http://localhost:3102/studio/news/a2o-lite-neon-melon-peak",
+        "rendered_h1_matches_article": true
+      },
+      "rpc_block_armed_before_listing_navigation": true,
+      "screenshot_before_click": "runtime/mearrow-a2o-neon-fresh-listing-20261017.png",
+      "screenshot_after_click": "runtime/mearrow-a2o-neon-fresh-click-20261017.png"
+    },
+    "previous_session": {
+      "normal_and_exact_selector_clicks": "Timed out waiting for card stability; not reproducible in clean tab.",
+      "coordinate_click": "No DOM click event in previous tab.",
+      "interpretation": "Prior-session failure was specific to the prior tab/session; clean-tab input and card navigation succeeded."
+    }
+  },
+  "errors": {
+    "page_errors": 0,
+    "console_errors": 4,
+    "console_error_cause": "All four recorded errors were the intentionally intercepted view-count POST; no unrelated page error or hydration error was observed.",
+    "fresh_session_warning_total": 135,
+    "warning_groups": [
+      {
+        "source": "Chrome extension (MetaMask contentscript)",
+        "message": "ObjectMultiplex orphaned app-init-liveness stream",
+        "count": 36,
+        "classification": "extension/dev profile noise"
+      },
+      {
+        "source": "Chrome extension (MetaMask contentscript)",
+        "message": "ObjectMultiplex orphaned background-liveness stream",
+        "count": 36,
+        "classification": "extension/dev profile noise"
+      },
+      {
+        "source": "Chrome extension (MetaMask contentscript)",
+        "message": "MaxListenersExceededWarning: 11 close listeners",
+        "count": 18,
+        "classification": "extension/dev profile noise"
+      },
+      {
+        "source": "Chrome extension (MetaMask contentscript)",
+        "message": "MaxListenersExceededWarning: 11 end listeners",
+        "count": 18,
+        "classification": "extension/dev profile noise"
+      },
+      {
+        "source": "localhost Next.js bundle",
+        "message": "AdSense head tag does not support data-nscript attribute",
+        "count": 3,
+        "classification": "app/framework warning; finding"
+      },
+      {
+        "source": "localhost Next.js image runtime",
+        "message": "Above-fold thumbnail detected as LCP; consider loading=eager",
+        "count": 3,
+        "classification": "app performance warning; finding"
+      },
+      {
+        "source": "localhost route asset preload",
+        "message": "Two preloaded fonts and one CSS chunk were not used within a few seconds",
+        "count": 21,
+        "classification": "app/network preload warnings; finding"
+      }
+    ],
+    "hydration_warning_observed": false,
+    "interpretation": "108 repeated warnings came from the MetaMask Chrome extension. The remaining 27 are app/framework or route preload warnings and are recorded as findings; they were not fixed by this test-only verifier."
+  },
+  "evidence": {
+    "desktop_screenshot": "runtime/mearrow-a2o-neon-desktop-20261017.png",
+    "mobile_screenshot": "runtime/mearrow-a2o-neon-mobile-20261017.png",
+    "desktop_accessibility_snapshot": "runtime/mearrow-a2o-neon-playwright-desktop-a11y-20261017.md",
+    "mobile_accessibility_snapshot": "runtime/mearrow-a2o-neon-playwright-mobile-a11y-20261017.md",
+    "fresh_listing_screenshot": "runtime/mearrow-a2o-neon-fresh-listing-20261017.png",
+    "fresh_click_screenshot": "runtime/mearrow-a2o-neon-fresh-click-20261017.png"
+  }
+}

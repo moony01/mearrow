@@ -74,6 +74,7 @@ export interface GeneratedNewsPost {
   author?: string;
   content: string;
   thumbnail?: string | null;
+  thumbnailPosition?: string | null;
   category?: string;
   locale: string;
   sources?: Array<{ label: string; url: string }>;
@@ -112,6 +113,7 @@ export async function loadNewsPost(
   author?: string;
   content: string;
   thumbnail?: string | null;
+  thumbnailPosition?: string | null;
   category?: string;
   locale: string;
   sources?: Array<{ label: string; url: string }>;
@@ -159,6 +161,7 @@ function parseNewsFile(filePath, locale) {
     author: data.author || 'MEARROW Editorial Desk',
     category: data.category || 'General',
     thumbnail: data.thumbnail || null,
+    ...(data.thumbnailPosition ? { thumbnailPosition: data.thumbnailPosition } : {}),
     sources: quality.sources,
     content,
   };
