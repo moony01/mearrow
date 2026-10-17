@@ -1,0 +1,25 @@
+- generic [ref=e1] [box=0,0,1425,1000]:
+  - generic [ref=e2] [box=0,0,1425,1464]:
+    - banner [ref=e3] [box=0,0,1425,69]:
+      - generic [ref=e4] [box=123,0,1180,68]:
+        - link "MEARROW Studio home" [ref=e5] [cursor=pointer] [box=123,14,220,39]:
+          - /url: /studio
+        - link "Explore MEARROW" [ref=e6] [cursor=pointer] [box=1163,25,139,19]:
+          - /url: /
+    - main [ref=e10] [box=0,69,1425,1298]:
+      - region "News" [ref=e11] [box=123,69,1180,1226]:
+        - generic [ref=e12] [box=123,110,1180,100]
+        - generic [ref=e18] [box=123,232,1180,984]
+        - paragraph [ref=e195] [box=123,1228,1180,19]: Page 1 of 34
+    - contentinfo [ref=e196] [box=0,1367,1425,97]:
+      - generic [ref=e197] [box=123,1368,1180,96]:
+        - generic [ref=e198] [box=123,1388,407,57]
+        - navigation "Site information" [ref=e202] [box=1002,1408,300,17]
+  - button "Open Next.js Dev Tools" [ref=e213] [cursor=pointer] [box=20,946,118,32]:
+    - generic [ref=e216] [box=46,961,84,13]:
+      - text: Compiling
+      - generic [ref=e217] [box=112,961,18,13]:
+        - generic [ref=e218] [box=113,961,4,13]: .
+        - generic [ref=e219] [box=119,961,4,13]: .
+        - generic [ref=e220] [box=125,961,4,13]: .
+  - alert [ref=e221] [box=-1,1463,1,1]

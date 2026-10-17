@@ -156,6 +156,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
                 process.env.NODE_ENV === 'development' ||
                 process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers'
               }
+              style={{ objectPosition: post.thumbnailPosition ?? undefined }}
             />
           ) : (
             <div className={styles.heroPlaceholder}>
@@ -255,6 +256,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
                 date: r.date,
                 category: r.category,
                 thumbnail: r.thumbnail ?? undefined,
+                thumbnailPosition: r.thumbnailPosition ?? undefined,
               }))}
               locale={locale}
               basePath="/studio/news"

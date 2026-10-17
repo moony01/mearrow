@@ -1,0 +1,165 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "runId": "mearrow-news-a2o-lite-neon-melon-peak",
+  "slug": "a2o-lite-neon-melon-peak",
+  "runStartedAt": "2026-10-16T01:55:50Z",
+  "runStartedAtBasis": "Git reflog records creation of the task branch at 2026-10-16 10:55:50 Asia/Seoul.",
+  "authorization": {
+    "actor": "user",
+    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+    "confirmedAt": "2026-10-16",
+    "confirmedAtPrecision": "Date only; the conversation transport does not expose the message timestamp.",
+    "method": "explicit_mearrow_news_autopilot_invocation",
+    "userTopic": "A2O NEON article connected to the uploaded K-pop short; inspect the uploaded short first."
+  },
+  "topicDedupe": {
+    "indexSource": "src/content/news/en/*.md",
+    "fileCount": 206,
+    "publishedCount": 200,
+    "draftCount": 6,
+    "indexedActiveSlugsFile": "runtime/mearrow-news-topic-dedupe-20261016-a2o-neon.json",
+    "liveListingStatus": "PARTIAL"
+  },
+  "research": {
+    "status": "PASS",
+    "reviewedUrls": [
+      "https://www.newsis.com/view/NISX20261015_0003828016",
+      "https://www.newsis.com/view/NISX20261015_0003826471",
+      "https://en.yna.co.kr/view/AEN20261015001400315",
+      "https://www.yna.co.kr/amp/view/AKR20261014160000005",
+      "https://help.melon.com/web/faq/content.htm?faqId=2642",
+      "https://www.melon.com/album/detail.htm?albumId=14644795",
+      "https://www.genie.co.kr/detail/albumInfo?axnm=88270548",
+      "https://www.soompi.com/article/1878391wpp/lee-soo-mans-new-groups-a2o-lite-and-a2o-soul-unveil-profile-photos",
+      "https://www.mt.co.kr/index.php/en/entertainment/2026/10/15/2026101505444090631",
+      "https://sports.khan.co.kr/en/article/202610151050007",
+      "https://www.chosun.com/english/travel-food-en/2026/10/16/JJGZYUQZ7JDEHP2H4JM3NAGP4Y/",
+      "https://www.news1.kr/photos/8154779",
+      "https://www.news1.kr/photos/8154986"
+    ],
+    "reviewedUrlCount": 13,
+    "trustedSourceCount": 8,
+    "factcheck": "runtime/mearrow-news-a2o-lite-neon-melon-peak-factcheck.md"
+  },
+  "content": {
+    "status": "PASS",
+    "article": "src/content/news/en/a2o-lite-neon-melon-peak.md",
+    "wordCount": 459,
+    "titleLength": 74,
+    "excerptLength": 121,
+    "internalLinkTarget": "/studio/news/lee-soo-man-a2o-enter-korea-sm-war-2026",
+    "initialState": "active:true",
+    "thumbnailPosition": "center 10%"
+  },
+  "images": {
+    "status": "PASS",
+    "acceptedImages": 2,
+    "sourceAttributionGate": "PASS",
+    "licenseStatus": "not_verified_source_attributed",
+    "provenance": "runtime/mearrow-news-a2o-lite-neon-melon-peak-image-sources.json"
+  },
+  "sourceAttributionGate": "PASS",
+  "stepResults": {
+    "research": {
+      "status": "PASS"
+    },
+    "topicDedupe": {
+      "status": "PASS",
+      "liveListing": "PARTIAL; full local inventory used"
+    },
+    "content": {
+      "status": "PASS"
+    },
+    "factcheck": {
+      "status": "PASS",
+      "verifiedClaims": 7,
+      "totalClaims": 7
+    },
+    "image": {
+      "status": "PASS",
+      "acceptedImages": 2
+    },
+    "authorization": {
+      "status": "RECORDED"
+    },
+    "localRender": {
+      "status": "PASS",
+      "route": "/studio/news/a2o-lite-neon-melon-peak"
+    },
+    "playwrightVerification": {
+      "status": "PASS_WITH_CONSOLE_FINDINGS",
+      "report": "runtime/mearrow-a2o-neon-final-gate-20261017-report.md",
+      "structuredReport": "runtime/mearrow-a2o-neon-final-gate-20261017-report.json",
+      "uiGate": "PASS",
+      "integrationGate": "PASS",
+      "warnings": {
+        "total": 64,
+        "metamaskExtension": 42,
+        "unusedPreloads": 21,
+        "adsense": 1
+      },
+      "pageErrors": 0,
+      "hydrationErrors": 0,
+      "blockedViewRpcAttempts": 2,
+      "readOnlySupabaseGets": "PASS"
+    },
+    "repository": {
+      "status": "PENDING",
+      "branch": "task/mearrow-news-20261016"
+    },
+    "deploy": {
+      "status": "PENDING",
+      "trigger": "merge to main"
+    },
+    "production": {
+      "status": "PENDING"
+    },
+    "gsc": {
+      "status": "PENDING"
+    },
+    "localVerification": {
+      "lint": {
+        "status": "PASS",
+        "exitCode": 0,
+        "warnings": 31
+      },
+      "unitTests": {
+        "status": "PASS",
+        "exitCode": 0,
+        "filesPassed": 49,
+        "testsPassed": 207
+      },
+      "workersBuild": {
+        "status": "PASS",
+        "exitCode": 0,
+        "notes": [
+          "Existing Sass deprecation warnings",
+          "Known ENVIRONMENT_FALLBACK diagnostic during static generation; build completed"
+        ]
+      },
+      "deployEnvironment": {
+        "status": "PASS",
+        "exitCode": 0
+      },
+      "diffCheck": {
+        "status": "PASS",
+        "exitCode": 0
+      }
+    }
+  },
+  "screenshots": [
+    "runtime/mearrow-a2o-neon-final-gate-20261017-listing.png",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-desktop.png",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-mobile.png",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-listing-a11y.md",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-desktop-a11y.md",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-mobile-a11y.md",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-network.md",
+    "runtime/mearrow-a2o-neon-final-gate-20261017-console-warnings.txt"
+  ],
+  "knownLimits": [
+    "The live /studio#news browser capture exposed only six recent cards; it was not treated as a complete archive. The 206-file local English inventory was used for deduplication.",
+    "News1 reuse permission was not independently verified; source, photographer, and original page are credited, and no license claim is made.",
+    "A2O NEON chart reporting contains conflicting later snapshots. The article uses only the independently corroborated 11 p.m. Oct. 14 peak and makes no claim about how long it remained No. 1."
+  ]
+}

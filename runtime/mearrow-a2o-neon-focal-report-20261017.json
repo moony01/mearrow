@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-17",
+  "verifier": "/root/a2o_news_local_playwright_retry (test-only)",
+  "environment": {
+    "harness": "READY",
+    "browser": "Windows Chrome via configured Playwright MCP/CDP",
+    "local_origin": "http://localhost:3102",
+    "fresh_tab": true,
+    "orca_or_computer_use": false
+  },
+  "gates": {
+    "listing_focal_and_click": "PASS",
+    "hero_focal_desktop_1440x1000": "PASS",
+    "hero_focal_mobile_390x844": "PASS",
+    "related_card_focal": "PASS",
+    "api_and_assets": "PASS",
+    "no_horizontal_overflow": "PASS",
+    "rpc_write_guard": "PASS",
+    "overall": "PASS_WITH_CONSOLE_FINDINGS"
+  },
+  "article": {
+    "slug": "a2o-lite-neon-melon-peak",
+    "title": "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?",
+    "date": "2026-10-16",
+    "category": "Market Trend",
+    "canonical": "https://mearrow.com/studio/news/a2o-lite-neon-melon-peak",
+    "og_title_matches_h1": true,
+    "description_present": true,
+    "source_links": 7,
+    "caption_present": true
+  },
+  "focal_position": {
+    "frontmatter_api_value": "center 10%",
+    "computed_css_value": "50% 10%",
+    "listing_card": {
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "box_at_desktop": { "x": 123.5, "y": 232.8, "width": 378, "height": 212.6 },
+      "visual_review": "Central member's face is clearly visible in the listing crop."
+    },
+    "article_hero_desktop": {
+      "viewport": "1440x1000",
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "box": { "x": 301.5, "y": 181, "width": 822, "height": 462.4 },
+      "visual_review": "Central member's face is clearly visible and unobstructed."
+    },
+    "article_hero_mobile": {
+      "viewport": "390x844",
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "image_box": { "x": 19, "y": 149, "width": 337, "height": 189.6 },
+      "visual_review": "Central member's face remains clearly visible in the mobile crop."
+    },
+    "related_card": {
+      "route": "/studio/news/katseye-wild-billboard-200",
+      "a2o_link_present": true,
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "box": { "x": 31, "y": 8065.9, "width": 120, "height": 120 }
+    }
+  },
+  "navigation": {
+    "rpc_block_installed_before_listing_navigation": true,
+    "listing_url": "http://localhost:3102/studio/news",
+    "click_event": {
+      "target_href": "http://localhost:3102/studio/news/a2o-lite-neon-melon-peak",
+      "target_element": "DIV inside anchor",
+      "coordinates": { "x": 312, "y": 449 },
+      "button": 0
+    },
+    "final_url": "http://localhost:3102/studio/news/a2o-lite-neon-melon-peak",
+    "h1_matches_title": true
+  },
+  "api_readback": {
+    "news_list": {
+      "url": "/api/news.json",
+      "http_status": 200,
+      "record_count": 201,
+      "matching_slug_found": true,
+      "title_date_category_match": true
+    },
+    "article_content": {
+      "url": "/api/news-content/en/a2o-lite-neon-melon-peak.json",
+      "http_status": 200,
+      "slug_title_date_category_match": true,
+      "thumbnail": "/images/news/a2o-lite-neon-melon-peak-thumbnail.webp",
+      "thumbnailPosition": "center 10%",
+      "source_count": 7
+    },
+    "images": [
+      {"url": "/images/news/a2o-lite-neon-melon-peak-thumbnail.webp", "http_status": 200, "content_type": "image/webp", "bytes": 161384},
+      {"url": "/images/news/a2o-lite-neon-melon-peak-1.webp", "http_status": 200, "content_type": "image/webp", "bytes": 184196}
+    ]
+  },
+  "viewport_checks": {
+    "desktop": {"viewport": "1440x1000", "document_width": 1425, "client_width": 1425, "horizontal_overflow": false},
+    "mobile": {"viewport": "390x844", "document_width": 375, "client_width": 375, "horizontal_overflow": false}
+  },
+  "rpc_guard": {
+    "intercepted_post_attempts": 3,
+    "endpoint": "POST /rest/v1/rpc/increment_kcl_news_view",
+    "outcome": "Aborted before reaching Supabase; no response returned.",
+    "console_messages": "Expected ERR_BLOCKED_BY_CLIENT.Inspector only; no page errors."
+  },
+  "console": {
+    "page_errors": 0,
+    "hydration_errors_or_warnings": 0,
+    "aggregate_warnings_across_fresh_run": 93,
+    "warning_groups": [
+      {"source": "MetaMask Chrome extension", "message": "ObjectMultiplex orphaned app-init-liveness stream", "count": 24, "classification": "extension noise"},
+      {"source": "MetaMask Chrome extension", "message": "ObjectMultiplex orphaned background-liveness stream", "count": 24, "classification": "extension noise"},
+      {"source": "MetaMask Chrome extension", "message": "MaxListenersExceededWarning: 11 close listeners", "count": 12, "classification": "extension noise"},
+      {"source": "MetaMask Chrome extension", "message": "MaxListenersExceededWarning: 11 end listeners", "count": 12, "classification": "extension noise"},
+      {"source": "App / route asset preloads", "message": "Two font files and one CSS chunk preloaded but unused within a few seconds", "count": 18, "classification": "app/resource finding"},
+      {"source": "Next.js bundled script", "message": "AdSense head tag does not support data-nscript attribute", "count": 2, "classification": "app/framework finding"},
+      {"source": "Next.js image runtime", "message": "Jackson Yuqi listing thumbnail detected as LCP; consider loading=eager", "count": 1, "classification": "app performance finding"}
+    ],
+    "summary": "72 warnings are repeated MetaMask extension messages. 21 app/resource warnings are recorded above; no hydration warning was observed."
+  },
+  "evidence": {
+    "listing_screenshot": "runtime/mearrow-a2o-neon-focal-listing-20261017.png",
+    "desktop_screenshot": "runtime/mearrow-a2o-neon-focal-desktop-20261017.png",
+    "mobile_screenshot": "runtime/mearrow-a2o-neon-focal-mobile-20261017.png",
+    "listing_accessibility_snapshot": "runtime/mearrow-a2o-neon-focal-listing-a11y-20261017.md",
+    "desktop_accessibility_snapshot": "runtime/mearrow-a2o-neon-focal-desktop-a11y-20261017.md",
+    "mobile_accessibility_snapshot": "runtime/mearrow-a2o-neon-focal-mobile-a11y-20261017.md"
+  }
+}

@@ -36,6 +36,8 @@ export interface NewsPost {
   content: string;
   /** 썸네일 이미지 경로 */
   thumbnail?: string | null;
+  /** 썸네일 이미지의 초점 위치 (CSS object-position) */
+  thumbnailPosition?: string | null;
   /** 카테고리 */
   category?: string;
   /** 언어 코드 */
@@ -55,6 +57,8 @@ export interface NewsMeta {
   updatedAt?: string;
   author?: string;
   thumbnail?: string | null;
+  /** 썸네일 이미지의 초점 위치 (CSS object-position) */
+  thumbnailPosition?: string | null;
   category?: string;
   locale: string;
   sources?: NewsSource[];

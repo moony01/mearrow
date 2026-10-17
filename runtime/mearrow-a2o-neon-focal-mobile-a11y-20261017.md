@@ -1,0 +1,123 @@
+- generic [active] [ref=e1] [box=0,0,375,844]:
+  - generic [ref=e2] [box=0,0,375,5058]:
+    - banner [ref=e3] [box=0,0,375,61]:
+      - generic [ref=e4] [box=16,0,343,60]:
+        - link "MEARROW Studio home" [ref=e5] [cursor=pointer] [box=16,13,190,34]:
+          - /url: /studio
+        - link "Explore MEARROW" [ref=e6] [cursor=pointer] [box=229,22,130,17]:
+          - /url: /
+    - main [ref=e222] [box=0,61,375,4850]:
+      - link "Back to News" [ref=e223] [cursor=pointer] [box=0,85,116,21]:
+        - /url: /studio#news
+      - generic [ref=e227] [box=0,130,375,410]:
+        - img "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?" [ref=e229] [box=19,149,337,190]
+        - generic [ref=e230] [box=19,359,125,19]: Market Trend
+        - heading "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?" [level=1] [ref=e235] [box=19,390,337,94]
+        - generic [ref=e237] [box=19,500,214,21]:
+          - time [ref=e241] [box=43,500,113,21]: October 16, 2026
+          - generic [ref=e242] [box=172,501,62,19]: 3 views
+      - article [ref=e247] [box=0,568,375,3015]:
+        - generic [ref=e248] [box=16,568,343,481]:
+          - paragraph [ref=e249] [box=16,568,343,374]:
+            - text: A2O LITE’s debut single “NEON” reached No. 1 on Melon’s Top 100 at 11 p.m. on Oct. 14, 29 hours after its Oct. 13 release, according to
+            - link "Newsis" [ref=e250] [cursor=pointer] [box=16,656,53,24]:
+              - /url: https://www.newsis.com/view/NISX20261015_0003828016
+            - text: and
+            - link "Yonhap" [ref=e251] [cursor=pointer] [box=105,656,56,24]:
+              - /url: https://en.yna.co.kr/view/AEN20261015001400315
+            - text: ". The moment gave the nine-member rookie group a striking first chart peak. It also needs a precise reading: Melon’s Top 100 combines recent 24-hour usage with the latest hour, so a position at one update is a snapshot of a changing chart—not a stream total or a promise that the song will hold the top spot. The distinction matters as A2O LITE moves from debut visibility to repeat listening."
+          - paragraph [ref=e252] [box=16,962,343,86]:
+            - text: "Lead photo: A2O LITE perform “NEON” at their Oct. 12 debut showcase. Photo by Kwon Hyun-jin / News1;"
+            - link "original image" [ref=e253] [cursor=pointer] [box=151,1022,106,24]:
+              - /url: https://www.news1.kr/photos/8154779
+            - text: .
+        - generic [ref=e254] [box=16,1096,343,638]:
+          - heading "A2O LITE’s Melon peak came 29 hours after release" [level=2] [ref=e255] [box=16,1096,343,149]
+          - paragraph [ref=e256] [box=16,1266,343,202]:
+            - text: Melon’s
+            - link "official release listing" [ref=e257] [cursor=pointer] [box=76,1268,156,24]:
+              - /url: https://www.melon.com/album/detail.htm?albumId=14644795
+            - text: dates “NEON” to Oct. 13, 2026, while
+            - link "Soompi" [ref=e258] [cursor=pointer] [box=163,1296,58,24]:
+              - /url: https://www.soompi.com/article/1878391wpp/lee-soo-mans-new-groups-a2o-lite-and-a2o-soul-unveil-profile-photos
+            - text: identifies it as the nine-member group’s debut single. These details anchor the chart update to a release date and a specific act. They do not establish a record across every rookie act or explain why listeners chose the song.
+          - paragraph [ref=e259] [box=16,1487,343,115]:
+            - text: MEARROW previously covered
+            - link "A2O Enter Korea’s launch and its planned boy group" [ref=e260] [cursor=pointer] [box=16,1489,307,53]:
+              - /url: /studio/news/lee-soo-man-a2o-enter-korea-sm-war-2026
+            - text: ; this is a separate event, centered on A2O LITE’s debut and a specific chart result.
+          - generic [ref=e261] [box=16,1634,343,100]:
+            - insertion [box=16,1634,343,0]
+        - generic [ref=e262] [box=16,1782,343,1293]:
+          - heading "Melon’s formula gives the No. 1 a narrower meaning" [level=2] [ref=e263] [box=16,1782,343,103]
+          - paragraph [ref=e264] [box=16,1905,343,259]:
+            - text: According to
+            - link "Melon’s official chart FAQ" [ref=e265] [cursor=pointer] [box=113,1907,186,24]:
+              - /url: https://help.melon.com/web/faq/content.htm?faqId=2642
+            - text: ", its Top 100 normally combines 50% of usage from the previous 24 hours with 50% from the most recent hour. It calculates that usage from streaming (40%) and downloads (60%); between 1 a.m. and 7 a.m., the chart uses 24-hour usage alone. Those rules make a No. 1 a blended measure of recent activity, rather than a count of streams alone."
+          - paragraph [ref=e266] [box=16,2189,343,550]:
+            - img "A2O LITE member Aijing performs “NEON” at the group’s debut showcase, with the group’s stage lighting behind her." [ref=e268] [box=16,2189,343,460]
+            - emphasis [ref=e269] [box=16,2683,307,53]
+          - paragraph [ref=e271] [box=16,2758,343,317]: That distinction matters when reading a fast rise. A chart position can show that a track attracted enough recent usage to lead at a particular update. It cannot show from the rank alone how much came from streams versus downloads, how many listeners returned, or whether the song sustained that position over time. The exact release and peak timestamps let readers measure the climb without turning one update into a longer-term verdict.
+        - generic [ref=e272] [box=16,3123,343,460]:
+          - heading "The next signal is whether listeners come back" [level=2] [ref=e273] [box=16,3123,343,103]
+          - paragraph [ref=e274] [box=16,3246,343,230]: "“NEON” gives A2O LITE an early visibility milestone. The next useful evidence will come from later chart updates and the group’s activity after its debut showcase: whether listening continues beyond the first release window and whether the song draws an audience back. Those are open questions, not conclusions contained in one peak."
+          - paragraph [ref=e275] [box=16,3496,343,86]: Later chart updates and repeat listening will show whether the debut peak became durable audience demand.
+      - generic [ref=e278] [box=16,3636,261,33]:
+        - button "Share on X (Twitter)" [ref=e279] [cursor=pointer] [box=16,3636,53,33]:
+          - generic [ref=e282] [box=50,3644,7,17]: X
+        - button "Share on Facebook" [ref=e283] [cursor=pointer] [box=85,3636,101,33]:
+          - generic [ref=e286] [box=119,3644,55,17]: Facebook
+        - button "Copy link" [ref=e287] [cursor=pointer] [box=202,3636,75,33]:
+          - generic [ref=e292] [box=236,3644,29,17]: Copy
+      - generic [ref=e293] [box=0,3737,375,527]:
+        - heading "More Stories" [level=3] [ref=e294] [box=23,3760,329,29]
+        - generic [ref=e295] [box=23,3809,329,432]:
+          - link "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math Market Trend KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math Aug 30, 2026 33" [ref=e296] [cursor=pointer] [box=23,3809,329,136]:
+            - /url: /studio/news/katseye-wild-billboard-200
+            - img "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math" [ref=e298] [box=31,3817,120,120]
+            - generic [ref=e299] [box=159,3824,193,105]
+          - link "80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test Market Trend 80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test Aug 16, 2026 109" [ref=e309] [cursor=pointer] [box=23,3957,329,136]:
+            - /url: /studio/news/bts-arlington-stadium-test
+            - img "80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test" [ref=e311] [box=31,3965,120,120]
+            - generic [ref=e312] [box=159,3972,193,105]
+          - link "49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked Market Trend 49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked Jul 9, 2026 101" [ref=e322] [cursor=pointer] [box=23,4105,329,136]:
+            - /url: /studio/news/kpop-album-sales-record
+            - img "49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked" [ref=e324] [box=31,4113,120,120]
+            - generic [ref=e325] [box=159,4120,193,105]
+      - generic [ref=e335] [box=0,4312,375,437]:
+        - generic [ref=e336] [box=0,4345,375,26]:
+          - heading "Comments" [level=3] [ref=e339] [box=28,4345,96,26]
+          - generic [ref=e340] [box=132,4346,24,24]: "0"
+        - generic [ref=e341] [box=0,4395,375,247]:
+          - generic [ref=e342] [box=17,4412,341,82]:
+            - textbox "Nickname" [ref=e343] [box=17,4412,341,37]
+            - textbox "Password" [ref=e344] [box=17,4457,341,37]
+          - textbox "Write a comment..." [ref=e346] [box=17,4502,341,80]
+          - generic [ref=e347] [box=17,4590,341,35]:
+            - generic [ref=e348] [box=17,4599,31,17]: 0/500
+            - button "Post" [ref=e349] [cursor=pointer] [box=279,4590,79,35]
+        - paragraph [ref=e355] [box=32,4698,311,19]: Be the first to comment!
+      - generic [ref=e356] [box=0,4781,375,50]:
+        - insertion [box=0,4781,375,0]:
+          - generic [box=0,4800,728,0]:
+            - iframe [box=0,4800,728,0]
+    - contentinfo [ref=e196] [box=0,4911,375,147]:
+      - generic [ref=e197] [box=16,4912,343,146]:
+        - generic [ref=e198] [box=16,4930,343,73]:
+          - generic [ref=e199] [box=16,4930,343,16]: MEARROW STUDIO
+          - generic [ref=e200] [box=16,4950,343,17]: Content becomes opportunity.
+          - generic [ref=e201] [box=16,4971,343,32]: Independent, fan-made service. Not affiliated with any entertainment company.
+        - navigation "Site information" [ref=e202] [box=16,5019,343,17]:
+          - link "About" [ref=e203] [cursor=pointer] [box=16,5019,34,17]:
+            - /url: /about
+          - link "FAQ" [ref=e204] [cursor=pointer] [box=64,5019,22,17]:
+            - /url: /faq
+          - link "Editorial standards" [ref=e205] [cursor=pointer] [box=100,5019,105,17]:
+            - /url: /editorial
+          - link "Terms" [ref=e206] [cursor=pointer] [box=219,5019,34,17]:
+            - /url: /terms
+          - link "Privacy" [ref=e207] [cursor=pointer] [box=268,5019,41,17]:
+            - /url: /privacy
+  - button "Open Next.js Dev Tools" [ref=e360] [cursor=pointer] [box=22,790,32,32]
+  - alert [ref=e221] [box=-1,5057,1,1]: A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure? | MEARROW News | MEARROW Studio

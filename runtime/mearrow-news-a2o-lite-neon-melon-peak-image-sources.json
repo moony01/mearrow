@@ -1,0 +1,81 @@
+{
+  "workflow": "mearrow-news-autopilot",
+  "slug": "a2o-lite-neon-melon-peak",
+  "createdAt": "2026-10-16T02:18:00Z",
+  "imageSearchQueries": [
+    {
+      "provider": "web.image_query",
+      "query": "A2O LITE NEON News1 8154779 stage photo",
+      "result": "Returned unrelated image results; none were used. The accepted assets were retrieved from directly inspected News1 photo pages."
+    }
+  ],
+  "acceptedImages": [
+    {
+      "id": "thumbnail",
+      "role": "thumbnail",
+      "sourceUrl": "https://image.news1.kr/system/photos/2026/10/12/8154779/high.jpg",
+      "pageUrl": "https://www.news1.kr/photos/8154779",
+      "provider": "News1",
+      "query": "Direct News1 photo page for A2O LITE at the Oct. 12 debut showcase; no search-result thumbnail used.",
+      "localOriginalPath": ".resource/originals/a2o-lite-neon-news1-8154779.jpg",
+      "stagingPath": ".resource/a2o-lite-neon-melon-peak-thumbnail.webp",
+      "sourceAuthor": "Kwon Hyun-jin / News1",
+      "sourceMime": "image/jpeg",
+      "sourceWidth": 1400,
+      "sourceHeight": 1776,
+      "sourceSha256": "0d2d935547b3e51a1d2cf0d67b0ff89790ae83762da140817f6d0cabc4874079",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "The News1 gallery page identifies A2O LITE performing NEON at the Oct. 12 debut showcase and credits reporter-photographer Kwon Hyun-jin. No reuse license or permission was independently verified.",
+      "destinationPath": "public/images/news/a2o-lite-neon-melon-peak-thumbnail.webp",
+      "width": 1400,
+      "height": 1776,
+      "mime": "image/webp",
+      "sha256": "a7906ba9eb483ad40af5216f8a7184dec425ee25704de655ea3fd245d43bb156",
+      "transform": "EXIF orientation applied; converted to WebP at quality 86; no crop, upscale, synthesis, or content alteration.",
+      "identityMatchGate": "PASS",
+      "identitySubject": "A2O LITE",
+      "faceVisible": true,
+      "identityEvidence": "The photo page names A2O LITE and the NEON showcase; direct visual inspection shows three identifiable performers on stage.",
+      "visualReview": "PASS — visually inspected the original high-resolution image."
+    },
+    {
+      "id": "body",
+      "role": "inline_body",
+      "sourceUrl": "https://image.news1.kr/system/photos/2026/10/12/8154986/high.jpg",
+      "pageUrl": "https://www.news1.kr/photos/8154986",
+      "provider": "News1",
+      "query": "Direct News1 photo page for A2O LITE member Aijing at the Oct. 12 debut showcase; no search-result thumbnail used.",
+      "localOriginalPath": ".resource/originals/a2o-lite-neon-news1-8154986.jpg",
+      "stagingPath": ".resource/a2o-lite-neon-melon-peak-1.webp",
+      "sourceAuthor": "Kwon Hyun-jin / News1",
+      "sourceMime": "image/jpeg",
+      "sourceWidth": 1400,
+      "sourceHeight": 1878,
+      "sourceSha256": "35d6f9822060dda2842604bc4af4e0e71259799a6519dc477a70b9bf0b2a6ba7",
+      "licenseStatus": "not_verified_source_attributed",
+      "licenseUrl": null,
+      "rightsEvidence": "The News1 gallery page identifies A2O LITE member Aijing performing NEON at the Oct. 12 debut showcase and credits reporter-photographer Kwon Hyun-jin. No reuse license or permission was independently verified.",
+      "destinationPath": "public/images/news/a2o-lite-neon-melon-peak-1.webp",
+      "width": 1400,
+      "height": 1878,
+      "mime": "image/webp",
+      "sha256": "19a38262dfd65650fc8f3924a3ba337401fc1709f5555a443337ba65997aa5ad",
+      "transform": "EXIF orientation applied; converted to WebP at quality 86; no crop, upscale, synthesis, or content alteration.",
+      "identityMatchGate": "PASS",
+      "identitySubject": "A2O LITE member Aijing",
+      "faceVisible": true,
+      "identityEvidence": "The photo page names Aijing and the NEON showcase; direct visual inspection matches the page description and shows her performing on stage.",
+      "visualReview": "PASS — visually inspected the original high-resolution image."
+    }
+  ],
+  "rejectedImages": [
+    {
+      "candidate": "Unrelated images returned by the image-query result set.",
+      "reason": "They did not match A2O LITE or provide a reliable source page and were not downloaded or used."
+    }
+  ],
+  "acceptedImageCount": 2,
+  "sourceAttributionGate": "PASS",
+  "reuseRightsStatus": "not_verified_source_attributed"
+}

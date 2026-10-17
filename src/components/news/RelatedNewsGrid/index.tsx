@@ -14,6 +14,7 @@ interface RelatedPost {
   date: string;
   category?: string;
   thumbnail?: string;
+  thumbnailPosition?: string | null;
 }
 
 interface RelatedNewsGridProps {
@@ -77,6 +78,7 @@ export default function RelatedNewsGrid({
                   process.env.NODE_ENV === 'development' ||
                   process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers'
                 }
+                style={{ objectPosition: related.thumbnailPosition ?? undefined }}
               />
             ) : (
               <div className={styles.relatedPlaceholder}>

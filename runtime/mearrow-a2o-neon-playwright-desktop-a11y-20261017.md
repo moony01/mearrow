@@ -1,0 +1,82 @@
+- generic [ref=f6e1] [box=0,0,1425,1000]:
+  - generic [ref=f6e2] [box=0,0,1425,4608]:
+    - banner [ref=f6e3] [box=0,0,1425,69]:
+      - generic [ref=f6e4] [box=123,0,1180,68]:
+        - link "MEARROW Studio home" [ref=f6e5] [cursor=pointer] [box=123,14,220,39]:
+          - /url: /studio
+        - link "Explore MEARROW" [ref=f6e6] [cursor=pointer] [box=1163,25,139,19]:
+          - /url: /
+    - main [ref=f6e10] [box=283,69,860,4442]:
+      - link "Back to News" [ref=f6e11] [cursor=pointer] [box=283,117,116,21]:
+        - /url: /studio#news
+      - generic [ref=f6e15] [box=283,162,860,672]:
+        - img "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?" [ref=f6e17] [box=302,181,822,462]
+        - generic [ref=f6e18] [box=302,664,125,19]: Market Trend
+        - heading "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?" [level=1] [ref=f6e23] [box=302,695,822,83]
+        - generic [ref=f6e25] [box=302,794,214,21]:
+          - time [ref=f6e29] [box=326,794,113,21]: October 16, 2026
+          - generic [ref=f6e30] [box=454,795,62,19]: 1 views
+      - article [ref=f6e35] [box=333,862,760,2498]:
+        - generic [ref=f6e36] [box=333,862,760,250]:
+          - paragraph [ref=f6e37] [box=333,862,760,173]
+          - paragraph [ref=f6e40] [box=333,1055,760,58]
+        - generic [ref=f6e42] [box=333,1160,760,373]:
+          - heading "A2O LITE’s Melon peak came 29 hours after release" [level=2] [ref=f6e43] [box=333,1160,760,57]
+          - paragraph [ref=f6e44] [box=333,1238,760,86]
+          - paragraph [ref=f6e47] [box=333,1344,760,58]
+          - generic [ref=f6e49] [box=333,1433,760,100]
+        - generic [ref=f6e50] [box=333,1581,760,1460]:
+          - heading "Melon’s formula gives the No. 1 a narrower meaning" [level=2] [ref=f6e51] [box=333,1581,760,57]
+          - paragraph [ref=f6e52] [box=333,1659,760,115]
+          - paragraph [ref=f6e54] [box=333,1798,760,1080]
+          - paragraph [ref=f6e59] [box=333,2898,760,144]: That distinction matters when reading a fast rise. A chart position can show that a track attracted enough recent usage to lead at a particular update. It cannot show from the rank alone how much came from streams versus downloads, how many listeners returned, or whether the song sustained that position over time. The exact release and peak timestamps let readers measure the climb without turning one update into a longer-term verdict.
+        - generic [ref=f6e60] [box=333,3090,760,270]:
+          - heading "The next signal is whether listeners come back" [level=2] [ref=f6e61] [box=333,3090,760,57]
+          - paragraph [ref=f6e62] [box=333,3167,760,115]: "“NEON” gives A2O LITE an early visibility milestone. The next useful evidence will come from later chart updates and the group’s activity after its debut showcase: whether listening continues beyond the first release window and whether the song draws an audience back. Those are open questions, not conclusions contained in one peak."
+          - paragraph [ref=f6e63] [box=333,3302,760,58]: Later chart updates and repeat listening will show whether the debut peak became durable audience demand.
+      - generic [ref=f6e66] [box=333,3413,189,17]:
+        - button "Share on X (Twitter)" [ref=f6e67] [cursor=pointer] [box=333,3413,29,17]:
+          - generic [ref=f6e70] [box=355,3413,7,17]: X
+        - button "Share on Facebook" [ref=f6e71] [cursor=pointer] [box=378,3413,77,17]:
+          - generic [ref=f6e74] [box=400,3413,55,17]: Facebook
+        - button "Copy link" [ref=f6e75] [cursor=pointer] [box=471,3413,51,17]:
+          - generic [ref=f6e80] [box=493,3413,29,17]: Copy
+      - generic [ref=f6e81] [box=283,3498,860,347]:
+        - heading "More Stories" [level=3] [ref=f6e82] [box=306,3521,814,29]
+        - generic [ref=f6e83] [box=306,3570,814,252]:
+          - link "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math Market Trend KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math Aug 30, 2026 33" [ref=f6e84] [cursor=pointer] [box=306,3570,261,252]:
+            - /url: /studio/news/katseye-wild-billboard-200
+          - link "80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test Market Trend 80,000 Seats, Two Nights — BTS Just Turned Arlington Into Its Next Stadium Stress Test Aug 16, 2026 109" [ref=f6e97] [cursor=pointer] [box=582,3570,261,252]:
+            - /url: /studio/news/bts-arlington-stadium-test
+          - link "49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked Market Trend 49.53 Million Albums — K-pop’s Physical Sales Ceiling Just Cracked Jul 9, 2026 101" [ref=f6e110] [cursor=pointer] [box=859,3570,261,252]:
+            - /url: /studio/news/kpop-album-sales-record
+      - generic [ref=f6e123] [box=283,3893,860,392]:
+        - generic [ref=f6e124] [box=283,3926,860,26]:
+          - heading "Comments" [level=3] [ref=f6e127] [box=311,3926,96,26]
+          - generic [ref=f6e128] [box=414,3927,24,24]: "0"
+        - generic [ref=f6e129] [box=283,3976,860,202]:
+          - generic [ref=f6e130] [box=300,3993,826,37]
+          - textbox "Write a comment..." [ref=f6e134] [box=300,4038,826,80]
+          - generic [ref=f6e135] [box=300,4126,826,35]
+        - paragraph [ref=f6e143] [box=315,4234,796,19]: Be the first to comment!
+      - generic [ref=f6e144] [box=349,4317,728,90]:
+        - insertion [box=349,4317,728,0]
+    - contentinfo [ref=f6e145] [box=0,4511,1425,97]:
+      - generic [ref=f6e146] [box=123,4512,1180,96]:
+        - generic [ref=f6e147] [box=123,4531,407,57]:
+          - generic [ref=f6e148] [box=123,4531,407,16]: MEARROW STUDIO
+          - generic [ref=f6e149] [box=123,4551,407,17]: Content becomes opportunity.
+          - generic [ref=f6e150] [box=123,4572,407,16]: Independent, fan-made service. Not affiliated with any entertainment company.
+        - navigation "Site information" [ref=f6e151] [box=1002,4551,300,17]:
+          - link "About" [ref=f6e152] [cursor=pointer] [box=1002,4551,34,17]:
+            - /url: /about
+          - link "FAQ" [ref=f6e153] [cursor=pointer] [box=1052,4551,22,17]:
+            - /url: /faq
+          - link "Editorial standards" [ref=f6e154] [cursor=pointer] [box=1090,4551,105,17]:
+            - /url: /editorial
+          - link "Terms" [ref=f6e155] [cursor=pointer] [box=1212,4551,34,17]:
+            - /url: /terms
+          - link "Privacy" [ref=f6e156] [cursor=pointer] [box=1262,4551,41,17]:
+            - /url: /privacy
+  - button "Open Next.js Dev Tools" [ref=f6e162] [cursor=pointer] [box=22,946,32,32]
+  - alert [ref=f6e166] [box=-1,4607,1,1]

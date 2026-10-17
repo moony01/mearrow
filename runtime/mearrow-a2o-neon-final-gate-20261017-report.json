@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-17",
+  "verifier": "/root/a2o_news_local_playwright_retry (test-only)",
+  "environment": {
+    "playwright_system_check": "READY",
+    "browser": "Windows Chrome via configured Playwright MCP/CDP",
+    "origin": "http://127.0.0.1:3102",
+    "fresh_tab": true,
+    "orca_or_computer_use": false,
+    "source_files_modified": false
+  },
+  "overall": "PASS_WITH_CONSOLE_FINDINGS",
+  "gates": {
+    "real_listing_card_click_to_article": "PASS",
+    "listing_card_focal_position_and_face": "PASS",
+    "desktop_hero_1440x1000": "PASS",
+    "mobile_hero_390x844": "PASS",
+    "api_regeneration_and_optional_serialization": "PASS",
+    "image_assets": "PASS",
+    "canonical_metadata_and_source_links": "PASS",
+    "horizontal_overflow": "PASS",
+    "accessibility_snapshots": "PASS",
+    "view_count_rpc_write_guard": "PASS",
+    "page_and_hydration_errors": "PASS",
+    "console_warnings": "PASS_WITH_FINDINGS"
+  },
+  "article": {
+    "slug": "a2o-lite-neon-melon-peak",
+    "title": "A2O LITE’s “NEON” Hit Melon No. 1 in 29 Hours. What Does the Rank Measure?",
+    "date": "2026-10-16",
+    "visible_date": "October 16, 2026",
+    "category": "Market Trend",
+    "canonical": "https://mearrow.com/studio/news/a2o-lite-neon-melon-peak",
+    "meta_description_present": true,
+    "og_title_matches_h1": true,
+    "hero_alt_present": true,
+    "caption_present": true,
+    "external_source_links": 7
+  },
+  "focal_position": {
+    "article_json_value": "center 10%",
+    "computed_css_value": "50% 10%",
+    "listing_card": {
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "box_desktop": {
+        "x": 123.5,
+        "y": 232.78125,
+        "width": 378,
+        "height": 212.625
+      },
+      "visual_review": "Central member’s face is visible in the listing crop."
+    },
+    "hero_desktop": {
+      "viewport": "1440x1000",
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "image_box": {
+        "x": 301.5,
+        "y": 181,
+        "width": 822,
+        "height": 462.375
+      },
+      "visual_review": "Central member’s face is clear and unobstructed."
+    },
+    "hero_mobile": {
+      "viewport": "390x844",
+      "object_fit": "cover",
+      "object_position": "50% 10%",
+      "image_loaded": true,
+      "image_box": {
+        "x": 19,
+        "y": 149,
+        "width": 337,
+        "height": 189.5625
+      },
+      "visual_review": "Central member’s face remains visible in the mobile crop."
+    }
+  },
+  "navigation": {
+    "from": "/studio/news",
+    "to": "/studio/news/a2o-lite-neon-melon-peak",
+    "input": "Real Playwright MCP locator click",
+    "captured_click": {
+      "href": "/studio/news/a2o-lite-neon-melon-peak",
+      "target_tag": "DIV inside anchor",
+      "x": 312,
+      "y": 449,
+      "button": 0
+    },
+    "h1_matches_expected_title": true
+  },
+  "api_readback": {
+    "news_list": {
+      "url": "/api/news.json",
+      "status": 200,
+      "record_count": 201,
+      "matching_slug_title_date_category": true
+    },
+    "article_content": {
+      "url": "/api/news-content/en/a2o-lite-neon-melon-peak.json",
+      "status": 200,
+      "slug_title_date_category_match": true,
+      "thumbnailPosition": "center 10%",
+      "source_count": 7
+    },
+    "optional_field_regression": {
+      "unrelated_article_slug": "katseye-wild-billboard-200",
+      "status": 200,
+      "thumbnailPosition_omitted": true
+    },
+    "images": [
+      {
+        "url": "/images/news/a2o-lite-neon-melon-peak-thumbnail.webp",
+        "status": 200,
+        "content_type": "image/webp",
+        "bytes": 161384,
+        "loaded_in_page": true
+      },
+      {
+        "url": "/images/news/a2o-lite-neon-melon-peak-1.webp",
+        "status": 200,
+        "content_type": "image/webp",
+        "bytes": 184196,
+        "loaded_in_page": true
+      }
+    ]
+  },
+  "layout": {
+    "desktop_1440x1000": {
+      "document_width": 1425,
+      "client_width": 1425,
+      "horizontal_overflow": false
+    },
+    "mobile_390x844": {
+      "document_width": 375,
+      "client_width": 375,
+      "horizontal_overflow": false
+    }
+  },
+  "rpc_guard": {
+    "route_intercept_installed_before_listing_navigation": true,
+    "endpoint": "POST /rest/v1/rpc/increment_kcl_news_view",
+    "intercepted_attempts": 2,
+    "outcome": "Both POST attempts aborted by Playwright route before network transmission; no Supabase write request received a response.",
+    "read_only_supabase_GETs": "View/comment readback GETs returned 200."
+  },
+  "console": {
+    "page_errors": 0,
+    "hydration_errors_or_warnings": 0,
+    "expected_blocked_rpc_console_errors": 2,
+    "warning_total": 64,
+    "groups": [
+      {
+        "source": "MetaMask Chrome extension",
+        "message": "MaxListenersExceeded close listeners",
+        "count": 7,
+        "classification": "extension noise"
+      },
+      {
+        "source": "MetaMask Chrome extension",
+        "message": "MaxListenersExceeded end listeners",
+        "count": 7,
+        "classification": "extension noise"
+      },
+      {
+        "source": "MetaMask Chrome extension",
+        "message": "ObjectMultiplex orphaned app-init-liveness stream",
+        "count": 14,
+        "classification": "extension noise"
+      },
+      {
+        "source": "MetaMask Chrome extension",
+        "message": "ObjectMultiplex orphaned background-liveness stream",
+        "count": 14,
+        "classification": "extension noise"
+      },
+      {
+        "source": "App/resource",
+        "message": "Preloaded font/CSS resources unused within a few seconds",
+        "count": 21,
+        "classification": "resource finding"
+      },
+      {
+        "source": "App/AdSense",
+        "message": "AdSense head tag does not support data-nscript attribute",
+        "count": 1,
+        "classification": "app warning"
+      }
+    ],
+    "summary": "42 extension warnings and 22 app/resource warnings; no hydration warning. The two console errors correspond to the intentionally blocked RPC requests."
+  },
+  "evidence": {
+    "listing_screenshot": "runtime/mearrow-a2o-neon-final-gate-20261017-listing.png",
+    "desktop_screenshot": "runtime/mearrow-a2o-neon-final-gate-20261017-desktop.png",
+    "mobile_screenshot": "runtime/mearrow-a2o-neon-final-gate-20261017-mobile.png",
+    "listing_accessibility_snapshot": "runtime/mearrow-a2o-neon-final-gate-20261017-listing-a11y.md",
+    "desktop_accessibility_snapshot": "runtime/mearrow-a2o-neon-final-gate-20261017-desktop-a11y.md",
+    "mobile_accessibility_snapshot": "runtime/mearrow-a2o-neon-final-gate-20261017-mobile-a11y.md",
+    "network_log": "runtime/mearrow-a2o-neon-final-gate-20261017-network.md",
+    "console_warning_log": "runtime/mearrow-a2o-neon-final-gate-20261017-console-warnings.txt"
+  }
+}
