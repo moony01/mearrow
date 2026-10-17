@@ -9,10 +9,6 @@ export const AD_SLOTS = {
   HOME_BOTTOM: '1606492335',
   /** 뉴스 목록 하단 (leaderboard) */
   NEWS_LIST_BOTTOM: '6786666829',
-  /** 뉴스 상세 - 기사 내 (in-article) */
-  NEWS_DETAIL_ARTICLE: '8123799220',
-  /** 뉴스 상세 하단 (leaderboard) */
-  NEWS_DETAIL_BOTTOM: '9293410664',
   /** 명예의 전당 하단 (leaderboard) */
   HOF_BOTTOM: '9045998652',
   /** 공지사항 목록 하단 (leaderboard) */
