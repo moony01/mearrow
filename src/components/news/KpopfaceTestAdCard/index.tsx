@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import styles from './KpopfaceTestAdCard.module.scss';
 
-const KPOPFACE_TEST_URL = 'https://moony01.com/kpopface/';
+const KPOPFACE_TEST_URL = 'https://moony01.com/kpopface/en/';
 
 type AdPlacement = 'start' | 'middle';
 
