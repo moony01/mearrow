@@ -19,20 +19,9 @@ import ShareButtons from '@/components/common/ShareButtons';
 import NewsViewCounter from '@/components/news/NewsViewCounter';
 import NewsComments from '@/components/news/NewsComments';
 import RelatedNewsGrid from '@/components/news/RelatedNewsGrid';
-import AdBanner from '@/components/common/AdBanner';
-import { AD_SLOTS } from '@/types/ads';
+import KpopfaceTestAdCard from '@/components/news/KpopfaceTestAdCard';
 import PageFrame from '@/components/layout/PageFrame';
 import styles from './page.module.scss';
-
-/**
- * 마크다운 콘텐츠를 ## (h2) 기준으로 섹션 분할
- * 도입부(## 이전)와 각 ## 섹션을 별도 문자열 배열로 반환
- * 광고를 섹션 사이에 삽입하기 위해 사용
- */
-function splitContentBySections(content: string): string[] {
-  const sections = content.split(/(?=^## )/m);
-  return sections.filter((s) => s.trim());
-}
 
 function absoluteNewsImage(value: string | null | undefined): string {
   if (!value) return `${FULL_URL}${BRAND_MARK_PATH}`;
@@ -40,8 +29,37 @@ function absoluteNewsImage(value: string | null | undefined): string {
   return `${FULL_URL}${value.startsWith('/') ? value : `/${value}`}`;
 }
 
-/** 광고를 삽입할 섹션 인덱스 (0-based, 해당 섹션 뒤에 광고 배치) */
-const AD_INSERT_AFTER_SECTIONS = [1, 3];
+function splitContentBySections(content: string): string[] {
+  const sections = content.split(/(?=^## )/m).filter((section) => section.trim());
+  if (sections.length > 1) return sections;
+
+  const blocks = content.split(/\n\s*\n/).filter((block) => block.trim());
+  return blocks.length > 1 ? blocks : sections;
+}
+
+/** Find the internal section boundary closest to the middle of the article. */
+function findMiddleAdBoundary(sections: string[]): number {
+  if (sections.length < 2) return 1;
+
+  const firstBoundary = sections.length > 3 ? 2 : 1;
+  const midpoint = sections.reduce((total, section) => total + section.length, 0) / 2;
+  let bestBoundary = firstBoundary;
+  let bestDistance = Number.POSITIVE_INFINITY;
+
+  for (let boundary = firstBoundary; boundary < sections.length; boundary += 1) {
+    const precedingLength = sections
+      .slice(0, boundary)
+      .reduce((total, section) => total + section.length, 0);
+    const distance = Math.abs(precedingLength - midpoint);
+
+    if (distance < bestDistance) {
+      bestBoundary = boundary;
+      bestDistance = distance;
+    }
+  }
+
+  return bestBoundary;
+}
 
 /**
  * Generate one English-only route for each published article.
@@ -131,6 +149,31 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     day: 'numeric',
   });
   const sources = post.sources ?? [];
+  const contentSections = splitContentBySections(post.content);
+  const middleAdBoundary = findMiddleAdBoundary(contentSections);
+  const markdownComponents: Partial<Components> = {
+    img: ({ src, alt }) => {
+      if (typeof src === 'string' && src) {
+        return (
+          <span className={styles.contentImage}>
+            <ExportedImage
+              src={src}
+              alt={alt || ''}
+              width={800}
+              height={450}
+              sizes="(max-width: 768px) 100vw, 800px"
+              unoptimized={
+                process.env.NODE_ENV === 'development' ||
+                process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers'
+              }
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </span>
+        );
+      }
+      return null;
+    },
+  };
 
   return (
     <PageFrame size="narrow">
@@ -186,47 +229,17 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         </div>
       </header>
 
-      {/* 기사 본문 (섹션별 분할 + 중간 광고 삽입) */}
+      {/* 기사 본문 */}
       <article className={styles.content}>
-        {(() => {
-          const sections = splitContentBySections(post.content);
-          // 마크다운 이미지를 ExportedImage로 최적화하는 공용 컴포넌트
-          const markdownComponents: Partial<Components> = {
-            img: ({ src, alt }) => {
-              if (typeof src === 'string' && src) {
-                return (
-                  <span className={styles.contentImage}>
-                    <ExportedImage
-                      src={src}
-                      alt={alt || ''}
-                      width={800}
-                      height={450}
-                      sizes="(max-width: 768px) 100vw, 800px"
-                      unoptimized={
-                        process.env.NODE_ENV === 'development' ||
-                        process.env.NEXT_PUBLIC_RUNTIME_TARGET === 'workers'
-                      }
-                      style={{ width: '100%', height: 'auto' }}
-                    />
-                  </span>
-                );
-              }
-              return null;
-            },
-          };
-
-          return sections.map((section, index) => (
-            <div key={index}>
-              <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-                {section}
-              </ReactMarkdown>
-              {/* 지정된 섹션 뒤에 in-article 광고 삽입 (마지막 섹션 제외) */}
-              {AD_INSERT_AFTER_SECTIONS.includes(index) && index < sections.length - 1 && (
-                <AdBanner adSlot={AD_SLOTS.NEWS_DETAIL_ARTICLE} adFormat="in-article" />
-              )}
-            </div>
-          ));
-        })()}
+        <KpopfaceTestAdCard placement="start" />
+        {contentSections.map((section, index) => (
+          <div key={index}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+              {section}
+            </ReactMarkdown>
+            {index + 1 === middleAdBoundary && <KpopfaceTestAdCard placement="middle" />}
+          </div>
+        ))}
       </article>
 
       {/* 기사 하단 공유 버튼 */}
@@ -267,9 +280,6 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
 
       {/* 댓글 섹션 */}
       <NewsComments slug={slug} />
-
-      {/* 뉴스 상세 하단 광고 */}
-      <AdBanner adSlot={AD_SLOTS.NEWS_DETAIL_BOTTOM} adFormat="leaderboard" />
 
       {/* JSON-LD 구조화 데이터 (Article 스키마) */}
       <JsonLd
