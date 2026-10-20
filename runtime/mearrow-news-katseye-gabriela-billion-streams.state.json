@@ -3,9 +3,9 @@
   "slug": "katseye-gabriela-billion-streams",
   "runId": "20261020T034306Z",
   "startedAt": "2026-10-20T03:45:02.019Z",
-  "updatedAt": "2026-10-20T04:13:11.065Z",
+  "updatedAt": "2026-10-20T04:56:26Z",
   "status": "IN_PROGRESS",
-  "lastPassedStep": "BROWSER_QA_RECHECK",
+  "lastPassedStep": "PR_CI",
   "stepResults": {
     "topicDedupe": "PASS",
     "research": "PASS",
@@ -14,29 +14,50 @@
     "localRender": "PASS",
     "browserQa": "PASS",
     "commitPush": "PASS",
-    "deploy": "NOT_RUN",
+    "deploy": "AUTHORIZED_NOT_RUN",
     "productionBrowser": "NOT_RUN",
     "gsc": "NOT_RUN",
-    "prCi": "PENDING_FOLLOWUP_PUSH",
-    "merge": "NOT_RUN",
+    "prCi": "PASS_CURRENT_HEAD",
+    "merge": "AUTHORIZED_PENDING_FINAL_PR_GATE",
     "sourceUrlFix": "PASS",
-    "followupCommitPush": "IN_PROGRESS"
+    "followupCommitPush": "PASS"
   },
-  "currentStep": "FOLLOWUP_COMMIT_PUSH",
+  "currentStep": "FINAL_EVIDENCE_COMMIT_AND_PR_GATE",
   "authorization": {
     "actor": "user",
-    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
-    "confirmedAt": "2026-10-20T03:45:02.019Z",
-    "method": "explicit_mearrow_news_autopilot_invocation"
+    "scope": "one_mearrow_news_pr_101_merge_and_production_deployment_only; no_gsc_request",
+    "confirmedAt": "2026-10-20T04:56:26Z",
+    "method": "explicit_followup_user_request: 배포까지해줘"
   },
   "artifacts": {
     "topicDedupe": "runtime/mearrow-news-topic-dedupe-20261020T034306Z.json",
     "imageSources": "runtime/mearrow-news-katseye-gabriela-billion-streams-image-sources.json"
   },
   "currentInstructionRestrictions": {
-    "pr": "Keep PR #101 open.",
-    "merge": "Do not merge; explicit user request required.",
-    "productionDeploy": "Do not deploy.",
-    "gscIndexRequest": "Do not request indexing."
-  }
+    "pr": "Only PR #101 is in scope.",
+    "merge": "Authorized by the current user request after required PR checks pass.",
+    "productionDeploy": "Authorized after merge through the repository production workflow.",
+    "gscIndexRequest": "NOT_RUN; not authorized by the current request."
+  },
+  "followupCommitPush": {
+    "commitSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "branch": "feat/katseye-gabriela-billion-streams-20261020",
+    "pushed": true,
+    "prNumber": 101,
+    "prState": "OPEN"
+  },
+  "prCi": {
+    "status": "PASS",
+    "runId": 39368425778,
+    "headSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "productionDeployJob": "SKIPPED"
+  },
+  "authorizationHistory": [
+    {
+      "actor": "user",
+      "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+      "confirmedAt": "2026-10-20T03:45:02.019Z",
+      "method": "explicit_mearrow_news_autopilot_invocation"
+    }
+  ]
 }

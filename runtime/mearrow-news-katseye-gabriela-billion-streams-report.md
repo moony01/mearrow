@@ -2,12 +2,12 @@
 
 - Run: 20261020T034306Z
 - Started: 2026-10-20T03:45:02.019Z
-- Updated: 2026-10-20T04:12:08.218Z
-- Status: IN_PROGRESS — fresh URL recheck passed; follow-up commit, push, and PR check remain.
+- Updated: 2026-10-20T04:56:26Z
+- Status: IN_PROGRESS — the current user request authorizes PR #101 merge and production deployment; GSC remains NOT_RUN.
 - Topic: KATSEYE’s “Gabriela” reaches 1 billion Spotify streams and enters the group’s first Billions Club.
 - Proposed title: KATSEYE’s ‘Gabriela’ Becomes Its First Spotify Billions Club Entry
 - Category: Artist
-- Authorization: one article only. The current instruction pauses before merge, production deployment, and GSC indexing; PR #101 must remain open.
+- Authorization: current user request authorizes merge of PR #101 and production deployment for this article only. GSC indexing is outside this request and remains NOT_RUN.
 
 ## Gate log
 
@@ -19,10 +19,10 @@
 | Image source/provenance | PASS | Two CC BY 4.0 originals, visual review, source/final hashes and public copies match. |
 | Local render | PASS | Local page, content API, listing API, source images, and optimizer output returned expected 200 responses; canonical matched. |
 | Browser QA | PASS | Fresh test-only Playwright recheck passed after URL encoding. Both rendered Commons hrefs preserve the complete `%28...%29.jpg` URLs and resolve HTTP 200; article/list APIs and canonical match. See the recheck report and screenshot. |
-| Commit / push | IN_PROGRESS | Initial commit `f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5` is on the feature branch and PR #101. The Commons URL fix is ready for a follow-up commit/push on the same branch. |
-| PR checks / merge | PENDING | Run 39367806686 applies to the prior PR head. A fresh read-only PR check will be recorded after the fix push. PR #101 remains open; merge is paused pending a separate explicit request. |
-| Production deploy | NOT_RUN | Paused before merge under the current instruction. |
-| GSC | NOT_RUN | Indexing request explicitly paused under the current instruction. |
+| Commit / push | PASS | Fix commit `60a2985d351579ee53fb1f74261df2d4f6eeaea4` pushed to the same feature branch and PR #101. |
+| PR checks / merge | PASS / AUTHORIZED | Run [39368425778](https://github.com/moony01/mearrow/actions/runs/39368425778) passed on fix SHA `60a2985`. The current request now authorizes PR #101 merge; final evidence commit checks must pass before merging. |
+| Production deploy | AUTHORIZED / NOT_RUN | The repository deploys from `main` after merge; exact production SHA and article URL must be verified. |
+| GSC | NOT_RUN | Not authorized by the current request; no indexing request will be sent. |
 
 ## Research facts
 
@@ -81,10 +81,11 @@ All four factual claim groups passed cross-checks. The 186-word length is intent
 
 ## Commit and PR
 
-- Commit: `f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5`
-- Branch: `feat/katseye-gabriela-billion-streams-20261020` (pushed)
-- PR: https://github.com/moony01/mearrow/pull/101
-- `MEARROW Workers / Validate Workers build` run 39367806686 was queued; merge remains gated on its result.
+- Original article commit: `f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5`
+- URL fix commit: `60a2985d351579ee53fb1f74261df2d4f6eeaea4` (`fix(mearrow): preserve Wikimedia Commons source URLs`)
+- Branch: `feat/katseye-gabriela-billion-streams-20261020` (pushed; remote head matches fix SHA)
+- PR: https://github.com/moony01/mearrow/pull/101 (OPEN; not merged or closed)
+- Read-only checks: run [39368425778](https://github.com/moony01/mearrow/actions/runs/39368425778) passed on the fix SHA. `Validate Workers build` passed all steps; `Deploy production Worker` was skipped.
 
 ## Wikimedia Commons source URL correction and fresh QA
 
@@ -95,4 +96,17 @@ All four factual claim groups passed cross-checks. The 186-word length is intent
   - `https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg`
   - `https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg`
 - Fresh browser evidence: `runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck-report.md` and `runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck.png` (1433×4236).
-- Follow-up commit/push and fresh PR validation are still pending. PR #101 stays open. Merge, production deployment, and GSC indexing remain NOT_RUN by instruction.
+- Fix commit/push and fresh PR validation passed. PR #101 stays open. The run’s production deploy job was skipped; no production deployment or GSC request was made. Merge, production deployment, and GSC indexing remain NOT_RUN under the current instruction. The local state/evidence/report now pause at `PRE_MERGE_GATE`.
+
+## Merge and deployment authorization
+
+- Final PR head: `60a2985d351579ee53fb1f74261df2d4f6eeaea4`; remote branch and local HEAD matched when checked.
+- PR #101 was `OPEN`; `mergedAt` and `closedAt` were null.
+- `gh pr diff 101 --name-only` read back the expected article, generated metadata, API, regression test, and evidence files; the full file list is recorded under `prReadback.changedFiles` in the evidence JSON.
+- Checks: `Validate Workers build` PASS; production deploy job SKIPPED.
+- At the time of this report update, merge and production deployment are authorized but not yet executed; GSC remains NOT_RUN. Final PR checks must pass before merge, followed by production SHA and browser verification.
+
+## Current request scope
+
+- Explicitly authorized: merge PR #101 and deploy this one MEARROW article through the repository production workflow.
+- GSC indexing remains `NOT_RUN` because the current request authorizes deployment only.

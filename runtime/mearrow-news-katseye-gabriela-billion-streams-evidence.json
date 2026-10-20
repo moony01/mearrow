@@ -6,9 +6,9 @@
   "runEndedAt": null,
   "authorization": {
     "actor": "user",
-    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
-    "confirmedAt": "2026-10-20T03:45:02.019Z",
-    "method": "explicit_mearrow_news_autopilot_invocation"
+    "scope": "one_mearrow_news_pr_101_merge_and_production_deployment_only; no_gsc_request",
+    "confirmedAt": "2026-10-20T04:56:26Z",
+    "method": "explicit_followup_user_request: 배포까지해줘"
   },
   "stepResults": {
     "topicDedupe": "PASS",
@@ -18,13 +18,13 @@
     "localRender": "PASS",
     "browserQa": "PASS",
     "commitPush": "PASS",
-    "deploy": "NOT_RUN",
+    "deploy": "AUTHORIZED_NOT_RUN",
     "productionBrowser": "NOT_RUN",
     "gsc": "NOT_RUN",
-    "prCi": "PENDING_FOLLOWUP_PUSH",
-    "merge": "NOT_RUN",
+    "prCi": "PASS",
+    "merge": "AUTHORIZED_PENDING_FINAL_PR_GATE",
     "sourceUrlFix": "PASS",
-    "followupCommitPush": "IN_PROGRESS"
+    "followupCommitPush": "PASS"
   },
   "topicDedupe": {
     "indexSource": [
@@ -1158,14 +1158,17 @@
     ]
   },
   "deploy": {
-    "commitSha": "f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5",
+    "commitSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
     "productionSha": null,
     "environmentCheck": "PASS",
     "environmentValuesRecorded": false,
     "branch": "feat/katseye-gabriela-billion-streams-20261020",
     "pushed": true,
     "pullRequest": 101,
-    "pullRequestUrl": "https://github.com/moony01/mearrow/pull/101"
+    "pullRequestUrl": "https://github.com/moony01/mearrow/pull/101",
+    "status": "AUTHORIZED_NOT_RUN",
+    "productionDeployed": false,
+    "mergeStatus": "AUTHORIZED_NOT_RUN"
   },
   "production": {
     "productionSha": null,
@@ -1565,15 +1568,24 @@
     }
   },
   "prCi": {
-    "status": "PENDING_FOLLOWUP_PUSH",
-    "checkName": "Validate Workers build",
+    "status": "PASS",
     "workflow": "MEARROW Workers",
-    "runId": "39367806686",
-    "runUrl": "https://github.com/moony01/mearrow/actions/runs/39367806686",
-    "initialStatus": "QUEUED",
-    "headSha": "f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5",
-    "priorCommitRun": "39367806686",
-    "note": "Initial run is tied to the prior commit; a fresh validation run will be checked after pushing the source-link fix."
+    "runId": 39368425778,
+    "runUrl": "https://github.com/moony01/mearrow/actions/runs/39368425778",
+    "headSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "validateWorkersBuild": "success",
+    "completedAt": "2026-10-20T04:16:12Z",
+    "checks": [
+      "environment",
+      "lint",
+      "unit tests",
+      "browser data smoke",
+      "browser Studio modal smoke",
+      "Workers build",
+      "Workers public profile SSR regression"
+    ],
+    "productionDeployJob": "skipped",
+    "notes": "Read-only PR checks passed on the source-link fix commit. Production deploy job was skipped for the pull_request event; no production deployment was performed."
   },
   "sourceUrlExtractionFix": {
     "status": "PASS",
@@ -1606,10 +1618,90 @@
     "browserRecheck": "PASS"
   },
   "executionScope": {
-    "status": "PAUSED_BEFORE_MERGE",
-    "pr": "101 remains open; do not close.",
-    "merge": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION",
-    "productionDeploy": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION",
-    "gscIndexRequest": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION"
-  }
+    "status": "MERGE_AND_PRODUCTION_DEPLOY_AUTHORIZED",
+    "authorization": "Current user request explicitly authorizes merge of PR #101 and production deployment for this one article.",
+    "pr": "PR #101 only.",
+    "merge": "AUTHORIZED; waiting for current PR checks on any final evidence commit.",
+    "productionDeploy": "AUTHORIZED after merge; use repository main-branch production workflow.",
+    "gscIndexRequest": "NOT_RUN; outside the current request and remains paused."
+  },
+  "followupCommitPush": {
+    "status": "PASS",
+    "commitSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "commitSubject": "fix(mearrow): preserve Wikimedia Commons source URLs",
+    "branch": "feat/katseye-gabriela-billion-streams-20261020",
+    "pushed": true,
+    "prNumber": 101,
+    "prUrl": "https://github.com/moony01/mearrow/pull/101",
+    "prState": "OPEN",
+    "prHeadSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4"
+  },
+  "prReadback": {
+    "number": 101,
+    "url": "https://github.com/moony01/mearrow/pull/101",
+    "state": "OPEN",
+    "headBranch": "feat/katseye-gabriela-billion-streams-20261020",
+    "headSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "mergedAt": null,
+    "closedAt": null,
+    "diffRead": "PASS: gh pr diff 101 --name-only completed read-only; fix and evidence files are present in PR diff.",
+    "changedFiles": [
+      ".resource/katseye-gabriela-billion-streams-1.webp",
+      ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+      ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+      ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+      "public/api/news.json",
+      "public/images/news/katseye-gabriela-billion-streams-1.webp",
+      "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-evidence.json",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-factcheck.md",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-image-sources.json",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck-report.md",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck.png",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-report.md",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-report.md",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams.state.json",
+      "runtime/mearrow-news-topic-dedupe-20261020T034306Z.json",
+      "src/content/news/en/katseye-gabriela-billion-streams.md",
+      "src/generated/news-meta.json",
+      "src/lib/news-quality.test.ts"
+    ],
+    "checks": {
+      "runId": 39368425778,
+      "conclusion": "success",
+      "validateWorkersBuild": "success",
+      "productionDeployJob": "skipped"
+    }
+  },
+  "updatedAt": "2026-10-20T04:56:26Z",
+  "commit": {
+    "sha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "subject": "fix(mearrow): preserve Wikimedia Commons source URLs",
+    "branch": "feat/katseye-gabriela-billion-streams-20261020",
+    "pushed": true
+  },
+  "pr": {
+    "number": 101,
+    "url": "https://github.com/moony01/mearrow/pull/101",
+    "state": "OPEN",
+    "headSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "mergedAt": null,
+    "closedAt": null
+  },
+  "workflowRun": {
+    "id": 39368425778,
+    "url": "https://github.com/moony01/mearrow/actions/runs/39368425778",
+    "workflow": "MEARROW Workers",
+    "headSha": "60a2985d351579ee53fb1f74261df2d4f6eeaea4",
+    "conclusion": "success",
+    "productionDeployJob": "skipped"
+  },
+  "authorizationHistory": [
+    {
+      "actor": "user",
+      "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+      "confirmedAt": "2026-10-20T03:45:02.019Z",
+      "method": "explicit_mearrow_news_autopilot_invocation"
+    }
+  ]
 }
