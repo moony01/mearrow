@@ -1,0 +1,1484 @@
+{
+  "workflow": "mearrow-news",
+  "slug": "katseye-gabriela-billion-streams",
+  "runId": "20261020T034306Z",
+  "runStartedAt": "2026-10-20T03:45:02.019Z",
+  "runEndedAt": null,
+  "authorization": {
+    "actor": "user",
+    "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
+    "confirmedAt": "2026-10-20T03:45:02.019Z",
+    "method": "explicit_mearrow_news_autopilot_invocation"
+  },
+  "stepResults": {
+    "topicDedupe": "PASS",
+    "research": "PASS",
+    "content": "PASS",
+    "image": "PASS",
+    "localRender": "PASS",
+    "browserQa": "PASS",
+    "commitPush": "NOT_RUN",
+    "deploy": "NOT_RUN",
+    "productionBrowser": "NOT_RUN",
+    "gsc": "NOT_RUN"
+  },
+  "topicDedupe": {
+    "indexSource": [
+      "src/content/news/en/*.md (all files)",
+      "https://mearrow.com/api/news.json (HTTP 200, 201 public items; live list compared)"
+    ],
+    "indexedActiveSlugs": [
+      "2026-kpop-audition-guide",
+      "2026-rookie-boy-group-war-big4-debut-battle",
+      "a2o-lite-neon-melon-peak",
+      "aespa-crisis-tokyo-dome-comeback-2026",
+      "aespa-gdragon-wda",
+      "aespa-lemonade-tour",
+      "aespa-wda-gdragon-risk",
+      "ai-fandom-platform-evolution",
+      "akmu-chart-war",
+      "akmu-yg-independence-brutal-training-new-label-2026",
+      "and2ble-rookie-sales-record",
+      "andteam-we-on-fire",
+      "annie-allday-project-7-years-trainee-dream",
+      "ateez-san-wooyoung-dating-rumor",
+      "babymonster-choom-100m",
+      "babymonster-choom-comeback",
+      "babymonster-choom-world-tour",
+      "baeksang-fan-vote-gap",
+      "bang-hybe-fraud-probe",
+      "bekuh-boom-blackpink-yg-songwriter-abortion-contract-2026",
+      "big4-fanomenon-festival",
+      "big4-trainee-requirements-attitude",
+      "bigbang-august-tour",
+      "bighit-15-city-audition",
+      "black-label-yg-board",
+      "blackpink-deadline-comeback-national-museum",
+      "blackpink-deadline-ep-record-sales-yg-2026",
+      "blackpink-deadline-interscope-independence",
+      "blackpink-go-billboard-hot100-11th-entry-record-2026",
+      "blackpink-government-stamps",
+      "blackpink-guinness-icon",
+      "blackpink-met-gala-selfie",
+      "bts-2026-comeback-countdown",
+      "bts-ama-aoty",
+      "bts-ama-second-aoty",
+      "bts-ama-special-appearance",
+      "bts-arirang-animation-whitewash-howard-university-2026",
+      "bts-arirang-animation-whitewashing-hbcu-controversy-2026",
+      "bts-arirang-billboard-record",
+      "bts-arirang-comeback-2026",
+      "bts-arirang-comeback-gwanghwamun-2026",
+      "bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026",
+      "bts-arirang-concert-terror-alert-weapons-security-2026",
+      "bts-arirang-day1-spotify-record-netflix-paywall-2026",
+      "bts-arirang-grammy-hunt-2026",
+      "bts-arirang-gwanghwamun-concert-netflix-record-2026",
+      "bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026",
+      "bts-arirang-release-day-swim-gwanghwamun-concert-2026",
+      "bts-arirang-six-weeks",
+      "bts-arirang-streaming-record",
+      "bts-arirang-swim-spotify-documentary-netflix-2026",
+      "bts-arirang-trailer-1896-howard-seven-koreans-2026",
+      "bts-arirang-world-tour-sellout-record-2026",
+      "bts-arlington-stadium-test",
+      "bts-billboard-two-weeks",
+      "bts-bulacan-ticket-war",
+      "bts-busan-festa-delay",
+      "bts-china-ban-gap",
+      "bts-city-vegas-busan",
+      "bts-dynamite-japan-streams",
+      "bts-fan-merch-crackdown",
+      "bts-guinness-icons",
+      "bts-korea-venue-crisis",
+      "bts-latin-america-streams",
+      "bts-london-stadium-record",
+      "bts-march-2026-comeback-industry-impact",
+      "bts-mexico-palace",
+      "bts-normal-spotify-window",
+      "bts-oreo-global-bet",
+      "bts-rm-ankle-injury-world-tour-countdown-2026",
+      "bts-seoul-tour-kickoff",
+      "bts-stanford-takeover",
+      "bts-swim-100m",
+      "bts-tampa-190k",
+      "bts-world-cup-halftime",
+      "bts-wristband-theft",
+      "cha-eunwoo-tax-evasion-scandal-2026",
+      "chaewon-neck-hiatus",
+      "cix-seven-year-end",
+      "coachella-2026-kpop-takeover",
+      "cortis-greengreen-million",
+      "cortis-greengreen-preorders",
+      "cortis-redred-grand-slam",
+      "cortis-redred-ninth-win",
+      "day6-kpop-race-war",
+      "enhypen-heeseung-departure-belift-lab-controversy-2026",
+      "enhypen-heeseung-protest-trucks-el-capitxn-2026",
+      "fanomenon-big4-festival",
+      "foreign-trainee-reality-visa-culture",
+      "gangnam-style-6-billion",
+      "gdragon-lawsuit-media-100-commenters-cleared-2026",
+      "gdragon-lunar-new-year-china-fan-controversy",
+      "gdragon-shirt-apology",
+      "gov-ball-kpop-weekend",
+      "hearts2hearts-triple-crown-rude-incheon-airport-security-2026",
+      "heeseung-enhypen-ot7-belift-controversy",
+      "hybe-135m-question",
+      "hybe-abd-girlgroup-bet",
+      "hybe-bang-arrest-warrant",
+      "hybe-illit-court-loss",
+      "hybe-india-audition-kpop",
+      "hybe-min-heejin-255b-ruling-fan-betrayal",
+      "hybe-q1-red-ink",
+      "hybe-record-revenue-profit-plunge-73",
+      "hybe-spotify-podcast-media-empire-2026",
+      "hybe-stock-bts-paradox",
+      "idle-nbc-today-show-arena-tour-cube-2026",
+      "idle-us-tour-cancelled",
+      "illit-little-monsters-newjeans-five-colors-diss",
+      "india-kdream-stage",
+      "ioi-loop-comeback",
+      "itzy-motto-identity",
+      "ive-bang-bang-pak-record-starship-kakao-2026",
+      "ive-yujin-moon-sangmin-dating-rumors-lovestagram-2026",
+      "jackson-yuqi-rumor-denial",
+      "japan-super-weekend",
+      "jennie-lollapalooza-headliner",
+      "jennie-time100-shift",
+      "june-kpop-comeback-pileup",
+      "jungkook-seven-3b",
+      "jungkook-weverse-censorship",
+      "jungkook-winter-tattoo-gone-bts-comeback-breakup-rumors",
+      "karina-body-shaming-fandom",
+      "katseye-coachella-debut",
+      "katseye-music-bank-cancel",
+      "katseye-wild-billboard-200",
+      "katseye-wild-manon",
+      "kcon-japan-k-life",
+      "kiss-of-life-first-win",
+      "kpop-album-exports-us",
+      "kpop-album-sales-record",
+      "kpop-big4-japan-streaming-strategy",
+      "kpop-campus-festival-war",
+      "kpop-china-japan-ningning-geopolitical-war-2026",
+      "kpop-concert-price-inflation-2026",
+      "kpop-demon-hunters-grammy-first-win",
+      "kpop-demon-hunters-oscar-win-speech-controversy-2026",
+      "kpop-demon-hunters-records",
+      "kpop-exports-us-overtakes-japan",
+      "kpop-group-survival-study",
+      "kpop-indie-agency-fund",
+      "kpop-korean-market-optional-global-paradox",
+      "kpop-seablings-korea-sea-racism-war",
+      "kpop-stars-who-failed-auditions",
+      "kpop-superfan-money-machine",
+      "kpop-trainee-contract-reform-2026-foreign-gaps",
+      "kpop-world-cup-soundtrack",
+      "lee-soo-man-a2o-enter-korea-sm-war-2026",
+      "lesserafim-boompala-430k",
+      "lesserafim-pureflow-comeback",
+      "lisa-vegas-residency",
+      "lisa-world-cup-stage",
+      "mamamoo-4ward-comeback",
+      "mamamoo-4ward-return",
+      "mamamoo-4ward-tour-economics",
+      "may-comeback-trap",
+      "may-girlgroup-market-war",
+      "meovv-awakening-test",
+      "min-heejin-18m-deal-rejected",
+      "min-heejin-hybe-put-option-255b-ruling",
+      "mma-two-day-gamble",
+      "nct-2026-project",
+      "nct-wish-cortis-clash",
+      "nct-wish-ode-sales",
+      "newjeans-ador-return-2026-comeback-without-minhejin",
+      "newjeans-danielle-erased-four-member-era",
+      "newjeans-hybe-contract-dispute",
+      "newjeans-minji-cookie-signal",
+      "nmixx-brazil-carnival-first-kpop-jyp-strategy",
+      "nmixx-heavy-serenade",
+      "onecead-jyp-tencent-china-kpop",
+      "park-bom-sandara-drug-cover-up",
+      "red-velvet-august-return",
+      "riize-eunseok-apology",
+      "rose-solo-kpop-records",
+      "santos-bravos-korea",
+      "seapop-kpop-shift",
+      "shinee-atmos-weather",
+      "sm-q1-money-machine",
+      "sm-xiumin-kbs-ban-jyj-pattern",
+      "stray-kids-dominate-kpop-first-global-box-office",
+      "stray-kids-final-era-farewell-tour-jyp-2026",
+      "stray-kids-gov-ball-seven",
+      "taemin-bpm-staff-salary-scandal",
+      "taemin-coachella-first",
+      "taeyang-quintessence-comeback",
+      "the-scout-reboot",
+      "top-bigbang-solo-2026",
+      "top-nana-dating-studio54",
+      "treasure-if-i-100m",
+      "twice-550k-north-america",
+      "twice-double-injury-kpop-overwork",
+      "tws-no-tragedy-million",
+      "txt-year7-comeback",
+      "tzuyu-body-shaming-clap-back",
+      "wanna-one-reunion-2026-reality-show",
+      "xg-simon-jakops-drug-arrest",
+      "yg-bigbang-20th-anniversary-world-tour-2026",
+      "yg-boygroup-september-bet",
+      "yg-yang-hyunsuk-audition-return",
+      "yuna-solo-debut-ice-cream"
+    ],
+    "indexedDraftSlugs": [
+      "2025-kpop-market-outlook",
+      "4th-gen-global-impact",
+      "ai-fandom-platform",
+      "fandom-economy",
+      "top-nana-dating-confirmed",
+      "trainee-system-evolution"
+    ],
+    "candidateChecks": [
+      {
+        "topic": "KATSEYE’s “Gabriela” surpasses 1 billion Spotify streams and becomes the group’s first Billions Club entry",
+        "status": "PASS",
+        "sameSlugMatches": [],
+        "semanticallyDuplicateSlugs": [],
+        "closestComparisons": [
+          {
+            "slug": "katseye-coachella-debut",
+            "title": "KATSEYE Reached Coachella as Five, Not Six — Why the Fandom Shook Harder Than the Stage",
+            "status": "active",
+            "overlap": "KATSEYE subject only; different event, claim, date, and reader question",
+            "decision": "NOT_DUPLICATE"
+          },
+          {
+            "slug": "katseye-music-bank-cancel",
+            "title": "KATSEYE Just Skipped Music Bank - And the 'Scheduling' Answer Made It Worse",
+            "status": "active",
+            "overlap": "KATSEYE subject only; different event, claim, date, and reader question",
+            "decision": "NOT_DUPLICATE"
+          },
+          {
+            "slug": "katseye-wild-billboard-200",
+            "title": "KATSEYE's WILD Hit No. 1 — 170,000 Units and the New Global Girl-Group Math",
+            "status": "active",
+            "overlap": "KATSEYE subject only; different event, claim, date, and reader question",
+            "decision": "NOT_DUPLICATE"
+          },
+          {
+            "slug": "katseye-wild-manon",
+            "title": "'WILD' Is Coming, But Manon Is Still Missing - The Costliest Void Inside KATSEYE Right Now",
+            "status": "active",
+            "overlap": "KATSEYE subject only; different event, claim, date, and reader question",
+            "decision": "NOT_DUPLICATE"
+          }
+        ],
+        "comparedAgainstCount": 207,
+        "comparedAgainstSlugs": [
+          "2025-kpop-market-outlook",
+          "2026-kpop-audition-guide",
+          "2026-rookie-boy-group-war-big4-debut-battle",
+          "4th-gen-global-impact",
+          "a2o-lite-neon-melon-peak",
+          "aespa-crisis-tokyo-dome-comeback-2026",
+          "aespa-gdragon-wda",
+          "aespa-lemonade-tour",
+          "aespa-wda-gdragon-risk",
+          "ai-fandom-platform-evolution",
+          "ai-fandom-platform",
+          "akmu-chart-war",
+          "akmu-yg-independence-brutal-training-new-label-2026",
+          "and2ble-rookie-sales-record",
+          "andteam-we-on-fire",
+          "annie-allday-project-7-years-trainee-dream",
+          "ateez-san-wooyoung-dating-rumor",
+          "babymonster-choom-100m",
+          "babymonster-choom-comeback",
+          "babymonster-choom-world-tour",
+          "baeksang-fan-vote-gap",
+          "bang-hybe-fraud-probe",
+          "bekuh-boom-blackpink-yg-songwriter-abortion-contract-2026",
+          "big4-fanomenon-festival",
+          "big4-trainee-requirements-attitude",
+          "bigbang-august-tour",
+          "bighit-15-city-audition",
+          "black-label-yg-board",
+          "blackpink-deadline-comeback-national-museum",
+          "blackpink-deadline-ep-record-sales-yg-2026",
+          "blackpink-deadline-interscope-independence",
+          "blackpink-go-billboard-hot100-11th-entry-record-2026",
+          "blackpink-government-stamps",
+          "blackpink-guinness-icon",
+          "blackpink-met-gala-selfie",
+          "bts-2026-comeback-countdown",
+          "bts-ama-aoty",
+          "bts-ama-second-aoty",
+          "bts-ama-special-appearance",
+          "bts-arirang-animation-whitewash-howard-university-2026",
+          "bts-arirang-animation-whitewashing-hbcu-controversy-2026",
+          "bts-arirang-billboard-record",
+          "bts-arirang-comeback-2026",
+          "bts-arirang-comeback-gwanghwamun-2026",
+          "bts-arirang-comeback-gwanghwamun-concert-ticket-scandal-2026",
+          "bts-arirang-concert-terror-alert-weapons-security-2026",
+          "bts-arirang-day1-spotify-record-netflix-paywall-2026",
+          "bts-arirang-grammy-hunt-2026",
+          "bts-arirang-gwanghwamun-concert-netflix-record-2026",
+          "bts-arirang-producer-dream-team-diplo-kevin-parker-flume-2026",
+          "bts-arirang-release-day-swim-gwanghwamun-concert-2026",
+          "bts-arirang-six-weeks",
+          "bts-arirang-streaming-record",
+          "bts-arirang-swim-spotify-documentary-netflix-2026",
+          "bts-arirang-trailer-1896-howard-seven-koreans-2026",
+          "bts-arirang-world-tour-sellout-record-2026",
+          "bts-arlington-stadium-test",
+          "bts-billboard-two-weeks",
+          "bts-bulacan-ticket-war",
+          "bts-busan-festa-delay",
+          "bts-china-ban-gap",
+          "bts-city-vegas-busan",
+          "bts-dynamite-japan-streams",
+          "bts-fan-merch-crackdown",
+          "bts-guinness-icons",
+          "bts-korea-venue-crisis",
+          "bts-latin-america-streams",
+          "bts-london-stadium-record",
+          "bts-march-2026-comeback-industry-impact",
+          "bts-mexico-palace",
+          "bts-normal-spotify-window",
+          "bts-oreo-global-bet",
+          "bts-rm-ankle-injury-world-tour-countdown-2026",
+          "bts-seoul-tour-kickoff",
+          "bts-stanford-takeover",
+          "bts-swim-100m",
+          "bts-tampa-190k",
+          "bts-world-cup-halftime",
+          "bts-wristband-theft",
+          "cha-eunwoo-tax-evasion-scandal-2026",
+          "chaewon-neck-hiatus",
+          "cix-seven-year-end",
+          "coachella-2026-kpop-takeover",
+          "cortis-greengreen-million",
+          "cortis-greengreen-preorders",
+          "cortis-redred-grand-slam",
+          "cortis-redred-ninth-win",
+          "day6-kpop-race-war",
+          "enhypen-heeseung-departure-belift-lab-controversy-2026",
+          "enhypen-heeseung-protest-trucks-el-capitxn-2026",
+          "fandom-economy",
+          "fanomenon-big4-festival",
+          "foreign-trainee-reality-visa-culture",
+          "gangnam-style-6-billion",
+          "gdragon-lawsuit-media-100-commenters-cleared-2026",
+          "gdragon-lunar-new-year-china-fan-controversy",
+          "gdragon-shirt-apology",
+          "gov-ball-kpop-weekend",
+          "hearts2hearts-triple-crown-rude-incheon-airport-security-2026",
+          "heeseung-enhypen-ot7-belift-controversy",
+          "hybe-135m-question",
+          "hybe-abd-girlgroup-bet",
+          "hybe-bang-arrest-warrant",
+          "hybe-illit-court-loss",
+          "hybe-india-audition-kpop",
+          "hybe-min-heejin-255b-ruling-fan-betrayal",
+          "hybe-q1-red-ink",
+          "hybe-record-revenue-profit-plunge-73",
+          "hybe-spotify-podcast-media-empire-2026",
+          "hybe-stock-bts-paradox",
+          "idle-nbc-today-show-arena-tour-cube-2026",
+          "idle-us-tour-cancelled",
+          "illit-little-monsters-newjeans-five-colors-diss",
+          "india-kdream-stage",
+          "ioi-loop-comeback",
+          "itzy-motto-identity",
+          "ive-bang-bang-pak-record-starship-kakao-2026",
+          "ive-yujin-moon-sangmin-dating-rumors-lovestagram-2026",
+          "jackson-yuqi-rumor-denial",
+          "japan-super-weekend",
+          "jennie-lollapalooza-headliner",
+          "jennie-time100-shift",
+          "june-kpop-comeback-pileup",
+          "jungkook-seven-3b",
+          "jungkook-weverse-censorship",
+          "jungkook-winter-tattoo-gone-bts-comeback-breakup-rumors",
+          "karina-body-shaming-fandom",
+          "katseye-coachella-debut",
+          "katseye-music-bank-cancel",
+          "katseye-wild-billboard-200",
+          "katseye-wild-manon",
+          "kcon-japan-k-life",
+          "kiss-of-life-first-win",
+          "kpop-album-exports-us",
+          "kpop-album-sales-record",
+          "kpop-big4-japan-streaming-strategy",
+          "kpop-campus-festival-war",
+          "kpop-china-japan-ningning-geopolitical-war-2026",
+          "kpop-concert-price-inflation-2026",
+          "kpop-demon-hunters-grammy-first-win",
+          "kpop-demon-hunters-oscar-win-speech-controversy-2026",
+          "kpop-demon-hunters-records",
+          "kpop-exports-us-overtakes-japan",
+          "kpop-group-survival-study",
+          "kpop-indie-agency-fund",
+          "kpop-korean-market-optional-global-paradox",
+          "kpop-seablings-korea-sea-racism-war",
+          "kpop-stars-who-failed-auditions",
+          "kpop-superfan-money-machine",
+          "kpop-trainee-contract-reform-2026-foreign-gaps",
+          "kpop-world-cup-soundtrack",
+          "lee-soo-man-a2o-enter-korea-sm-war-2026",
+          "lesserafim-boompala-430k",
+          "lesserafim-pureflow-comeback",
+          "lisa-vegas-residency",
+          "lisa-world-cup-stage",
+          "mamamoo-4ward-comeback",
+          "mamamoo-4ward-return",
+          "mamamoo-4ward-tour-economics",
+          "may-comeback-trap",
+          "may-girlgroup-market-war",
+          "meovv-awakening-test",
+          "min-heejin-18m-deal-rejected",
+          "min-heejin-hybe-put-option-255b-ruling",
+          "mma-two-day-gamble",
+          "nct-2026-project",
+          "nct-wish-cortis-clash",
+          "nct-wish-ode-sales",
+          "newjeans-ador-return-2026-comeback-without-minhejin",
+          "newjeans-danielle-erased-four-member-era",
+          "newjeans-hybe-contract-dispute",
+          "newjeans-minji-cookie-signal",
+          "nmixx-brazil-carnival-first-kpop-jyp-strategy",
+          "nmixx-heavy-serenade",
+          "onecead-jyp-tencent-china-kpop",
+          "park-bom-sandara-drug-cover-up",
+          "red-velvet-august-return",
+          "riize-eunseok-apology",
+          "rose-solo-kpop-records",
+          "santos-bravos-korea",
+          "seapop-kpop-shift",
+          "shinee-atmos-weather",
+          "sm-q1-money-machine",
+          "sm-xiumin-kbs-ban-jyj-pattern",
+          "stray-kids-dominate-kpop-first-global-box-office",
+          "stray-kids-final-era-farewell-tour-jyp-2026",
+          "stray-kids-gov-ball-seven",
+          "taemin-bpm-staff-salary-scandal",
+          "taemin-coachella-first",
+          "taeyang-quintessence-comeback",
+          "the-scout-reboot",
+          "top-bigbang-solo-2026",
+          "top-nana-dating-confirmed",
+          "top-nana-dating-studio54",
+          "trainee-system-evolution",
+          "treasure-if-i-100m",
+          "twice-550k-north-america",
+          "twice-double-injury-kpop-overwork",
+          "tws-no-tragedy-million",
+          "txt-year7-comeback",
+          "tzuyu-body-shaming-clap-back",
+          "wanna-one-reunion-2026-reality-show",
+          "xg-simon-jakops-drug-arrest",
+          "yg-bigbang-20th-anniversary-world-tour-2026",
+          "yg-boygroup-september-bet",
+          "yg-yang-hyunsuk-audition-return",
+          "yuna-solo-debut-ice-cream"
+        ],
+        "newVerifiedEventBasis": [
+          "The Korea Times report dated 2026-10-18 says the track crossed one billion streams on 2026-10-16 and became KATSEYE’s first Spotify Billions Club entry.",
+          "Billboard Brasil independently reports the same milestone date and June 20, 2025 release date."
+        ],
+        "sourceUrls": [
+          "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+          "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+        ]
+      }
+    ],
+    "excludedCandidates": [],
+    "liveComparison": {
+      "url": "https://mearrow.com/api/news.json",
+      "httpStatus": 200,
+      "items": 201,
+      "matchingTopicItems": [],
+      "checkedAt": "2026-10-20T03:45:02.019Z"
+    }
+  },
+  "research": {
+    "queries": [
+      "site:koreatimes.co.kr/entertainment/k-pop/20261018 KATSEYE Gabriela 1 billion streams Spotify",
+      "KATSEYE Gabriela Billions Club October 18 2026 Spotify",
+      "site:open.spotify.com Gabriela KATSEYE Billions Club Spotify",
+      "KATSEYE Gabriela 1 billion streams October 16 2026 Billboard",
+      "KATSEYE official Gabriela release June 20 2025 HYBE Geffen",
+      "Spotify Billions Club official playlist KATSEYE Gabriela",
+      "site:weverse.io/katseye KATSEYE Gabriela release June 20 2025",
+      "KATSEYE Gabriela Spotify one billion October 2026 news"
+    ],
+    "urls": [
+      "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+      "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/",
+      "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4",
+      "https://weverse.io/katseye/notice/27860",
+      "https://www.universalmusic.ca/2025/06/20/katseyes-new-single-gabriela-is-out-now/",
+      "https://www.universalmusic.com.br/2025/06/20/gabriela-novo-single-da-katseye-ja-esta-disponivel/",
+      "https://www.complex.com/music/pop/katseye/posts/4gL9K6L38V",
+      "https://www.hype.my/k-pop/"
+    ],
+    "trustedUrls": [
+      "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+      "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/",
+      "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4",
+      "https://weverse.io/katseye/notice/27860",
+      "https://www.universalmusic.ca/2025/06/20/katseyes-new-single-gabriela-is-out-now/",
+      "https://www.universalmusic.com.br/2025/06/20/gabriela-novo-single-da-katseye-ja-esta-disponivel/"
+    ],
+    "results": [
+      {
+        "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+        "source": "The Korea Times",
+        "type": "major-media",
+        "claims": [
+          "milestone date 2026-10-16",
+          "first KATSEYE song in Spotify Billions Club"
+        ]
+      },
+      {
+        "url": "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/",
+        "source": "Billboard Brasil",
+        "type": "major-media",
+        "claims": [
+          "milestone date 2026-10-16",
+          "first KATSEYE track in Spotify Billions Club",
+          "release date 2025-06-20"
+        ]
+      },
+      {
+        "url": "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4",
+        "source": "Spotify — BILLIONS CLUB playlist",
+        "type": "official-platform",
+        "claims": [
+          "Gabriela is listed under KATSEYE on the official BILLIONS CLUB playlist"
+        ],
+        "retrieval": {
+          "httpStatus": 200,
+          "localReadback": "/tmp/spotify-billions-club.html",
+          "match": "Gabriela — KATSEYE"
+        }
+      },
+      {
+        "url": "https://weverse.io/katseye/notice/27860",
+        "source": "KATSEYE official Weverse notice",
+        "type": "official-artist-channel",
+        "claims": [
+          "scheduled release date 2025-06-20"
+        ]
+      },
+      {
+        "url": "https://www.universalmusic.ca/2025/06/20/katseyes-new-single-gabriela-is-out-now/",
+        "source": "Universal Music Canada",
+        "type": "official-label-press-release",
+        "claims": [
+          "release date 2025-06-20",
+          "photo credit on a separate rejected image"
+        ]
+      },
+      {
+        "url": "https://www.universalmusic.com.br/2025/06/20/gabriela-novo-single-da-katseye-ja-esta-disponivel/",
+        "source": "Universal Music Brasil",
+        "type": "official-label-release",
+        "claims": [
+          "release date 2025-06-20"
+        ]
+      },
+      {
+        "url": "https://www.complex.com/music/pop/katseye/posts/4gL9K6L38V",
+        "source": "Complex social post",
+        "type": "secondary-social",
+        "claims": [
+          "KATSEYE first song to surpass one billion Spotify streams"
+        ]
+      },
+      {
+        "url": "https://www.hype.my/k-pop/",
+        "source": "Hype Malaysia",
+        "type": "secondary-media",
+        "claims": [
+          "Gabriela reached one billion Spotify streams; publication dated 2026-10-19"
+        ]
+      }
+    ],
+    "gate": "PASS",
+    "checkedAt": "2026-10-20T03:48:50.777Z",
+    "minimums": {
+      "resultUrlsRequired": 6,
+      "resultUrlsFound": 8,
+      "trustedSourcesRequired": 3,
+      "trustedSourcesFound": 5
+    },
+    "facts": [
+      {
+        "claim": "“Gabriela” crossed one billion Spotify streams on 2026-10-16.",
+        "status": "PASS",
+        "independentSources": [
+          "The Korea Times",
+          "Billboard Brasil"
+        ],
+        "urls": [
+          "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+          "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+        ]
+      },
+      {
+        "claim": "This is KATSEYE’s first song in Spotify’s Billions Club.",
+        "status": "PASS",
+        "independentSources": [
+          "The Korea Times",
+          "Billboard Brasil"
+        ],
+        "officialPlatformReadback": "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4",
+        "urls": [
+          "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify",
+          "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/",
+          "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4"
+        ]
+      },
+      {
+        "claim": "“Gabriela” was released on 2025-06-20.",
+        "status": "PASS",
+        "officialSources": [
+          "KATSEYE Weverse notice",
+          "Universal Music Canada",
+          "Universal Music Brasil"
+        ],
+        "secondarySource": "Billboard Brasil",
+        "urls": [
+          "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/",
+          "https://weverse.io/katseye/notice/27860",
+          "https://www.universalmusic.ca/2025/06/20/katseyes-new-single-gabriela-is-out-now/",
+          "https://www.universalmusic.com.br/2025/06/20/gabriela-novo-single-da-katseye-ja-esta-disponivel/"
+        ]
+      }
+    ],
+    "limits": [
+      "No additional chart, music-video, lineup, hiatus, interpretation, or audience-reaction facts will be included.",
+      "The milestone is an on-platform stream count; no separate copyright or reuse claim is made about any news story."
+    ]
+  },
+  "content": {
+    "title": "KATSEYE’s ‘Gabriela’ Becomes Its First Spotify Billions Club Entry",
+    "facts": [
+      {
+        "id": 1,
+        "claim": "“Gabriela” crossed one billion Spotify streams on October 16, 2026.",
+        "status": "PASS",
+        "sources": [
+          {
+            "name": "The Korea Times",
+            "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify"
+          },
+          {
+            "name": "Billboard Brasil",
+            "url": "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+          }
+        ],
+        "action": "Retained."
+      },
+      {
+        "id": 2,
+        "claim": "The October 16 milestone made “Gabriela” KATSEYE’s first song in Spotify’s Billions Club.",
+        "status": "PASS",
+        "sources": [
+          {
+            "name": "The Korea Times",
+            "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify"
+          },
+          {
+            "name": "Billboard Brasil",
+            "url": "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+          },
+          {
+            "name": "Spotify official playlist",
+            "url": "https://open.spotify.com/playlist/37i9dQZF1DX7iB3RCnBnN4"
+          }
+        ],
+        "action": "Retained."
+      },
+      {
+        "id": 3,
+        "claim": "“Gabriela” was released on June 20, 2025.",
+        "status": "PASS",
+        "sources": [
+          {
+            "name": "KATSEYE official Weverse notice",
+            "url": "https://weverse.io/katseye/notice/27860"
+          },
+          {
+            "name": "Universal Music Canada",
+            "url": "https://www.universalmusic.ca/2025/06/20/katseyes-new-single-gabriela-is-out-now/"
+          },
+          {
+            "name": "Billboard Brasil",
+            "url": "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+          }
+        ],
+        "action": "Retained."
+      },
+      {
+        "id": 4,
+        "claim": "The milestone came about 16 months after release.",
+        "status": "PASS",
+        "sources": [
+          {
+            "name": "The Korea Times",
+            "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20261018/katseyes-gabriela-reaches-1-bil-streams-on-spotify"
+          },
+          {
+            "name": "Billboard Brasil",
+            "url": "https://billboard.com.br/katseye-1-bilhao-de-streams-gabriela/"
+          }
+        ],
+        "action": "Retained as approximate; exact dates are also stated."
+      }
+    ],
+    "internalLinks": [
+      {
+        "label": "our previous KATSEYE report",
+        "url": "/studio/news/katseye-wild-billboard-200",
+        "targetExists": true,
+        "targetActive": true
+      }
+    ],
+    "wordCount": 186,
+    "excerptLength": 114,
+    "slugWordCount": 4,
+    "language": "en",
+    "encodingReplacementCharacters": 0,
+    "internalMarkerCount": 0,
+    "review": {
+      "hookInFirstSentence": true,
+      "sourceLinksInline": true,
+      "claimsLimitedToRequestedScope": true,
+      "unverifiedInterpretationCount": 0,
+      "rightsPermissionClaimCount": 0
+    },
+    "verifiedAt": "2026-10-20T03:49:48.880Z"
+  },
+  "images": {
+    "imageSearchQueries": [
+      "KATSEYE official press photo HYBE Geffen 2026",
+      "KATSEYE official Gabriela photo source",
+      "Wikimedia Commons API search: KATSEYE"
+    ],
+    "imageSources": [
+      {
+        "type": "licensed-source",
+        "asset": "thumbnail",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54976227894).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3608,
+        "sourceHeight": 2030,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 5077370,
+        "sourceSha256": "ea4a5c8f39f711dcf51be7368a4fe7365fad502ebeb965c180a5379336f62c0f",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: three KATSEYE performers are visible on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3608,
+        "height": 2030,
+        "mime": "image/webp",
+        "bytes": 857298,
+        "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+      },
+      {
+        "type": "licensed-source",
+        "asset": "body",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54975981191).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-1.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-1.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3412,
+        "sourceHeight": 2275,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 6454778,
+        "sourceSha256": "26e6089349a8921bc4b0a0bbaa31e05f1d291cc1e45af19f63fdc31a03e6313a",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: KATSEYE performers are visible together on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3412,
+        "height": 2275,
+        "mime": "image/webp",
+        "bytes": 1244634,
+        "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+      },
+      {
+        "candidate": "Universal Music Germany official KATSEYE portrait",
+        "sourceUrl": "https://images.universal-music.de/img/assets/583/583845/992/720/katseye.jpg",
+        "pageUrl": "https://www.universalmusic.de/katseye",
+        "reason": "Original endpoint returned 720x480, below the 1600px long-edge gate; not used."
+      }
+    ],
+    "acceptedImages": [
+      {
+        "type": "licensed-source",
+        "asset": "thumbnail",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54976227894).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3608,
+        "sourceHeight": 2030,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 5077370,
+        "sourceSha256": "ea4a5c8f39f711dcf51be7368a4fe7365fad502ebeb965c180a5379336f62c0f",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: three KATSEYE performers are visible on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3608,
+        "height": 2030,
+        "mime": "image/webp",
+        "bytes": 857298,
+        "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+      },
+      {
+        "type": "licensed-source",
+        "asset": "body",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54975981191).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-1.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-1.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3412,
+        "sourceHeight": 2275,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 6454778,
+        "sourceSha256": "26e6089349a8921bc4b0a0bbaa31e05f1d291cc1e45af19f63fdc31a03e6313a",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: KATSEYE performers are visible together on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3412,
+        "height": 2275,
+        "mime": "image/webp",
+        "bytes": 1244634,
+        "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+      }
+    ],
+    "rejectedImages": [
+      {
+        "candidate": "Universal Music Germany official KATSEYE portrait",
+        "sourceUrl": "https://images.universal-music.de/img/assets/583/583845/992/720/katseye.jpg",
+        "pageUrl": "https://www.universalmusic.de/katseye",
+        "reason": "Original endpoint returned 720x480, below the 1600px long-edge gate; not used."
+      }
+    ],
+    "sourceAttributionGate": "PASS",
+    "assetsReadyForContentGate": true,
+    "items": [
+      {
+        "type": "licensed-source",
+        "asset": "thumbnail",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54976227894).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3608,
+        "sourceHeight": 2030,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 5077370,
+        "sourceSha256": "ea4a5c8f39f711dcf51be7368a4fe7365fad502ebeb965c180a5379336f62c0f",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: three KATSEYE performers are visible on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3608,
+        "height": 2030,
+        "mime": "image/webp",
+        "bytes": 857298,
+        "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "finalPublicPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "finalPublicBytes": 857298,
+        "finalPublicSha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+        "finalPublicWidth": 3608,
+        "finalPublicHeight": 2030,
+        "finalPublicMime": "image/webp",
+        "finalCopyHashMatchesStage": true
+      },
+      {
+        "type": "licensed-source",
+        "asset": "body",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54975981191).jpg",
+        "provider": "Wikimedia Commons",
+        "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+        "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+        "stagingPath": ".resource/katseye-gabriela-billion-streams-1.webp",
+        "finalPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+        "publicUrl": "/images/news/katseye-gabriela-billion-streams-1.webp",
+        "sourceAuthor": "David Lee",
+        "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+        "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "sourceWidth": 3412,
+        "sourceHeight": 2275,
+        "sourceMime": "image/jpeg",
+        "sourceBytes": 6454778,
+        "sourceSha256": "26e6089349a8921bc4b0a0bbaa31e05f1d291cc1e45af19f63fdc31a03e6313a",
+        "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+        "rightsGate": "PASS",
+        "identityMatchGate": "PASS",
+        "identitySubject": "KATSEYE",
+        "faceVisible": true,
+        "identityEvidence": "Image viewed directly: KATSEYE performers are visible together on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+        "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+        "aiGenerated": false,
+        "width": 3412,
+        "height": 2275,
+        "mime": "image/webp",
+        "bytes": 1244634,
+        "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+        "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+        "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+        "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+        "finalPublicPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+        "finalPublicBytes": 1244634,
+        "finalPublicSha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+        "finalPublicWidth": 3412,
+        "finalPublicHeight": 2275,
+        "finalPublicMime": "image/webp",
+        "finalCopyHashMatchesStage": true
+      }
+    ],
+    "publicPlacementVerifiedAt": "2026-10-20T03:50:07.475Z",
+    "finalPublicHashChecks": [
+      {
+        "path": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+        "hashMatchesStage": true,
+        "width": 3608,
+        "height": 2030,
+        "mime": "image/webp"
+      },
+      {
+        "path": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+        "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+        "hashMatchesStage": true,
+        "width": 3412,
+        "height": 2275,
+        "mime": "image/webp"
+      }
+    ]
+  },
+  "localQa": {
+    "commands": [
+      {
+        "command": "pnpm generate:content",
+        "result": "PASS",
+        "summary": "Generated 208 records: 202 published and 6 inactive."
+      },
+      {
+        "command": "pnpm exec next-image-export-optimizer",
+        "result": "PASS",
+        "summary": "Generated 1,260 variants from 420 source images."
+      },
+      {
+        "command": "HTTP local integration smoke",
+        "result": "PASS",
+        "summary": "Article, listing API, detail API, two WebP assets, and 800px optimized thumbnail all returned expected 200 responses."
+      },
+      {
+        "command": "pnpm lint",
+        "result": "PASS",
+        "summary": "Exit 0; 31 existing warnings, zero errors."
+      },
+      {
+        "command": "pnpm test --run",
+        "result": "PASS",
+        "summary": "49 test files and 207 tests passed."
+      },
+      {
+        "command": "pnpm workers:build",
+        "result": "PASS",
+        "summary": "Exit 0; TypeScript, static generation, and OpenNext Worker bundle completed. Existing Sass/punycode warnings and a logged ENVIRONMENT_FALLBACK stack did not fail the build."
+      },
+      {
+        "command": "pnpm dev --hostname 0.0.0.0 --port 3102 (standard predev)",
+        "result": "PASS",
+        "summary": "Predev regenerated the Pages/local content loader; fresh article GET returned HTTP 200, 130397 bytes."
+      },
+      {
+        "command": "pnpm check:deploy-env",
+        "result": "PASS",
+        "summary": "After sourcing .env.local into the process, deployment variables passed validation; secret values were not recorded."
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://localhost:3102/studio/news/katseye-gabriela-billion-streams",
+        "status": 200,
+        "canonical": "https://mearrow.com/studio/news/katseye-gabriela-billion-streams"
+      },
+      {
+        "url": "http://localhost:3102/api/news.json",
+        "status": 200,
+        "publicRecordCount": 202,
+        "includesSlug": true
+      },
+      {
+        "url": "http://localhost:3102/api/news-content/en/katseye-gabriela-billion-streams.json",
+        "status": 200,
+        "includesVerifiedMilestoneDate": true
+      },
+      {
+        "url": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+        "status": 200,
+        "contentType": "image/webp"
+      },
+      {
+        "url": "/images/news/katseye-gabriela-billion-streams-1.webp",
+        "status": 200,
+        "contentType": "image/webp"
+      },
+      {
+        "url": "/images/news/nextImageExportOptimizer/katseye-gabriela-billion-streams-thumbnail-opt-800.WEBP",
+        "status": 200,
+        "bytes": 47214
+      },
+      {
+        "url": "http://localhost:3102/studio/news/katseye-gabriela-billion-streams",
+        "status": 200,
+        "bytes": 130397,
+        "verification": "Fresh post-build render using standard pnpm dev predev."
+      }
+    ],
+    "orcaManual": {
+      "result": "PASS",
+      "worktree": "mearrow feature branch",
+      "detailRouteAndBackToNewsClick": "PASS",
+      "newsCardClickAndNavigation": "PASS",
+      "visibleArticleFactsAndTwoAttributedImages": "PASS",
+      "horizontalOverflow": false,
+      "viewport": "1963x1105",
+      "consoleErrors": 0,
+      "screenshot": "runtime/mearrow-news-katseye-gabriela-billion-streams-orca-detail.png",
+      "notes": "An initial tab attempt targeted the wrong worktree and returned browser_no_tab; retried by creating a tab with the explicit MEARROW worktree ID. Two full-page screenshot artifacts were malformed and removed; retained the clean detail viewport screenshot."
+    },
+    "artifacts": [
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-orca-detail.png",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-report.md",
+      "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright.png"
+    ]
+  },
+  "deploy": {
+    "commitSha": null,
+    "productionSha": null,
+    "environmentCheck": "PASS",
+    "environmentValuesRecorded": false
+  },
+  "production": {
+    "productionSha": null,
+    "url": null
+  },
+  "gsc": {
+    "property": "sc-domain:mearrow.com",
+    "inspectedUrl": null,
+    "requestedUrls": [],
+    "requestStatus": "NOT_RUN",
+    "actualIndexingStatus": "NOT_CHECKED"
+  },
+  "retries": [
+    {
+      "step": "LOCAL_RENDER",
+      "attempt": 1,
+      "error": "Orca browser tab was created in the default unrelated worktree; snapshot returned browser_no_tab.",
+      "resolution": "Created the browser tab with the explicit MEARROW feature-worktree ID; route checks passed."
+    },
+    {
+      "step": "LOCAL_RENDER",
+      "attempt": 1,
+      "error": "Orca full-page screenshot output repeated viewport content and produced a blank body artifact.",
+      "resolution": "Deleted malformed screenshots and retained the clean detail viewport screenshot."
+    },
+    {
+      "step": "LOCAL_RENDER",
+      "attempt": 1,
+      "error": "After `pnpm workers:build`, direct Next dev returned 404 for existing and new article routes; the build had regenerated ignored `src/generated/news-runtime.ts` with the Workers-only Cloudflare ASSETS loader. Concurrent worker build also removed `.next` while the prior dev process was running, producing Turbopack missing-SST cache errors.",
+      "resolution": "Stopped only the local dev process and restarted with `pnpm dev`, which ran predev and restored the local generated-content loader; fresh request returned HTTP 200. Workers build itself exited 0. No product source file was changed for this recovery."
+    },
+    {
+      "step": "DEPLOY_ENV",
+      "attempt": 1,
+      "error": "Initial pnpm check:deploy-env did not inherit .env.local and reported three required public integration variables missing.",
+      "resolution": "Queried Vault issue 09-Issue/2026-09-12-mearrow-deploy-env-not-loaded.md and followed its verified fix: source .env.local into the current process without printing values, then rerun; check passed."
+    },
+    {
+      "step": "COMMIT_PUSH",
+      "attempt": 1,
+      "error": "git add emitted an ignored-path warning for tracked src/generated/news-meta.json and exited 1 after staging the requested set.",
+      "resolution": "Queried and read the matching verified Vault issue 09-Issue/2026-10-13-MEARROW-git-add-src-generated-ignore-warning.md; git status and cached-name listing confirmed news-meta.json and all intended files were staged."
+    },
+    {
+      "step": "COMMIT_PUSH",
+      "attempt": 1,
+      "error": "git diff --cached --check found trailing whitespace on two hard-break lines in the dedicated Playwright QA report.",
+      "resolution": "Removed trailing spaces, refreshed the staged report, and reran git diff --cached --check successfully."
+    }
+  ],
+  "lastError": null,
+  "imageSearchQueries": [
+    "KATSEYE official press photo HYBE Geffen 2026",
+    "KATSEYE official Gabriela photo source",
+    "Wikimedia Commons API search: KATSEYE"
+  ],
+  "imageSources": [
+    {
+      "type": "licensed-source",
+      "asset": "thumbnail",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54976227894).jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+      "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+      "stagingPath": ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+      "finalPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+      "publicUrl": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+      "sourceAuthor": "David Lee",
+      "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+      "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+      "sourceWidth": 3608,
+      "sourceHeight": 2030,
+      "sourceMime": "image/jpeg",
+      "sourceBytes": 5077370,
+      "sourceSha256": "ea4a5c8f39f711dcf51be7368a4fe7365fad502ebeb965c180a5379336f62c0f",
+      "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+      "rightsGate": "PASS",
+      "identityMatchGate": "PASS",
+      "identitySubject": "KATSEYE",
+      "faceVisible": true,
+      "identityEvidence": "Image viewed directly: three KATSEYE performers are visible on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+      "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+      "aiGenerated": false,
+      "width": 3608,
+      "height": 2030,
+      "mime": "image/webp",
+      "bytes": 857298,
+      "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+      "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+      "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+      "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+    },
+    {
+      "type": "licensed-source",
+      "asset": "body",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54975981191).jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+      "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+      "stagingPath": ".resource/katseye-gabriela-billion-streams-1.webp",
+      "finalPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+      "publicUrl": "/images/news/katseye-gabriela-billion-streams-1.webp",
+      "sourceAuthor": "David Lee",
+      "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+      "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+      "sourceWidth": 3412,
+      "sourceHeight": 2275,
+      "sourceMime": "image/jpeg",
+      "sourceBytes": 6454778,
+      "sourceSha256": "26e6089349a8921bc4b0a0bbaa31e05f1d291cc1e45af19f63fdc31a03e6313a",
+      "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+      "rightsGate": "PASS",
+      "identityMatchGate": "PASS",
+      "identitySubject": "KATSEYE",
+      "faceVisible": true,
+      "identityEvidence": "Image viewed directly: KATSEYE performers are visible together on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+      "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+      "aiGenerated": false,
+      "width": 3412,
+      "height": 2275,
+      "mime": "image/webp",
+      "bytes": 1244634,
+      "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+      "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+      "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+      "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+    },
+    {
+      "candidate": "Universal Music Germany official KATSEYE portrait",
+      "sourceUrl": "https://images.universal-music.de/img/assets/583/583845/992/720/katseye.jpg",
+      "pageUrl": "https://www.universalmusic.de/katseye",
+      "reason": "Original endpoint returned 720x480, below the 1600px long-edge gate; not used."
+    }
+  ],
+  "acceptedImages": [
+    {
+      "type": "licensed-source",
+      "asset": "thumbnail",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54976227894).jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+      "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-thumbnail.jpg",
+      "stagingPath": ".resource/katseye-gabriela-billion-streams-thumbnail.webp",
+      "finalPath": "public/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+      "publicUrl": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+      "sourceAuthor": "David Lee",
+      "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+      "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+      "sourceWidth": 3608,
+      "sourceHeight": 2030,
+      "sourceMime": "image/jpeg",
+      "sourceBytes": 5077370,
+      "sourceSha256": "ea4a5c8f39f711dcf51be7368a4fe7365fad502ebeb965c180a5379336f62c0f",
+      "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+      "rightsGate": "PASS",
+      "identityMatchGate": "PASS",
+      "identitySubject": "KATSEYE",
+      "faceVisible": true,
+      "identityEvidence": "Image viewed directly: three KATSEYE performers are visible on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+      "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+      "aiGenerated": false,
+      "width": 3608,
+      "height": 2030,
+      "mime": "image/webp",
+      "bytes": 857298,
+      "sha256": "80522cad9bf8935d4843661f2a8f67048e8f50fa17a43ebcb16c03ba95e2cf27",
+      "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+      "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+      "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+    },
+    {
+      "type": "licensed-source",
+      "asset": "body",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_(54975981191).jpg",
+      "provider": "Wikimedia Commons",
+      "query": "Wikimedia Commons API search: KATSEYE (namespace 6)",
+      "localOriginalPath": ".resource/originals/katseye-gabriela-billion-streams-1.jpg",
+      "stagingPath": ".resource/katseye-gabriela-billion-streams-1.webp",
+      "finalPath": "public/images/news/katseye-gabriela-billion-streams-1.webp",
+      "publicUrl": "/images/news/katseye-gabriela-billion-streams-1.webp",
+      "sourceAuthor": "David Lee",
+      "sourceAuthorPage": "https://www.flickr.com/people/46192164@N06/",
+      "sourceDescription": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025.",
+      "sourceWidth": 3412,
+      "sourceHeight": 2275,
+      "sourceMime": "image/jpeg",
+      "sourceBytes": 6454778,
+      "sourceSha256": "26e6089349a8921bc4b0a0bbaa31e05f1d291cc1e45af19f63fdc31a03e6313a",
+      "licenseStatus": "CC BY 4.0; explicitly listed in Commons file metadata",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsEvidence": "Commons file page and imageinfo metadata list David Lee as author and CC BY 4.0. Attribution and license links are included in the article caption. No separate or unverified reuse permission is claimed.",
+      "rightsGate": "PASS",
+      "identityMatchGate": "PASS",
+      "identitySubject": "KATSEYE",
+      "faceVisible": true,
+      "identityEvidence": "Image viewed directly: KATSEYE performers are visible together on stage; Commons file record identifies the photo as KATSEYE at WAMU Theater.",
+      "visualReview": "Source JPEG inspected with view_image; shows recognizable KATSEYE performers with visible faces, no text card, screenshot, placeholder, or generated content.",
+      "aiGenerated": false,
+      "width": 3412,
+      "height": 2275,
+      "mime": "image/webp",
+      "bytes": 1244634,
+      "sha256": "94c4d31daaaa6178056cc377475c7d491b9dec0d8494fe9c3f1ee8a1045ea21f",
+      "transform": "JPEG to WebP at project converter quality 80; no crop, resize, or upscaling.",
+      "caption": "Photo by David Lee; CC BY 4.0 via Wikimedia Commons; converted from JPEG to WebP, no crop.",
+      "description": "KATSEYE at WAMU Theater in Seattle for The Beautiful Chaos Tour on December 9, 2025."
+    }
+  ],
+  "rejectedImages": [
+    {
+      "candidate": "Universal Music Germany official KATSEYE portrait",
+      "sourceUrl": "https://images.universal-music.de/img/assets/583/583845/992/720/katseye.jpg",
+      "pageUrl": "https://www.universalmusic.de/katseye",
+      "reason": "Original endpoint returned 720x480, below the 1600px long-edge gate; not used."
+    }
+  ],
+  "sourceAttributionGate": "PASS",
+  "active": true,
+  "buildWarnings": [
+    "ESLint: 31 existing warnings, 0 errors.",
+    "Next build logged ENVIRONMENT_FALLBACK once during static generation but exited successfully.",
+    "Existing Sass color-function and Node punycode deprecation warnings; OpenNext build completed."
+  ],
+  "browserQa": {
+    "status": "PASS",
+    "environment": "Local pnpm dev at http://localhost:3102; headed Windows Chrome through configured Playwright system-browser harness; playwright-system-check READY.",
+    "navigation": {
+      "listRoute": "/studio#news",
+      "detailRoute": "/studio/news/katseye-gabriela-billion-streams",
+      "actions": [
+        "News card click to detail",
+        "Back to News click to list",
+        "News card click to detail again"
+      ],
+      "expectedTitle": "KATSEYE’s ‘Gabriela’ Becomes Its First Spotify Billions Club Entry",
+      "publicationDate": "2026-10-20",
+      "canonical": "https://mearrow.com/studio/news/katseye-gabriela-billion-streams",
+      "renderedFacts": [
+        "1 billion Spotify streams on 2026-10-16",
+        "Released 2025-06-20",
+        "KATSEYE first Spotify Billions Club entry"
+      ],
+      "imageCaptions": 2
+    },
+    "integration": {
+      "newsListApi": {
+        "path": "/api/news.json",
+        "status": 200,
+        "recordCount": 202,
+        "includesStory": true
+      },
+      "contentApi": {
+        "path": "/api/news-content/en/katseye-gabriela-billion-streams.json",
+        "status": 200,
+        "slugTitleDateAndFactsMatch": true
+      },
+      "images": [
+        {
+          "path": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+          "status": 200,
+          "decoded": true,
+          "width": 3608,
+          "height": 2030
+        },
+        {
+          "path": "/images/news/katseye-gabriela-billion-streams-1.webp",
+          "status": 200,
+          "decoded": true,
+          "width": 3412,
+          "height": 2275
+        }
+      ],
+      "supabaseReadRequests": 200
+    },
+    "responsive": {
+      "status": "PASS",
+      "viewports": [
+        "390x844",
+        "344x780"
+      ],
+      "horizontalOverflow": false,
+      "offCanvasInteractiveElements": false
+    },
+    "accessibilityBasics": {
+      "status": "PASS",
+      "mainCount": 1,
+      "articleCount": 1,
+      "h1Count": 1,
+      "allImagesHaveAlt": true,
+      "visibleButtonsNamed": true,
+      "scope": "snapshot/basic-name check; not a full WCAG audit"
+    },
+    "console": {
+      "errors": 0,
+      "warnings": 52,
+      "warningNotes": "Mostly MetaMask extension warnings; page warnings included AdSense data-nscript and unused preload notices."
+    },
+    "expectedSideEffect": {
+      "request": "POST /rest/v1/rpc/increment_kcl_news_view",
+      "count": 4,
+      "statuses": [
+        204,
+        204,
+        204,
+        204
+      ],
+      "notes": "Automatic view increments caused by required detail navigation; no comments/forms submitted and no decrement or other data mutation attempted."
+    },
+    "screenshot": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright.png",
+    "screenshotDimensions": "1433x4236",
+    "detailedReport": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-report.md",
+    "verifier": "Dedicated test-only QA subagent; no application files or Git/deployment state changed."
+  }
+}
