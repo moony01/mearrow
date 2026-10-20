@@ -17,10 +17,14 @@
     "image": "PASS",
     "localRender": "PASS",
     "browserQa": "PASS",
-    "commitPush": "NOT_RUN",
+    "commitPush": "PASS",
     "deploy": "NOT_RUN",
     "productionBrowser": "NOT_RUN",
-    "gsc": "NOT_RUN"
+    "gsc": "NOT_RUN",
+    "prCi": "PENDING_FOLLOWUP_PUSH",
+    "merge": "NOT_RUN",
+    "sourceUrlFix": "PASS",
+    "followupCommitPush": "IN_PROGRESS"
   },
   "topicDedupe": {
     "indexSource": [
@@ -1154,10 +1158,14 @@
     ]
   },
   "deploy": {
-    "commitSha": null,
+    "commitSha": "f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5",
     "productionSha": null,
     "environmentCheck": "PASS",
-    "environmentValuesRecorded": false
+    "environmentValuesRecorded": false,
+    "branch": "feat/katseye-gabriela-billion-streams-20261020",
+    "pushed": true,
+    "pullRequest": 101,
+    "pullRequestUrl": "https://github.com/moony01/mearrow/pull/101"
   },
   "production": {
     "productionSha": null,
@@ -1479,6 +1487,129 @@
     "screenshot": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright.png",
     "screenshotDimensions": "1433x4236",
     "detailedReport": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-report.md",
-    "verifier": "Dedicated test-only QA subagent; no application files or Git/deployment state changed."
+    "verifier": "Dedicated test-only QA subagent; no application files or Git/deployment state changed.",
+    "urlEncodingRecheck": {
+      "status": "PASS",
+      "verifier": "/root/playwright_news_verifier",
+      "verifierResult": "DONE_WITH_CONCERNS; all requested UI and integration assertions passed; expected page-view RPC side effect recorded.",
+      "environment": "Local pnpm dev at http://localhost:3102; headed Windows Chrome via configured Playwright system-browser harness; playwright-system-check READY.",
+      "actions": [
+        "Open /studio#news",
+        "click KATSEYE article card",
+        "open detail page",
+        "inspect both Commons hrefs",
+        "Back to News",
+        "open detail page again",
+        "responsive checks"
+      ],
+      "canonical": "https://mearrow.com/studio/news/katseye-gabriela-billion-streams",
+      "renderedCommonsHrefs": [
+        "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+        "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg"
+      ],
+      "commonsResolution": [
+        "HTTP 200 after redirects",
+        "HTTP 200 after redirects"
+      ],
+      "browserApi": {
+        "newsList": "GET /api/news.json HTTP 200; 202 entries; slug, title, publication date and canonical matched.",
+        "articleContent": "GET /api/news-content/en/katseye-gabriela-billion-streams.json HTTP 200; slug, title, date, claims, both encoded Commons URLs and image paths matched.",
+        "images": [
+          {
+            "path": "/images/news/katseye-gabriela-billion-streams-thumbnail.webp",
+            "status": 200,
+            "decoded": true,
+            "dimensions": "3608x2030"
+          },
+          {
+            "path": "/images/news/katseye-gabriela-billion-streams-1.webp",
+            "status": 200,
+            "decoded": true,
+            "dimensions": "3412x2275"
+          }
+        ]
+      },
+      "freshLocalReadback": "PASS: jq exact-match assertions for both encoded URLs in src/generated/news-meta.json, GET /api/news.json, and article content API.",
+      "responsive": {
+        "status": "PASS",
+        "viewports": [
+          "390x844",
+          "344x780"
+        ],
+        "horizontalOverflow": false,
+        "scrollWidths": [
+          "375 of innerWidth 390 (15px scrollbar gutter)",
+          "329 of innerWidth 344 (15px scrollbar gutter)"
+        ]
+      },
+      "accessibilityBasics": "PASS: one main, one article, one H1; all images have alt text; visible buttons named. Basic snapshot only, not full WCAG audit.",
+      "console": {
+        "errors": 0,
+        "warnings": 61,
+        "notes": "Mostly MetaMask extension warnings; page warnings included AdSense and unused preload notices."
+      },
+      "expectedSideEffect": {
+        "request": "POST /rest/v1/rpc/increment_kcl_news_view",
+        "count": 4,
+        "statuses": [
+          204,
+          204,
+          204,
+          204
+        ],
+        "notes": "Automatic detail page-view increments; no forms/comments submitted and no view data changed afterward."
+      },
+      "screenshot": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck.png",
+      "screenshotDimensions": "1433x4236",
+      "detailedReport": "runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck-report.md"
+    }
+  },
+  "prCi": {
+    "status": "PENDING_FOLLOWUP_PUSH",
+    "checkName": "Validate Workers build",
+    "workflow": "MEARROW Workers",
+    "runId": "39367806686",
+    "runUrl": "https://github.com/moony01/mearrow/actions/runs/39367806686",
+    "initialStatus": "QUEUED",
+    "headSha": "f52ac546006cb8b2fa6b2d7d7a8bec7bb9bd62c5",
+    "priorCommitRun": "39367806686",
+    "note": "Initial run is tied to the prior commit; a fresh validation run will be checked after pushing the source-link fix."
+  },
+  "sourceUrlExtractionFix": {
+    "status": "PASS",
+    "cause": "The shared Markdown source extractor uses `https?:\\/\\/[^\\s)]+`; literal closing parentheses in Wikimedia file paths ended the extracted URL before the image id suffix and .jpg.",
+    "fix": "Percent-encoded the parentheses in both Commons links in the article Markdown; generator code remains unchanged. Added a regression test proving encoded parentheses survive source extraction.",
+    "generator": "scripts/generate-news-json.js reads sources from evaluateNewsQuality/extractExternalSources in src/lib/news-quality.js and writes the resulting sources into src/generated/news-meta.json and public/api/news.json.",
+    "completeUrls": [
+      "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854976227894%29.jpg",
+      "https://commons.wikimedia.org/wiki/File:Katseye_in_Seattle_-_KATSEYE_%2854975981191%29.jpg"
+    ],
+    "verification": {
+      "generateContent": "PASS: pnpm generate:content processed 208 news files and 202 public records, including the fresh targeted-test pretest run.",
+      "metadataJq": "PASS: src/generated/news-meta.json contains exactly both complete encoded URLs.",
+      "localListApiJq": "PASS: GET /api/news.json contains exactly both complete encoded URLs.",
+      "localContentApiJq": "PASS: GET /api/news-content/en/katseye-gabriela-billion-streams.json contains both complete encoded links.",
+      "commonsHttp": [
+        "HTTP 200",
+        "HTTP 200"
+      ],
+      "regressionTest": "PASS: pnpm test --run src/lib/news-quality.test.ts (pretest regenerated content; 1 file, 5 tests).",
+      "freshJqExactSourceMatch": "PASS: both complete encoded Commons URLs matched exactly in generated metadata and local listing API.",
+      "freshLocalArticleApiReadback": "PASS: article content API contains both complete encoded source links.",
+      "freshCommonsHttp": [
+        "HTTP 200 after redirects",
+        "HTTP 200 after redirects"
+      ],
+      "freshPlaywright": "PASS: both rendered hrefs retained %28...%29.jpg; browser API readback matched; see runtime/mearrow-news-katseye-gabriela-billion-streams-playwright-recheck-report.md",
+      "diffCheck": "PASS: git diff --cached --check after removing two trailing-space hard breaks in the fresh QA report."
+    },
+    "browserRecheck": "PASS"
+  },
+  "executionScope": {
+    "status": "PAUSED_BEFORE_MERGE",
+    "pr": "101 remains open; do not close.",
+    "merge": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION",
+    "productionDeploy": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION",
+    "gscIndexRequest": "NOT_AUTHORIZED_IN_CURRENT_INSTRUCTION"
   }
 }

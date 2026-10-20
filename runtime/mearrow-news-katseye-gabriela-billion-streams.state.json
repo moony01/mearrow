@@ -3,9 +3,9 @@
   "slug": "katseye-gabriela-billion-streams",
   "runId": "20261020T034306Z",
   "startedAt": "2026-10-20T03:45:02.019Z",
-  "updatedAt": "2026-10-20T04:06:02.581Z",
+  "updatedAt": "2026-10-20T04:13:11.065Z",
   "status": "IN_PROGRESS",
-  "lastPassedStep": "BROWSER_QA",
+  "lastPassedStep": "BROWSER_QA_RECHECK",
   "stepResults": {
     "topicDedupe": "PASS",
     "research": "PASS",
@@ -13,12 +13,16 @@
     "image": "PASS",
     "localRender": "PASS",
     "browserQa": "PASS",
-    "commitPush": "NOT_RUN",
+    "commitPush": "PASS",
     "deploy": "NOT_RUN",
     "productionBrowser": "NOT_RUN",
-    "gsc": "NOT_RUN"
+    "gsc": "NOT_RUN",
+    "prCi": "PENDING_FOLLOWUP_PUSH",
+    "merge": "NOT_RUN",
+    "sourceUrlFix": "PASS",
+    "followupCommitPush": "IN_PROGRESS"
   },
-  "currentStep": "COMMIT_PUSH",
+  "currentStep": "FOLLOWUP_COMMIT_PUSH",
   "authorization": {
     "actor": "user",
     "scope": "one_mearrow_news_publish_commit_push_deploy_and_gsc_request",
@@ -28,5 +32,11 @@
   "artifacts": {
     "topicDedupe": "runtime/mearrow-news-topic-dedupe-20261020T034306Z.json",
     "imageSources": "runtime/mearrow-news-katseye-gabriela-billion-streams-image-sources.json"
+  },
+  "currentInstructionRestrictions": {
+    "pr": "Keep PR #101 open.",
+    "merge": "Do not merge; explicit user request required.",
+    "productionDeploy": "Do not deploy.",
+    "gscIndexRequest": "Do not request indexing."
   }
 }
