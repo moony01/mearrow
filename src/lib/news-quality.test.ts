@@ -22,6 +22,19 @@ describe('news publication quality audit', () => {
     ]);
   });
 
+  it('preserves percent-encoded parentheses in source paths', () => {
+    const sources = extractExternalSources(
+      '[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Katseye_%2854976227894%29.jpg)',
+    );
+
+    expect(sources).toEqual([
+      {
+        label: 'Wikimedia Commons',
+        url: 'https://commons.wikimedia.org/wiki/File:Katseye_%2854976227894%29.jpg',
+      },
+    ]);
+  });
+
   it('publishes source-backed articles with an original MEARROW analysis', () => {
     const result = evaluateNewsQuality(
       `${longBody}\n[Source](https://example.com/source)\n## MEARROW's View`,
